@@ -1,0 +1,22 @@
+{
+  "name": "katas-service",
+  "version": "0.0.1",
+  "description": "Service providing katas that can be loaded into tddbin.com.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tddbin/katas-service.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tddbin/katas-service/issues"
+  },
+  "homepage": "https://github.com/tddbin/katas-service",
+  "devDependencies": {
+    "push2gh-pages": "git://github.com/uxebu/push2gh-pages.git"
+  }
+}
