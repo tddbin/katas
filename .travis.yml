@@ -10,4 +10,4 @@ after_success:
 env:
  global:
  - GH_REF: github.com/tddbin/katas-service.git
-  secure: aKe+sanSie2Gj11Qk+mSr+X9Z/ddXcAYog0NMXCr5I7ZbyqaXj9Uih6ttjD36kmqyOq4IeWoyP7GoMw7iYvuZc+iZlzrnTx0iRqxyx30xUIpBU/SEcyoFj8z/iUk6JNvoqFo6qgzPV+O1GW+0P8XSsUSD+0EI0W5lz4NszMyMic=
+ - secure: aKe+sanSie2Gj11Qk+mSr+X9Z/ddXcAYog0NMXCr5I7ZbyqaXj9Uih6ttjD36kmqyOq4IeWoyP7GoMw7iYvuZc+iZlzrnTx0iRqxyx30xUIpBU/SEcyoFj8z/iUk6JNvoqFo6qgzPV+O1GW+0P8XSsUSD+0EI0W5lz4NszMyMic=
