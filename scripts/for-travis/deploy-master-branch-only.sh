@@ -10,8 +10,8 @@ CURRENT_BRANCH=$(git branch | sed -n -e 's/^\  \(.*\)/\1/p')
 echo "deploy: current branch is '$CURRENT_BRANCH'"
 
 if [ "$CURRENT_BRANCH" == "master" ]; then
-  echo "deploy: run 'push2gh-pages.sh'"
-  push2gh-pages
+  echo "deploy: run 'push2gh-pages'"
+  push2gh-pages dist
 else
   echo "deploy: nothing to deploy. (only deploying master branch)"
 fi
