@@ -4,7 +4,7 @@
   "description": "Service providing katas that can be loaded into tddbin.com.",
   "main": "index.js",
   "scripts": {
-    "build": "./scripts/build/build.sh",
+    "build": "./scripts/build.sh",
     "test": ""
   },
   "repository": {
