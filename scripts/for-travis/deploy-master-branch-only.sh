@@ -11,7 +11,7 @@ echo "deploy: current branch is '$CURRENT_BRANCH'"
 
 if [ "$CURRENT_BRANCH" == "master" ]; then
   echo "deploy: run 'push2gh-pages'"
-  ../push2gh-pages.sh dist
+  ./scripts/push2gh-pages.sh dist
 else
   echo "deploy: nothing to deploy. (only deploying master branch)"
 fi
