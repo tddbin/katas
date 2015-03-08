@@ -14,3 +14,5 @@ mkdir -p $DIST_ROOT;
 # copy assets
 cp -r $ORIGIN_ROOT/katas $DIST_ROOT;
 cp $ORIGIN_ROOT/CNAME $DIST_ROOT/CNAME;
+
+cp $ORIGIN_ROOT/html/proxy.html $DIST_ROOT/;
