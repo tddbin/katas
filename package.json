@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "./scripts/build.sh",
+    "build-for-offline": "npm run build && ./scripts/build-for-offline.sh",
     "test": ""
   },
   "repository": {
