@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ -z "${TDDBIN_ROOT_DOMAIN:+x}" ]; then
+  echo "Can not build. Environment variable 'TDDBIN_ROOT_DOMAIN' must be set";
+  exit 1;
+fi;
+
 # TODO: must be run from project root (i am sure this is not bash best pratice)
 
 ORIGIN_ROOT="."
