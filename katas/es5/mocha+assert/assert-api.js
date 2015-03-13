@@ -1,4 +1,5 @@
-describe('mocha + assert', function() {
+describe('mocha+assert API description', function() {
+  
   it('simple values equal?', function() {
     assert.equal('one', 'one');
   });
