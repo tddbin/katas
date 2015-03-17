@@ -26,8 +26,8 @@ describe('on tagged template strings you can use String.raw', function() {
     });
     
     it('two raw-templates-string-backslashes equal two escaped backslashes', function() {
-      const A_BACKSLASH = '\\';
-      assert.equal(String.raw`\\`, A_BACKSLASH);
+      const TWO_BACKSLASHES = '\\';
+      assert.equal(String.raw`\\`, TWO_BACKSLASHES);
     });
     
     it('works on unicodes too', function() {
