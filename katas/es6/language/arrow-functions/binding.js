@@ -12,14 +12,14 @@ describe('arrow functions have lexical `this`, no dynamic `this`', () => {
   it('can NOT bind a different context', function() {
     var bound = new LexicallyBound();
     var fn = bound.getFunction();
-    var someObj = {};
-    assert.strictEqual(fn.call(someObj), bound);
+    var anotherObj = {};
+    assert.strictEqual(fn.call(anotherObj), anotherObj);
   });
   
   it('`arguments` doesnt work inside arrow functions', function() {
     var bound = new LexicallyBound();
     var fn = bound.getArgumentsFunction();
-    assert.notEqual(fn(1, 2).length, 2);
+    assert.equal(fn(1, 2).length, 0);
   });
   
 });
@@ -28,11 +28,12 @@ class LexicallyBound {
   
   getFunction() {
     return () => {
-      return this;
+      return new LexicallyBound();
     }
   }
   
-  // less verbose version
-  getArgumentsFunction() () => arguments
+  getArgumentsFunction() {
+    return function() {return arguments}
+  }
   
 }
