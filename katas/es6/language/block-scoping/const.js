@@ -1,4 +1,4 @@
-// block scope - const
+// 8: block scope - const
 // To do: make all tests pass, leave the asserts unchanged!
 
 describe('`const` is like `let` plus read-only', () => {

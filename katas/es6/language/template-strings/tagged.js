@@ -1,4 +1,4 @@
-// template strings - tagged
+// 3: template strings - tagged
 // To do: make all tests pass
 
 describe('tagged template strings', function() {
