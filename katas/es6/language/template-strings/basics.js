@@ -1,4 +1,4 @@
-// template strings - basics
+// 1: template strings - basics
 // To do: make all tests pass
 
 describe('template string, are wrapped in backticks', function() {

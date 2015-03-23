@@ -1,4 +1,4 @@
-// arrow functions - binding
+// 6: arrow functions - binding
 // To do: make all tests pass, leave the asserts unchanged!
 
 describe('arrow functions have lexical `this`, no dynamic `this`', () => {
