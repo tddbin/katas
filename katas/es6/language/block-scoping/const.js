@@ -3,7 +3,7 @@
 
 describe('`const` is like `let` plus read-only', () => {
 
-  describe('scalar values are immutable', () => {
+  describe('scalar values are read-only', () => {
 
     it('number', () => {
       const constNum = 0;
@@ -21,11 +21,11 @@ describe('`const` is like `let` plus read-only', () => {
   
   const notChangeable = 23;
 
-  it('consts scope', () => {
+  it('const scope leaks too', () => {
     assert.equal(notChangeable, 23);
   });
   
-  describe('complex types are NOT immutable', () => {
+  describe('complex types are NOT fully read-only', () => {
 
     it('array', () => {
       const arr = [42, 23];
