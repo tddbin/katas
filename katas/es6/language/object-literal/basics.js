@@ -31,7 +31,7 @@ describe('new shorthands for objects', () => {
       assert.deepEqual(short, {otherKey: func});
     });
     
-    it('no need for `function(){}`', () => {
+    it('inline function, without `function(){}`', () => {
       const short = {
         inlineFunc: 'I am inline'
       };
