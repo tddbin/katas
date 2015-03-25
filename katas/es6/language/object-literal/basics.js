@@ -1,5 +1,5 @@
 // 9: object-literals - basics
-// To do: make all tests pass, leave the asserts unchanged!
+// To do: make all tests pass, leave the assert lines unchanged!
 
 describe('new shorthands for objects', () => {
 
