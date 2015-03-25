@@ -1,5 +1,5 @@
 // 9: object-literals - basics
-// To do: make all tests pass, leave the asserts unchanged!
+// To do: make all tests pass, leave the assert lines unchanged!
 
 describe('new shorthands for objects', () => {
 
@@ -8,7 +8,8 @@ describe('new shorthands for objects', () => {
 
   describe('with variables', () => {
     it('use the variables name as key', () => {
-      assert.deepEqual({x}, {y: y});
+      const short = {x};
+      assert.deepEqual(short, {y: y});
     });
     it('works with many too', () => {
       const short = {x, y: z};
