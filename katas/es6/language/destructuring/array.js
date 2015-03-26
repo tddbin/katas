@@ -17,7 +17,7 @@ describe('destructuring arrays makes shorter code', () => {
   it('leading commas', () => {
     const all = ['ax', 'why', 'zet'];
     const [,z] = all;
-    assert.deepEqual(z, 'zet');
+    assert.equal(z, 'zet');
   });
   
   it('use nested arrays', () => {
