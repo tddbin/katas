@@ -3,7 +3,7 @@
 
 describe('destructuring arrays makes shorter code', () => {
 
-  it('to an array', () => {
+  it('extract value from array', () => {
     let firstValue = [1];
     assert.strictEqual(firstValue, 1);
   });
@@ -17,10 +17,10 @@ describe('destructuring arrays makes shorter code', () => {
   it('leading commas', () => {
     const all = ['ax', 'why', 'zet'];
     const [,z] = all;
-    assert.deepEqual(z, 'zet');
+    assert.equal(z, 'zet');
   });
   
-  it('use nested arrays', () => {
+  it('extract from nested arrays', () => {
     const user = [['Some', 'One'], 23];
     const [firstName, surname, age] = user;
     
