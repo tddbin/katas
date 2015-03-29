@@ -10,15 +10,16 @@ describe('destructuring objects', () => {
 
   describe('nested', () => {
     it('multiple objects', () => {
-      const {z: {x}} = {z: {y: 23, x: 2}};
-      assert.equal(x, 2);
+      const magic = {first: 23, second: 42};
+      const {magic: {second}} = {magic};
+      assert.equal(second, 42);
     });
     it('object and array', () => {
       const {z:[,x]} = {z: [23, 42]};
       assert.equal(x, 42);
     });
     it('array and object', () => {
-      const [,{lang}] = [null, {env: 'browser', lang: 'ES6'}];
+      const [,[{lang}]] = [null, [{env: 'browser', lang: 'ES6'}]];
       assert.equal(lang, 'ES6');
     });
   });
@@ -28,10 +29,9 @@ describe('destructuring objects', () => {
     assert.equal(z, void 0);
   });
 
-  // it('', () => {
-  //   let z, x;
-  //   let {z: {x: z}} = {z: {x}} = {z: {y: 23, x: 2}};
-  //   assert.equal(x, 2);
-  // });
+  it('destructure from builtins (string)', () => {
+    const {substr} = '';
+    assert.equal(substr, String.prototype.substr);
+  });
 
 });
