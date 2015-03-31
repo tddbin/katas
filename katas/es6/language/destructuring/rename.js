@@ -10,7 +10,7 @@ describe('rename variables while destructuring', () => {
   
   it('object key rename with default value', () => {
     const {x: y=2} = {x: 1};
-    assert.equal(y, 2);
+    assert.equal(y, 1);
   });
   
   it('rename param in a function param', () => {
