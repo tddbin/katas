@@ -3,27 +3,27 @@
 
 describe('destructuring can also have default values', () => {
 
-  it('array', () => {
-    const [a, b=2] = [1];
-    assert.equal(b, 2);
+  it('for an empty array', () => {
+    const [a=1] = [];
+    assert.equal(a, 1);
   });
 
-  it('array', () => {
+  it('for a missing value', () => {
     const [a, b=2] = [1,,3];
     assert.equal(b, 2);
   });
 
-  it('object', () => {
+  it('in an object', () => {
     const {a, b=2} = {a: 1};
     assert.equal(b, 2);
   });
 
-  it('object', () => {
+  it('if the value is undefined', () => {
     const {a, b=2} = {a: 1, b: void 0};
     assert.equal(b, 2);
   });
 
-  it('string', () => {
+  it('also a string works with defaults', () => {
     const [a, b=2] = '1';
     assert.equal(a, '1');
     assert.equal(b, 2);
