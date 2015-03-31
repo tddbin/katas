@@ -15,9 +15,9 @@ describe('destructuring function parameters', () => {
     
     it('multiple params from array/object', () => {
       const fn = ([,{name}]) => {
-        assert.equal(name, 'Wolfram');
+        assert.equal(name, 'Alice');
       };
-      const users = [{name: 'nobody'}, {name: 'Wolfram', id: 42}];
+      const users = [{name: 'nobody'}, {name: 'Alice', id: 42}];
       fn(users);
     });
   });
@@ -39,7 +39,7 @@ describe('destructuring function parameters', () => {
       fn([]);
     });
     
-    it('arbitrary mix', () => {
+    it('mix of parameter types', () => {
       const fn = (id=1, [arr=2], {obj=3}) => {
         assert.equal(id, 1);
         assert.equal(arr, 2);
