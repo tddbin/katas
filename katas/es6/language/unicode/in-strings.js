@@ -14,7 +14,7 @@ describe('unicode strings', () => {
   });
 
   it('value is hexadecimal', () => {
-    const nuclear = `\u006E\u006F more \u2622`;
+    const nuclear = `\u006B\u006A more \u2622`;
     assert.equal(nuclear, 'no more ☢');
   });
 
