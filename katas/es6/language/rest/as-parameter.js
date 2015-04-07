@@ -24,8 +24,8 @@ describe('rest in function params', () => {
     fn(42, 'twenty three', 'win');
   });
     
-  it('fun with function args and destructuring', () => {
-    const fn = (...args) => args.slice(1);
+  it('eliminate `arguments`!!!', () => {
+    const fn = () => arguments;
     const [firstArg, ...rest] = fn(1, 2, 3);
     assert.deepEqual([2, 3], rest);
   });
