@@ -4,7 +4,7 @@
 describe('rest with destrcturing', () => {
     
   it('rest parameter must be last', () => {
-    const [all] = [1, 2, 3, 4];
+    const [...all, last] = [1, 2, 3, 4];
     assert.deepEqual(all, [1, 2, 3, 4]);
   });
   
