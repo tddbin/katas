@@ -4,7 +4,7 @@
 describe('spread with arrays', () => {
 
   it('extracts each array item', function() {
-    const [a, b] = [...1, 2];
+    const [b, a] = [...[1, 2]];
     assert.equal(a, 1);
     assert.equal(b, 2);
   });
@@ -24,11 +24,11 @@ describe('spread with arrays', () => {
   describe('used as function parameter', () => {
     it('prefix with `...` to spread as function params', function() {
       const magicNumbers = [1, 2];
-      const fn = (magica, magicB) => {
+      const fn = (magicA, magicB) => {
         assert.deepEqual(magicNumbers[0], magicA);
         assert.deepEqual(magicNumbers[1], magicB);
       };
-      fn(...magicNumbers);
+      fn(magicNumbers);
     });
   
     it('pass an array of numbers to Math.max()', function() {
