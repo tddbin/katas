@@ -13,6 +13,7 @@ describe('rest with destrcturing', () => {
     assert.deepEqual(all, [2, 3, 4]);
   });
   
+  // the following are actually using `spread` ... oops, to be fixed
   it('concat differently', () => {
     const theEnd = [3, 4];
     const allInOne = [1, 2, ...[theEnd]];
