@@ -21,12 +21,12 @@ describe('spread with strings', () => {
   });
   
   it('dont confuse with the rest operator', function() {
-    const [...rest] = ['12345'];
+    const [...rest] = ['1234', ...'5'];
     assert.deepEqual(rest, [1, 2, 3, 4, 5]);
   });
   
   it('passed as function parameter', function() {
-    const max = Math.max('12345');
+    const max = Math.max(12345);
     assert.deepEqual(max, 5);
   });
   
