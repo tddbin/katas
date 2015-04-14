@@ -34,6 +34,7 @@ describe('class creation', () => {
     }
     
     const tester = new User();
+    assert.equal(tester.isLazy(), true);
     tester.wroteATest();
     assert.equal(tester.isLazy(), false);
   });
