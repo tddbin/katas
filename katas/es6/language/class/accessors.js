@@ -5,7 +5,7 @@ describe('class accessors (getter and setter)', () => {
 
   it('only a getter is defined like a method prefixed with `get`', () => {
     class MyAccount {
-      get balance() { return Infinity; }
+      get money() { return Infinity; }
     }
     
     assert.equal(new MyAccount().balance, Infinity);
@@ -14,7 +14,7 @@ describe('class accessors (getter and setter)', () => {
   it('a setter has the prefix `set`', () => {
     class MyAccount {
       get balance() { return this.amount; }
-      set balance(amount) { this.amount = 23; }
+      set balance(amount) { this.amount = amount; }
     }
     
     const account = new MyAccount();
@@ -27,17 +27,17 @@ describe('class accessors (getter and setter)', () => {
     it('a dynamic getter name is enclosed in [ and ]', function() {
       const balance = 'yourMoney';
       class YourAccount {
-        get [balance]() { return -Infinity; }
+        get [getterName]() { return -Infinity; }
       }
       
       assert.equal(new YourAccount().yourMoney, -Infinity);
     });
     
-    it('dynamic getter/setter name', function() {
+    it('a dynamic setter name as well', function() {
       const propertyName = 'balance';
       class MyAccount {
         get [propertyName]() { return this.amount; }
-        set [propertyName](amount) { this.amount = 23; }
+        set propertyName(amount) { this.amount = 23; }
       }
       
       const account = new MyAccount();
@@ -45,6 +45,5 @@ describe('class accessors (getter and setter)', () => {
       assert.equal(account.balance, 23);
     });
   });
-
   
 });
