@@ -10,6 +10,12 @@ describe('class creation', () => {
     assert.equal(typeof instance, 'object');
   });
 
+  it('class is block scoped', () => {
+    class Inside {}
+    {class Inside {}}
+    assert.equal(typeof Inside, 'undefined');
+  });
+  
   it('special method is `constructor`', function() {
     class User {
       constructor(id) {}
@@ -37,6 +43,11 @@ describe('class creation', () => {
     assert.equal(tester.isLazy(), true);
     tester.wroteATest();
     assert.equal(tester.isLazy(), false);
+  });
+
+  it('anonymous class', () => {
+    const classType = typeof {};
+    assert.equal(classType, 'function');
   });
 
 });
