@@ -14,10 +14,10 @@ describe('inside a class you can use the static keyword', () => {
       assert.ok(TestFactory.makeTest() instanceof UnitTest);
     });
   
-    it('the method name can be dynamic/computed', () => {
-      const makeTest = 'create' + 'Test';
+    it('the method name can be dynamic/computed at runtime', () => {
+      const methodName = 'makeTest';
       class TestFactory {
-        makeTest() { return new UnitTest(); }
+        static [methodName]() { return new UnitTest(); }
       }
       
       assert.ok(TestFactory.createTest() instanceof UnitTest);
@@ -33,10 +33,10 @@ describe('inside a class you can use the static keyword', () => {
       assert.equal(UnitTest.testType, 'unit');
     });
     
-    it('even a getter name can be dynamic/computed at run time', () => {
-      const type = 'test' + 'Kind';
+    it('even a static getter name can be dynamic/computed at runtime', () => {
+      const type = 'test' + 'Type';
       class IntegrationTest {
-        static get [type]() { return 'integration'; }
+        get type() { return 'integration'; }
       }
       
       assert.ok('testType' in IntegrationTest);
