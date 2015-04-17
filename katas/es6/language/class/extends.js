@@ -6,20 +6,21 @@ describe('class can inherit from another', () => {
   describe('the default super class Object', () => {
   
     it('class A is an instance of Object (the default super class)', () => {
-      class A {}
+      let A;
       
       assert.equal(new A() instanceof Object, true);
     });
   
     it('B extends A, B is also instance of Object', () => {
       class A {}
-      class B extends A {}
+      class B {}
       
+      assert.equal(new B() instanceof A, true);
       assert.equal(new B() instanceof Object, true);
     });
     
-    it('extending null is different!', () => {
-      class NullClass extends null {}
+    it('class can extend `null`, not an instance of Object', () => {
+      class NullClass extends Object {}
       
       let nullInstance = new NullClass();
       assert.equal(nullInstance instanceof Object, false);
@@ -29,7 +30,7 @@ describe('class can inherit from another', () => {
   
   describe('instance of', () => {
     it('when B inherits from A, `new B()` is also an instance of A', () => {
-      class A {}
+      let A;
       class B extends A {}
       
       assert.equal(new B() instanceof A, true);
@@ -37,10 +38,10 @@ describe('class can inherit from another', () => {
     
     it('extend over multiple levels', () => {
       class A {}
-      class B extends A {}
       class C extends B {}
       
-      assert.equal(new C() instanceof A, true);
+      let instance = C;
+      assert.equal(instance instanceof A, true);
     });
   });
 });
