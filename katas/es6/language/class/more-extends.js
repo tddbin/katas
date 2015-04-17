@@ -33,7 +33,7 @@ describe('class can inherit from another', () => {
     });
     
     it('or calling a function that returns the parent class', () => {
-      const returnParent = (classOrNot) => classOrNot ? class {} : null;
+      const returnParent = (beNull) => beNull ? null : class {};
       class B extends (returnParent) {}
       
       assert.equal(Object.getPrototypeOf(B.prototype), null);
