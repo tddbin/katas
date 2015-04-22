@@ -1,4 +1,4 @@
-// 27: class - super
+// 27: class - super inside a method
 // To do: make all tests pass, leave the assert lines unchanged!
 
 describe('inside a class use `super` to access parent methods', () => {
