@@ -7,7 +7,6 @@ describe('class', () => {
     class A {constructor() { this.levels = 1; }}
     class B extends A {
       constructor() { 
-        super();
         this.levels++; 
       }
     }
@@ -19,7 +18,7 @@ describe('class', () => {
     class A {constructor(startValue=1, addTo=1) { this.counter = startValue + addTo; }}
     class B extends A {
       constructor(...args) { 
-        super(...args);
+        super();
         this.counter++; 
       }
     }
@@ -31,21 +30,18 @@ describe('class', () => {
     class A {constructor() { this.countUp = 1; }}
     class B extends A {
       constructor() { 
-        this.countUp = 2; 
         super();
+        this.countUp = 2; 
       }
     }
     
     assert.equal(new B().countUp, 1);
   });
 
-  it('you can dynamically check for a parent constructor', () => {
+  it('use `super.constructor` to find out if there is a parent constructor', () => {
     class A extends null {
       constructor() {
-        this.isTop = false;
-        try {
-          this.isTop = !!super.constructor;
-        } catch (e) {}
+        this.isTop = !!super.constructor;
       }
     }
 
