@@ -3,7 +3,7 @@
 
 describe('`Array.prototype.findIndex` makes finding items in arrays easier', () => {
 
-  it('takes a compare function', function() {
+  it('takes a compare function, returns the index where it returned true', function() {
     const foundAt = [false, true].findIndex(item);
     
     assert.equal(foundAt, 1);
@@ -16,12 +16,12 @@ describe('`Array.prototype.findIndex` makes finding items in arrays easier', () 
   });
 
   it('returns `-1` when nothing was found', function() {
-    const foundAt = [1, 2, 3].findIndex(item => item > 3);
+    const foundAt = [1, 2, 3].findIndex(item => item > 1);
     
     assert.equal(foundAt, -1);
   });
 
-  it('the findIndex callback gets the item, index and array arguments', function() {
+  it('the findIndex callback gets the item, index and array as arguments', function() {
     const three = 3;
     const containsThree = arr => arr.indexOf(three) > -1;
     function theSecondThree(index, arr) {
