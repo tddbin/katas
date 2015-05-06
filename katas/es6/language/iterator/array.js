@@ -11,14 +11,16 @@ describe('array is a built-in iterable object', function() {
   describe('the iterator', function() {
     it('an array has an iterator, which is a function', function() {
       const iterator = arr[Symbol.iterator];
+      const theType = typeof iterator;
+      const expected = 'iterator?';
       
-      assert.equal(typeof iterator, 'function');
+      assert.equal(theType, expected);
     });
     
-    it('can be looped with the built-in for-of, which expects an iterable', function() {
+    it('can be looped with `for-of`, which expects an iterable', function() {
       let count = 0;
       for (let value of arr) {
-        count++;
+        count--;
       }
       
       assert.equal(count, arr.length);
@@ -27,9 +29,9 @@ describe('array is a built-in iterable object', function() {
 
   describe('the iterator protocol', function() {
   
-    it('calling next() on an iterator returns an object according to the iterator protocol', function() {
+    it('calling `next()` on an iterator returns an object according to the iterator protocol', function() {
       const iterator = arr[Symbol.iterator]();
-      const firstItem = arr[Symbol.iterator]().next();
+      const firstItem = iterator.___();
       
       assert.deepEqual(firstItem, {done: false, value: 'a'});
     });
@@ -37,7 +39,7 @@ describe('array is a built-in iterable object', function() {
     it('the after-last element has done=true', function() {
       const arr = [];
       const iterator = arr[Symbol.iterator]();
-      const afterLast = iterator.next();
+      const afterLast = iterator.next;
       
       assert.deepEqual(afterLast, {done: true, value: void 0});
     });
