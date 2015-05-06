@@ -1,4 +1,4 @@
-// 39: array - entries
+// 40: array - entries
 // To do: make all tests pass, leave the assert lines unchanged!
 
 describe('`Array.prototype.entries` returns an iterator object with all entries', function() {
