@@ -19,29 +19,29 @@ describe('`Symbol.for` for registering Symbols globally', function() {
     var globalSymbol = Symbol.for('new symbol');
     var globalSymbol = Symbol('new symbol');
     
-    assert.notEqual(globalSymbol, dynamicSymbol);
+    assert.notEqual(globalSymbol, localSymbol);
   });
   
   describe('`.toString()` on a Symbol', function() {
     
-    const newSymbol = Symbol('new symbol');
+    const localSymbol = Symbol('new symbol');
     const symbolFromRegistry = Symbol.for('new symbol');
     
     it('also contains the key given to `Symbol.for()`', function() {
-      const description = newSymbol.toString;
+      const description = localSymbol.toString;
       assert.equal(description, 'Symbol(new symbol)');
     });
   
     describe('NOTE: the description of two different symbols', function() {
       it('might be the same', function() {
-        const newDescription = newSymbol.toString();
+        const localDescription = localSymbol.toString();
         const fromRegistryDescription = ''+symbolFromRegistry;
         
-        assert.equal(newDescription, fromRegistryDescription);
+        assert.equal(localDescription, fromRegistryDescription);
       });
       
       it('but the symbols are not the same!', function() {
-        assert.notEqual(newSymbol, symbolFromRegistry);
+        assert.notEqual(localSymbol, symbolFromRegistry);
       });
     });    
   });
