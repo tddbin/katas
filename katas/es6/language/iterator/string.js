@@ -8,8 +8,15 @@ describe('string is a built-in iterable object', function() {
   
   const s = 'abc';
   
-  it('`Symbol.iterator` function is implemented on it', function() {
-    assert.equal(typeof s[Symbol.iterator], 'function');
+  describe('string is iterable', function() {
+    it('`Symbol.iterator` function is implemented on it', function() {
+      const expectedType = '???';
+      assert.equal(typeof s[Symbol.iterator], expectedType);
+    });
+    it('use `Array.from()` to make an array out of any iterable', function(){
+      const arr = Array.___(s);
+      assert.deepEqual(arr, ['a', 'b', 'c']);
+    });
   });
   
   describe('a string`s iterator', function() {
@@ -19,36 +26,19 @@ describe('string is a built-in iterable object', function() {
     });
     
     it('has a special string representation', function(){
-      assert.equal(iterator.toString(), '[object String Iterator]');
+      const description = iterator.to____();
+      assert.equal(description, '[object String Iterator]');
     });
     
-    it('`iterator.next()` returns the first character', function(){
-      assert.equal(iterator.next().value, 'a');
+    it('`iterator.next()` returns an object according to the iterator protocol', function(){
+      const value = iterator.___();
+      assert.equal(value, {done: false, value: 'a'});
     });
     
-    it('`iterator.next()` reports done=false, which means there is more to iterate', function(){
-      assert.equal(iterator.next().done, false);
-    });
-    
-    it('the 4th call to `iterator.next()` says done=false, no more elements', function(){
-      iterator.next();
-      iterator.next();
+    it('the after-last call to `iterator.next()` says done=false, no more elements', function(){
       iterator.next();
       assert.equal(iterator.next().done, true);
     });
-    
-    it('for-of uses the iterator', function(){
-      let values = [];
-      for (let value of s) {
-        values.push(value);
-      }
-      assert.deepEqual(values, ['a', 'b', 'c']);
-    });
-  });
-  
-  it('create an array using `Array.from()`', function(){
-    const arr = Array.from(s);
-    assert.deepEqual(arr, ['a', 'b', 'c']);
   });
   
 });
