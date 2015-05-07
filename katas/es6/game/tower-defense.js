@@ -48,8 +48,15 @@ describe('TowerDefense', function() {
         const health = minion.getHealth();
         assert.deepEqual(health, 0);
       });
+    });
 
-      it('dies when health is 0', function() {
+    describe('isDead', function() {
+      it('is not dead with more then 0 health', function() {
+        const dead = minion.isDead();
+        assert.equal(dead, false);
+      });
+
+      it('is dead when health is 0', function() {
         minion.takeDamage(100);
 
         const dead = minion.isDead();
