@@ -48,6 +48,14 @@ describe('TowerDefense', function() {
         const health = minion.getHealth();
         assert.deepEqual(health, 0);
       });
+
+      it('holds its current health internally', function() {
+        minion.takeDamage(20);
+        minion.takeDamage(20);
+
+        const health = minion.getHealth();
+        assert.deepEqual(health, 60);
+      });
     });
 
     describe('isDead', function() {
