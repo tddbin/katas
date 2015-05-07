@@ -32,7 +32,7 @@ describe('string is a built-in iterable object', function() {
     
     it('`iterator.next()` returns an object according to the iterator protocol', function(){
       const value = iterator.___();
-      assert.equal(value, {done: false, value: 'a'});
+      assert.deepEqual(value, {done: false, value: 'a'});
     });
     
     it('the after-last call to `iterator.next()` says done=false, no more elements', function(){
