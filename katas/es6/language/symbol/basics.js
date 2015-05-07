@@ -1,4 +1,4 @@
-// 34: Symbol
+// 34: symbol
 // A symbol is a unique and immutable data type and may be used as an identifier for object properties
 // read more at https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol
 

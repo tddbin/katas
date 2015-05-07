@@ -1,1 +1,0 @@
-let m = new Map(); m.set(key, value); m.has(key); m.get(key). Also has .clear(), .delete(), .forEach(), .keys().
