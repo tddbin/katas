@@ -6,11 +6,7 @@
 
 describe('A simple iterable without items inside, implementing the right protocol', () => {
 
-  function iteratorFunction() {
-    return { 
-      next: function() { return {done: true}; }
-    }
-  }
+  function iteratorFunction() {}
 
   describe('the iterator function needs to comply to the iterator protocol', function() {
     it('must return an object', function() {
@@ -26,9 +22,7 @@ describe('A simple iterable without items inside, implementing the right protoco
 
   let iterable;
   beforeEach(function() {
-    iterable = {
-      [Symbol.iterator]: iteratorFunction
-    };
+    iterable;
   });
 
   describe('the iterable', function() {
