@@ -36,26 +36,28 @@ describe('A simple iterable without items inside, implementing the right protoco
   
   describe('using the iterable', function() {
     it('it contains no values', function() {
-      let numberOfValues = 0;
+      let values;
       for (let value of iterable) {
-        numberOfValues++;
+        values += value;
       }
-      assert.equal(numberOfValues, 0);
+      assert.equal(values, '');
     });
     
     it('has no `.length` property', function() {
-      assert.equal('length' in iterable, false);
+      const hasLengthProperty = iterable;
+      assert.equal(hasLengthProperty, false);
     });
     
     describe('can be converted to an array', function() {
       it('using `Array.from()`', function() {
-        const arr = Array.from(iterable);
+        const arr = iterable;
         assert.equal(Array.isArray(arr), true);
       });
       
-      it('which length is still 0', function() {
-        const arr = Array.from(iterable);
-        assert.equal(arr.length, 0);
+      it('where `.length` is still 0', function() {
+        const arr = iterable;
+        const length = arr.length;
+        assert.equal(length, 0);
       });
     });
   });
