@@ -3,12 +3,13 @@
 // read more at https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols
 
 // To do: make all tests pass, leave the assert lines unchanged!
+// Follow the hints of the failure messages!
 
 describe('A simple iterable without items inside, implementing the right protocol', () => {
 
   function iteratorFunction() {}
 
-  describe('the iterator function needs to comply to the iterator protocol', function() {
+  describe('the `iteratorFunction` needs to comply to the iterator protocol', function() {
     it('must return an object', function() {
       assert.equal(typeof iteratorFunction(), 'object');
     });
