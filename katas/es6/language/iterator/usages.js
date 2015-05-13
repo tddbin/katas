@@ -8,7 +8,7 @@ class ConsumableUsers {
   constructor() {
     this.users = ['Alice', 'Bob'];
   }
-  get consumableUser() {
+  get nextUser() {
     if (this.users.length > 0) {
       return `user: ${this.users.shift()}`;
     }
@@ -24,6 +24,14 @@ describe('Iterator usages', () => {
   let usersIterable;
   beforeEach(function(){
     const consumableUsers = new ConsumableUsers();
+    function iteratorFunction() {
+      return {
+        next: function() {
+          return {value: consumableUsers.nextUser, done: consumableUsers.anyLeft}
+        }
+      }
+    }
+    
     usersIterable = {};
   });
   
@@ -62,7 +70,7 @@ describe('Iterator usages', () => {
       });
       it('should return `done:true`, which means there are no more items', function() {
         iterator.next();
-        iterator.next();
+        iterator.___();
         const beyondLast = iterator.next();
         assert.deepEqual(beyondLast, {value: void 0, done: true});
       })
