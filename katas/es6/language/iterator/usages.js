@@ -71,20 +71,20 @@ describe('Iterator usages', () => {
     
     describe('using built-in constructs', function() {
       it('use `Array.from()` to convert an iterable to an array', function() {
-        const users = Array.from(usersIterable);
+        const users = usersIterable;
         assert.deepEqual(users, ['user: Alice', 'user: Bob']);
       });
       it('use for-of to loop over an iterable', function() {
         const users = [];
-        for (let user of usersIterable) users.push(user);
+        for (let user in usersIterable) users.push(user);
         assert.deepEqual(users, ['user: Alice', 'user: Bob']);
       });
       it('use the spread-operator to convert/add iterable to an array', function() {
-        const users = ['noname', ...usersIterable];
+        const users = ['noname', usersIterable];
         assert.deepEqual(users, ['noname', 'user: Alice', 'user: Bob']);
       });
-      it('destructure an iterable', function() {
-        const [firstUser, secondUser] = usersIterable;
+      it('destructure an iterable like an array', function() {
+        const {firstUser, secondUser} = usersIterable;
         assert.equal(firstUser, 'user: Alice');
         assert.equal(secondUser, 'user: Bob');
       })
