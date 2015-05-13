@@ -24,16 +24,7 @@ describe('Iterator usages', () => {
   let usersIterable;
   beforeEach(function(){
     const consumableUsers = new ConsumableUsers();
-    usersIterable = {
-      [Symbol.iterator]: function() {
-        return {
-          next: function() { 
-            const anyLeft = consumableUsers.anyLeft;
-            return {value: consumableUsers.consumableUser, done: !anyLeft}; 
-          }
-        }
-      }
-    };
+    usersIterable = {};
   });
   
   describe('create an iterator/iterable', function() {
@@ -42,15 +33,18 @@ describe('Iterator usages', () => {
       assert.equal(isIterable, true);
     });
     
+    it('the iterator of `usersIterable` should return an object', function() {
+      const iterator = usersIterable[Symbol.iterator]();
+      assert.equal(typeof iterator, 'object');
+    });
+    
     it('the iterator of `usersIterable` should have a next function', function() {
       const iterator = usersIterable[Symbol.iterator]();
-      const hasNextFunction = 'next' in iterator;
-      assert.equal(hasNextFunction, true);
       assert.equal(typeof iterator.next, 'function');
     });
   });
   
-  describe('consumableUser the iterable', function() {
+  describe('fill the iterable with content using `ConsumableUsers`', function() {
     
     describe('using the iterator', function() {
       let iterator;
