@@ -201,7 +201,7 @@ const obj = {
     40: {
       path: 'iterator/usages',
       level: ES6_LEVEL.EXPERT,
-      requiresKnowledgeFrom: [34, 39]
+      requiresKnowledgeFrom: [7, 10, 12, 34, 39, 20]
     }
   }
 };
