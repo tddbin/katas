@@ -5,7 +5,7 @@ describe('`Array.prototype.entries` returns an iterator object with all entries'
   
   it('returns key+value for each element', function() {
     const arr = ['a', 'b', 'c'];
-    const entriesAsArray = Array.from(arr.entries());
+    const entriesAsArray = Array.from(arr.___());
     
     assert.deepEqual(entriesAsArray, [[0,"a"], [1,"b"], [2,"c"]]);
   });
@@ -13,24 +13,16 @@ describe('`Array.prototype.entries` returns an iterator object with all entries'
   it('empty elements contain the value `undefined`', function() {
     const arr = ['one'];
     arr[2] = 'three';
-    const entries = Array.from(arr.entries());
+    const secondValue = arr.entries();
     
-    assert.deepEqual(entries[1], [1, void 0]);
+    assert.deepEqual(secondValue, [1, void 0]);
   });
 
   describe('returns an iterable', function() {
     
-    it('has an iterator function', function() {
-      const arr = [];
-      const entries = arr.entries();
-      
-      assert.deepEqual(Symbol.iterator in entries, true);
-    });
-    
     it('has `next()` to iterate', function() {
       const arr = ['one'];
-      const entries = arr.entries();
-      const value = entries.next().value;
+      const value = arr;
       
       assert.deepEqual(value, [0, 'one']);
     });
