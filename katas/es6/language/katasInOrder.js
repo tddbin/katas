@@ -46,7 +46,7 @@ const obj = {
     9: {
       path: 'object-literal/basics',
       level: ES6_LEVEL.TBD,
-      requiresKnowledgeFrom: []
+      requiresKnowledgeFrom: [5, 8]
     },
     10: {
       path: 'destructuring/array',
@@ -202,6 +202,16 @@ const obj = {
       path: 'iterator/usages',
       level: ES6_LEVEL.EXPERT,
       requiresKnowledgeFrom: [7, 10, 12, 34, 39, 20]
+    },
+    41: {
+      path: 'array-api/entries',
+      level: ES6_LEVEL.INTERMEDIATE,
+      requiresKnowledgeFrom: [8, 29, 39]
+    },
+    42: {
+      path: 'array-api/keys',
+      level: ES6_LEVEL.INTERMEDIATE,
+      requiresKnowledgeFrom: [8, 10, 29, 39]
     }
   }
 };
