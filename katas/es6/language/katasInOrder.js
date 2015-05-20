@@ -1,217 +1,243 @@
-const ES6_LEVEL = {TBD, BEGINNER, INTERMEDIATE, ADVANCED, EXPERT};
+const SKILL_LEVEL = {TBD, BEGINNER, INTERMEDIATE, ADVANCED, EXPERT};
+
+const TEMPLATE_STRING_BASICS = 1;
+const TEMPLATE_STRING_MULTILINE = 2;
+const TEMPLATE_STRING_TAGGED = 3;
+const TEMPLATE_STRING_RAW = 4;
+const ARROW_FUNCTION_BASICS = 5;
+const ARROW_FUNCTION_BINDING = 6;
+const LET = 7;
+const CONST = 8;
+const DESTRUCTURING_ARRAY = 10;
+const DESTRUCTURING_STRING = 11;
+const DESTRUCTURING_OBJECT = 12;
+const ITERATOR_PROTOCOL = 39;
+
+const ARRAY_FROM = 29;
+const SYMBOL_BASICS = 34;
+const SPREAD_WITH_ARRAYS = 20;
+
+const ARRAY_ENTRIES = 41;
+const ARRAY_KEYS = 42;
+const ARRAY_VALUES = 43;
 
 const obj = {
   name: 'ES6 Katas',
   items: {
-    1: {
+    TEMPLATE_STRING_BASICS: {
       path: 'template-strings/basics',
-      level: ES6_LEVEL.TBD,
+      level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: []
     },
-    2: {
+    TEMPLATE_STRING_MULTILINE: {
       path: 'template-strings/multiline',
-      level: ES6_LEVEL.TBD,
+      level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: []
     },
-    3: {
+    TEMPLATE_STRING_TAGGED: {
       path: 'template-strings/tagged',
-      level: ES6_LEVEL.TBD,
+      level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: []
     },
-    4: {
+    TEMPLATE_STRING_RAW: {
       path: 'template-strings/raw',
-      level: ES6_LEVEL.TBD,
+      level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: []
     },
-    5: {
+    ARROW_FUNCTION_BASICS: {
       path: 'arrow-functions/basics',
-      level: ES6_LEVEL.TBD,
+      level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: []
     },
-    6: {
+    ARROW_FUNCTION_BINDING: {
       path: 'arrow-functions/binding',
-      level: ES6_LEVEL.TBD,
+      level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: []
     },
-    7: {
+    LET: {
       path: 'block-scope/let',
-      level: ES6_LEVEL.TBD,
+      level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: []
     },
-    8: {
+    CONST: {
       path: 'block-scope/const',
-      level: ES6_LEVEL.TBD,
+      level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: []
     },
     9: {
       path: 'object-literal/basics',
-      level: ES6_LEVEL.TBD,
-      requiresKnowledgeFrom: [5, 8]
+      level: SKILL_LEVEL.TBD,
+      requiresKnowledgeFrom: [ARROW_FUNCTION_BASICS, CONST]
     },
-    10: {
+    DESTRUCTURING_ARRAY: {
       path: 'destructuring/array',
-      level: ES6_LEVEL.TBD,
+      level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: []
     },
-    11: {
+    DESTRUCTURING_STRING: {
       path: 'destructuring/string',
-      level: ES6_LEVEL.TBD,
+      level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: []
     },
-    12: {
+    DESTRUCTURING_OBJECT: {
       path: 'destructuring/object',
-      level: ES6_LEVEL.TBD,
+      level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: []
     },
     13: {
       path: 'destructuring/defaults',
-      level: ES6_LEVEL.TBD,
+      level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: []
     },
     14: {
       path: 'destructuring/parameters',
-      level: ES6_LEVEL.TBD,
+      level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: []
     },
     15: {
       path: 'destructuring/rename',
-      level: ES6_LEVEL.TBD,
+      level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: []
     },
     16: {
       path: 'object-literal/computed-properties',
-      level: ES6_LEVEL.TBD,
+      level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: []
     },
     17: {
       path: 'unicode/in-strings',
-      level: ES6_LEVEL.TBD,
+      level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: []
     },
     18: {
       path: 'rest/as-parameter',
-      level: ES6_LEVEL.TBD,
+      level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: []
     },
     19: {
       path: 'rest/with-destructuring',
-      level: ES6_LEVEL.TBD,
+      level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: []
     },
-    20: {
+    SPREAD_WITH_ARRAYS: {
       path: 'spread/with-arrays',
-      level: ES6_LEVEL.TBD,
+      level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: []
     },
     21: {
       path: 'spread/with-strings',
-      level: ES6_LEVEL.TBD,
+      level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: []
     },
     22: {
       path: 'class/creation',
-      level: ES6_LEVEL.TBD,
+      level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: []
     },
     23: {
       path: 'class/accessors',
-      level: ES6_LEVEL.TBD,
+      level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: []
     },
     24: {
       path: 'class/static-keyword',
-      level: ES6_LEVEL.TBD,
+      level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: []
     },
     25: {
       path: 'class/extends',
-      level: ES6_LEVEL.TBD,
+      level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: []
     },
     26: {
       path: 'class/more-extends',
-      level: ES6_LEVEL.TBD,
+      level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: []
     },
     27: {
       path: 'class/super-in-method',
-      level: ES6_LEVEL.TBD,
+      level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: []
     },
     28: {
       path: 'class/super-in-constructor',
-      level: ES6_LEVEL.TBD,
+      level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: []
     },
-    29: {
+    ARRAY_FROM: {
       path: 'array-api/from',
-      level: ES6_LEVEL.TBD,
+      level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: []
     },
     30: {
       path: 'array-api/of',
-      level: ES6_LEVEL.TBD,
+      level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: []
     },
     31: {
       path: 'array-api/fill',
-      level: ES6_LEVEL.TBD,
+      level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: []
     },
     32: {
       path: 'array-api/find',
-      level: ES6_LEVEL.TBD,
+      level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: []
     },
     33: {
       path: 'array-api/findIndex',
-      level: ES6_LEVEL.TBD,
+      level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: []
     },
-    34: {
+    SYMBOL_BASICS: {
       path: 'symbol/basics',
-      level: ES6_LEVEL.INTERMEDIATE,
+      level: SKILL_LEVEL.INTERMEDIATE,
       requiresKnowledgeFrom: []
     },
     35: {
       path: 'symbol/for',
-      level: ES6_LEVEL.INTERMEDIATE,
+      level: SKILL_LEVEL.INTERMEDIATE,
       requiresKnowledgeFrom: []
     },
     36: {
       path: 'symbol/keyFor',
-      level: ES6_LEVEL.INTERMEDIATE,
+      level: SKILL_LEVEL.INTERMEDIATE,
       requiresKnowledgeFrom: [35]
     },
     37: {
       path: 'iterator/array',
-      level: ES6_LEVEL.TBD,
+      level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: []
     },
     38: {
       path: 'iterator/string',
-      level: ES6_LEVEL.TBD,
+      level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: [37]
     },
-    39: {
+    ITERATOR_PROTOCOL: {
       path: 'iterator/protocol',
-      level: ES6_LEVEL.EXPERT,
+      level: SKILL_LEVEL.EXPERT,
       requiresKnowledgeFrom: []
     },
     40: {
       path: 'iterator/usages',
-      level: ES6_LEVEL.EXPERT,
-      requiresKnowledgeFrom: [7, 10, 12, 34, 39, 20]
+      level: SKILL_LEVEL.EXPERT,
+      requiresKnowledgeFrom: [LET, DESTRUCTURING_ARRAY, DESTRUCTURING_OBJECT, SYMBOL_BASICS, ITERATOR_PROTOCOL, SPREAD_WITH_ARRAYS]
     },
-    41: {
+    ARRAY_ENTRIES: {
       path: 'array-api/entries',
-      level: ES6_LEVEL.INTERMEDIATE,
-      requiresKnowledgeFrom: [8, 29, 39]
+      level: SKILL_LEVEL.INTERMEDIATE,
+      requiresKnowledgeFrom: [CONST, ARRAY_FROM, ITERATOR_PROTOCOL]
     },
-    42: {
+    ARRAY_KEYS: {
       path: 'array-api/keys',
-      level: ES6_LEVEL.INTERMEDIATE,
-      requiresKnowledgeFrom: [8, 10, 29, 39]
+      level: SKILL_LEVEL.INTERMEDIATE,
+      requiresKnowledgeFrom: [CONST, DESTRUCTURING_ARRAY, ARRAY_FROM, ITERATOR_PROTOCOL]
+    },
+    ARRAY_VALUES: {
+      path: 'array-api/values',
+      level: SKILL_LEVEL.INTERMEDIATE,
+      requiresKnowledgeFrom: [CONST, DESTRUCTURING_ARRAY, ITERATOR_PROTOCOL]
     }
   }
 };
