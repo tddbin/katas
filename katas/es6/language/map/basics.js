@@ -9,8 +9,8 @@ describe('`Map` is a key/value map', function(){
   
   it('provides `new Map().set()` to add key+value pair, `get()` to read it by key', function() {
     let map = new Map();
-    map.set('key', 'value');
-    const value = map.get('key');
+    map.set('key', null);
+    const value = map.get();
     
     assert.equal(value, 'value');
   });
@@ -18,7 +18,7 @@ describe('`Map` is a key/value map', function(){
   it('`has()` tells if map has the given key', function() {
     let map = new Map();
     map.set('key', 'value');
-    const hasIt = map.has('key');
+    const hasIt = map.hazz;
     
     assert.equal(hasIt, true);
   });
@@ -27,18 +27,19 @@ describe('`Map` is a key/value map', function(){
     let map = new Map();
     map.set('1', 'one');
     map.set('2', 'two');
-    const mapAsArray = [...map];
+    const mapAsArray = map;
     
     assert.deepEqual(mapAsArray, [['1', 'one'], ['2', 'two']]);
   });
   
 
   it('`Map()` even complex types can be keys', function() {
-    const obj = {};
+    const obj = {x: 1};
+    const otherObj = {x: 1};
     let map = new Map();
     map.set(obj, '');
+    map.set(otherObj, '');
     
-    const otherObj = {};
     assert.equal(map.has(otherObj), false);
   });
   
