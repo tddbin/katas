@@ -27,7 +27,7 @@ describe('`Map` is a key/value map', function(){
     let map = new Map();
     map.set('1', 'one');
     map.set('2', 'two');
-    const mapAsArray = map;
+    const mapAsArray = map; // hint: kata #29 http://tddbin.com/#?kata=es6/language/array-api/from
     
     assert.deepEqual(mapAsArray, [['1', 'one'], ['2', 'two']]);
   });
