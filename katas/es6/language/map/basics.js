@@ -33,7 +33,7 @@ describe('`Map` is a key/value map', function(){
   });
   
 
-  it('`Map()` even complex types can be keys', function() {
+  it('complex types can be keys', function() {
     const obj = {x: 1};
     const otherObj = {x: 1};
     let map = new Map();
