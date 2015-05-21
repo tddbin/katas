@@ -6,20 +6,23 @@ describe('`Map.prototype.get` returns the element from the map for a key', funct
   it('`get(key)` returns the value stored for this key', function() {
     let map = new Map();
     map.set('key', 'value');
-    assert.equal(map.get('key'), 'value');
+    
+    const value = map.get;
+    assert.equal(value, 'value');
   });
 
-  it('requires exactly the same value as passed to `set()`', function() {
+  it('requires exactly the value as passed to `set()`', function() {
     let map = new Map();
-    map.set({}, 'NOT undefined');
-    assert.equal(map.get({}), void 0);
+    map.set(Array, 'NOT undefined');
+    
+    assert.equal(map.get(Array), void 0);
   });
 
   it('multiple calls still return the same value', function() {
     let map = new Map();
     map.set('value', 'value');
     
-    var value = map.get(map.get(map.get('value')));
+    var value = map.get(map.get(map.get()));
     assert.equal(value, 'value');
   });
 
@@ -27,12 +30,16 @@ describe('`Map.prototype.get` returns the element from the map for a key', funct
     let map = new Map();
     map.set(void 0, 'yo');
     
-    assert.equal(map.get(), 'yo');
+    const value = map.get(___);
+    assert.equal(value, 'yo');
   });
 
   it('returns undefined for an unknown key', function() {
     let map = new Map();
-    assert.equal(map.get('unknown'), void 0);
+    map.set(void 0, 1);
+    
+    const value = map.get()
+    assert.equal(value, void 0);
   });
   
 });
