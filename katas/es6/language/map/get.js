@@ -27,7 +27,7 @@ describe('`Map.prototype.get` returns the element from the map for a key', funct
     assert.equal(map.get(obj), 'object is key');
   });
 
-  it('a missing key is the same as `undefined`', function() {
+  it('leave out the key, and you get the value set for the key `undefined` (void 0)', function() {
     let map = new Map();
     map.set(void 0, 'yo');
     
