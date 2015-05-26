@@ -5,7 +5,7 @@ describe('`Map.prototype.set` adds a new element with key and value to a Map', f
 
   it('simplest use case is `set(key, value)` and `get(key)`', function() {
     let map = new Map();
-    map.set('key', 'value');
+    map.set();
     
     assert.equal(map.get('key'), 'value');
   });
@@ -21,16 +21,9 @@ describe('`Map.prototype.set` adds a new element with key and value to a Map', f
   it('calling `set()` again with the same key replaces the value', function() {
     let map = new Map();
     map.set('key', 'value');
-    map.set('key', 'value1');
+    map.set('key', 'value3');
     
     assert.equal(map.get('key'), 'value1');
-  });
-
-  it('`set()` without parameters is like `set(undefined, undefined)`', function() {
-    let map = new Map();
-    map.set();
-    
-    assert.equal(void 0, void 0);
   });
 
   it('returns the map object', function() {
