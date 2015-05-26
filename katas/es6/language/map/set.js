@@ -26,7 +26,7 @@ describe('`Map.prototype.set` adds a new element with key and value to a Map', f
     assert.equal(map.get('key'), 'value1');
   });
 
-  it('returns the map object', function() {
+  it('`set()` returns the map object, it`s chainable', function() {
     let map = new Map();
     map.set(1, 'one')
        .set(2, 'two');
