@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/tddbin/katas",
   "devDependencies": {
-    "push2gh-pages": "git://github.com/uxebu/push2gh-pages.git"
+    "push2gh-pages": "git://github.com/uxebu/push2gh-pages.git",
+    "babel": "^5.4.7"
   }
 }

@@ -1,4 +1,10 @@
-const SKILL_LEVEL = {TBD, BEGINNER, INTERMEDIATE, ADVANCED, EXPERT};
+const SKILL_LEVEL = {
+  TBD: 'TBD', 
+  BEGINNER: 'BEGINNER', 
+  INTERMEDIATE: 'INTERMEDIATE', 
+  ADVANCED: 'ADVANCED', 
+  EXPERT: 'EXPERT'
+};
 
 const TEMPLATE_STRING_BASICS = 1;
 const TEMPLATE_STRING_MULTILINE = 2;
@@ -9,6 +15,7 @@ const ARROW_FUNCTION_BINDING = 6;
 const LET = 7;
 const CONST = 8;
 const DESTRUCTURING_ARRAY = 10;
+
 const DESTRUCTURING_STRING = 11;
 const DESTRUCTURING_OBJECT = 12;
 const ITERATOR_PROTOCOL = 39;
@@ -21,45 +28,45 @@ const ARRAY_ENTRIES = 41;
 const ARRAY_KEYS = 42;
 const ARRAY_VALUES = 43;
 
-const obj = {
+export const all = {
   name: 'ES6 Katas',
   items: {
-    TEMPLATE_STRING_BASICS: {
+    [TEMPLATE_STRING_BASICS]: {
       path: 'template-strings/basics',
       level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: []
     },
-    TEMPLATE_STRING_MULTILINE: {
+    [TEMPLATE_STRING_MULTILINE]: {
       path: 'template-strings/multiline',
       level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: []
     },
-    TEMPLATE_STRING_TAGGED: {
+    [TEMPLATE_STRING_TAGGED]: {
       path: 'template-strings/tagged',
       level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: []
     },
-    TEMPLATE_STRING_RAW: {
+    [TEMPLATE_STRING_RAW]: {
       path: 'template-strings/raw',
       level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: []
     },
-    ARROW_FUNCTION_BASICS: {
+    [ARROW_FUNCTION_BASICS]: {
       path: 'arrow-functions/basics',
       level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: []
     },
-    ARROW_FUNCTION_BINDING: {
+    [ARROW_FUNCTION_BINDING]: {
       path: 'arrow-functions/binding',
       level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: []
     },
-    LET: {
+    [LET]: {
       path: 'block-scope/let',
       level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: []
     },
-    CONST: {
+    [CONST]: {
       path: 'block-scope/const',
       level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: []
@@ -69,17 +76,17 @@ const obj = {
       level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: [ARROW_FUNCTION_BASICS, CONST]
     },
-    DESTRUCTURING_ARRAY: {
+    [DESTRUCTURING_ARRAY]: {
       path: 'destructuring/array',
       level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: []
     },
-    DESTRUCTURING_STRING: {
+    [DESTRUCTURING_STRING]: {
       path: 'destructuring/string',
       level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: []
     },
-    DESTRUCTURING_OBJECT: {
+    [DESTRUCTURING_OBJECT]: {
       path: 'destructuring/object',
       level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: []
@@ -119,7 +126,7 @@ const obj = {
       level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: []
     },
-    SPREAD_WITH_ARRAYS: {
+    [SPREAD_WITH_ARRAYS]: {
       path: 'spread/with-arrays',
       level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: []
@@ -164,7 +171,7 @@ const obj = {
       level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: []
     },
-    ARRAY_FROM: {
+    [ARRAY_FROM]: {
       path: 'array-api/from',
       level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: []
@@ -189,7 +196,7 @@ const obj = {
       level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: []
     },
-    SYMBOL_BASICS: {
+    [SYMBOL_BASICS]: {
       path: 'symbol/basics',
       level: SKILL_LEVEL.INTERMEDIATE,
       requiresKnowledgeFrom: []
@@ -214,7 +221,7 @@ const obj = {
       level: SKILL_LEVEL.TBD,
       requiresKnowledgeFrom: [37]
     },
-    ITERATOR_PROTOCOL: {
+    [ITERATOR_PROTOCOL]: {
       path: 'iterator/protocol',
       level: SKILL_LEVEL.EXPERT,
       requiresKnowledgeFrom: []
@@ -224,22 +231,20 @@ const obj = {
       level: SKILL_LEVEL.EXPERT,
       requiresKnowledgeFrom: [LET, DESTRUCTURING_ARRAY, DESTRUCTURING_OBJECT, SYMBOL_BASICS, ITERATOR_PROTOCOL, SPREAD_WITH_ARRAYS]
     },
-    ARRAY_ENTRIES: {
+    [ARRAY_ENTRIES]: {
       path: 'array-api/entries',
       level: SKILL_LEVEL.INTERMEDIATE,
       requiresKnowledgeFrom: [CONST, ARRAY_FROM, ITERATOR_PROTOCOL]
     },
-    ARRAY_KEYS: {
+    [ARRAY_KEYS]: {
       path: 'array-api/keys',
       level: SKILL_LEVEL.INTERMEDIATE,
       requiresKnowledgeFrom: [CONST, DESTRUCTURING_ARRAY, ARRAY_FROM, ITERATOR_PROTOCOL]
     },
-    ARRAY_VALUES: {
+    [ARRAY_VALUES]: {
       path: 'array-api/values',
       level: SKILL_LEVEL.INTERMEDIATE,
       requiresKnowledgeFrom: [CONST, DESTRUCTURING_ARRAY, ITERATOR_PROTOCOL]
     }
   }
 };
-
-export obj;
