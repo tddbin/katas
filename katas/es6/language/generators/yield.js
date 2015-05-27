@@ -8,30 +8,36 @@ describe('generator instance', () => {
     yield 'world';
   }
   
-  // create instance
-  let genInstance = generator();
+  let genInstance ;
+
+  beforeEach(function() {
+    genInstance = generator();
+  });
   
-  it('should have an undefined value property after initialisation', () => {
-    let value = genInstance;
-    assert.equal(value, undefined);
+  it('converted to an array returns all yielded values', () => {
+    let value = Array.from(genInstance);
+    assert.deepEqual(value, ['hello', 'world']);
   });
   
   it('should have value of "hello" after first next() call', () => {
-    let thisStep = genInstance.next;
+    let thisStep = genInstance.next();
     let [value, done] = [thisStep.value, thisStep.done];
     assert.equal(value, 'hello');
     assert.equal(done, false);
   });
   
   it('should have value of "world" after second next() call', () => {
-    let thisStep = genInstance;
+    genInstance.next();
+    let thisStep = genInstance.next();
     let [value, done] = [thisStep.value, thisStep.done];  
     assert.equal(value, 'world');
     assert.equal(done, false);
   });
   
   it('done property = true after stepping past all yield statements', () => {
-    let done = genInstance.done;
+    genInstance.next();
+    genInstance.next();
+    let done = genInstance.next().done;
     assert.equal(done, true);
   });
 
