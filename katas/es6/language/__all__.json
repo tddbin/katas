@@ -1,209 +1,247 @@
 {
-  "name": "ES6 Katas",
-  "items": {
-    "1": {
+  "items": [
+    {
       "path": "template-strings/basics",
       "level": "TBD",
-      "requiresKnowledgeFrom": []
+      "requiresKnowledgeFrom": [],
+      "id": "1"
     },
-    "2": {
+    {
       "path": "template-strings/multiline",
       "level": "TBD",
-      "requiresKnowledgeFrom": []
+      "requiresKnowledgeFrom": [],
+      "id": "2"
     },
-    "3": {
+    {
       "path": "template-strings/tagged",
       "level": "TBD",
-      "requiresKnowledgeFrom": []
+      "requiresKnowledgeFrom": [],
+      "id": "3"
     },
-    "4": {
+    {
       "path": "template-strings/raw",
       "level": "TBD",
-      "requiresKnowledgeFrom": []
+      "requiresKnowledgeFrom": [],
+      "id": "4"
     },
-    "5": {
+    {
       "path": "arrow-functions/basics",
       "level": "TBD",
-      "requiresKnowledgeFrom": []
+      "requiresKnowledgeFrom": [],
+      "id": "5"
     },
-    "6": {
+    {
       "path": "arrow-functions/binding",
       "level": "TBD",
-      "requiresKnowledgeFrom": []
+      "requiresKnowledgeFrom": [],
+      "id": "6"
     },
-    "7": {
+    {
       "path": "block-scope/let",
       "level": "TBD",
-      "requiresKnowledgeFrom": []
+      "requiresKnowledgeFrom": [],
+      "id": "7"
     },
-    "8": {
+    {
       "path": "block-scope/const",
       "level": "TBD",
-      "requiresKnowledgeFrom": []
+      "requiresKnowledgeFrom": [],
+      "id": "8"
     },
-    "9": {
+    {
       "path": "object-literal/basics",
       "level": "TBD",
       "requiresKnowledgeFrom": [
         5,
         8
-      ]
+      ],
+      "id": "9"
     },
-    "10": {
+    {
       "path": "destructuring/array",
       "level": "TBD",
-      "requiresKnowledgeFrom": []
+      "requiresKnowledgeFrom": [],
+      "id": "10"
     },
-    "11": {
+    {
       "path": "destructuring/string",
       "level": "TBD",
-      "requiresKnowledgeFrom": []
+      "requiresKnowledgeFrom": [],
+      "id": "11"
     },
-    "12": {
+    {
       "path": "destructuring/object",
       "level": "TBD",
-      "requiresKnowledgeFrom": []
+      "requiresKnowledgeFrom": [],
+      "id": "12"
     },
-    "13": {
+    {
       "path": "destructuring/defaults",
       "level": "TBD",
-      "requiresKnowledgeFrom": []
+      "requiresKnowledgeFrom": [],
+      "id": "13"
     },
-    "14": {
+    {
       "path": "destructuring/parameters",
       "level": "TBD",
-      "requiresKnowledgeFrom": []
+      "requiresKnowledgeFrom": [],
+      "id": "14"
     },
-    "15": {
+    {
       "path": "destructuring/rename",
       "level": "TBD",
-      "requiresKnowledgeFrom": []
+      "requiresKnowledgeFrom": [],
+      "id": "15"
     },
-    "16": {
+    {
       "path": "object-literal/computed-properties",
       "level": "TBD",
-      "requiresKnowledgeFrom": []
+      "requiresKnowledgeFrom": [],
+      "id": "16"
     },
-    "17": {
+    {
       "path": "unicode/in-strings",
       "level": "TBD",
-      "requiresKnowledgeFrom": []
+      "requiresKnowledgeFrom": [],
+      "id": "17"
     },
-    "18": {
+    {
       "path": "rest/as-parameter",
       "level": "TBD",
-      "requiresKnowledgeFrom": []
+      "requiresKnowledgeFrom": [],
+      "id": "18"
     },
-    "19": {
+    {
       "path": "rest/with-destructuring",
       "level": "TBD",
-      "requiresKnowledgeFrom": []
+      "requiresKnowledgeFrom": [],
+      "id": "19"
     },
-    "20": {
+    {
       "path": "spread/with-arrays",
       "level": "TBD",
-      "requiresKnowledgeFrom": []
+      "requiresKnowledgeFrom": [],
+      "id": "20"
     },
-    "21": {
+    {
       "path": "spread/with-strings",
       "level": "TBD",
-      "requiresKnowledgeFrom": []
+      "requiresKnowledgeFrom": [],
+      "id": "21"
     },
-    "22": {
+    {
       "path": "class/creation",
       "level": "TBD",
-      "requiresKnowledgeFrom": []
+      "requiresKnowledgeFrom": [],
+      "id": "22"
     },
-    "23": {
+    {
       "path": "class/accessors",
       "level": "TBD",
-      "requiresKnowledgeFrom": []
+      "requiresKnowledgeFrom": [],
+      "id": "23"
     },
-    "24": {
+    {
       "path": "class/static-keyword",
       "level": "TBD",
-      "requiresKnowledgeFrom": []
+      "requiresKnowledgeFrom": [],
+      "id": "24"
     },
-    "25": {
+    {
       "path": "class/extends",
       "level": "TBD",
-      "requiresKnowledgeFrom": []
+      "requiresKnowledgeFrom": [],
+      "id": "25"
     },
-    "26": {
+    {
       "path": "class/more-extends",
       "level": "TBD",
-      "requiresKnowledgeFrom": []
+      "requiresKnowledgeFrom": [],
+      "id": "26"
     },
-    "27": {
+    {
       "path": "class/super-in-method",
       "level": "TBD",
-      "requiresKnowledgeFrom": []
+      "requiresKnowledgeFrom": [],
+      "id": "27"
     },
-    "28": {
+    {
       "path": "class/super-in-constructor",
       "level": "TBD",
-      "requiresKnowledgeFrom": []
+      "requiresKnowledgeFrom": [],
+      "id": "28"
     },
-    "29": {
+    {
       "path": "array-api/from",
       "level": "TBD",
-      "requiresKnowledgeFrom": []
+      "requiresKnowledgeFrom": [],
+      "id": "29"
     },
-    "30": {
+    {
       "path": "array-api/of",
       "level": "TBD",
-      "requiresKnowledgeFrom": []
+      "requiresKnowledgeFrom": [],
+      "id": "30"
     },
-    "31": {
+    {
       "path": "array-api/fill",
       "level": "TBD",
-      "requiresKnowledgeFrom": []
+      "requiresKnowledgeFrom": [],
+      "id": "31"
     },
-    "32": {
+    {
       "path": "array-api/find",
       "level": "TBD",
-      "requiresKnowledgeFrom": []
+      "requiresKnowledgeFrom": [],
+      "id": "32"
     },
-    "33": {
+    {
       "path": "array-api/findIndex",
       "level": "TBD",
-      "requiresKnowledgeFrom": []
+      "requiresKnowledgeFrom": [],
+      "id": "33"
     },
-    "34": {
+    {
       "path": "symbol/basics",
       "level": "INTERMEDIATE",
-      "requiresKnowledgeFrom": []
+      "requiresKnowledgeFrom": [],
+      "id": "34"
     },
-    "35": {
+    {
       "path": "symbol/for",
       "level": "INTERMEDIATE",
-      "requiresKnowledgeFrom": []
+      "requiresKnowledgeFrom": [],
+      "id": "35"
     },
-    "36": {
+    {
       "path": "symbol/keyFor",
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [
         35
-      ]
+      ],
+      "id": "36"
     },
-    "37": {
+    {
       "path": "iterator/array",
       "level": "TBD",
-      "requiresKnowledgeFrom": []
+      "requiresKnowledgeFrom": [],
+      "id": "37"
     },
-    "38": {
+    {
       "path": "iterator/string",
       "level": "TBD",
       "requiresKnowledgeFrom": [
         37
-      ]
+      ],
+      "id": "38"
     },
-    "39": {
+    {
       "path": "iterator/protocol",
       "level": "EXPERT",
-      "requiresKnowledgeFrom": []
+      "requiresKnowledgeFrom": [],
+      "id": "39"
     },
-    "40": {
+    {
       "path": "iterator/usages",
       "level": "EXPERT",
       "requiresKnowledgeFrom": [
@@ -213,18 +251,20 @@
         34,
         39,
         20
-      ]
+      ],
+      "id": "40"
     },
-    "41": {
+    {
       "path": "array-api/entries",
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [
         8,
         29,
         39
-      ]
+      ],
+      "id": "41"
     },
-    "42": {
+    {
       "path": "array-api/keys",
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [
@@ -232,16 +272,18 @@
         10,
         29,
         39
-      ]
+      ],
+      "id": "42"
     },
-    "43": {
+    {
       "path": "array-api/values",
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [
         8,
         10,
         39
-      ]
+      ],
+      "id": "43"
     }
-  }
+  ]
 }
