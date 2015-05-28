@@ -1,7 +1,7 @@
 // 48: Set - add
 // To do: make all tests pass, leave the assert lines unchanged!
 
-describe('`add()`', function(){
+describe('`add()` appends a new element to the end of a Set object.', function(){
 
   let set;
   beforeEach(() => set = new Set());
@@ -12,25 +12,26 @@ describe('`add()`', function(){
     set.add(1);
     set.add(1);
     set.add(fn);
-    set.add(fn);
+    set.add({fn});
     
     assert.equal(set.size, 2);
   });
   
   it('is chainable', function() {
-    set.add(1).add(2);
+    set.add.add;
 
     assert.equal(set.has(2), true);
   });
   
   it('call without params adds undefined', function() {
-    set.add();
+    set.add
 
     assert.equal(set.has(void 0), true);
   });
   
-  it('-0 and +0 are equal', function() {
-    set.add(-0);
+  it('0, -0 and +0 are equal', function() {
+    set.add();
+    set.add();
 
     assert.equal(set.has(+0), true);
   });

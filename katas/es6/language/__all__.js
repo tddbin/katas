@@ -427,7 +427,7 @@ export const all = {
         },
         [SET_ADD]: {
           name: '`add()` method',
-          description: '',
+          description: 'Appends a new element to the end of a Set object.',
           path: 'set/add',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: [
