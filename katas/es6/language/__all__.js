@@ -33,6 +33,7 @@ const MAP_BASICS = 44;
 const MAP_GET = 45;
 const MAP_SET = 46;
 const SET_BASICS = 47;
+const SET_ADD = 48;
 
 const SPREAD_WITH_STRINGS = 21;
 const CLASS_CREATION = 22;
@@ -423,6 +424,15 @@ export const all = {
           path: 'set/basics',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: []
+        },
+        [SET_ADD]: {
+          name: '`add()` method',
+          description: '',
+          path: 'set/add',
+          level: SKILL_LEVEL.TBD,
+          requiresKnowledgeFrom: [
+            SET_BASICS
+          ]
         },
       }
     },
