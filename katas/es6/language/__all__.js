@@ -35,6 +35,13 @@ const MAP_SET = 46;
 const SET_BASICS = 47;
 
 const SPREAD_WITH_STRINGS = 21;
+const CLASS_CREATION = 22;
+const CLASS_ACCESSORS = 23;
+
+const FOR_OF = 0;
+
+const UNICODE_IN_STRINGS = 17;
+const DESTRUCTURING_DEFAULTS = 13;
 export const all = {
   name: 'ES6 Katas',
   groups: {
@@ -42,110 +49,188 @@ export const all = {
       items: {
         [TEMPLATE_STRING_BASICS]: {
           name: 'Basics',
-          description: '',
+          description: 'A template string, is wrapped in backticks.',
           path: 'template-strings/basics',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: []
         },
         [TEMPLATE_STRING_MULTILINE]: {
+          name: 'Multiline',
+          description: 'Template strings, can be multiline.',
           path: 'template-strings/multiline',
           level: SKILL_LEVEL.TBD,
-          requiresKnowledgeFrom: []
+          requiresKnowledgeFrom: [
+            TEMPLATE_STRING_BASICS
+          ]
         },
         [TEMPLATE_STRING_TAGGED]: {
+          name: 'tagged',
+          description: 'Tagged template strings are preceeded by an expression.',
           path: 'template-strings/tagged',
           level: SKILL_LEVEL.TBD,
-          requiresKnowledgeFrom: []
+          requiresKnowledgeFrom: [
+            TEMPLATE_STRING_BASICS
+          ]
         },
         [TEMPLATE_STRING_RAW]: {
+          name: '`raw` property',
+          description: 'The `raw` property accesses the string as it was entered.',
           path: 'template-strings/raw',
           level: SKILL_LEVEL.TBD,
-          requiresKnowledgeFrom: []
+          requiresKnowledgeFrom: [
+            TEMPLATE_STRING_BASICS,
+            TEMPLATE_STRING_TAGGED
+          ]
         }
       }
     },
     'Arrow functions': {
       items: {
         [ARROW_FUNCTION_BASICS]: {
+          name: 'Basics',
+          description: 'Arrow functions are a more convinient and shorter way to write a function.',
           path: 'arrow-functions/basics',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: []
         },
         [ARROW_FUNCTION_BINDING]: {
+          name: 'Function binding',
+          description: 'Arrow functions have lexical `this`, no dynamic `this`.',
           path: 'arrow-functions/binding',
           level: SKILL_LEVEL.TBD,
-          requiresKnowledgeFrom: []
+          requiresKnowledgeFrom: [
+            ARROW_FUNCTION_BASICS,
+            CLASS_CREATION
+          ]
         }
       }
     },
     'Block scope': {
       items: {
         [LET]: {
+          name: '`let` declaration',
+          description: '`let` restricts the scope of the variable to the current block.',
           path: 'block-scope/let',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: []
         },
         [CONST]: {
+          name: '`const` declaration',
+          description: '`const` is like `let` plus read-only.',
           path: 'block-scope/const',
           level: SKILL_LEVEL.TBD,
-          requiresKnowledgeFrom: []
+          requiresKnowledgeFrom: [
+            LET
+          ]
         }
       }
     },
     'Object literal': {
       items: {
         [OBJECT_LITERAL_BASICS]: {
+          name: 'Basics',
+          description: 'ES6 has new shorthands for objects.',
           path: 'object-literal/basics',
           level: SKILL_LEVEL.TBD,
-          requiresKnowledgeFrom: [ARROW_FUNCTION_BASICS, CONST]
+          requiresKnowledgeFrom: [
+            ARROW_FUNCTION_BASICS, 
+            CONST
+          ]
         },
         [OBJECT_LITERAL_COMPUTED_PROPERTIES]: {
+          name: 'Computed properties',
+          description: 'Object literal properties may be computed values.',
           path: 'object-literal/computed-properties',
           level: SKILL_LEVEL.TBD,
-          requiresKnowledgeFrom: []
+          requiresKnowledgeFrom: [
+            OBJECT_LITERAL_BASICS,
+            CONST
+          ]
         }
       }
     },
     'Destructuring': {
       items: {
         [DESTRUCTURING_ARRAY]: {
+          name: 'Array',
+          description: 'Destructuring arrays allows for more concise.',
           path: 'destructuring/array',
           level: SKILL_LEVEL.TBD,
-          requiresKnowledgeFrom: []
+          requiresKnowledgeFrom: [
+            LET,
+            CONST,
+            TEMPLATE_STRING_BASICS,
+            //FOR_OF
+          ]
         },
         [DESTRUCTURING_STRING]: {
+          name: 'String',
+          description: 'Destructuring can also be done on strings.',
           path: 'destructuring/string',
           level: SKILL_LEVEL.TBD,
-          requiresKnowledgeFrom: []
+          requiresKnowledgeFrom: [
+            CONST,
+            UNICODE_IN_STRINGS
+          ]
         },
         [DESTRUCTURING_OBJECT]: {
+          name: 'Object',
+          description: 'Destructuring objects is a core concepts for modules and more.',
           path: 'destructuring/object',
           level: SKILL_LEVEL.TBD,
-          requiresKnowledgeFrom: []
+          requiresKnowledgeFrom: [
+            CONST,
+            OBJECT_LITERAL_BASICS
+          ]
         },
-        13: {
+        [DESTRUCTURING_DEFAULTS]: {
+          name: 'Defaults',
+          description: 'When destructuring you can also use default values.',
           path: 'destructuring/defaults',
           level: SKILL_LEVEL.TBD,
-          requiresKnowledgeFrom: []
+          requiresKnowledgeFrom: [
+            CONST,
+            DESTRUCTURING_ARRAY,
+            DESTRUCTURING_OBJECT
+          ]
         },
         14: {
+          name: 'Parameters',
+          description: 'Destructuring function parameters.',
           path: 'destructuring/parameters',
           level: SKILL_LEVEL.TBD,
-          requiresKnowledgeFrom: []
+          requiresKnowledgeFrom: [
+            DESTRUCTURING_ARRAY,
+            DESTRUCTURING_OBJECT,
+            ARROW_FUNCTION_BASICS
+          ]
         },
         15: {
+          name: 'Rename',
+          description: 'Rename variables while destructuring.',
           path: 'destructuring/rename',
           level: SKILL_LEVEL.TBD,
-          requiresKnowledgeFrom: []
+          requiresKnowledgeFrom: [
+            DESTRUCTURING_ARRAY,
+            DESTRUCTURING_OBJECT,
+            DESTRUCTURING_DEFAULTS,
+            CONST,
+            ARROW_FUNCTION_BASICS
+          ]
         },
       }
     },
     'Unicode': {
       items: {
-        17: {
+        [UNICODE_IN_STRINGS]: {
+          name: 'In strings',
+          description: 'How to use unicode in strings.',
           path: 'unicode/in-strings',
           level: SKILL_LEVEL.TBD,
-          requiresKnowledgeFrom: []
+          requiresKnowledgeFrom: [
+            CONST,
+            TEMPLATE_STRING_BASICS
+          ]
         },
       }
     },
@@ -179,12 +264,12 @@ export const all = {
     },
     'Class': {
       items: {
-        22: {
+        [CLASS_CREATION]: {
           path: 'class/creation',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: []
         },
-        23: {
+        [CLASS_ACCESSORS]: {
           path: 'class/accessors',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: []
@@ -263,6 +348,8 @@ export const all = {
     'Symbol': {
       items: {
         [SYMBOL_BASICS]: {
+          name: 'Basics',
+          description: '',
           path: 'symbol/basics',
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: []
@@ -306,16 +393,22 @@ export const all = {
     'Map': {
       items: {
         [MAP_BASICS]: {
+          name: 'Basics',
+          description: '',
           path: 'map/basics',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: []
         },
         [MAP_GET]: {
+          name: '`get()` method',
+          description: '',
           path: 'map/get',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: [37]
         },
         [MAP_SET]: {
+          name: '`set()` method',
+          description: '',
           path: 'map/set',
           level: SKILL_LEVEL.EXPERT,
           requiresKnowledgeFrom: []
@@ -325,6 +418,8 @@ export const all = {
     'Set': {
       items: {
         [SET_BASICS]: {
+          name: 'Basics',
+          description: '',
           path: 'set/basics',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: []
