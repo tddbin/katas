@@ -457,7 +457,7 @@ export const all = {
         },
         [GENERATOR_ITERATION]: {
           name: 'Iterator',
-          description: 'Generators return iterator objects',
+          description: 'Generators return iterable objects',
           path: 'generator/iteration',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: [

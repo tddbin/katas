@@ -1,4 +1,4 @@
-// 50: Generators return iterator objects
+// 50: Generators return iterable objects
 // To do: make all tests pass, leave the assert lines unchanged!
 
 describe('a generator returns an iterable object', function() {
