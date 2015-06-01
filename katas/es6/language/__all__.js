@@ -45,6 +45,8 @@ const UNICODE_IN_STRINGS = 17;
 const DESTRUCTURING_DEFAULTS = 13;
 
 const GENERATOR_CREATION = 49;
+const GENERATOR_YIELD = 50;
+
 export const all = {
   name: 'ES6 Katas',
   groups: {
@@ -450,6 +452,16 @@ export const all = {
             CONST,
             OBJECT_LITERAL_COMPUTED_PROPERTIES,
             CLASS_CREATION
+          ]
+        },
+        [GENERATOR_YIELD]: {
+          name: 'Yield Expressions',
+          description: 'There are many ways to create a generator',
+          path: 'generator/yield',
+          level: SKILL_LEVEL.TBD,
+          requiresKnowledgeFrom: [
+            LET,
+            GENERATOR_CREATION
           ]
         }
       }
