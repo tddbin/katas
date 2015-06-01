@@ -1,4 +1,4 @@
-// Generators - Yield Statements
+// Generators - Yield Expressions
 // To do: make all tests pass, leave the assert lines unchanged!
 
 describe('generator instance', () => {
@@ -8,26 +8,25 @@ describe('generator instance', () => {
     yield 'world';
   }
   
-  let genInstance ;
+  let genInstance;
 
   beforeEach(function() {
     genInstance = generator();
   });
   
-  it('converted to an array returns all yielded values', () => {
-    let value = Array.from(genInstance);
-    assert.deepEqual(value, ['hello', 'world']);
+  it('instance converted to an array returns all yielded values', () => {
+    let values = Array.from();
+    assert.deepEqual(values, ['hello', 'world']);
   });
   
   it('should have value of "hello" after first next() call', () => {
-    let thisStep = genInstance.next();
+    let thisStep = genInstance;
     let [value, done] = [thisStep.value, thisStep.done];
     assert.equal(value, 'hello');
     assert.equal(done, false);
   });
   
   it('should have value of "world" after second next() call', () => {
-    genInstance.next();
     let thisStep = genInstance.next();
     let [value, done] = [thisStep.value, thisStep.done];  
     assert.equal(value, 'world');
@@ -37,7 +36,7 @@ describe('generator instance', () => {
   it('done property = true after stepping past all yield statements', () => {
     genInstance.next();
     genInstance.next();
-    let done = genInstance.next().done;
+    let done = genInstance.done;
     assert.equal(done, true);
   });
 
