@@ -472,7 +472,7 @@ export const all = {
           requiresKnowledgeFrom: [
             LET,
             GENERATOR_CREATION,
-            GENERATOR_ITERATOR
+            GENERATOR_ITERATION
           ]
         }
       }
