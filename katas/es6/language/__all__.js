@@ -43,6 +43,8 @@ const FOR_OF = 0;
 
 const UNICODE_IN_STRINGS = 17;
 const DESTRUCTURING_DEFAULTS = 13;
+
+const GENERATOR_CREATION = 49;
 export const all = {
   name: 'ES6 Katas',
   groups: {
@@ -436,5 +438,21 @@ export const all = {
         },
       }
     },
+    'Generator': {
+      items: {
+        [GENERATOR_CREATION]: {
+          name: 'Creation',
+          description: 'There are many ways to create a generator',
+          path: 'generator/creation',
+          level: SKILL_LEVEL.TBD,
+          requiresKnowledgeFrom: [
+            LET,
+            CONST,
+            OBJECT_LITERAL_COMPUTED_PROPERTIES,
+            CLASS_CREATION
+          ]
+        }
+      }
+    }
   }
 };
