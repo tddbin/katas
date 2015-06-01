@@ -454,6 +454,20 @@
       ],
       "groupName": "Set",
       "id": "48"
+    },
+    {
+      "name": "Creation",
+      "description": "There are many ways to create a generator",
+      "path": "generator/creation",
+      "level": "TBD",
+      "requiresKnowledgeFrom": [
+        7,
+        8,
+        16,
+        22
+      ],
+      "groupName": "Generator",
+      "id": "49"
     }
   ]
 }
