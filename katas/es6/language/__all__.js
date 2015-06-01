@@ -45,7 +45,7 @@ const UNICODE_IN_STRINGS = 17;
 const DESTRUCTURING_DEFAULTS = 13;
 
 const GENERATOR_CREATION = 49;
-const GENERATOR_ITERATOR = 50;
+const GENERATOR_ITERATION = 50;
 const GENERATOR_YIELD = 51;
 
 export const all = {
@@ -455,10 +455,10 @@ export const all = {
             CLASS_CREATION
           ]
         },
-        [GENERATOR_ITERATOR]: {
+        [GENERATOR_ITERATION]: {
           name: 'Iterator',
           description: 'Generators return iterator objects',
-          path: 'generator/iterator',
+          path: 'generator/iteration',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: [
             GENERATOR_CREATION
