@@ -1,7 +1,7 @@
-// Generators - Yield Expressions
+// 51: Generators - Yield Expressions
 // To do: make all tests pass, leave the assert lines unchanged!
 
-describe('generator instance', () => {
+describe('generator - yield keyword is used to pause and resume a generator function', () => {
   
   function* generator() {
     yield 'hello';
@@ -14,7 +14,7 @@ describe('generator instance', () => {
     genInstance = generator();
   });
   
-  it('instance converted to an array returns all yielded values', () => {
+  it('converting a generator to an array resumes the generator until all values are received', () => {
     let values = Array.from();
     assert.deepEqual(values, ['hello', 'world']);
   });
