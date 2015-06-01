@@ -3,21 +3,21 @@
 
 describe('generator can be created in multiple ways', function() {
   
-  it('standard way, by adding `*` after `function`', function() {
-    function* g() {yield 1;}
+  it('the most common way is by adding `*` after `function`', function() {
+    function g() {}
     
     assertIsGenerator(g());
   });
   
   it('as a function expression, by adding a `*` after `function`', function() {
-    let g = function*() {yield 1;};
+    let g = function() {};
     
     assertIsGenerator(g());
   });
   
   it('inside an object by prefixing the function with `*`', function() {
     let obj = {
-      * g() {yield 1;}
+      g() {}
     };
     
     assertIsGenerator(obj.g());
@@ -26,7 +26,7 @@ describe('generator can be created in multiple ways', function() {
   it('computed generator names, are just prefixed with a `*`', function() {
     const generatorName = 'g';
     let obj = {
-      * [generatorName]() {yield 1;}
+      [generatorName]() {}
     };
     
     assertIsGenerator(obj.g());
@@ -35,7 +35,7 @@ describe('generator can be created in multiple ways', function() {
   it('inside a class the same way', function() {
     const generatorName = 'g';
     class Klazz {
-      * [generatorName]() {yield 1;}
+      [generatorName]() {}
     }
     
     assertIsGenerator(new Klazz().g());
