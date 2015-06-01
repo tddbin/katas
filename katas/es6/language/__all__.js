@@ -45,7 +45,8 @@ const UNICODE_IN_STRINGS = 17;
 const DESTRUCTURING_DEFAULTS = 13;
 
 const GENERATOR_CREATION = 49;
-const GENERATOR_YIELD = 50;
+const GENERATOR_ITERATOR = 50;
+const GENERATOR_YIELD = 51;
 
 export const all = {
   name: 'ES6 Katas',
@@ -454,14 +455,24 @@ export const all = {
             CLASS_CREATION
           ]
         },
+        [GENERATOR_ITERATOR]: {
+          name: 'Iterator',
+          description: 'Generators return iterator objects',
+          path: 'generator/iterator',
+          level: SKILL_LEVEL.TBD,
+          requiresKnowledgeFrom: [
+            GENERATOR_CREATION
+          ]
+        },
         [GENERATOR_YIELD]: {
           name: 'Yield Expressions',
-          description: 'There are many ways to create a generator',
+          description: 'The yield keyword is used to pause and resume a generator function',
           path: 'generator/yield',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: [
             LET,
-            GENERATOR_CREATION
+            GENERATOR_CREATION,
+            GENERATOR_ITERATOR
           ]
         }
       }
