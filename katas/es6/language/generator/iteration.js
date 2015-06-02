@@ -1,28 +1,28 @@
-// 50: Generators return iterable objects
+// 50: Generator - iterator
 // To do: make all tests pass, leave the assert lines unchanged!
 
 describe('a generator returns an iterable object', function() {
   
-  const gen = function* (){
+  const generatorFunction = function* (){
     yield 1;
     yield 2;
   };
   
-  let genInstance;
+  let generator;
   
   beforeEach(() => {
-    genInstance = new gen();
+    generator = new generatorFunction();
   });
     
   it('a generator returns an object', function() {
-    const theType = typeof genInstance;
+    const theType = typeof generator;
     const expected = 'object';
     
     assert.equal(theType, expected);
   });
   
   it('a generator object has an iterator, which is a function', function() {
-    const iterator = genInstance[Symbol.iterator];
+    const iterator = generator[Symbol.iterator];
     const theType = typeof iterator;
     const expected = 'function';
     
@@ -32,7 +32,7 @@ describe('a generator returns an iterable object', function() {
   it('can be looped with `for-of`, which expects an iterable', function() {
 
     function iterateForOf(){
-      for (let value of genInstance) {
+      for (let value of generator) {
         // no statements needed
       }
     }
