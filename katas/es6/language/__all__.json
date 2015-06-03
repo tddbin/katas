@@ -468,6 +468,30 @@
       ],
       "groupName": "Generator",
       "id": "49"
+    },
+    {
+      "name": "Iterator",
+      "description": "Generators return iterable objects",
+      "path": "generator/iterator",
+      "level": "TBD",
+      "requiresKnowledgeFrom": [
+        49
+      ],
+      "groupName": "Generator",
+      "id": "50"
+    },
+    {
+      "name": "Yield Expressions",
+      "description": "The yield keyword is used to pause and resume a generator function",
+      "path": "generator/yield",
+      "level": "TBD",
+      "requiresKnowledgeFrom": [
+        7,
+        49,
+        50
+      ],
+      "groupName": "Generator",
+      "id": "51"
     }
   ]
 }
