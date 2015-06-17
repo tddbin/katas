@@ -1,7 +1,7 @@
 #!/bin/node
 
 import {all} from '../../katas/es6/language/__raw-metadata__.js';
-import FlatMetaData from '../flat-metadata-structure';
+import FlatMetaData from '../flat-metadata';
 import fs from 'fs';
 import path from 'path';
 
