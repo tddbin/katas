@@ -48,6 +48,7 @@ const GENERATOR_CREATION = 49;
 const GENERATOR_ITERATOR = 50;
 const GENERATOR_YIELD = 51;
 
+var ITERATOR_ARRAY = 37;
 export const all = {
   name: 'ES6 Katas',
   groups: {
@@ -374,7 +375,7 @@ export const all = {
     },
     'Iterator': {
       items: {
-        37: {
+        [ITERATOR_ARRAY]: {
           path: 'iterator/array',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: []
@@ -382,7 +383,7 @@ export const all = {
         38: {
           path: 'iterator/string',
           level: SKILL_LEVEL.TBD,
-          requiresKnowledgeFrom: [37]
+          requiresKnowledgeFrom: [SYMBOL_BASICS, ITERATOR_ARRAY]
         },
         [ITERATOR_PROTOCOL]: {
           path: 'iterator/protocol',
@@ -410,7 +411,7 @@ export const all = {
           description: '',
           path: 'map/get',
           level: SKILL_LEVEL.TBD,
-          requiresKnowledgeFrom: [37]
+          requiresKnowledgeFrom: [ITERATOR_ARRAY]
         },
         [MAP_SET]: {
           name: '`set()` method',
