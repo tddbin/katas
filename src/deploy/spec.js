@@ -2,6 +2,8 @@ import assert from 'assert';
 import sinon from 'sinon';
 assert.calledWith = sinon.assert.calledWith;
 
+import MetaData from './metadata.js';
+
 describe('deployable meta data', function() {
   
   let metaData;
@@ -24,21 +26,3 @@ describe('deployable meta data', function() {
     assert.calledWith(writeToFileDouble, fileName, conversionResult);
   });
 });
-
-class MetaData {
-  constructor(writeToFile) {
-    this._writeToFile = writeToFile;
-    this._rawData = null;
-  }
-  cloneAndInitWithRawData(rawData) {
-    var clone = new MetaData(this._writeToFile);
-    clone._rawData = rawData;
-    return clone;
-  }
-  convertWith(rawData, converter) {
-    return this.cloneAndInitWithRawData(converter.to(rawData));
-  }
-  writeToFile(fileName) {
-    this._writeToFile(fileName, this._rawData);
-  }
-}
