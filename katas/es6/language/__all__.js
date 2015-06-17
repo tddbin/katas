@@ -1,10 +1,4 @@
-const SKILL_LEVEL = {
-  TBD: 'TBD', 
-  BEGINNER: 'BEGINNER', 
-  INTERMEDIATE: 'INTERMEDIATE', 
-  ADVANCED: 'ADVANCED', 
-  EXPERT: 'EXPERT'
-};
+import {SKILL_LEVEL} from '../../skill-levels.js';
 
 const TEMPLATE_STRING_BASICS = 1;
 const TEMPLATE_STRING_MULTILINE = 2;
