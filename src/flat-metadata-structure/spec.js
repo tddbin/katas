@@ -1,5 +1,5 @@
 import assert from 'assert';
-import {buildMetaData} from './index.js';
+import FlatMetaData from './index.js';
 import {all} from '../../katas/es6/language/__raw-metadata__.js';
 
 describe('build the meta data from the all.js file structure', function() {
@@ -8,7 +8,7 @@ describe('build the meta data from the all.js file structure', function() {
   const firstGroupItems = firstGroup.items;
   let converted;
   beforeEach(function() {
-    converted = buildMetaData(all);
+    converted = FlatMetaData.to(all);
   });
   
   it('makes `items` key an array', () => 

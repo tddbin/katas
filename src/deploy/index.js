@@ -1,7 +1,7 @@
 #!/bin/node
 
 import {all} from '../../katas/es6/language/__raw-metadata__.js';
-import {buildMetaData} from '../flat-metadata-structure';
+import FlatMetaData from '../flat-metadata-structure';
 import fs from 'fs';
 import path from 'path';
 
@@ -12,7 +12,7 @@ const destinationDir = path.join(__dirname, '../../dist/katas/es6/language');
 const destJsonFile = path.join(destinationDir, '__all__.json');
 
 new MetaData(writeToFileAsJson)
-  .convertWith(all, {to: buildMetaData})
+  .convertWith(all, FlatMetaData)
   .writeToFile(destJsonFile);
 
 fs.unlinkSync(path.join(destinationDir, '__raw-metadata__.js'));

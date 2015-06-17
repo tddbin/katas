@@ -1,4 +1,10 @@
-export function buildMetaData(all) {
+export default class FlatMetaData {
+  static to(data) {
+    return buildMetaData(data);
+  }
+}
+
+function buildMetaData(all) {
   const items = buildItems(extractAllItems(all));
   return {items: items};
 }
