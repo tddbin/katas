@@ -346,6 +346,7 @@
       "path": "iterator/string",
       "level": "TBD",
       "requiresKnowledgeFrom": [
+        34,
         37
       ],
       "groupName": "Iterator",

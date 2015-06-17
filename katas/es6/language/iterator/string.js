@@ -42,7 +42,3 @@ describe('string is a built-in iterable object', function() {
   });
   
 });
-
-// Required knowledge
-// #37 http://tddbin.com/#?kata=es6/language/iterator/array
-// #34 http://tddbin.com/#?kata=es6/language/symbol/basics
