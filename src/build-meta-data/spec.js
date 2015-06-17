@@ -1,5 +1,5 @@
 import assert from 'assert';
-import {buildMetaData} from '../build-meta-data.js';
+import {buildMetaData} from './index.js';
 import {all} from '../../katas/es6/language/__all__.js';
 
 describe('build the meta data from the all.js file structure', function() {

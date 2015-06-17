@@ -1,7 +1,7 @@
 #!/bin/node
 
 import {all} from '../katas/es6/language/__all__.js';
-import {buildMetaData} from './build-meta-data.js';
+import {buildMetaData} from './build-meta-data';
 import fs from 'fs';
 import path from 'path';
 
