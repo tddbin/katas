@@ -20,7 +20,7 @@ mkdir -p $DIST_ROOT;
 cp -r $ORIGIN_ROOT/katas $DIST_ROOT;
 babel-node ./src/deploy.js
 cp $ORIGIN_ROOT/CNAME $DIST_ROOT/CNAME;
-# don't behave like jekyll, e.g. allow `__all__.js` files, which would not be served otherwise
+# don't behave like jekyll, e.g. allow `__raw-metadata__.js` files, which would not be served otherwise
 cp $ORIGIN_ROOT/.nojekyll $DIST_ROOT/;
 
 cp $ORIGIN_ROOT/html/proxy.html $DIST_ROOT/;
