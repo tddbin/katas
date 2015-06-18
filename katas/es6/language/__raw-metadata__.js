@@ -475,7 +475,7 @@ export const all = {
           name: 'Send value to a generator',
           description: 'By calling next() with a parameter, you can pass a value to a generator.',
           path: 'generator/send-value',
-          level: SKILL_LEVEL.TBD,
+          level: SKILL_LEVEL.ADVANCED,
           requiresKnowledgeFrom: [
             LET,
             GENERATOR_CREATION,

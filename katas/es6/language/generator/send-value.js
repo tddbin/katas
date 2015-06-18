@@ -14,14 +14,14 @@ describe('pass a value to a generator', () => {
     
     // way #2
     var iterator = generatorFunction();
-    var iteratedOver = [iterator.next().value, iterator.next().value];
+    var iteratedOver = [iterator.next().___, iterator.___];
     
     assert.deepEqual(convertedToAnArray, iteratedOver);
   });
 
   it('pass a value to the iterator', function() {
     function* generatorFunction() {
-      const param = yield 1;
+      yield 1;
       yield param;
     }
 
@@ -36,7 +36,7 @@ describe('pass a value to a generator', () => {
       yield 1;
     }
 
-    assert.throws(function() { generatorFunction().next(1); });
+    assert.throws(function() { generatorFunction().next(); });
   });
 
 });
