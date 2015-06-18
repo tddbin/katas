@@ -6,7 +6,7 @@
           "name": "basics",
           "description": "A template string, is wrapped in backticks.",
           "path": "template-strings/basics",
-          "level": "TBD",
+          "level": "BEGINNER",
           "requiresKnowledgeFrom": [],
           "groupName": "Template strings",
           "id": "1"
@@ -15,7 +15,7 @@
           "name": "multiline",
           "description": "Template strings, can be multiline.",
           "path": "template-strings/multiline",
-          "level": "TBD",
+          "level": "BEGINNER",
           "requiresKnowledgeFrom": [
             1
           ],
@@ -26,7 +26,7 @@
           "name": "tagged",
           "description": "Tagged template strings are preceeded by an expression.",
           "path": "template-strings/tagged",
-          "level": "TBD",
+          "level": "INTERMEDIATE",
           "requiresKnowledgeFrom": [
             1
           ],
@@ -37,7 +37,7 @@
           "name": "`raw` property",
           "description": "The `raw` property accesses the string as it was entered.",
           "path": "template-strings/raw",
-          "level": "TBD",
+          "level": "INTERMEDIATE",
           "requiresKnowledgeFrom": [
             1,
             3
@@ -53,7 +53,7 @@
           "name": "basics",
           "description": "Arrow functions are a more convinient and shorter way to write a function.",
           "path": "arrow-functions/basics",
-          "level": "TBD",
+          "level": "BEGINNER",
           "requiresKnowledgeFrom": [],
           "groupName": "Arrow functions",
           "id": "5"
@@ -62,7 +62,7 @@
           "name": "function binding",
           "description": "Arrow functions have lexical `this`, no dynamic `this`.",
           "path": "arrow-functions/binding",
-          "level": "TBD",
+          "level": "BEGINNER",
           "requiresKnowledgeFrom": [
             5,
             22
@@ -78,7 +78,7 @@
           "name": "`let` declaration",
           "description": "`let` restricts the scope of the variable to the current block.",
           "path": "block-scope/let",
-          "level": "TBD",
+          "level": "BEGINNER",
           "requiresKnowledgeFrom": [],
           "groupName": "Block scope",
           "id": "7"
@@ -87,7 +87,7 @@
           "name": "`const` declaration",
           "description": "`const` is like `let` plus read-only.",
           "path": "block-scope/const",
-          "level": "TBD",
+          "level": "BEGINNER",
           "requiresKnowledgeFrom": [
             7
           ],
@@ -102,7 +102,7 @@
           "name": "basics",
           "description": "ES6 has new shorthands for objects.",
           "path": "object-literal/basics",
-          "level": "TBD",
+          "level": "INTERMEDIATE",
           "requiresKnowledgeFrom": [
             5,
             8
@@ -114,7 +114,7 @@
           "name": "computed properties",
           "description": "Object literal properties may be computed values.",
           "path": "object-literal/computed-properties",
-          "level": "TBD",
+          "level": "ADVANCED",
           "requiresKnowledgeFrom": [
             9,
             8
@@ -130,7 +130,7 @@
           "name": "array",
           "description": "Destructuring arrays allows for more concise.",
           "path": "destructuring/array",
-          "level": "TBD",
+          "level": "BEGINNER",
           "requiresKnowledgeFrom": [
             7,
             8,
@@ -143,7 +143,7 @@
           "name": "string",
           "description": "Destructuring can also be done on strings.",
           "path": "destructuring/string",
-          "level": "TBD",
+          "level": "BEGINNER",
           "requiresKnowledgeFrom": [
             8,
             17
@@ -155,7 +155,7 @@
           "name": "object",
           "description": "Destructuring objects is a core concepts for modules and more.",
           "path": "destructuring/object",
-          "level": "TBD",
+          "level": "BEGINNER",
           "requiresKnowledgeFrom": [
             8,
             9
@@ -167,7 +167,7 @@
           "name": "defaults",
           "description": "When destructuring you can also use default values.",
           "path": "destructuring/defaults",
-          "level": "TBD",
+          "level": "BEGINNER",
           "requiresKnowledgeFrom": [
             8,
             10,
@@ -180,7 +180,7 @@
           "name": "parameters",
           "description": "Destructuring function parameters.",
           "path": "destructuring/parameters",
-          "level": "TBD",
+          "level": "INTERMEDIATE",
           "requiresKnowledgeFrom": [
             10,
             12,
@@ -193,7 +193,7 @@
           "name": "rename",
           "description": "Rename variables while destructuring.",
           "path": "destructuring/rename",
-          "level": "TBD",
+          "level": "INTERMEDIATE",
           "requiresKnowledgeFrom": [
             10,
             12,
@@ -212,7 +212,7 @@
           "name": "in strings",
           "description": "How to use unicode in strings.",
           "path": "unicode/in-strings",
-          "level": "TBD",
+          "level": "INTERMEDIATE",
           "requiresKnowledgeFrom": [
             8,
             1
@@ -228,7 +228,7 @@
           "name": "as parameter",
           "description": "Use the rest operator as parameter.",
           "path": "rest/as-parameter",
-          "level": "TBD",
+          "level": "INTERMEDIATE",
           "requiresKnowledgeFrom": [],
           "groupName": "Rest operator",
           "id": "18"
@@ -237,7 +237,7 @@
           "name": "with destructuring",
           "description": "Use the rest operator with destructuring.",
           "path": "rest/with-destructuring",
-          "level": "TBD",
+          "level": "INTERMEDIATE",
           "requiresKnowledgeFrom": [],
           "groupName": "Rest operator",
           "id": "19"
@@ -250,7 +250,7 @@
           "name": "with arrays",
           "description": "Spread operator in use with arrays.",
           "path": "spread/with-arrays",
-          "level": "TBD",
+          "level": "INTERMEDIATE",
           "requiresKnowledgeFrom": [],
           "groupName": "Spread operator",
           "id": "20"
@@ -259,7 +259,7 @@
           "name": "with strings",
           "description": "Apply spread operator on strings.",
           "path": "spread/with-strings",
-          "level": "TBD",
+          "level": "INTERMEDIATE",
           "requiresKnowledgeFrom": [],
           "groupName": "Spread operator",
           "id": "21"
@@ -272,7 +272,7 @@
           "name": "creation",
           "description": "Create a class.",
           "path": "class/creation",
-          "level": "TBD",
+          "level": "BEGINNER",
           "requiresKnowledgeFrom": [],
           "groupName": "Class",
           "id": "22"
@@ -281,52 +281,52 @@
           "name": "accessors",
           "description": "Getter+setters as class properties.",
           "path": "class/accessors",
-          "level": "TBD",
+          "level": "INTERMEDIATE",
           "requiresKnowledgeFrom": [],
           "groupName": "Class",
           "id": "23"
         },
         {
           "name": "static",
-          "description": "",
+          "description": "Use of the static keyword inside a class.",
           "path": "class/static",
-          "level": "TBD",
+          "level": "BEGINNER",
           "requiresKnowledgeFrom": [],
           "groupName": "Class",
           "id": "24"
         },
         {
           "name": "extends",
-          "description": "",
+          "description": "How to do inheritance, using `extends`.",
           "path": "class/extends",
-          "level": "TBD",
+          "level": "BEGINNER",
           "requiresKnowledgeFrom": [],
           "groupName": "Class",
           "id": "25"
         },
         {
           "name": "more extends",
-          "description": "",
+          "description": "More in depth `extends` stuff",
           "path": "class/more-extends",
-          "level": "TBD",
+          "level": "ADVANCED",
           "requiresKnowledgeFrom": [],
           "groupName": "Class",
           "id": "26"
         },
         {
           "name": "super in method",
-          "description": "",
+          "description": "Use of `super` inside a method.",
           "path": "class/super-in-method",
-          "level": "TBD",
+          "level": "INTERMEDIATE",
           "requiresKnowledgeFrom": [],
           "groupName": "Class",
           "id": "27"
         },
         {
           "name": "super in constructor",
-          "description": "",
+          "description": "Use of `super` inside the constructor.",
           "path": "class/super-in-constructor",
-          "level": "TBD",
+          "level": "INTERMEDIATE",
           "requiresKnowledgeFrom": [],
           "groupName": "Class",
           "id": "28"
@@ -337,7 +337,7 @@
       "items": [
         {
           "name": "`Array.from()`",
-          "description": "",
+          "description": "Convert a not-array into an array.",
           "path": "array-api/from",
           "level": "TBD",
           "requiresKnowledgeFrom": [],
@@ -346,7 +346,7 @@
         },
         {
           "name": "`Array.of()`",
-          "description": "",
+          "description": "`Array.of` creates an array with the given arguments as elements.",
           "path": "array-api/of",
           "level": "TBD",
           "requiresKnowledgeFrom": [],
@@ -355,7 +355,7 @@
         },
         {
           "name": "`[].fill()`",
-          "description": "",
+          "description": "`[].fill` can fill up an array with one value.",
           "path": "array-api/fill",
           "level": "TBD",
           "requiresKnowledgeFrom": [],
@@ -364,7 +364,7 @@
         },
         {
           "name": "`[].find()`",
-          "description": "",
+          "description": "`[].find` makes finding items in arrays easier.",
           "path": "array-api/find",
           "level": "TBD",
           "requiresKnowledgeFrom": [],
@@ -373,7 +373,7 @@
         },
         {
           "name": "`[].findIndex()`",
-          "description": "",
+          "description": "`[].findIndex` makes finding items in arrays easier.",
           "path": "array-api/findIndex",
           "level": "TBD",
           "requiresKnowledgeFrom": [],
@@ -382,7 +382,7 @@
         },
         {
           "name": "`[].entries()`",
-          "description": "",
+          "description": "`[].entries()` returns an iterator object with all entries.",
           "path": "array-api/entries",
           "level": "INTERMEDIATE",
           "requiresKnowledgeFrom": [
@@ -395,7 +395,7 @@
         },
         {
           "name": "`[].keys()`",
-          "description": "",
+          "description": "`[].keys()` returns an iterator for all keys in the array.",
           "path": "array-api/keys",
           "level": "INTERMEDIATE",
           "requiresKnowledgeFrom": [
@@ -409,7 +409,7 @@
         },
         {
           "name": "`[].values()`",
-          "description": "",
+          "description": "`[].values()` returns an iterator for all values in the array",
           "path": "array-api/values",
           "level": "INTERMEDIATE",
           "requiresKnowledgeFrom": [
@@ -426,7 +426,7 @@
       "items": [
         {
           "name": "basics",
-          "description": "",
+          "description": "Symbol basics.",
           "path": "symbol/basics",
           "level": "INTERMEDIATE",
           "requiresKnowledgeFrom": [],
@@ -435,7 +435,7 @@
         },
         {
           "name": "`Symbol.for()`",
-          "description": "",
+          "description": "`Symbol.for()` for registering Symbols globally.",
           "path": "symbol/for",
           "level": "INTERMEDIATE",
           "requiresKnowledgeFrom": [],
@@ -444,7 +444,7 @@
         },
         {
           "name": "`Symbol.keyFor()`",
-          "description": "",
+          "description": "`Symbol.keyFor()` gets the symbol key for a given symbol.",
           "path": "symbol/keyFor",
           "level": "INTERMEDIATE",
           "requiresKnowledgeFrom": [
