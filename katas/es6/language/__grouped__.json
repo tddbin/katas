@@ -551,6 +551,20 @@
           ],
           "groupName": "Generator",
           "id": "51"
+        },
+        {
+          "name": "Send value to a generator",
+          "description": "By calling next() with a parameter, you can pass a value to a generator.",
+          "path": "generator/send-value",
+          "level": "ADVANCED",
+          "requiresKnowledgeFrom": [
+            7,
+            49,
+            50,
+            51
+          ],
+          "groupName": "Generator",
+          "id": "52"
         }
       ]
     }
