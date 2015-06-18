@@ -276,7 +276,7 @@ export const all = {
           requiresKnowledgeFrom: []
         },
         24: {
-          path: 'class/static-keyword',
+          path: 'class/static',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: []
         },
