@@ -50,14 +50,14 @@ export const all = {
     'Template strings': {
       items: {
         [TEMPLATE_STRING_BASICS]: {
-          name: 'Basics',
+          name: 'basics',
           description: 'A template string, is wrapped in backticks.',
           path: 'template-strings/basics',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: []
         },
         [TEMPLATE_STRING_MULTILINE]: {
-          name: 'Multiline',
+          name: 'multiline',
           description: 'Template strings, can be multiline.',
           path: 'template-strings/multiline',
           level: SKILL_LEVEL.TBD,
@@ -89,14 +89,14 @@ export const all = {
     'Arrow functions': {
       items: {
         [ARROW_FUNCTION_BASICS]: {
-          name: 'Basics',
+          name: 'basics',
           description: 'Arrow functions are a more convinient and shorter way to write a function.',
           path: 'arrow-functions/basics',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: []
         },
         [ARROW_FUNCTION_BINDING]: {
-          name: 'Function binding',
+          name: 'function binding',
           description: 'Arrow functions have lexical `this`, no dynamic `this`.',
           path: 'arrow-functions/binding',
           level: SKILL_LEVEL.TBD,
@@ -130,7 +130,7 @@ export const all = {
     'Object literal': {
       items: {
         [OBJECT_LITERAL_BASICS]: {
-          name: 'Basics',
+          name: 'basics',
           description: 'ES6 has new shorthands for objects.',
           path: 'object-literal/basics',
           level: SKILL_LEVEL.TBD,
@@ -140,7 +140,7 @@ export const all = {
           ]
         },
         [OBJECT_LITERAL_COMPUTED_PROPERTIES]: {
-          name: 'Computed properties',
+          name: 'computed properties',
           description: 'Object literal properties may be computed values.',
           path: 'object-literal/computed-properties',
           level: SKILL_LEVEL.TBD,
@@ -154,7 +154,7 @@ export const all = {
     'Destructuring': {
       items: {
         [DESTRUCTURING_ARRAY]: {
-          name: 'Array',
+          name: 'array',
           description: 'Destructuring arrays allows for more concise.',
           path: 'destructuring/array',
           level: SKILL_LEVEL.TBD,
@@ -166,7 +166,7 @@ export const all = {
           ]
         },
         [DESTRUCTURING_STRING]: {
-          name: 'String',
+          name: 'string',
           description: 'Destructuring can also be done on strings.',
           path: 'destructuring/string',
           level: SKILL_LEVEL.TBD,
@@ -176,7 +176,7 @@ export const all = {
           ]
         },
         [DESTRUCTURING_OBJECT]: {
-          name: 'Object',
+          name: 'object',
           description: 'Destructuring objects is a core concepts for modules and more.',
           path: 'destructuring/object',
           level: SKILL_LEVEL.TBD,
@@ -186,7 +186,7 @@ export const all = {
           ]
         },
         [DESTRUCTURING_DEFAULTS]: {
-          name: 'Defaults',
+          name: 'defaults',
           description: 'When destructuring you can also use default values.',
           path: 'destructuring/defaults',
           level: SKILL_LEVEL.TBD,
@@ -197,7 +197,7 @@ export const all = {
           ]
         },
         14: {
-          name: 'Parameters',
+          name: 'parameters',
           description: 'Destructuring function parameters.',
           path: 'destructuring/parameters',
           level: SKILL_LEVEL.TBD,
@@ -208,7 +208,7 @@ export const all = {
           ]
         },
         15: {
-          name: 'Rename',
+          name: 'rename',
           description: 'Rename variables while destructuring.',
           path: 'destructuring/rename',
           level: SKILL_LEVEL.TBD,
@@ -225,7 +225,7 @@ export const all = {
     'Unicode': {
       items: {
         [UNICODE_IN_STRINGS]: {
-          name: 'In strings',
+          name: 'in strings',
           description: 'How to use unicode in strings.',
           path: 'unicode/in-strings',
           level: SKILL_LEVEL.TBD,
