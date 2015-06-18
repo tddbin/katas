@@ -425,7 +425,7 @@
     "Symbol": {
       "items": [
         {
-          "name": "Basics",
+          "name": "basics",
           "description": "",
           "path": "symbol/basics",
           "level": "INTERMEDIATE",
@@ -541,7 +541,7 @@
     "Set": {
       "items": [
         {
-          "name": "Basics",
+          "name": "basics",
           "description": "",
           "path": "set/basics",
           "level": "TBD",
@@ -565,7 +565,7 @@
     "Generator": {
       "items": [
         {
-          "name": "Creation",
+          "name": "creation",
           "description": "There are many ways to create a generator",
           "path": "generator/creation",
           "level": "TBD",
@@ -579,7 +579,7 @@
           "id": "49"
         },
         {
-          "name": "Iterator",
+          "name": "iterator",
           "description": "Generators return iterable objects",
           "path": "generator/iterator",
           "level": "TBD",
@@ -590,7 +590,7 @@
           "id": "50"
         },
         {
-          "name": "Yield Expressions",
+          "name": "yield expressions",
           "description": "The yield keyword is used to pause and resume a generator function",
           "path": "generator/yield",
           "level": "TBD",
@@ -603,7 +603,7 @@
           "id": "51"
         },
         {
-          "name": "Send value to a generator",
+          "name": "send value to a generator",
           "description": "By calling next() with a parameter, you can pass a value to a generator.",
           "path": "generator/send-value",
           "level": "ADVANCED",
