@@ -53,14 +53,14 @@ export const all = {
           name: 'basics',
           description: 'A template string, is wrapped in backticks.',
           path: 'template-strings/basics',
-          level: SKILL_LEVEL.TBD,
+          level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: []
         },
         [TEMPLATE_STRING_MULTILINE]: {
           name: 'multiline',
           description: 'Template strings, can be multiline.',
           path: 'template-strings/multiline',
-          level: SKILL_LEVEL.TBD,
+          level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [
             TEMPLATE_STRING_BASICS
           ]
@@ -69,7 +69,7 @@ export const all = {
           name: 'tagged',
           description: 'Tagged template strings are preceeded by an expression.',
           path: 'template-strings/tagged',
-          level: SKILL_LEVEL.TBD,
+          level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [
             TEMPLATE_STRING_BASICS
           ]
@@ -78,7 +78,7 @@ export const all = {
           name: '`raw` property',
           description: 'The `raw` property accesses the string as it was entered.',
           path: 'template-strings/raw',
-          level: SKILL_LEVEL.TBD,
+          level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [
             TEMPLATE_STRING_BASICS,
             TEMPLATE_STRING_TAGGED
@@ -92,14 +92,14 @@ export const all = {
           name: 'basics',
           description: 'Arrow functions are a more convinient and shorter way to write a function.',
           path: 'arrow-functions/basics',
-          level: SKILL_LEVEL.TBD,
+          level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: []
         },
         [ARROW_FUNCTION_BINDING]: {
           name: 'function binding',
           description: 'Arrow functions have lexical `this`, no dynamic `this`.',
           path: 'arrow-functions/binding',
-          level: SKILL_LEVEL.TBD,
+          level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [
             ARROW_FUNCTION_BASICS,
             CLASS_CREATION
@@ -113,14 +113,14 @@ export const all = {
           name: '`let` declaration',
           description: '`let` restricts the scope of the variable to the current block.',
           path: 'block-scope/let',
-          level: SKILL_LEVEL.TBD,
+          level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: []
         },
         [CONST]: {
           name: '`const` declaration',
           description: '`const` is like `let` plus read-only.',
           path: 'block-scope/const',
-          level: SKILL_LEVEL.TBD,
+          level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [
             LET
           ]
@@ -133,7 +133,7 @@ export const all = {
           name: 'basics',
           description: 'ES6 has new shorthands for objects.',
           path: 'object-literal/basics',
-          level: SKILL_LEVEL.TBD,
+          level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [
             ARROW_FUNCTION_BASICS, 
             CONST
@@ -143,7 +143,7 @@ export const all = {
           name: 'computed properties',
           description: 'Object literal properties may be computed values.',
           path: 'object-literal/computed-properties',
-          level: SKILL_LEVEL.TBD,
+          level: SKILL_LEVEL.ADVANCED,
           requiresKnowledgeFrom: [
             OBJECT_LITERAL_BASICS,
             CONST
@@ -157,7 +157,7 @@ export const all = {
           name: 'array',
           description: 'Destructuring arrays allows for more concise.',
           path: 'destructuring/array',
-          level: SKILL_LEVEL.TBD,
+          level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [
             LET,
             CONST,
@@ -169,7 +169,7 @@ export const all = {
           name: 'string',
           description: 'Destructuring can also be done on strings.',
           path: 'destructuring/string',
-          level: SKILL_LEVEL.TBD,
+          level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [
             CONST,
             UNICODE_IN_STRINGS
@@ -179,7 +179,7 @@ export const all = {
           name: 'object',
           description: 'Destructuring objects is a core concepts for modules and more.',
           path: 'destructuring/object',
-          level: SKILL_LEVEL.TBD,
+          level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [
             CONST,
             OBJECT_LITERAL_BASICS
@@ -189,7 +189,7 @@ export const all = {
           name: 'defaults',
           description: 'When destructuring you can also use default values.',
           path: 'destructuring/defaults',
-          level: SKILL_LEVEL.TBD,
+          level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [
             CONST,
             DESTRUCTURING_ARRAY,
@@ -200,7 +200,7 @@ export const all = {
           name: 'parameters',
           description: 'Destructuring function parameters.',
           path: 'destructuring/parameters',
-          level: SKILL_LEVEL.TBD,
+          level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [
             DESTRUCTURING_ARRAY,
             DESTRUCTURING_OBJECT,
@@ -211,7 +211,7 @@ export const all = {
           name: 'rename',
           description: 'Rename variables while destructuring.',
           path: 'destructuring/rename',
-          level: SKILL_LEVEL.TBD,
+          level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [
             DESTRUCTURING_ARRAY,
             DESTRUCTURING_OBJECT,
@@ -228,7 +228,7 @@ export const all = {
           name: 'in strings',
           description: 'How to use unicode in strings.',
           path: 'unicode/in-strings',
-          level: SKILL_LEVEL.TBD,
+          level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [
             CONST,
             TEMPLATE_STRING_BASICS
@@ -242,14 +242,14 @@ export const all = {
           name: 'as parameter',
           description: 'Use the rest operator as parameter.',
           path: 'rest/as-parameter',
-          level: SKILL_LEVEL.TBD,
+          level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: []
         },
         19: {
           name: 'with destructuring',
           description: 'Use the rest operator with destructuring.',
           path: 'rest/with-destructuring',
-          level: SKILL_LEVEL.TBD,
+          level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: []
         },
       }
@@ -260,14 +260,14 @@ export const all = {
           name: 'with arrays',
           description: 'Spread operator in use with arrays.',
           path: 'spread/with-arrays',
-          level: SKILL_LEVEL.TBD,
+          level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: []
         },
         [SPREAD_WITH_STRINGS]: {
           name: 'with strings',
           description: 'Apply spread operator on strings.',
           path: 'spread/with-strings',
-          level: SKILL_LEVEL.TBD,
+          level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: []
         },
       }
@@ -278,49 +278,49 @@ export const all = {
           name: 'creation',
           description: 'Create a class.',
           path: 'class/creation',
-          level: SKILL_LEVEL.TBD,
+          level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: []
         },
         [CLASS_ACCESSORS]: {
           name: 'accessors',
           description: 'Getter+setters as class properties.',
           path: 'class/accessors',
-          level: SKILL_LEVEL.TBD,
+          level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: []
         },
         24: {
           name: 'static',
-          description: '',
+          description: 'Use of the static keyword inside a class.',
           path: 'class/static',
-          level: SKILL_LEVEL.TBD,
+          level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: []
         },
         25: {
           name: 'extends',
-          description: '',
+          description: 'How to do inheritance, using `extends`.',
           path: 'class/extends',
-          level: SKILL_LEVEL.TBD,
+          level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: []
         },
         26: {
           name: 'more extends',
-          description: '',
+          description: 'More in depth `extends` stuff',
           path: 'class/more-extends',
-          level: SKILL_LEVEL.TBD,
+          level: SKILL_LEVEL.ADVANCED,
           requiresKnowledgeFrom: []
         },
         27: {
           name: 'super in method',
-          description: '',
+          description: 'Use of `super` inside a method.',
           path: 'class/super-in-method',
-          level: SKILL_LEVEL.TBD,
+          level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: []
         },
         28: {
           name: 'super in constructor',
-          description: '',
+          description: 'Use of `super` inside the constructor.',
           path: 'class/super-in-constructor',
-          level: SKILL_LEVEL.TBD,
+          level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: []
         },
       }
@@ -329,56 +329,56 @@ export const all = {
       items: {
         [ARRAY_FROM]: {
           name: '`Array.from()`',
-          description: '',
+          description: 'Convert a not-array into an array.',
           path: 'array-api/from',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: []
         },
         30: {
           name: '`Array.of()`',
-          description: '',
+          description: '`Array.of` creates an array with the given arguments as elements.',
           path: 'array-api/of',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: []
         },
         31: {
           name: '`[].fill()`',
-          description: '',
+          description: '`[].fill` can fill up an array with one value.',
           path: 'array-api/fill',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: []
         },
         32: {
           name: '`[].find()`',
-          description: '',
+          description: '`[].find` makes finding items in arrays easier.',
           path: 'array-api/find',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: []
         },
         33: {
           name: '`[].findIndex()`',
-          description: '',
+          description: '`[].findIndex` makes finding items in arrays easier.',
           path: 'array-api/findIndex',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: []
         },
         [ARRAY_ENTRIES]: {
           name: '`[].entries()`',
-          description: '',
+          description: '`[].entries()` returns an iterator object with all entries.',
           path: 'array-api/entries',
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [CONST, ARRAY_FROM, ITERATOR_PROTOCOL]
         },
         [ARRAY_KEYS]: {
           name: '`[].keys()`',
-          description: '',
+          description: '`[].keys()` returns an iterator for all keys in the array.',
           path: 'array-api/keys',
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [CONST, DESTRUCTURING_ARRAY, ARRAY_FROM, ITERATOR_PROTOCOL]
         },
         [ARRAY_VALUES]: {
           name: '`[].values()`',
-          description: '',
+          description: '`[].values()` returns an iterator for all values in the array',
           path: 'array-api/values',
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [CONST, DESTRUCTURING_ARRAY, ITERATOR_PROTOCOL]
@@ -389,21 +389,21 @@ export const all = {
       items: {
         [SYMBOL_BASICS]: {
           name: 'basics',
-          description: '',
+          description: 'Symbol basics.',
           path: 'symbol/basics',
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: []
         },
         35: {
           name: '`Symbol.for()`',
-          description: '',
+          description: '`Symbol.for()` for registering Symbols globally.',
           path: 'symbol/for',
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: []
         },
         36: {
           name: '`Symbol.keyFor()`',
-          description: '',
+          description: '`Symbol.keyFor()` gets the symbol key for a given symbol.',
           path: 'symbol/keyFor',
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [35]
