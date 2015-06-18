@@ -3,7 +3,7 @@
     "Template strings": {
       "items": [
         {
-          "name": "Basics",
+          "name": "basics",
           "description": "A template string, is wrapped in backticks.",
           "path": "template-strings/basics",
           "level": "TBD",
@@ -12,7 +12,7 @@
           "id": "1"
         },
         {
-          "name": "Multiline",
+          "name": "multiline",
           "description": "Template strings, can be multiline.",
           "path": "template-strings/multiline",
           "level": "TBD",
@@ -50,7 +50,7 @@
     "Arrow functions": {
       "items": [
         {
-          "name": "Basics",
+          "name": "basics",
           "description": "Arrow functions are a more convinient and shorter way to write a function.",
           "path": "arrow-functions/basics",
           "level": "TBD",
@@ -59,7 +59,7 @@
           "id": "5"
         },
         {
-          "name": "Function binding",
+          "name": "function binding",
           "description": "Arrow functions have lexical `this`, no dynamic `this`.",
           "path": "arrow-functions/binding",
           "level": "TBD",
@@ -99,7 +99,7 @@
     "Object literal": {
       "items": [
         {
-          "name": "Basics",
+          "name": "basics",
           "description": "ES6 has new shorthands for objects.",
           "path": "object-literal/basics",
           "level": "TBD",
@@ -111,7 +111,7 @@
           "id": "9"
         },
         {
-          "name": "Computed properties",
+          "name": "computed properties",
           "description": "Object literal properties may be computed values.",
           "path": "object-literal/computed-properties",
           "level": "TBD",
@@ -127,7 +127,7 @@
     "Destructuring": {
       "items": [
         {
-          "name": "Array",
+          "name": "array",
           "description": "Destructuring arrays allows for more concise.",
           "path": "destructuring/array",
           "level": "TBD",
@@ -140,7 +140,7 @@
           "id": "10"
         },
         {
-          "name": "String",
+          "name": "string",
           "description": "Destructuring can also be done on strings.",
           "path": "destructuring/string",
           "level": "TBD",
@@ -152,7 +152,7 @@
           "id": "11"
         },
         {
-          "name": "Object",
+          "name": "object",
           "description": "Destructuring objects is a core concepts for modules and more.",
           "path": "destructuring/object",
           "level": "TBD",
@@ -164,7 +164,7 @@
           "id": "12"
         },
         {
-          "name": "Defaults",
+          "name": "defaults",
           "description": "When destructuring you can also use default values.",
           "path": "destructuring/defaults",
           "level": "TBD",
@@ -177,7 +177,7 @@
           "id": "13"
         },
         {
-          "name": "Parameters",
+          "name": "parameters",
           "description": "Destructuring function parameters.",
           "path": "destructuring/parameters",
           "level": "TBD",
@@ -190,7 +190,7 @@
           "id": "14"
         },
         {
-          "name": "Rename",
+          "name": "rename",
           "description": "Rename variables while destructuring.",
           "path": "destructuring/rename",
           "level": "TBD",
@@ -209,7 +209,7 @@
     "Unicode": {
       "items": [
         {
-          "name": "In strings",
+          "name": "in strings",
           "description": "How to use unicode in strings.",
           "path": "unicode/in-strings",
           "level": "TBD",
