@@ -239,11 +239,15 @@ export const all = {
     'Rest operator': {
       items: {
         18: {
+          name: 'as parameter',
+          description: 'Use the rest operator as parameter.',
           path: 'rest/as-parameter',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: []
         },
         19: {
+          name: 'with destructuring',
+          description: 'Use the rest operator with destructuring.',
           path: 'rest/with-destructuring',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: []
@@ -253,11 +257,15 @@ export const all = {
     'Spread operator': {
       items: {
         [SPREAD_WITH_ARRAYS]: {
+          name: 'with arrays',
+          description: 'Spread operator in use with arrays.',
           path: 'spread/with-arrays',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: []
         },
         [SPREAD_WITH_STRINGS]: {
+          name: 'with strings',
+          description: 'Apply spread operator on strings.',
           path: 'spread/with-strings',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: []
@@ -267,36 +275,50 @@ export const all = {
     'Class': {
       items: {
         [CLASS_CREATION]: {
+          name: 'creation',
+          description: 'Create a class.',
           path: 'class/creation',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: []
         },
         [CLASS_ACCESSORS]: {
+          name: 'accessors',
+          description: 'Getter+setters as class properties.',
           path: 'class/accessors',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: []
         },
         24: {
+          name: 'static',
+          description: '',
           path: 'class/static',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: []
         },
         25: {
+          name: 'extends',
+          description: '',
           path: 'class/extends',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: []
         },
         26: {
+          name: 'more extends',
+          description: '',
           path: 'class/more-extends',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: []
         },
         27: {
+          name: 'super in method',
+          description: '',
           path: 'class/super-in-method',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: []
         },
         28: {
+          name: 'super in constructor',
+          description: '',
           path: 'class/super-in-constructor',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: []
@@ -306,41 +328,57 @@ export const all = {
     'Array API': {
       items: {
         [ARRAY_FROM]: {
+          name: '`Array.from()`',
+          description: '',
           path: 'array-api/from',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: []
         },
         30: {
+          name: '`Array.of()`',
+          description: '',
           path: 'array-api/of',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: []
         },
         31: {
+          name: '`[].fill()`',
+          description: '',
           path: 'array-api/fill',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: []
         },
         32: {
+          name: '`[].find()`',
+          description: '',
           path: 'array-api/find',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: []
         },
         33: {
+          name: '`[].findIndex()`',
+          description: '',
           path: 'array-api/findIndex',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: []
         },
         [ARRAY_ENTRIES]: {
+          name: '`[].entries()`',
+          description: '',
           path: 'array-api/entries',
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [CONST, ARRAY_FROM, ITERATOR_PROTOCOL]
         },
         [ARRAY_KEYS]: {
+          name: '`[].keys()`',
+          description: '',
           path: 'array-api/keys',
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [CONST, DESTRUCTURING_ARRAY, ARRAY_FROM, ITERATOR_PROTOCOL]
         },
         [ARRAY_VALUES]: {
+          name: '`[].values()`',
+          description: '',
           path: 'array-api/values',
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [CONST, DESTRUCTURING_ARRAY, ITERATOR_PROTOCOL]
@@ -357,11 +395,15 @@ export const all = {
           requiresKnowledgeFrom: []
         },
         35: {
+          name: '`Symbol.for()`',
+          description: '',
           path: 'symbol/for',
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: []
         },
         36: {
+          name: '`Symbol.keyFor()`',
+          description: '',
           path: 'symbol/keyFor',
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [35]
@@ -371,21 +413,29 @@ export const all = {
     'Iterator': {
       items: {
         [ITERATOR_ARRAY]: {
+          name: 'array',
+          description: '',
           path: 'iterator/array',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: []
         },
         38: {
+          name: 'string',
+          description: '',
           path: 'iterator/string',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: [SYMBOL_BASICS, ITERATOR_ARRAY]
         },
         [ITERATOR_PROTOCOL]: {
+          name: 'protocol',
+          description: '',
           path: 'iterator/protocol',
           level: SKILL_LEVEL.EXPERT,
           requiresKnowledgeFrom: []
         },
         40: {
+          name: 'usage',
+          description: '',
           path: 'iterator/usages',
           level: SKILL_LEVEL.EXPERT,
           requiresKnowledgeFrom: [LET, DESTRUCTURING_ARRAY, DESTRUCTURING_OBJECT, SYMBOL_BASICS, ITERATOR_PROTOCOL, SPREAD_WITH_ARRAYS]
@@ -402,14 +452,14 @@ export const all = {
           requiresKnowledgeFrom: []
         },
         [MAP_GET]: {
-          name: '`get()` method',
+          name: '`map.get()`',
           description: '',
           path: 'map/get',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: [ITERATOR_ARRAY]
         },
         [MAP_SET]: {
-          name: '`set()` method',
+          name: '`map.set()`',
           description: '',
           path: 'map/set',
           level: SKILL_LEVEL.EXPERT,
@@ -427,7 +477,7 @@ export const all = {
           requiresKnowledgeFrom: []
         },
         [SET_ADD]: {
-          name: '`add()` method',
+          name: '`set.add()`',
           description: 'Appends a new element to the end of a Set object.',
           path: 'set/add',
           level: SKILL_LEVEL.TBD,
