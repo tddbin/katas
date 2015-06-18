@@ -199,6 +199,8 @@
       "id": "17"
     },
     {
+      "name": "as parameter",
+      "description": "Use the rest operator as parameter.",
       "path": "rest/as-parameter",
       "level": "TBD",
       "requiresKnowledgeFrom": [],
@@ -206,6 +208,8 @@
       "id": "18"
     },
     {
+      "name": "with destructuring",
+      "description": "Use the rest operator with destructuring.",
       "path": "rest/with-destructuring",
       "level": "TBD",
       "requiresKnowledgeFrom": [],
@@ -213,6 +217,8 @@
       "id": "19"
     },
     {
+      "name": "with arrays",
+      "description": "Spread operator in use with arrays.",
       "path": "spread/with-arrays",
       "level": "TBD",
       "requiresKnowledgeFrom": [],
@@ -220,6 +226,8 @@
       "id": "20"
     },
     {
+      "name": "with strings",
+      "description": "Apply spread operator on strings.",
       "path": "spread/with-strings",
       "level": "TBD",
       "requiresKnowledgeFrom": [],
@@ -227,6 +235,8 @@
       "id": "21"
     },
     {
+      "name": "creation",
+      "description": "Create a class.",
       "path": "class/creation",
       "level": "TBD",
       "requiresKnowledgeFrom": [],
@@ -234,6 +244,8 @@
       "id": "22"
     },
     {
+      "name": "accessors",
+      "description": "Getter+setters as class properties.",
       "path": "class/accessors",
       "level": "TBD",
       "requiresKnowledgeFrom": [],
@@ -241,6 +253,8 @@
       "id": "23"
     },
     {
+      "name": "static",
+      "description": "",
       "path": "class/static",
       "level": "TBD",
       "requiresKnowledgeFrom": [],
@@ -248,6 +262,8 @@
       "id": "24"
     },
     {
+      "name": "extends",
+      "description": "",
       "path": "class/extends",
       "level": "TBD",
       "requiresKnowledgeFrom": [],
@@ -255,6 +271,8 @@
       "id": "25"
     },
     {
+      "name": "more extends",
+      "description": "",
       "path": "class/more-extends",
       "level": "TBD",
       "requiresKnowledgeFrom": [],
@@ -262,6 +280,8 @@
       "id": "26"
     },
     {
+      "name": "super in method",
+      "description": "",
       "path": "class/super-in-method",
       "level": "TBD",
       "requiresKnowledgeFrom": [],
@@ -269,6 +289,8 @@
       "id": "27"
     },
     {
+      "name": "super in constructor",
+      "description": "",
       "path": "class/super-in-constructor",
       "level": "TBD",
       "requiresKnowledgeFrom": [],
@@ -276,6 +298,8 @@
       "id": "28"
     },
     {
+      "name": "`Array.from()`",
+      "description": "",
       "path": "array-api/from",
       "level": "TBD",
       "requiresKnowledgeFrom": [],
@@ -283,6 +307,8 @@
       "id": "29"
     },
     {
+      "name": "`Array.of()`",
+      "description": "",
       "path": "array-api/of",
       "level": "TBD",
       "requiresKnowledgeFrom": [],
@@ -290,6 +316,8 @@
       "id": "30"
     },
     {
+      "name": "`[].fill()`",
+      "description": "",
       "path": "array-api/fill",
       "level": "TBD",
       "requiresKnowledgeFrom": [],
@@ -297,6 +325,8 @@
       "id": "31"
     },
     {
+      "name": "`[].find()`",
+      "description": "",
       "path": "array-api/find",
       "level": "TBD",
       "requiresKnowledgeFrom": [],
@@ -304,6 +334,8 @@
       "id": "32"
     },
     {
+      "name": "`[].findIndex()`",
+      "description": "",
       "path": "array-api/findIndex",
       "level": "TBD",
       "requiresKnowledgeFrom": [],
@@ -320,6 +352,8 @@
       "id": "34"
     },
     {
+      "name": "`Symbol.for()`",
+      "description": "",
       "path": "symbol/for",
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [],
@@ -327,6 +361,8 @@
       "id": "35"
     },
     {
+      "name": "`Symbol.keyFor()`",
+      "description": "",
       "path": "symbol/keyFor",
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [
@@ -336,6 +372,8 @@
       "id": "36"
     },
     {
+      "name": "array",
+      "description": "",
       "path": "iterator/array",
       "level": "TBD",
       "requiresKnowledgeFrom": [],
@@ -343,6 +381,8 @@
       "id": "37"
     },
     {
+      "name": "string",
+      "description": "",
       "path": "iterator/string",
       "level": "TBD",
       "requiresKnowledgeFrom": [
@@ -353,6 +393,8 @@
       "id": "38"
     },
     {
+      "name": "protocol",
+      "description": "",
       "path": "iterator/protocol",
       "level": "EXPERT",
       "requiresKnowledgeFrom": [],
@@ -360,6 +402,8 @@
       "id": "39"
     },
     {
+      "name": "usage",
+      "description": "",
       "path": "iterator/usages",
       "level": "EXPERT",
       "requiresKnowledgeFrom": [
@@ -374,6 +418,8 @@
       "id": "40"
     },
     {
+      "name": "`[].entries()`",
+      "description": "",
       "path": "array-api/entries",
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [
@@ -385,6 +431,8 @@
       "id": "41"
     },
     {
+      "name": "`[].keys()`",
+      "description": "",
       "path": "array-api/keys",
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [
@@ -397,6 +445,8 @@
       "id": "42"
     },
     {
+      "name": "`[].values()`",
+      "description": "",
       "path": "array-api/values",
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [
@@ -417,7 +467,7 @@
       "id": "44"
     },
     {
-      "name": "`get()` method",
+      "name": "`map.get()`",
       "description": "",
       "path": "map/get",
       "level": "TBD",
@@ -428,7 +478,7 @@
       "id": "45"
     },
     {
-      "name": "`set()` method",
+      "name": "`map.set()`",
       "description": "",
       "path": "map/set",
       "level": "EXPERT",
@@ -446,7 +496,7 @@
       "id": "47"
     },
     {
-      "name": "`add()` method",
+      "name": "`set.add()`",
       "description": "Appends a new element to the end of a Set object.",
       "path": "set/add",
       "level": "TBD",
