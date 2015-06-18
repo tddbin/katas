@@ -388,7 +388,7 @@ export const all = {
     'Symbol': {
       items: {
         [SYMBOL_BASICS]: {
-          name: 'Basics',
+          name: 'basics',
           description: '',
           path: 'symbol/basics',
           level: SKILL_LEVEL.INTERMEDIATE,
@@ -470,7 +470,7 @@ export const all = {
     'Set': {
       items: {
         [SET_BASICS]: {
-          name: 'Basics',
+          name: 'basics',
           description: '',
           path: 'set/basics',
           level: SKILL_LEVEL.TBD,
@@ -490,7 +490,7 @@ export const all = {
     'Generator': {
       items: {
         [GENERATOR_CREATION]: {
-          name: 'Creation',
+          name: 'creation',
           description: 'There are many ways to create a generator',
           path: 'generator/creation',
           level: SKILL_LEVEL.TBD,
@@ -502,7 +502,7 @@ export const all = {
           ]
         },
         [GENERATOR_ITERATOR]: {
-          name: 'Iterator',
+          name: 'iterator',
           description: 'Generators return iterable objects',
           path: 'generator/iterator',
           level: SKILL_LEVEL.TBD,
@@ -511,7 +511,7 @@ export const all = {
           ]
         },
         [GENERATOR_YIELD]: {
-          name: 'Yield Expressions',
+          name: 'yield expressions',
           description: 'The yield keyword is used to pause and resume a generator function',
           path: 'generator/yield',
           level: SKILL_LEVEL.TBD,
@@ -522,7 +522,7 @@ export const all = {
           ]
         },
         [GENERATOR_SEND_VALUE]: {
-          name: 'Send value to a generator',
+          name: 'send value to a generator',
           description: 'By calling next() with a parameter, you can pass a value to a generator.',
           path: 'generator/send-value',
           level: SKILL_LEVEL.ADVANCED,
