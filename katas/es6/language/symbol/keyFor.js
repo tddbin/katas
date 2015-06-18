@@ -1,7 +1,7 @@
 // 36: Symbol.keyFor - retrieves a shared symbol key from the global symbol registry
 // To do: make all tests pass, leave the assert lines unchanged!
 
-describe('`Symbol.keyFor` gets the symbol key for a given symbol', function() {
+describe('`Symbol.keyFor()` gets the symbol key for a given symbol', function() {
   
   const sym = Symbol.for('foo');
   
