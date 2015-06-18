@@ -43,6 +43,7 @@ const GENERATOR_ITERATOR = 50;
 const GENERATOR_YIELD = 51;
 
 var ITERATOR_ARRAY = 37;
+const GENERATOR_SEND_VALUE = 52;
 export const all = {
   name: 'ES6 Katas',
   groups: {
@@ -468,6 +469,18 @@ export const all = {
             LET,
             GENERATOR_CREATION,
             GENERATOR_ITERATOR
+          ]
+        },
+        [GENERATOR_SEND_VALUE]: {
+          name: 'Send value to a generator',
+          description: 'By calling next() with a parameter, you can pass a value to a generator.',
+          path: 'generator/send-value',
+          level: SKILL_LEVEL.TBD,
+          requiresKnowledgeFrom: [
+            LET,
+            GENERATOR_CREATION,
+            GENERATOR_ITERATOR,
+            GENERATOR_YIELD
           ]
         }
       }
