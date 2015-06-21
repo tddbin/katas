@@ -112,14 +112,14 @@ export const all = {
         [LET]: {
           name: '`let` declaration',
           description: '`let` restricts the scope of the variable to the current block.',
-          path: 'block-scope/let',
+          path: 'block-scoping/let',
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: []
         },
         [CONST]: {
           name: '`const` declaration',
           description: '`const` is like `let` plus read-only.',
-          path: 'block-scope/const',
+          path: 'block-scoping/const',
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [
             LET
