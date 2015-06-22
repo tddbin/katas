@@ -511,7 +511,7 @@
           "name": "Basics",
           "description": "",
           "path": "map/basics",
-          "level": "TBD",
+          "level": "BEGINNER",
           "requiresKnowledgeFrom": [],
           "groupName": "Map",
           "id": "44"
@@ -520,7 +520,7 @@
           "name": "`map.get()`",
           "description": "",
           "path": "map/get",
-          "level": "TBD",
+          "level": "INTERMEDIATE",
           "requiresKnowledgeFrom": [
             37
           ],
@@ -535,6 +535,21 @@
           "requiresKnowledgeFrom": [],
           "groupName": "Map",
           "id": "46"
+        },
+        {
+          "name": "initialize",
+          "description": "Initializing a map with values.",
+          "path": "map/initialize",
+          "level": "ADVANCED",
+          "requiresKnowledgeFrom": [
+            7,
+            8,
+            29,
+            44,
+            46
+          ],
+          "groupName": "Map",
+          "id": "53"
         }
       ]
     },
