@@ -30,6 +30,17 @@ describe('initialize a `Map`', function(){
     assertMapsEqual(map, new Map().set(...pair1).set(...pair2));
   });
   
+  it('keys are unique, the last one is used', function() {
+    const pair1 = [1, 'one'];
+    const pair2 = [1, 'uno'];
+    const pair3 = [1, 'eins'];
+    const pair4 = [2, 'two'];
+    
+    const map = new Map([pair3, pair1, pair2, pair4]);
+    
+    assertMapsEqual(map, new Map().set(...pair3).set(...pair4));
+  });
+  
   it('init Map from an Object, is a bit of work', function() {
     let map = new Map();
     const obj = {x: 1, y: 2};
