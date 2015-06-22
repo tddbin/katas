@@ -42,8 +42,10 @@ const GENERATOR_CREATION = 49;
 const GENERATOR_ITERATOR = 50;
 const GENERATOR_YIELD = 51;
 
-var ITERATOR_ARRAY = 37;
+const ITERATOR_ARRAY = 37;
 const GENERATOR_SEND_VALUE = 52;
+const MAP_INITIALIZE = 53;
+
 export const all = {
   name: 'ES6 Katas',
   groups: {
@@ -448,14 +450,14 @@ export const all = {
           name: 'Basics',
           description: '',
           path: 'map/basics',
-          level: SKILL_LEVEL.TBD,
+          level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: []
         },
         [MAP_GET]: {
           name: '`map.get()`',
           description: '',
           path: 'map/get',
-          level: SKILL_LEVEL.TBD,
+          level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [ITERATOR_ARRAY]
         },
         [MAP_SET]: {
@@ -465,6 +467,17 @@ export const all = {
           level: SKILL_LEVEL.EXPERT,
           requiresKnowledgeFrom: []
         },
+        [MAP_INITIALIZE]: {
+          name: 'initialize',
+          description: 'Initializing a map with values.',
+          path: 'map/initialize',
+          level: SKILL_LEVEL.ADVANCED,
+          requiresKnowledgeFrom: [
+            LET, CONST,
+            ARRAY_FROM,
+            MAP_BASICS, MAP_SET
+          ]
+        }
       }
     },
     'Set': {
