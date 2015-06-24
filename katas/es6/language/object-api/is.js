@@ -5,14 +5,14 @@ describe('`Object.is()` determines whether two values are the same', function(){
 
   describe('scalar values', function() {
     it('1 is the same as 1', function() {
-      const areSame = Object.is(1, 2);
+      const areSame = Object.is(1, '???');
       assert.equal(areSame, true);
     });
     it('int 1 is different to string "1"', function() {
       const areSame = Object.___(1, '1');
       assert.equal(areSame, false);
     });
-    it('string', function() {
+    it('strings just have to match', function() {
       const areSame = Object.is('one', 'two');
       assert.equal(areSame, true);
     });
@@ -26,15 +26,16 @@ describe('`Object.is()` determines whether two values are the same', function(){
     });
   });
   
-  describe('coersion, as in `==` and `===`, does not apply', function() {
-    it('`""` and `false` are not the same', function() {
-      const isSame = Object.is("", false);
-      assert.equal(isSame, "" == false);
-    });
+  describe('coersion, as in `==` and `===`, does NOT apply', function() {
     it('+0 != -0', function() {
       const coerced = +0 === -0;
       const isSame = Object.is(+0, -0);
       assert.equal(isSame, coerced);
+    });
+    it('empty string and `false` are not the same', function() {
+      const emptyString = '';
+      const isSame = Object.is(emptyString, false);
+      assert.equal(isSame, emptyString == false);
     });
     it('NaN', function() {
       const coerced = NaN == NaN;
