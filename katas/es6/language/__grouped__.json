@@ -636,7 +636,7 @@
     "Object API": {
       "items": [
         {
-          "name": "is",
+          "name": "`Object.is()`",
           "description": "`Object.is()` compares if two values are the same.",
           "path": "object-api/is",
           "level": "BEGINNER",
