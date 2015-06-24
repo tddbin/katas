@@ -585,6 +585,15 @@
       ],
       "groupName": "Object API",
       "id": "54"
+    },
+    {
+      "name": "`Number.isInteger()`",
+      "description": "`Number.isInteger()` determines if a value is an integer.",
+      "path": "number-api/isinteger",
+      "level": "BEGINNER",
+      "requiresKnowledgeFrom": [],
+      "groupName": "Number",
+      "id": "55"
     }
   ]
 }
