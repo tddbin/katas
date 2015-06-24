@@ -553,7 +553,7 @@ export const all = {
     'Object API': {
       items: {
         [OBJECT_IS]: {
-          name: 'is',
+          name: '`Object.is()`',
           description: '`Object.is()` compares if two values are the same.',
           path: 'object-api/is',
           level: SKILL_LEVEL.BEGINNER,
