@@ -46,6 +46,7 @@ const ITERATOR_ARRAY = 37;
 const GENERATOR_SEND_VALUE = 52;
 const MAP_INITIALIZE = 53;
 const OBJECT_IS = 54;
+const NUMBER_ISINTEGER = 55;
 
 export const all = {
   name: 'ES6 Katas',
@@ -561,6 +562,18 @@ export const all = {
             CONST, LET,
             MAP_BASICS
           ]
+        }
+      }
+    },
+    
+    'Number': {
+      items: {
+        [NUMBER_ISINTEGER]: {
+          name: '`Number.isInteger()`',
+          description: '`Number.isInteger()` determines if a value is an integer.',
+          path: 'number-api/isinteger',
+          level: SKILL_LEVEL.BEGINNER,
+          requiresKnowledgeFrom: []
         }
       }
     }
