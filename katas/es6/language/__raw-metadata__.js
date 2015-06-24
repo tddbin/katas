@@ -45,6 +45,7 @@ const GENERATOR_YIELD = 51;
 const ITERATOR_ARRAY = 37;
 const GENERATOR_SEND_VALUE = 52;
 const MAP_INITIALIZE = 53;
+const OBJECT_IS = 54;
 
 export const all = {
   name: 'ES6 Katas',
@@ -547,6 +548,23 @@ export const all = {
           ]
         }
       }
+    },
+    
+    'Object API': {
+      items: {
+        [OBJECT_IS]: {
+          name: 'is',
+          description: '`Object.is()` compares if two values are the same.',
+          path: 'object-api/is',
+          level: SKILL_LEVEL.BEGINNER,
+          requiresKnowledgeFrom: [
+            CONST, LET,
+            MAP_BASICS
+          ]
+        }
+      }
     }
+    
+    
   }
 };
