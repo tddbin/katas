@@ -632,6 +632,23 @@
           "id": "52"
         }
       ]
+    },
+    "Object API": {
+      "items": [
+        {
+          "name": "is",
+          "description": "`Object.is()` compares if two values are the same.",
+          "path": "object-api/is",
+          "level": "BEGINNER",
+          "requiresKnowledgeFrom": [
+            8,
+            7,
+            44
+          ],
+          "groupName": "Object API",
+          "id": "54"
+        }
+      ]
     }
   }
 }
