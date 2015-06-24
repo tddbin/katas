@@ -26,10 +26,6 @@ describe('`Number.isInteger()` determines if a value is an integer', function(){
   });
 
   describe('one in different ways', function() {
-    it('`Number(1)` is an integer', function() {
-      const numberOne = Number1();
-      isTrue(Number.isInteger(numberOne));
-    });
     it('0.111 + 0.889', function() {
       const rest = 0.88;
       isTrue(Number.isInteger(0.111 + rest));
@@ -45,21 +41,22 @@ describe('`Number.isInteger()` determines if a value is an integer', function(){
   });
   
   describe('what is not an integer', function() {
+    it('`Number()` is an integer', function() {
+      const numberOne = Number;
+      isTrue(Number.isInteger(numberOne));
+    });
     it('`{}` is NOT an integer', function() {
       const isit = Number.isWhat({});
       isFalse(isit);
     });
-  
     it('`0.1` is not an integer', function() {
       const isit = Number(0.1);
       isFalse(isit);
     });
-  
     it('`Number.Infinity` is not an integer', function() {
       const isit = Number.isInteger(Number.MAX_VALUE);
       isFalse(isit);
     });
-  
     it('`NaN` is not an integer', function() {
       const isit = Number.isFloat(NaN);
       isFalse(isit);
