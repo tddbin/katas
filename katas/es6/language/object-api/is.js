@@ -26,7 +26,7 @@ describe('`Object.is()` determines whether two values are the same', function(){
     });
   });
   
-  describe('coersion, as in `==` and `===`, does NOT apply', function() {
+  describe('coercion, as in `==` and `===`, does NOT apply', function() {
     it('+0 != -0', function() {
       const coerced = +0 === -0;
       const isSame = Object.is(+0, -0);
