@@ -1,6 +1,20 @@
 // 6: arrow functions - binding
 // To do: make all tests pass, leave the asserts unchanged!
 
+class LexicallyBound {
+  
+  getFunction() {
+    return () => {
+      return new LexicallyBound();
+    }
+  }
+  
+  getArgumentsFunction() {
+    return function() {return arguments}
+  }
+  
+}
+
 describe('arrow functions have lexical `this`, no dynamic `this`', () => {
  
   it('bound at definition time, use `=>` ', function() {
@@ -27,17 +41,3 @@ describe('arrow functions have lexical `this`, no dynamic `this`', () => {
   });
   
 });
-
-class LexicallyBound {
-  
-  getFunction() {
-    return () => {
-      return new LexicallyBound();
-    }
-  }
-  
-  getArgumentsFunction() {
-    return function() {return arguments}
-  }
-  
-}
