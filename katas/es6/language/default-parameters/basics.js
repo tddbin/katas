@@ -4,19 +4,20 @@
 describe('default parameters make function parameters more flexible', () => {
 
   it('define it using an assignment to the parameter `function(param=1){}`', function() {
-    let number = (int=0) => int;
+    let number = (int) => int;
     
     assert.equal(number(), 0);
   });
 
   it('it is used when undefined is passed', function() {
     let number = (int = 23) => int;
+    const param = 42;
     
-    assert.equal(number(void 0), 23);
+    assert.equal(number(param), 23);
   });
 
   it('it is not used when a value is given', function() {
-    function xhr(method='GET') {
+    function xhr() {
       return method;  
     }
     
@@ -29,12 +30,12 @@ describe('default parameters make function parameters more flexible', () => {
       return method;  
     }
     
-    defaultValue = 42;
     assert.equal(xhr(), 'value: 42');
+    defaultValue = 23;
   });
 
   it('it can also be a function', function() {
-    let defaultValue = () => 23;
+    let defaultValue;
     function fn(value = defaultValue()) {
       return value;  
     }
