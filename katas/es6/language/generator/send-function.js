@@ -10,8 +10,9 @@ describe('pass a function to a generator', () => {
       assert.equal(yield null, fn);
     }
 
-    var iterator = generatorFunction();
-    var iteratedOver = [iterator.next().value, iterator.next(fn).value];
+    let iterator = generatorFunction();
+    iterator.next();
+    iterator.next();
   });
 
   it('pass a function to the iterator, which calls it', function() {
@@ -20,7 +21,7 @@ describe('pass a function to a generator', () => {
     }
 
     var iterator = generatorFunction();
-    var iteratedOver = [iterator.next().value, iterator.next(() => 2).value];
+    var iteratedOver = [iterator.next().value, iterator.next().value];
     
     assert.deepEqual([1, 2], iteratedOver);
   });
@@ -30,12 +31,7 @@ describe('pass a function to a generator', () => {
       yield (yield (yield 1)())();
     }
 
-    var iterator = generatorFunction();
-    var iteratedOver = [
-      iterator.next().value, 
-      iterator.next(() => 2).value,
-      iterator.next(() => 3).value
-    ];
+    var iteratedOver = [];
     
     assert.deepEqual([1, 2, 3], iteratedOver);
   });
