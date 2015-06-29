@@ -47,6 +47,7 @@ const GENERATOR_SEND_VALUE = 52;
 const MAP_INITIALIZE = 53;
 const OBJECT_IS = 54;
 const NUMBER_ISINTEGER = 55;
+const GENERATOR_SEND_FUNCTION = 56;
 
 export const all = {
   name: 'ES6 Katas',
@@ -546,6 +547,19 @@ export const all = {
             GENERATOR_CREATION,
             GENERATOR_ITERATOR,
             GENERATOR_YIELD
+          ]
+        },
+        [GENERATOR_SEND_FUNCTION]: {
+          name: 'send function to a generator',
+          description: 'By calling next() with a function, you can pass it to the generator.',
+          path: 'generator/send-function',
+          level: SKILL_LEVEL.EXPERT,
+          requiresKnowledgeFrom: [
+            LET,
+            GENERATOR_CREATION,
+            GENERATOR_ITERATOR,
+            GENERATOR_YIELD,
+            GENERATOR_SEND_VALUE
           ]
         }
       }
