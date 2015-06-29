@@ -594,6 +594,21 @@
       "requiresKnowledgeFrom": [],
       "groupName": "Number",
       "id": "55"
+    },
+    {
+      "name": "send function to a generator",
+      "description": "By calling next() with a function, you can pass it to the generator.",
+      "path": "generator/send-function",
+      "level": "EXPERT",
+      "requiresKnowledgeFrom": [
+        7,
+        49,
+        50,
+        51,
+        52
+      ],
+      "groupName": "Generator",
+      "id": "56"
     }
   ]
 }
