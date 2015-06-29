@@ -48,6 +48,7 @@ const MAP_INITIALIZE = 53;
 const OBJECT_IS = 54;
 const NUMBER_ISINTEGER = 55;
 const GENERATOR_SEND_FUNCTION = 56;
+const DEFAULT_PARAMETERS_BASICS = 57;
 
 export const all = {
   name: 'ES6 Katas',
@@ -588,6 +589,22 @@ export const all = {
           path: 'number-api/isinteger',
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: []
+        }
+      }
+    },
+    
+    'Default parameters': {
+      items: {
+        [DEFAULT_PARAMETERS_BASICS]: {
+          name: 'Basics',
+          description: 'Default parameters make function parameters more flexible.',
+          path: 'default-parameters/basics',
+          level: SKILL_LEVEL.BEGINNER,
+          requiresKnowledgeFrom: [
+            LET,
+            ARROW_FUNCTION_BASICS,
+            TEMPLATE_STRING_BASICS
+          ]
         }
       }
     }
