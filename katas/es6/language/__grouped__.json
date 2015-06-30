@@ -677,6 +677,23 @@
           "id": "55"
         }
       ]
+    },
+    "Default parameters": {
+      "items": [
+        {
+          "name": "Basics",
+          "description": "Default parameters make function parameters more flexible.",
+          "path": "default-parameters/basics",
+          "level": "BEGINNER",
+          "requiresKnowledgeFrom": [
+            7,
+            5,
+            1
+          ],
+          "groupName": "Default parameters",
+          "id": "57"
+        }
+      ]
     }
   }
 }
