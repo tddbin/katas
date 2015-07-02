@@ -52,6 +52,8 @@ const DEFAULT_PARAMETERS_BASICS = 57;
 const REFLECT_BASICS = 58;
 
 const CLASS_EXTENDS = 25;
+const CLASS_SUPER_IN_CONSTRUCTOR = 28;
+
 export const all = {
   name: 'ES6 Katas',
   groups: {
