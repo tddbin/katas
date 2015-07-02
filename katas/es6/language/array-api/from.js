@@ -15,8 +15,8 @@ describe('`Array.from` converts an array-like object or list into an Array', () 
     document.body.classList.add('some');
     document.body.classList.add('other');
     const classList = document.body.classList;
-    
-    assert.deepEqual(classList, ['some', 'other']);
+
+    assert.equal(''+classList, ''+['some', 'other']);
   });
   
   it('convert a NodeList to an Array and `filter()` works on it', function() {
