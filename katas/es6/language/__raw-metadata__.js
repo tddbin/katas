@@ -54,6 +54,7 @@ const REFLECT_BASICS = 58;
 const CLASS_EXTENDS = 25;
 const CLASS_SUPER_IN_CONSTRUCTOR = 28;
 
+const ARRAY_FILL = 31;
 export const all = {
   name: 'ES6 Katas',
   groups: {
@@ -351,12 +352,26 @@ export const all = {
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: []
         },
-        31: {
+        [ARRAY_FILL]: {
           name: '`[].fill()`',
           description: '`[].fill` can fill up an array with one value.',
           path: 'array-api/fill',
           level: SKILL_LEVEL.TBD,
-          requiresKnowledgeFrom: []
+          requiresKnowledgeFrom: [],
+          links: {
+            discussions: [
+              {
+                url: 'https://github.com/tddbin/es6katas.org/issues/9',
+                comment: 'A discussion in a github issue, about how to use this kata.'
+              }
+            ],
+            documentation: [
+              {
+                url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fill',
+                comment: 'API doc on MDN.'
+              }
+            ]
+          }
         },
         32: {
           name: '`[].find()`',
