@@ -321,6 +321,20 @@
       "path": "array-api/fill",
       "level": "TBD",
       "requiresKnowledgeFrom": [],
+      "links": {
+        "discussions": [
+          {
+            "url": "https://github.com/tddbin/es6katas.org/issues/9",
+            "comment": "A discussion in a github issue, about how to use this kata."
+          }
+        ],
+        "documentation": [
+          {
+            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fill",
+            "comment": "API doc on MDN."
+          }
+        ]
+      },
       "groupName": "Array API",
       "id": "31"
     },
