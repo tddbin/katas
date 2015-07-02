@@ -694,6 +694,24 @@
           "id": "57"
         }
       ]
+    },
+    "Reflect API": {
+      "items": [
+        {
+          "name": "Basics",
+          "description": "",
+          "path": "reflect/basics",
+          "level": "BEGINNER",
+          "requiresKnowledgeFrom": [
+            7,
+            22,
+            25,
+            28
+          ],
+          "groupName": "Reflect API",
+          "id": "58"
+        }
+      ]
     }
   }
 }
