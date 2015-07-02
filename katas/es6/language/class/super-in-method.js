@@ -25,7 +25,7 @@ describe('inside a class use `super` to access parent methods', () => {
   
   it('`super` works across any number of levels of inheritance', () => {
     class A {iAmSuper() { return this.youAreSuper; }}
-    class B extends A {constructor() { this.youAreSuper = true; } }
+    class B extends A {constructor() { super(); this.youAreSuper = true; } }
     class C extends B {
       iAmSuper() { 
         return this.iAmSuper(); 
