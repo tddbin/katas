@@ -35,7 +35,7 @@ describe('string is a built-in iterable object', function() {
       assert.deepEqual(value, {done: false, value: 'a'});
     });
     
-    it('the after-last call to `iterator.next()` says done=false, no more elements', function(){
+    it('the after-last call to `iterator.next()` says done=true, no more elements', function(){
       iterator.next();
       assert.equal(iterator.next().done, true);
     });
