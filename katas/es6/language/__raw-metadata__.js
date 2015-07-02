@@ -49,7 +49,9 @@ const OBJECT_IS = 54;
 const NUMBER_ISINTEGER = 55;
 const GENERATOR_SEND_FUNCTION = 56;
 const DEFAULT_PARAMETERS_BASICS = 57;
+const REFLECT_BASICS = 58;
 
+const CLASS_EXTENDS = 25;
 export const all = {
   name: 'ES6 Katas',
   groups: {
@@ -301,7 +303,7 @@ export const all = {
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: []
         },
-        25: {
+        [CLASS_EXTENDS]: {
           name: 'extends',
           description: 'How to do inheritance, using `extends`.',
           path: 'class/extends',
@@ -322,7 +324,7 @@ export const all = {
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: []
         },
-        28: {
+        [CLASS_SUPER_IN_CONSTRUCTOR]: {
           name: 'super in constructor',
           description: 'Use of `super` inside the constructor.',
           path: 'class/super-in-constructor',
@@ -604,6 +606,23 @@ export const all = {
             LET,
             ARROW_FUNCTION_BASICS,
             TEMPLATE_STRING_BASICS
+          ]
+        }
+      }
+    },
+    
+    'Reflect API': {
+      items: {
+        [REFLECT_BASICS]: {
+          name: 'Basics',
+          description: '',
+          path: 'reflect/basics',
+          level: SKILL_LEVEL.BEGINNER,
+          requiresKnowledgeFrom: [
+            LET,
+            CLASS_CREATION,
+            CLASS_EXTENDS,
+            CLASS_SUPER_IN_CONSTRUCTOR
           ]
         }
       }
