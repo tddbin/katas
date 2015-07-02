@@ -11,7 +11,7 @@ describe('`Reflect` basics', function() {
     
     it('it can not be instantiated', function() {
       const tryToConstruct = () => { Reflect; };
-      assert.throws(tryToConstruct);
+      assert.throws(tryToConstruct, TypeError);
     });
     
     it('has no `call` method (as opposed to e.g. Object)', function() {
@@ -19,10 +19,6 @@ describe('`Reflect` basics', function() {
       assert.equal(typeof Reflect.call, expected);
     });
     
-    it('can not be called as a function', function() {
-      const tryToCallAsFunction = () => { Reflect }
-      assert.throws(tryToCallAsFunction, TypeError);
-    });
   });  
   
   describe('some `Reflect` usages', function() {
