@@ -55,6 +55,17 @@ const CLASS_EXTENDS = 25;
 const CLASS_SUPER_IN_CONSTRUCTOR = 28;
 
 const ARRAY_FILL = 31;
+const DESTRUCTURING_PARAMETERS = 14;
+const REST_OPERATOR_AS_PARAMETER = 18;
+const REST_OPERATOR_WITH_DESTRUCTURING = 19;
+const CLASS_SUPER_IN_METHOD = 27;
+const ARRAY_OF = 30;
+const ARRAY_FIND = 32;
+const ARRAY_FIND_INDEX = 33;
+const SYMBOL_FOR = 35;
+const SYMBOL_KEY_FOR = 36;
+const ITERATOR_STRING = 38;
+const ITERATOR_USAGES = 40;
 export const all = {
   name: 'ES6 Katas',
   groups: {
@@ -207,7 +218,7 @@ export const all = {
             DESTRUCTURING_OBJECT
           ]
         },
-        14: {
+        [DESTRUCTURING_PARAMETERS]: {
           name: 'parameters',
           description: 'Destructuring function parameters.',
           path: 'destructuring/parameters',
@@ -218,7 +229,7 @@ export const all = {
             ARROW_FUNCTION_BASICS
           ]
         },
-        15: {
+        [DESTRUCTURING_RENAME]: {
           name: 'rename',
           description: 'Rename variables while destructuring.',
           path: 'destructuring/rename',
@@ -230,7 +241,7 @@ export const all = {
             CONST,
             ARROW_FUNCTION_BASICS
           ]
-        },
+        }
       }
     },
     'Unicode': {
@@ -244,25 +255,25 @@ export const all = {
             CONST,
             TEMPLATE_STRING_BASICS
           ]
-        },
+        }
       }
     },
     'Rest operator': {
       items: {
-        18: {
+        [REST_OPERATOR_AS_PARAMETER]: {
           name: 'as parameter',
           description: 'Use the rest operator as parameter.',
           path: 'rest/as-parameter',
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: []
         },
-        19: {
+        [REST_OPERATOR_WITH_DESTRUCTURING]: {
           name: 'with destructuring',
           description: 'Use the rest operator with destructuring.',
           path: 'rest/with-destructuring',
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: []
-        },
+        }
       }
     },
     'Spread operator': {
@@ -280,7 +291,7 @@ export const all = {
           path: 'spread/with-strings',
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: []
-        },
+        }
       }
     },
     'Class': {
@@ -299,7 +310,7 @@ export const all = {
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: []
         },
-        24: {
+        [CLASS_STATIC]: {
           name: 'static',
           description: 'Use of the static keyword inside a class.',
           path: 'class/static',
@@ -313,14 +324,14 @@ export const all = {
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: []
         },
-        26: {
+        [CLASS_MORE_EXTENDS]: {
           name: 'more extends',
           description: 'More in depth `extends` stuff',
           path: 'class/more-extends',
           level: SKILL_LEVEL.ADVANCED,
           requiresKnowledgeFrom: []
         },
-        27: {
+        [CLASS_SUPER_IN_METHOD]: {
           name: 'super in method',
           description: 'Use of `super` inside a method.',
           path: 'class/super-in-method',
@@ -333,7 +344,7 @@ export const all = {
           path: 'class/super-in-constructor',
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: []
-        },
+        }
       }
     },
     'Array API': {
@@ -345,7 +356,7 @@ export const all = {
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: []
         },
-        30: {
+        [ARRAY_OF]: {
           name: '`Array.of()`',
           description: '`Array.of` creates an array with the given arguments as elements.',
           path: 'array-api/of',
@@ -373,14 +384,14 @@ export const all = {
             ]
           }
         },
-        32: {
+        [ARRAY_FIND]: {
           name: '`[].find()`',
           description: '`[].find` makes finding items in arrays easier.',
           path: 'array-api/find',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: []
         },
-        33: {
+        [ARRAY_FIND_INDEX]: {
           name: '`[].findIndex()`',
           description: '`[].findIndex` makes finding items in arrays easier.',
           path: 'array-api/findIndex',
@@ -419,20 +430,20 @@ export const all = {
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: []
         },
-        35: {
+        [SYMBOL_FOR]: {
           name: '`Symbol.for()`',
           description: '`Symbol.for()` for registering Symbols globally.',
           path: 'symbol/for',
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: []
         },
-        36: {
+        [SYMBOL_KEY_FOR]: {
           name: '`Symbol.keyFor()`',
           description: '`Symbol.keyFor()` gets the symbol key for a given symbol.',
           path: 'symbol/keyFor',
           level: SKILL_LEVEL.INTERMEDIATE,
-          requiresKnowledgeFrom: [35]
-        },
+          requiresKnowledgeFrom: [SYMBOL_FOR]
+        }
       }
     },
     'Iterator': {
@@ -444,12 +455,15 @@ export const all = {
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: []
         },
-        38: {
+        [ITERATOR_STRING]: {
           name: 'string',
           description: '',
           path: 'iterator/string',
           level: SKILL_LEVEL.TBD,
-          requiresKnowledgeFrom: [SYMBOL_BASICS, ITERATOR_ARRAY]
+          requiresKnowledgeFrom: [
+            SYMBOL_BASICS, 
+            ITERATOR_ARRAY
+          ]
         },
         [ITERATOR_PROTOCOL]: {
           name: 'protocol',
@@ -458,13 +472,19 @@ export const all = {
           level: SKILL_LEVEL.EXPERT,
           requiresKnowledgeFrom: []
         },
-        40: {
+        [ITERATOR_USAGES]: {
           name: 'usage',
           description: '',
           path: 'iterator/usages',
           level: SKILL_LEVEL.EXPERT,
-          requiresKnowledgeFrom: [LET, DESTRUCTURING_ARRAY, DESTRUCTURING_OBJECT, SYMBOL_BASICS, ITERATOR_PROTOCOL, SPREAD_WITH_ARRAYS]
-        },
+          requiresKnowledgeFrom: [
+            LET, 
+            DESTRUCTURING_ARRAY, DESTRUCTURING_OBJECT, 
+            SYMBOL_BASICS, 
+            ITERATOR_PROTOCOL, 
+            SPREAD_WITH_ARRAYS
+          ]
+        }
       }
     },
     'Map': {
@@ -520,7 +540,7 @@ export const all = {
           requiresKnowledgeFrom: [
             SET_BASICS
           ]
-        },
+        }
       }
     },
     'Generator': {
