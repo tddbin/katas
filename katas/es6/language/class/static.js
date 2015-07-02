@@ -1,11 +1,13 @@
 // 24: class - static keyword
 // To do: make all tests pass, leave the assert lines unchanged!
 
-describe('inside a class you can use the static keyword', () => {
+describe('inside a class you can use the `static` keyword', () => {
 
   describe('for methods', () => {
+    
     class IntegrationTest {}
     class UnitTest {}
+    
     it('a static method just has the prefix `static`', () => {
       class TestFactory {
         makeTest() { return new UnitTest(); }
