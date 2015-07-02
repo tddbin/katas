@@ -3,8 +3,8 @@
 
 describe('class creation', () => {
 
-  it('has a simplified syntax', function() {
-    class TestClass
+  it('is as simple as `class XXX {}`', function() {
+    let TestClass;
     
     const instance = new TestClass();
     assert.equal(typeof instance, 'object');
