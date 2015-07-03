@@ -724,6 +724,21 @@
           ],
           "groupName": "Reflect API",
           "id": "58"
+        },
+        {
+          "name": "`Reflect.apply()`",
+          "description": "Calls a target function with given scope and arguments.",
+          "path": "reflect/apply",
+          "level": "INTERMEDIATE",
+          "requiresKnowledgeFrom": [
+            7,
+            8,
+            22,
+            5,
+            31
+          ],
+          "groupName": "Reflect API",
+          "id": "59"
         }
       ]
     }
