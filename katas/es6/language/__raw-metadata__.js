@@ -63,6 +63,7 @@ const NUMBER_ISINTEGER = 55;
 const GENERATOR_SEND_FUNCTION = 56;
 const DEFAULT_PARAMETERS_BASICS = 57;
 const REFLECT_BASICS = 58;
+const REFLECT_APPLY = 59;
 
 export const all = {
   name: 'ES6 Katas',
@@ -658,6 +659,17 @@ export const all = {
             CLASS_CREATION,
             CLASS_EXTENDS,
             CLASS_SUPER_IN_CONSTRUCTOR
+          ]
+        },
+        [REFLECT_APPLY]: {
+          name: '`Reflect.apply()`',
+          description: 'Calls a target function with given scope and arguments.',
+          path: 'reflect/apply',
+          level: SKILL_LEVEL.INTERMEDIATE,
+          requiresKnowledgeFrom: [
+            LET, CONST,
+            CLASS_CREATION,
+            ARRAY_FILL
           ]
         }
       }
