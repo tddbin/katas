@@ -4,17 +4,23 @@
 describe('`Reflect.apply` calls a target function', function() {
 
   it('it is a static method', function() {
-    assert.equal(typeof Reflect.apply, 'function')
+    const expectedType = '???';
+    
+    assert.equal(typeof Reflect.apply, expectedType)
   });
   
   it('it calls a callable, e.g. a function', function() {
-    const fn = () => 42;
+    let fn;
     
     assert.equal(Reflect.apply(fn), 42);
   });
   
   it('passing it a non-callable throws a TypeError', function() {
-    assert.throws(() => {Reflect.apply(1);}, TypeError);
+    let applyOnUncallable = () => { 
+      Reflect.apply(Array); 
+    };
+    
+    assert.throws(applyOnUncallable, TypeError);
   });
   
   it('the second argument is the scope (or the `this`)', function() {
@@ -24,12 +30,15 @@ describe('`Reflect.apply` calls a target function', function() {
     }
     let instance = new FourtyTwo();
     
-    assert.deepEqual(Reflect.apply(instance.fn, instance), 42);
+    const fourtyTwo = Reflect.apply(instance.fn);
+    
+    assert.deepEqual(fourtyTwo, 42);
   });
   
-  it('the third argument are the parameters passed to the call', function() {
-    const expected = [42, 42, 42, 42, 42];
-    assert.deepEqual(Reflect.apply(Array, null, [5]).fill(42), expected);
+  it('the 3rd argument is an array of parameters passed to the call', function() {
+    let emptyArrayWithFiveElements = Reflect.apply(Array);
+    
+    assert.deepEqual(emptyArrayWithFiveElements.fill(42), [42, 42, 42, 42, 42]);
   });
   
 });

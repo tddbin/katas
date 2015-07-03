@@ -669,6 +669,7 @@ export const all = {
           requiresKnowledgeFrom: [
             LET, CONST,
             CLASS_CREATION,
+            ARROW_FUNCTION_BASICS,
             ARRAY_FILL
           ]
         }
