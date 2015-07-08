@@ -4,7 +4,7 @@
 describe('rename variables while destructuring', () => {
 
   it('rename object key', () => {
-    const {x: y} = {x: 10};
+    const {x: newName} = {x: 1};
     assert.equal(y, 1);
   });
   
