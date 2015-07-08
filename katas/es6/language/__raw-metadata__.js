@@ -64,6 +64,7 @@ const GENERATOR_SEND_FUNCTION = 56;
 const DEFAULT_PARAMETERS_BASICS = 57;
 const REFLECT_BASICS = 58;
 const REFLECT_APPLY = 59;
+const REFLECT_GET_PROTOTYPE_OF = 60;
 
 export const all = {
   name: 'ES6 Katas',
@@ -671,6 +672,14 @@ export const all = {
             CLASS_CREATION,
             ARROW_FUNCTION_BASICS,
             ARRAY_FILL
+          ]
+        },
+        [REFLECT_GET_PROTOTYPE_OF]: {
+          name: '`Reflect.getPrototypeOf()`',
+          description: '',
+          path: 'reflect/getprototypeof',
+          level: SKILL_LEVEL.INTERMEDIATE,
+          requiresKnowledgeFrom: [
           ]
         }
       }
