@@ -739,6 +739,15 @@
           ],
           "groupName": "Reflect API",
           "id": "59"
+        },
+        {
+          "name": "`Reflect.getPrototypeOf()`",
+          "description": "",
+          "path": "reflect/getprototypeof",
+          "level": "INTERMEDIATE",
+          "requiresKnowledgeFrom": [],
+          "groupName": "Reflect API",
+          "id": "60"
         }
       ]
     }
