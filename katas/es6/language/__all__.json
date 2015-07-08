@@ -668,10 +668,15 @@
     },
     {
       "name": "`Reflect.getPrototypeOf()`",
-      "description": "",
+      "description": "It returns the prototype of the given object.",
       "path": "reflect/getprototypeof",
       "level": "INTERMEDIATE",
-      "requiresKnowledgeFrom": [],
+      "requiresKnowledgeFrom": [
+        7,
+        8,
+        22,
+        5
+      ],
       "groupName": "Reflect API",
       "id": "60"
     }
