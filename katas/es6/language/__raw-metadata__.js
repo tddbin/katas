@@ -676,10 +676,14 @@ export const all = {
         },
         [REFLECT_GET_PROTOTYPE_OF]: {
           name: '`Reflect.getPrototypeOf()`',
-          description: '',
+          description: 'It returns the prototype of the given object.',
           path: 'reflect/getprototypeof',
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [
+            LET,
+            CONST,
+            CLASS_CREATION,
+            ARROW_FUNCTION_BASICS
           ]
         }
       }
