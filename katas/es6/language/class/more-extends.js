@@ -25,7 +25,7 @@ describe('class can inherit from another', () => {
   });
 
   describe('`extends` using an expression', () => {
-    it('like the inline assignment of the parent class', () => {
+    it('eg the inline assignment of the parent class', () => {
       let A;
       class B extends (A = {}) {}
       
