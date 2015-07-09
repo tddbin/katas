@@ -65,6 +65,7 @@ const DEFAULT_PARAMETERS_BASICS = 57;
 const REFLECT_BASICS = 58;
 const REFLECT_APPLY = 59;
 const REFLECT_GET_PROTOTYPE_OF = 60;
+const MODULES_IMPORT = 61;
 
 export const all = {
   name: 'ES6 Katas',
@@ -687,8 +688,19 @@ export const all = {
           ]
         }
       }
-    }
+    },
     
+    'Modules': {
+      items: {
+        [MODULES_IMPORT]: {
+          name: '`import` statement',
+          description: 'Use `import` to import functions that have been exported somewhere else.',
+          path: 'modules/import',
+          level: SKILL_LEVEL.BEGINNER,
+          requiresKnowledgeFrom: []
+        }
+      }
+    }
     
   }
 };
