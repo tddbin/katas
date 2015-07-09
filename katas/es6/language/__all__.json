@@ -679,6 +679,15 @@
       ],
       "groupName": "Reflect API",
       "id": "60"
+    },
+    {
+      "name": "`import` statement",
+      "description": "Use `import` to import functions that have been exported somewhere else.",
+      "path": "modules/import",
+      "level": "BEGINNER",
+      "requiresKnowledgeFrom": [],
+      "groupName": "Modules",
+      "id": "61"
     }
   ]
 }
