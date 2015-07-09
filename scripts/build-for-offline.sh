@@ -10,6 +10,5 @@ if [[ $OSTYPE == darwin* ]]; then
   # replace in index.html
   sed -i '' "s/\/\/cdn.rawgit.com\/jpillora/..\/vendor/g" $DIST_ROOT/proxy.html
 else
-  echo "To do: make '$0' work on non-Macs";
-  exit 1;
+  sed -i "s/\/\/cdn.rawgit.com\/jpillora/..\/vendor/g" $DIST_ROOT/proxy.html
 fi;
