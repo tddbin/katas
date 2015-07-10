@@ -688,6 +688,19 @@
       "requiresKnowledgeFrom": [],
       "groupName": "Modules",
       "id": "61"
+    },
+    {
+      "name": "`map.has()`",
+      "description": "Indicates whether an element with a key exists.",
+      "path": "map/has",
+      "level": "BEGINNER",
+      "requiresKnowledgeFrom": [
+        7,
+        44,
+        46
+      ],
+      "groupName": "Map",
+      "id": "62"
     }
   ]
 }
