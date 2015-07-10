@@ -66,6 +66,7 @@ const REFLECT_BASICS = 58;
 const REFLECT_APPLY = 59;
 const REFLECT_GET_PROTOTYPE_OF = 60;
 const MODULES_IMPORT = 61;
+const MAP_HAS = 62;
 
 export const all = {
   name: 'ES6 Katas',
@@ -520,6 +521,18 @@ export const all = {
             LET, CONST,
             ARRAY_FROM,
             MAP_BASICS, MAP_SET
+          ]
+        },
+        [MAP_HAS]: {
+          name: '`map.has()`',
+          description: 'Indicates whether an element with a key exists.',
+          path: 'map/has',
+          level: SKILL_LEVEL.BEGINNER,
+          requiresKnowledgeFrom: [
+            LET,
+            MAP_BASICS,
+            MAP_SET
+            //MAP_DELETE
           ]
         }
       }
