@@ -787,6 +787,23 @@
           "id": "61"
         }
       ]
+    },
+    "String API": {
+      "items": [
+        {
+          "name": "`string.includes()`",
+          "description": "Finds string within another string.",
+          "path": "string-api/includes",
+          "level": "BEGINNER",
+          "requiresKnowledgeFrom": [
+            7,
+            8,
+            5
+          ],
+          "groupName": "String API",
+          "id": "63"
+        }
+      ]
     }
   }
 }

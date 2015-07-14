@@ -707,6 +707,19 @@
       },
       "groupName": "Map",
       "id": "62"
+    },
+    {
+      "name": "`string.includes()`",
+      "description": "Finds string within another string.",
+      "path": "string-api/includes",
+      "level": "BEGINNER",
+      "requiresKnowledgeFrom": [
+        7,
+        8,
+        5
+      ],
+      "groupName": "String API",
+      "id": "63"
     }
   ]
 }
