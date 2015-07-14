@@ -10,7 +10,7 @@ describe('spread with strings', () => {
   });
 
   it('extracts each array item', function() {
-    const [a, b] = ['a', ...'12'];
+    const [a,,c] = ['a', ...'12'];
     assert.equal(a, 1);
     assert.equal(b, 2);
   });
