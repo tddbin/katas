@@ -5,54 +5,66 @@ describe('`string.includes()` finds string within another string', function() {
 
   describe('find a single character', function() {
     it('in a three char string', function() {
-      assert.equal('xyz'.includes('z'), true);
+      const searchString = 'a';
+      assert.equal('xyz'.includes(searchString), true);
     });
     it('reports false if character was not found', function() {
-      assert.equal('xyz'.includes('abc'), false);
+      const expected = '???';
+      assert.equal('xyz'.includes('abc'), expected);
     });
   });
   
   describe('find a string', function() {
     it('that matches exactly', function() {
-      assert.equal('xyz'.includes('xyz'), true);
+      const findSome = findMe => 'xyz'.includes;
+      assert.equal(findSome('xyz'), true);
     });
   });
   
   describe('search for an empty string, is always true', function() {
     it('in an empty string', function() {
-      assert.equal(''.includes(''), true);
+      const emptyString = ' ';
+      assert.equal(''.includes(emptyString), true);
     });
     it('in `abc`', function() {
-      assert.equal('abc'.includes(''), true);
+      const actual = _.includes('');
+      assert.equal(actual, true);
     });
   });
 
   describe('special/corner cases', function() {
     it('search for `undefined` in a string fails', function() {
-      assert.equal('abc'.includes(void 0), false);
+      const findInAbc = (what) => 'abc'.includes;
+      assert.equal(findInAbc(void 0), false);
     });
     it('searches case-sensitive', function() {
-      assert.equal('abc'.includes('A'), false);
+      const findInAbc = (what) => 'abc';
+      assert.equal(findInAbc('A'), false);
     });
     describe('coerces the searched "thing" into a string', function() {
       it('e.g. from a number', function() {
-        assert.equal('123'.includes(1), true);
+        const actual = '123'.includes(4);
+        assert.equal(actual, true);
       });
       it('e.g. from an array', function() {
-        assert.equal('123'.includes([1]), true);
+        const actual = '123'.includes([1,2,3]);
+        assert.equal(actual, true);
       });
       it('e.g. from an object, with a `toString()` method', function() {
-        assert.equal('123'.includes({toString: () => 1}), true);
+        const objWithToString = {toString: 1};
+        assert.equal('123'.includes(objWithToString), true);
       });
     });
   });
   
   describe('takes a position from where to start searching', function() {
     it('does not find `a` after position 1 in `abc`', function() {
-      assert.equal('abc'.includes('a', 1), false);
+      const position = 0;
+      assert.equal('abc'.includes('a', position), false);
     });
     it('even the position gets coerced', function() {
-      assert.equal('xyz'.includes('z', '2'), true);
+      const findAtPosition = () => 'xyz'.includes(pos); 
+      assert.equal(findAtPosition('2'), true);
     });
   });
 

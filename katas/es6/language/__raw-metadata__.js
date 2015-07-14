@@ -67,8 +67,8 @@ const REFLECT_APPLY = 59;
 const REFLECT_GET_PROTOTYPE_OF = 60;
 const MODULES_IMPORT = 61;
 const MAP_HAS = 62;
-
 const STRING_INCLUDES = 63;
+
 export const all = {
   name: 'ES6 Katas',
   groups: {
@@ -731,7 +731,8 @@ export const all = {
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [
             LET,
-            CONST
+            CONST,
+            ARROW_FUNCTION_BASICS
           ]
         }
       }
