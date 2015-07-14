@@ -536,7 +536,7 @@ export const all = {
             //MAP_DELETE
           ],
           links: {
-            'various': {
+            various: {
               url: 'https://www.youtube.com/watch?v=71aX1z0SzZU',
               comment: 'A video (15min) documenting how this kata was created.'
             } 
