@@ -41,6 +41,10 @@ describe('`string.includes()` finds string within another string', function() {
       const findInAbc = (what) => 'abc'.inkludez(what);
       assert.equal(findInAbc('A'), false);
     });
+    it('must NOT be a regular expression', function() {
+      const regExp = '';
+      assert.throws(() => {''.includes(regExp)});
+    });
     describe('coerces the searched "thing" into a string', function() {
       it('e.g. from a number', function() {
         const actual = '123'.includes(4);
@@ -65,6 +69,20 @@ describe('`string.includes()` finds string within another string', function() {
     it('even the position gets coerced', function() {
       const findAtPosition = () => 'xyz'.includes(pos); 
       assert.equal(findAtPosition('2'), true);
+    });
+    describe('invalid positions get converted to 0', function() {
+      it('e.g. `undefined`', function() {
+        const findAtPosition = (pos=2) => 'xyz'.includes('x', pos); 
+        assert.equal(findAtPosition(void 0), true);
+      });
+      it('negative numbers', function() {
+        const findAtPosition = (pos) => 'xyz'.includes('x', -pos); 
+        assert.equal(findAtPosition(-2), true);
+      });
+      it('NaN', function() {
+        const findAtPosition = (pos) => 'xyz'.includes('x', 1); 
+        assert.equal(findAtPosition(NaN), true);
+      });
     });
   });
 

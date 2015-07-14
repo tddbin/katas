@@ -732,8 +732,21 @@ export const all = {
           requiresKnowledgeFrom: [
             LET,
             CONST,
-            ARROW_FUNCTION_BASICS
-          ]
+            ARROW_FUNCTION_BASICS,
+            DEFAULT_PARAMETERS_BASICS
+          ],
+          links: {
+            documentation: [
+              {
+                url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-string.prototype.includes',
+                comment: 'The official specification, actually quite good to read for this function.'
+              },
+              {
+                url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes',
+                comment: 'The Mozilla Developer Network docs, contains good examples.'
+              }
+            ]
+          }
         }
       }
     }
