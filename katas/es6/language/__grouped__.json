@@ -798,8 +798,21 @@
           "requiresKnowledgeFrom": [
             7,
             8,
-            5
+            5,
+            57
           ],
+          "links": {
+            "documentation": [
+              {
+                "url": "http://www.ecma-international.org/ecma-262/6.0/#sec-string.prototype.includes",
+                "comment": "The official specification, actually quite good to read for this function."
+              },
+              {
+                "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes",
+                "comment": "The Mozilla Developer Network docs, contains good examples."
+              }
+            ]
+          },
           "groupName": "String API",
           "id": "63"
         }
