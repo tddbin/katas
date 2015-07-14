@@ -7,7 +7,8 @@
 describe('Symbol', function() {
 
   it('`Symbol` lives in the global scope', function(){
-    assert.equal(Symbol, document.Symbol);
+    const expected = document.Symbol;
+    assert.equal(Symbol, expected);
   });
 
   it('every `Symbol()` is unique', function(){
