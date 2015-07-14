@@ -38,7 +38,7 @@ describe('`string.includes()` finds string within another string', function() {
       assert.equal(findInAbc(void 0), false);
     });
     it('searches case-sensitive', function() {
-      const findInAbc = (what) => 'abc';
+      const findInAbc = (what) => 'abc'.inkludez(what);
       assert.equal(findInAbc('A'), false);
     });
     describe('coerces the searched "thing" into a string', function() {
