@@ -70,6 +70,11 @@ const MAP_HAS = 62;
 const STRING_INCLUDES = 63;
 const SET_DELETE = 64;
 
+const TAG_SPECIFICATION = 'spec';
+const TAG_MDN = 'mdn';
+const TAG_VIDEO = 'video';
+const TAG_ARTICLE = 'article';
+const TAG_DOCS = 'docs';
 export const all = {
   name: 'ES6 Katas',
   groups: {
@@ -383,7 +388,8 @@ export const all = {
             documentation: [
               {
                 url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fill',
-                comment: 'API doc on MDN.'
+                comment: 'API doc on MDN.',
+                tags: [TAG_MDN, TAG_DOCS]
               }
             ]
           }
@@ -539,7 +545,8 @@ export const all = {
           links: {
             various: {
               url: 'https://www.youtube.com/watch?v=71aX1z0SzZU',
-              comment: 'A video (15min) documenting how this kata was created.'
+              comment: 'A video (15min) documenting how this kata was created.',
+              tags: [TAG_VIDEO]
             } 
           }
         }
@@ -577,6 +584,23 @@ export const all = {
       }
     },
     'Generator': {
+      links: [
+        {
+          url: 'https://hacks.mozilla.org/2015/05/es6-in-depth-generators/',
+          comment: 'ES6 In Depth: Generators',
+          tags: [TAG_MDN, TAG_ARTICLE]
+        },
+        {
+          url: 'https://hacks.mozilla.org/2015/07/es6-in-depth-generators-continued/',
+          comment: 'ES6 In Depth: Generators, continued',
+          tags: [TAG_MDN, TAG_ARTICLE]
+        },
+        {
+          url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-generator-objects',
+          comment: 'The specification chapter about generators.',
+          tags: [TAG_SPECIFICATION]
+        }
+      ],
       items: {
         [GENERATOR_CREATION]: {
           name: 'creation',
@@ -751,11 +775,13 @@ export const all = {
             documentation: [
               {
                 url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-string.prototype.includes',
-                comment: 'The official specification, actually quite good to read for this function.'
+                comment: 'The official specification, actually quite good to read for this function.',
+                tags: [TAG_SPECIFICATION]
               },
               {
                 url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes',
-                comment: 'The Mozilla Developer Network docs, contains good examples.'
+                comment: 'The Mozilla Developer Network docs, contains good examples.',
+                tags: [TAG_MDN, TAG_DOCS]
               }
             ]
           }
