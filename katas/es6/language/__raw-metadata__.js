@@ -599,6 +599,11 @@ export const all = {
           url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-generator-objects',
           comment: 'The specification chapter about generators.',
           tags: [TAG_SPECIFICATION]
+        },
+        {
+          url: 'http://davidwalsh.name/es6-generators',
+          comment: 'The article "The Basics Of ES6 Generators".',
+          tags: [TAG_ARTICLE]
         }
       ],
       items: {
@@ -644,6 +649,13 @@ export const all = {
             GENERATOR_CREATION,
             GENERATOR_ITERATOR,
             GENERATOR_YIELD
+          ],
+          links: [
+            {
+              url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-generatorresume',
+              comment: 'The part in the spec, that describes how a generator resumes.',
+              tags: [TAG_SPECIFICATION]
+            }
           ]
         },
         [GENERATOR_SEND_FUNCTION]: {
