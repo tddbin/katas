@@ -369,7 +369,11 @@
             "documentation": [
               {
                 "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fill",
-                "comment": "API doc on MDN."
+                "comment": "API doc on MDN.",
+                "tags": [
+                  "mdn",
+                  "docs"
+                ]
               }
             ]
           },
@@ -578,7 +582,10 @@
           "links": {
             "various": {
               "url": "https://www.youtube.com/watch?v=71aX1z0SzZU",
-              "comment": "A video (15min) documenting how this kata was created."
+              "comment": "A video (15min) documenting how this kata was created.",
+              "tags": [
+                "video"
+              ]
             }
           },
           "groupName": "Map",
@@ -674,6 +681,15 @@
             49,
             50,
             51
+          ],
+          "links": [
+            {
+              "url": "http://www.ecma-international.org/ecma-262/6.0/#sec-generatorresume",
+              "comment": "The part in the spec, that describes how a generator resumes.",
+              "tags": [
+                "spec"
+              ]
+            }
           ],
           "groupName": "Generator",
           "id": "52"
@@ -819,11 +835,18 @@
             "documentation": [
               {
                 "url": "http://www.ecma-international.org/ecma-262/6.0/#sec-string.prototype.includes",
-                "comment": "The official specification, actually quite good to read for this function."
+                "comment": "The official specification, actually quite good to read for this function.",
+                "tags": [
+                  "spec"
+                ]
               },
               {
                 "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes",
-                "comment": "The Mozilla Developer Network docs, contains good examples."
+                "comment": "The Mozilla Developer Network docs, contains good examples.",
+                "tags": [
+                  "mdn",
+                  "docs"
+                ]
               }
             ]
           },
