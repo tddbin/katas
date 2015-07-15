@@ -356,7 +356,7 @@ export const all = {
         }
       }
     },
-    'Array API': {
+    'Array': {
       items: {
         [ARRAY_FROM]: {
           name: '`Array.from()`',
@@ -674,7 +674,7 @@ export const all = {
       }
     },
     
-    'Object API': {
+    'Object': {
       items: {
         [OBJECT_IS]: {
           name: '`Object.is()`',
@@ -717,7 +717,7 @@ export const all = {
       }
     },
     
-    'Reflect API': {
+    'Reflect': {
       items: {
         [REFLECT_BASICS]: {
           name: 'Basics',
@@ -770,7 +770,7 @@ export const all = {
       }
     },
     
-    'String API': {
+    'String': {
       items: {
         [STRING_INCLUDES]: {
           name: '`string.includes()`',
