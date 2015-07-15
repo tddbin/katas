@@ -31,12 +31,15 @@ describe('pass a value to a generator', () => {
     assert.deepEqual([1, 2], iteratedOver);
   });
 
-  it('passing a value to the first `next()` call throws', function() {
+  it('a value passed to the 1st `next()` call is ignored', function() {
     function* generatorFunction() {
-      yield 1;
+      let value = yield 1;
+      yield value;
     }
 
-    assert.throws(function() { generatorFunction().next(); });
+    let iterator = generatorFunction();
+    iterator.next('first');
+    assert.equal(iterator.next().value, 2);
   });
 
 });
