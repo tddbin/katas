@@ -69,6 +69,7 @@ const MODULES_IMPORT = 61;
 const MAP_HAS = 62;
 const STRING_INCLUDES = 63;
 const SET_DELETE = 64;
+const SET_API = 65;
 
 const TAG_SPECIFICATION = 'spec';
 const TAG_MDN = 'mdn';
@@ -579,6 +580,22 @@ export const all = {
             LET, CONST,
             SET_BASICS,
             SET_ADD
+          ]
+        },
+        [SET_API]: {
+          name: 'the API',
+          description: '',
+          path: 'set/api',
+          level: SKILL_LEVEL.BEGINNER,
+          requiresKnowledgeFrom: [
+            
+          ],
+          links: [
+            {
+              url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set',
+              comment: '',
+              tags: [TAG_MDN, TAG_DOCS]
+            }
           ]
         }
       }
