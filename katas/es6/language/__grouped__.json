@@ -607,6 +607,20 @@
           ],
           "groupName": "Set",
           "id": "48"
+        },
+        {
+          "name": "`set.delete()`",
+          "description": "Removes an element from a set.",
+          "path": "set/delete",
+          "level": "BEGINNER",
+          "requiresKnowledgeFrom": [
+            7,
+            8,
+            47,
+            48
+          ],
+          "groupName": "Set",
+          "id": "64"
         }
       ]
     },
