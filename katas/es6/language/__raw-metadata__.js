@@ -68,6 +68,7 @@ const REFLECT_GET_PROTOTYPE_OF = 60;
 const MODULES_IMPORT = 61;
 const MAP_HAS = 62;
 const STRING_INCLUDES = 63;
+const SET_DELETE = 64;
 
 export const all = {
   name: 'ES6 Katas',
@@ -560,6 +561,17 @@ export const all = {
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: [
             SET_BASICS
+          ]
+        },
+        [SET_DELETE]: {
+          name: '`set.delete()`',
+          description: 'Removes an element from a set.',
+          path: 'set/delete',
+          level: SKILL_LEVEL.BEGINNER,
+          requiresKnowledgeFrom: [
+            LET, CONST,
+            SET_BASICS,
+            SET_ADD
           ]
         }
       }
