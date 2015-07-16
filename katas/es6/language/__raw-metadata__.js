@@ -584,11 +584,16 @@ export const all = {
         },
         [SET_API]: {
           name: 'the API',
-          description: '',
+          description: '`Set` API overview.',
           path: 'set/api',
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [
-            
+            LET, CONST,
+            ARRAY_FROM,
+            SET_BASICS, SET_ADD, SET_DELETE,
+            // SET_SIZE, SET_CLEAR, SET_ENTRIES, SET_HAS, SET_KEYS, SET_VALUES, SET_ITERATOR
+            ARROW_FUNCTION_BASICS,
+            SPREAD_WITH_ARRAYS
           ],
           links: [
             {
