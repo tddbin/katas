@@ -6,15 +6,15 @@ describe('`set.delete()` deletes an element from a set', function(){
   let set;
   beforeEach(() => set = new Set());
 
-  describe('when an existing element gets removed', function() {
+  describe('use `delete(<value>)` to delete an element', function() {
     beforeEach(function() {
       set.add('one').add('two').add('three');
     });
-    it('returns `true`', function() {
+    it('`delete()` returns `true` when the element was found', function() {
       const returns = set.remove;
       assert.strictEqual(returns, true);
     });
-    it('the size decreases', function() {
+    it('and the size decreases', function() {
       assert.equal(set.size, 2);
     });
   });
