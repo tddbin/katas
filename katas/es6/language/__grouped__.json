@@ -333,7 +333,7 @@
         }
       ]
     },
-    "Array API": {
+    "Array": {
       "items": [
         {
           "name": "`Array.from()`",
@@ -341,7 +341,7 @@
           "path": "array-api/from",
           "level": "TBD",
           "requiresKnowledgeFrom": [],
-          "groupName": "Array API",
+          "groupName": "Array",
           "id": "29"
         },
         {
@@ -350,7 +350,7 @@
           "path": "array-api/of",
           "level": "TBD",
           "requiresKnowledgeFrom": [],
-          "groupName": "Array API",
+          "groupName": "Array",
           "id": "30"
         },
         {
@@ -377,7 +377,7 @@
               }
             ]
           },
-          "groupName": "Array API",
+          "groupName": "Array",
           "id": "31"
         },
         {
@@ -386,7 +386,7 @@
           "path": "array-api/find",
           "level": "TBD",
           "requiresKnowledgeFrom": [],
-          "groupName": "Array API",
+          "groupName": "Array",
           "id": "32"
         },
         {
@@ -395,7 +395,7 @@
           "path": "array-api/findIndex",
           "level": "TBD",
           "requiresKnowledgeFrom": [],
-          "groupName": "Array API",
+          "groupName": "Array",
           "id": "33"
         },
         {
@@ -408,7 +408,7 @@
             29,
             39
           ],
-          "groupName": "Array API",
+          "groupName": "Array",
           "id": "41"
         },
         {
@@ -422,7 +422,7 @@
             29,
             39
           ],
-          "groupName": "Array API",
+          "groupName": "Array",
           "id": "42"
         },
         {
@@ -435,7 +435,7 @@
             10,
             39
           ],
-          "groupName": "Array API",
+          "groupName": "Array",
           "id": "43"
         }
       ]
@@ -628,6 +628,34 @@
           ],
           "groupName": "Set",
           "id": "64"
+        },
+        {
+          "name": "the API",
+          "description": "`Set` API overview.",
+          "path": "set/api",
+          "level": "BEGINNER",
+          "requiresKnowledgeFrom": [
+            7,
+            8,
+            29,
+            47,
+            48,
+            64,
+            5,
+            20
+          ],
+          "links": [
+            {
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+              "comment": "",
+              "tags": [
+                "mdn",
+                "docs"
+              ]
+            }
+          ],
+          "groupName": "Set",
+          "id": "65"
         }
       ]
     },
@@ -711,7 +739,7 @@
         }
       ]
     },
-    "Object API": {
+    "Object": {
       "items": [
         {
           "name": "`Object.is()`",
@@ -723,7 +751,7 @@
             7,
             44
           ],
-          "groupName": "Object API",
+          "groupName": "Object",
           "id": "54"
         }
       ]
@@ -758,7 +786,7 @@
         }
       ]
     },
-    "Reflect API": {
+    "Reflect": {
       "items": [
         {
           "name": "Basics",
@@ -771,7 +799,7 @@
             25,
             28
           ],
-          "groupName": "Reflect API",
+          "groupName": "Reflect",
           "id": "58"
         },
         {
@@ -786,7 +814,7 @@
             5,
             31
           ],
-          "groupName": "Reflect API",
+          "groupName": "Reflect",
           "id": "59"
         },
         {
@@ -800,7 +828,7 @@
             22,
             5
           ],
-          "groupName": "Reflect API",
+          "groupName": "Reflect",
           "id": "60"
         }
       ]
@@ -818,7 +846,7 @@
         }
       ]
     },
-    "String API": {
+    "String": {
       "items": [
         {
           "name": "`string.includes()`",
@@ -850,7 +878,7 @@
               }
             ]
           },
-          "groupName": "String API",
+          "groupName": "String",
           "id": "63"
         }
       ]
