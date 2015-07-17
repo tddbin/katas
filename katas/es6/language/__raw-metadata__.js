@@ -167,6 +167,7 @@ export const all = {
           path: 'object-literal/basics',
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [
+            CONST,
             ARROW_FUNCTION_BASICS, 
             CONST
           ]
@@ -177,8 +178,11 @@ export const all = {
           path: 'object-literal/computed-properties',
           level: SKILL_LEVEL.ADVANCED,
           requiresKnowledgeFrom: [
+            CONST,
+            ARROW_FUNCTION_BASICS,
             OBJECT_LITERAL_BASICS,
             CONST
+            //OBJECT_LITERAL_SETTER
           ]
         }
       }
