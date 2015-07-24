@@ -39,6 +39,10 @@ describe('An object literal can also contain getters', () => {
     assert.equal(obj.x, void 0);
   });
 
+  // The following dont seem to work in the current transpiler version
+  // but should be correct, as stated here https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get
+  // It might be corrected later, new knowledge welcome.
+  
   //it('must not overlap with a pure property', function() {
   //  const obj = {
   //    x: 1,
