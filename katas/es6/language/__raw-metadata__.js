@@ -70,6 +70,7 @@ const MAP_HAS = 62;
 const STRING_INCLUDES = 63;
 const SET_DELETE = 64;
 const SET_API = 65;
+const OBJECT_LITERAL_GETTER = 66;
 
 const TAG_SPECIFICATION = 'spec';
 const TAG_MDN = 'mdn';
@@ -182,7 +183,26 @@ export const all = {
             ARROW_FUNCTION_BASICS,
             OBJECT_LITERAL_BASICS,
             CONST
-            //OBJECT_LITERAL_SETTER
+            //OBJECT_LITERAL_GETTER
+          ]
+        },
+        [OBJECT_LITERAL_GETTER]: {
+          name: 'getter',
+          description: 'A getter binds an object property to a function that will be called when that property is looked up.',
+          path: 'object-literal/getter',
+          level: SKILL_LEVEL.INTERMEDIATE,
+          requiresKnowledgeFrom: [],
+          links: [
+            {
+              url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get',
+              comment: 'Description of all the details of a getter.',
+              tags: [TAG_MDN, TAG_DOCS]
+            },
+            {
+              url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-object-type',
+              comment: '"An accessor property associates a key value with one or two accessor functions ..."',
+              tags: [TAG_SPECIFICATION]
+            }
           ]
         }
       }
