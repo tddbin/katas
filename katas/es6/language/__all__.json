@@ -6,9 +6,9 @@
       "path": "template-strings/basics",
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [],
-      "publishDateUTC": "2015-03-13T07:55:00.000Z",
       "groupName": "Template strings",
-      "id": "1"
+      "publishDateRfc822": "Fri, 13 Mar 2015 07:55:00 GMT",
+      "id": 1
     },
     {
       "name": "multiline",
@@ -18,9 +18,9 @@
       "requiresKnowledgeFrom": [
         1
       ],
-      "publishDateUTC": "2015-03-16T07:55:00.000Z",
       "groupName": "Template strings",
-      "id": "2"
+      "publishDateRfc822": "Mon, 16 Mar 2015 07:55:00 GMT",
+      "id": 2
     },
     {
       "name": "tagged",
@@ -30,9 +30,9 @@
       "requiresKnowledgeFrom": [
         1
       ],
-      "publishDateUTC": "2015-03-17T07:55:00.000Z",
       "groupName": "Template strings",
-      "id": "3"
+      "publishDateRfc822": "Tue, 17 Mar 2015 07:55:00 GMT",
+      "id": 3
     },
     {
       "name": "`raw` property",
@@ -43,9 +43,9 @@
         1,
         3
       ],
-      "publishDateUTC": "2015-03-18T07:55:00.000Z",
       "groupName": "Template strings",
-      "id": "4"
+      "publishDateRfc822": "Wed, 18 Mar 2015 07:55:00 GMT",
+      "id": 4
     },
     {
       "name": "basics",
@@ -53,9 +53,9 @@
       "path": "arrow-functions/basics",
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [],
-      "publishDateUTC": "2015-03-19T07:55:00.000Z",
       "groupName": "Arrow functions",
-      "id": "5"
+      "publishDateRfc822": "Thu, 19 Mar 2015 07:55:00 GMT",
+      "id": 5
     },
     {
       "name": "function binding",
@@ -66,9 +66,9 @@
         5,
         22
       ],
-      "publishDateUTC": "2015-03-20T07:55:00.000Z",
       "groupName": "Arrow functions",
-      "id": "6"
+      "publishDateRfc822": "Fri, 20 Mar 2015 07:55:00 GMT",
+      "id": 6
     },
     {
       "name": "`let` declaration",
@@ -76,9 +76,9 @@
       "path": "block-scoping/let",
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [],
-      "publishDateUTC": "2015-03-23T07:55:00.000Z",
       "groupName": "Block scope",
-      "id": "7"
+      "publishDateRfc822": "Mon, 23 Mar 2015 07:55:00 GMT",
+      "id": 7
     },
     {
       "name": "`const` declaration",
@@ -88,9 +88,9 @@
       "requiresKnowledgeFrom": [
         7
       ],
-      "publishDateUTC": "2015-03-24T07:55:00.000Z",
       "groupName": "Block scope",
-      "id": "8"
+      "publishDateRfc822": "Tue, 24 Mar 2015 07:55:00 GMT",
+      "id": 8
     },
     {
       "name": "basics",
@@ -102,9 +102,9 @@
         5,
         8
       ],
-      "publishDateUTC": "2015-03-25T07:55:00.000Z",
       "groupName": "Object literal",
-      "id": "9"
+      "publishDateRfc822": "Wed, 25 Mar 2015 07:55:00 GMT",
+      "id": 9
     },
     {
       "name": "array",
@@ -116,9 +116,9 @@
         8,
         1
       ],
-      "publishDateUTC": "2015-03-26T07:55:00.000Z",
       "groupName": "Destructuring",
-      "id": "10"
+      "publishDateRfc822": "Thu, 26 Mar 2015 07:55:00 GMT",
+      "id": 10
     },
     {
       "name": "string",
@@ -129,9 +129,9 @@
         8,
         17
       ],
-      "publishDateUTC": "2015-03-27T07:55:00.000Z",
       "groupName": "Destructuring",
-      "id": "11"
+      "publishDateRfc822": "Fri, 27 Mar 2015 07:55:00 GMT",
+      "id": 11
     },
     {
       "name": "object",
@@ -142,9 +142,9 @@
         8,
         9
       ],
-      "publishDateUTC": "2015-03-30T07:55:00.000Z",
       "groupName": "Destructuring",
-      "id": "12"
+      "publishDateRfc822": "Mon, 30 Mar 2015 07:55:00 GMT",
+      "id": 12
     },
     {
       "name": "defaults",
@@ -156,9 +156,9 @@
         10,
         12
       ],
-      "publishDateUTC": "2015-03-31T07:55:00.000Z",
       "groupName": "Destructuring",
-      "id": "13"
+      "publishDateRfc822": "Tue, 31 Mar 2015 07:55:00 GMT",
+      "id": 13
     },
     {
       "name": "parameters",
@@ -170,9 +170,9 @@
         12,
         5
       ],
-      "publishDateUTC": "2015-04-01T07:55:00.000Z",
       "groupName": "Destructuring",
-      "id": "14"
+      "publishDateRfc822": "Wed, 01 Apr 2015 07:55:00 GMT",
+      "id": 14
     },
     {
       "name": "rename",
@@ -186,9 +186,9 @@
         8,
         5
       ],
-      "publishDateUTC": "2015-04-02T07:55:00.000Z",
       "groupName": "Destructuring",
-      "id": "15"
+      "publishDateRfc822": "Thu, 02 Apr 2015 07:55:00 GMT",
+      "id": 15
     },
     {
       "name": "computed properties",
@@ -201,9 +201,9 @@
         9,
         8
       ],
-      "publishDateUTC": "2015-04-03T07:55:00.000Z",
       "groupName": "Object literal",
-      "id": "16"
+      "publishDateRfc822": "Fri, 03 Apr 2015 07:55:00 GMT",
+      "id": 16
     },
     {
       "name": "in strings",
@@ -214,9 +214,9 @@
         8,
         1
       ],
-      "publishDateUTC": "2015-04-06T07:55:00.000Z",
       "groupName": "Unicode",
-      "id": "17"
+      "publishDateRfc822": "Mon, 06 Apr 2015 07:55:00 GMT",
+      "id": 17
     },
     {
       "name": "as parameter",
@@ -224,9 +224,9 @@
       "path": "rest/as-parameter",
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [],
-      "publishDateUTC": "2015-04-07T08:15:00.000Z",
       "groupName": "Rest operator",
-      "id": "18"
+      "publishDateRfc822": "Tue, 07 Apr 2015 08:15:00 GMT",
+      "id": 18
     },
     {
       "name": "with destructuring",
@@ -234,9 +234,9 @@
       "path": "rest/with-destructuring",
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [],
-      "publishDateUTC": "2015-04-08T07:55:00.000Z",
       "groupName": "Rest operator",
-      "id": "19"
+      "publishDateRfc822": "Wed, 08 Apr 2015 07:55:00 GMT",
+      "id": 19
     },
     {
       "name": "with arrays",
@@ -244,9 +244,9 @@
       "path": "spread/with-arrays",
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [],
-      "publishDateUTC": "2015-04-10T08:18:00.000Z",
       "groupName": "Spread operator",
-      "id": "20"
+      "publishDateRfc822": "Fri, 10 Apr 2015 08:18:00 GMT",
+      "id": 20
     },
     {
       "name": "with strings",
@@ -254,9 +254,9 @@
       "path": "spread/with-strings",
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [],
-      "publishDateUTC": "2015-04-13T07:55:00.000Z",
       "groupName": "Spread operator",
-      "id": "21"
+      "publishDateRfc822": "Mon, 13 Apr 2015 07:55:00 GMT",
+      "id": 21
     },
     {
       "name": "creation",
@@ -264,9 +264,9 @@
       "path": "class/creation",
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [],
-      "publishDateUTC": "2015-04-14T07:55:00.000Z",
       "groupName": "Class",
-      "id": "22"
+      "publishDateRfc822": "Tue, 14 Apr 2015 07:55:00 GMT",
+      "id": 22
     },
     {
       "name": "accessors",
@@ -274,9 +274,9 @@
       "path": "class/accessors",
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [],
-      "publishDateUTC": "2015-04-15T07:56:00.000Z",
       "groupName": "Class",
-      "id": "23"
+      "publishDateRfc822": "Wed, 15 Apr 2015 07:56:00 GMT",
+      "id": 23
     },
     {
       "name": "static",
@@ -284,9 +284,9 @@
       "path": "class/static",
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [],
-      "publishDateUTC": "2015-04-16T07:55:00.000Z",
       "groupName": "Class",
-      "id": "24"
+      "publishDateRfc822": "Thu, 16 Apr 2015 07:55:00 GMT",
+      "id": 24
     },
     {
       "name": "extends",
@@ -294,9 +294,9 @@
       "path": "class/extends",
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [],
-      "publishDateUTC": "2015-04-17T08:25:00.000Z",
       "groupName": "Class",
-      "id": "25"
+      "publishDateRfc822": "Fri, 17 Apr 2015 08:25:00 GMT",
+      "id": 25
     },
     {
       "name": "more extends",
@@ -304,9 +304,9 @@
       "path": "class/more-extends",
       "level": "ADVANCED",
       "requiresKnowledgeFrom": [],
-      "publishDateUTC": "2015-04-20T07:55:00.000Z",
       "groupName": "Class",
-      "id": "26"
+      "publishDateRfc822": "Mon, 20 Apr 2015 07:55:00 GMT",
+      "id": 26
     },
     {
       "name": "super in method",
@@ -314,9 +314,9 @@
       "path": "class/super-in-method",
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [],
-      "publishDateUTC": "2015-04-21T07:55:00.000Z",
       "groupName": "Class",
-      "id": "27"
+      "publishDateRfc822": "Tue, 21 Apr 2015 07:55:00 GMT",
+      "id": 27
     },
     {
       "name": "super in constructor",
@@ -324,9 +324,9 @@
       "path": "class/super-in-constructor",
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [],
-      "publishDateUTC": "2015-04-22T07:55:00.000Z",
       "groupName": "Class",
-      "id": "28"
+      "publishDateRfc822": "Wed, 22 Apr 2015 07:55:00 GMT",
+      "id": 28
     },
     {
       "name": "`Array.from()`",
@@ -334,9 +334,9 @@
       "path": "array-api/from",
       "level": "TBD",
       "requiresKnowledgeFrom": [],
-      "publishDateUTC": "2015-04-23T08:32:00.000Z",
       "groupName": "Array",
-      "id": "29"
+      "publishDateRfc822": "Thu, 23 Apr 2015 08:32:00 GMT",
+      "id": 29
     },
     {
       "name": "`Array.of()`",
@@ -344,9 +344,9 @@
       "path": "array-api/of",
       "level": "TBD",
       "requiresKnowledgeFrom": [],
-      "publishDateUTC": "2015-04-27T08:09:00.000Z",
       "groupName": "Array",
-      "id": "30"
+      "publishDateRfc822": "Mon, 27 Apr 2015 08:09:00 GMT",
+      "id": 30
     },
     {
       "name": "`[].fill()`",
@@ -354,7 +354,6 @@
       "path": "array-api/fill",
       "level": "TBD",
       "requiresKnowledgeFrom": [],
-      "publishDateUTC": "2015-04-28T07:55:00.000Z",
       "links": {
         "discussions": [
           {
@@ -374,7 +373,8 @@
         ]
       },
       "groupName": "Array",
-      "id": "31"
+      "publishDateRfc822": "Tue, 28 Apr 2015 07:55:00 GMT",
+      "id": 31
     },
     {
       "name": "`[].find()`",
@@ -382,9 +382,9 @@
       "path": "array-api/find",
       "level": "TBD",
       "requiresKnowledgeFrom": [],
-      "publishDateUTC": "2015-04-29T07:55:00.000Z",
       "groupName": "Array",
-      "id": "32"
+      "publishDateRfc822": "Wed, 29 Apr 2015 07:55:00 GMT",
+      "id": 32
     },
     {
       "name": "`[].findIndex()`",
@@ -392,9 +392,9 @@
       "path": "array-api/findIndex",
       "level": "TBD",
       "requiresKnowledgeFrom": [],
-      "publishDateUTC": "2015-05-04T08:01:00.000Z",
       "groupName": "Array",
-      "id": "33"
+      "publishDateRfc822": "Mon, 04 May 2015 08:01:00 GMT",
+      "id": 33
     },
     {
       "name": "basics",
@@ -402,9 +402,9 @@
       "path": "symbol/basics",
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [],
-      "publishDateUTC": "2015-05-05T11:21:00.000Z",
       "groupName": "Symbol",
-      "id": "34"
+      "publishDateRfc822": "Tue, 05 May 2015 11:21:00 GMT",
+      "id": 34
     },
     {
       "name": "`Symbol.for()`",
@@ -412,9 +412,9 @@
       "path": "symbol/for",
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [],
-      "publishDateUTC": "2015-05-06T07:55:00.000Z",
       "groupName": "Symbol",
-      "id": "35"
+      "publishDateRfc822": "Wed, 06 May 2015 07:55:00 GMT",
+      "id": 35
     },
     {
       "name": "`Symbol.keyFor()`",
@@ -424,9 +424,9 @@
       "requiresKnowledgeFrom": [
         35
       ],
-      "publishDateUTC": "2015-05-07T08:09:00.000Z",
       "groupName": "Symbol",
-      "id": "36"
+      "publishDateRfc822": "Thu, 07 May 2015 08:09:00 GMT",
+      "id": 36
     },
     {
       "name": "array",
@@ -434,9 +434,9 @@
       "path": "iterator/array",
       "level": "TBD",
       "requiresKnowledgeFrom": [],
-      "publishDateUTC": "2015-05-08T07:55:00.000Z",
       "groupName": "Iterator",
-      "id": "37"
+      "publishDateRfc822": "Fri, 08 May 2015 07:55:00 GMT",
+      "id": 37
     },
     {
       "name": "string",
@@ -447,9 +447,9 @@
         34,
         37
       ],
-      "publishDateUTC": "2015-05-11T07:55:00.000Z",
       "groupName": "Iterator",
-      "id": "38"
+      "publishDateRfc822": "Mon, 11 May 2015 07:55:00 GMT",
+      "id": 38
     },
     {
       "name": "protocol",
@@ -457,9 +457,9 @@
       "path": "iterator/protocol",
       "level": "EXPERT",
       "requiresKnowledgeFrom": [],
-      "publishDateUTC": "2015-05-12T07:55:00.000Z",
       "groupName": "Iterator",
-      "id": "39"
+      "publishDateRfc822": "Tue, 12 May 2015 07:55:00 GMT",
+      "id": 39
     },
     {
       "name": "usage",
@@ -474,9 +474,9 @@
         39,
         20
       ],
-      "publishDateUTC": "2015-05-13T08:17:00.000Z",
       "groupName": "Iterator",
-      "id": "40"
+      "publishDateRfc822": "Wed, 13 May 2015 08:17:00 GMT",
+      "id": 40
     },
     {
       "name": "`[].entries()`",
@@ -488,9 +488,9 @@
         29,
         39
       ],
-      "publishDateUTC": "2015-05-18T08:06:00.000Z",
       "groupName": "Array",
-      "id": "41"
+      "publishDateRfc822": "Mon, 18 May 2015 08:06:00 GMT",
+      "id": 41
     },
     {
       "name": "`[].keys()`",
@@ -503,9 +503,9 @@
         29,
         39
       ],
-      "publishDateUTC": "2015-05-19T07:55:00.000Z",
       "groupName": "Array",
-      "id": "42"
+      "publishDateRfc822": "Tue, 19 May 2015 07:55:00 GMT",
+      "id": 42
     },
     {
       "name": "`[].values()`",
@@ -517,9 +517,9 @@
         10,
         39
       ],
-      "publishDateUTC": "2015-05-20T07:55:00.000Z",
       "groupName": "Array",
-      "id": "43"
+      "publishDateRfc822": "Wed, 20 May 2015 07:55:00 GMT",
+      "id": 43
     },
     {
       "name": "Basics",
@@ -527,9 +527,9 @@
       "path": "map/basics",
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [],
-      "publishDateUTC": "2015-05-21T07:55:00.000Z",
       "groupName": "Map",
-      "id": "44"
+      "publishDateRfc822": "Thu, 21 May 2015 07:55:00 GMT",
+      "id": 44
     },
     {
       "name": "`map.get()`",
@@ -539,9 +539,9 @@
       "requiresKnowledgeFrom": [
         37
       ],
-      "publishDateUTC": "2015-05-22T07:55:00.000Z",
       "groupName": "Map",
-      "id": "45"
+      "publishDateRfc822": "Fri, 22 May 2015 07:55:00 GMT",
+      "id": 45
     },
     {
       "name": "`map.set()`",
@@ -549,9 +549,9 @@
       "path": "map/set",
       "level": "EXPERT",
       "requiresKnowledgeFrom": [],
-      "publishDateUTC": "2015-05-26T08:03:00.000Z",
       "groupName": "Map",
-      "id": "46"
+      "publishDateRfc822": "Tue, 26 May 2015 08:03:00 GMT",
+      "id": 46
     },
     {
       "name": "basics",
@@ -559,9 +559,9 @@
       "path": "set/basics",
       "level": "TBD",
       "requiresKnowledgeFrom": [],
-      "publishDateUTC": "2015-05-27T10:12:00.000Z",
       "groupName": "Set",
-      "id": "47"
+      "publishDateRfc822": "Wed, 27 May 2015 10:12:00 GMT",
+      "id": 47
     },
     {
       "name": "`set.add()`",
@@ -571,9 +571,9 @@
       "requiresKnowledgeFrom": [
         47
       ],
-      "publishDateUTC": "2015-05-29T06:55:00.000Z",
       "groupName": "Set",
-      "id": "48"
+      "publishDateRfc822": "Fri, 29 May 2015 06:55:00 GMT",
+      "id": 48
     },
     {
       "name": "creation",
@@ -586,9 +586,9 @@
         16,
         22
       ],
-      "publishDateUTC": "2015-06-01T08:39:00.000Z",
       "groupName": "Generator",
-      "id": "49"
+      "publishDateRfc822": "Mon, 01 Jun 2015 08:39:00 GMT",
+      "id": 49
     },
     {
       "name": "iterator",
@@ -598,9 +598,9 @@
       "requiresKnowledgeFrom": [
         49
       ],
-      "publishDateUTC": "2015-06-03T07:55:00.000Z",
       "groupName": "Generator",
-      "id": "50"
+      "publishDateRfc822": "Wed, 03 Jun 2015 07:55:00 GMT",
+      "id": 50
     },
     {
       "name": "yield expressions",
@@ -612,9 +612,9 @@
         49,
         50
       ],
-      "publishDateUTC": "2015-06-05T08:25:00.000Z",
       "groupName": "Generator",
-      "id": "51"
+      "publishDateRfc822": "Fri, 05 Jun 2015 08:25:00 GMT",
+      "id": 51
     },
     {
       "name": "send value to a generator",
@@ -627,7 +627,6 @@
         50,
         51
       ],
-      "publishDateUTC": "2015-06-18T12:07:00.000Z",
       "links": [
         {
           "url": "http://www.ecma-international.org/ecma-262/6.0/#sec-generatorresume",
@@ -638,7 +637,8 @@
         }
       ],
       "groupName": "Generator",
-      "id": "52"
+      "publishDateRfc822": "Thu, 18 Jun 2015 12:07:00 GMT",
+      "id": 52
     },
     {
       "name": "initialize",
@@ -652,9 +652,9 @@
         44,
         46
       ],
-      "publishDateUTC": "2015-06-22T11:56:00.000Z",
       "groupName": "Map",
-      "id": "53"
+      "publishDateRfc822": "Mon, 22 Jun 2015 11:56:00 GMT",
+      "id": 53
     },
     {
       "name": "`Object.is()`",
@@ -666,9 +666,9 @@
         7,
         44
       ],
-      "publishDateUTC": "2015-06-24T07:55:00.000Z",
       "groupName": "Object",
-      "id": "54"
+      "publishDateRfc822": "Wed, 24 Jun 2015 07:55:00 GMT",
+      "id": 54
     },
     {
       "name": "`Number.isInteger()`",
@@ -676,9 +676,9 @@
       "path": "number-api/isinteger",
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [],
-      "publishDateUTC": "2015-06-25T07:55:00.000Z",
       "groupName": "Number",
-      "id": "55"
+      "publishDateRfc822": "Thu, 25 Jun 2015 07:55:00 GMT",
+      "id": 55
     },
     {
       "name": "send function to a generator",
@@ -692,9 +692,9 @@
         51,
         52
       ],
-      "publishDateUTC": "2015-06-29T11:49:00.000Z",
       "groupName": "Generator",
-      "id": "56"
+      "publishDateRfc822": "Mon, 29 Jun 2015 11:49:00 GMT",
+      "id": 56
     },
     {
       "name": "Basics",
@@ -706,9 +706,9 @@
         5,
         1
       ],
-      "publishDateUTC": "2015-06-30T07:55:00.000Z",
       "groupName": "Default parameters",
-      "id": "57"
+      "publishDateRfc822": "Tue, 30 Jun 2015 07:55:00 GMT",
+      "id": 57
     },
     {
       "name": "Basics",
@@ -721,9 +721,9 @@
         25,
         28
       ],
-      "publishDateUTC": "2015-07-02T08:23:00.000Z",
       "groupName": "Reflect",
-      "id": "58"
+      "publishDateRfc822": "Thu, 02 Jul 2015 08:23:00 GMT",
+      "id": 58
     },
     {
       "name": "`Reflect.apply()`",
@@ -737,9 +737,9 @@
         5,
         31
       ],
-      "publishDateUTC": "2015-07-03T07:55:00.000Z",
       "groupName": "Reflect",
-      "id": "59"
+      "publishDateRfc822": "Fri, 03 Jul 2015 07:55:00 GMT",
+      "id": 59
     },
     {
       "name": "`Reflect.getPrototypeOf()`",
@@ -752,9 +752,9 @@
         22,
         5
       ],
-      "publishDateUTC": "2015-07-08T08:14:00.000Z",
       "groupName": "Reflect",
-      "id": "60"
+      "publishDateRfc822": "Wed, 08 Jul 2015 08:14:00 GMT",
+      "id": 60
     },
     {
       "name": "`import` statement",
@@ -762,9 +762,9 @@
       "path": "modules/import",
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [],
-      "publishDateUTC": "2015-07-09T08:46:00.000Z",
       "groupName": "Modules",
-      "id": "61"
+      "publishDateRfc822": "Thu, 09 Jul 2015 08:46:00 GMT",
+      "id": 61
     },
     {
       "name": "`map.has()`",
@@ -776,7 +776,6 @@
         44,
         46
       ],
-      "publishDateUTC": "2015-07-10T08:09:00.000Z",
       "links": {
         "various": {
           "url": "https://www.youtube.com/watch?v=71aX1z0SzZU",
@@ -787,7 +786,8 @@
         }
       },
       "groupName": "Map",
-      "id": "62"
+      "publishDateRfc822": "Fri, 10 Jul 2015 08:09:00 GMT",
+      "id": 62
     },
     {
       "name": "`string.includes()`",
@@ -800,7 +800,6 @@
         5,
         57
       ],
-      "publishDateUTC": "2015-07-14T09:29:00.000Z",
       "links": {
         "documentation": [
           {
@@ -821,7 +820,8 @@
         ]
       },
       "groupName": "String",
-      "id": "63"
+      "publishDateRfc822": "Tue, 14 Jul 2015 09:29:00 GMT",
+      "id": 63
     },
     {
       "name": "`set.delete()`",
@@ -834,9 +834,9 @@
         47,
         48
       ],
-      "publishDateUTC": "2015-07-15T16:12:00.000Z",
       "groupName": "Set",
-      "id": "64"
+      "publishDateRfc822": "Wed, 15 Jul 2015 16:12:00 GMT",
+      "id": 64
     },
     {
       "name": "the API",
@@ -853,7 +853,6 @@
         5,
         20
       ],
-      "publishDateUTC": "2015-07-16T08:24:00.000Z",
       "links": [
         {
           "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
@@ -865,7 +864,8 @@
         }
       ],
       "groupName": "Set",
-      "id": "65"
+      "publishDateRfc822": "Thu, 16 Jul 2015 08:24:00 GMT",
+      "id": 65
     },
     {
       "name": "getter",
@@ -877,7 +877,6 @@
         9,
         16
       ],
-      "publishDateUTC": "2015-07-27T08:05:00.000Z",
       "links": [
         {
           "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get",
@@ -896,7 +895,8 @@
         }
       ],
       "groupName": "Object literal",
-      "id": "66"
+      "publishDateRfc822": "Mon, 27 Jul 2015 08:05:00 GMT",
+      "id": 66
     }
   ]
 }
