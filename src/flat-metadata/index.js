@@ -27,10 +27,11 @@ function extractItemsFromGroup(groups, groupName, addItemsTo) {
   }
 }
 
+const toInt = (string) => Number.parseInt(string, 10); 
 function buildItems(flattenedItems) {
   const items = [];
-  const ids = Object.keys(flattenedItems);
-  const sortedIds = ids.sort((id1, id2) => parseInt(id1) - parseInt(id2));
+  const ids = Object.keys(flattenedItems).map(toInt);
+  const sortedIds = ids.sort((id1, id2) => id1 - id2);
   for (let id of sortedIds) {
     let item = flattenedItems[id];
     item.id = id;
