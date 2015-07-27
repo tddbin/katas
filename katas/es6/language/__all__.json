@@ -90,6 +90,7 @@
       "path": "object-literal/basics",
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [
+        8,
         5,
         8
       ],
@@ -180,6 +181,8 @@
       "path": "object-literal/computed-properties",
       "level": "ADVANCED",
       "requiresKnowledgeFrom": [
+        8,
+        5,
         9,
         8
       ],
@@ -798,6 +801,32 @@
       ],
       "groupName": "Set",
       "id": "65"
+    },
+    {
+      "name": "getter",
+      "description": "A getter binds an object property to a function that will be called when that property is looked up.",
+      "path": "object-literal/getter",
+      "level": "INTERMEDIATE",
+      "requiresKnowledgeFrom": [],
+      "links": [
+        {
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get",
+          "comment": "Description of all the details of a getter.",
+          "tags": [
+            "mdn",
+            "docs"
+          ]
+        },
+        {
+          "url": "http://www.ecma-international.org/ecma-262/6.0/#sec-object-type",
+          "comment": "\"An accessor property associates a key value with one or two accessor functions ...\"",
+          "tags": [
+            "spec"
+          ]
+        }
+      ],
+      "groupName": "Object literal",
+      "id": "66"
     }
   ]
 }
