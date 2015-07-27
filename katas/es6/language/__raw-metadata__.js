@@ -190,7 +190,7 @@ export const all = {
           name: 'getter',
           description: 'A getter binds an object property to a function that will be called when that property is looked up.',
           path: 'object-literal/getter',
-          level: SKILL_LEVEL.INTERMEDIATE,
+          level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [
             CONST,
             OBJECT_LITERAL_BASICS,
