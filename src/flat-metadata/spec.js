@@ -27,10 +27,15 @@ describe('build the meta data from the all.js file structure', function() {
     assert.strictEqual(converted.items[2].id, 3);
   });
 
-  //it('the `publishDate` is set as UTC string, with GMT+0', function() {
-  //  var expected = new Date(Date.UTC(2015, 2, 13, 7, 55));
-  //  assert.equal(converted.items[0].publishDate, expected.toUTCString());
-  //});
+  describe('the publish date', function() {
+    it('the `publishDate` is set as UTC string, with GMT+0', function() {
+      var expected = new Date(Date.UTC(2015, 2, 13, 7, 55));
+      assert.equal(converted.items[0].publishDate, expected.toUTCString());
+    });
+    it('the `publishDateUTC` is not in the destination data', function() {
+      assert.equal(converted.items[0].publishDateUTC, void 0);
+    });
+  });
   
   it('the items must be clones (no references)', function() {
     const firstKata = firstGroup.items[1];
