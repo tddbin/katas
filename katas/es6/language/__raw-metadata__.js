@@ -77,6 +77,13 @@ const TAG_MDN = 'mdn';
 const TAG_VIDEO = 'video';
 const TAG_ARTICLE = 'article';
 const TAG_DOCS = 'docs';
+
+const MARCH = 2;
+const APRIL = 3;
+const MAY = 4;
+const JUNE = 5;
+const JULY = 6;
+
 export const all = {
   name: 'ES6 Katas',
   groups: {
@@ -87,7 +94,8 @@ export const all = {
           description: 'A template string, is wrapped in backticks.',
           path: 'template-strings/basics',
           level: SKILL_LEVEL.BEGINNER,
-          requiresKnowledgeFrom: []
+          requiresKnowledgeFrom: [],
+          publishDate: new Date(2015, MARCH, 13, 9, 55)
         },
         [TEMPLATE_STRING_MULTILINE]: {
           name: 'multiline',
@@ -96,7 +104,8 @@ export const all = {
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [
             TEMPLATE_STRING_BASICS
-          ]
+          ],
+          publishDate: new Date(2015, MARCH, 16, 9, 55)
         },
         [TEMPLATE_STRING_TAGGED]: {
           name: 'tagged',
@@ -105,7 +114,8 @@ export const all = {
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [
             TEMPLATE_STRING_BASICS
-          ]
+          ],
+          publishDate: new Date(2015, MARCH, 17, 9, 55)
         },
         [TEMPLATE_STRING_RAW]: {
           name: '`raw` property',
@@ -115,7 +125,8 @@ export const all = {
           requiresKnowledgeFrom: [
             TEMPLATE_STRING_BASICS,
             TEMPLATE_STRING_TAGGED
-          ]
+          ],
+          publishDate: new Date(2015, MARCH, 18, 9, 55)
         }
       }
     },
@@ -126,7 +137,8 @@ export const all = {
           description: 'Arrow functions are a more convinient and shorter way to write a function.',
           path: 'arrow-functions/basics',
           level: SKILL_LEVEL.BEGINNER,
-          requiresKnowledgeFrom: []
+          requiresKnowledgeFrom: [],
+          publishDate: new Date(2015, MARCH, 19, 9, 55)
         },
         [ARROW_FUNCTION_BINDING]: {
           name: 'function binding',
@@ -136,7 +148,8 @@ export const all = {
           requiresKnowledgeFrom: [
             ARROW_FUNCTION_BASICS,
             CLASS_CREATION
-          ]
+          ],
+          publishDate: new Date(2015, MARCH, 20, 9, 55)
         }
       }
     },
@@ -147,7 +160,9 @@ export const all = {
           description: '`let` restricts the scope of the variable to the current block.',
           path: 'block-scoping/let',
           level: SKILL_LEVEL.BEGINNER,
-          requiresKnowledgeFrom: []
+          requiresKnowledgeFrom: [
+          ],
+          publishDate: new Date(2015, MARCH, 23, 9, 55)
         },
         [CONST]: {
           name: '`const` declaration',
@@ -156,7 +171,8 @@ export const all = {
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [
             LET
-          ]
+          ],
+          publishDate: new Date(2015, MARCH, 24, 9, 55)
         }
       }
     },
@@ -171,7 +187,8 @@ export const all = {
             CONST,
             ARROW_FUNCTION_BASICS, 
             CONST
-          ]
+          ],
+          publishDate: new Date(2015, MARCH, 25, 9, 55)
         },
         [OBJECT_LITERAL_COMPUTED_PROPERTIES]: {
           name: 'computed properties',
@@ -184,7 +201,8 @@ export const all = {
             OBJECT_LITERAL_BASICS,
             CONST
             //OBJECT_LITERAL_GETTER
-          ]
+          ],
+          publishDate: new Date(2015, APRIL, 3, 9, 55)
         },
         [OBJECT_LITERAL_GETTER]: {
           name: 'getter',
@@ -196,6 +214,7 @@ export const all = {
             OBJECT_LITERAL_BASICS,
             OBJECT_LITERAL_COMPUTED_PROPERTIES
           ],
+          publishDate: new Date(2015, JULY, 27, 10, 5),
           links: [
             {
               url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get',
@@ -221,9 +240,10 @@ export const all = {
           requiresKnowledgeFrom: [
             LET,
             CONST,
-            TEMPLATE_STRING_BASICS,
+            TEMPLATE_STRING_BASICS
             //FOR_OF
-          ]
+          ],
+          publishDate: new Date(2015, MARCH, 26, 9, 55)
         },
         [DESTRUCTURING_STRING]: {
           name: 'string',
@@ -233,7 +253,8 @@ export const all = {
           requiresKnowledgeFrom: [
             CONST,
             UNICODE_IN_STRINGS
-          ]
+          ],
+          publishDate: new Date(2015, MARCH, 27, 9, 55)
         },
         [DESTRUCTURING_OBJECT]: {
           name: 'object',
@@ -243,7 +264,8 @@ export const all = {
           requiresKnowledgeFrom: [
             CONST,
             OBJECT_LITERAL_BASICS
-          ]
+          ],
+          publishDate: new Date(2015, MARCH, 30, 9, 55)
         },
         [DESTRUCTURING_DEFAULTS]: {
           name: 'defaults',
@@ -254,7 +276,8 @@ export const all = {
             CONST,
             DESTRUCTURING_ARRAY,
             DESTRUCTURING_OBJECT
-          ]
+          ],
+          publishDate: new Date(2015, MARCH, 31, 9, 55)
         },
         [DESTRUCTURING_PARAMETERS]: {
           name: 'parameters',
@@ -265,7 +288,8 @@ export const all = {
             DESTRUCTURING_ARRAY,
             DESTRUCTURING_OBJECT,
             ARROW_FUNCTION_BASICS
-          ]
+          ],
+          publishDate: new Date(2015, APRIL, 1, 9, 55)
         },
         [DESTRUCTURING_RENAME]: {
           name: 'rename',
@@ -278,7 +302,8 @@ export const all = {
             DESTRUCTURING_DEFAULTS,
             CONST,
             ARROW_FUNCTION_BASICS
-          ]
+          ],
+          publishDate: new Date(2015, APRIL, 2, 9, 55)
         }
       }
     },
@@ -292,7 +317,8 @@ export const all = {
           requiresKnowledgeFrom: [
             CONST,
             TEMPLATE_STRING_BASICS
-          ]
+          ],
+          publishDate: new Date(2015, APRIL, 6, 9, 55)
         }
       }
     },
@@ -303,14 +329,18 @@ export const all = {
           description: 'Use the rest operator as parameter.',
           path: 'rest/as-parameter',
           level: SKILL_LEVEL.INTERMEDIATE,
-          requiresKnowledgeFrom: []
+          requiresKnowledgeFrom: [
+          ],
+          publishDate: new Date(2015, APRIL, 7, 10, 15)
         },
         [REST_OPERATOR_WITH_DESTRUCTURING]: {
           name: 'with destructuring',
           description: 'Use the rest operator with destructuring.',
           path: 'rest/with-destructuring',
           level: SKILL_LEVEL.INTERMEDIATE,
-          requiresKnowledgeFrom: []
+          requiresKnowledgeFrom: [
+          ],
+          publishDate: new Date(2015, APRIL, 8, 9, 55)
         }
       }
     },
@@ -321,14 +351,18 @@ export const all = {
           description: 'Spread operator in use with arrays.',
           path: 'spread/with-arrays',
           level: SKILL_LEVEL.INTERMEDIATE,
-          requiresKnowledgeFrom: []
+          requiresKnowledgeFrom: [
+          ],
+          publishDate: new Date(2015, APRIL, 10, 10, 18)
         },
         [SPREAD_WITH_STRINGS]: {
           name: 'with strings',
           description: 'Apply spread operator on strings.',
           path: 'spread/with-strings',
           level: SKILL_LEVEL.INTERMEDIATE,
-          requiresKnowledgeFrom: []
+          requiresKnowledgeFrom: [
+          ],
+          publishDate: new Date(2015, APRIL, 13, 9, 55)
         }
       }
     },
@@ -339,49 +373,63 @@ export const all = {
           description: 'Create a class.',
           path: 'class/creation',
           level: SKILL_LEVEL.BEGINNER,
-          requiresKnowledgeFrom: []
+          requiresKnowledgeFrom: [
+          ],
+          publishDate: new Date(2015, APRIL, 14, 9, 55)
         },
         [CLASS_ACCESSORS]: {
           name: 'accessors',
           description: 'Getter+setters as class properties.',
           path: 'class/accessors',
           level: SKILL_LEVEL.INTERMEDIATE,
-          requiresKnowledgeFrom: []
+          requiresKnowledgeFrom: [
+          ],
+          publishDate: new Date(2015, APRIL, 15, 9, 56)
         },
         [CLASS_STATIC]: {
           name: 'static',
           description: 'Use of the static keyword inside a class.',
           path: 'class/static',
           level: SKILL_LEVEL.BEGINNER,
-          requiresKnowledgeFrom: []
+          requiresKnowledgeFrom: [
+          ],
+          publishDate: new Date(2015, APRIL, 16, 9, 55)
         },
         [CLASS_EXTENDS]: {
           name: 'extends',
           description: 'How to do inheritance, using `extends`.',
           path: 'class/extends',
           level: SKILL_LEVEL.BEGINNER,
-          requiresKnowledgeFrom: []
+          requiresKnowledgeFrom: [
+          ],
+          publishDate: new Date(2015, APRIL, 17, 10, 25)
         },
         [CLASS_MORE_EXTENDS]: {
           name: 'more extends',
           description: 'More in depth `extends` stuff',
           path: 'class/more-extends',
           level: SKILL_LEVEL.ADVANCED,
-          requiresKnowledgeFrom: []
+          requiresKnowledgeFrom: [
+          ],
+          publishDate: new Date(2015, APRIL, 20, 9, 55)
         },
         [CLASS_SUPER_IN_METHOD]: {
           name: 'super in method',
           description: 'Use of `super` inside a method.',
           path: 'class/super-in-method',
           level: SKILL_LEVEL.INTERMEDIATE,
-          requiresKnowledgeFrom: []
+          requiresKnowledgeFrom: [
+          ],
+          publishDate: new Date(2015, APRIL, 21, 9, 55)
         },
         [CLASS_SUPER_IN_CONSTRUCTOR]: {
           name: 'super in constructor',
           description: 'Use of `super` inside the constructor.',
           path: 'class/super-in-constructor',
           level: SKILL_LEVEL.INTERMEDIATE,
-          requiresKnowledgeFrom: []
+          requiresKnowledgeFrom: [
+          ],
+          publishDate: new Date(2015, APRIL, 22, 9, 55)
         }
       }
     },
@@ -392,21 +440,27 @@ export const all = {
           description: 'Convert a not-array into an array.',
           path: 'array-api/from',
           level: SKILL_LEVEL.TBD,
-          requiresKnowledgeFrom: []
+          requiresKnowledgeFrom: [
+          ],
+          publishDate: new Date(2015, APRIL, 23, 10, 32)
         },
         [ARRAY_OF]: {
           name: '`Array.of()`',
           description: '`Array.of` creates an array with the given arguments as elements.',
           path: 'array-api/of',
           level: SKILL_LEVEL.TBD,
-          requiresKnowledgeFrom: []
+          requiresKnowledgeFrom: [
+          ],
+          publishDate: new Date(2015, APRIL, 27, 10, 9)
         },
         [ARRAY_FILL]: {
           name: '`[].fill()`',
           description: '`[].fill` can fill up an array with one value.',
           path: 'array-api/fill',
           level: SKILL_LEVEL.TBD,
-          requiresKnowledgeFrom: [],
+          requiresKnowledgeFrom: [
+          ],
+          publishDate: new Date(2015, APRIL, 28, 9, 55),
           links: {
             discussions: [
               {
@@ -428,35 +482,46 @@ export const all = {
           description: '`[].find` makes finding items in arrays easier.',
           path: 'array-api/find',
           level: SKILL_LEVEL.TBD,
-          requiresKnowledgeFrom: []
+          requiresKnowledgeFrom: [
+          ],
+          publishDate: new Date(2015, APRIL, 29, 9, 55)
         },
         [ARRAY_FIND_INDEX]: {
           name: '`[].findIndex()`',
           description: '`[].findIndex` makes finding items in arrays easier.',
           path: 'array-api/findIndex',
           level: SKILL_LEVEL.TBD,
-          requiresKnowledgeFrom: []
+          requiresKnowledgeFrom: [
+          ],
+          publishDate: new Date(2015, MAY, 4, 10, 1)
         },
         [ARRAY_ENTRIES]: {
           name: '`[].entries()`',
           description: '`[].entries()` returns an iterator object with all entries.',
           path: 'array-api/entries',
           level: SKILL_LEVEL.INTERMEDIATE,
-          requiresKnowledgeFrom: [CONST, ARRAY_FROM, ITERATOR_PROTOCOL]
+          requiresKnowledgeFrom: [CONST, ARRAY_FROM, ITERATOR_PROTOCOL
+          ],
+          publishDate: new Date(2015, MAY, 18, 10, 6)
+            
         },
         [ARRAY_KEYS]: {
           name: '`[].keys()`',
           description: '`[].keys()` returns an iterator for all keys in the array.',
           path: 'array-api/keys',
           level: SKILL_LEVEL.INTERMEDIATE,
-          requiresKnowledgeFrom: [CONST, DESTRUCTURING_ARRAY, ARRAY_FROM, ITERATOR_PROTOCOL]
+          requiresKnowledgeFrom: [CONST, DESTRUCTURING_ARRAY, ARRAY_FROM, ITERATOR_PROTOCOL
+          ],
+          publishDate: new Date(2015, MAY, 19, 9, 55)
         },
         [ARRAY_VALUES]: {
           name: '`[].values()`',
           description: '`[].values()` returns an iterator for all values in the array',
           path: 'array-api/values',
           level: SKILL_LEVEL.INTERMEDIATE,
-          requiresKnowledgeFrom: [CONST, DESTRUCTURING_ARRAY, ITERATOR_PROTOCOL]
+          requiresKnowledgeFrom: [CONST, DESTRUCTURING_ARRAY, ITERATOR_PROTOCOL
+          ],
+          publishDate: new Date(2015, MAY, 20, 9, 55)
         }
       }
     },
@@ -467,21 +532,28 @@ export const all = {
           description: 'Symbol basics.',
           path: 'symbol/basics',
           level: SKILL_LEVEL.INTERMEDIATE,
-          requiresKnowledgeFrom: []
+          requiresKnowledgeFrom: [
+          ],
+          publishDate: new Date(2015, MAY, 5, 13, 21)
         },
         [SYMBOL_FOR]: {
           name: '`Symbol.for()`',
           description: '`Symbol.for()` for registering Symbols globally.',
           path: 'symbol/for',
           level: SKILL_LEVEL.INTERMEDIATE,
-          requiresKnowledgeFrom: []
+          requiresKnowledgeFrom: [
+          ],
+          publishDate: new Date(2015, MAY, 6, 9, 55)
         },
         [SYMBOL_KEY_FOR]: {
           name: '`Symbol.keyFor()`',
           description: '`Symbol.keyFor()` gets the symbol key for a given symbol.',
           path: 'symbol/keyFor',
           level: SKILL_LEVEL.INTERMEDIATE,
-          requiresKnowledgeFrom: [SYMBOL_FOR]
+          requiresKnowledgeFrom: [
+            SYMBOL_FOR
+          ],
+          publishDate: new Date(2015, MAY, 7, 10, 9)           
         }
       }
     },
@@ -492,7 +564,9 @@ export const all = {
           description: '',
           path: 'iterator/array',
           level: SKILL_LEVEL.TBD,
-          requiresKnowledgeFrom: []
+          requiresKnowledgeFrom: [
+          ],
+          publishDate: new Date(2015, MAY, 8, 9, 55)
         },
         [ITERATOR_STRING]: {
           name: 'string',
@@ -502,14 +576,17 @@ export const all = {
           requiresKnowledgeFrom: [
             SYMBOL_BASICS, 
             ITERATOR_ARRAY
-          ]
+          ],
+          publishDate: new Date(2015, MAY, 11, 9, 55)
         },
         [ITERATOR_PROTOCOL]: {
           name: 'protocol',
           description: '',
           path: 'iterator/protocol',
           level: SKILL_LEVEL.EXPERT,
-          requiresKnowledgeFrom: []
+          requiresKnowledgeFrom: [
+          ],
+          publishDate: new Date(2015, MAY, 12, 9, 55)
         },
         [ITERATOR_USAGES]: {
           name: 'usage',
@@ -522,7 +599,8 @@ export const all = {
             SYMBOL_BASICS, 
             ITERATOR_PROTOCOL, 
             SPREAD_WITH_ARRAYS
-          ]
+          ],
+          publishDate: new Date(2015, MAY, 13, 10, 17)
         }
       }
     },
@@ -533,21 +611,27 @@ export const all = {
           description: '',
           path: 'map/basics',
           level: SKILL_LEVEL.BEGINNER,
-          requiresKnowledgeFrom: []
+          requiresKnowledgeFrom: [
+          ],
+          publishDate: new Date(2015, MAY, 21, 9, 55)
         },
         [MAP_GET]: {
           name: '`map.get()`',
           description: '',
           path: 'map/get',
           level: SKILL_LEVEL.INTERMEDIATE,
-          requiresKnowledgeFrom: [ITERATOR_ARRAY]
+          requiresKnowledgeFrom: [ITERATOR_ARRAY
+          ],
+          publishDate: new Date(2015, MAY, 22, 9, 55)
         },
         [MAP_SET]: {
           name: '`map.set()`',
           description: '',
           path: 'map/set',
           level: SKILL_LEVEL.EXPERT,
-          requiresKnowledgeFrom: []
+          requiresKnowledgeFrom: [
+          ],
+          publishDate: new Date(2015, MAY, 26, 10, 3)
         },
         [MAP_INITIALIZE]: {
           name: 'initialize',
@@ -558,7 +642,8 @@ export const all = {
             LET, CONST,
             ARRAY_FROM,
             MAP_BASICS, MAP_SET
-          ]
+          ],
+          publishDate: new Date(2015, JUNE, 22, 13, 56)
         },
         [MAP_HAS]: {
           name: '`map.has()`',
@@ -571,6 +656,7 @@ export const all = {
             MAP_SET
             //MAP_DELETE
           ],
+          publishDate: new Date(2015, JULY, 10, 10, 9),
           links: {
             various: {
               url: 'https://www.youtube.com/watch?v=71aX1z0SzZU',
@@ -588,7 +674,9 @@ export const all = {
           description: '',
           path: 'set/basics',
           level: SKILL_LEVEL.TBD,
-          requiresKnowledgeFrom: []
+          requiresKnowledgeFrom: [
+          ],
+          publishDate: new Date(2015, MAY, 27, 12, 12)
         },
         [SET_ADD]: {
           name: '`set.add()`',
@@ -597,7 +685,8 @@ export const all = {
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: [
             SET_BASICS
-          ]
+          ],
+          publishDate: new Date(2015, MAY, 29, 8, 55)
         },
         [SET_DELETE]: {
           name: '`set.delete()`',
@@ -608,7 +697,8 @@ export const all = {
             LET, CONST,
             SET_BASICS,
             SET_ADD
-          ]
+          ],
+          publishDate: new Date(2015, JULY, 15, 18, 12)
         },
         [SET_API]: {
           name: 'the API',
@@ -623,6 +713,7 @@ export const all = {
             ARROW_FUNCTION_BASICS,
             SPREAD_WITH_ARRAYS
           ],
+          publishDate: new Date(2015, JULY, 16, 10, 24),
           links: [
             {
               url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set',
@@ -667,7 +758,8 @@ export const all = {
             CONST,
             OBJECT_LITERAL_COMPUTED_PROPERTIES,
             CLASS_CREATION
-          ]
+          ],
+          publishDate: new Date(2015, JUNE, 1, 10, 39)
         },
         [GENERATOR_ITERATOR]: {
           name: 'iterator',
@@ -676,7 +768,8 @@ export const all = {
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: [
             GENERATOR_CREATION
-          ]
+          ],
+          publishDate: new Date(2015, JUNE, 3, 9, 55)
         },
         [GENERATOR_YIELD]: {
           name: 'yield expressions',
@@ -687,7 +780,8 @@ export const all = {
             LET,
             GENERATOR_CREATION,
             GENERATOR_ITERATOR
-          ]
+          ],
+          publishDate: new Date(2015, JUNE, 5, 10, 25)
         },
         [GENERATOR_SEND_VALUE]: {
           name: 'send value to a generator',
@@ -700,6 +794,7 @@ export const all = {
             GENERATOR_ITERATOR,
             GENERATOR_YIELD
           ],
+          publishDate: new Date(2015, JUNE, 18, 14, 7),
           links: [
             {
               url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-generatorresume',
@@ -719,7 +814,8 @@ export const all = {
             GENERATOR_ITERATOR,
             GENERATOR_YIELD,
             GENERATOR_SEND_VALUE
-          ]
+          ],
+          publishDate: new Date(2015, JUNE, 29, 13, 49)
         }
       }
     },
@@ -734,7 +830,8 @@ export const all = {
           requiresKnowledgeFrom: [
             CONST, LET,
             MAP_BASICS
-          ]
+          ],
+          publishDate: new Date(2015, JUNE, 24, 9, 55)
         }
       }
     },
@@ -746,7 +843,9 @@ export const all = {
           description: '`Number.isInteger()` determines if a value is an integer.',
           path: 'number-api/isinteger',
           level: SKILL_LEVEL.BEGINNER,
-          requiresKnowledgeFrom: []
+          requiresKnowledgeFrom: [
+          ],
+          publishDate: new Date(2015, JUNE, 25, 9, 55)
         }
       }
     },
@@ -762,7 +861,8 @@ export const all = {
             LET,
             ARROW_FUNCTION_BASICS,
             TEMPLATE_STRING_BASICS
-          ]
+          ],
+          publishDate: new Date(2015, JUNE, 30, 9, 55)
         }
       }
     },
@@ -779,7 +879,8 @@ export const all = {
             CLASS_CREATION,
             CLASS_EXTENDS,
             CLASS_SUPER_IN_CONSTRUCTOR
-          ]
+          ],
+          publishDate: new Date(2015, JULY, 2, 10, 23)
         },
         [REFLECT_APPLY]: {
           name: '`Reflect.apply()`',
@@ -791,7 +892,8 @@ export const all = {
             CLASS_CREATION,
             ARROW_FUNCTION_BASICS,
             ARRAY_FILL
-          ]
+          ],
+          publishDate: new Date(2015, JULY, 3, 9, 55)
         },
         [REFLECT_GET_PROTOTYPE_OF]: {
           name: '`Reflect.getPrototypeOf()`',
@@ -803,7 +905,8 @@ export const all = {
             CONST,
             CLASS_CREATION,
             ARROW_FUNCTION_BASICS
-          ]
+          ],
+          publishDate: new Date(2015, JULY, 8, 10, 14)
         }
       }
     },
@@ -815,7 +918,9 @@ export const all = {
           description: 'Use `import` to import functions that have been exported somewhere else.',
           path: 'modules/import',
           level: SKILL_LEVEL.BEGINNER,
-          requiresKnowledgeFrom: []
+          requiresKnowledgeFrom: [
+          ],
+          publishDate: new Date(2015, JULY, 9, 10, 46)
         }
       }
     },
@@ -833,6 +938,7 @@ export const all = {
             ARROW_FUNCTION_BASICS,
             DEFAULT_PARAMETERS_BASICS
           ],
+          publishDate: new Date(2015, JULY, 14, 11, 29),
           links: {
             documentation: [
               {
