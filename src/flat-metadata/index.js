@@ -18,6 +18,7 @@ function extractAllItems(all) {
   return extractedItems;
 }
 
+const cloneObject = (obj) => JSON.parse(JSON.stringify(obj));
 function extractItemsFromGroup(groups, groupName, addItemsTo) {
   const items = groups[groupName].items;
   for (let key in items) {
@@ -40,6 +41,3 @@ function buildItems(flattenedItems) {
   return items;
 }
 
-function cloneObject(obj) {
-  return JSON.parse(JSON.stringify(obj));
-}
