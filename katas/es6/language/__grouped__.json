@@ -129,8 +129,12 @@
           "name": "getter",
           "description": "A getter binds an object property to a function that will be called when that property is looked up.",
           "path": "object-literal/getter",
-          "level": "INTERMEDIATE",
-          "requiresKnowledgeFrom": [],
+          "level": "BEGINNER",
+          "requiresKnowledgeFrom": [
+            8,
+            9,
+            16
+          ],
           "links": [
             {
               "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get",
