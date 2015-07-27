@@ -30,7 +30,7 @@ describe('build the meta data from the all.js file structure', function() {
   describe('the publish date', function() {
     it('the `publishDate` is set as UTC string, with GMT+0', function() {
       var expected = new Date(Date.UTC(2015, 2, 13, 7, 55));
-      assert.equal(converted.items[0].publishDate, expected.toUTCString());
+      assert.equal(converted.items[0].publishDateRfc822, expected.toUTCString());
     });
     it('the `publishDateUTC` is not in the destination data', function() {
       assert.equal(converted.items[0].publishDateUTC, void 0);

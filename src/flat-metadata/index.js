@@ -24,7 +24,8 @@ function extractItemsFromGroup(groups, groupName, addItemsTo) {
   for (let key in items) {
     const item = cloneObject(items[key]);
     item.groupName = groupName;
-    item.publishDate = items[key].publishDateUTC.toUTCString();
+    // provide date as spec`d here http://www.w3.org/Protocols/rfc822/#z28
+    item.publishDateRfc822 = items[key].publishDateUTC.toUTCString();
     delete item.publishDateUTC;
     addItemsTo[key] = item;
   }
