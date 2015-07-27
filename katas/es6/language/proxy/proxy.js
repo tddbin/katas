@@ -1,15 +1,6 @@
 // 49: Proxy
 // To do: make all tests pass, leave the assert lines unchanged!
 
-
-// NOTES
-//https://leanpub.com/exploring-es6/read
-//http://www.ecma-international.org/ecma-262/6.0/
-
-
-// TODO Proxies as prototypes
-// TODO Revocable
-
 describe('proxies bring intercession to JavaScript', function() {
   
   	it('can intercept operation on objects such as get', function() {
