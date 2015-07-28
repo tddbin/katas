@@ -225,6 +225,10 @@ export const all = {
               url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-object-type',
               comment: '"An accessor property associates a key value with one or two accessor functions ..."',
               tags: [TAG_SPECIFICATION]
+            },
+            {
+              url: 'https://twitter.com/es6katas/status/625577823357566976',
+              comment: 'Announcement of this kata on twitter.'
             }
           ]
         }
