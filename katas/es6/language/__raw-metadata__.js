@@ -78,6 +78,7 @@ const TAG_MDN = 'mdn';
 const TAG_VIDEO = 'video';
 const TAG_ARTICLE = 'article';
 const TAG_DOCS = 'docs';
+const TAG_ANNOUNCEMENT = 'announcement';
 
 const MARCH = 2;
 const APRIL = 3;
@@ -229,7 +230,8 @@ export const all = {
             },
             {
               url: 'https://twitter.com/es6katas/status/625577823357566976',
-              comment: 'Announcement of this kata on twitter.'
+              comment: 'Announcement of this kata on twitter.',
+              tags: [TAG_ANNOUNCEMENT]
             }
           ]
         },
@@ -243,7 +245,7 @@ export const all = {
             OBJECT_LITERAL_BASICS,
             OBJECT_LITERAL_COMPUTED_PROPERTIES
           ],
-          publishDateUTC: new Date(Date.UTC(2015, JULY, 28, 7, 55)),
+          publishDateUTC: new Date(Date.UTC(2015, JULY, 28, 7, 57)),
           links: [
             {
               url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set',
@@ -259,6 +261,11 @@ export const all = {
               url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-method-definitions',
               comment: 'The syntax definition of how to write an (accessor) method.',
               tags: [TAG_SPECIFICATION]
+            },
+            {
+              url: 'https://twitter.com/es6katas/status/625938211672600576',
+              comment: 'Announcement of this kata on twitter.',
+              tags: [TAG_ANNOUNCEMENT]
             }
           ]
         }
