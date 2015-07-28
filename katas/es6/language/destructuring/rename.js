@@ -3,14 +3,16 @@
 
 describe('assign variables to a different name while destructuring', () => {
 
-  it('use a colon after the original name, like so `originalName: newName`', () => {
-    const {x: newName} = {x: 1};
-    assert.equal(y, 1);
-  });
-  
-  it('assign a new name and give it a default value using `= <default value>`', () => {
-    const {x: y=2} = {y: 23};
-    assert.equal(y, 42);
+  describe('for simple objects', function() {
+    it('use a colon after the original name, like so `originalName: newName`', () => {
+      const {x: newName} = {x: 1};
+      assert.equal(y, 1);
+    });
+    
+    it('assign a new name and give it a default value using `= <default value>`', () => {
+      const {x: y=2} = {y: 23};
+      assert.equal(y, 42);
+    });
   });
 
   describe('for function parameter names', function() {
