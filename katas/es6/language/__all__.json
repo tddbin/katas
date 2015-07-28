@@ -834,6 +834,15 @@
         47,
         48
       ],
+      "links": [
+        {
+          "url": "https://twitter.com/es6katas/status/621351626561994752",
+          "comment": "Announcement of this kata on twitter.",
+          "tags": [
+            "announcement"
+          ]
+        }
+      ],
       "groupName": "Set",
       "publishDateRfc822": "Wed, 15 Jul 2015 16:12:00 GMT",
       "id": 64
@@ -860,6 +869,13 @@
           "tags": [
             "mdn",
             "docs"
+          ]
+        },
+        {
+          "url": "https://twitter.com/es6katas/status/621596289160081408",
+          "comment": "Announcement of this kata on twitter.",
+          "tags": [
+            "announcement"
           ]
         }
       ],
