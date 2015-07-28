@@ -1,10 +1,10 @@
 // 15: destructuring - assign
 // To do: make all tests pass, leave the assert lines unchanged!
 
-describe('assign variables to a different name while destructuring', () => {
+describe('assign object property values to new variables while destructuring', () => {
 
   describe('for simple objects', function() {
-    it('use a colon after the original name, like so `originalName: newName`', () => {
+    it('use a colon after the property name, like so `propertyName: newName`', () => {
       const {x: newName} = {x: 1};
       assert.equal(y, 1);
     });
