@@ -164,7 +164,10 @@
             },
             {
               "url": "https://twitter.com/es6katas/status/625577823357566976",
-              "comment": "Announcement of this kata on twitter."
+              "comment": "Announcement of this kata on twitter.",
+              "tags": [
+                "announcement"
+              ]
             }
           ],
           "groupName": "Object literal",
@@ -181,7 +184,7 @@
             9,
             16
           ],
-          "publishDateUTC": "2015-07-28T07:55:00.000Z",
+          "publishDateUTC": "2015-07-28T07:57:00.000Z",
           "links": [
             {
               "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set",
@@ -203,6 +206,13 @@
               "comment": "The syntax definition of how to write an (accessor) method.",
               "tags": [
                 "spec"
+              ]
+            },
+            {
+              "url": "https://twitter.com/es6katas/status/625938211672600576",
+              "comment": "Announcement of this kata on twitter.",
+              "tags": [
+                "announcement"
               ]
             }
           ],

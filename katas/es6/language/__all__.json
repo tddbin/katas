@@ -895,7 +895,10 @@
         },
         {
           "url": "https://twitter.com/es6katas/status/625577823357566976",
-          "comment": "Announcement of this kata on twitter."
+          "comment": "Announcement of this kata on twitter.",
+          "tags": [
+            "announcement"
+          ]
         }
       ],
       "groupName": "Object literal",
@@ -935,10 +938,17 @@
           "tags": [
             "spec"
           ]
+        },
+        {
+          "url": "https://twitter.com/es6katas/status/625938211672600576",
+          "comment": "Announcement of this kata on twitter.",
+          "tags": [
+            "announcement"
+          ]
         }
       ],
       "groupName": "Object literal",
-      "publishDateRfc822": "Tue, 28 Jul 2015 07:55:00 GMT",
+      "publishDateRfc822": "Tue, 28 Jul 2015 07:57:00 GMT",
       "id": 67
     }
   ]
