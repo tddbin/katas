@@ -3,8 +3,8 @@
 
 describe('An object literal can also contain setters', () => {
 
-  describe('define a setter', function() {
-    it('be prefixing the property with `set` (and make it a function)', function() {
+  describe('defining: a setter', function() {
+    it('by prefixing the property with `set` (and make it a function)', function() {
       let theX = null;
       const obj = {
         x(newX) { theX = newX; }
@@ -13,7 +13,7 @@ describe('An object literal can also contain setters', () => {
       obj.x = 'the new X';
       assert.equal(theX, 'the new X');
     });
-    it('the setter must have exactly one parameter', function() {
+    it('must have exactly one parameter', function() {
       let setterCalledWith = void 0;
       const obj = {
         x() { // <<<<=== it's not a setter yet! 
@@ -25,9 +25,6 @@ describe('An object literal can also contain setters', () => {
       
       assert.equal(obj.x = 'new value', setterCalledWith);
     });
-  });
-
-  describe('other stuff ...', function() {
     it('can be a computed property (an expression enclosed in `[]`)', function() {
       const publicPropertyName = 'x';
       const privatePropertyName = '_' + publicPropertyName;
@@ -39,8 +36,11 @@ describe('An object literal can also contain setters', () => {
       obj.x = 'axe';
       assert.equal(obj._x, 'axe');
     });
+  });
+
+  describe('working with/on the setter', function() {
   
-    it('you can use `delete` to remove the property (before using it)', function() {
+    it('you can use `delete` to remove the property (including it`s setter)', function() {
       let setterCalled = false;
       const obj = {
         set x(param) { setterCalled = true; }
