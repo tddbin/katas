@@ -892,11 +892,54 @@
           "tags": [
             "spec"
           ]
+        },
+        {
+          "url": "https://twitter.com/es6katas/status/625577823357566976",
+          "comment": "Announcement of this kata on twitter."
         }
       ],
       "groupName": "Object literal",
       "publishDateRfc822": "Mon, 27 Jul 2015 08:05:00 GMT",
       "id": 66
+    },
+    {
+      "name": "setter",
+      "description": "A setter binds an object property to a function to be called when there is an attempt to set that property.",
+      "path": "object-literal/setter",
+      "level": "BEGINNER",
+      "requiresKnowledgeFrom": [
+        7,
+        8,
+        9,
+        16
+      ],
+      "links": [
+        {
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set",
+          "comment": "Description of all the details of a setter.",
+          "tags": [
+            "mdn",
+            "docs"
+          ]
+        },
+        {
+          "url": "http://www.ecma-international.org/ecma-262/6.0/#sec-object-type",
+          "comment": "\"An accessor property associates a key value with one or two accessor functions ...\"",
+          "tags": [
+            "spec"
+          ]
+        },
+        {
+          "url": "http://www.ecma-international.org/ecma-262/6.0/#sec-method-definitions",
+          "comment": "The syntax definition of how to write an (accessor) method.",
+          "tags": [
+            "spec"
+          ]
+        }
+      ],
+      "groupName": "Object literal",
+      "publishDateRfc822": "Tue, 28 Jul 2015 07:55:00 GMT",
+      "id": 67
     }
   ]
 }
