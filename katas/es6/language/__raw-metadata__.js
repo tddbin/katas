@@ -71,6 +71,7 @@ const STRING_INCLUDES = 63;
 const SET_DELETE = 64;
 const SET_API = 65;
 const OBJECT_LITERAL_GETTER = 66;
+const OBJECT_LITERAL_SETTER = 67;
 
 const TAG_SPECIFICATION = 'spec';
 const TAG_MDN = 'mdn';
@@ -229,6 +230,35 @@ export const all = {
             {
               url: 'https://twitter.com/es6katas/status/625577823357566976',
               comment: 'Announcement of this kata on twitter.'
+            }
+          ]
+        },
+        [OBJECT_LITERAL_SETTER]: {
+          name: 'setter',
+          description: 'A setter binds an object property to a function to be called when there is an attempt to set that property.',
+          path: 'object-literal/setter',
+          level: SKILL_LEVEL.BEGINNER,
+          requiresKnowledgeFrom: [
+            LET, CONST,
+            OBJECT_LITERAL_BASICS,
+            OBJECT_LITERAL_COMPUTED_PROPERTIES
+          ],
+          publishDateUTC: new Date(Date.UTC(2015, JULY, 28, 7, 55)),
+          links: [
+            {
+              url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set',
+              comment: 'Description of all the details of a setter.',
+              tags: [TAG_MDN, TAG_DOCS]
+            },
+            {
+              url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-object-type',
+              comment: '"An accessor property associates a key value with one or two accessor functions ..."',
+              tags: [TAG_SPECIFICATION]
+            },
+            {
+              url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-method-definitions',
+              comment: 'The syntax definition of how to write an (accessor) method.',
+              tags: [TAG_SPECIFICATION]
             }
           ]
         }
