@@ -292,8 +292,8 @@
           "id": "14"
         },
         {
-          "name": "rename",
-          "description": "Rename variables while destructuring.",
+          "name": "assign",
+          "description": "Assign variables while destructuring.",
           "path": "destructuring/rename",
           "level": "INTERMEDIATE",
           "requiresKnowledgeFrom": [
