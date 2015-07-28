@@ -739,7 +739,14 @@ export const all = {
             SET_BASICS,
             SET_ADD
           ],
-          publishDateUTC: new Date(Date.UTC(2015, JULY, 15, 16, 12))
+          publishDateUTC: new Date(Date.UTC(2015, JULY, 15, 16, 12)),
+          links: [
+            {
+              url: 'https://twitter.com/es6katas/status/621351626561994752',
+              comment: 'Announcement of this kata on twitter.',
+              tags: [TAG_ANNOUNCEMENT]
+            }
+          ]
         },
         [SET_API]: {
           name: 'the API',
@@ -760,6 +767,11 @@ export const all = {
               url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set',
               comment: '',
               tags: [TAG_MDN, TAG_DOCS]
+            },
+            {
+              url: 'https://twitter.com/es6katas/status/621596289160081408',
+              comment: 'Announcement of this kata on twitter.',
+              tags: [TAG_ANNOUNCEMENT]
             }
           ]
         }
