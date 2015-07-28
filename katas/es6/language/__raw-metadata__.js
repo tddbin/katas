@@ -15,7 +15,7 @@ const DESTRUCTURING_STRING = 11;
 const DESTRUCTURING_OBJECT = 12;
 const DESTRUCTURING_DEFAULTS = 13;
 const DESTRUCTURING_PARAMETERS = 14;
-const DESTRUCTURING_RENAME = 15;
+const DESTRUCTURING_ASSIGN = 15;
 const OBJECT_LITERAL_COMPUTED_PROPERTIES = 16;
 const UNICODE_IN_STRINGS = 17;
 const REST_OPERATOR_AS_PARAMETER = 18;
@@ -332,9 +332,9 @@ export const all = {
           ],
           publishDateUTC: new Date(Date.UTC(2015, APRIL, 1, 7, 55))
         },
-        [DESTRUCTURING_RENAME]: {
-          name: 'rename',
-          description: 'Rename variables while destructuring.',
+        [DESTRUCTURING_ASSIGN]: {
+          name: 'assign',
+          description: 'Assign variables while destructuring.',
           path: 'destructuring/rename',
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [
