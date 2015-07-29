@@ -72,6 +72,7 @@ const SET_DELETE = 64;
 const SET_API = 65;
 const OBJECT_LITERAL_GETTER = 66;
 const OBJECT_LITERAL_SETTER = 67;
+const REFLECT_CONSTRUCT = 68;
 
 const TAG_SPECIFICATION = 'spec';
 const TAG_MDN = 'mdn';
@@ -79,6 +80,7 @@ const TAG_VIDEO = 'video';
 const TAG_ARTICLE = 'article';
 const TAG_DOCS = 'docs';
 const TAG_ANNOUNCEMENT = 'announcement';
+const TAG_BOOK = 'book';
 
 const MARCH = 2;
 const APRIL = 3;
@@ -960,6 +962,37 @@ export const all = {
             ARROW_FUNCTION_BASICS
           ],
           publishDateUTC: new Date(Date.UTC(2015, JULY, 8, 8, 14))
+        },
+        [REFLECT_CONSTRUCT]: {
+          name: '`Reflect.construct()`',
+          description: 'The `new` operator as a function.',
+          path: 'reflect/construct',
+          level: SKILL_LEVEL.INTERMEDIATE,
+          requiresKnowledgeFrom: [
+          ],
+          publishDateUTC: new Date(Date.UTC(2015, JULY, 30, 7, 55)),
+          links: [
+            {
+              url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-reflect.construct',
+              comment: 'How this function is specified.',
+              tags: [TAG_SPECIFICATION]
+            },
+            {
+              url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-createlistfromarraylike',
+              comment: 'How the arguments list that can be passed as second parameter is specified.',
+              tags: [TAG_SPECIFICATION]
+            },
+            {
+              url: 'https://leanpub.com/exploring-es6/read#sec_allocating-and-initializing-instances',
+              comment: 'Axel Rauschmayer explaining in his book "The data flow between class constructors is different from the canonical way of subclassing in ES5."',
+              tags: [TAG_DOCS, TAG_BOOK]
+            },
+            {
+              url: 'https://leanpub.com/exploring-es6/read#leanpub-auto-reflect',
+              comment: 'The chapter on Reflect in the book "Exploring ES6"',
+              tags: [TAG_DOCS, TAG_BOOK]
+            }
+          ]
         }
       }
     },
