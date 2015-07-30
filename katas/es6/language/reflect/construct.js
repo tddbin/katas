@@ -56,20 +56,17 @@ describe('`Reflect.construct` is the `new` operator as a function', function() {
     });
     
     describe('the list of arguments are passed to the constructor as given', function() {
+      class Constructable {
+        constructor(...args) { this.args = args; }
+      }
       it('if none given, nothing is passed', function() {
-        class Constructable {
-          constructor(...args) { this.args = args; }
-        }
         let instance = Reflect.construct(Constructable, [1]);
         
         assert.deepEqual(instance.args, []);
       });
       it('passing an array, all args of any type are passed', function() {
-        class Constructable {
-          constructor(...args) { this.args = args; }
-        }
         const argumentsList = ['arg1', ['arg2.1', 'arg2.2'], {arg: 3}];
-        let instance = Reflect.construct(Constructable, argumentsList[0]);
+        let instance = Reflect.construct;
         
         assert.deepEqual(instance.args, argumentsList);
       });
