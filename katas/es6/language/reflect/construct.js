@@ -50,7 +50,7 @@ describe('`Reflect.construct` is the `new` operator as a function', function() {
     
     it('giving it a class it returns an instance of this class', function() {
       class Constructable {}
-      let instance;
+      let instance; // use Reflect.construct here!!!
       
       assert.equal(instance instanceof Constructable, true);
     });
