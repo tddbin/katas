@@ -996,6 +996,48 @@
           "publishDateUTC": "2015-07-08T08:14:00.000Z",
           "groupName": "Reflect",
           "id": "60"
+        },
+        {
+          "name": "`Reflect.construct()`",
+          "description": "The `new` operator as a function.",
+          "path": "reflect/construct",
+          "level": "INTERMEDIATE",
+          "requiresKnowledgeFrom": [],
+          "publishDateUTC": "2015-07-30T07:55:00.000Z",
+          "links": [
+            {
+              "url": "http://www.ecma-international.org/ecma-262/6.0/#sec-reflect.construct",
+              "comment": "How this function is specified.",
+              "tags": [
+                "spec"
+              ]
+            },
+            {
+              "url": "http://www.ecma-international.org/ecma-262/6.0/#sec-createlistfromarraylike",
+              "comment": "How the arguments list that can be passed as second parameter is specified.",
+              "tags": [
+                "spec"
+              ]
+            },
+            {
+              "url": "https://leanpub.com/exploring-es6/read#sec_allocating-and-initializing-instances",
+              "comment": "Axel Rauschmayer explaining in his book \"The data flow between class constructors is different from the canonical way of subclassing in ES5.\"",
+              "tags": [
+                "docs",
+                "book"
+              ]
+            },
+            {
+              "url": "https://leanpub.com/exploring-es6/read#leanpub-auto-reflect",
+              "comment": "The chapter on Reflect in the book \"Exploring ES6\"",
+              "tags": [
+                "docs",
+                "book"
+              ]
+            }
+          ],
+          "groupName": "Reflect",
+          "id": "68"
         }
       ]
     },
