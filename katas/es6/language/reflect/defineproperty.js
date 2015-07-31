@@ -5,24 +5,26 @@ describe('`Reflect.defineProperty()` is like `Object.defineProperty()` but retur
 
   describe('the function itself', function() {
     it('is static on the `Reflect` object', function() {
-      const name = 'defineProperty';
+      const name = 'waht`s the functions name again? :)';
       assert.equal(name in Reflect, true);
     });
     it('is of type `function`', function() {
-      const expectedType = 'function';
+      const expectedType = '';
       assert.equal(typeof Reflect.defineProperty, expectedType)
     });
   });
   
   describe('the 1st parameter is the object on which to define a property', function() {
     it('fails if it is not an object', function() {
-      assert.throws(() => { Reflect.defineProperty('not an object'); }, TypeError);
+      let noObj = {};
+      assert.throws(() => { Reflect.defineProperty(noObj); }, TypeError);
     });
     it('accepts an object', function() {
-      assert.doesNotThrow(() => { Reflect.defineProperty({}); });
+      let obj = '';
+      assert.doesNotThrow(() => { Reflect.defineProperty(obj); });
     });
     it('accepts an instance (of a class)', function() {
-      let instance = new class {};
+      let instance;
       assert.doesNotThrow(() => { Reflect.defineProperty(instance); });
     });
   });
@@ -31,17 +33,17 @@ describe('`Reflect.defineProperty()` is like `Object.defineProperty()` but retur
     describe('when it is/becomes a string', function() {
       it('works with a `normal` string', function() {
         let obj = {};
-        Reflect.defineProperty(obj, 'prop', {});
+        Reflect.defineProperty(obj, '', {});
         assert.equal('prop' in obj, true);
       });
       it('a number gets converted into a string', function() {
         let obj = {};
-        Reflect.defineProperty(obj, 1, {});
+        Reflect.defineProperty(obj, 2, {});
         assert.equal('1' in obj, true);
       });
       it('`undefined` also gets converted into a string (watch out!)', function() {
         let obj = {};
-        let undef;
+        let undef = 1;
         Reflect.defineProperty(obj, undef, {});
         assert.equal('undefined' in obj, true);
       });
@@ -50,53 +52,48 @@ describe('`Reflect.defineProperty()` is like `Object.defineProperty()` but retur
       it('it can be a symbol', function() {
         let obj = {};
         const sym = Symbol.for('prop');
-        Reflect.defineProperty(obj, sym, {});
+        Reflect.defineProperty(obj, 'prop', {});
         assert.equal(sym in obj, true);
       });
     });
   });
 
   describe('the `value` in the 3rd parameter', function() {
-    // The complexity of the 3rd parameter might be covered in another kata. 
-    it('is the initial value of the property', function() {
+    // The complexity of the 3rd parameter might be covered in later kata. 
+    it('contains the initial value of the property, as an object in the property `value`', function() {
       let obj = {};
-      Reflect.defineProperty(obj, 'prop', {value: 'property value'});
+      Reflect.defineProperty(obj, 'prop');
       assert.equal(obj.prop, 'property value');
     });
-    it('can be of any type', function() {
+    it('can be of any type (even itself)', function() {
       let obj = {};
-      Reflect.defineProperty(obj, 'prop', {value: obj});
+      Reflect.defineProperty(obj, 'prop');
       assert.equal(obj.prop, obj);
     });
   });
 
   describe('return value', function() {
     describe('returns true', function() {
-      it('when the property was created', function() {
+      it('when the property was created (which requires the 3rd parameter too!!!)', function() {
         let instance = new class {};
-        const wasPropertyDefined = Reflect.defineProperty(instance, 1, {});
+        const wasPropertyDefined = Reflect.defineProperty();
         assert.equal(wasPropertyDefined, true);
       });
-      it('no matter what the value of the property is', function() {
+      it('no matter what the value of the property is (just the 3rd param has to exist as `{}`)', function() {
         let instance = new class {};
-        const wasPropertyDefined = Reflect.defineProperty(instance, 'prop', {});
+        const wasPropertyDefined = Reflect.defineProperty(instance);
         assert.equal(wasPropertyDefined, true);
       });
     });
     describe('returns false', function() {
       it('when no property name is given (since no property has been added)', function() {
         let instance = new class {};
-        const wasPropertyDefined = Reflect.defineProperty(instance);
-        assert.equal(wasPropertyDefined, false);
-      });
-      it('when `undefined` is given as a property name', function() {
-        let instance = new class {};
-        const wasPropertyDefined = Reflect.defineProperty(instance, void 0);
+        const wasPropertyDefined = Reflect.defineProperty;
         assert.equal(wasPropertyDefined, false);
       });
       it('when no 3rd parameter, the descriptor is given', function() {
         let instance = new class {};
-        const wasPropertyDefined = Reflect.defineProperty(instance, 'prop');
+        const wasPropertyDefined = Reflect.defineProperty(instance, 'prop', {value: 1});
         assert.equal(wasPropertyDefined, false);
       });
     });
