@@ -29,37 +29,34 @@ describe('`Reflect.defineProperty()` is like `Object.defineProperty()` but retur
     });
   });
 
-  describe('2nd parameter', function() {
-    describe('when it is/becomes a string', function() {
-      it('works with a `normal` string', function() {
-        let obj = {};
-        Reflect.defineProperty(obj, '', {});
-        assert.equal('prop' in obj, true);
-      });
-      it('a number gets converted into a string', function() {
-        let obj = {};
-        Reflect.defineProperty(obj, 2, {});
-        assert.equal('1' in obj, true);
-      });
-      it('`undefined` also gets converted into a string (watch out!)', function() {
-        let obj = {};
-        let undef = 1;
-        Reflect.defineProperty(obj, undef, {});
-        assert.equal('undefined' in obj, true);
-      });
+  describe('2nd parameter is the name of the property to be defined on the object (normally a string)', function() {
+    it('works with a `normal` string', function() {
+      let obj = {};
+      Reflect.defineProperty(obj, '', {});
+      assert.equal('prop' in obj, true);
     });
-    describe('not a string', function() {
-      it('it can be a symbol', function() {
-        let obj = {};
-        const sym = Symbol.for('prop');
-        Reflect.defineProperty(obj, 'prop', {});
-        assert.equal(sym in obj, true);
-      });
+    it('a number gets converted into a string', function() {
+      let obj = {};
+      Reflect.defineProperty(obj, 2, {});
+      assert.equal('1' in obj, true);
+    });
+    it('`undefined` also gets converted into a string (watch out!)', function() {
+      let obj = {};
+      let undef = 1;
+      Reflect.defineProperty(obj, undef, {});
+      assert.equal('undefined' in obj, true);
+    });
+    it('it can be a symbol', function() {
+      let obj = {};
+      const sym = Symbol.for('prop');
+      Reflect.defineProperty(obj, 'prop', {});
+      assert.equal(sym in obj, true);
     });
   });
 
-  describe('the `value` in the 3rd parameter', function() {
-    // The complexity of the 3rd parameter might be covered in later kata. 
+  describe('the `value` is part of the 3rd parameter, given as a property in an object `{value: ...}`', function() {
+    // The entire complexity of the 3rd parameter might be covered in later kata. 
+    
     it('contains the initial value of the property, as an object in the property `value`', function() {
       let obj = {};
       Reflect.defineProperty(obj, 'prop');
@@ -72,7 +69,7 @@ describe('`Reflect.defineProperty()` is like `Object.defineProperty()` but retur
     });
   });
 
-  describe('return value', function() {
+  describe('the return value of the function indicates wether the property was defined successfully', function() {
     describe('returns true', function() {
       it('when the property was created (which requires the 3rd parameter too!!!)', function() {
         let instance = new class {};
