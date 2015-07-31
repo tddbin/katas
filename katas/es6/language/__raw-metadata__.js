@@ -991,6 +991,11 @@ export const all = {
               url: 'https://leanpub.com/exploring-es6/read#leanpub-auto-reflect',
               comment: 'The chapter on Reflect in the book "Exploring ES6"',
               tags: [TAG_DOCS, TAG_BOOK]
+            },
+            {
+              url: 'https://twitter.com/es6katas/status/626662280046886912',
+              comment: 'Announcement of this kata on twitter.',
+              tags: [TAG_ANNOUNCEMENT]
             }
           ]
         }
