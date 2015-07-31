@@ -1003,11 +1003,51 @@
             "docs",
             "book"
           ]
+        },
+        {
+          "url": "https://twitter.com/es6katas/status/626662280046886912",
+          "comment": "Announcement of this kata on twitter.",
+          "tags": [
+            "announcement"
+          ]
         }
       ],
       "groupName": "Reflect",
       "publishDateRfc822": "Thu, 30 Jul 2015 07:55:00 GMT",
       "id": 68
+    },
+    {
+      "name": "`Reflect.defineProperty()`",
+      "description": "Defines a property on a given object.",
+      "path": "reflect/defineproperty",
+      "level": "INTERMEDIATE",
+      "requiresKnowledgeFrom": [
+        8,
+        7,
+        22,
+        34,
+        35
+      ],
+      "links": [
+        {
+          "url": "http://www.ecma-international.org/ecma-262/6.0/#sec-reflect.defineproperty",
+          "comment": "The specification for this function.",
+          "tags": [
+            "spec"
+          ]
+        },
+        {
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty",
+          "comment": "The MDN docs for this function.",
+          "tags": [
+            "docs",
+            "mdn"
+          ]
+        }
+      ],
+      "groupName": "Reflect",
+      "publishDateRfc822": "Fri, 31 Jul 2015 08:00:00 GMT",
+      "id": 69
     }
   ]
 }
