@@ -1012,7 +1012,7 @@ export const all = {
             CLASS_CREATION,
             SYMBOL_BASICS, SYMBOL_FOR
           ],
-          publishDateUTC: new Date(Date.UTC(2015, JULY, 31, 8, 0)),
+          publishDateUTC: new Date(Date.UTC(2015, JULY, 31, 8, 12)),
           links: [
             {
               url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-reflect.defineproperty',
@@ -1023,6 +1023,11 @@ export const all = {
               url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty',
               comment: 'The MDN docs for this function.',
               tags: [TAG_DOCS, TAG_MDN]
+            },
+            {
+              url: 'https://twitter.com/es6katas/status/627029158997180416',
+              comment: 'Announcement of this kata on twitter.',
+              tags: [TAG_ANNOUNCEMENT]
             }
           ]
         }
