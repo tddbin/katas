@@ -64,6 +64,7 @@ const GENERATOR_SEND_FUNCTION = 56;
 const DEFAULT_PARAMETERS_BASICS = 57;
 const REFLECT_BASICS = 58;
 const REFLECT_APPLY = 59;
+
 const REFLECT_GET_PROTOTYPE_OF = 60;
 const MODULES_IMPORT = 61;
 const MAP_HAS = 62;
@@ -73,6 +74,7 @@ const SET_API = 65;
 const OBJECT_LITERAL_GETTER = 66;
 const OBJECT_LITERAL_SETTER = 67;
 const REFLECT_CONSTRUCT = 68;
+const REFLECT_DEFINEPROPERTY = 69;
 
 const TAG_SPECIFICATION = 'spec';
 const TAG_MDN = 'mdn';
@@ -996,6 +998,31 @@ export const all = {
               url: 'https://twitter.com/es6katas/status/626662280046886912',
               comment: 'Announcement of this kata on twitter.',
               tags: [TAG_ANNOUNCEMENT]
+
+            }
+          ]
+        },
+        [REFLECT_DEFINEPROPERTY]: {
+          name: '`Reflect.defineProperty()`',
+          description: 'Defines a property on a given object.',
+          path: 'reflect/defineproperty',
+          level: SKILL_LEVEL.INTERMEDIATE,
+          requiresKnowledgeFrom: [
+            CONST, LET,
+            CLASS_CREATION,
+            SYMBOL_BASICS, SYMBOL_FOR
+          ],
+          publishDateUTC: new Date(Date.UTC(2015, JULY, 31, 8, 0)),
+          links: [
+            {
+              url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-reflect.defineproperty',
+              comment: 'The specification for this function.',
+              tags: [TAG_SPECIFICATION]
+            },
+            {
+              url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty',
+              comment: 'The MDN docs for this function.',
+              tags: [TAG_DOCS, TAG_MDN]
             }
           ]
         }
