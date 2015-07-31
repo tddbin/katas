@@ -1043,10 +1043,17 @@
             "docs",
             "mdn"
           ]
+        },
+        {
+          "url": "https://twitter.com/es6katas/status/627029158997180416",
+          "comment": "Announcement of this kata on twitter.",
+          "tags": [
+            "announcement"
+          ]
         }
       ],
       "groupName": "Reflect",
-      "publishDateRfc822": "Fri, 31 Jul 2015 08:00:00 GMT",
+      "publishDateRfc822": "Fri, 31 Jul 2015 08:12:00 GMT",
       "id": 69
     }
   ]

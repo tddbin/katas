@@ -1058,7 +1058,7 @@
             34,
             35
           ],
-          "publishDateUTC": "2015-07-31T08:00:00.000Z",
+          "publishDateUTC": "2015-07-31T08:12:00.000Z",
           "links": [
             {
               "url": "http://www.ecma-international.org/ecma-262/6.0/#sec-reflect.defineproperty",
@@ -1073,6 +1073,13 @@
               "tags": [
                 "docs",
                 "mdn"
+              ]
+            },
+            {
+              "url": "https://twitter.com/es6katas/status/627029158997180416",
+              "comment": "Announcement of this kata on twitter.",
+              "tags": [
+                "announcement"
               ]
             }
           ],
