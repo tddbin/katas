@@ -1,3 +1,5 @@
+import {forGroupName as slugForGroupName} from '../slug/index.js';
+
 export default class FlatMetaData {
   static to(data) {
     return buildMetaData(data);
@@ -24,6 +26,7 @@ function extractItemsFromGroup(groups, groupName, addItemsTo) {
   for (let key in items) {
     const item = cloneObject(items[key]);
     item.groupName = groupName;
+    item.groupNameSlug = slugForGroupName(groupName);
     // provide date as spec`d here http://www.w3.org/Protocols/rfc822/#z28
     item.publishDateRfc822 = items[key].publishDateUTC.toUTCString();
     delete item.publishDateUTC;

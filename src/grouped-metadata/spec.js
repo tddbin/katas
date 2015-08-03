@@ -1,6 +1,7 @@
 import assert from 'assert';
 import {all} from '../../katas/es6/language/__raw-metadata__.js';
 import GroupedMetaData from './index.js';
+import {forGroupName as slugForGroupName} from '../slug/index.js';
 
 describe('build grouped (by category) meta data', function() {
 
@@ -17,18 +18,27 @@ describe('build grouped (by category) meta data', function() {
   });
 
   describe('a group', function() {
+    let aGroup;
+    beforeEach(function() {
+      aGroup = converted.groups[knownGroupName];
+    });
     it('has `items` which is an array', function() {
-      const aGroup = converted.groups[knownGroupName];
       assert.ok(Array.isArray(aGroup.items));
     });
     
     it('has as many katas inside `items` as the original', function() {
-      const aGroup = converted.groups[knownGroupName];
       const expectedNumberOfItems = Object.keys(all.groups[knownGroupName].items).length;
       
       assert.equal(aGroup.items.length, expectedNumberOfItems);
     });
     
+    it('has the name as attribute', function() {
+      assert.equal(aGroup.name, knownGroupName);
+    });
+    
+    it('has a slug (a string usable in a URL)', function() {
+      assert.equal(aGroup.slug, slugForGroupName(knownGroupName));
+    });
   });
 
   describe('a item', function() {

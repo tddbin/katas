@@ -1,10 +1,12 @@
 import assert from 'assert';
 import FlatMetaData from './index.js';
+import {forGroupName as slugForGroupName} from '../slug/index.js';
 import {all} from '../../katas/es6/language/__raw-metadata__.js';
 
 describe('build the meta data from the all.js file structure', function() {
   
-  const firstGroup = all.groups['Template strings'];
+  const groupName = 'Template strings';
+  const firstGroup = all.groups[groupName];
   const firstGroupItems = firstGroup.items;
   let converted;
   beforeEach(function() {
@@ -43,6 +45,10 @@ describe('build the meta data from the all.js file structure', function() {
   });
   
   it('the group name is added in each item', function() {
-    assert.equal(converted.items[0].groupName, 'Template strings');
+    assert.equal(converted.items[0].groupName, groupName);
+  });
+  
+  it('a group slug is provided (a string usable in a URL)', function() {
+    assert.equal(converted.items[0].groupNameSlug, slugForGroupName(groupName));
   });
 });
