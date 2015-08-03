@@ -789,7 +789,8 @@ export const all = {
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [
             CONST, LET,
-            SET_BASICS, SET_ADD
+            SET_BASICS, SET_ADD,
+            DESTRUCTURING_OBJECT
           ],
           publishDateUTC: new Date(Date.UTC(2015, AUGUST, 3, 8, 30)),
           links: [
