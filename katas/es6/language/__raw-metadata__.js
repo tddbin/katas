@@ -76,6 +76,8 @@ const OBJECT_LITERAL_SETTER = 67;
 const REFLECT_CONSTRUCT = 68;
 const REFLECT_DEFINEPROPERTY = 69;
 
+const SET_CLEAR = 70;
+
 const TAG_SPECIFICATION = 'spec';
 const TAG_MDN = 'mdn';
 const TAG_VIDEO = 'video';
@@ -89,6 +91,7 @@ const APRIL = 3;
 const MAY = 4;
 const JUNE = 5;
 const JULY = 6;
+const AUGUST = 7;
 
 export const all = {
   name: 'ES6 Katas',
@@ -776,6 +779,24 @@ export const all = {
               url: 'https://twitter.com/es6katas/status/621596289160081408',
               comment: 'Announcement of this kata on twitter.',
               tags: [TAG_ANNOUNCEMENT]
+            }
+          ]
+        },
+        [SET_CLEAR]: {
+          name: '`set.clear()`',
+          description: 'Removes all elements from a Set object.',
+          path: 'set/clear',
+          level: SKILL_LEVEL.BEGINNER,
+          requiresKnowledgeFrom: [
+            CONST, LET,
+            SET_BASICS, SET_ADD
+          ],
+          publishDateUTC: new Date(Date.UTC(2015, AUGUST, 3, 8, 30)),
+          links: [
+            {
+              url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-set.prototype.clear',
+              comment: 'How the implementation is specified.',
+              tags: [TAG_SPECIFICATION]
             }
           ]
         }
