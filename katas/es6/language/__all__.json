@@ -1055,6 +1055,31 @@
       "groupName": "Reflect",
       "publishDateRfc822": "Fri, 31 Jul 2015 08:12:00 GMT",
       "id": 69
+    },
+    {
+      "name": "`set.clear()`",
+      "description": "Removes all elements from a Set object.",
+      "path": "set/clear",
+      "level": "BEGINNER",
+      "requiresKnowledgeFrom": [
+        8,
+        7,
+        47,
+        48,
+        12
+      ],
+      "links": [
+        {
+          "url": "http://www.ecma-international.org/ecma-262/6.0/#sec-set.prototype.clear",
+          "comment": "How the implementation is specified.",
+          "tags": [
+            "spec"
+          ]
+        }
+      ],
+      "groupName": "Set",
+      "publishDateRfc822": "Mon, 03 Aug 2015 08:30:00 GMT",
+      "id": 70
     }
   ]
 }
