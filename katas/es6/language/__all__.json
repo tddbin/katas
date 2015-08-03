@@ -7,6 +7,7 @@
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [],
       "groupName": "Template strings",
+      "groupNameSlug": "Template_strings",
       "publishDateRfc822": "Fri, 13 Mar 2015 07:55:00 GMT",
       "id": 1
     },
@@ -19,6 +20,7 @@
         1
       ],
       "groupName": "Template strings",
+      "groupNameSlug": "Template_strings",
       "publishDateRfc822": "Mon, 16 Mar 2015 07:55:00 GMT",
       "id": 2
     },
@@ -31,6 +33,7 @@
         1
       ],
       "groupName": "Template strings",
+      "groupNameSlug": "Template_strings",
       "publishDateRfc822": "Tue, 17 Mar 2015 07:55:00 GMT",
       "id": 3
     },
@@ -44,6 +47,7 @@
         3
       ],
       "groupName": "Template strings",
+      "groupNameSlug": "Template_strings",
       "publishDateRfc822": "Wed, 18 Mar 2015 07:55:00 GMT",
       "id": 4
     },
@@ -54,6 +58,7 @@
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [],
       "groupName": "Arrow functions",
+      "groupNameSlug": "Arrow_functions",
       "publishDateRfc822": "Thu, 19 Mar 2015 07:55:00 GMT",
       "id": 5
     },
@@ -67,6 +72,7 @@
         22
       ],
       "groupName": "Arrow functions",
+      "groupNameSlug": "Arrow_functions",
       "publishDateRfc822": "Fri, 20 Mar 2015 07:55:00 GMT",
       "id": 6
     },
@@ -77,6 +83,7 @@
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [],
       "groupName": "Block scope",
+      "groupNameSlug": "Block_scope",
       "publishDateRfc822": "Mon, 23 Mar 2015 07:55:00 GMT",
       "id": 7
     },
@@ -89,6 +96,7 @@
         7
       ],
       "groupName": "Block scope",
+      "groupNameSlug": "Block_scope",
       "publishDateRfc822": "Tue, 24 Mar 2015 07:55:00 GMT",
       "id": 8
     },
@@ -103,6 +111,7 @@
         8
       ],
       "groupName": "Object literal",
+      "groupNameSlug": "Object_literal",
       "publishDateRfc822": "Wed, 25 Mar 2015 07:55:00 GMT",
       "id": 9
     },
@@ -117,6 +126,7 @@
         1
       ],
       "groupName": "Destructuring",
+      "groupNameSlug": "Destructuring",
       "publishDateRfc822": "Thu, 26 Mar 2015 07:55:00 GMT",
       "id": 10
     },
@@ -130,6 +140,7 @@
         17
       ],
       "groupName": "Destructuring",
+      "groupNameSlug": "Destructuring",
       "publishDateRfc822": "Fri, 27 Mar 2015 07:55:00 GMT",
       "id": 11
     },
@@ -143,6 +154,7 @@
         9
       ],
       "groupName": "Destructuring",
+      "groupNameSlug": "Destructuring",
       "publishDateRfc822": "Mon, 30 Mar 2015 07:55:00 GMT",
       "id": 12
     },
@@ -157,6 +169,7 @@
         12
       ],
       "groupName": "Destructuring",
+      "groupNameSlug": "Destructuring",
       "publishDateRfc822": "Tue, 31 Mar 2015 07:55:00 GMT",
       "id": 13
     },
@@ -171,6 +184,7 @@
         5
       ],
       "groupName": "Destructuring",
+      "groupNameSlug": "Destructuring",
       "publishDateRfc822": "Wed, 01 Apr 2015 07:55:00 GMT",
       "id": 14
     },
@@ -187,6 +201,7 @@
         5
       ],
       "groupName": "Destructuring",
+      "groupNameSlug": "Destructuring",
       "publishDateRfc822": "Thu, 02 Apr 2015 07:55:00 GMT",
       "id": 15
     },
@@ -202,6 +217,7 @@
         8
       ],
       "groupName": "Object literal",
+      "groupNameSlug": "Object_literal",
       "publishDateRfc822": "Fri, 03 Apr 2015 07:55:00 GMT",
       "id": 16
     },
@@ -215,6 +231,7 @@
         1
       ],
       "groupName": "Unicode",
+      "groupNameSlug": "Unicode",
       "publishDateRfc822": "Mon, 06 Apr 2015 07:55:00 GMT",
       "id": 17
     },
@@ -225,6 +242,7 @@
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [],
       "groupName": "Rest operator",
+      "groupNameSlug": "Rest_operator",
       "publishDateRfc822": "Tue, 07 Apr 2015 08:15:00 GMT",
       "id": 18
     },
@@ -235,6 +253,7 @@
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [],
       "groupName": "Rest operator",
+      "groupNameSlug": "Rest_operator",
       "publishDateRfc822": "Wed, 08 Apr 2015 07:55:00 GMT",
       "id": 19
     },
@@ -245,6 +264,7 @@
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [],
       "groupName": "Spread operator",
+      "groupNameSlug": "Spread_operator",
       "publishDateRfc822": "Fri, 10 Apr 2015 08:18:00 GMT",
       "id": 20
     },
@@ -255,6 +275,7 @@
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [],
       "groupName": "Spread operator",
+      "groupNameSlug": "Spread_operator",
       "publishDateRfc822": "Mon, 13 Apr 2015 07:55:00 GMT",
       "id": 21
     },
@@ -265,6 +286,7 @@
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [],
       "groupName": "Class",
+      "groupNameSlug": "Class",
       "publishDateRfc822": "Tue, 14 Apr 2015 07:55:00 GMT",
       "id": 22
     },
@@ -275,6 +297,7 @@
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [],
       "groupName": "Class",
+      "groupNameSlug": "Class",
       "publishDateRfc822": "Wed, 15 Apr 2015 07:56:00 GMT",
       "id": 23
     },
@@ -285,6 +308,7 @@
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [],
       "groupName": "Class",
+      "groupNameSlug": "Class",
       "publishDateRfc822": "Thu, 16 Apr 2015 07:55:00 GMT",
       "id": 24
     },
@@ -295,6 +319,7 @@
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [],
       "groupName": "Class",
+      "groupNameSlug": "Class",
       "publishDateRfc822": "Fri, 17 Apr 2015 08:25:00 GMT",
       "id": 25
     },
@@ -305,6 +330,7 @@
       "level": "ADVANCED",
       "requiresKnowledgeFrom": [],
       "groupName": "Class",
+      "groupNameSlug": "Class",
       "publishDateRfc822": "Mon, 20 Apr 2015 07:55:00 GMT",
       "id": 26
     },
@@ -315,6 +341,7 @@
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [],
       "groupName": "Class",
+      "groupNameSlug": "Class",
       "publishDateRfc822": "Tue, 21 Apr 2015 07:55:00 GMT",
       "id": 27
     },
@@ -325,6 +352,7 @@
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [],
       "groupName": "Class",
+      "groupNameSlug": "Class",
       "publishDateRfc822": "Wed, 22 Apr 2015 07:55:00 GMT",
       "id": 28
     },
@@ -335,6 +363,7 @@
       "level": "TBD",
       "requiresKnowledgeFrom": [],
       "groupName": "Array",
+      "groupNameSlug": "Array",
       "publishDateRfc822": "Thu, 23 Apr 2015 08:32:00 GMT",
       "id": 29
     },
@@ -345,6 +374,7 @@
       "level": "TBD",
       "requiresKnowledgeFrom": [],
       "groupName": "Array",
+      "groupNameSlug": "Array",
       "publishDateRfc822": "Mon, 27 Apr 2015 08:09:00 GMT",
       "id": 30
     },
@@ -373,6 +403,7 @@
         ]
       },
       "groupName": "Array",
+      "groupNameSlug": "Array",
       "publishDateRfc822": "Tue, 28 Apr 2015 07:55:00 GMT",
       "id": 31
     },
@@ -383,6 +414,7 @@
       "level": "TBD",
       "requiresKnowledgeFrom": [],
       "groupName": "Array",
+      "groupNameSlug": "Array",
       "publishDateRfc822": "Wed, 29 Apr 2015 07:55:00 GMT",
       "id": 32
     },
@@ -393,6 +425,7 @@
       "level": "TBD",
       "requiresKnowledgeFrom": [],
       "groupName": "Array",
+      "groupNameSlug": "Array",
       "publishDateRfc822": "Mon, 04 May 2015 08:01:00 GMT",
       "id": 33
     },
@@ -403,6 +436,7 @@
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [],
       "groupName": "Symbol",
+      "groupNameSlug": "Symbol",
       "publishDateRfc822": "Tue, 05 May 2015 11:21:00 GMT",
       "id": 34
     },
@@ -413,6 +447,7 @@
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [],
       "groupName": "Symbol",
+      "groupNameSlug": "Symbol",
       "publishDateRfc822": "Wed, 06 May 2015 07:55:00 GMT",
       "id": 35
     },
@@ -425,6 +460,7 @@
         35
       ],
       "groupName": "Symbol",
+      "groupNameSlug": "Symbol",
       "publishDateRfc822": "Thu, 07 May 2015 08:09:00 GMT",
       "id": 36
     },
@@ -435,6 +471,7 @@
       "level": "TBD",
       "requiresKnowledgeFrom": [],
       "groupName": "Iterator",
+      "groupNameSlug": "Iterator",
       "publishDateRfc822": "Fri, 08 May 2015 07:55:00 GMT",
       "id": 37
     },
@@ -448,6 +485,7 @@
         37
       ],
       "groupName": "Iterator",
+      "groupNameSlug": "Iterator",
       "publishDateRfc822": "Mon, 11 May 2015 07:55:00 GMT",
       "id": 38
     },
@@ -458,6 +496,7 @@
       "level": "EXPERT",
       "requiresKnowledgeFrom": [],
       "groupName": "Iterator",
+      "groupNameSlug": "Iterator",
       "publishDateRfc822": "Tue, 12 May 2015 07:55:00 GMT",
       "id": 39
     },
@@ -475,6 +514,7 @@
         20
       ],
       "groupName": "Iterator",
+      "groupNameSlug": "Iterator",
       "publishDateRfc822": "Wed, 13 May 2015 08:17:00 GMT",
       "id": 40
     },
@@ -489,6 +529,7 @@
         39
       ],
       "groupName": "Array",
+      "groupNameSlug": "Array",
       "publishDateRfc822": "Mon, 18 May 2015 08:06:00 GMT",
       "id": 41
     },
@@ -504,6 +545,7 @@
         39
       ],
       "groupName": "Array",
+      "groupNameSlug": "Array",
       "publishDateRfc822": "Tue, 19 May 2015 07:55:00 GMT",
       "id": 42
     },
@@ -518,6 +560,7 @@
         39
       ],
       "groupName": "Array",
+      "groupNameSlug": "Array",
       "publishDateRfc822": "Wed, 20 May 2015 07:55:00 GMT",
       "id": 43
     },
@@ -528,6 +571,7 @@
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [],
       "groupName": "Map",
+      "groupNameSlug": "Map",
       "publishDateRfc822": "Thu, 21 May 2015 07:55:00 GMT",
       "id": 44
     },
@@ -540,6 +584,7 @@
         37
       ],
       "groupName": "Map",
+      "groupNameSlug": "Map",
       "publishDateRfc822": "Fri, 22 May 2015 07:55:00 GMT",
       "id": 45
     },
@@ -550,6 +595,7 @@
       "level": "EXPERT",
       "requiresKnowledgeFrom": [],
       "groupName": "Map",
+      "groupNameSlug": "Map",
       "publishDateRfc822": "Tue, 26 May 2015 08:03:00 GMT",
       "id": 46
     },
@@ -560,6 +606,7 @@
       "level": "TBD",
       "requiresKnowledgeFrom": [],
       "groupName": "Set",
+      "groupNameSlug": "Set",
       "publishDateRfc822": "Wed, 27 May 2015 10:12:00 GMT",
       "id": 47
     },
@@ -572,6 +619,7 @@
         47
       ],
       "groupName": "Set",
+      "groupNameSlug": "Set",
       "publishDateRfc822": "Fri, 29 May 2015 06:55:00 GMT",
       "id": 48
     },
@@ -587,6 +635,7 @@
         22
       ],
       "groupName": "Generator",
+      "groupNameSlug": "Generator",
       "publishDateRfc822": "Mon, 01 Jun 2015 08:39:00 GMT",
       "id": 49
     },
@@ -599,6 +648,7 @@
         49
       ],
       "groupName": "Generator",
+      "groupNameSlug": "Generator",
       "publishDateRfc822": "Wed, 03 Jun 2015 07:55:00 GMT",
       "id": 50
     },
@@ -613,6 +663,7 @@
         50
       ],
       "groupName": "Generator",
+      "groupNameSlug": "Generator",
       "publishDateRfc822": "Fri, 05 Jun 2015 08:25:00 GMT",
       "id": 51
     },
@@ -637,6 +688,7 @@
         }
       ],
       "groupName": "Generator",
+      "groupNameSlug": "Generator",
       "publishDateRfc822": "Thu, 18 Jun 2015 12:07:00 GMT",
       "id": 52
     },
@@ -653,6 +705,7 @@
         46
       ],
       "groupName": "Map",
+      "groupNameSlug": "Map",
       "publishDateRfc822": "Mon, 22 Jun 2015 11:56:00 GMT",
       "id": 53
     },
@@ -667,6 +720,7 @@
         44
       ],
       "groupName": "Object",
+      "groupNameSlug": "Object",
       "publishDateRfc822": "Wed, 24 Jun 2015 07:55:00 GMT",
       "id": 54
     },
@@ -677,6 +731,7 @@
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [],
       "groupName": "Number",
+      "groupNameSlug": "Number",
       "publishDateRfc822": "Thu, 25 Jun 2015 07:55:00 GMT",
       "id": 55
     },
@@ -693,6 +748,7 @@
         52
       ],
       "groupName": "Generator",
+      "groupNameSlug": "Generator",
       "publishDateRfc822": "Mon, 29 Jun 2015 11:49:00 GMT",
       "id": 56
     },
@@ -707,6 +763,7 @@
         1
       ],
       "groupName": "Default parameters",
+      "groupNameSlug": "Default_parameters",
       "publishDateRfc822": "Tue, 30 Jun 2015 07:55:00 GMT",
       "id": 57
     },
@@ -722,6 +779,7 @@
         28
       ],
       "groupName": "Reflect",
+      "groupNameSlug": "Reflect",
       "publishDateRfc822": "Thu, 02 Jul 2015 08:23:00 GMT",
       "id": 58
     },
@@ -738,6 +796,7 @@
         31
       ],
       "groupName": "Reflect",
+      "groupNameSlug": "Reflect",
       "publishDateRfc822": "Fri, 03 Jul 2015 07:55:00 GMT",
       "id": 59
     },
@@ -753,6 +812,7 @@
         5
       ],
       "groupName": "Reflect",
+      "groupNameSlug": "Reflect",
       "publishDateRfc822": "Wed, 08 Jul 2015 08:14:00 GMT",
       "id": 60
     },
@@ -763,6 +823,7 @@
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [],
       "groupName": "Modules",
+      "groupNameSlug": "Modules",
       "publishDateRfc822": "Thu, 09 Jul 2015 08:46:00 GMT",
       "id": 61
     },
@@ -786,6 +847,7 @@
         }
       },
       "groupName": "Map",
+      "groupNameSlug": "Map",
       "publishDateRfc822": "Fri, 10 Jul 2015 08:09:00 GMT",
       "id": 62
     },
@@ -820,6 +882,7 @@
         ]
       },
       "groupName": "String",
+      "groupNameSlug": "String",
       "publishDateRfc822": "Tue, 14 Jul 2015 09:29:00 GMT",
       "id": 63
     },
@@ -844,6 +907,7 @@
         }
       ],
       "groupName": "Set",
+      "groupNameSlug": "Set",
       "publishDateRfc822": "Wed, 15 Jul 2015 16:12:00 GMT",
       "id": 64
     },
@@ -880,6 +944,7 @@
         }
       ],
       "groupName": "Set",
+      "groupNameSlug": "Set",
       "publishDateRfc822": "Thu, 16 Jul 2015 08:24:00 GMT",
       "id": 65
     },
@@ -918,6 +983,7 @@
         }
       ],
       "groupName": "Object literal",
+      "groupNameSlug": "Object_literal",
       "publishDateRfc822": "Mon, 27 Jul 2015 08:05:00 GMT",
       "id": 66
     },
@@ -964,6 +1030,7 @@
         }
       ],
       "groupName": "Object literal",
+      "groupNameSlug": "Object_literal",
       "publishDateRfc822": "Tue, 28 Jul 2015 07:57:00 GMT",
       "id": 67
     },
@@ -1013,6 +1080,7 @@
         }
       ],
       "groupName": "Reflect",
+      "groupNameSlug": "Reflect",
       "publishDateRfc822": "Thu, 30 Jul 2015 07:55:00 GMT",
       "id": 68
     },
@@ -1053,6 +1121,7 @@
         }
       ],
       "groupName": "Reflect",
+      "groupNameSlug": "Reflect",
       "publishDateRfc822": "Fri, 31 Jul 2015 08:12:00 GMT",
       "id": 69
     },
@@ -1093,6 +1162,7 @@
         }
       ],
       "groupName": "Set",
+      "groupNameSlug": "Set",
       "publishDateRfc822": "Mon, 03 Aug 2015 08:25:00 GMT",
       "id": 70
     }

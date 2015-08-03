@@ -49,7 +49,9 @@
           "groupName": "Template strings",
           "id": "4"
         }
-      ]
+      ],
+      "slug": "Template_strings",
+      "name": "Template strings"
     },
     "Arrow functions": {
       "items": [
@@ -76,7 +78,9 @@
           "groupName": "Arrow functions",
           "id": "6"
         }
-      ]
+      ],
+      "slug": "Arrow_functions",
+      "name": "Arrow functions"
     },
     "Block scope": {
       "items": [
@@ -102,7 +106,9 @@
           "groupName": "Block scope",
           "id": "8"
         }
-      ]
+      ],
+      "slug": "Block_scope",
+      "name": "Block scope"
     },
     "Object literal": {
       "items": [
@@ -219,7 +225,9 @@
           "groupName": "Object literal",
           "id": "67"
         }
-      ]
+      ],
+      "slug": "Object_literal",
+      "name": "Object literal"
     },
     "Destructuring": {
       "items": [
@@ -307,7 +315,9 @@
           "groupName": "Destructuring",
           "id": "15"
         }
-      ]
+      ],
+      "slug": "Destructuring",
+      "name": "Destructuring"
     },
     "Unicode": {
       "items": [
@@ -324,7 +334,9 @@
           "groupName": "Unicode",
           "id": "17"
         }
-      ]
+      ],
+      "slug": "Unicode",
+      "name": "Unicode"
     },
     "Rest operator": {
       "items": [
@@ -348,7 +360,9 @@
           "groupName": "Rest operator",
           "id": "19"
         }
-      ]
+      ],
+      "slug": "Rest_operator",
+      "name": "Rest operator"
     },
     "Spread operator": {
       "items": [
@@ -372,7 +386,9 @@
           "groupName": "Spread operator",
           "id": "21"
         }
-      ]
+      ],
+      "slug": "Spread_operator",
+      "name": "Spread operator"
     },
     "Class": {
       "items": [
@@ -446,7 +462,9 @@
           "groupName": "Class",
           "id": "28"
         }
-      ]
+      ],
+      "slug": "Class",
+      "name": "Class"
     },
     "Array": {
       "items": [
@@ -561,7 +579,9 @@
           "groupName": "Array",
           "id": "43"
         }
-      ]
+      ],
+      "slug": "Array",
+      "name": "Array"
     },
     "Symbol": {
       "items": [
@@ -597,7 +617,9 @@
           "groupName": "Symbol",
           "id": "36"
         }
-      ]
+      ],
+      "slug": "Symbol",
+      "name": "Symbol"
     },
     "Iterator": {
       "items": [
@@ -651,7 +673,9 @@
           "groupName": "Iterator",
           "id": "40"
         }
-      ]
+      ],
+      "slug": "Iterator",
+      "name": "Iterator"
     },
     "Map": {
       "items": [
@@ -726,7 +750,9 @@
           "groupName": "Map",
           "id": "62"
         }
-      ]
+      ],
+      "slug": "Map",
+      "name": "Map"
     },
     "Set": {
       "items": [
@@ -852,7 +878,9 @@
           "groupName": "Set",
           "id": "70"
         }
-      ]
+      ],
+      "slug": "Set",
+      "name": "Set"
     },
     "Generator": {
       "items": [
@@ -937,7 +965,9 @@
           "groupName": "Generator",
           "id": "56"
         }
-      ]
+      ],
+      "slug": "Generator",
+      "name": "Generator"
     },
     "Object": {
       "items": [
@@ -955,7 +985,9 @@
           "groupName": "Object",
           "id": "54"
         }
-      ]
+      ],
+      "slug": "Object",
+      "name": "Object"
     },
     "Number": {
       "items": [
@@ -969,7 +1001,9 @@
           "groupName": "Number",
           "id": "55"
         }
-      ]
+      ],
+      "slug": "Number",
+      "name": "Number"
     },
     "Default parameters": {
       "items": [
@@ -987,7 +1021,9 @@
           "groupName": "Default parameters",
           "id": "57"
         }
-      ]
+      ],
+      "slug": "Default_parameters",
+      "name": "Default parameters"
     },
     "Reflect": {
       "items": [
@@ -1126,7 +1162,9 @@
           "groupName": "Reflect",
           "id": "69"
         }
-      ]
+      ],
+      "slug": "Reflect",
+      "name": "Reflect"
     },
     "Modules": {
       "items": [
@@ -1140,7 +1178,9 @@
           "groupName": "Modules",
           "id": "61"
         }
-      ]
+      ],
+      "slug": "Modules",
+      "name": "Modules"
     },
     "String": {
       "items": [
@@ -1178,7 +1218,9 @@
           "groupName": "String",
           "id": "63"
         }
-      ]
+      ],
+      "slug": "String",
+      "name": "String"
     }
   }
 }
