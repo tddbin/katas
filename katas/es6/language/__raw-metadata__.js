@@ -792,12 +792,22 @@ export const all = {
             SET_BASICS, SET_ADD,
             DESTRUCTURING_OBJECT
           ],
-          publishDateUTC: new Date(Date.UTC(2015, AUGUST, 3, 8, 30)),
+          publishDateUTC: new Date(Date.UTC(2015, AUGUST, 3, 8, 25)),
           links: [
             {
               url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-set.prototype.clear',
               comment: 'How the implementation is specified.',
               tags: [TAG_SPECIFICATION]
+            },
+            {
+              url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/clear',
+              comment: 'The MDN docs.',
+              tags: [TAG_DOCS, TAG_MDN]
+            },
+            {
+              url: 'https://twitter.com/es6katas/status/628119522604662785',
+              comment: 'Announcement of this kata on twitter.',
+              tags: [TAG_ANNOUNCEMENT]
             }
           ]
         }
