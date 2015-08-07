@@ -1165,6 +1165,40 @@
       "groupNameSlug": "Set",
       "publishDateRfc822": "Mon, 03 Aug 2015 08:25:00 GMT",
       "id": 70
+    },
+    {
+      "name": "`string.repeat(count)`",
+      "description": "Appends `count` copies of `string` to each other and returns it.",
+      "path": "string-api/repeat",
+      "level": "BEGINNER",
+      "requiresKnowledgeFrom": [
+        7,
+        8,
+        22
+      ],
+      "links": {
+        "documentation": [
+          {
+            "url": "http://www.ecma-international.org/ecma-262/6.0/#sec-string.prototype.repeat",
+            "comment": "The official specification, actually quite good to read for this function.",
+            "tags": [
+              "spec"
+            ]
+          },
+          {
+            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat",
+            "comment": "The Mozilla Developer Network docs, contains good examples.",
+            "tags": [
+              "mdn",
+              "docs"
+            ]
+          }
+        ]
+      },
+      "groupName": "String",
+      "groupNameSlug": "String",
+      "publishDateRfc822": "Fri, 07 Aug 2015 07:55:00 GMT",
+      "id": 71
     }
   ]
 }
