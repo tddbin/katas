@@ -1116,7 +1116,7 @@ export const all = {
           path: 'string-api/repeat',
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [
-            LET,
+            LET, CONST,
             CLASS_CREATION
           ],
           publishDateUTC: new Date(Date.UTC(2015, AUGUST, 7, 7, 55)),
