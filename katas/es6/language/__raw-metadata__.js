@@ -77,6 +77,7 @@ const REFLECT_CONSTRUCT = 68;
 const REFLECT_DEFINEPROPERTY = 69;
 
 const SET_CLEAR = 70;
+const STRING_REPEAT = 71;
 
 const TAG_SPECIFICATION = 'spec';
 const TAG_MDN = 'mdn';
@@ -1103,6 +1104,31 @@ export const all = {
               },
               {
                 url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes',
+                comment: 'The Mozilla Developer Network docs, contains good examples.',
+                tags: [TAG_MDN, TAG_DOCS]
+              }
+            ]
+          }
+        },
+        [STRING_REPEAT]: {
+          name: '`string.repeat(count)`',
+          description: 'Appends `count` copies of `string` to each other and returns it.',
+          path: 'string-api/repeat',
+          level: SKILL_LEVEL.BEGINNER,
+          requiresKnowledgeFrom: [
+            LET,
+            CLASS_CREATION
+          ],
+          publishDateUTC: new Date(Date.UTC(2015, AUGUST, 7, 7, 55)),
+          links: {
+            documentation: [
+              {
+                url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-string.prototype.repeat',
+                comment: 'The official specification, actually quite good to read for this function.',
+                tags: [TAG_SPECIFICATION]
+              },
+              {
+                url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat',
                 comment: 'The Mozilla Developer Network docs, contains good examples.',
                 tags: [TAG_MDN, TAG_DOCS]
               }
