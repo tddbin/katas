@@ -78,6 +78,7 @@ const REFLECT_DEFINEPROPERTY = 69;
 
 const SET_CLEAR = 70;
 const STRING_REPEAT = 71;
+const STRING_STARTSWITH = 72;
 
 const TAG_SPECIFICATION = 'spec';
 const TAG_MDN = 'mdn';
@@ -195,8 +196,7 @@ export const all = {
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [
             CONST,
-            ARROW_FUNCTION_BASICS, 
-            CONST
+            ARROW_FUNCTION_BASICS
           ],
           publishDateUTC: new Date(Date.UTC(2015, MARCH, 25, 7, 55))
         },
@@ -1136,6 +1136,28 @@ export const all = {
                 url: 'https://twitter.com/es6katas/status/629561384896847873',
                 comment: 'Announcement of this kata on twitter.',
                 tags: [TAG_ANNOUNCEMENT]
+              }
+            ]
+          }
+        },
+        [STRING_STARTSWITH]: {
+          name: '`string.startsWith()`',
+          description: 'Determines whether a string begins with the characters of another string.',
+          path: 'string-api/startswith',
+          level: SKILL_LEVEL.BEGINNER,
+          requiresKnowledgeFrom: [],
+          publishDateUTC: new Date(Date.UTC(2015, AUGUST, ?????)),
+          links: {
+            documentation: [
+              {
+                url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-string.prototype.startswith',
+                comment: 'The official specification, actually quite good to read for this function.',
+                tags: [TAG_SPECIFICATION]
+              },
+              {
+                url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/startsWith',
+                comment: 'The Mozilla Developer Network docs, contains good examples.',
+                tags: [TAG_MDN, TAG_DOCS]
               }
             ]
           }
