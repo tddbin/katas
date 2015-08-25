@@ -1131,6 +1131,11 @@ export const all = {
                 url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat',
                 comment: 'The Mozilla Developer Network docs, contains good examples.',
                 tags: [TAG_MDN, TAG_DOCS]
+              },
+              {
+                url: 'https://twitter.com/es6katas/status/629561384896847873',
+                comment: 'Announcement of this kata on twitter.',
+                tags: [TAG_ANNOUNCEMENT]
               }
             ]
           }
