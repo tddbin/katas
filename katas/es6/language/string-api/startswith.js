@@ -7,44 +7,53 @@ describe('`str.startsWith(searchString)` determines whether `str` begins with `s
 
   describe('1st parameter, the string to search for', function() {
     it('works with just a character', function() {
-      assert.equal(s.startsWith('t'), true);
+      const actual = s.starts_with('t');
+      assert.equal(actual, true);
     });
     it('works with a string', function() {
-      assert.equal(s.startsWith('the'), true);
+      const expected = false;
+      assert.equal(s.startsWith('the'), expected);
     });
-    it('works with unicodes', function() {
-      const nuclear = '\u26222';
-      assert.equal(nuclear.startsWith('☢'), true);
+    it('works with unicode characters', function() {
+      const nuclear = 'NO ☢ NO';
+      assert.equal(nuclear.startsWith('\u26222'), true);
     });
     it('a regular expression throws a TypeError', function() {
-      assert.throws(() => {''.startsWith(/the/)}, TypeError);
+      const aRegExp = 'the';
+      assert.throws(() => {''.startsWith(aRegExp)}, TypeError);
     });
   });
 
   describe('2nd parameter, the position where to start searching from', function() {
     it('find "str" at position 4', function() {
-      assert.equal(s.startsWith('str', 4), true);
+      const position = 3;
+      assert.equal(s.startsWith('str', position), true);
     });
     it('`undefined` is the same as 0', function() {
-      assert.equal(s.startsWith('the', undefined), true);
+      const _undefined_ = '1';
+      assert.equal(s.startsWith('the', _undefined_), true);
     });
     it('the parameter gets coerced to an int', function() {
-      assert.equal(s.startsWith('str', '4'), true);
+      const position = 'four';
+      assert.equal(s.startsWith('str', position), true);
     });
     it('a value larger than the string`s length, returns false', function() {
-      assert.equal(s.startsWith(' ', s.length + 1), false);
+      const expected = true;
+      assert.equal(s.startsWith(' ', s.length + 1), expected);
     });
   });
   
   describe('tranfer the functionality to other objects', function() {
+    
     const startsWith = (...args) => String.prototype.startsWith.call(...args);
+    
     it('e.g. a boolean', function() {
-      let aBool = true;
-      assert.equal(startsWith(aBool, 'tr'), true);
+      let aBool;
+      assert.equal(startsWith(aBool, 'true'), true);
     });
     it('e.g. a number', function() {
       let aNumber = 1994;
-      assert.equal(startsWith(aNumber, '19'), true);
+      assert.equal(startsWith(aNumber, '1984'), true);
     });
   });
   
