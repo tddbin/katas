@@ -1146,7 +1146,7 @@ export const all = {
           path: 'string-api/startswith',
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [],
-          publishDateUTC: new Date(Date.UTC(2015, AUGUST, 26, 9, 38)),
+          publishDateUTC: new Date(Date.UTC(2015, AUGUST, 26, 9, 42)),
           links: {
             documentation: [
               {
