@@ -11,12 +11,12 @@ describe('`str.startsWith(searchString)` determines whether `str` begins with `s
       assert.equal(actual, true);
     });
     it('works with a string', function() {
-      const expected = false;
+      const expected = '???';
       assert.equal(s.startsWith('the'), expected);
     });
     it('works with unicode characters', function() {
       const nuclear = 'NO ☢ NO';
-      assert.equal(nuclear.startsWith('\u26222'), true);
+      assert.equal(nuclear.startsWith('☢'), true);
     });
     it('a regular expression throws a TypeError', function() {
       const aRegExp = 'the';
@@ -43,17 +43,21 @@ describe('`str.startsWith(searchString)` determines whether `str` begins with `s
     });
   });
   
-  describe('tranfer the functionality to other objects', function() {
+  describe('transfer the functionality to other objects', function() {
     
     const startsWith = (...args) => String.prototype.startsWith.call(...args);
     
     it('e.g. a boolean', function() {
       let aBool;
-      assert.equal(startsWith(aBool, 'true'), true);
+      assert.equal(startsWith(!aBool, 'false'), true);
     });
     it('e.g. a number', function() {
-      let aNumber = 1994;
-      assert.equal(startsWith(aNumber, '1984'), true);
+      let aNumber = 19;
+      assert.equal(startsWith(aNumber + 84, '1984'), true);
+    });
+    it('also using the position works', function() {
+      const position = 0;
+      assert.equal(startsWith(1994, '99', position), true);
     });
   });
   
