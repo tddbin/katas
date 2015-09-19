@@ -26,8 +26,8 @@ describe('template string, can contain multiline content', function() {
     var x = 42;
     it('like simple variables', function() {
       var multiline = `line 1
-          ${x}`;
-      assert.equal(multiline, 'line 1\n42');
+          $ {x}`;
+      assert.equal(multiline, 'line 1\n          42');
     });
     it('also here spaces matter', function() {
       var multiline = `
