@@ -106,7 +106,14 @@ export const all = {
           path: 'template-strings/basics',
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [],
-          publishDateUTC: new Date(Date.UTC(2015, MARCH, 13, 7, 55))
+          publishDateUTC: new Date(Date.UTC(2015, MARCH, 13, 7, 55)),
+          links: [
+            {
+              url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-template-literal-lexical-components',
+              comment: 'The specification describing the template string syntax.',
+              tags: [TAG_SPECIFICATION]
+            },
+          ]
         },
         [TEMPLATE_STRING_MULTILINE]: {
           name: 'multiline',
@@ -137,7 +144,14 @@ export const all = {
             TEMPLATE_STRING_BASICS,
             TEMPLATE_STRING_TAGGED
           ],
-          publishDateUTC: new Date(Date.UTC(2015, MARCH, 18, 7, 55))
+          publishDateUTC: new Date(Date.UTC(2015, MARCH, 18, 7, 55)),
+          links: [
+            {
+              url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-static-semantics-templatestrings',
+              comment: 'Describing the raw behavior.',
+              tags: [TAG_SPECIFICATION]
+            }
+          ]
         }
       }
     },
