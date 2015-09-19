@@ -1,11 +1,11 @@
 // 1: template strings - basics
 // To do: make all tests pass, leave the asserts unchanged!
 
-describe('a template string, is wrapped in backticks', function() {
+describe('a template string, is wrapped in ` (backticks) instead of \' or "', function() {
 
   describe('by default, behaves like a normal string', function() {
     it('just surrounded by backticks', function() {
-      var str = `like a string`;
+      var str = ``;
       assert.equal(str, 'like a string');
     });
   });
@@ -14,7 +14,7 @@ describe('a template string, is wrapped in backticks', function() {
   var y = 23;
   describe('can evaluate variables, which are wrapped in "${" and "}"', function() {
     it('e.g. a simple variable "${x}" just gets evaluated', function() {
-      var evaluated = `x=${x}`;
+      var evaluated = 'x=${x}';
       assert.equal(evaluated, 'x=' + x);
     });
     it('multiple variables get evaluated too', function() {
