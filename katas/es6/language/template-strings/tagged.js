@@ -1,5 +1,5 @@
 // 3: template strings - tagged
-// To do: make all tests pass
+// To do: make all tests pass, leave the asserts unchanged!
 
 describe('tagged template strings', function() {
   
