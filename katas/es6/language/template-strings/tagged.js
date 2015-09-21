@@ -3,7 +3,7 @@
 
 describe('tagged template strings, are an advanced form of template strings', function() {
   
-  it('syntax: prefix the template string with an expression (without "()" around it)', function() {
+  it('syntax: prefix the template string with a function to call (without "()" around it)', function() {
     function tagFunction(s) { 
       return s.toString();
     }
@@ -11,9 +11,9 @@ describe('tagged template strings, are an advanced form of template strings', fu
     assert.equal(evaluated, 'template string');
   });
   
-  describe('the expression can access each part of the template', function() {
+  describe('the function can access each part of the template', function() {
 
-    describe('the 1st parameter - contains only the pure strings of the template string', function() {
+    describe('the 1st parameter - receives only the pure strings of the template string', function() {
       
       function tagFunction(strings) { 
         return strings;
