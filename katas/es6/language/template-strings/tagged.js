@@ -7,7 +7,7 @@ describe('tagged template strings, are an advanced form of template strings', fu
     function tagFunction(s) { 
       return s.toString();
     }
-    var evaluated = tagFunction`template string`;
+    var evaluated = tagFunc `template string`;
     assert.equal(evaluated, 'template string');
   });
   
@@ -15,19 +15,17 @@ describe('tagged template strings, are an advanced form of template strings', fu
 
     describe('the 1st parameter - contains only the pure strings of the template string', function() {
       
+      function tagFunction(strings) { 
+        return strings;
+      }
+      
       it('the strings are an array', function() {
-        function tagFunction(strings) { 
-          return strings;
-        }
-        var evaluated = tagFunction`template string`;
-        assert.deepEqual(evaluated, ['template string']);
+        var result = 'template string';
+        assert.deepEqual(tagFunction`template string`, result);
       });
       
       it('expressions are NOT passed to it', function() {
-        function tagFunction(strings) {
-          return strings; 
-        }
-        var tagged = tagFunction`one${23}two`; 
+        var tagged = tagFunction`one${23}`; 
         assert.deepEqual(tagged, ['one', 'two']);
       });
       
@@ -52,9 +50,9 @@ describe('tagged template strings, are an advanced form of template strings', fu
         assert.equal(firstValueOnly`uno ${one}, dos ${two}`, 2);
       });
       
-      it('using ES6 rest syntax, all values can be accessed easily', function() {
+      it('using ES6 rest syntax, all values can be accessed via one variable', function() {
         function valuesOnly(stringsArray, ...allValues) { // using the new ES6 rest syntax
-          return allValues;
+          return;
         }
         assert.deepEqual(valuesOnly`uno=${one}, dos=${two}, tres=${three}`, [1, 2, 3]);
       });
