@@ -1,7 +1,7 @@
 // 4: template strings - String.raw
 // To do: make all tests pass, leave the asserts unchanged!
 
-describe('on tagged template strings you can use String.raw', function() {
+describe('on tagged template strings you can use the `raw` property like so `s.raw`', function() {
   
   it('the `raw` property accesses the string as it was entered', function() {
     function firstChar(strings) {
@@ -12,7 +12,7 @@ describe('on tagged template strings you can use String.raw', function() {
 
   it('`raw` can access the backslash of a line-break', function() {
     function firstCharEntered(strings) {
-      var lineBreak = strings.raw[0];
+      var lineBreak = strings.raw;
       return lineBreak;
     }
     assert.equal(firstCharEntered`\n`, '\\');
