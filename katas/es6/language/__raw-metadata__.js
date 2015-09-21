@@ -123,11 +123,18 @@ export const all = {
           requiresKnowledgeFrom: [
             TEMPLATE_STRING_BASICS
           ],
-          publishDateUTC: new Date(Date.UTC(2015, MARCH, 16, 7, 55))
+          publishDateUTC: new Date(Date.UTC(2015, MARCH, 16, 7, 55)),
+          links: [
+            {
+              url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings#Multi-line_strings',
+              comment: 'Description of multiline template strings.',
+              tags: [TAG_MDN, TAG_DOCS]
+            }
+          ]
         },
         [TEMPLATE_STRING_TAGGED]: {
-          name: 'tagged',
-          description: 'Tagged template strings are preceeded by an expression.',
+          name: 'tagged template strings',
+          description: 'Advanced form of template strings.',
           path: 'template-strings/tagged',
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [
