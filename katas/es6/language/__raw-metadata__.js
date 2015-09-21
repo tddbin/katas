@@ -109,10 +109,15 @@ export const all = {
           publishDateUTC: new Date(Date.UTC(2015, MARCH, 13, 7, 55)),
           links: [
             {
+              url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings',
+              comment: 'Description of template strings.',
+              tags: [TAG_MDN, TAG_DOCS]
+            },
+            {
               url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-template-literal-lexical-components',
               comment: 'The specification describing the template string syntax.',
               tags: [TAG_SPECIFICATION]
-            },
+            }
           ]
         },
         [TEMPLATE_STRING_MULTILINE]: {
@@ -161,6 +166,11 @@ export const all = {
           ],
           publishDateUTC: new Date(Date.UTC(2015, MARCH, 18, 7, 55)),
           links: [
+            {
+              url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings#Raw_strings',
+              comment: 'Description of `raw` property of tagged template strings.',
+              tags: [TAG_MDN, TAG_DOCS]
+            },
             {
               url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-static-semantics-templatestrings',
               comment: 'Describing the raw behavior.',
