@@ -133,7 +133,14 @@ export const all = {
           requiresKnowledgeFrom: [
             TEMPLATE_STRING_BASICS
           ],
-          publishDateUTC: new Date(Date.UTC(2015, MARCH, 17, 7, 55))
+          publishDateUTC: new Date(Date.UTC(2015, MARCH, 17, 7, 55)),
+          links: [
+            {
+              url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings#Tagged_template_strings',
+              comment: 'Description of tagged template strings.',
+              tags: [TAG_MDN, TAG_DOCS]
+            }
+          ]
         },
         [TEMPLATE_STRING_RAW]: {
           name: '`raw` property',
