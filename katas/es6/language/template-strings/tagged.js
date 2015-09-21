@@ -1,54 +1,63 @@
 // 3: template strings - tagged
-// To do: make all tests pass
+// To do: make all tests pass, leave the asserts unchanged!
 
-describe('tagged template strings', function() {
+describe('tagged template strings, are an advanced form of template strings', function() {
   
-  it('are preceeded by an expression, `toUpper` in this case', function() {
-    function toUpper(s) { 
-      return s.toString().toLowerCase();
+  it('syntax: prefix the template string with an expression (without "()" around it)', function() {
+    function tagFunction(s) { 
+      return s.toString();
     }
-    assert.equal(toUpper`Go up!`, 'GO UP!');
+    var evaluated = tagFunc `template string`;
+    assert.equal(evaluated, 'template string');
   });
   
   describe('the expression can access each part of the template', function() {
-    
-    it('the strings in the template', function() {
-      function toText(stringsArray) {
-        return stringsArray[0] + 'one'; 
+
+    describe('the 1st parameter - contains only the pure strings of the template string', function() {
+      
+      function tagFunction(strings) { 
+        return strings;
       }
-      assert.equal(toText`uno${1}`, 'uno = one');
+      
+      it('the strings are an array', function() {
+        var result = 'template string';
+        assert.deepEqual(tagFunction`template string`, result);
+      });
+      
+      it('expressions are NOT passed to it', function() {
+        var tagged = tagFunction`one${23}`; 
+        assert.deepEqual(tagged, ['one', 'two']);
+      });
+      
     });
-    
-    it('the first value in the template', function() {
-      function firstValueOnly(stringsArray, firstValue, secondValue) { 
-        return secondValue; 
-      }
+
+    describe('the 2nd and following parameters - contain the values of the processed substitution', function() {
+      
       var one = 1;
       var two = 2;
-      assert.equal(firstValueOnly`uno=${one}, dos=${two}, tres=?`, '1');
-    });
-    
-    it('all values in the template', function() {
-      function valuesOnly(stringsArray, ...valuesArray) { // using the new ES6 rest syntax
-        return valuesArray;
-      }
-      var one = 1;
-      var two = 2;
-      assert.equal(valuesOnly`uno=${one}, dos=${two}, tres=?`, '1; 2');
-    });
-    
-    it('can also return an object', function() {
-      function extractAll(stringsArray, ...valuesArray) {
-        return stringsArray + valuesArray;
-      }
-      var one = 1;
-      var two = 2;
-      assert.deepEqual(
-        extractAll`uno${one}dos${two}tres`,
-        {strings: ["uno", "dos", "tres"], values: [1, 2]}
-      );
-    });
-    
+      var three = 3;
+      it('the 2nd parameter contains the first expression`s value', function() {
+        function firstValueOnly(strings, first_value) { 
+          return firstValue;
+        }
+        assert.equal(firstValueOnly`uno ${one}, dos ${two}`, 1);
+      });
+      
+      it('the 3rd parameter contains the second expression`s value', function() {
+        function firstValueOnly(strings, firstValue, ____) { 
+          return secondValue;
+        }
+        assert.equal(firstValueOnly`uno ${one}, dos ${two}`, 2);
+      });
+      
+      it('using ES6 rest syntax, all values can be accessed via one variable', function() {
+        function valuesOnly(stringsArray, ...allValues) { // using the new ES6 rest syntax
+          return;
+        }
+        assert.deepEqual(valuesOnly`uno=${one}, dos=${two}, tres=${three}`, [1, 2, 3]);
+      });
+      
+    });     
   });
 
 });

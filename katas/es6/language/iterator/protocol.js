@@ -13,7 +13,7 @@ describe('A simple iterable without items inside, implementing the right protoco
     it('must return an object', function() {
       assert.equal(typeof iteratorFunction(), 'object');
     });
-    it('the object must have a key `next` which must be a function', function() {
+    it('the object must have a function assigned to a key `next`', function() {
       assert.equal(typeof iteratorFunction().next, 'function');
     });
     it('calling `next()` must return an object with `{done: true}`', function() {
