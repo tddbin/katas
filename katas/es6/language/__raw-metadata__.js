@@ -131,7 +131,8 @@ export const all = {
           path: 'template-strings/tagged',
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [
-            TEMPLATE_STRING_BASICS
+            TEMPLATE_STRING_BASICS,
+            REST_OPERATOR_AS_PARAMETER
           ],
           publishDateUTC: new Date(Date.UTC(2015, MARCH, 17, 7, 55)),
           links: [
