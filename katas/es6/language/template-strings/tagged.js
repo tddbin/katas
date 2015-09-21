@@ -4,7 +4,7 @@
 describe('tagged template strings, are an advanced form of template strings', function() {
   
   it('syntax: prefix the template string with a function to call (without "()" around it)', function() {
-    function tagFunction(s) { 
+    function tagFunction(s) {
       return s.toString();
     }
     var evaluated = tagFunc `template string`;
@@ -14,25 +14,25 @@ describe('tagged template strings, are an advanced form of template strings', fu
   describe('the function can access each part of the template', function() {
 
     describe('the 1st parameter - receives only the pure strings of the template string', function() {
-      
-      function tagFunction(strings) { 
+
+      function tagFunction(strings) {
         return strings;
       }
-      
+
       it('the strings are an array', function() {
         var result = 'template string';
         assert.deepEqual(tagFunction`template string`, result);
       });
-      
+
       it('expressions are NOT passed to it', function() {
         var tagged = tagFunction`one${23}`; 
         assert.deepEqual(tagged, ['one', 'two']);
       });
-      
+
     });
 
     describe('the 2nd and following parameters - contain the values of the processed substitution', function() {
-      
+
       var one = 1;
       var two = 2;
       var three = 3;
