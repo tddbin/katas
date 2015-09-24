@@ -5,13 +5,11 @@ describe('generator can be created in multiple ways', function() {
   
   it('the most common way is by adding `*` after `function`', function() {
     function g() {}
-    
     assertIsGenerator(g());
   });
   
   it('as a function expression, by adding a `*` after `function`', function() {
     let g = function() {};
-    
     assertIsGenerator(g());
   });
   
@@ -19,7 +17,6 @@ describe('generator can be created in multiple ways', function() {
     let obj = {
       g() {}
     };
-    
     assertIsGenerator(obj.g());
   });
   
@@ -28,7 +25,6 @@ describe('generator can be created in multiple ways', function() {
     let obj = {
       [generatorName]() {}
     };
-    
     assertIsGenerator(obj.g());
   });
   
@@ -37,7 +33,6 @@ describe('generator can be created in multiple ways', function() {
     class Klazz {
       [generatorName]() {}
     }
-    
     assertIsGenerator(new Klazz().g());
   });
 
