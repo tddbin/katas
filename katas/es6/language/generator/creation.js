@@ -15,7 +15,7 @@ describe('generator can be created in multiple ways', function() {
     assertIsGenerator(g());
   });
   
-  it('inside an object by prefixing the function with `*`', function() {
+  it('inside an object by prefixing the function name with `*`', function() {
     let obj = {
       g() {}
     };
