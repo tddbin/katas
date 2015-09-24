@@ -3,30 +3,33 @@
 
 describe('a generator returns an iterable object', function() {
   
-  const generatorFunction = function* (){
+  function* generatorFunction(){
     yield 1;
     yield 2;
-  };
+  }
   
   let generator;
   
   beforeEach(() => {
-    generator = new generatorFunction();
+    generator = generatorFunction();
   });
     
   it('a generator returns an object', function() {
-    const theType = typeof generator;
-    const expected = 'function';
+    const typeOfTheGenerator = '';
     
-    assert.equal(theType, expected);
+    assert.equal(typeof generator, typeOfTheGenerator);
   });
   
-  it('a generator object has an iterator, which is a function', function() {
-    const iterator = generator[Symbol.iterator];
-    const theType = typeof iterator;
-    const expected = 'object';
+  it('a generator object has a key `Symbol.iterator`', function() {
+    const key = '???';
     
-    assert.equal(theType, expected);
+    assert.equal(key in generator, true);
+  });
+  
+  it('the `Symbol.iterator` is a function', function() {
+    const theType = typeof generator.Symbol.iterator;
+    
+    assert.equal(theType, 'function');
   });
   
   it('can be looped with `for-of`, which expects an iterable', function() {
