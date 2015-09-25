@@ -950,6 +950,16 @@
             22
           ],
           "publishDateUTC": "2015-06-01T08:39:00.000Z",
+          "links": [
+            {
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*",
+              "comment": "Describes the `function*` declaration.",
+              "tags": [
+                "mdn",
+                "docs"
+              ]
+            }
+          ],
           "groupName": "Generator",
           "id": "49"
         },
@@ -976,6 +986,16 @@
             50
           ],
           "publishDateUTC": "2015-06-05T08:25:00.000Z",
+          "links": [
+            {
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield",
+              "comment": "Describing the `yield` keyword.",
+              "tags": [
+                "mdn",
+                "docs"
+              ]
+            }
+          ],
           "groupName": "Generator",
           "id": "51"
         },
@@ -1018,6 +1038,43 @@
           "publishDateUTC": "2015-06-29T11:49:00.000Z",
           "groupName": "Generator",
           "id": "56"
+        },
+        {
+          "name": "`return` inside a generator function",
+          "description": "Return statement in a generator function is special.",
+          "path": "generator/return",
+          "level": "ADVANCED",
+          "requiresKnowledgeFrom": [
+            8,
+            51,
+            52,
+            50,
+            49,
+            12,
+            29,
+            39
+          ],
+          "publishDateUTC": "2015-09-25T14:45:00.000Z",
+          "links": [
+            {
+              "url": "http://www.ecma-international.org/ecma-262/6.0/#sec-iteratorresult-interface",
+              "comment": "Description of the IteratorResult interface.",
+              "tags": [
+                "spec",
+                "docs"
+              ]
+            },
+            {
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield#Description",
+              "comment": "Describes how a return statement behaves inside a generator.",
+              "tags": [
+                "docs",
+                "mdn"
+              ]
+            }
+          ],
+          "groupName": "Generator",
+          "id": "73"
         }
       ],
       "slug": "Generator",

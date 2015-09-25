@@ -688,6 +688,16 @@
         16,
         22
       ],
+      "links": [
+        {
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*",
+          "comment": "Describes the `function*` declaration.",
+          "tags": [
+            "mdn",
+            "docs"
+          ]
+        }
+      ],
       "groupName": "Generator",
       "groupNameSlug": "Generator",
       "publishDateRfc822": "Mon, 01 Jun 2015 08:39:00 GMT",
@@ -715,6 +725,16 @@
         7,
         49,
         50
+      ],
+      "links": [
+        {
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield",
+          "comment": "Describing the `yield` keyword.",
+          "tags": [
+            "mdn",
+            "docs"
+          ]
+        }
       ],
       "groupName": "Generator",
       "groupNameSlug": "Generator",
@@ -1290,6 +1310,44 @@
       "groupNameSlug": "String",
       "publishDateRfc822": "Wed, 26 Aug 2015 09:42:00 GMT",
       "id": 72
+    },
+    {
+      "name": "`return` inside a generator function",
+      "description": "Return statement in a generator function is special.",
+      "path": "generator/return",
+      "level": "ADVANCED",
+      "requiresKnowledgeFrom": [
+        8,
+        51,
+        52,
+        50,
+        49,
+        12,
+        29,
+        39
+      ],
+      "links": [
+        {
+          "url": "http://www.ecma-international.org/ecma-262/6.0/#sec-iteratorresult-interface",
+          "comment": "Description of the IteratorResult interface.",
+          "tags": [
+            "spec",
+            "docs"
+          ]
+        },
+        {
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield#Description",
+          "comment": "Describes how a return statement behaves inside a generator.",
+          "tags": [
+            "docs",
+            "mdn"
+          ]
+        }
+      ],
+      "groupName": "Generator",
+      "groupNameSlug": "Generator",
+      "publishDateRfc822": "Fri, 25 Sep 2015 14:45:00 GMT",
+      "id": 73
     }
   ]
 }
