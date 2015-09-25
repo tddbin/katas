@@ -917,7 +917,14 @@ export const all = {
             GENERATOR_CREATION,
             GENERATOR_ITERATOR
           ],
-          publishDateUTC: new Date(Date.UTC(2015, JUNE, 5, 8, 25))
+          publishDateUTC: new Date(Date.UTC(2015, JUNE, 5, 8, 25)),
+          links: [
+            {
+              url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield',
+              comment: 'Describing the `yield` keyword.',
+              tags: [TAG_MDN, TAG_DOCS]
+            }
+          ]
         },
         [GENERATOR_SEND_VALUE]: {
           name: 'send value to a generator',
