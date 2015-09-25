@@ -6,7 +6,7 @@
   "scripts": {
     "build": "./scripts/build.sh",
     "build-for-offline": "npm run build && ./scripts/build-for-offline.sh",
-    "test": "mocha --compilers js:babel-core/register src/**/spec.js"
+    "test": "mocha --compilers js:babel/register src/**/spec.js"
   },
   "repository": {
     "type": "git",
@@ -19,11 +19,9 @@
   },
   "homepage": "https://github.com/tddbin/katas",
   "devDependencies": {
-    "push2gh-pages": "git://github.com/uxebu/push2gh-pages.git",
     "babel": "^5.4.7",
     "mocha": "^2.2.5",
-    "babel-core": "^5.6.20",
-    "watch": "latest",
-    "sinon": "latest"
+    "sinon": "latest",
+    "watch": "latest"
   }
 }
