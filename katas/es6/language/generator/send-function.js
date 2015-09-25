@@ -6,7 +6,7 @@ describe('pass a function to a generator', () => {
   it('the generator can receive a function as a value', function() {
     let fn = function() {};
     function* generatorFunction() {
-      assert.equal(yield null, fn);
+      assert.equal(yield null, fn); // remember, don't touch this line
     }
     let iterator = generatorFunction();
     iterator.next();
