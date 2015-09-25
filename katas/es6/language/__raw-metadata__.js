@@ -79,6 +79,7 @@ const REFLECT_DEFINEPROPERTY = 69;
 const SET_CLEAR = 70;
 const STRING_REPEAT = 71;
 const STRING_STARTSWITH = 72;
+const GENERATOR_RETURN = 73;
 
 const TAG_SPECIFICATION = 'spec';
 const TAG_MDN = 'mdn';
@@ -959,6 +960,22 @@ export const all = {
             GENERATOR_SEND_VALUE
           ],
           publishDateUTC: new Date(Date.UTC(2015, JUNE, 29, 11, 49))
+        },
+        [GENERATOR_RETURN]: {
+          name: '`return` inside a generator function',
+          description: 'Return statement in a generator function is special.',
+          path: 'generator/return',
+          level: SKILL_LEVEL.ADVANCED,
+          requiresKnowledgeFrom: [
+          ],
+          publishDateUTC: new Date(Date.UTC(2015, ????))
+          links: [
+            {
+              url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-iteratorresult-interface',
+              comment: 'Description of the IteratorResult interface.',
+              tags: [TAG_SPECIFICATION, TAG_DOCS]
+            }
+          ]
         }
       }
     },
