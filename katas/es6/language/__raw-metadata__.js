@@ -888,7 +888,14 @@ export const all = {
             OBJECT_LITERAL_COMPUTED_PROPERTIES,
             CLASS_CREATION
           ],
-          publishDateUTC: new Date(Date.UTC(2015, JUNE, 1, 8, 39))
+          publishDateUTC: new Date(Date.UTC(2015, JUNE, 1, 8, 39)),
+          links: [
+            {
+              url:'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*',
+              comment: 'Describes the `function*` declaration.',
+              tags: [TAG_MDN, TAG_DOCS]
+            }
+          ]
         },
         [GENERATOR_ITERATOR]: {
           name: 'iterator',
