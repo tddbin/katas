@@ -33,13 +33,12 @@ describe('pass a value to a generator', () => {
 
   it('a value passed to the 1st `next()` call is ignored', function() {
     function* generatorFunction() {
-      let value = yield 1;
-      yield value;
+      yield 1;
     }
 
     let iterator = generatorFunction();
     iterator.next('first');
-    assert.equal(iterator.next().value, 2);
+    assert.equal(iterator.next(2).value, 2);
   });
 
 });
