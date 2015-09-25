@@ -31,8 +31,11 @@ describe('pass a value to a generator', () => {
       yield 1;
     }
     let iterator = generatorFunction();
-    iterator.next('first');
-    assert.equal(iterator.next(2).value, 2);
+    const values = [
+      iterator.next('irrelevant').value, 
+      iterator.next(2).value
+    ];
+    assert.deepEqual(values, [1, 2]);
   });
 
 });
