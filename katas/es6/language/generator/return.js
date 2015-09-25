@@ -8,29 +8,30 @@ describe('`return` in a generator function is special', function() {
     it('returns an IteratorResult (an object with the properties `value` and `done`)', function() {
       function* generatorFunction() { return 1; }
       const returned = generatorFunction().next();
-      assert.deepEqual(Object.keys(returned), ['value', 'done']);
+      const propertyNames = [];
+      assert.deepEqual(Object.keys(returned), propertyNames);
     });
     
     it('the property `value` is the value given after the `return` statement', function() {
-      function* generatorFunction() { return 23; }
+      function* generatorFunction() { return; }
       const {value} = generatorFunction().next();
       assert.deepEqual(value, 23);
     });
     
     it('the property `done` is true', function() {
-      function* generatorFunction() { return 42; }
+      function* generatorFunction() { yield 42; }
       const {done} = generatorFunction().next();
       assert.deepEqual(done, true);
     });
     
     it('NOTE: `yield` does not return `done=true` but `done=false`!', function() {
-      function* generatorFunction() { yield 1; }
+      function* generatorFunction() { return 1; }
       const returned = generatorFunction().next();
       assert.deepEqual(returned, {value: 1, done: false});
     });
     
     it('a missing `return` returns {value: undefined, done: true}', function() {
-      function* generatorFunction() {}
+      function* generatorFunction() { return 1; }
       const returned = generatorFunction().next();
       assert.deepEqual(returned, {value: void 0, done: true});
     });
@@ -41,7 +42,6 @@ describe('`return` in a generator function is special', function() {
     
     function* generatorFunctionWithYieldAndReturn() {
       yield 1;
-      return 2;
     }
     
     it('is possible', function() {
@@ -55,21 +55,19 @@ describe('`return` in a generator function is special', function() {
     
     it('the mix behaves different to two `yield`s', function() {
       const iterator = generatorFunctionWithYieldAndReturn();
-      assert.deepEqual(Array.from(iterator), [1]);
+      const values = [1, 2];
+      assert.deepEqual(Array.from(iterator), values);
     });
 
     it('two `yield`s returning values', function() {
       function* generatorFunctionWithTwoYields() {
-        yield 1;
-        yield 2;
       }
-      const iterator = generatorFunctionWithTwoYields();
-      assert.deepEqual(Array.from(iterator), [1, 2]);
+      assert.deepEqual(Array.from(generatorFunctionWithTwoYields()), [1, 2]);
     });
 
     it('returning a yielded value', function() {
       function* generatorFunction() {
-        return yield 1;
+        return 1;
       }
       const iterator = generatorFunction();
       const values = [
