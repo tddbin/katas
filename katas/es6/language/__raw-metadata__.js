@@ -95,6 +95,7 @@ const MAY = 4;
 const JUNE = 5;
 const JULY = 6;
 const AUGUST = 7;
+const SEPTEMBER = 8;
 
 export const all = {
   name: 'ES6 Katas',
@@ -967,13 +968,24 @@ export const all = {
           path: 'generator/return',
           level: SKILL_LEVEL.ADVANCED,
           requiresKnowledgeFrom: [
+            CONST,
+            GENERATOR_YIELD, GENERATOR_SEND_VALUE,
+            GENERATOR_ITERATOR, GENERATOR_CREATION,
+            DESTRUCTURING_OBJECT,
+            ARRAY_FROM,
+            ITERATOR_PROTOCOL
           ],
-          publishDateUTC: new Date(Date.UTC(2015, ????))
+          publishDateUTC: new Date(Date.UTC(2015, SEPTEMBER, 25, 14, 40)),
           links: [
             {
               url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-iteratorresult-interface',
               comment: 'Description of the IteratorResult interface.',
               tags: [TAG_SPECIFICATION, TAG_DOCS]
+            },
+            {
+              url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield#Description',
+              comment: 'Describes how a return statement behaves inside a generator.',
+              tags: [TAG_DOCS, TAG_MDN]
             }
           ]
         }
