@@ -975,7 +975,7 @@ export const all = {
             ARRAY_FROM,
             ITERATOR_PROTOCOL
           ],
-          publishDateUTC: new Date(Date.UTC(2015, SEPTEMBER, 25, 14, 40)),
+          publishDateUTC: new Date(Date.UTC(2015, SEPTEMBER, 25, 14, 45)),
           links: [
             {
               url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-iteratorresult-interface',
