@@ -99,6 +99,8 @@ const AUGUST = 7;
 const SEPTEMBER = 8;
 const OCTOBER = 9;
 
+const toUtcDate = (...args) => new Date(Date.UTC(...args));
+
 export const all = {
   name: 'ES6 Katas',
   groups: {
@@ -1178,7 +1180,7 @@ export const all = {
             ARROW_FUNCTION_BASICS,
             DEFAULT_PARAMETERS_BASICS
           ],
-          publishDateUTC: new Date(Date.UTC(2015, JULY, 14, 9, 29)),
+          publishDateUTC: toUtcDate(2015, JULY, 14, 9, 29),
           links: {
             documentation: [
               {
@@ -1203,7 +1205,7 @@ export const all = {
             LET, CONST,
             CLASS_CREATION
           ],
-          publishDateUTC: new Date(Date.UTC(2015, AUGUST, 7, 7, 55)),
+          publishDateUTC: toUtcDate(2015, AUGUST, 7, 7, 55),
           links: {
             documentation: [
               {
@@ -1235,7 +1237,7 @@ export const all = {
             SPREAD_WITH_ARRAYS,
             ARROW_FUNCTION_BASICS
           ],
-          publishDateUTC: new Date(Date.UTC(2015, AUGUST, 26, 9, 42)),
+          publishDateUTC: toUtcDate(2015, AUGUST, 26, 9, 42),
           links: {
             documentation: [
               {
@@ -1262,7 +1264,7 @@ export const all = {
             REST_OPERATOR_AS_PARAMETER,
             SPREAD_WITH_ARRAYS
           ],
-          publishDateUTC: new Date(Date.UTC(2015, OCTOBER, ???)),
+          publishDateUTC: toUtcDate(2015, OCTOBER, ???),
           links: {
             documentation: [
               {
