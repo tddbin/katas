@@ -97,6 +97,7 @@ const JUNE = 5;
 const JULY = 6;
 const AUGUST = 7;
 const SEPTEMBER = 8;
+const OCTOBER = 9;
 
 export const all = {
   name: 'ES6 Katas',
