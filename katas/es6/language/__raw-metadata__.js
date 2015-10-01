@@ -1227,7 +1227,12 @@ export const all = {
           description: 'Determines whether a string begins with the characters of another string.',
           path: 'string-api/startswith',
           level: SKILL_LEVEL.BEGINNER,
-          requiresKnowledgeFrom: [],
+          requiresKnowledgeFrom: [
+            LET, CONST,
+            REST_OPERATOR_AS_PARAMETER,
+            SPREAD_WITH_ARRAYS,
+            ARROW_FUNCTION_BASICS
+          ],
           publishDateUTC: new Date(Date.UTC(2015, AUGUST, 26, 9, 42)),
           links: {
             documentation: [
