@@ -10,7 +10,7 @@ describe('`Reflect.getPrototypeOf` returns the prototype', function() {
     assert.strictEqual(viaObject, viaReflect);
   });
 
-  it('throw TypeError for a non-object', function() {
+  it('throws a TypeError for a non-object', function() {
     let fn = () => { Reflect.getPrototypeOf({}) };
     assert.throws(fn, TypeError);
   });

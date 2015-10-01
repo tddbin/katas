@@ -55,7 +55,7 @@ describe('`Reflect.defineProperty()` is like `Object.defineProperty()` but retur
   });
 
   describe('the `value` is part of the 3rd parameter, given as a property in an object `{value: ...}`', function() {
-    // The entire complexity of the 3rd parameter might be covered in later kata. 
+    // The entire complexity of the 3rd parameter might be covered in a later kata. 
     
     it('contains the initial value of the property, as an object in the property `value`', function() {
       let obj = {};
