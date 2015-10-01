@@ -25,7 +25,7 @@ describe('`str.endsWith(searchString)` determines whether `str` ends with `searc
   });
 
   describe('2nd parameter, searches within this string as if this string were only this long', function() {
-    it('find "el" at position 4', function() {
+    it('find "el" at a substring of the length 2', function() {
       const endPos = 0;
       assert.equal(s.endsWith('el', endPos), true);
     });
