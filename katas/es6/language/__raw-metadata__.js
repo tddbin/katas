@@ -80,6 +80,7 @@ const SET_CLEAR = 70;
 const STRING_REPEAT = 71;
 const STRING_STARTSWITH = 72;
 const GENERATOR_RETURN = 73;
+const STRING_ENDSWITH = 74;
 
 const TAG_SPECIFICATION = 'spec';
 const TAG_MDN = 'mdn';
@@ -1244,6 +1245,28 @@ export const all = {
               {
                 url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/startsWith',
                 comment: 'The Mozilla Developer Network docs, contains good examples.',
+                tags: [TAG_MDN, TAG_DOCS]
+              }
+            ]
+          }
+        },
+        [STRING_ENDSWITH]: {
+          name: '`string.endsWith()`',
+          description: 'Determines whether a string begins with the characters of another string.',
+          path: 'string-api/endswith',
+          level: SKILL_LEVEL.BEGINNER,
+          requiresKnowledgeFrom: [],
+          publishDateUTC: new Date(Date.UTC(2015, OCTOBER, ???)),
+          links: {
+            documentation: [
+              {
+                url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-string.prototype.endswith',
+                comment: 'The official specification, actually quite good to read for this function.',
+                tags: [TAG_SPECIFICATION]
+              },
+              {
+                url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith',
+                comment: 'The Mozilla Developer Network docs, contains some examples.',
                 tags: [TAG_MDN, TAG_DOCS]
               }
             ]
