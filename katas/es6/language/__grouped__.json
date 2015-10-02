@@ -1374,7 +1374,13 @@
           "description": "Determines whether a string begins with the characters of another string.",
           "path": "string-api/startswith",
           "level": "BEGINNER",
-          "requiresKnowledgeFrom": [],
+          "requiresKnowledgeFrom": [
+            7,
+            8,
+            18,
+            20,
+            5
+          ],
           "publishDateUTC": "2015-08-26T09:42:00.000Z",
           "links": {
             "documentation": [
@@ -1397,6 +1403,40 @@
           },
           "groupName": "String",
           "id": "72"
+        },
+        {
+          "name": "`string.endsWith()`",
+          "description": "Determines whether a string begins with the characters of another string.",
+          "path": "string-api/endswith",
+          "level": "BEGINNER",
+          "requiresKnowledgeFrom": [
+            8,
+            5,
+            18,
+            20
+          ],
+          "publishDateUTC": "2015-10-02T07:55:00.000Z",
+          "links": {
+            "documentation": [
+              {
+                "url": "http://www.ecma-international.org/ecma-262/6.0/#sec-string.prototype.endswith",
+                "comment": "The official specification, actually quite good to read for this function.",
+                "tags": [
+                  "spec"
+                ]
+              },
+              {
+                "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith",
+                "comment": "The Mozilla Developer Network docs, contains some examples.",
+                "tags": [
+                  "mdn",
+                  "docs"
+                ]
+              }
+            ]
+          },
+          "groupName": "String",
+          "id": "74"
         }
       ],
       "slug": "String",
