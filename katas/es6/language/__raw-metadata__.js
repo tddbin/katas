@@ -1264,7 +1264,7 @@ export const all = {
             REST_OPERATOR_AS_PARAMETER,
             SPREAD_WITH_ARRAYS
           ],
-          publishDateUTC: toUtcDate(2015, OCTOBER, ???),
+          publishDateUTC: toUtcDate(2015, OCTOBER, 2, 7, 55),
           links: {
             documentation: [
               {
