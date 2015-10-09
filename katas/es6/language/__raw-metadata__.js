@@ -81,6 +81,7 @@ const STRING_REPEAT = 71;
 const STRING_STARTSWITH = 72;
 const GENERATOR_RETURN = 73;
 const STRING_ENDSWITH = 74;
+const PROMISE_BASICS = 75;
 
 const TAG_SPECIFICATION = 'spec';
 const TAG_MDN = 'mdn';
@@ -89,6 +90,7 @@ const TAG_ARTICLE = 'article';
 const TAG_DOCS = 'docs';
 const TAG_ANNOUNCEMENT = 'announcement';
 const TAG_BOOK = 'book';
+const TAG_QUOTE = 'quote';
 
 const MARCH = 2;
 const APRIL = 3;
@@ -1281,7 +1283,35 @@ export const all = {
           }
         }
       }
-    }
+    },
     
+    'Promise': {
+      links: [
+        {
+          url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-promise-objects',
+          comment: 'A Promise is an object that is used as a placeholder for the eventual results of a deferred (and possibly asynchronous) computation.',
+          tags: [TAG_QUOTE, TAG_SPECIFICATION]
+        }
+      ],
+      items: {
+        [PROMISE_BASICS]: {
+          name: 'basics',
+          description: '',
+          path: 'promise/basics',
+          level: SKILL_LEVEL.BEGINNER,
+          requiresKnowledgeFrom: [],
+          publishDateUTC: toUtcDate(2015, OCTOBER, ???),
+          links: {
+            documentation: [
+              {
+                url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-promise-objects',
+                comment: 'A well understandable description of the states a promise can be in.',
+                tags: [TAG_SPECIFICATION]
+              }
+            ]
+          }
+        },
+      }
+    }
   }
 };
