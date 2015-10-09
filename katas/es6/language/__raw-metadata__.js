@@ -1296,11 +1296,11 @@ export const all = {
       items: {
         [PROMISE_BASICS]: {
           name: 'basics',
-          description: '',
+          description: 'A promise represents an operation that hasn`t completed yet, but is expected in the future.',
           path: 'promise/basics',
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [],
-          publishDateUTC: toUtcDate(2015, OCTOBER, ???),
+          publishDateUTC: toUtcDate(2015, OCTOBER, 9, 9, 30),
           links: {
             documentation: [
               {
