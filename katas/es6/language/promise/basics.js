@@ -40,7 +40,7 @@ describe('a Promise represents an operation that hasn`t completed yet, but is ex
       
       promise
         .then(value => {assert.equal(value, 42); done(); })
-        .catch(() => done(new Error('The promise is expected to resolve.')));
+        .catch(() => done(new Error('The promise is expected to resolve with 42!')));
     });
   
     it('rejecting a promise is done by calling the callback given as 2nd parameter', function(done) {
