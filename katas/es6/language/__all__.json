@@ -1389,6 +1389,28 @@
       "groupNameSlug": "String",
       "publishDateRfc822": "Fri, 02 Oct 2015 07:55:00 GMT",
       "id": 74
+    },
+    {
+      "name": "basics",
+      "description": "A promise represents an operation that hasn`t completed yet, but is expected in the future.",
+      "path": "promise/basics",
+      "level": "BEGINNER",
+      "requiresKnowledgeFrom": [],
+      "links": {
+        "documentation": [
+          {
+            "url": "http://www.ecma-international.org/ecma-262/6.0/#sec-promise-objects",
+            "comment": "A well understandable description of the states a promise can be in.",
+            "tags": [
+              "spec"
+            ]
+          }
+        ]
+      },
+      "groupName": "Promise",
+      "groupNameSlug": "Promise",
+      "publishDateRfc822": "Fri, 09 Oct 2015 09:30:00 GMT",
+      "id": 75
     }
   ]
 }
