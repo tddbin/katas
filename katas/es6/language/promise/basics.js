@@ -1,7 +1,7 @@
-// ??: Promise - basics 
+// 75: Promise - basics 
 // To do: make all tests pass, leave the assert lines unchanged!
 
-describe('A Promise represents an operation that hasn`t completed yet, but is expected in the future', function() {
+describe('a Promise represents an operation that hasn`t completed yet, but is expected in the future', function() {
 
   it('`Promise` is a global function', function() {
     assert.equal(typeof Promise, 'function');
@@ -21,7 +21,7 @@ describe('A Promise represents an operation that hasn`t completed yet, but is ex
 
   describe('a synchronous promise', function() {
   
-    it('that resolves', function() {
+    it('resolve a promise by calling the `resolve` function given as first parameter to the constructor', function() {
       let promise = new Promise((resolve) => {
         resolve();
       });
@@ -31,7 +31,7 @@ describe('A Promise represents an operation that hasn`t completed yet, but is ex
         .catch(() => assert.ok(false, 'The promise is expected to resolve.'));
     });
   
-    it('that resolves and returns a value', function() {
+    it('the `resolve` function can return a value, that is consumed by the `promise.then()` callback', function() {
       let promise = new Promise((resolve) => {
         resolve(42);
       });
@@ -41,7 +41,7 @@ describe('A Promise represents an operation that hasn`t completed yet, but is ex
         .catch(() => assert.ok(false, 'The promise is expected to resolve.'));
     });
   
-    it('a promise that only rejects', function() {
+    it('rejecting a promise is done by calling the callback given as 2nd parameter to the constructor', function() {
       let promise = new Promise((resolve, reject) => {
         reject();
       });
@@ -53,10 +53,9 @@ describe('A Promise represents an operation that hasn`t completed yet, but is ex
 
   });
 
-
   describe('an asynchronous promise', function() {
   
-    it('that resolves after a while', function(done) {
+    it('can resolve later, also by calling the first callback given to the constructor', function(done) {
       let promise = new Promise((resolve) => {
         setTimeout(() => resolve(), 100);
       });
@@ -66,7 +65,7 @@ describe('A Promise represents an operation that hasn`t completed yet, but is ex
         .catch(() => done(new Error('The promise is expected to resolve.')));
     });
   
-    it('a promise that only rejects', function(done) {
+    it('reject it at some later point in time, calling the 2nd callback given to the constructor', function(done) {
       let promise = new Promise((resolve, reject) => {
         setTimeout(() => reject(), 100);
       });
@@ -76,5 +75,18 @@ describe('A Promise represents an operation that hasn`t completed yet, but is ex
         .catch(() => done());
     });
 
+  });
+
+  describe('test library (mocha here) support for promises', function() {
+    
+    it('just returning the promise makes the test library check that the promise resolves', function() {
+      let promise = new Promise((resolve) => {
+        setTimeout(() => resolve(), 100);
+      });
+      
+      // return the promise to mocha, it has the checking for promise resolving built in, when it receives a promise
+      return promise;
+    });
+  
   });
 });
