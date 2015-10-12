@@ -438,24 +438,23 @@
       "path": "array-api/fill",
       "level": "TBD",
       "requiresKnowledgeFrom": [],
-      "links": {
-        "discussions": [
-          {
-            "url": "https://github.com/tddbin/es6katas.org/issues/9",
-            "comment": "A discussion in a github issue, about how to use this kata."
-          }
-        ],
-        "documentation": [
-          {
-            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fill",
-            "comment": "API doc on MDN.",
-            "tags": [
-              "mdn",
-              "docs"
-            ]
-          }
-        ]
-      },
+      "links": [
+        {
+          "url": "https://github.com/tddbin/es6katas.org/issues/9",
+          "comment": "A discussion in a github issue, about how to use this kata.",
+          "tags": [
+            "discussion"
+          ]
+        },
+        {
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fill",
+          "comment": "API doc on MDN.",
+          "tags": [
+            "mdn",
+            "docs"
+          ]
+        }
+      ],
       "groupName": "Array",
       "groupNameSlug": "Array",
       "publishDateRfc822": "Tue, 28 Apr 2015 07:55:00 GMT",
@@ -911,15 +910,15 @@
         44,
         46
       ],
-      "links": {
-        "various": {
+      "links": [
+        {
           "url": "https://www.youtube.com/watch?v=71aX1z0SzZU",
           "comment": "A video (15min) documenting how this kata was created.",
           "tags": [
             "video"
           ]
         }
-      },
+      ],
       "groupName": "Map",
       "groupNameSlug": "Map",
       "publishDateRfc822": "Fri, 10 Jul 2015 08:09:00 GMT",
@@ -936,25 +935,23 @@
         5,
         57
       ],
-      "links": {
-        "documentation": [
-          {
-            "url": "http://www.ecma-international.org/ecma-262/6.0/#sec-string.prototype.includes",
-            "comment": "The official specification, actually quite good to read for this function.",
-            "tags": [
-              "spec"
-            ]
-          },
-          {
-            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes",
-            "comment": "The Mozilla Developer Network docs, contains good examples.",
-            "tags": [
-              "mdn",
-              "docs"
-            ]
-          }
-        ]
-      },
+      "links": [
+        {
+          "url": "http://www.ecma-international.org/ecma-262/6.0/#sec-string.prototype.includes",
+          "comment": "The official specification, actually quite good to read for this function.",
+          "tags": [
+            "spec"
+          ]
+        },
+        {
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes",
+          "comment": "The Mozilla Developer Network docs, contains good examples.",
+          "tags": [
+            "mdn",
+            "docs"
+          ]
+        }
+      ],
       "groupName": "String",
       "groupNameSlug": "String",
       "publishDateRfc822": "Tue, 14 Jul 2015 09:29:00 GMT",
@@ -1250,32 +1247,30 @@
         8,
         22
       ],
-      "links": {
-        "documentation": [
-          {
-            "url": "http://www.ecma-international.org/ecma-262/6.0/#sec-string.prototype.repeat",
-            "comment": "The official specification, actually quite good to read for this function.",
-            "tags": [
-              "spec"
-            ]
-          },
-          {
-            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat",
-            "comment": "The Mozilla Developer Network docs, contains good examples.",
-            "tags": [
-              "mdn",
-              "docs"
-            ]
-          },
-          {
-            "url": "https://twitter.com/es6katas/status/629561384896847873",
-            "comment": "Announcement of this kata on twitter.",
-            "tags": [
-              "announcement"
-            ]
-          }
-        ]
-      },
+      "links": [
+        {
+          "url": "http://www.ecma-international.org/ecma-262/6.0/#sec-string.prototype.repeat",
+          "comment": "The official specification, actually quite good to read for this function.",
+          "tags": [
+            "spec"
+          ]
+        },
+        {
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat",
+          "comment": "The Mozilla Developer Network docs, contains good examples.",
+          "tags": [
+            "mdn",
+            "docs"
+          ]
+        },
+        {
+          "url": "https://twitter.com/es6katas/status/629561384896847873",
+          "comment": "Announcement of this kata on twitter.",
+          "tags": [
+            "announcement"
+          ]
+        }
+      ],
       "groupName": "String",
       "groupNameSlug": "String",
       "publishDateRfc822": "Fri, 07 Aug 2015 07:55:00 GMT",
@@ -1293,25 +1288,23 @@
         20,
         5
       ],
-      "links": {
-        "documentation": [
-          {
-            "url": "http://www.ecma-international.org/ecma-262/6.0/#sec-string.prototype.startswith",
-            "comment": "The official specification, actually quite good to read for this function.",
-            "tags": [
-              "spec"
-            ]
-          },
-          {
-            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/startsWith",
-            "comment": "The Mozilla Developer Network docs, contains good examples.",
-            "tags": [
-              "mdn",
-              "docs"
-            ]
-          }
-        ]
-      },
+      "links": [
+        {
+          "url": "http://www.ecma-international.org/ecma-262/6.0/#sec-string.prototype.startswith",
+          "comment": "The official specification, actually quite good to read for this function.",
+          "tags": [
+            "spec"
+          ]
+        },
+        {
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/startsWith",
+          "comment": "The Mozilla Developer Network docs, contains good examples.",
+          "tags": [
+            "mdn",
+            "docs"
+          ]
+        }
+      ],
       "groupName": "String",
       "groupNameSlug": "String",
       "publishDateRfc822": "Wed, 26 Aug 2015 09:42:00 GMT",
@@ -1366,25 +1359,23 @@
         18,
         20
       ],
-      "links": {
-        "documentation": [
-          {
-            "url": "http://www.ecma-international.org/ecma-262/6.0/#sec-string.prototype.endswith",
-            "comment": "The official specification, actually quite good to read for this function.",
-            "tags": [
-              "spec"
-            ]
-          },
-          {
-            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith",
-            "comment": "The Mozilla Developer Network docs, contains some examples.",
-            "tags": [
-              "mdn",
-              "docs"
-            ]
-          }
-        ]
-      },
+      "links": [
+        {
+          "url": "http://www.ecma-international.org/ecma-262/6.0/#sec-string.prototype.endswith",
+          "comment": "The official specification, actually quite good to read for this function.",
+          "tags": [
+            "spec"
+          ]
+        },
+        {
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith",
+          "comment": "The Mozilla Developer Network docs, contains some examples.",
+          "tags": [
+            "mdn",
+            "docs"
+          ]
+        }
+      ],
       "groupName": "String",
       "groupNameSlug": "String",
       "publishDateRfc822": "Fri, 02 Oct 2015 07:55:00 GMT",
@@ -1396,17 +1387,15 @@
       "path": "promise/basics",
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [],
-      "links": {
-        "documentation": [
-          {
-            "url": "http://www.ecma-international.org/ecma-262/6.0/#sec-promise-objects",
-            "comment": "A well understandable description of the states a promise can be in.",
-            "tags": [
-              "spec"
-            ]
-          }
-        ]
-      },
+      "links": [
+        {
+          "url": "http://www.ecma-international.org/ecma-262/6.0/#sec-promise-objects",
+          "comment": "A well understandable description of the states a promise can be in.",
+          "tags": [
+            "spec"
+          ]
+        }
+      ],
       "groupName": "Promise",
       "groupNameSlug": "Promise",
       "publishDateRfc822": "Fri, 09 Oct 2015 09:30:00 GMT",
