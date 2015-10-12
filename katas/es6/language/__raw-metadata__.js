@@ -91,6 +91,7 @@ const TAG_DOCS = 'docs';
 const TAG_ANNOUNCEMENT = 'announcement';
 const TAG_BOOK = 'book';
 const TAG_QUOTE = 'quote';
+const TAG_DISCUSSION = 'discussion';
 
 const MARCH = 2;
 const APRIL = 3;
@@ -557,21 +558,18 @@ export const all = {
           requiresKnowledgeFrom: [
           ],
           publishDateUTC: new Date(Date.UTC(2015, APRIL, 28, 7, 55)),
-          links: {
-            discussions: [
-              {
-                url: 'https://github.com/tddbin/es6katas.org/issues/9',
-                comment: 'A discussion in a github issue, about how to use this kata.'
-              }
-            ],
-            documentation: [
-              {
-                url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fill',
-                comment: 'API doc on MDN.',
-                tags: [TAG_MDN, TAG_DOCS]
-              }
-            ]
-          }
+          links: [
+            {
+              url: 'https://github.com/tddbin/es6katas.org/issues/9',
+              comment: 'A discussion in a github issue, about how to use this kata.',
+              tags: [TAG_DISCUSSION]
+            },
+            {
+              url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fill',
+              comment: 'API doc on MDN.',
+              tags: [TAG_MDN, TAG_DOCS]
+            }
+          ]
         },
         [ARRAY_FIND]: {
           name: '`[].find()`',
@@ -753,13 +751,13 @@ export const all = {
             //MAP_DELETE
           ],
           publishDateUTC: new Date(Date.UTC(2015, JULY, 10, 8, 9)),
-          links: {
-            various: {
+          links: [
+            {
               url: 'https://www.youtube.com/watch?v=71aX1z0SzZU',
               comment: 'A video (15min) documenting how this kata was created.',
               tags: [TAG_VIDEO]
             } 
-          }
+          ]
         }
       }
     },
@@ -1183,20 +1181,18 @@ export const all = {
             DEFAULT_PARAMETERS_BASICS
           ],
           publishDateUTC: toUtcDate(2015, JULY, 14, 9, 29),
-          links: {
-            documentation: [
-              {
-                url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-string.prototype.includes',
-                comment: 'The official specification, actually quite good to read for this function.',
-                tags: [TAG_SPECIFICATION]
-              },
-              {
-                url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes',
-                comment: 'The Mozilla Developer Network docs, contains good examples.',
-                tags: [TAG_MDN, TAG_DOCS]
-              }
-            ]
-          }
+          links: [
+            {
+              url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-string.prototype.includes',
+              comment: 'The official specification, actually quite good to read for this function.',
+              tags: [TAG_SPECIFICATION]
+            },
+            {
+              url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes',
+              comment: 'The Mozilla Developer Network docs, contains good examples.',
+              tags: [TAG_MDN, TAG_DOCS]
+            }
+          ]
         },
         [STRING_REPEAT]: {
           name: '`string.repeat(count)`',
@@ -1208,25 +1204,23 @@ export const all = {
             CLASS_CREATION
           ],
           publishDateUTC: toUtcDate(2015, AUGUST, 7, 7, 55),
-          links: {
-            documentation: [
-              {
-                url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-string.prototype.repeat',
-                comment: 'The official specification, actually quite good to read for this function.',
-                tags: [TAG_SPECIFICATION]
-              },
-              {
-                url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat',
-                comment: 'The Mozilla Developer Network docs, contains good examples.',
-                tags: [TAG_MDN, TAG_DOCS]
-              },
-              {
-                url: 'https://twitter.com/es6katas/status/629561384896847873',
-                comment: 'Announcement of this kata on twitter.',
-                tags: [TAG_ANNOUNCEMENT]
-              }
-            ]
-          }
+          links: [
+            {
+              url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-string.prototype.repeat',
+              comment: 'The official specification, actually quite good to read for this function.',
+              tags: [TAG_SPECIFICATION]
+            },
+            {
+              url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat',
+              comment: 'The Mozilla Developer Network docs, contains good examples.',
+              tags: [TAG_MDN, TAG_DOCS]
+            },
+            {
+              url: 'https://twitter.com/es6katas/status/629561384896847873',
+              comment: 'Announcement of this kata on twitter.',
+              tags: [TAG_ANNOUNCEMENT]
+            }
+          ]
         },
         [STRING_STARTSWITH]: {
           name: '`string.startsWith()`',
@@ -1240,20 +1234,18 @@ export const all = {
             ARROW_FUNCTION_BASICS
           ],
           publishDateUTC: toUtcDate(2015, AUGUST, 26, 9, 42),
-          links: {
-            documentation: [
-              {
-                url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-string.prototype.startswith',
-                comment: 'The official specification, actually quite good to read for this function.',
-                tags: [TAG_SPECIFICATION]
-              },
-              {
-                url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/startsWith',
-                comment: 'The Mozilla Developer Network docs, contains good examples.',
-                tags: [TAG_MDN, TAG_DOCS]
-              }
-            ]
-          }
+          links: [
+            {
+              url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-string.prototype.startswith',
+              comment: 'The official specification, actually quite good to read for this function.',
+              tags: [TAG_SPECIFICATION]
+            },
+            {
+              url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/startsWith',
+              comment: 'The Mozilla Developer Network docs, contains good examples.',
+              tags: [TAG_MDN, TAG_DOCS]
+            }
+          ]
         },
         [STRING_ENDSWITH]: {
           name: '`string.endsWith()`',
@@ -1267,20 +1259,18 @@ export const all = {
             SPREAD_WITH_ARRAYS
           ],
           publishDateUTC: toUtcDate(2015, OCTOBER, 2, 7, 55),
-          links: {
-            documentation: [
-              {
-                url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-string.prototype.endswith',
-                comment: 'The official specification, actually quite good to read for this function.',
-                tags: [TAG_SPECIFICATION]
-              },
-              {
-                url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith',
-                comment: 'The Mozilla Developer Network docs, contains some examples.',
-                tags: [TAG_MDN, TAG_DOCS]
-              }
-            ]
-          }
+          links: [
+            {
+              url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-string.prototype.endswith',
+              comment: 'The official specification, actually quite good to read for this function.',
+              tags: [TAG_SPECIFICATION]
+            },
+            {
+              url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith',
+              comment: 'The Mozilla Developer Network docs, contains some examples.',
+              tags: [TAG_MDN, TAG_DOCS]
+            }
+          ]
         }
       }
     },
@@ -1301,15 +1291,13 @@ export const all = {
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [],
           publishDateUTC: toUtcDate(2015, OCTOBER, 9, 9, 30),
-          links: {
-            documentation: [
-              {
-                url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-promise-objects',
-                comment: 'A well understandable description of the states a promise can be in.',
-                tags: [TAG_SPECIFICATION]
-              }
-            ]
-          }
+          links: [
+            {
+              url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-promise-objects',
+              comment: 'A well understandable description of the states a promise can be in.',
+              tags: [TAG_SPECIFICATION]
+            }
+          ]
         },
       }
     }
