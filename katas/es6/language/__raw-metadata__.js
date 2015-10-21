@@ -1,5 +1,7 @@
 import {SKILL_LEVEL} from '../../skill-levels';
 import * as tag from '../../tags';
+import {toUtcDate}  from '../../date';
+import * as date from '../../date';
 
 const TEMPLATE_STRING_BASICS = 1;
 const TEMPLATE_STRING_MULTILINE = 2;
@@ -84,17 +86,6 @@ const GENERATOR_RETURN = 73;
 const STRING_ENDSWITH = 74;
 const PROMISE_BASICS = 75;
 
-const MARCH = 2;
-const APRIL = 3;
-const MAY = 4;
-const JUNE = 5;
-const JULY = 6;
-const AUGUST = 7;
-const SEPTEMBER = 8;
-const OCTOBER = 9;
-
-const toUtcDate = (...args) => new Date(Date.UTC(...args));
-
 export const all = {
   name: 'ES6 Katas',
   groups: {
@@ -106,7 +97,7 @@ export const all = {
           path: 'template-strings/basics',
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [],
-          publishDateUTC: new Date(Date.UTC(2015, MARCH, 13, 7, 55)),
+          publishDateUTC: new Date(Date.UTC(2015, date.MARCH, 13, 7, 55)),
           links: [
             {
               url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings',
@@ -128,7 +119,7 @@ export const all = {
           requiresKnowledgeFrom: [
             TEMPLATE_STRING_BASICS
           ],
-          publishDateUTC: new Date(Date.UTC(2015, MARCH, 16, 7, 55)),
+          publishDateUTC: new Date(Date.UTC(2015, date.MARCH, 16, 7, 55)),
           links: [
             {
               url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings#Multi-line_strings',
@@ -146,7 +137,7 @@ export const all = {
             TEMPLATE_STRING_BASICS,
             REST_OPERATOR_AS_PARAMETER
           ],
-          publishDateUTC: new Date(Date.UTC(2015, MARCH, 17, 7, 55)),
+          publishDateUTC: new Date(Date.UTC(2015, date.MARCH, 17, 7, 55)),
           links: [
             {
               url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings#Tagged_template_strings',
@@ -164,7 +155,7 @@ export const all = {
             TEMPLATE_STRING_BASICS,
             TEMPLATE_STRING_TAGGED
           ],
-          publishDateUTC: new Date(Date.UTC(2015, MARCH, 18, 7, 55)),
+          publishDateUTC: new Date(Date.UTC(2015, date.MARCH, 18, 7, 55)),
           links: [
             {
               url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings#Raw_strings',
@@ -188,7 +179,7 @@ export const all = {
           path: 'arrow-functions/basics',
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [],
-          publishDateUTC: new Date(Date.UTC(2015, MARCH, 19, 7, 55))
+          publishDateUTC: new Date(Date.UTC(2015, date.MARCH, 19, 7, 55))
         },
         [ARROW_FUNCTION_BINDING]: {
           name: 'function binding',
@@ -199,7 +190,7 @@ export const all = {
             ARROW_FUNCTION_BASICS,
             CLASS_CREATION
           ],
-          publishDateUTC: new Date(Date.UTC(2015, MARCH, 20, 7, 55))
+          publishDateUTC: new Date(Date.UTC(2015, date.MARCH, 20, 7, 55))
         }
       }
     },
@@ -212,7 +203,7 @@ export const all = {
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [
           ],
-          publishDateUTC: new Date(Date.UTC(2015, MARCH, 23, 7, 55))
+          publishDateUTC: new Date(Date.UTC(2015, date.MARCH, 23, 7, 55))
         },
         [CONST]: {
           name: '`const` declaration',
@@ -222,7 +213,7 @@ export const all = {
           requiresKnowledgeFrom: [
             LET
           ],
-          publishDateUTC: new Date(Date.UTC(2015, MARCH, 24, 7, 55))
+          publishDateUTC: new Date(Date.UTC(2015, date.MARCH, 24, 7, 55))
         }
       }
     },
@@ -237,7 +228,7 @@ export const all = {
             CONST,
             ARROW_FUNCTION_BASICS
           ],
-          publishDateUTC: new Date(Date.UTC(2015, MARCH, 25, 7, 55))
+          publishDateUTC: new Date(Date.UTC(2015, date.MARCH, 25, 7, 55))
         },
         [OBJECT_LITERAL_COMPUTED_PROPERTIES]: {
           name: 'computed properties',
@@ -251,7 +242,7 @@ export const all = {
             CONST
             //OBJECT_LITERAL_GETTER
           ],
-          publishDateUTC: new Date(Date.UTC(2015, APRIL, 3, 7, 55))
+          publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 3, 7, 55))
         },
         [OBJECT_LITERAL_GETTER]: {
           name: 'getter',
@@ -263,7 +254,7 @@ export const all = {
             OBJECT_LITERAL_BASICS,
             OBJECT_LITERAL_COMPUTED_PROPERTIES
           ],
-          publishDateUTC: new Date(Date.UTC(2015, JULY, 27, 8, 5)),
+          publishDateUTC: new Date(Date.UTC(2015, date.JULY, 27, 8, 5)),
           links: [
             {
               url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get',
@@ -292,7 +283,7 @@ export const all = {
             OBJECT_LITERAL_BASICS,
             OBJECT_LITERAL_COMPUTED_PROPERTIES
           ],
-          publishDateUTC: new Date(Date.UTC(2015, JULY, 28, 7, 57)),
+          publishDateUTC: new Date(Date.UTC(2015, date.JULY, 28, 7, 57)),
           links: [
             {
               url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set',
@@ -331,7 +322,7 @@ export const all = {
             TEMPLATE_STRING_BASICS
             //FOR_OF
           ],
-          publishDateUTC: new Date(Date.UTC(2015, MARCH, 26, 7, 55))
+          publishDateUTC: new Date(Date.UTC(2015, date.MARCH, 26, 7, 55))
         },
         [DESTRUCTURING_STRING]: {
           name: 'string',
@@ -342,7 +333,7 @@ export const all = {
             CONST,
             UNICODE_IN_STRINGS
           ],
-          publishDateUTC: new Date(Date.UTC(2015, MARCH, 27, 7, 55))
+          publishDateUTC: new Date(Date.UTC(2015, date.MARCH, 27, 7, 55))
         },
         [DESTRUCTURING_OBJECT]: {
           name: 'object',
@@ -353,7 +344,7 @@ export const all = {
             CONST,
             OBJECT_LITERAL_BASICS
           ],
-          publishDateUTC: new Date(Date.UTC(2015, MARCH, 30, 7, 55))
+          publishDateUTC: new Date(Date.UTC(2015, date.MARCH, 30, 7, 55))
         },
         [DESTRUCTURING_DEFAULTS]: {
           name: 'defaults',
@@ -365,7 +356,7 @@ export const all = {
             DESTRUCTURING_ARRAY,
             DESTRUCTURING_OBJECT
           ],
-          publishDateUTC: new Date(Date.UTC(2015, MARCH, 31, 7, 55))
+          publishDateUTC: new Date(Date.UTC(2015, date.MARCH, 31, 7, 55))
         },
         [DESTRUCTURING_PARAMETERS]: {
           name: 'parameters',
@@ -377,7 +368,7 @@ export const all = {
             DESTRUCTURING_OBJECT,
             ARROW_FUNCTION_BASICS
           ],
-          publishDateUTC: new Date(Date.UTC(2015, APRIL, 1, 7, 55))
+          publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 1, 7, 55))
         },
         [DESTRUCTURING_ASSIGN]: {
           name: 'assign',
@@ -391,7 +382,7 @@ export const all = {
             CONST,
             ARROW_FUNCTION_BASICS
           ],
-          publishDateUTC: new Date(Date.UTC(2015, APRIL, 2, 7, 55))
+          publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 2, 7, 55))
         }
       }
     },
@@ -406,7 +397,7 @@ export const all = {
             CONST,
             TEMPLATE_STRING_BASICS
           ],
-          publishDateUTC: new Date(Date.UTC(2015, APRIL, 6, 7, 55))
+          publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 6, 7, 55))
         }
       }
     },
@@ -419,7 +410,7 @@ export const all = {
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [
           ],
-          publishDateUTC: new Date(Date.UTC(2015, APRIL, 7, 8, 15))
+          publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 7, 8, 15))
         },
         [REST_OPERATOR_WITH_DESTRUCTURING]: {
           name: 'with destructuring',
@@ -428,7 +419,7 @@ export const all = {
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [
           ],
-          publishDateUTC: new Date(Date.UTC(2015, APRIL, 8, 7, 55))
+          publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 8, 7, 55))
         }
       }
     },
@@ -441,7 +432,7 @@ export const all = {
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [
           ],
-          publishDateUTC: new Date(Date.UTC(2015, APRIL, 10, 8, 18))
+          publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 10, 8, 18))
         },
         [SPREAD_WITH_STRINGS]: {
           name: 'with strings',
@@ -450,7 +441,7 @@ export const all = {
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [
           ],
-          publishDateUTC: new Date(Date.UTC(2015, APRIL, 13, 7, 55))
+          publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 13, 7, 55))
         }
       }
     },
@@ -463,7 +454,7 @@ export const all = {
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [
           ],
-          publishDateUTC: new Date(Date.UTC(2015, APRIL, 14, 7, 55))
+          publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 14, 7, 55))
         },
         [CLASS_ACCESSORS]: {
           name: 'accessors',
@@ -472,7 +463,7 @@ export const all = {
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [
           ],
-          publishDateUTC: new Date(Date.UTC(2015, APRIL, 15, 7, 56))
+          publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 15, 7, 56))
         },
         [CLASS_STATIC]: {
           name: 'static',
@@ -481,7 +472,7 @@ export const all = {
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [
           ],
-          publishDateUTC: new Date(Date.UTC(2015, APRIL, 16, 7, 55))
+          publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 16, 7, 55))
         },
         [CLASS_EXTENDS]: {
           name: 'extends',
@@ -490,7 +481,7 @@ export const all = {
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [
           ],
-          publishDateUTC: new Date(Date.UTC(2015, APRIL, 17, 8, 25))
+          publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 17, 8, 25))
         },
         [CLASS_MORE_EXTENDS]: {
           name: 'more extends',
@@ -499,7 +490,7 @@ export const all = {
           level: SKILL_LEVEL.ADVANCED,
           requiresKnowledgeFrom: [
           ],
-          publishDateUTC: new Date(Date.UTC(2015, APRIL, 20, 7, 55))
+          publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 20, 7, 55))
         },
         [CLASS_SUPER_IN_METHOD]: {
           name: 'super in method',
@@ -508,7 +499,7 @@ export const all = {
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [
           ],
-          publishDateUTC: new Date(Date.UTC(2015, APRIL, 21, 7, 55))
+          publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 21, 7, 55))
         },
         [CLASS_SUPER_IN_CONSTRUCTOR]: {
           name: 'super in constructor',
@@ -517,7 +508,7 @@ export const all = {
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [
           ],
-          publishDateUTC: new Date(Date.UTC(2015, APRIL, 22, 7, 55))
+          publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 22, 7, 55))
         }
       }
     },
@@ -530,7 +521,7 @@ export const all = {
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: [
           ],
-          publishDateUTC: new Date(Date.UTC(2015, APRIL, 23, 8, 32))
+          publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 23, 8, 32))
         },
         [ARRAY_OF]: {
           name: '`Array.of()`',
@@ -539,7 +530,7 @@ export const all = {
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: [
           ],
-          publishDateUTC: new Date(Date.UTC(2015, APRIL, 27, 8, 9))
+          publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 27, 8, 9))
         },
         [ARRAY_FILL]: {
           name: '`[].fill()`',
@@ -548,7 +539,7 @@ export const all = {
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: [
           ],
-          publishDateUTC: new Date(Date.UTC(2015, APRIL, 28, 7, 55)),
+          publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 28, 7, 55)),
           links: [
             {
               url: 'https://github.com/tddbin/es6katas.org/issues/9',
@@ -569,7 +560,7 @@ export const all = {
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: [
           ],
-          publishDateUTC: new Date(Date.UTC(2015, APRIL, 29, 7, 55))
+          publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 29, 7, 55))
         },
         [ARRAY_FIND_INDEX]: {
           name: '`[].findIndex()`',
@@ -578,7 +569,7 @@ export const all = {
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: [
           ],
-          publishDateUTC: new Date(Date.UTC(2015, MAY, 4, 8, 1))
+          publishDateUTC: new Date(Date.UTC(2015, date.MAY, 4, 8, 1))
         },
         [ARRAY_ENTRIES]: {
           name: '`[].entries()`',
@@ -587,7 +578,7 @@ export const all = {
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [CONST, ARRAY_FROM, ITERATOR_PROTOCOL
           ],
-          publishDateUTC: new Date(Date.UTC(2015, MAY, 18, 8, 6))
+          publishDateUTC: new Date(Date.UTC(2015, date.MAY, 18, 8, 6))
             
         },
         [ARRAY_KEYS]: {
@@ -597,7 +588,7 @@ export const all = {
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [CONST, DESTRUCTURING_ARRAY, ARRAY_FROM, ITERATOR_PROTOCOL
           ],
-          publishDateUTC: new Date(Date.UTC(2015, MAY, 19, 7, 55))
+          publishDateUTC: new Date(Date.UTC(2015, date.MAY, 19, 7, 55))
         },
         [ARRAY_VALUES]: {
           name: '`[].values()`',
@@ -606,7 +597,7 @@ export const all = {
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [CONST, DESTRUCTURING_ARRAY, ITERATOR_PROTOCOL
           ],
-          publishDateUTC: new Date(Date.UTC(2015, MAY, 20, 7, 55))
+          publishDateUTC: new Date(Date.UTC(2015, date.MAY, 20, 7, 55))
         }
       }
     },
@@ -619,7 +610,7 @@ export const all = {
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [
           ],
-          publishDateUTC: new Date(Date.UTC(2015, MAY, 5, 11, 21))
+          publishDateUTC: new Date(Date.UTC(2015, date.MAY, 5, 11, 21))
         },
         [SYMBOL_FOR]: {
           name: '`Symbol.for()`',
@@ -628,7 +619,7 @@ export const all = {
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [
           ],
-          publishDateUTC: new Date(Date.UTC(2015, MAY, 6, 7, 55))
+          publishDateUTC: new Date(Date.UTC(2015, date.MAY, 6, 7, 55))
         },
         [SYMBOL_KEY_FOR]: {
           name: '`Symbol.keyFor()`',
@@ -638,7 +629,7 @@ export const all = {
           requiresKnowledgeFrom: [
             SYMBOL_FOR
           ],
-          publishDateUTC: new Date(Date.UTC(2015, MAY, 7, 8, 9))       
+          publishDateUTC: new Date(Date.UTC(2015, date.MAY, 7, 8, 9))       
         }
       }
     },
@@ -651,7 +642,7 @@ export const all = {
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: [
           ],
-          publishDateUTC: new Date(Date.UTC(2015, MAY, 8, 7, 55))
+          publishDateUTC: new Date(Date.UTC(2015, date.MAY, 8, 7, 55))
         },
         [ITERATOR_STRING]: {
           name: 'string',
@@ -662,7 +653,7 @@ export const all = {
             SYMBOL_BASICS, 
             ITERATOR_ARRAY
           ],
-          publishDateUTC: new Date(Date.UTC(2015, MAY, 11, 7, 55))
+          publishDateUTC: new Date(Date.UTC(2015, date.MAY, 11, 7, 55))
         },
         [ITERATOR_PROTOCOL]: {
           name: 'protocol',
@@ -671,7 +662,7 @@ export const all = {
           level: SKILL_LEVEL.EXPERT,
           requiresKnowledgeFrom: [
           ],
-          publishDateUTC: new Date(Date.UTC(2015, MAY, 12, 7, 55))
+          publishDateUTC: new Date(Date.UTC(2015, date.MAY, 12, 7, 55))
         },
         [ITERATOR_USAGES]: {
           name: 'usage',
@@ -685,7 +676,7 @@ export const all = {
             ITERATOR_PROTOCOL, 
             SPREAD_WITH_ARRAYS
           ],
-          publishDateUTC: new Date(Date.UTC(2015, MAY, 13, 8, 17))
+          publishDateUTC: new Date(Date.UTC(2015, date.MAY, 13, 8, 17))
         }
       }
     },
@@ -698,7 +689,7 @@ export const all = {
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [
           ],
-          publishDateUTC: new Date(Date.UTC(2015, MAY, 21, 7, 55))
+          publishDateUTC: new Date(Date.UTC(2015, date.MAY, 21, 7, 55))
         },
         [MAP_GET]: {
           name: '`map.get()`',
@@ -707,7 +698,7 @@ export const all = {
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [ITERATOR_ARRAY
           ],
-          publishDateUTC: new Date(Date.UTC(2015, MAY, 22, 7, 55))
+          publishDateUTC: new Date(Date.UTC(2015, date.MAY, 22, 7, 55))
         },
         [MAP_SET]: {
           name: '`map.set()`',
@@ -716,7 +707,7 @@ export const all = {
           level: SKILL_LEVEL.EXPERT,
           requiresKnowledgeFrom: [
           ],
-          publishDateUTC: new Date(Date.UTC(2015, MAY, 26, 8, 3))
+          publishDateUTC: new Date(Date.UTC(2015, date.MAY, 26, 8, 3))
         },
         [MAP_INITIALIZE]: {
           name: 'initialize',
@@ -728,7 +719,7 @@ export const all = {
             ARRAY_FROM,
             MAP_BASICS, MAP_SET
           ],
-          publishDateUTC: new Date(Date.UTC(2015, JUNE, 22, 11, 56))
+          publishDateUTC: new Date(Date.UTC(2015, date.JUNE, 22, 11, 56))
         },
         [MAP_HAS]: {
           name: '`map.has()`',
@@ -741,7 +732,7 @@ export const all = {
             MAP_SET
             //MAP_DELETE
           ],
-          publishDateUTC: new Date(Date.UTC(2015, JULY, 10, 8, 9)),
+          publishDateUTC: new Date(Date.UTC(2015, date.JULY, 10, 8, 9)),
           links: [
             {
               url: 'https://www.youtube.com/watch?v=71aX1z0SzZU',
@@ -761,7 +752,7 @@ export const all = {
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: [
           ],
-          publishDateUTC: new Date(Date.UTC(2015, MAY, 27, 10, 12))
+          publishDateUTC: new Date(Date.UTC(2015, date.MAY, 27, 10, 12))
         },
         [SET_ADD]: {
           name: '`set.add()`',
@@ -771,7 +762,7 @@ export const all = {
           requiresKnowledgeFrom: [
             SET_BASICS
           ],
-          publishDateUTC: new Date(Date.UTC(2015, MAY, 29, 6, 55))
+          publishDateUTC: new Date(Date.UTC(2015, date.MAY, 29, 6, 55))
         },
         [SET_DELETE]: {
           name: '`set.delete()`',
@@ -783,7 +774,7 @@ export const all = {
             SET_BASICS,
             SET_ADD
           ],
-          publishDateUTC: new Date(Date.UTC(2015, JULY, 15, 16, 12)),
+          publishDateUTC: new Date(Date.UTC(2015, date.JULY, 15, 16, 12)),
           links: [
             {
               url: 'https://twitter.com/es6katas/status/621351626561994752',
@@ -805,7 +796,7 @@ export const all = {
             ARROW_FUNCTION_BASICS,
             SPREAD_WITH_ARRAYS
           ],
-          publishDateUTC: new Date(Date.UTC(2015, JULY, 16, 8, 24)),
+          publishDateUTC: new Date(Date.UTC(2015, date.JULY, 16, 8, 24)),
           links: [
             {
               url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set',
@@ -829,7 +820,7 @@ export const all = {
             SET_BASICS, SET_ADD,
             DESTRUCTURING_OBJECT
           ],
-          publishDateUTC: new Date(Date.UTC(2015, AUGUST, 3, 8, 25)),
+          publishDateUTC: new Date(Date.UTC(2015, date.AUGUST, 3, 8, 25)),
           links: [
             {
               url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-set.prototype.clear',
@@ -885,7 +876,7 @@ export const all = {
             OBJECT_LITERAL_COMPUTED_PROPERTIES,
             CLASS_CREATION
           ],
-          publishDateUTC: new Date(Date.UTC(2015, JUNE, 1, 8, 39)),
+          publishDateUTC: new Date(Date.UTC(2015, date.JUNE, 1, 8, 39)),
           links: [
             {
               url:'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*',
@@ -902,7 +893,7 @@ export const all = {
           requiresKnowledgeFrom: [
             GENERATOR_CREATION
           ],
-          publishDateUTC: new Date(Date.UTC(2015, JUNE, 3, 7, 55))
+          publishDateUTC: new Date(Date.UTC(2015, date.JUNE, 3, 7, 55))
         },
         [GENERATOR_YIELD]: {
           name: 'yield expressions',
@@ -914,7 +905,7 @@ export const all = {
             GENERATOR_CREATION,
             GENERATOR_ITERATOR
           ],
-          publishDateUTC: new Date(Date.UTC(2015, JUNE, 5, 8, 25)),
+          publishDateUTC: new Date(Date.UTC(2015, date.JUNE, 5, 8, 25)),
           links: [
             {
               url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield',
@@ -934,7 +925,7 @@ export const all = {
             GENERATOR_ITERATOR,
             GENERATOR_YIELD
           ],
-          publishDateUTC: new Date(Date.UTC(2015, JUNE, 18, 12, 7)),
+          publishDateUTC: new Date(Date.UTC(2015, date.JUNE, 18, 12, 7)),
           links: [
             {
               url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-generatorresume',
@@ -955,7 +946,7 @@ export const all = {
             GENERATOR_YIELD,
             GENERATOR_SEND_VALUE
           ],
-          publishDateUTC: new Date(Date.UTC(2015, JUNE, 29, 11, 49))
+          publishDateUTC: new Date(Date.UTC(2015, date.JUNE, 29, 11, 49))
         },
         [GENERATOR_RETURN]: {
           name: '`return` inside a generator function',
@@ -970,7 +961,7 @@ export const all = {
             ARRAY_FROM,
             ITERATOR_PROTOCOL
           ],
-          publishDateUTC: new Date(Date.UTC(2015, SEPTEMBER, 25, 14, 45)),
+          publishDateUTC: new Date(Date.UTC(2015, date.SEPTEMBER, 25, 14, 45)),
           links: [
             {
               url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-iteratorresult-interface',
@@ -998,7 +989,7 @@ export const all = {
             CONST, LET,
             MAP_BASICS
           ],
-          publishDateUTC: new Date(Date.UTC(2015, JUNE, 24, 7, 55))
+          publishDateUTC: new Date(Date.UTC(2015, date.JUNE, 24, 7, 55))
         }
       }
     },
@@ -1012,7 +1003,7 @@ export const all = {
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [
           ],
-          publishDateUTC: new Date(Date.UTC(2015, JUNE, 25, 7, 55))
+          publishDateUTC: new Date(Date.UTC(2015, date.JUNE, 25, 7, 55))
         }
       }
     },
@@ -1029,7 +1020,7 @@ export const all = {
             ARROW_FUNCTION_BASICS,
             TEMPLATE_STRING_BASICS
           ],
-          publishDateUTC: new Date(Date.UTC(2015, JUNE, 30, 7, 55))
+          publishDateUTC: new Date(Date.UTC(2015, date.JUNE, 30, 7, 55))
         }
       }
     },
@@ -1047,7 +1038,7 @@ export const all = {
             CLASS_EXTENDS,
             CLASS_SUPER_IN_CONSTRUCTOR
           ],
-          publishDateUTC: new Date(Date.UTC(2015, JULY, 2, 8, 23))
+          publishDateUTC: new Date(Date.UTC(2015, date.JULY, 2, 8, 23))
         },
         [REFLECT_APPLY]: {
           name: '`Reflect.apply()`',
@@ -1060,7 +1051,7 @@ export const all = {
             ARROW_FUNCTION_BASICS,
             ARRAY_FILL
           ],
-          publishDateUTC: new Date(Date.UTC(2015, JULY, 3, 7, 55))
+          publishDateUTC: new Date(Date.UTC(2015, date.JULY, 3, 7, 55))
         },
         [REFLECT_GET_PROTOTYPE_OF]: {
           name: '`Reflect.getPrototypeOf()`',
@@ -1073,7 +1064,7 @@ export const all = {
             CLASS_CREATION,
             ARROW_FUNCTION_BASICS
           ],
-          publishDateUTC: new Date(Date.UTC(2015, JULY, 8, 8, 14))
+          publishDateUTC: new Date(Date.UTC(2015, date.JULY, 8, 8, 14))
         },
         [REFLECT_CONSTRUCT]: {
           name: '`Reflect.construct()`',
@@ -1082,7 +1073,7 @@ export const all = {
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [
           ],
-          publishDateUTC: new Date(Date.UTC(2015, JULY, 30, 7, 55)),
+          publishDateUTC: new Date(Date.UTC(2015, date.JULY, 30, 7, 55)),
           links: [
             {
               url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-reflect.construct',
@@ -1122,7 +1113,7 @@ export const all = {
             CLASS_CREATION,
             SYMBOL_BASICS, SYMBOL_FOR
           ],
-          publishDateUTC: new Date(Date.UTC(2015, JULY, 31, 8, 12)),
+          publishDateUTC: new Date(Date.UTC(2015, date.JULY, 31, 8, 12)),
           links: [
             {
               url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-reflect.defineproperty',
@@ -1153,7 +1144,7 @@ export const all = {
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [
           ],
-          publishDateUTC: new Date(Date.UTC(2015, JULY, 9, 8, 46))
+          publishDateUTC: new Date(Date.UTC(2015, date.JULY, 9, 8, 46))
         }
       }
     },
@@ -1171,7 +1162,7 @@ export const all = {
             ARROW_FUNCTION_BASICS,
             DEFAULT_PARAMETERS_BASICS
           ],
-          publishDateUTC: toUtcDate(2015, JULY, 14, 9, 29),
+          publishDateUTC: toUtcDate(2015, date.JULY, 14, 9, 29),
           links: [
             {
               url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-string.prototype.includes',
@@ -1194,7 +1185,7 @@ export const all = {
             LET, CONST,
             CLASS_CREATION
           ],
-          publishDateUTC: toUtcDate(2015, AUGUST, 7, 7, 55),
+          publishDateUTC: toUtcDate(2015, date.AUGUST, 7, 7, 55),
           links: [
             {
               url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-string.prototype.repeat',
@@ -1224,7 +1215,7 @@ export const all = {
             SPREAD_WITH_ARRAYS,
             ARROW_FUNCTION_BASICS
           ],
-          publishDateUTC: toUtcDate(2015, AUGUST, 26, 9, 42),
+          publishDateUTC: toUtcDate(2015, date.AUGUST, 26, 9, 42),
           links: [
             {
               url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-string.prototype.startswith',
@@ -1249,7 +1240,7 @@ export const all = {
             REST_OPERATOR_AS_PARAMETER,
             SPREAD_WITH_ARRAYS
           ],
-          publishDateUTC: toUtcDate(2015, OCTOBER, 2, 7, 55),
+          publishDateUTC: toUtcDate(2015, date.OCTOBER, 2, 7, 55),
           links: [
             {
               url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-string.prototype.endswith',
@@ -1281,7 +1272,7 @@ export const all = {
           path: 'promise/basics',
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [],
-          publishDateUTC: toUtcDate(2015, OCTOBER, 9, 9, 30),
+          publishDateUTC: toUtcDate(2015, date.OCTOBER, 9, 9, 30),
           links: [
             {
               url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-promise-objects',
