@@ -7,3 +7,4 @@ export const ANNOUNCEMENT = 'announcement';
 export const BOOK = 'book';
 export const QUOTE = 'quote';
 export const DISCUSSION = 'discussion';
+export const WIKIPEDIA = 'wikipedia';
