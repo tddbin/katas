@@ -1,4 +1,5 @@
-import {SKILL_LEVEL} from '../../skill-levels.js';
+import {SKILL_LEVEL} from '../../skill-levels';
+import * as tag from '../../tags';
 
 const TEMPLATE_STRING_BASICS = 1;
 const TEMPLATE_STRING_MULTILINE = 2;
@@ -83,16 +84,6 @@ const GENERATOR_RETURN = 73;
 const STRING_ENDSWITH = 74;
 const PROMISE_BASICS = 75;
 
-const TAG_SPECIFICATION = 'spec';
-const TAG_MDN = 'mdn';
-const TAG_VIDEO = 'video';
-const TAG_ARTICLE = 'article';
-const TAG_DOCS = 'docs';
-const TAG_ANNOUNCEMENT = 'announcement';
-const TAG_BOOK = 'book';
-const TAG_QUOTE = 'quote';
-const TAG_DISCUSSION = 'discussion';
-
 const MARCH = 2;
 const APRIL = 3;
 const MAY = 4;
@@ -120,12 +111,12 @@ export const all = {
             {
               url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings',
               comment: 'Description of template strings.',
-              tags: [TAG_MDN, TAG_DOCS]
+              tags: [tag.MDN, tag.DOCS]
             },
             {
               url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-template-literal-lexical-components',
               comment: 'The specification describing the template string syntax.',
-              tags: [TAG_SPECIFICATION]
+              tags: [tag.SPECIFICATION]
             }
           ]
         },
@@ -142,7 +133,7 @@ export const all = {
             {
               url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings#Multi-line_strings',
               comment: 'Description of multiline template strings.',
-              tags: [TAG_MDN, TAG_DOCS]
+              tags: [tag.MDN, tag.DOCS]
             }
           ]
         },
@@ -160,7 +151,7 @@ export const all = {
             {
               url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings#Tagged_template_strings',
               comment: 'Description of tagged template strings.',
-              tags: [TAG_MDN, TAG_DOCS]
+              tags: [tag.MDN, tag.DOCS]
             }
           ]
         },
@@ -178,12 +169,12 @@ export const all = {
             {
               url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings#Raw_strings',
               comment: 'Description of `raw` property of tagged template strings.',
-              tags: [TAG_MDN, TAG_DOCS]
+              tags: [tag.MDN, tag.DOCS]
             },
             {
               url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-static-semantics-templatestrings',
               comment: 'Describing the raw behavior.',
-              tags: [TAG_SPECIFICATION]
+              tags: [tag.SPECIFICATION]
             }
           ]
         }
@@ -277,17 +268,17 @@ export const all = {
             {
               url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get',
               comment: 'Description of all the details of a getter.',
-              tags: [TAG_MDN, TAG_DOCS]
+              tags: [tag.MDN, tag.DOCS]
             },
             {
               url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-object-type',
               comment: '"An accessor property associates a key value with one or two accessor functions ..."',
-              tags: [TAG_SPECIFICATION]
+              tags: [tag.SPECIFICATION]
             },
             {
               url: 'https://twitter.com/es6katas/status/625577823357566976',
               comment: 'Announcement of this kata on twitter.',
-              tags: [TAG_ANNOUNCEMENT]
+              tags: [tag.ANNOUNCEMENT]
             }
           ]
         },
@@ -306,22 +297,22 @@ export const all = {
             {
               url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set',
               comment: 'Description of all the details of a setter.',
-              tags: [TAG_MDN, TAG_DOCS]
+              tags: [tag.MDN, tag.DOCS]
             },
             {
               url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-object-type',
               comment: '"An accessor property associates a key value with one or two accessor functions ..."',
-              tags: [TAG_SPECIFICATION]
+              tags: [tag.SPECIFICATION]
             },
             {
               url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-method-definitions',
               comment: 'The syntax definition of how to write an (accessor) method.',
-              tags: [TAG_SPECIFICATION]
+              tags: [tag.SPECIFICATION]
             },
             {
               url: 'https://twitter.com/es6katas/status/625938211672600576',
               comment: 'Announcement of this kata on twitter.',
-              tags: [TAG_ANNOUNCEMENT]
+              tags: [tag.ANNOUNCEMENT]
             }
           ]
         }
@@ -562,12 +553,12 @@ export const all = {
             {
               url: 'https://github.com/tddbin/es6katas.org/issues/9',
               comment: 'A discussion in a github issue, about how to use this kata.',
-              tags: [TAG_DISCUSSION]
+              tags: [tag.DISCUSSION]
             },
             {
               url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fill',
               comment: 'API doc on MDN.',
-              tags: [TAG_MDN, TAG_DOCS]
+              tags: [tag.MDN, tag.DOCS]
             }
           ]
         },
@@ -755,7 +746,7 @@ export const all = {
             {
               url: 'https://www.youtube.com/watch?v=71aX1z0SzZU',
               comment: 'A video (15min) documenting how this kata was created.',
-              tags: [TAG_VIDEO]
+              tags: [tag.VIDEO]
             } 
           ]
         }
@@ -797,7 +788,7 @@ export const all = {
             {
               url: 'https://twitter.com/es6katas/status/621351626561994752',
               comment: 'Announcement of this kata on twitter.',
-              tags: [TAG_ANNOUNCEMENT]
+              tags: [tag.ANNOUNCEMENT]
             }
           ]
         },
@@ -819,12 +810,12 @@ export const all = {
             {
               url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set',
               comment: '',
-              tags: [TAG_MDN, TAG_DOCS]
+              tags: [tag.MDN, tag.DOCS]
             },
             {
               url: 'https://twitter.com/es6katas/status/621596289160081408',
               comment: 'Announcement of this kata on twitter.',
-              tags: [TAG_ANNOUNCEMENT]
+              tags: [tag.ANNOUNCEMENT]
             }
           ]
         },
@@ -843,17 +834,17 @@ export const all = {
             {
               url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-set.prototype.clear',
               comment: 'How the implementation is specified.',
-              tags: [TAG_SPECIFICATION]
+              tags: [tag.SPECIFICATION]
             },
             {
               url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/clear',
               comment: 'The MDN docs.',
-              tags: [TAG_DOCS, TAG_MDN]
+              tags: [tag.DOCS, tag.MDN]
             },
             {
               url: 'https://twitter.com/es6katas/status/628119522604662785',
               comment: 'Announcement of this kata on twitter.',
-              tags: [TAG_ANNOUNCEMENT]
+              tags: [tag.ANNOUNCEMENT]
             }
           ]
         }
@@ -864,22 +855,22 @@ export const all = {
         {
           url: 'https://hacks.mozilla.org/2015/05/es6-in-depth-generators/',
           comment: 'ES6 In Depth: Generators',
-          tags: [TAG_MDN, TAG_ARTICLE]
+          tags: [tag.MDN, tag.ARTICLE]
         },
         {
           url: 'https://hacks.mozilla.org/2015/07/es6-in-depth-generators-continued/',
           comment: 'ES6 In Depth: Generators, continued',
-          tags: [TAG_MDN, TAG_ARTICLE]
+          tags: [tag.MDN, tag.ARTICLE]
         },
         {
           url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-generator-objects',
           comment: 'The specification chapter about generators.',
-          tags: [TAG_SPECIFICATION]
+          tags: [tag.SPECIFICATION]
         },
         {
           url: 'http://davidwalsh.name/es6-generators',
           comment: 'The article "The Basics Of ES6 Generators".',
-          tags: [TAG_ARTICLE]
+          tags: [tag.ARTICLE]
         }
       ],
       items: {
@@ -899,7 +890,7 @@ export const all = {
             {
               url:'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*',
               comment: 'Describes the `function*` declaration.',
-              tags: [TAG_MDN, TAG_DOCS]
+              tags: [tag.MDN, tag.DOCS]
             }
           ]
         },
@@ -928,7 +919,7 @@ export const all = {
             {
               url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield',
               comment: 'Describing the `yield` keyword.',
-              tags: [TAG_MDN, TAG_DOCS]
+              tags: [tag.MDN, tag.DOCS]
             }
           ]
         },
@@ -948,7 +939,7 @@ export const all = {
             {
               url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-generatorresume',
               comment: 'The part in the spec, that describes how a generator resumes.',
-              tags: [TAG_SPECIFICATION]
+              tags: [tag.SPECIFICATION]
             }
           ]
         },
@@ -984,12 +975,12 @@ export const all = {
             {
               url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-iteratorresult-interface',
               comment: 'Description of the IteratorResult interface.',
-              tags: [TAG_SPECIFICATION, TAG_DOCS]
+              tags: [tag.SPECIFICATION, tag.DOCS]
             },
             {
               url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield#Description',
               comment: 'Describes how a return statement behaves inside a generator.',
-              tags: [TAG_DOCS, TAG_MDN]
+              tags: [tag.DOCS, tag.MDN]
             }
           ]
         }
@@ -1096,27 +1087,27 @@ export const all = {
             {
               url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-reflect.construct',
               comment: 'How this function is specified.',
-              tags: [TAG_SPECIFICATION]
+              tags: [tag.SPECIFICATION]
             },
             {
               url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-createlistfromarraylike',
               comment: 'How the arguments list that can be passed as second parameter is specified.',
-              tags: [TAG_SPECIFICATION]
+              tags: [tag.SPECIFICATION]
             },
             {
               url: 'https://leanpub.com/exploring-es6/read#sec_allocating-and-initializing-instances',
               comment: 'Axel Rauschmayer explaining in his book "The data flow between class constructors is different from the canonical way of subclassing in ES5."',
-              tags: [TAG_DOCS, TAG_BOOK]
+              tags: [tag.DOCS, tag.BOOK]
             },
             {
               url: 'https://leanpub.com/exploring-es6/read#leanpub-auto-reflect',
               comment: 'The chapter on Reflect in the book "Exploring ES6"',
-              tags: [TAG_DOCS, TAG_BOOK]
+              tags: [tag.DOCS, tag.BOOK]
             },
             {
               url: 'https://twitter.com/es6katas/status/626662280046886912',
               comment: 'Announcement of this kata on twitter.',
-              tags: [TAG_ANNOUNCEMENT]
+              tags: [tag.ANNOUNCEMENT]
 
             }
           ]
@@ -1136,17 +1127,17 @@ export const all = {
             {
               url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-reflect.defineproperty',
               comment: 'The specification for this function.',
-              tags: [TAG_SPECIFICATION]
+              tags: [tag.SPECIFICATION]
             },
             {
               url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty',
               comment: 'The MDN docs for this function.',
-              tags: [TAG_DOCS, TAG_MDN]
+              tags: [tag.DOCS, tag.MDN]
             },
             {
               url: 'https://twitter.com/es6katas/status/627029158997180416',
               comment: 'Announcement of this kata on twitter.',
-              tags: [TAG_ANNOUNCEMENT]
+              tags: [tag.ANNOUNCEMENT]
             }
           ]
         }
@@ -1185,12 +1176,12 @@ export const all = {
             {
               url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-string.prototype.includes',
               comment: 'The official specification, actually quite good to read for this function.',
-              tags: [TAG_SPECIFICATION]
+              tags: [tag.SPECIFICATION]
             },
             {
               url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes',
               comment: 'The Mozilla Developer Network docs, contains good examples.',
-              tags: [TAG_MDN, TAG_DOCS]
+              tags: [tag.MDN, tag.DOCS]
             }
           ]
         },
@@ -1208,17 +1199,17 @@ export const all = {
             {
               url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-string.prototype.repeat',
               comment: 'The official specification, actually quite good to read for this function.',
-              tags: [TAG_SPECIFICATION]
+              tags: [tag.SPECIFICATION]
             },
             {
               url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat',
               comment: 'The Mozilla Developer Network docs, contains good examples.',
-              tags: [TAG_MDN, TAG_DOCS]
+              tags: [tag.MDN, tag.DOCS]
             },
             {
               url: 'https://twitter.com/es6katas/status/629561384896847873',
               comment: 'Announcement of this kata on twitter.',
-              tags: [TAG_ANNOUNCEMENT]
+              tags: [tag.ANNOUNCEMENT]
             }
           ]
         },
@@ -1238,12 +1229,12 @@ export const all = {
             {
               url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-string.prototype.startswith',
               comment: 'The official specification, actually quite good to read for this function.',
-              tags: [TAG_SPECIFICATION]
+              tags: [tag.SPECIFICATION]
             },
             {
               url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/startsWith',
               comment: 'The Mozilla Developer Network docs, contains good examples.',
-              tags: [TAG_MDN, TAG_DOCS]
+              tags: [tag.MDN, tag.DOCS]
             }
           ]
         },
@@ -1263,12 +1254,12 @@ export const all = {
             {
               url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-string.prototype.endswith',
               comment: 'The official specification, actually quite good to read for this function.',
-              tags: [TAG_SPECIFICATION]
+              tags: [tag.SPECIFICATION]
             },
             {
               url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith',
               comment: 'The Mozilla Developer Network docs, contains some examples.',
-              tags: [TAG_MDN, TAG_DOCS]
+              tags: [tag.MDN, tag.DOCS]
             }
           ]
         }
@@ -1280,7 +1271,7 @@ export const all = {
         {
           url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-promise-objects',
           comment: 'A Promise is an object that is used as a placeholder for the eventual results of a deferred (and possibly asynchronous) computation.',
-          tags: [TAG_QUOTE, TAG_SPECIFICATION]
+          tags: [tag.QUOTE, tag.SPECIFICATION]
         }
       ],
       items: {
@@ -1295,7 +1286,7 @@ export const all = {
             {
               url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-promise-objects',
               comment: 'A well understandable description of the states a promise can be in.',
-              tags: [TAG_SPECIFICATION]
+              tags: [tag.SPECIFICATION]
             }
           ]
         },
