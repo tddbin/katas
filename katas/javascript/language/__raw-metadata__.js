@@ -4,6 +4,7 @@ import {toUtcDate}  from '../../date';
 import * as date from '../../date';
 
 const ARRAY_SORT_BASICS = 1;
+const ARRAY_SORT_WITH_FUNCTION = 2;
 
 export const all = {
   name: 'JavaScript Katas',
@@ -12,11 +13,11 @@ export const all = {
       items: {
         [ARRAY_SORT_BASICS]: {
           name: '`[].sort()` basics',
-          description: '.',
+          description: 'The `sort()` function sorts an array as if each element was a string.',
           path: 'array/sort-basics',
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [],
-          publishDateUTC: new Date(Date.UTC(2015, date.OCTOBER)),
+          publishDateUTC: new Date(Date.UTC(2015, date.OCTOBER, 22, 7, 55)),
           links: [
             {
               url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort',
@@ -32,6 +33,23 @@ export const all = {
               url: 'https://en.wikipedia.org/wiki/Emoji#Blocks',
               comment: 'Some emoji icons and their unicode data.',
               tags: [tag.WIKIPEDIA, tag.DOCS]
+            }
+          ]
+        },
+        [ARRAY_SORT_WITH_FUNCTION]: {
+          name: '`[].sort()` can take a compare function',
+          description: 'Passing a callback to the `sort()` function, allows for any custom sorting.',
+          path: 'array/sort-with-function',
+          level: SKILL_LEVEL.INTERMEDIATE,
+          requiresKnowledgeFrom: [
+            ARRAY_SORT_BASICS
+          ],
+          publishDateUTC: new Date(Date.UTC(2015, date.OCTOBER, 23, 7, 55)),
+          links: [
+            {
+              url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort',
+              comment: 'Very detailed description of how `sort()` works.',
+              tags: [tag.MDN, tag.DOCS]
             }
           ]
         }
