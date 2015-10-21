@@ -12,11 +12,11 @@ export const all = {
       items: {
         [ARRAY_SORT_BASICS]: {
           name: '`[].sort()` basics',
-          description: '.',
+          description: 'The `sort()` function sorts an array as if each element was a string.',
           path: 'array/sort-basics',
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [],
-          publishDateUTC: new Date(Date.UTC(2015, date.OCTOBER)),
+          publishDateUTC: new Date(Date.UTC(2015, date.OCTOBER, 22, 7, 55)),
           links: [
             {
               url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort',
