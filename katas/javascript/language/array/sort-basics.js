@@ -1,4 +1,4 @@
-// 1: sort - basics 
+// 1: Array - sort basics 
 // To do: make all tests pass, leave the assert lines unchanged!
 
 describe('`[].sort()` sorts an array using each value as a string', function() {
