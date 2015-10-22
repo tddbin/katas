@@ -19,6 +19,13 @@ describe('`[].sort()` can take a compare function', function() {
       assert.deepEqual(parameters, [2, 1]);
     });
 
+    it('is called multiple times, depending how the sort algorithm is implemented', function() {
+      let numCalls = 0;
+      const compare = () => { numCalls++; };
+      [3, 1, 2].sort(compare);
+      assert.ok(numCalls > 1);
+    });
+
     describe('the return value of the compare function indicates how the two values compare', function() {
 
       describe('both compared values match, they are the same', function() {
