@@ -17,7 +17,7 @@ export const all = {
           path: 'array/sort-basics',
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [],
-          publishDateUTC: new Date(Date.UTC(2015, date.OCTOBER, 22, 7, 55)),
+          publishDateUTC: new Date(Date.UTC(2015, date.OCTOBER, 22, 9, 11)),
           links: [
             {
               url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort',
@@ -33,6 +33,11 @@ export const all = {
               url: 'https://en.wikipedia.org/wiki/Emoji#Blocks',
               comment: 'Some emoji icons and their unicode data.',
               tags: [tag.WIKIPEDIA, tag.DOCS]
+            },
+            {
+              url: 'https://twitter.com/wolframkriesing/status/657161540525826048',
+              comment: 'Announcement of this kata on twitter.',
+              tags: [tag.ANNOUNCEMENT]
             }
           ]
         },
@@ -44,12 +49,17 @@ export const all = {
           requiresKnowledgeFrom: [
             ARRAY_SORT_BASICS
           ],
-          publishDateUTC: new Date(Date.UTC(2015, date.OCTOBER, 23, 7, 55)),
+          publishDateUTC: new Date(Date.UTC(2015, date.OCTOBER, 23, 9, 26)),
           links: [
             {
               url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort',
               comment: 'Very detailed description of how `sort()` works.',
               tags: [tag.MDN, tag.DOCS]
+            },
+            {
+              url: 'https://twitter.com/wolframkriesing/status/657488332298043392',
+              comment: 'Announcement of this kata on twitter.',
+              tags: [tag.ANNOUNCEMENT]
             }
           ]
         }
