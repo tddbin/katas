@@ -7,8 +7,8 @@ describe('`[].sort()` can take a compare function', function() {
 
     it('can be given as the only parameter to `sort()` (and gets used by it)', function() {
       let compareFunctionUsed;
-      const compare = () => { compareFunctionUsed = false };
-      [2, 1].sort(compare);
+      const compare = () => { compareFunctionUsed = true };
+      [2, 1].sort();
       assert.equal(compareFunctionUsed, true);
     });
 
@@ -19,11 +19,11 @@ describe('`[].sort()` can take a compare function', function() {
       assert.deepEqual(parameters, [2, 1]);
     });
 
-    it('is called multiple times, depending how the sort algorithm is implemented', function() {
-      let numCalls = 0;
-      const compare = () => { numCalls++; };
+    it('is called multiple times (depending how the sort algorithm is implemented)', function() {
+      let callCount = 0;
+      const compare = () => {};
       [3, 1, 2].sort();
-      assert.ok(numCalls > 1);
+      assert.ok(callCount > 1);
     });
 
     describe('the return value of the compare function indicates how the two values compare', function() {
