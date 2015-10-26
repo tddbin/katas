@@ -195,6 +195,13 @@ export const all = {
       }
     },
     'Block scope': {
+      links: [
+        {
+          url: 'http://www.2ality.com/2015/10/why-tdz.html',
+          comment: 'Why is there a "temporal dead zone" in ES6? - The timespan between creation and declaration of a `const` or `let` variable is the temporal dead zone.',
+          links: [tag.ARTICLE]
+        }
+      ],
       items: {
         [LET]: {
           name: '`let` declaration',
