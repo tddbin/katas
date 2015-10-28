@@ -1400,6 +1400,99 @@
       "groupNameSlug": "Promise",
       "publishDateRfc822": "Fri, 09 Oct 2015 09:30:00 GMT",
       "id": 75
+    },
+    {
+      "name": "creation",
+      "description": "A promise can be created in multiple ways, learn them all here.",
+      "path": "promise/creation",
+      "level": "INTERMEDIATE",
+      "requiresKnowledgeFrom": [
+        8,
+        5,
+        75,
+        25
+      ],
+      "links": [
+        {
+          "url": "http://www.ecma-international.org/ecma-262/6.0/#sec-promise-constructor",
+          "comment": "Describing the promise constructor.",
+          "tags": [
+            "spec"
+          ]
+        },
+        {
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+          "comment": "The MDN documentation with some extensive examples.",
+          "tags": [
+            "mdn",
+            "docs"
+          ]
+        },
+        {
+          "url": "http://www.ecma-international.org/ecma-262/6.0/#sec-promise.all",
+          "comment": "How `Promise.all()` is specified.",
+          "tags": [
+            "spec"
+          ]
+        },
+        {
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all",
+          "comment": "Documenting `Promise.all()`.",
+          "tags": [
+            "mdn",
+            "docs"
+          ]
+        },
+        {
+          "url": "http://www.ecma-international.org/ecma-262/6.0/#sec-promise.race",
+          "comment": "How `Promise.race()` is specified.",
+          "tags": [
+            "spec"
+          ]
+        },
+        {
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/race",
+          "comment": "Documenting `Promise.race()`.",
+          "tags": [
+            "mdn",
+            "docs"
+          ]
+        },
+        {
+          "url": "http://www.ecma-international.org/ecma-262/6.0/#sec-promise.resolve",
+          "comment": "How `Promise.resolve()` is specified.",
+          "tags": [
+            "spec"
+          ]
+        },
+        {
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve",
+          "comment": "Documenting `Promise.resolve()`.",
+          "tags": [
+            "mdn",
+            "docs"
+          ]
+        },
+        {
+          "url": "http://www.ecma-international.org/ecma-262/6.0/#sec-promise.reject",
+          "comment": "How `Promise.resolve()` is specified.",
+          "tags": [
+            "spec"
+          ]
+        },
+        {
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject",
+          "comment": "Documenting `Promise.reject()`.",
+          "tags": [
+            "mdn",
+            "docs"
+          ]
+        }
+      ],
+      "groupName": "Promise",
+      "groupNameSlug": "Promise",
+      "publishDateRfc822": "Wed, 28 Oct 2015 14:30:00 GMT",
+      "id": 76
     }
   ]
 }
