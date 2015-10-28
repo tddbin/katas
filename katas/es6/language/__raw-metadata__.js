@@ -85,6 +85,7 @@ const STRING_STARTSWITH = 72;
 const GENERATOR_RETURN = 73;
 const STRING_ENDSWITH = 74;
 const PROMISE_BASICS = 75;
+const PROMISE_CREATION = 76;
 
 export const all = {
   name: 'ES6 Katas',
@@ -1286,6 +1287,63 @@ export const all = {
               comment: 'A well understandable description of the states a promise can be in.',
               tags: [tag.SPECIFICATION]
             }
+          ]
+        },
+        [PROMISE_CREATION]: {
+          name: 'creation',
+          description: '.',
+          path: 'promise/creation',
+          level: SKILL_LEVEL.BEGINNER,
+          requiresKnowledgeFrom: [
+            PROMISE_BASICS
+          ],
+          publishDateUTC: toUtcDate(2015, date.OCTOBER),
+          links: [
+            {
+              url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-promise-constructor',
+              comment: 'Describing the promise constructor.',
+              tags: [tag.SPECIFICATION]
+            },
+            {
+              url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-promise.all',
+              comment: '',
+              tags: []
+            },
+            {
+              url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all',
+              comment: '',
+              tags: []
+            },
+            {
+              url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-promise.race',
+              comment: '',
+              tags: []
+            },
+            {
+              url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/race',
+              comment: '',
+              tags: []
+            },
+            {
+              url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-promise.resolve',
+              comment: '',
+              tags: []
+            },
+            {
+              url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve',
+              comment: '',
+              tags: []
+            },
+            {
+              url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-promise.resolve',
+              comment: '',
+              tags: []
+            },
+            {
+              url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve',
+              comment: '',
+              tags: []
+            },
           ]
         },
       }
