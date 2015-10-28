@@ -4,10 +4,14 @@
 describe('a promise can be created in multiple ways', function() {
 
   it('using `Promise` as a function throws', function() {
-    assert.throws(() => { Promise() });
+    function callPromiseAsFunction() { 
+      Promise();
+    }
+    assert.throws(callPromiseAsFunction);
   });
 
   describe('extending a `Promise`', function() {
+    
     it('is possible', function() {
       class MyPromise extends Promise {}
       const promise = new MyPromise(resolve => resolve());
@@ -16,8 +20,8 @@ describe('a promise can be created in multiple ways', function() {
         .then(() => done())
         .catch(e => done(new Error('Expected to resolve, but failed with: ' + e)));
     });
+    
     it('must call `super()` in the constructor if it wants to inherit/specialize the behavior', function() {
-      // WARNING: this example doesn't fulfill the Liskov principle
       class ResolvingPromise extends Promise {
         constructor() {
           super(resolve => resolve());
@@ -26,6 +30,7 @@ describe('a promise can be created in multiple ways', function() {
       
       return new ResolvingPromise();
     });
+    
   });
 
   describe('through the constructor', function() {
@@ -46,6 +51,7 @@ describe('a promise can be created in multiple ways', function() {
   });
   
   describe('Promise.all', function() {
+    
     it('returns a promise that resolves when all given promises resolve', function(done) {
       const promise = Promise.all([new Promise(resolve => resolve(1)), new Promise(resolve => resolve(2))]);
       
@@ -53,6 +59,7 @@ describe('a promise can be created in multiple ways', function() {
         .then(value => { assert.deepEqual(value, [1, 2]); done(); })
         .catch(e => done(new Error('Expected to resolve, but failed with: ' + e)));
     });
+    
   });
   
   describe('`Promise.race()` returns the first settled promise', function() {
