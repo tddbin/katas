@@ -63,9 +63,9 @@ describe('a promise can be created in multiple ways', function() {
     
   });
   
-  describe('Promise.all', function() {
+  describe('`Promise.all()` returns a promise that resolves when all given promises resolve', function() {
     
-    it('returns a promise that resolves when all given promises resolve', function(done) {
+    it('returns all results', function(done) {
       const promise = Promise.all([new Promise(resolve => resolve(1)), new Promise(resolve => resolve(2))]);
       
       promise
