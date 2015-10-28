@@ -3,13 +3,43 @@
 
 describe('a promise can be created in multiple ways', function() {
 
-  it('using `Promise` as a function throws', function() {
-    function callPromiseAsFunction() { 
-      Promise();
-    }
-    assert.throws(callPromiseAsFunction);
+  describe('creation fails when', function() {
+    
+    it('using `Promise` as a function', function() {
+      function callPromiseAsFunction() { 
+        Promise();
+      }
+      assert.throws(callPromiseAsFunction);
+    });
+    
+    it('no parameter is passed', function() {
+      assert.throws(() => new Promise());  
+    });
+    
+    it('passing a non-callable throws too', function() {
+      const notAFunction = 1;
+      assert.throws(() => { new Promise(notAFunction); });
+    });
+    
   });
+  
+  describe('most commonly Promises get created using the constructor', function() {
 
+    it('by passing a resolve function to it', function() {
+      const promise = new Promise(resolve => resolve());
+      return promise;
+    });
+
+    it('by passing a resolve and a reject function to it', function() {
+      const promise = new Promise((resolve, reject) => reject());
+      
+      promise
+        .then(() => done(new Error('Expected promise to be rejected.')))
+        .catch(done);
+    });
+    
+  });
+  
   describe('extending a `Promise`', function() {
     
     it('is possible', function() {
@@ -29,23 +59,6 @@ describe('a promise can be created in multiple ways', function() {
       }
       
       return new ResolvingPromise();
-    });
-    
-  });
-
-  describe('through the constructor', function() {
-
-    describe('it throws an error', function() {
-      
-      it('when no parameter is passed', function() {
-        assert.throws(() => new Promise());  
-      });
-      
-      it('passing a non-callable throws too', function() {
-        const notAFunction = 1;
-        assert.throws(() => { new Promise(notAFunction); });
-      });
-      
     });
     
   });
