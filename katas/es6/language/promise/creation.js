@@ -30,7 +30,7 @@ describe('a promise can be created in multiple ways', function() {
       return promise;
     });
 
-    it('by passing a resolve and a reject function to it', function() {
+    it('by passing a resolve and a reject function to it', function(done) {
       const promise = new Promise((resolve, reject) => reject());
       
       promise
