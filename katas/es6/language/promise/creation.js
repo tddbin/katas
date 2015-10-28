@@ -144,7 +144,7 @@ describe('a promise can be created in multiple ways', function() {
         .catch(done);
     });
 
-    it('rejects only', function(done) {
+    it('the parameter passed to `reject()` can be used in the `.catch()`', function(done) {
       const promise = Promise;
       
       promise
