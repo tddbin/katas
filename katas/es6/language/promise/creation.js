@@ -73,6 +73,14 @@ describe('a promise can be created in multiple ways', function() {
         .catch(e => done(new Error('Expected to resolve, but failed with: ' + e)));
     });
     
+    it('is rejected if one rejects', function(done) {
+      const promise = Promise.all([new Promise(resolve => resolve(1)), new Promise((resolve, reject) => reject())]);
+      
+      promise
+        .then(() => done(new Error('Expected promise to be rejected.')))
+        .catch(() => done());
+    });
+    
   });
   
   describe('`Promise.race()` returns the first settled promise', function() {
