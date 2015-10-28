@@ -15,7 +15,7 @@ describe('a Promise represents an operation that hasn`t completed yet, but is ex
       assert.throws(fn);
     });  
     
-    it('expects a function', function() {
+    it('expects a function as parameter', function() {
       const param = null;
       assert.doesNotThrow(() => { new Promise(param); });
     });  
