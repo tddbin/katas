@@ -102,7 +102,8 @@ describe('a promise can be created in multiple ways', function() {
       
       promise
         .then(() => done(new Error('Expected promise to be rejected.')))
-        .catch(value => { assert.deepEqual(value, 'I am a rejector'); done(); });
+        .catch(value => { assert.deepEqual(value, 'I am a rejector'); done(); })
+        .catch(done);
     });
     
   });
@@ -134,7 +135,8 @@ describe('a promise can be created in multiple ways', function() {
       
       promise
         .then(() => done(new Error('Expected promise to be rejected.')))
-        .catch(() => done());
+        .catch(value => { assert.deepEqual(value, void 0); done(); })
+        .catch(done);
     });
 
     it('rejects only', function(done) {
@@ -142,8 +144,10 @@ describe('a promise can be created in multiple ways', function() {
       
       promise
         .then(() => done(new Error('Expected promise to be rejected.')))
-        .catch(() => done());
+        .catch(value => { assert.deepEqual(value, 'quick reject'); done(); })
+        .catch(done);
     });
     
   });
+  
 });
