@@ -1291,13 +1291,15 @@ export const all = {
         },
         [PROMISE_CREATION]: {
           name: 'creation',
-          description: '.',
+          description: 'A promise can be created in multiple ways, learn them all here.',
           path: 'promise/creation',
-          level: SKILL_LEVEL.BEGINNER,
+          level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [
-            PROMISE_BASICS
+            CONST, ARROW_FUNCTION_BASICS,
+            PROMISE_BASICS,
+            CLASS_EXTENDS
           ],
-          publishDateUTC: toUtcDate(2015, date.OCTOBER),
+          publishDateUTC: toUtcDate(2015, date.OCTOBER, 28, 14, 30),
           links: [
             {
               url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-promise-constructor',
@@ -1305,47 +1307,52 @@ export const all = {
               tags: [tag.SPECIFICATION]
             },
             {
+              url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise',
+              comment: 'The MDN documentation with some extensive examples.',
+              tags: [tag.MDN, tag.DOCS]
+            },
+            {
               url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-promise.all',
-              comment: '',
-              tags: []
+              comment: 'How `Promise.all()` is specified.',
+              tags: [tag.SPECIFICATION]
             },
             {
               url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all',
-              comment: '',
-              tags: []
+              comment: 'Documenting `Promise.all()`.',
+              tags: [tag.MDN, tag.DOCS]
             },
             {
               url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-promise.race',
-              comment: '',
-              tags: []
+              comment: 'How `Promise.race()` is specified.',
+              tags: [tag.SPECIFICATION]
             },
             {
               url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/race',
-              comment: '',
-              tags: []
+              comment: 'Documenting `Promise.race()`.',
+              tags: [tag.MDN, tag.DOCS]
             },
             {
               url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-promise.resolve',
-              comment: '',
-              tags: []
+              comment: 'How `Promise.resolve()` is specified.',
+              tags: [tag.SPECIFICATION]
             },
             {
               url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve',
-              comment: '',
-              tags: []
+              comment: 'Documenting `Promise.resolve()`.',
+              tags: [tag.MDN, tag.DOCS]
             },
             {
-              url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-promise.resolve',
-              comment: '',
-              tags: []
+              url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-promise.reject',
+              comment: 'How `Promise.resolve()` is specified.',
+              tags: [tag.SPECIFICATION]
             },
             {
-              url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve',
-              comment: '',
-              tags: []
-            },
+              url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject',
+              comment: 'Documenting `Promise.reject()`.',
+              tags: [tag.MDN, tag.DOCS]
+            }
           ]
-        },
+        }
       }
     }
   }
