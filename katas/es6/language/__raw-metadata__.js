@@ -1337,7 +1337,7 @@ export const all = {
             TEMPLATE_STRING_BASICS,
             PROMISE_BASICS, PROMISE_CREATION
           ],
-          publishDateUTC: toUtcDate(2015, date.OCTOBER, 10, 13, 30),
+          publishDateUTC: toUtcDate(2015, date.NOVEMBER, 10, 13, 30),
           links: [
             {
               url: 'https://promisesaplus.com/#point-45',
