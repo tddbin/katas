@@ -9,7 +9,7 @@ describe('chaining multiple promises can enhance readability', () => {
       return Promise.reject('I should fulfill.');
     });
   
-    it('a function given to `then()` fulfills', function() {
+    it('a function given to `then()` fulfills (if it doesnt throw)', function() {
       const beNice = () => { throw new Error('I am nice') };
       return Promise.resolve()
         .then(beNice)

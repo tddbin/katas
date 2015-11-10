@@ -1332,8 +1332,12 @@ export const all = {
           description: '',
           path: 'promise/chaining-then',
           level: SKILL_LEVEL.ADVANCED,
-          requiresKnowledgeFrom: [],
-          publishDateUTC: toUtcDate(2015, date.OCTOBER, 10, ??, ??),
+          requiresKnowledgeFrom: [
+            CONST, ARROW_FUNCTION_BASICS,
+            TEMPLATE_STRING_BASICS,
+            PROMISE_BASICS, PROMISE_CREATION
+          ],
+          publishDateUTC: toUtcDate(2015, date.OCTOBER, 10, 13, 30),
           links: [
             {
               url: 'https://promisesaplus.com/#point-45',
