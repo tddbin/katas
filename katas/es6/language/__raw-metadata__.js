@@ -86,6 +86,7 @@ const GENERATOR_RETURN = 73;
 const STRING_ENDSWITH = 74;
 const PROMISE_BASICS = 75;
 const PROMISE_CREATION = 76;
+const PROMISE_CHAINING_THEN = 77;
 
 export const all = {
   name: 'ES6 Katas',
@@ -1350,6 +1351,31 @@ export const all = {
               url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject',
               comment: 'Documenting `Promise.reject()`.',
               tags: [tag.MDN, tag.DOCS]
+            }
+          ]
+        },
+        [PROMISE_CHAINING_THEN]: {
+          name: 'chaining-then',
+          description: '',
+          path: 'promise/chaining-then',
+          level: SKILL_LEVEL.ADVANCED,
+          requiresKnowledgeFrom: [],
+          publishDateUTC: toUtcDate(2015, date.OCTOBER, 10, ??, ??),
+          links: [
+            {
+              url: 'https://promisesaplus.com/#point-45',
+              comment: 'The description of how a value given to `then()` becomes a resolved promise.',
+              tags: [tag.SPECIFICATION]
+            },
+            {
+              url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-promisereactionjob',
+              comment: 'Looks like the description in the spec of what `then()` accepts and does with the given value.',
+              tags: [tag.SPECIFICATION]
+            },
+            {
+              url: 'http://www.html5rocks.com/en/tutorials/es6/promises/',
+              comment: 'A long article introducing promises.',
+              tags: [tag.ARTICLE]
             }
           ]
         }
