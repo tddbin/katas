@@ -210,8 +210,7 @@ export const all = {
           description: '`let` restricts the scope of the variable to the current block.',
           path: 'block-scoping/let',
           level: SKILL_LEVEL.BEGINNER,
-          requiresKnowledgeFrom: [
-          ],
+          requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.MARCH, 23, 7, 55))
         },
         [CONST]: {
@@ -417,8 +416,7 @@ export const all = {
           description: 'Use the rest operator as parameter.',
           path: 'rest/as-parameter',
           level: SKILL_LEVEL.INTERMEDIATE,
-          requiresKnowledgeFrom: [
-          ],
+          requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 7, 8, 15))
         },
         [REST_OPERATOR_WITH_DESTRUCTURING]: {
@@ -426,8 +424,7 @@ export const all = {
           description: 'Use the rest operator with destructuring.',
           path: 'rest/with-destructuring',
           level: SKILL_LEVEL.INTERMEDIATE,
-          requiresKnowledgeFrom: [
-          ],
+          requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 8, 7, 55))
         }
       }
@@ -439,8 +436,7 @@ export const all = {
           description: 'Spread operator in use with arrays.',
           path: 'spread/with-arrays',
           level: SKILL_LEVEL.INTERMEDIATE,
-          requiresKnowledgeFrom: [
-          ],
+          requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 10, 8, 18))
         },
         [SPREAD_WITH_STRINGS]: {
@@ -448,8 +444,7 @@ export const all = {
           description: 'Apply spread operator on strings.',
           path: 'spread/with-strings',
           level: SKILL_LEVEL.INTERMEDIATE,
-          requiresKnowledgeFrom: [
-          ],
+          requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 13, 7, 55))
         }
       }
@@ -461,8 +456,7 @@ export const all = {
           description: 'Create a class.',
           path: 'class/creation',
           level: SKILL_LEVEL.BEGINNER,
-          requiresKnowledgeFrom: [
-          ],
+          requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 14, 7, 55))
         },
         [CLASS_ACCESSORS]: {
@@ -470,8 +464,7 @@ export const all = {
           description: 'Getter+setters as class properties.',
           path: 'class/accessors',
           level: SKILL_LEVEL.INTERMEDIATE,
-          requiresKnowledgeFrom: [
-          ],
+          requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 15, 7, 56))
         },
         [CLASS_STATIC]: {
@@ -479,8 +472,7 @@ export const all = {
           description: 'Use of the static keyword inside a class.',
           path: 'class/static',
           level: SKILL_LEVEL.BEGINNER,
-          requiresKnowledgeFrom: [
-          ],
+          requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 16, 7, 55))
         },
         [CLASS_EXTENDS]: {
@@ -488,8 +480,7 @@ export const all = {
           description: 'How to do inheritance, using `extends`.',
           path: 'class/extends',
           level: SKILL_LEVEL.BEGINNER,
-          requiresKnowledgeFrom: [
-          ],
+          requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 17, 8, 25))
         },
         [CLASS_MORE_EXTENDS]: {
@@ -497,8 +488,7 @@ export const all = {
           description: 'More in depth `extends` stuff',
           path: 'class/more-extends',
           level: SKILL_LEVEL.ADVANCED,
-          requiresKnowledgeFrom: [
-          ],
+          requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 20, 7, 55))
         },
         [CLASS_SUPER_IN_METHOD]: {
@@ -506,8 +496,7 @@ export const all = {
           description: 'Use of `super` inside a method.',
           path: 'class/super-in-method',
           level: SKILL_LEVEL.INTERMEDIATE,
-          requiresKnowledgeFrom: [
-          ],
+          requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 21, 7, 55))
         },
         [CLASS_SUPER_IN_CONSTRUCTOR]: {
@@ -515,8 +504,7 @@ export const all = {
           description: 'Use of `super` inside the constructor.',
           path: 'class/super-in-constructor',
           level: SKILL_LEVEL.INTERMEDIATE,
-          requiresKnowledgeFrom: [
-          ],
+          requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 22, 7, 55))
         }
       }
@@ -528,8 +516,7 @@ export const all = {
           description: 'Convert a not-array into an array.',
           path: 'array-api/from',
           level: SKILL_LEVEL.TBD,
-          requiresKnowledgeFrom: [
-          ],
+          requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 23, 8, 32))
         },
         [ARRAY_OF]: {
@@ -537,8 +524,7 @@ export const all = {
           description: '`Array.of` creates an array with the given arguments as elements.',
           path: 'array-api/of',
           level: SKILL_LEVEL.TBD,
-          requiresKnowledgeFrom: [
-          ],
+          requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 27, 8, 9))
         },
         [ARRAY_FILL]: {
@@ -546,8 +532,7 @@ export const all = {
           description: '`[].fill` can fill up an array with one value.',
           path: 'array-api/fill',
           level: SKILL_LEVEL.TBD,
-          requiresKnowledgeFrom: [
-          ],
+          requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 28, 7, 55)),
           links: [
             {
@@ -567,8 +552,7 @@ export const all = {
           description: '`[].find` makes finding items in arrays easier.',
           path: 'array-api/find',
           level: SKILL_LEVEL.TBD,
-          requiresKnowledgeFrom: [
-          ],
+          requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 29, 7, 55))
         },
         [ARRAY_FIND_INDEX]: {
@@ -576,8 +560,7 @@ export const all = {
           description: '`[].findIndex` makes finding items in arrays easier.',
           path: 'array-api/findIndex',
           level: SKILL_LEVEL.TBD,
-          requiresKnowledgeFrom: [
-          ],
+          requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.MAY, 4, 8, 1))
         },
         [ARRAY_ENTRIES]: {
@@ -588,7 +571,7 @@ export const all = {
           requiresKnowledgeFrom: [CONST, ARRAY_FROM, ITERATOR_PROTOCOL
           ],
           publishDateUTC: new Date(Date.UTC(2015, date.MAY, 18, 8, 6))
-            
+
         },
         [ARRAY_KEYS]: {
           name: '`[].keys()`',
@@ -617,8 +600,7 @@ export const all = {
           description: 'Symbol basics.',
           path: 'symbol/basics',
           level: SKILL_LEVEL.INTERMEDIATE,
-          requiresKnowledgeFrom: [
-          ],
+          requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.MAY, 5, 11, 21))
         },
         [SYMBOL_FOR]: {
@@ -626,8 +608,7 @@ export const all = {
           description: '`Symbol.for()` for registering Symbols globally.',
           path: 'symbol/for',
           level: SKILL_LEVEL.INTERMEDIATE,
-          requiresKnowledgeFrom: [
-          ],
+          requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.MAY, 6, 7, 55))
         },
         [SYMBOL_KEY_FOR]: {
@@ -638,7 +619,7 @@ export const all = {
           requiresKnowledgeFrom: [
             SYMBOL_FOR
           ],
-          publishDateUTC: new Date(Date.UTC(2015, date.MAY, 7, 8, 9))       
+          publishDateUTC: new Date(Date.UTC(2015, date.MAY, 7, 8, 9))
         }
       }
     },
@@ -649,8 +630,7 @@ export const all = {
           description: '',
           path: 'iterator/array',
           level: SKILL_LEVEL.TBD,
-          requiresKnowledgeFrom: [
-          ],
+          requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.MAY, 8, 7, 55))
         },
         [ITERATOR_STRING]: {
@@ -659,7 +639,7 @@ export const all = {
           path: 'iterator/string',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: [
-            SYMBOL_BASICS, 
+            SYMBOL_BASICS,
             ITERATOR_ARRAY
           ],
           publishDateUTC: new Date(Date.UTC(2015, date.MAY, 11, 7, 55))
@@ -669,8 +649,7 @@ export const all = {
           description: '',
           path: 'iterator/protocol',
           level: SKILL_LEVEL.EXPERT,
-          requiresKnowledgeFrom: [
-          ],
+          requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.MAY, 12, 7, 55))
         },
         [ITERATOR_USAGES]: {
@@ -679,10 +658,10 @@ export const all = {
           path: 'iterator/usages',
           level: SKILL_LEVEL.EXPERT,
           requiresKnowledgeFrom: [
-            LET, 
-            DESTRUCTURING_ARRAY, DESTRUCTURING_OBJECT, 
-            SYMBOL_BASICS, 
-            ITERATOR_PROTOCOL, 
+            LET,
+            DESTRUCTURING_ARRAY, DESTRUCTURING_OBJECT,
+            SYMBOL_BASICS,
+            ITERATOR_PROTOCOL,
             SPREAD_WITH_ARRAYS
           ],
           publishDateUTC: new Date(Date.UTC(2015, date.MAY, 13, 8, 17))
@@ -696,8 +675,7 @@ export const all = {
           description: '',
           path: 'map/basics',
           level: SKILL_LEVEL.BEGINNER,
-          requiresKnowledgeFrom: [
-          ],
+          requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.MAY, 21, 7, 55))
         },
         [MAP_GET]: {
@@ -714,8 +692,7 @@ export const all = {
           description: '',
           path: 'map/set',
           level: SKILL_LEVEL.EXPERT,
-          requiresKnowledgeFrom: [
-          ],
+          requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.MAY, 26, 8, 3))
         },
         [MAP_INITIALIZE]: {
@@ -747,7 +724,7 @@ export const all = {
               url: 'https://www.youtube.com/watch?v=71aX1z0SzZU',
               comment: 'A video (15min) documenting how this kata was created.',
               tags: [tag.VIDEO]
-            } 
+            }
           ]
         }
       }
@@ -759,8 +736,7 @@ export const all = {
           description: '',
           path: 'set/basics',
           level: SKILL_LEVEL.TBD,
-          requiresKnowledgeFrom: [
-          ],
+          requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.MAY, 27, 10, 12))
         },
         [SET_ADD]: {
@@ -888,7 +864,7 @@ export const all = {
           publishDateUTC: new Date(Date.UTC(2015, date.JUNE, 1, 8, 39)),
           links: [
             {
-              url:'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*',
+              url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*',
               comment: 'Describes the `function*` declaration.',
               tags: [tag.MDN, tag.DOCS]
             }
@@ -986,7 +962,7 @@ export const all = {
         }
       }
     },
-    
+
     'Object': {
       items: {
         [OBJECT_IS]: {
@@ -1002,7 +978,7 @@ export const all = {
         }
       }
     },
-    
+
     'Number': {
       items: {
         [NUMBER_ISINTEGER]: {
@@ -1010,13 +986,12 @@ export const all = {
           description: '`Number.isInteger()` determines if a value is an integer.',
           path: 'number-api/isinteger',
           level: SKILL_LEVEL.BEGINNER,
-          requiresKnowledgeFrom: [
-          ],
+          requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.JUNE, 25, 7, 55))
         }
       }
     },
-    
+
     'Default parameters': {
       items: {
         [DEFAULT_PARAMETERS_BASICS]: {
@@ -1033,7 +1008,7 @@ export const all = {
         }
       }
     },
-    
+
     'Reflect': {
       items: {
         [REFLECT_BASICS]: {
@@ -1080,8 +1055,7 @@ export const all = {
           description: 'The `new` operator as a function.',
           path: 'reflect/construct',
           level: SKILL_LEVEL.INTERMEDIATE,
-          requiresKnowledgeFrom: [
-          ],
+          requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.JULY, 30, 7, 55)),
           links: [
             {
@@ -1143,7 +1117,7 @@ export const all = {
         }
       }
     },
-    
+
     'Modules': {
       items: {
         [MODULES_IMPORT]: {
@@ -1151,13 +1125,12 @@ export const all = {
           description: 'Use `import` to import functions that have been exported somewhere else.',
           path: 'modules/import',
           level: SKILL_LEVEL.BEGINNER,
-          requiresKnowledgeFrom: [
-          ],
+          requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.JULY, 9, 8, 46))
         }
       }
     },
-    
+
     'String': {
       items: {
         [STRING_INCLUDES]: {
@@ -1265,7 +1238,7 @@ export const all = {
         }
       }
     },
-    
+
     'Promise': {
       links: [
         {
