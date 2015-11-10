@@ -1545,6 +1545,45 @@
           ],
           "groupName": "Promise",
           "id": "76"
+        },
+        {
+          "name": "chaining-then",
+          "description": "",
+          "path": "promise/chaining-then",
+          "level": "ADVANCED",
+          "requiresKnowledgeFrom": [
+            8,
+            5,
+            1,
+            75,
+            76
+          ],
+          "publishDateUTC": "2015-11-10T13:30:00.000Z",
+          "links": [
+            {
+              "url": "https://promisesaplus.com/#point-45",
+              "comment": "The description of how a value given to `then()` becomes a resolved promise.",
+              "tags": [
+                "spec"
+              ]
+            },
+            {
+              "url": "http://www.ecma-international.org/ecma-262/6.0/#sec-promisereactionjob",
+              "comment": "Looks like the description in the spec of what `then()` accepts and does with the given value.",
+              "tags": [
+                "spec"
+              ]
+            },
+            {
+              "url": "http://www.html5rocks.com/en/tutorials/es6/promises/",
+              "comment": "A long article introducing promises.",
+              "tags": [
+                "article"
+              ]
+            }
+          ],
+          "groupName": "Promise",
+          "id": "77"
         }
       ],
       "slug": "Promise",
