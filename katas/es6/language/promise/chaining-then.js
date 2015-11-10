@@ -6,11 +6,11 @@ describe('chaining multiple promises can enhance readability', () => {
   describe('prerequisites for understanding', function() {
     
     it('reminder: the test passes when a fulfilled promise is returned', function() {
-      return Promise.resolve('I should fulfill.');
+      return Promise.reject('I should fulfill.');
     });
   
     it('a function given to `then()` fulfills', function() {
-      const beNice = () => 'I am nice';
+      const beNice = () => { throw new Error('I am nice') };
       return Promise.resolve()
         .then(beNice)
         .then(niceMessage => assert.equal(niceMessage, 'I am nice'));
@@ -25,7 +25,7 @@ describe('chaining multiple promises can enhance readability', () => {
     it('`then()` receives the result of the promise it was called on', function() {
       const wordsPromise = Promise.resolve('one   space     between each     word');
       return wordsPromise
-        .then(string => removeMultipleSpaces(string))
+        .then(string => removeMultipleSpaces())
         .then(actual => {assert.equal(actual, 'one space between each word')})
       ;
     });
@@ -36,7 +36,6 @@ describe('chaining multiple promises can enhance readability', () => {
       const wordsPromise = Promise.resolve('Sentence without       an end');
       return wordsPromise
         .then(removeMultipleSpaces)
-        .then(appendPeriod)
         .then(actual => {assert.equal(actual, 'Sentence without an end.')})
       ;
     });
@@ -46,8 +45,8 @@ describe('chaining multiple promises can enhance readability', () => {
     it('order of the `then()`s matters', function() {
       const wordsPromise = Promise.resolve('Sentence without       an end ');
       return wordsPromise
-        .then(trim)
         .then(appendPeriod)
+        .then(trim)
         .then(removeMultipleSpaces)
         .then(actual => {assert.equal(actual, 'Sentence without an end.')})
       ;
@@ -61,7 +60,7 @@ describe('chaining multiple promises can enhance readability', () => {
     it('any of the things given to `then()` can resolve asynchronously (the real power of Promises)', function() {
       const wordsPromise = Promise.resolve('sentence without an end');
       return wordsPromise
-        .then(string => new Promise(resolve => asyncUpperCaseStart(string, resolve)))
+        .then(string => new Promise(resolve => asyncUpperCaseStart))
         .then(string => new Promise(resolve => setTimeout(() => resolve(appendPeriod(string)), 100)))
         .then(actual => {assert.equal(actual, 'Sentence without an end.')})
       ;
@@ -71,8 +70,8 @@ describe('chaining multiple promises can enhance readability', () => {
       const wordsPromise = Promise.resolve('trailing space   ');
       return wordsPromise
         .then(string => new Promise(resolve => asyncUpperCaseStart(string, resolve)))
-        .then(string => new Promise(resolve => setTimeout(() => resolve(trim(string)), 100)))
         .then(string => new Promise(resolve => setTimeout(() => resolve(appendPeriod(string)), 100)))
+        .then(string => new Promise(resolve => setTimeout(() => resolve(trim(string)), 100)))
         .then(actual => {assert.equal(actual, 'Trailing space.')})
       ;
     });
