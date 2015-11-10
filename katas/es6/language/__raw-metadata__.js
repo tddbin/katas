@@ -1328,8 +1328,8 @@ export const all = {
           ]
         },
         [PROMISE_CHAINING_THEN]: {
-          name: 'chaining-then',
-          description: '',
+          name: 'chaining `then()`',
+          description: 'Chaining promises can enhance readability of asynchronous code.',
           path: 'promise/chaining-then',
           level: SKILL_LEVEL.ADVANCED,
           requiresKnowledgeFrom: [
