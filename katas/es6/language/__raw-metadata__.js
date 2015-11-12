@@ -87,6 +87,7 @@ const STRING_ENDSWITH = 74;
 const PROMISE_BASICS = 75;
 const PROMISE_CREATION = 76;
 const PROMISE_CHAINING_THEN = 77;
+const PROMISE_CHAINING_AND_ERRORS = 78;
 
 export const all = {
   name: 'ES6 Katas',
@@ -1354,6 +1355,17 @@ export const all = {
               comment: 'A long article introducing promises.',
               tags: [tag.ARTICLE]
             }
+          ]
+        },
+        [PROMISE_CHAINING_AND_ERRORS]: {
+          name: 'chaining and errors',
+          description: 'Handling errors in chained promises made easy.',
+          path: 'promise/chaining-and-errors',
+          level: SKILL_LEVEL.ADVANCED,
+          requiresKnowledgeFrom: [
+          ],
+          publishDateUTC: toUtcDate(2015, date.NOVEMBER, ??, ??, ??),
+          links: [
           ]
         }
       }
