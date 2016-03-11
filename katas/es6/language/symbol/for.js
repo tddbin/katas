@@ -1,4 +1,4 @@
-// 35: Symbol.for - retreives or creates a runtime-wide symbol
+// 35: Symbol.for - retrieves or creates a runtime-wide symbol
 // To do: make all tests pass, leave the assert lines unchanged!
 
 describe('`Symbol.for` for registering Symbols globally', function() {
