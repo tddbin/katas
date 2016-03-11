@@ -8,7 +8,7 @@ describe('`Symbol.for` for registering Symbols globally', function() {
     assert.equal(symbolType, 'symbol');
   });
   
-  it('stores the symbol in a runtime-wide registry and retreives it from it', function() {
+  it('stores the symbol in a runtime-wide registry and retrieves it from it', function() {
     const sym = Symbol.for('new symbol');
     const sym1 = Symbol.for('new symbol1');
     
