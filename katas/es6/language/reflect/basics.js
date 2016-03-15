@@ -25,7 +25,7 @@ describe('`Reflect` basics', function() {
     
     it('`Reflect.construct()` is like new', function() {
       let Class;
-      assert.equal(Reflect.construct(Class) instanceof Class, true);
+      assert.equal(Reflect.construct(Class, []) instanceof Class, true);
     });
     
     it('`Reflect.get()` returns a property`s value', function() {
