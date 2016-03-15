@@ -21,11 +21,11 @@ describe('`Reflect.construct` is the `new` operator as a function', function() {
     });
     it('works giving a function', function() {
       let aFunction;
-      assert.doesNotThrow(() => { Reflect.construct(aFunction) });
+      assert.doesNotThrow(() => { Reflect.construct(aFunction, []) });
     });
     it('works giving a class', function() {
       const aClass = {};
-      assert.doesNotThrow(() => { Reflect.construct(aClass) });
+      assert.doesNotThrow(() => { Reflect.construct(aClass, []) });
     });
   });
 
