@@ -39,7 +39,7 @@ describe('`Promise` API overview', function() {
 
   describe('`Promise.all()`', () => {
     it('`Promise.all([p1, p2])` resolves when all promises resolve', () =>
-      Promise.all([rejectingPromise])
+      Promise.all([resolvingPromise, rejectingPromise, resolvingPromise])
     );
     it('`Promise.all([p1, p2])` rejects when a promise is rejected', (done) => {
       Promise.all([resolvingPromise])
