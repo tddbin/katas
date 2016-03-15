@@ -87,6 +87,8 @@ const STRING_ENDSWITH = 74;
 const PROMISE_BASICS = 75;
 const PROMISE_CREATION = 76;
 const PROMISE_CHAINING_THEN = 77;
+const PROMISE_API = 78;
+
 const PROMISE_CHAINING_AND_ERRORS = '??';
 
 export const all = {
@@ -1368,6 +1370,17 @@ export const all = {
         //   links: [
         //   ]
         // },
+        [PROMISE_API]: {
+          name: 'the API',
+          description: '`Promise` API overview.',
+          path: 'promise/api',
+          level: SKILL_LEVEL.INTERMEDIATE,
+          requiresKnowledgeFrom: [
+          ],
+          publishDateUTC: toUtcDate(2015, date.MARCH, ??, ??, ??),
+          links: [
+          ]
+        },
       }
     }
   }
