@@ -1248,7 +1248,12 @@ export const all = {
           url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-promise-objects',
           comment: 'A Promise is an object that is used as a placeholder for the eventual results of a deferred (and possibly asynchronous) computation.',
           tags: [tag.QUOTE, tag.SPECIFICATION]
-        }
+        },
+        {
+          url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise',
+          comment: 'The MDN documentation with some extensive examples.',
+          tags: [tag.MDN, tag.DOCS]
+        },
       ],
       items: {
         [PROMISE_BASICS]: {
@@ -1282,11 +1287,6 @@ export const all = {
               url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-promise-constructor',
               comment: 'Describing the promise constructor.',
               tags: [tag.SPECIFICATION]
-            },
-            {
-              url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise',
-              comment: 'The MDN documentation with some extensive examples.',
-              tags: [tag.MDN, tag.DOCS]
             },
             {
               url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-promise.all',
@@ -1376,8 +1376,9 @@ export const all = {
           path: 'promise/api',
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [
+            PROMISE_BASICS, PROMISE_CREATION,
           ],
-          publishDateUTC: toUtcDate(2015, date.MARCH, ??, ??, ??),
+          publishDateUTC: toUtcDate(2015, date.MARCH, 15, 9, 30),
           links: [
           ]
         },
