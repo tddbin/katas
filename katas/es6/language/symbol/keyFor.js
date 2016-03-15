@@ -5,7 +5,7 @@ describe('`Symbol.keyFor()` gets the symbol key for a given symbol', function() 
   
   const sym = Symbol.for('foo');
   
-  it('pass the symbol to `keyFor()` and you get it`s key', function() {
+  it('pass the symbol to `keyFor()` and you get its key', function() {
     const key = Symbol.____(sym);
     
     assert.equal(key, 'foo');
