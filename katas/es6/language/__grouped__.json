@@ -1475,14 +1475,6 @@
               ]
             },
             {
-              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
-              "comment": "The MDN documentation with some extensive examples.",
-              "tags": [
-                "mdn",
-                "docs"
-              ]
-            },
-            {
               "url": "http://www.ecma-international.org/ecma-262/6.0/#sec-promise.all",
               "comment": "How `Promise.all()` is specified.",
               "tags": [
@@ -1584,6 +1576,20 @@
           ],
           "groupName": "Promise",
           "id": "77"
+        },
+        {
+          "name": "the API",
+          "description": "`Promise` API overview.",
+          "path": "promise/api",
+          "level": "INTERMEDIATE",
+          "requiresKnowledgeFrom": [
+            75,
+            76
+          ],
+          "publishDateUTC": "2015-03-15T09:30:00.000Z",
+          "links": [],
+          "groupName": "Promise",
+          "id": "78"
         }
       ],
       "slug": "Promise",
