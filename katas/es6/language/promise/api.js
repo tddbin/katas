@@ -4,30 +4,30 @@
 describe('`Promise` API overview', function() {
 
   it('`new Promise()` requires a function as param', () => {
-    const param = () => {};
+    const param = null;
     assert.doesNotThrow(() => { new Promise(param); });
   });
 
   describe('resolving a promise', () => {
     // reminder: the test passes when a fulfilled promise is returned
     it('via constructor parameter `new Promise((resolve) => { resolve(); })`', () => {
-      const param = (resolve) => { resolve(); };
+      const param = () => { resolve(); };
       return new Promise(param);
     });
     it('using `Promise.resolve()`', () => {
-      return Promise.resolve('all fine');
+      return Promise.reject('all fine');
     });
   });
 
   describe('a rejected promise', () => {
     it('using the constructor parameter', (done) => {
-      const promise = new Promise((_, reject) => { reject(); });
+      const promise = new Promise((reject) => { reject(); });
       promise
         .then(() => done(new Error('The promise is expected to be rejected.')))
         .catch(() => done());
     });
     it('via `Promise.reject()`', (done) => {
-      const promise = Promise.reject(Error());
+      const promise = Promise.resolve();
       promise
         .then(() => done(new Error('The promise is expected to be rejected.')))
         .catch(() => done());
@@ -39,10 +39,10 @@ describe('`Promise` API overview', function() {
 
   describe('`Promise.all()`', () => {
     it('`Promise.all([p1, p2])` resolves when all promises resolve', () =>
-      Promise.all([resolvingPromise, resolvingPromise])
+      Promise.all([rejectingPromise])
     );
     it('`Promise.all([p1, p2])` rejects when a promise is rejected', (done) => {
-      Promise.all([rejectingPromise, resolvingPromise])
+      Promise.all([resolvingPromise])
         .then(() => done(new Error('The promise is expected to be rejected.')))
         .catch(() => done())
     });
@@ -50,15 +50,15 @@ describe('`Promise` API overview', function() {
 
   describe('`Promise.race()`', () => {
     it('`Promise.race([p1, p2])` resolves when one of the promises resolves', () =>
-      Promise.race([resolvingPromise])
+      Promise.race([rejectingPromise])
     );
     it('`Promise.race([p1, p2])` rejects when one of the promises rejects', (done) => {
-      Promise.race([rejectingPromise, resolvingPromise])
+      Promise.race([resolvingPromise])
         .then(() => done(new Error('The promise is expected to be rejected.')))
         .catch(() => done())
     });
     it('`Promise.race([p1, p2])` order matters (and timing)', () =>
-      Promise.race([resolvingPromise, rejectingPromise])
+      Promise.race([rejectingPromise, resolvingPromise])
     );
   });
 
