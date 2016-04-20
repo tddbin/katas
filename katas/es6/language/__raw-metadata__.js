@@ -1384,8 +1384,8 @@ export const all = {
           ]
         },
         [PROMISE_CATCH]: {
-          name: '',
-          description: '',
+          name: '`promise.catch()`',
+          description: 'Returns a Promise and deals with rejected cases only.',
           path: 'promise/catch',
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [
@@ -1395,9 +1395,19 @@ export const all = {
           links: [
             {
               url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch',
-              comment: '',
+              comment: 'A short description of how `catch` works.',
               tags: [tag.MDN, tag.DOCS]
-            }
+            },
+            {
+              url: 'http://www.ecma-international.org/ecma-262/6.0/index.html#sec-promise.prototype.catch',
+              comment: 'The actual chapter about `catch`, you need to dive in from here.',
+              tags: [tag.SPECIFICATION]
+            },
+            {
+              url: 'http://www.ecma-international.org/ecma-262/6.0/index.html#sec-performpromisethen',
+              comment: 'The description of the actual flow of `catch`.',
+              tags: [tag.SPECIFICATION]
+            },
           ]
         },
       }
