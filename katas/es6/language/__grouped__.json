@@ -1590,6 +1590,43 @@
           "links": [],
           "groupName": "Promise",
           "id": "78"
+        },
+        {
+          "name": "`promise.catch()`",
+          "description": "Returns a Promise and deals with rejected cases only.",
+          "path": "promise/catch",
+          "level": "INTERMEDIATE",
+          "requiresKnowledgeFrom": [
+            75,
+            76
+          ],
+          "publishDateUTC": "2015-03-15T09:30:00.000Z",
+          "links": [
+            {
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch",
+              "comment": "A short description of how `catch` works.",
+              "tags": [
+                "mdn",
+                "docs"
+              ]
+            },
+            {
+              "url": "http://www.ecma-international.org/ecma-262/6.0/index.html#sec-promise.prototype.catch",
+              "comment": "The actual chapter about `catch`, you need to dive in from here.",
+              "tags": [
+                "spec"
+              ]
+            },
+            {
+              "url": "http://www.ecma-international.org/ecma-262/6.0/index.html#sec-performpromisethen",
+              "comment": "The description of the actual flow of `catch`.",
+              "tags": [
+                "spec"
+              ]
+            }
+          ],
+          "groupName": "Promise",
+          "id": "79"
         }
       ],
       "slug": "Promise",
