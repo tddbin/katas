@@ -88,6 +88,7 @@ const PROMISE_BASICS = 75;
 const PROMISE_CREATION = 76;
 const PROMISE_CHAINING_THEN = 77;
 const PROMISE_API = 78;
+const PROMISE_CATCH = 79;
 
 const PROMISE_CHAINING_AND_ERRORS = '??';
 
@@ -1380,6 +1381,23 @@ export const all = {
           ],
           publishDateUTC: toUtcDate(2015, date.MARCH, 15, 9, 30),
           links: [
+          ]
+        },
+        [PROMISE_CATCH]: {
+          name: '',
+          description: '',
+          path: 'promise/catch',
+          level: SKILL_LEVEL.INTERMEDIATE,
+          requiresKnowledgeFrom: [
+            PROMISE_BASICS, PROMISE_CREATION,
+          ],
+          publishDateUTC: toUtcDate(2015, date.MARCH, 15, 9, 30),
+          links: [
+            {
+              url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch',
+              comment: '',
+              tags: [tag.MDN, tag.DOCS]
+            }
           ]
         },
       }
