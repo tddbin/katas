@@ -34,9 +34,9 @@ describe('`Set` API overview', function(){
   });
   
   it('`entries()` returns an iterator for all values', function() {
-    const ecpectedEntries = api.map(entry => [entry, entry]);
+    const expectedEntries = api.map(entry => [entry, entry]);
     const actualEntries = set.entry;
-    assert.deepEqual([...actualEntries], ecpectedEntries);
+    assert.deepEqual([...actualEntries], expectedEntries);
   });
   
   it('`forEach()` calls a callback for each value', function() {
