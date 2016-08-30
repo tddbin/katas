@@ -6,7 +6,7 @@ describe('`add()` appends a new element to the end of a Set object.', function()
   let set;
   beforeEach(() => set = new Set());
 
-  it('adds every value, of any type, only ones', function() {
+  it('adds every value, of any type, only once', function() {
     const fn = () => {};
     
     set.add(1);
