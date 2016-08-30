@@ -2,7 +2,7 @@
 // To do: make all tests pass, leave the asserts unchanged!
 
 describe('arrow functions', function() {
-  
+
   it('are shorter to write', function() {
     var func = () => {
       return 'I am func';
@@ -17,7 +17,7 @@ describe('arrow functions', function() {
 
   it('one parameter can be written without parens', () => {
     var func = p => param - 1;
-    assert.equal(func(23), 24);
+    assert.equal(func(25), 24);
   });
 
   it('many params require parens', () => {
