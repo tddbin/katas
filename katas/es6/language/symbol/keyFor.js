@@ -19,9 +19,9 @@ describe('`Symbol.keyFor()` gets the symbol key for a given symbol', function() 
     assert.equal(key, void 0);
   });
   
-  it('well-known symbols are not in the runtime-wide registry either', function() {
+  it('predefined symbols are not in the runtime-wide registry either', function() {
     const key = Symbol.keyFor(Symbol.iteraTor);
-    
+ 
     assert.equal(key, void 0);
   });
   
