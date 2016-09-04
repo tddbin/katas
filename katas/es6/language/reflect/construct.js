@@ -17,7 +17,7 @@ describe('`Reflect.construct` is the `new` operator as a function', function() {
   describe('the 1st parameter is the constructor to be invoked', function() {
     it('fails when given a number as constructor', function() {
       let aNumber = () => {};
-      assert.throws(() => { Reflect.construct(aNumber) }, TypeError);
+      assert.throws(() => { Reflect.construct(aNumber, []) }, TypeError);
     });
     it('works giving a function', function() {
       let aFunction;
