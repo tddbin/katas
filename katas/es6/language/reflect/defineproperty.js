@@ -5,7 +5,7 @@ describe('`Reflect.defineProperty()` is like `Object.defineProperty()` but retur
 
   describe('the function itself', function() {
     it('is static on the `Reflect` object', function() {
-      const name = 'waht`s the functions name again? :)';
+      const name = 'what`s the functions name again? :)';
       assert.equal(name in Reflect, true);
     });
     it('is of type `function`', function() {
