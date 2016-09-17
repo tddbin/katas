@@ -1165,6 +1165,37 @@
             31
           ],
           "publishDateUTC": "2015-07-03T07:55:00.000Z",
+          "links": [
+            {
+              "url": "http://www.ecma-international.org/ecma-262/6.0/#sec-reflect.apply",
+              "comment": "How this function is specified.",
+              "tags": [
+                "spec"
+              ]
+            },
+            {
+              "url": "http://www.ecma-international.org/ecma-262/6.0/#sec-createlistfromarraylike",
+              "comment": "How the 3rd parameter gets processed, as an `CreateListFromArrayLike`.",
+              "tags": [
+                "spec"
+              ]
+            },
+            {
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/apply",
+              "comment": "The MDN docs for this function.",
+              "tags": [
+                "docs",
+                "mdn"
+              ]
+            },
+            {
+              "url": "https://twitter.com/es6katas/status/616877798917967873",
+              "comment": "Announcement of this kata on twitter.",
+              "tags": [
+                "announcement"
+              ]
+            }
+          ],
           "groupName": "Reflect",
           "id": "59"
         },
