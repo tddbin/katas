@@ -12,7 +12,7 @@ describe('`Reflect.apply` calls a target function', function() {
   it('it calls a callable, e.g. a function', function() {
     let fn;
     
-    assert.equal(Reflect.apply(fn), 42);
+    assert.equal(Reflect.apply(fn,undefined,[]), 42);
   });
   
   it('passing it a non-callable throws a TypeError', function() {
