@@ -1047,6 +1047,11 @@ export const all = {
               tags: [tag.SPECIFICATION]
             },
             {
+              url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-createlistfromarraylike',
+              comment: 'How the 3rd parameter gets processed, as an `CreateListFromArrayLike`.',
+              tags: [tag.SPECIFICATION]
+            },
+            {
               url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/apply',
               comment: 'The MDN docs for this function.',
               tags: [tag.DOCS, tag.MDN]

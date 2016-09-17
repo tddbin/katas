@@ -34,11 +34,18 @@ describe('`Reflect.apply` calls a target function', function() {
     
     assert.deepEqual(fourtyTwo, 42);
   });
-  
-  it('the 3rd argument is an array of parameters passed to the call', function() {
-    let emptyArrayWithFiveElements = Reflect.apply(Array);
-    
-    assert.deepEqual(emptyArrayWithFiveElements.fill(42), [42, 42, 42, 42, 42]);
+
+  describe('the 3rd parameter', () => {
+    it('must be an array (or array-like)', () => {
+      const thirdParam = 'should be array-like';
+      assert.doesNotThrow(() => Reflect.apply(() => void 0, null, thirdParam));
+    });
+
+    it('is an array of parameters passed to the call', function() {
+      let emptyArrayWithFiveElements = Reflect.apply(Array);
+
+      assert.deepEqual(emptyArrayWithFiveElements.fill(42), [42, 42, 42, 42, 42]);
+    });
   });
-  
+
 });
