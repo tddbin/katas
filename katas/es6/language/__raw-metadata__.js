@@ -1042,7 +1042,7 @@ export const all = {
           publishDateUTC: new Date(Date.UTC(2015, date.JULY, 3, 7, 55)),
           links: [
             {
-              url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-function.prototype.apply',
+              url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-reflect.apply',
               comment: 'How this function is specified.',
               tags: [tag.SPECIFICATION]
             },
