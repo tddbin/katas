@@ -1039,7 +1039,29 @@ export const all = {
             ARROW_FUNCTION_BASICS,
             ARRAY_FILL
           ],
-          publishDateUTC: new Date(Date.UTC(2015, date.JULY, 3, 7, 55))
+          publishDateUTC: new Date(Date.UTC(2015, date.JULY, 3, 7, 55)),
+          links: [
+            {
+              url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-reflect.apply',
+              comment: 'How this function is specified.',
+              tags: [tag.SPECIFICATION]
+            },
+            {
+              url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-createlistfromarraylike',
+              comment: 'How the 3rd parameter gets processed, as an `CreateListFromArrayLike`.',
+              tags: [tag.SPECIFICATION]
+            },
+            {
+              url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/apply',
+              comment: 'The MDN docs for this function.',
+              tags: [tag.DOCS, tag.MDN]
+            },
+            {
+              url: 'https://twitter.com/es6katas/status/616877798917967873',
+              comment: 'Announcement of this kata on twitter.',
+              tags: [tag.ANNOUNCEMENT]
+            },
+          ],
         },
         [REFLECT_GET_PROTOTYPE_OF]: {
           name: '`Reflect.getPrototypeOf()`',
@@ -1087,8 +1109,8 @@ export const all = {
               comment: 'Announcement of this kata on twitter.',
               tags: [tag.ANNOUNCEMENT]
 
-            }
-          ]
+            },
+          ],
         },
         [REFLECT_DEFINEPROPERTY]: {
           name: '`Reflect.defineProperty()`',
