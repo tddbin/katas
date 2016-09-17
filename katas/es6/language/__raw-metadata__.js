@@ -1047,6 +1047,11 @@ export const all = {
               tags: [tag.SPECIFICATION]
             },
             {
+              url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/apply',
+              comment: 'The MDN docs for this function.',
+              tags: [tag.DOCS, tag.MDN]
+            },
+            {
               url: 'https://twitter.com/es6katas/status/616877798917967873',
               comment: 'Announcement of this kata on twitter.',
               tags: [tag.ANNOUNCEMENT]
