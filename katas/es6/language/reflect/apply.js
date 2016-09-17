@@ -50,4 +50,23 @@ describe('`Reflect.apply` calls a target function', function() {
     });
   });
 
+  describe('example usages', () => {
+    it('simple function call', () => {
+      const fn = () => 'the return value';
+      assert.equal(Reflect.apply(fn, void 0, []), 'the return value');
+    });
+    it('call a function on an array', () => {
+      const fn = [].slice;
+      assert.deepEqual(Reflect.apply(fn, [0, 23, 42], [1]), [23, 42]);
+    });
+    it('pass in the `this` that the function to call needs', () => {
+      class Bob {
+        constructor() { this._name = 'Bob'; }
+        name() { return this._name; }
+      }
+      const bob = new Bob();
+      assert.equal(Reflect.apply(bob.name, bob, []), 'Bob');
+    });
+  });
+
 });
