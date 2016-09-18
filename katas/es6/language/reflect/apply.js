@@ -20,15 +20,16 @@ describe('`Reflect.apply` calls a target function', function() {
       assert.throws(applyOnUncallable, TypeError);
     });
   });
-
-  it('the 2nd parameter is the scope (or the `this`)', function() {
-    class FourtyTwo {
-      constructor() { this.value = 42}
-      fn() {return this.value}
-    }
-    let instance = new FourtyTwo();
-    const fourtyTwo = Reflect.apply(instance.fn);
-    assert.deepEqual(fourtyTwo, 42);
+  describe('the 2nd parameter', () => {
+    it('is the scope (or the `this`)', function() {
+      class FourtyTwo {
+        constructor() { this.value = 42}
+        fn() {return this.value}
+      }
+      let instance = new FourtyTwo();
+      const fourtyTwo = Reflect.apply(instance.fn);
+      assert.deepEqual(fourtyTwo, 42);
+    });
   });
 
   describe('the 3rd parameter', () => {
