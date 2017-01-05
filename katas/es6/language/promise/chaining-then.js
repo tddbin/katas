@@ -53,8 +53,8 @@ describe('chaining multiple promises can enhance readability', () => {
     });
     
     const asyncUpperCaseStart = (string, onDone) => {
-      const format = onDone(string[0].toUpperCase() + string.substr(1));
-      setTimeout(format, 10);
+      const format = () => onDone(string[0].toUpperCase() + string.substr(1));
+      setTimeout(format, 100);
     };
   
     it('any of the things given to `then()` can resolve asynchronously (the real power of Promises)', function() {
