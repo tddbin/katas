@@ -30,7 +30,7 @@ describe('arrow functions have lexical `this`, no dynamic `this`', () => {
     var anotherObj = {};
     var expected = anotherObj;
     
-    assert.strictEqual(fn.call(anotherObj), expected);
+    assert.notStrictEqual(fn.call(anotherObj), expected);
   });
   
   it('`arguments` doesnt work inside arrow functions', function() {
