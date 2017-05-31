@@ -43,4 +43,15 @@ describe('default parameters make function parameters more flexible', () => {
     assert.equal(fn(), defaultValue());
   });
   
+  it('functions can also help requiring parameters', function() {
+    const requiredParameter = (name) => {
+    throw new Error(`Missing parameter "${name}"`);
+  }
+    
+  const fn = (url = '', title = "NoTitle") => void 0;// do something with the parameters
+    
+  expect(fn).toThrow(new Error(`Missing parameter "url"`));
+    
+  });
+  
 });
