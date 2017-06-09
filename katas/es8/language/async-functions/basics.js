@@ -17,9 +17,7 @@ describe('`async` defines an asynchronous function', function() {
       assert.equal(f instanceof AsyncFunction, true);
     });
     it('an object method', function() {
-      const obj = {
-        f: async () => void 0,
-      };
+      const obj = {f: async () => void 0};
       assert.equal(obj.f instanceof AsyncFunction, true);
     });
   });
