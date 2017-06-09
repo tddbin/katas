@@ -5,35 +5,35 @@ describe('`async` defines an asynchronous function', function() {
 
   describe('can be created by putting `async` before', () => {
     it('a function expression', function() {
-      const f = async function() {};
+      const f = function() {};
       assert.equal(f instanceof AsyncFunction, true);
     });
     it('a function declaration', function() {
-      async function f() {}
+      function f() {}
       assert.equal(f instanceof AsyncFunction, true);
     });
     it('an arrow function', function() {
-      const f = async () => {};
+      const f = () => {};
       assert.equal(f instanceof AsyncFunction, true);
     });
     it('an object method', function() {
-      const obj = {f: async () => void 0};
+      const obj = {f: () => void 0};
       assert.equal(obj.f instanceof AsyncFunction, true);
     });
   });
 
   describe('the return value', () => {
     it('is always a Promise', function() {
-      const f = async () => void 0;
+      const f = 'nö';
       assert.equal(f() instanceof Promise, true);
     });
     it('wraps the return value in a Promise', function() {
-      const f = async () => 42;
+      const f = 42;
       return f().then(v => assert.equal(v, 42));
     });
     it('is a rejected Promise when the async function throws', function() {
-      const f = async () => { throw Error(23); };
-      return f().catch(v => assert.equal(v.message, 23));
+      const f = () => 0;
+      return f().catch(v => assert.equal(v, 23));
     });
   });
 
