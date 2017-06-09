@@ -24,6 +24,21 @@ describe('`async` defines an asynchronous function', function() {
     });
   });
 
+  describe('the return value', () => {
+    it('is always a Promise', function() {
+      const f = async () => void 0;
+      assert.equal(f() instanceof Promise, true);
+    });
+    it('wraps the return value in a Promise', function() {
+      const f = async () => 42;
+      return f().then(v => assert.equal(v, 42));
+    });
+    it('is a rejected Promise when the async function throws', function() {
+      const f = async () => { throw Error(23); };
+      return f().catch(v => assert.equal(v.message, 23));
+    });
+  });
+
 });
 
 // Note that AsyncFunction is not a global object.
