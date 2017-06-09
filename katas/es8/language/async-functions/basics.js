@@ -28,12 +28,15 @@ describe('`async` defines an asynchronous function', function() {
       assert.equal(f() instanceof Promise, true);
     });
     it('wraps the return value in a Promise', function() {
-      const f = 42;
+      const f = () => 42;
       return f().then(v => assert.equal(v, 42));
     });
     it('is a rejected Promise when the async function throws', function() {
-      const f = () => 0;
-      return f().catch(v => assert.equal(v, 23));
+      const f = async () => 0;
+      return f()
+        .then(() => assert(false, 'Promise must reject (not pass)!'))
+        .catch(v => assert.equal(v, 23))
+      ;
     });
   });
 
