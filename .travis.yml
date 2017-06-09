@@ -12,4 +12,3 @@ env:
   - TDDBIN_ROOT_DOMAIN: tddbin.com
   - GH_EMAIL: contact+travis-for-tddbin@uxebu.com
   - GH_REF: github.com/tddbin/katas.git
-  - secure: Cl//mlnwVWCkXog9KewWpZmnsRxC89RRYih+jfFNJ+/Alh4I86TBQAr9ZgdVeqMNXKqpl4FvlWcG4he36WxuH9LuWO35RlzbIcAILghOrwNiGofeD7gjZ4I5A4ikau87mHUG0K3+csSOy7cYduFw/mMiaYGpU1T+WSTsqG7p4Sk=
