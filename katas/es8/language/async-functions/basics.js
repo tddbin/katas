@@ -3,18 +3,24 @@
 
 describe('`async` defines an asynchronous function', function() {
 
-  describe('can be created', () => {
-    it('by prefixing a function expression with `async`', function() {
+  describe('can be created by putting `async` before', () => {
+    it('a function expression', function() {
       const f = async function() {};
       assert.equal(f instanceof AsyncFunction, true);
     });
-    it('by prefixing a function declaration with `async`', function() {
+    it('a function declaration', function() {
       async function f() {}
       assert.equal(f instanceof AsyncFunction, true);
     });
-    it('by prefixing an arrow function with `async`', function() {
+    it('an arrow function', function() {
       const f = async () => {};
       assert.equal(f instanceof AsyncFunction, true);
+    });
+    it('an object method', function() {
+      const obj = {
+        f: async () => void 0,
+      };
+      assert.equal(obj.f instanceof AsyncFunction, true);
     });
   });
 
