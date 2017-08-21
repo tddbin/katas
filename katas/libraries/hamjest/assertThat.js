@@ -1,4 +1,7 @@
-import { assertThat, equalTo, containsString } from 'hamjest';
+import {
+  assertThat, equalTo,
+  containsString, throws, returns,
+} from 'hamjest';
 
 describe('The core function, `assertThat()`', () => {
   it('is a function', () => {
@@ -22,6 +25,17 @@ describe('The core function, `assertThat()`', () => {
           assertThat(e.message, containsString(reason));
         }
       });
+    });
+  });
+
+  describe('does under the hood', () => {
+    it('nothing when actual and expected match (using the given matcher)', () => {
+      const passingTest = () => assertThat(true, equalTo(true));
+      assertThat(passingTest, returns());
+    });
+    it('throws an assertion, when actual and expected don`t match', () => {
+      const failingTest = () => assertThat(false, equalTo(true));
+      assertThat(failingTest, throws());
     });
   });
 });
