@@ -21,7 +21,7 @@ export const all = {
         [MATCHER_EQUAL_TO]: {
           name: '`equalTo()`',
           description: 'The most common matcher `equalTo()`.',
-          path: 'general',
+          path: 'matchers/equalTo',
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [],
           publishDateUTC: date.toUtcDate(2017, date.AUGUST, 21, 15, 54),
