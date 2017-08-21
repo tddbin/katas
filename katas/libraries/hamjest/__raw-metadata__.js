@@ -3,6 +3,7 @@ import * as date from '../../date';
 
 const ASSERRT_THAT = 1;
 const MATCHER_EQUAL_TO = 2;
+const MATCHER_STRICTLY_EQUAL_TO = 3;
 
 export const all = {
   name: 'Hamjest assertion library',
@@ -25,6 +26,15 @@ export const all = {
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [],
           publishDateUTC: date.toUtcDate(2017, date.AUGUST, 21, 15, 54),
+          links: [],
+        },
+        [MATCHER_STRICTLY_EQUAL_TO]: {
+          name: '`strictlyEqualTo()`',
+          description: 'The strict version of `equalTo()`, just like the `===`.',
+          path: 'matchers/strictlyEqualTo',
+          level: SKILL_LEVEL.BEGINNER,
+          requiresKnowledgeFrom: [],
+          publishDateUTC: date.toUtcDate(2017, date.AUGUST, 21, 16, 30),
           links: [],
         },
       }
