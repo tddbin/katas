@@ -1,5 +1,6 @@
 import {
   assertThat, equalTo, not,
+  Matcher,
 } from 'hamjest';
 
 describe('The matcher `equalTo()`, matches equality', () => {
@@ -77,5 +78,10 @@ describe('The matcher `equalTo()`, matches equality', () => {
       const obj = {attr: 'value'};
       assertThat(obj, equalTo(obj))
     });
+  });
+
+  it('AND returns a hamjest matcher', () => {
+    const value = equalTo();
+    assertThat('Expected to get a hamjest Matcher.', Matcher.isMatcher(value), equalTo(true));
   });
 });
