@@ -2,7 +2,7 @@ import {SKILL_LEVEL} from '../../skill-levels.js';
 import * as date from '../../date';
 
 const ASSERRT_THAT = 1;
-const GENERAL_MATCHERS = 2;
+const MATCHER_EQUAL_TO = 2;
 
 export const all = {
   name: 'Hamjest assertion library',
@@ -18,9 +18,9 @@ export const all = {
           publishDateUTC: date.toUtcDate(2017, date.AUGUST, 21, 13, 0),
           links: [],
         },
-        [GENERAL_MATCHERS]: {
-          name: 'general matchers',
-          description: 'The most common, non-specific matchers.',
+        [MATCHER_EQUAL_TO]: {
+          name: '`equalTo()`',
+          description: 'The most common matcher `equalTo()`.',
           path: 'general',
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [],
