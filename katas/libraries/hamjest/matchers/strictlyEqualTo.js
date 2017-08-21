@@ -1,95 +1,88 @@
 import {
-  assertThat, equalTo, not,
+  assertThat, strictlyEqualTo, not,
 } from 'hamjest';
 
-describe('Most common matchers', () => {
-  describe('`equalTo()`, matches equality', () => {
-    describe('for simple types', () => {
-      it('`null`', () =>
-        assertThat(null, equalTo(null)));
-      it('`undefined`', () =>
-        assertThat(undefined, equalTo(undefined)));
+describe('The matcher `strictlyEqualTo()`, matches equality', () => {
+  describe('for simple types', () => {
+    it('`null`', () =>
+      assertThat(null, strictlyEqualTo(null)));
+    it('`undefined`', () =>
+      assertThat(undefined, strictlyEqualTo(undefined)));
 
-      it('a (integer) number', () =>
-        assertThat(1, equalTo(1)));
-      it('a (decimal) number', () =>
-        assertThat(1.23, equalTo(1.23)));
-      it('a number and a `Number(x)`', () =>
-        assertThat(1, equalTo(Number(1))));
+    it('a (integer) number', () =>
+      assertThat(1, strictlyEqualTo(1)));
+    it('a (decimal) number', () =>
+      assertThat(1.23, strictlyEqualTo(1.23)));
+    it('a number and a `Number(x)`', () =>
+      assertThat(1, strictlyEqualTo(Number(1))));
 
-      it('a string', () =>
-        assertThat('a string', equalTo('a string')));
-      it('a string and a String(x)', () =>
-        assertThat('a string', equalTo(String('a string'))));
+    it('a string', () =>
+      assertThat('a string', strictlyEqualTo('a string')));
+    it('a string and a String(x)', () =>
+      assertThat('a string', strictlyEqualTo(String('a string'))));
 
-      it('`NaN`', () =>
-        assertThat(NaN, equalTo(NaN)));
+    it('NOT for `NaN`', () =>
+      assertThat(NaN, not(strictlyEqualTo(NaN))));
+  });
+  describe('for complex types', () => {
+    it('the same empty []', () => {
+      const emptyArr = [];
+      assertThat(emptyArr, strictlyEqualTo(emptyArr));
     });
-    describe('for complex types', () => {
-      it('empty []', () =>
-        assertThat([], equalTo([])));
-      it('empty Array()', () =>
-        assertThat(new Array(3), equalTo([undefined, undefined, undefined])));
-      it('empty {}', () =>
-        assertThat({}, equalTo({})));
-      it('empty Object()', () =>
-        assertThat(new Object(), equalTo({})));
-      it('function', () => {
-        const fn = () => {};
-        assertThat(fn, equalTo(fn));
-      });
-      it('class', () => {
-        class X {}
-        assertThat(X, equalTo(X));
-      });
-      it('the same instance of a class', () => {
-        class X {}
-        const instance = new X();
-        assertThat(instance, equalTo(instance));
-      });
-      it('another instance of a class (will fail with `strictlyEqualTo()`)', () => {
-        class X {}
-        const instance = new X();
-        assertThat(instance, equalTo(new X()));
-      });
+    it('NOT for comparing any empty array', () => {
+      assertThat([], not(strictlyEqualTo([])));
     });
-    describe('and does a deep compare', () => {
-      it('of an array', () =>
-        assertThat([1, 2, 3], equalTo([1, 2, 3])));
-      it('fails for differing arrays', () =>
-        assertThat([1, 'two', 3], not(equalTo([1, 2, 3]))));
-      it('of an object', () =>
-        assertThat({attr: 'value'}, equalTo({attr: 'value'})));
-      it('fails for differing objects', () =>
-        assertThat({no: ''}, not(equalTo({attr: 'value'}))));
+
+    it('the same empty object', () => {
+      const emptyObj = {};
+      assertThat(emptyObj, strictlyEqualTo(emptyObj));
+    });
+    it('NOT for comparing any empty object', () => {
+      assertThat([], not(strictlyEqualTo([])));
+    });
+    it('NOT any empty Object()', () =>
+      assertThat(new Object(), not(strictlyEqualTo({}))));
+
+    it('function', () => {
+      const fn = () => {};
+      assertThat(fn, strictlyEqualTo(fn));
+    });
+    it('class', () => {
+      class X {}
+      assertThat(X, strictlyEqualTo(X));
+    });
+    it('the same instance of a class', () => {
+      class X {}
+      const instance = new X();
+      assertThat(instance, strictlyEqualTo(instance));
+    });
+    it('NOT for another instance of a class', () => {
+      class X {}
+      const instance = new X();
+      assertThat(instance, not(strictlyEqualTo(new X())));
     });
   });
-  // strictlyEqualTo(value)
-  // Performs strict comparison (===) between the given and the tested value:
+  describe('deep compares', () => {
+    describe('two different arrays', () => {
+      it('NOT successfully, WHEN both have the same values', () =>
+        assertThat([1, 2, 3], not(strictlyEqualTo([1, 2, 3]))));
+      it('NOT successfully, WHEN the values differ', () =>
+        assertThat(['x', 'y', 'z'], not(strictlyEqualTo([1, 2, 3]))));
+    });
+    it('successfully, WHEN it`s the same array', () => {
+      const arr = [1, 2, 3];
+      assertThat(arr, strictlyEqualTo(arr))
+    });
 
-
-  describe('`truthy()`, matches truthy values', () => {
-
-  });
-  describe('`falsy()` (also `falsey()`), matches falsy values', () => {
-
-  });
-  describe('`anything()`, matches any value', () => {
-    it('', () => {
-      
+    describe('two different objects', () => {
+      it('NOT successfully, WHEN both have the same values', () =>
+        assertThat({attr: 'value'}, not(strictlyEqualTo({attr: 'value'}))));
+      it('NOT successfully, WHEN the values differ', () =>
+        assertThat({one: 'two'}, not(strictlyEqualTo({attr: 'value'}))));
+    });
+    it('successfully, WHEN it`s the same object', () => {
+      const obj = {attr: 'value'};
+      assertThat(obj, strictlyEqualTo(obj))
     });
   });
-
-  // not(valueOrMatcher)
-  // Matches if the given matcher fails and vice versa. As usual, if the given value is not a matcher, it is wrapped with equalTo.
-
-  // is(valueOrMatcher)
-  // Syntactic sugar for readable code and error descriptions. It wraps a valueOrMatcher and appends "is " to the description.
-
-  // defined()
-  // Matches everything except undefined:
-
-  // undefined() / undef()
-  // The opposite of defined().
-
 });

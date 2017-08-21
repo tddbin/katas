@@ -25,18 +25,21 @@ describe('The matcher `equalTo()`, matches equality', () => {
       assertThat(NaN, equalTo(NaN)));
   });
   describe('for complex types', () => {
-    it('empty []', () =>
+    it('empty array', () =>
       assertThat([], equalTo([])));
     it('empty Array()', () =>
       assertThat(new Array(3), equalTo([undefined, undefined, undefined])));
-    it('empty {}', () =>
+
+    it('empty object', () =>
       assertThat({}, equalTo({})));
     it('empty Object()', () =>
       assertThat(new Object(), equalTo({})));
+
     it('function', () => {
       const fn = () => {};
       assertThat(fn, equalTo(fn));
     });
+
     it('class', () => {
       class X {}
       assertThat(X, equalTo(X));
@@ -46,7 +49,7 @@ describe('The matcher `equalTo()`, matches equality', () => {
       const instance = new X();
       assertThat(instance, equalTo(instance));
     });
-    it('another instance of a class (will fail with `strictlyEqualTo()`)', () => {
+    it('another instance of a class (not so `strictlyEqualTo()`)', () => {
       class X {}
       const instance = new X();
       assertThat(instance, equalTo(new X()));
