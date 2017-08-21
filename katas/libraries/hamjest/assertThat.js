@@ -28,12 +28,12 @@ describe('The core function, `assertThat()`', () => {
     });
   });
 
-  describe('does under the hood', () => {
-    it('nothing when actual and expected match (using the given matcher)', () => {
+  describe('under the hood, it does', () => {
+    it('nothing, WHEN actual and expected match (using the given matcher)', () => {
       const passingTest = () => assertThat(true, equalTo(true));
       assertThat(passingTest, returns());
     });
-    it('throws an assertion, when actual and expected don`t match', () => {
+    it('throw an assertion, WHEN actual and expected don`t match', () => {
       const failingTest = () => assertThat(false, equalTo(true));
       assertThat(failingTest, throws());
     });
