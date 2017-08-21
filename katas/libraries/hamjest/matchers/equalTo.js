@@ -52,14 +52,27 @@ describe('The matcher `equalTo()`, matches equality', () => {
       assertThat(instance, equalTo(new X()));
     });
   });
-  describe('and does a deep compare', () => {
-    it('of an array', () =>
-      assertThat([1, 2, 3], equalTo([1, 2, 3])));
-    it('fails for differing arrays', () =>
-      assertThat([1, 'two', 3], not(equalTo([1, 2, 3]))));
-    it('of an object', () =>
-      assertThat({attr: 'value'}, equalTo({attr: 'value'})));
-    it('fails for differing objects', () =>
-      assertThat({no: ''}, not(equalTo({attr: 'value'}))));
+  describe('deep compares', () => {
+    describe('two different arrays', () => {
+      it('successfully, WHEN both have the same values', () =>
+        assertThat([1, 2, 3], equalTo([1, 2, 3])));
+      it('NOT successfully, WHEN the values differ', () =>
+        assertThat(['x', 'y', 'z'], not(equalTo([1, 2, 3]))));
+    });
+    it('successfully, WHEN it`s the same array', () => {
+      const arr = [1, 2, 3];
+      assertThat(arr, equalTo(arr))
+    });
+
+    describe('two different objects', () => {
+      it('successfully, WHEN both have the same values', () =>
+        assertThat({attr: 'value'}, equalTo({attr: 'value'})));
+      it('NOT successfully, WHEN the values differ', () =>
+        assertThat({one: 'two'}, not(equalTo({attr: 'value'}))));
+    });
+    it('successfully, WHEN it`s the same object', () => {
+      const obj = {attr: 'value'};
+      assertThat(obj, equalTo(obj))
+    });
   });
 });
