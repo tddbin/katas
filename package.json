@@ -21,7 +21,6 @@
   "devDependencies": {
     "babel": "^5.4.7",
     "mocha": "^2.2.5",
-    "sinon": "latest",
-    "watch": "latest"
+    "sinon": "latest"
   }
 }
