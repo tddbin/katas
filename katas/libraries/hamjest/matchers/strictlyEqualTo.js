@@ -3,7 +3,7 @@ import {
   Matcher,
 } from 'hamjest';
 
-describe('The matcher `strictlyEqualTo()`, matches equality', () => {
+describe('The matcher `strictlyEqualTo()`, matches strict equality (like `===`)', () => {
   describe('for simple types', () => {
     it('`null`', () =>
       assertThat(null, strictlyEqualTo(null)));
