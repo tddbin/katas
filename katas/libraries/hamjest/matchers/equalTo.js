@@ -80,7 +80,7 @@ describe('The matcher `equalTo()`, matches equality', () => {
     });
   });
 
-  it('AND returns a hamjest matcher', () => {
+  it('and returns a hamjest matcher', () => {
     const value = equalTo();
     assertThat('Expected to get a hamjest Matcher.', Matcher.isMatcher(value), equalTo(true));
   });
