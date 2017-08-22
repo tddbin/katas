@@ -1,5 +1,6 @@
 import {
   assertThat, strictlyEqualTo, not,
+  Matcher,
 } from 'hamjest';
 
 describe('The matcher `strictlyEqualTo()`, matches equality', () => {
@@ -84,5 +85,10 @@ describe('The matcher `strictlyEqualTo()`, matches equality', () => {
       const obj = {attr: 'value'};
       assertThat(obj, strictlyEqualTo(obj))
     });
+  });
+
+  it('and returns a hamjest matcher', () => {
+    const value = strictlyEqualTo();
+    assertThat('Expected to get a hamjest Matcher.', Matcher.isMatcher(value), strictlyEqualTo(true));
   });
 });
