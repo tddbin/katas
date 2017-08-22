@@ -4,7 +4,7 @@ import {
   Matcher,
 } from 'hamjest';
 
-describe('`anything()`, matches any value and never fails', () => {
+describe('The matcher `anything()`, matches any value and never fails', () => {
   describe('for example', () => {
     it('`undefined`', () => {
       assertThat(undefined, anything());
