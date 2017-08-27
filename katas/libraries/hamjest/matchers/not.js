@@ -52,4 +52,3 @@ describe('The function `not()`, works like an inverted `equalTo()`', () => {
     assertThat('Expected to get a hamjest Matcher.', Matcher.isMatcher(value), equalTo(true));
   });
 });
-
