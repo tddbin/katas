@@ -26,6 +26,10 @@ describe('The function `not()`, works like an inverted `equalTo()`', () => {
         assertThat([1], not(not([1]))); // NOTE the `not(not())`
         assertThat([1], not(not(equalTo([1]))));
       });
+      it('two objects with different content', () => {
+        assertThat({x: 1}, not({a: 2}));
+        assertThat({x: 1}, not(equalTo({a: 2})));
+      });
     });
   });
   describe('when given a matcher', () => {
