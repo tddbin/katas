@@ -1,5 +1,6 @@
 import {
   assertThat, equalTo, not, strictlyEqualTo,
+  undefined as undefined_, truthy,
   Matcher,
 } from 'hamjest';
 
@@ -33,8 +34,16 @@ describe('The function `not()`, works like an inverted `equalTo()`', () => {
     });
   });
   describe('when given a matcher', () => {
-    it('', () => {
-
+    describe('for example', () => {
+      it('`undefined()`', () => {
+        assertThat(23, not(undefined_()));
+      });
+      it('`truthy()`', () => {
+        assertThat(0, not(truthy()));
+      });
+      it('`equalTo()`', () => {
+        assertThat(42, not(equalTo(23)));
+      });
     });
   });
   
