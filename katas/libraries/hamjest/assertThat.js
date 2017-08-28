@@ -8,6 +8,7 @@ import {
 
 describe('The core function, `assertThat()`', () => {
   it('is a function', () => {
+    //// const typeOfAssertThat = typeof 'assertThat';
     const typeOfAssertThat = typeof assertThat;
     assertThat(typeOfAssertThat, equalTo('function'));
   });
