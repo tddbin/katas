@@ -6,7 +6,9 @@
   "scripts": {
     "build": "./scripts/build.sh",
     "build-for-offline": "npm run build && ./scripts/build-for-offline.sh",
-    "test": "mocha --compilers js:babel/register src/**/spec.js",
+    "test": "npm run test:src && npm run test:katas",
+    "test:src": "mocha --compilers js:babel/register src/**/spec.js",
+    "test:katas": "mocha --compilers js:babel/register katas/libraries/{**,**/**}/*.js",
     "kata:libraries:hamjest": "mocha --compilers js:babel/register katas/libraries/hamjest/**/*.js"
   },
   "repository": {
