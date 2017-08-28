@@ -1,3 +1,6 @@
+// 1: assertThat
+// To do: make all tests pass, leave the assert lines unchanged!
+
 import {
   assertThat, equalTo,
   containsString, throws, returns,
@@ -10,7 +13,8 @@ describe('The core function, `assertThat()`', () => {
   });
   describe('requires at least two params', () => {
     it('1st: the actual value', () => {
-      assertThat('actual', equalTo('actual'));
+      const expected = equalTo('actual');
+      assertThat('actual', expected);
     });
     it('2nd: a matcher for the expected value', () => {
       const matcher = equalTo('expected');
