@@ -13,8 +13,9 @@ describe('The core function, `assertThat()`', () => {
   });
   describe('requires at least two params', () => {
     it('1st: the actual value', () => {
+      const actual = 'actual';
       const expected = equalTo('actual');
-      assertThat('actual', expected);
+      assertThat(actual, expected);
     });
     it('2nd: a matcher for the expected value', () => {
       const matcher = equalTo('expected');
@@ -22,12 +23,14 @@ describe('The core function, `assertThat()`', () => {
     });
     describe('the optional 3rd param', () => {
       it('goes first(!), and is the assertion reason', () => {
+        let caughtError;
         const reason = 'This is the reason, the first `assertThat()` throws as part of its message.';
         try {
           assertThat(reason, true, equalTo(false));
         } catch (e) {
-          assertThat(e.message, containsString(reason));
+          caughtError = e;
         }
+        assertThat(caughtError.message, containsString(reason));
       });
     });
   });
