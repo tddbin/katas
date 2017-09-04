@@ -25,8 +25,8 @@ cp $ORIGIN_ROOT/.nojekyll $DIST_ROOT/;
 
 cp $ORIGIN_ROOT/html/proxy.html $DIST_ROOT/;
 # replace place holder TDDBIN_ROOT_DOMAIN with env var, so it can be different in dev/prod mode
-if [[ $OSTYPE == darwin* ]]; then 
-  sed -i '' "s/\${TDDBIN_ROOT_DOMAIN}/$TDDBIN_ROOT_DOMAIN/g" $DIST_ROOT/proxy.html
+if [[ $OSTYPE == darwin* ]]; then
+  sed s/\${TDDBIN_ROOT_DOMAIN}/$TDDBIN_ROOT_DOMAIN/g $DIST_ROOT/proxy.html --in-place
 else
   sed -i "s/\${TDDBIN_ROOT_DOMAIN}/$TDDBIN_ROOT_DOMAIN/g" $DIST_ROOT/proxy.html
 fi;

@@ -6,7 +6,7 @@ import path from 'path';
 import {writeToFileAsJson} from './_external-deps/filesystem';
 import MetaData from './metadata.js';
 
-const destinationDir = path.join(__dirname, '../../dist/katas/es6/language');
+const destinationDir = path.join(__dirname, '../dist/katas/es6/language');
 const allJsonFile = path.join(destinationDir, '__all__.json');
 
 import FlatMetaData from './flat-metadata';
