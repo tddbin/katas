@@ -1,5 +1,6 @@
 #!/bin/node
 import path from 'path';
+import fs from 'fs';
 
 import {all as rawMetadata} from '../katas/es6/language/__raw-metadata__';
 
@@ -20,5 +21,4 @@ new MetaData(writeToFileAsJson)
   .convertWith(rawMetadata, GroupedMetaData)
   .writeToFile(groupedJsonFile);
 
-import fs from 'fs';
 fs.unlinkSync(path.join(destinationDir, '__raw-metadata__.js'));
