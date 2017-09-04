@@ -1,23 +1,23 @@
 #!/bin/node
-
-import {all} from '../katas/es6/language/__raw-metadata__';
 import path from 'path';
+
+import {all as rawMetadata} from '../katas/es6/language/__raw-metadata__';
 
 import {writeToFileAsJson} from './_external-deps/filesystem';
 import MetaData from './metadata.js';
+import FlatMetaData from './flat-metadata';
+import GroupedMetaData from './grouped-metadata';
 
 const destinationDir = path.join(__dirname, '../dist/katas/es6/language');
 const allJsonFile = path.join(destinationDir, '__all__.json');
+const groupedJsonFile = path.join(destinationDir, '__grouped__.json');
 
-import FlatMetaData from './flat-metadata';
 new MetaData(writeToFileAsJson)
-  .convertWith(all, FlatMetaData)
+  .convertWith(rawMetadata, FlatMetaData)
   .writeToFile(allJsonFile);
 
-const groupedJsonFile = path.join(destinationDir, '__grouped__.json');
-import GroupedMetaData from './grouped-metadata';
 new MetaData(writeToFileAsJson)
-  .convertWith(all, GroupedMetaData)
+  .convertWith(rawMetadata, GroupedMetaData)
   .writeToFile(groupedJsonFile);
 
 import fs from 'fs';
