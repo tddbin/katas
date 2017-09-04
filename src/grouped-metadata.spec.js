@@ -1,7 +1,7 @@
 import assert from 'assert';
-import {all} from '../../katas/es6/language/__raw-metadata__.js';
-import GroupedMetaData from './index.js';
-import {forGroupName as slugForGroupName} from '../slug/index.js';
+import {all} from '../katas/es6/language/__raw-metadata__';
+import GroupedMetaData from './grouped-metadata';
+import {forGroupName as slugForGroupName} from './slug';
 
 describe('build grouped (by category) meta data', function() {
 

@@ -1,7 +1,7 @@
 import assert from 'assert';
-import FlatMetaData from './index.js';
-import {forGroupName as slugForGroupName} from '../slug/index.js';
-import {all} from '../../katas/es6/language/__raw-metadata__.js';
+import FlatMetaData from './flat-metadata';
+import {forGroupName as slugForGroupName} from './slug';
+import {all} from '../katas/es6/language/__raw-metadata__';
 
 describe('build the meta data from the all.js file structure', function() {
   
