@@ -17,7 +17,6 @@ rm -Rf $DIST_ROOT;
 mkdir -p $DIST_ROOT;
 
 # copy assets
-cp -r $ORIGIN_ROOT/katas $DIST_ROOT;
 babel-node ./src/deploy.js
 cp $ORIGIN_ROOT/CNAME $DIST_ROOT/CNAME;
 # don't behave like jekyll, e.g. allow `__raw-metadata__.js` files, which would not be served otherwise
