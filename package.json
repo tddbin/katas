@@ -27,5 +27,8 @@
     "hamjest-spy": "^2.0.0",
     "mocha": "^2.2.5",
     "sinon": "latest"
+  },
+  "dependencies": {
+    "recursive-readdir": "^2.2.1"
   }
 }
