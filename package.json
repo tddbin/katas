@@ -24,7 +24,7 @@
   "devDependencies": {
     "babel": "^5.4.7",
     "hamjest": "^3.0.0",
-    "hamjest-spy": "^2.0.0",
+    "hamjest-spy": "^2.1.0",
     "mocha": "^2.2.5",
     "sinon": "latest"
   },
