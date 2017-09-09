@@ -8,9 +8,10 @@ const isKataLine = (line) => line.trim().startsWith('////');
 
 const enableKataLine = (line) => line.replace(/\s*\/\/\/\//, '');
 
-const removeLinesAfterKataLine = (line, lineIndex, lines) => {
+const removeLinesAfterKataLine = (_, lineIndex, lines) => {
   if (lineIndex === 0) return true;
-  return !isKataLine(lines[lineIndex-1]);
+  const previousLine = lines[lineIndex-1];
+  return !isKataLine(previousLine);
 };
 
 const kataifyFileContent = (fileContent) => {
