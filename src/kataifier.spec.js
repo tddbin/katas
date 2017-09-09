@@ -11,8 +11,8 @@ const kataifyFileContent = (fileContent) => {
   if (newLines.length > 3 && lines[2].startsWith('////')) {
     newLines = [...newLines.slice(0, 2), newLines[2].replace('////', '')];
   }
-  if (newLines[0].startsWith('////')) {
-    newLines = [newLines[0].replace('////', ''), ...newLines.slice(2)];
+  if (newLines[0].trim().startsWith('////')) {
+    newLines = [newLines[0].replace(/\s*\/\/\/\//, ''), ...newLines.slice(2)];
     return newLines.join('\n');
   }
   return fileContent.replace('////', '');
@@ -82,6 +82,13 @@ describe('Kataify a file', () => {
       await kataifyContent(rawContent, writeFileSpy);
 
       assertThat(writeFileSpy.firstCallArgs[0], equalTo('katacode\nkatacode2'));
+    });
+    it('replace kata line, with leading spaces', async () => {
+      const rawContent = ['  ////katacode', 'non-kata code'].join('\n');
+      const writeFileSpy = buildFunctionSpy({returnValue: Promise.resolve()});
+      await kataifyContent(rawContent, writeFileSpy);
+
+      assertThat(writeFileSpy.firstCallArgs[0], (startsWith('katacode')));
     });
   });
 });
