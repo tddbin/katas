@@ -7,8 +7,13 @@ import { buildFunctionSpy, wasCalledWith } from 'hamjest-spy';
 
 const kataifyFileContent = (fileContent) => {
   const lines = fileContent.split('\n');
-  if (lines[0].startsWith('////')) {
-    return [lines[0].replace('////', '')].join('\n');
+  let newLines = lines;
+  if (newLines.length > 3 && lines[2].startsWith('////')) {
+    newLines = [...newLines.slice(0, 2), newLines[2].replace('////', '')];
+  }
+  if (newLines[0].startsWith('////')) {
+    newLines = [newLines[0].replace('////', ''), ...newLines.slice(2)];
+    return newLines.join('\n');
   }
   return fileContent.replace('////', '');
 };
@@ -67,6 +72,16 @@ describe('Kataify a file', () => {
       await kataifyContent(rawContent, writeFileSpy);
 
       assertThat(writeFileSpy.firstCallArgs[0], equalTo('katacode'));
+    });
+    it('replace multiple kata lines', async () => {
+      const rawContent = [
+        '////katacode', 'non-kata code',
+        '////katacode2', 'non-kata code 2'
+      ].join('\n');
+      const writeFileSpy = buildFunctionSpy({returnValue: Promise.resolve()});
+      await kataifyContent(rawContent, writeFileSpy);
+
+      assertThat(writeFileSpy.firstCallArgs[0], equalTo('katacode\nkatacode2'));
     });
   });
 });
