@@ -4,15 +4,18 @@ import {
 } from 'hamjest';
 import { buildFunctionSpy, wasCalledWith } from 'hamjest-spy';
 
+const isKataLine = (line) => line.trim().startsWith('////');
+
+const enableKataLine = (line) => line.replace(/\s*\/\/\/\//, '');
 
 const kataifyFileContent = (fileContent) => {
   const lines = fileContent.split('\n');
   let newLines = lines;
-  if (newLines.length > 3 && lines[2].startsWith('////')) {
-    newLines = [...newLines.slice(0, 2), newLines[2].replace('////', '')];
+  if (newLines.length > 3 && isKataLine(lines[2])) {
+    newLines = [...newLines.slice(0, 2), enableKataLine(newLines[2])];
   }
-  if (newLines[0].trim().startsWith('////')) {
-    newLines = [newLines[0].replace(/\s*\/\/\/\//, ''), ...newLines.slice(2)];
+  if (isKataLine(newLines[0])) {
+    newLines = [enableKataLine(newLines[0]), ...newLines.slice(2)];
     return newLines.join('\n');
   }
   return fileContent.replace('////', '');
