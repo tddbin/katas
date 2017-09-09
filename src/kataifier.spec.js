@@ -10,15 +10,14 @@ const enableKataLine = (line) => line.replace(/\s*\/\/\/\//, '');
 
 const kataifyFileContent = (fileContent) => {
   const lines = fileContent.split('\n');
-  let newLines = lines;
-  if (newLines.length > 3 && isKataLine(lines[2])) {
-    newLines = [...newLines.slice(0, 2), enableKataLine(newLines[2])];
-  }
-  if (isKataLine(newLines[0])) {
-    newLines = [enableKataLine(newLines[0]), ...newLines.slice(2)];
-    return newLines.join('\n');
-  }
-  return fileContent.replace('////', '');
+  return lines
+    .filter((line, lineIndex) => {
+      if (lineIndex === 0) return true;
+      return !isKataLine(lines[lineIndex-1]);
+    })
+    .map(enableKataLine)
+    .join('\n')
+  ;
 };
 
 const kataify = (dependencies) => {
