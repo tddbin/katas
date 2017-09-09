@@ -14,26 +14,25 @@ const kataify = (dependencies) => {
     .then(dependencies.writeFile);
 };
 
+const emptyFile = '';
+const kataifyEmptyFile = (writeFile) => {
+  const dependencies = {
+    readFile: () => Promise.resolve(emptyFile),
+    writeFile,
+  };
+  return kataify(dependencies);
+};
+
 describe('Kataify a file', () => {
   it('an empty file is written as is', async () => {
-    const emptyFile = '';
-    const writeFile = buildFunctionSpy();
-    const dependencies = {
-      readFile: () => Promise.resolve(emptyFile),
-      writeFile,
-    };
-    await kataify(dependencies);
+    const writeFileSpy = buildFunctionSpy();
+    await kataifyEmptyFile(writeFileSpy);
 
-    assertThat(writeFile, wasCalledWith(emptyFile));
+    assertThat(writeFileSpy, wasCalledWith(emptyFile));
   });
   it('finishes after writing the file (ensure its async)', () => {
-    const emptyFile = '';
-    const writeFile = buildFunctionSpy({returnValue: Promise.resolve()});
-    const dependencies = {
-      readFile: () => Promise.resolve(emptyFile),
-      writeFile,
-    };
-    return promiseThat(kataify(dependencies), fulfilled());
+    const writeFileSpy = buildFunctionSpy({returnValue: Promise.resolve()});
+    return promiseThat(kataifyEmptyFile(writeFileSpy), fulfilled());
   });
 
   describe('WITHOUT content to convert', () => {
