@@ -14,14 +14,17 @@ const kataify = (dependencies) => {
     .then(dependencies.writeFile);
 };
 
-const emptyFile = '';
-const kataifyEmptyFile = (writeFile) => {
+const kataifyContent = (fileContent, writeFileSpy) => {
   const dependencies = {
-    readFile: () => Promise.resolve(emptyFile),
-    writeFile,
+    readFile: () => Promise.resolve(fileContent),
+    writeFile: writeFileSpy,
   };
   return kataify(dependencies);
 };
+
+const emptyFile = '';
+const kataifyEmptyFile = (writeFileSpy) =>
+  kataifyContent(emptyFile, writeFileSpy);
 
 describe('Kataify a file', () => {
   it('an empty file is written as is', async () => {
@@ -38,28 +41,20 @@ describe('Kataify a file', () => {
   describe('WITHOUT content to convert', () => {
     it('writes the same content that was read', async () => {
       const fileContent = 'source\ncode\nwithout need to convert';
-      const writeFile = buildFunctionSpy({returnValue: Promise.resolve()});
-      const dependencies = {
-        readFile: () => Promise.resolve(fileContent),
-        writeFile,
-      };
-      await kataify(dependencies);
+      const writeFileSpy = buildFunctionSpy({returnValue: Promise.resolve()});
+      await kataifyContent(fileContent, writeFileSpy);
 
-      assertThat(writeFile, wasCalledWith(fileContent));
+      assertThat(writeFileSpy, wasCalledWith(fileContent));
     });
   });
 
   describe('WITH content to convert', () => {
     it('remove `////` from a line starting with it', async () => {
       const rawContent = ['////katacode', 'non-kata code'].join('\n');
-      const writeFile = buildFunctionSpy({returnValue: Promise.resolve()});
-      const dependencies = {
-        readFile: () => Promise.resolve(rawContent),
-        writeFile,
-      };
-      await kataify(dependencies);
+      const writeFileSpy = buildFunctionSpy({returnValue: Promise.resolve()});
+      await kataifyContent(rawContent, writeFileSpy);
 
-      assertThat(writeFile.firstCallArgs[0], (startsWith('katacode')));
+      assertThat(writeFileSpy.firstCallArgs[0], (startsWith('katacode')));
     });
   });
 });
