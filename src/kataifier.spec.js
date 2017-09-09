@@ -6,7 +6,7 @@ const kataify = (dependencies) => {
 };
 
 describe('Kataify a file', () => {
-  it('an empty file stays as is', () => {
+  it('an empty file is written as is', () => {
     const emptyFile = '';
     const writeFile = buildFunctionSpy();
     const dependencies = {
