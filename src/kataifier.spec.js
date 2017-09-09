@@ -1,8 +1,10 @@
-import { assertThat } from 'hamjest';
+import {
+  assertThat, promiseThat, fulfilled,
+} from 'hamjest';
 import { buildFunctionSpy, wasCalledWith } from 'hamjest-spy';
 
 const kataify = (dependencies) => {
-  dependencies.writeFile('');
+  return dependencies.writeFile('');
 };
 
 describe('Kataify a file', () => {
@@ -16,5 +18,14 @@ describe('Kataify a file', () => {
     kataify(dependencies);
 
     assertThat(writeFile, wasCalledWith(emptyFile));
+  });
+  it('finishes after writing the file (ensure its async)', () => {
+    const emptyFile = '';
+    const writeFile = buildFunctionSpy({returnValue: Promise.resolve()});
+    const dependencies = {
+      readFile: () => Promise.resolve(emptyFile),
+      writeFile,
+    };
+    return promiseThat(kataify(dependencies), fulfilled());
   });
 });
