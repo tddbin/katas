@@ -1,10 +1,15 @@
 import {
   assertThat, promiseThat, fulfilled,
-  startsWith,
+  startsWith, equalTo,
 } from 'hamjest';
 import { buildFunctionSpy, wasCalledWith } from 'hamjest-spy';
 
+
 const kataifyFileContent = (fileContent) => {
+  const lines = fileContent.split('\n');
+  if (lines[0].startsWith('////')) {
+    return [lines[0].replace('////', '')].join('\n');
+  }
   return fileContent.replace('////', '');
 };
 
@@ -55,6 +60,13 @@ describe('Kataify a file', () => {
       await kataifyContent(rawContent, writeFileSpy);
 
       assertThat(writeFileSpy.firstCallArgs[0], (startsWith('katacode')));
+    });
+    it('remove the line after the line starting with `////`', async () => {
+      const rawContent = ['////katacode', 'non-kata code'].join('\n');
+      const writeFileSpy = buildFunctionSpy({returnValue: Promise.resolve()});
+      await kataifyContent(rawContent, writeFileSpy);
+
+      assertThat(writeFileSpy.firstCallArgs[0], equalTo('katacode'));
     });
   });
 });
