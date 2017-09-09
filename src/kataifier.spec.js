@@ -8,13 +8,15 @@ const isKataLine = (line) => line.trim().startsWith('////');
 
 const enableKataLine = (line) => line.replace(/\s*\/\/\/\//, '');
 
+const removeLinesAfterKataLine = (line, lineIndex, lines) => {
+  if (lineIndex === 0) return true;
+  return !isKataLine(lines[lineIndex-1]);
+};
+
 const kataifyFileContent = (fileContent) => {
   const lines = fileContent.split('\n');
   return lines
-    .filter((line, lineIndex) => {
-      if (lineIndex === 0) return true;
-      return !isKataLine(lines[lineIndex-1]);
-    })
+    .filter(removeLinesAfterKataLine)
     .map(enableKataLine)
     .join('\n')
   ;
