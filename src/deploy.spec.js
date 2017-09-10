@@ -8,6 +8,7 @@ const FilterKatasDir = (dependencies) => {
   const readFiles = dependencies.readFiles;
   const isMetadataFile = (file) =>
     file.endsWith('__raw-metadata__.js') &&
+    file !== './__raw-metadata__.js' &&
     file !== '__raw-metadata__.js'
   ;
   const findMetadataFiles = (files) =>
@@ -43,8 +44,9 @@ describe('Filter katas-dir', () => {
       const metadataFiles = await findFiles(oneFile);
       assertThat(metadataFiles, equalTo(oneFile));
     });
-    it('find multiple files', async () => {
+    it('find multiple metadata files (not on root)', async () => {
       const manyFiles = [
+        './__raw-metadata__.js',
         'some-dir/__raw-metadata__.js',
         'some-dir/not-metadata.js',
         'some-dir/other-dir/__raw-metadata__.js',
