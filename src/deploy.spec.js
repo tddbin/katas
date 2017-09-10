@@ -22,6 +22,12 @@ describe('Filter katas-dir', () => {
       const metadataFiles = FilterKatasDir({readFiles}).forMetadataFiles();
       assertThat(metadataFiles, equalTo(noFiles));
     });
+    it('find none when its on the root dir', () => {
+      const oneFile = ['__raw-metadata__.js'];
+      const readFiles = () => Promise.resolve(oneFile);
+      const metadataFiles = FilterKatasDir({readFiles}).forMetadataFiles();
+      assertThat(metadataFiles, equalTo([]));
+    });
   });
 
   describe('for kata files', () => {
