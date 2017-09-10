@@ -93,10 +93,19 @@ describe('Filter katas-dir', () => {
       const found = await findFiles(jsFilesOnRoot);
       assertThat(found, equalTo([]));
     });
-    it('find one JS file, not on root', async () => {
-      const oneFile = ['./some-dir/file.js'];
+    it('find JS files, not on root', async () => {
+      const oneFile = [
+        './file.js',
+        './some-dir/file1.js',
+        './some-dir/wow.txt',
+        './some-dir/other/file2.js',
+      ];
       const found = await findFiles(oneFile);
-      assertThat(found, equalTo(['./some-dir/file.js']));
+      const expected = [
+        './some-dir/file1.js',
+        './some-dir/other/file2.js',
+      ];
+      assertThat(found, equalTo(expected));
     });
   });
 });
