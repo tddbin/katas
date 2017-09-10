@@ -20,27 +20,27 @@ const FilterKatasDir = (dependencies) => {
 
 describe('Filter katas-dir', () => {
   describe('for metadata files', () => {
+    const findFiles = (allFiles) => {
+      const readFiles = () => Promise.resolve(allFiles);
+      return FilterKatasDir({ readFiles }).forMetadataFiles();
+    };
     it('find none when there are no files at all', async () => {
       const noFiles = [];
-      const readFiles = () => Promise.resolve(noFiles);
-      const metadataFiles = await FilterKatasDir({readFiles}).forMetadataFiles();
+      const metadataFiles = await findFiles(noFiles);
       assertThat(metadataFiles, equalTo(noFiles));
     });
     it('find none when its on the root dir', async () => {
       const oneFile = ['__raw-metadata__.js'];
-      const readFiles = () => Promise.resolve(oneFile);
-      const metadataFiles = await FilterKatasDir({readFiles}).forMetadataFiles();
+      const metadataFiles = await findFiles(oneFile);
       assertThat(metadataFiles, equalTo([]));
     });
     it('works async', () => {
       const noFiles = [];
-      const readFiles = () => Promise.resolve(noFiles);
-      return promiseThat(FilterKatasDir({readFiles}).forMetadataFiles(), fulfilled());
+      return promiseThat(findFiles(noFiles), fulfilled());
     });
     it('find one when there is one, not on the root dir', async () => {
       const oneFile = ['some-dir/__raw-metadata__.js'];
-      const readFiles = () => Promise.resolve(oneFile);
-      const metadataFiles = await FilterKatasDir({readFiles}).forMetadataFiles();
+      const metadataFiles = await findFiles(oneFile);
       assertThat(metadataFiles, equalTo(oneFile));
     });
     it('find multiple files', async () => {
@@ -50,8 +50,7 @@ describe('Filter katas-dir', () => {
         'some-dir/other-dir/__raw-metadata__.js',
         'some-dir/other-dir/also-not-metadata.js',
       ];
-      const readFiles = () => Promise.resolve(manyFiles);
-      const metadataFiles = await FilterKatasDir({readFiles}).forMetadataFiles();
+      const metadataFiles = await findFiles(manyFiles);
       const expected = [
         'some-dir/__raw-metadata__.js',
         'some-dir/other-dir/__raw-metadata__.js',
