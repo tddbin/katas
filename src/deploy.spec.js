@@ -6,8 +6,15 @@ import { buildFunctionSpy, wasCalledWith } from 'hamjest-spy';
 
 const FilterKatasDir = (dependencies) => {
   const readFiles = dependencies.readFiles;
+  const isMetadataFile = (file) =>
+    file.endsWith('__raw-metadata__.js') &&
+    file !== '__raw-metadata__.js'
+  ;
+  const findMetadataFiles = (files) =>
+    files.filter(isMetadataFile);
   return {
-    forMetadataFiles: () => readFiles().then(() => [])
+    forMetadataFiles: () => readFiles()
+      .then((files) => findMetadataFiles(files))
   };
 };
 
@@ -33,6 +40,12 @@ describe('Filter katas-dir', () => {
       const noFiles = [];
       const readFiles = () => Promise.resolve(noFiles);
       return promiseThat(FilterKatasDir({readFiles}).forMetadataFiles(), fulfilled());
+    });
+    it('find one when there is one, not on the root dir', async () => {
+      const oneFile = ['some-dir/__raw-metadata__.js'];
+      const readFiles = () => Promise.resolve(oneFile);
+      const metadataFiles = await FilterKatasDir({readFiles}).forMetadataFiles();
+      assertThat(metadataFiles, equalTo(oneFile));
     });
   });
 
