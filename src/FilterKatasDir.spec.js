@@ -47,9 +47,6 @@ describe('Filter katas-dir', () => {
     });
   });
 
-  // - find all kata files
-  //    - exclude metadata files AND
-  //      all JS files on the root of `katas` dir
   describe('for kata files', () => {
     const findFiles = (allFiles) => {
       const readFiles = () => Promise.resolve(allFiles);
