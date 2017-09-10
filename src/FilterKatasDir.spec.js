@@ -91,15 +91,3 @@ describe('Filter katas-dir', () => {
     });
   });
 });
-
-describe('Kataify a set of files', () => {
-  it('', () => {
-    
-  });
-});
-
-describe('Kataify the kata files of the katas-dir', () => {
-  it('', () => {
-
-  });
-});
