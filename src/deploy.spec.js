@@ -15,7 +15,7 @@ const FilterKatasDir = (dependencies) => {
   const isKataFile = (file) => {
     const parsed = path.parse(file);
     const isRootDir = parsed.dir === '' || parsed.dir === '.';
-    return file.endsWith('.js') && !isRootDir;
+    return file.endsWith('.js') && !isRootDir && !isMetadataFile(file);
   };
   const findMetadataFiles = (files) =>
     files.filter(isMetadataFile);
@@ -106,6 +106,15 @@ describe('Filter katas-dir', () => {
         './some-dir/other/file2.js',
       ];
       assertThat(found, equalTo(expected));
+    });
+    it('ignore metadata files', async () => {
+      const jsFilesOnRoot = [
+        './not-kata-file.js',
+        './dir/kata-file.js',
+        './dir/__raw-metadata__.js',
+      ];
+      const found = await findFiles(jsFilesOnRoot);
+      assertThat(found, equalTo(['./dir/kata-file.js']));
     });
   });
 });
