@@ -47,6 +47,21 @@ describe('Filter katas-dir', () => {
       const metadataFiles = await FilterKatasDir({readFiles}).forMetadataFiles();
       assertThat(metadataFiles, equalTo(oneFile));
     });
+    it('find multiple files', async () => {
+      const oneFile = [
+        'some-dir/__raw-metadata__.js',
+        'some-dir/not-metadata.js',
+        'some-dir/other-dir/__raw-metadata__.js',
+        'some-dir/other-dir/also-not-metadata.js',
+      ];
+      const readFiles = () => Promise.resolve(oneFile);
+      const metadataFiles = await FilterKatasDir({readFiles}).forMetadataFiles();
+      const expected = [
+        'some-dir/__raw-metadata__.js',
+        'some-dir/other-dir/__raw-metadata__.js',
+      ];
+      assertThat(metadataFiles, equalTo(expected));
+    });
   });
 
   describe('for kata files', () => {
