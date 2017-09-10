@@ -19,7 +19,6 @@ const FilterKatasDir = (dependencies) => {
 };
 
 describe('Filter katas-dir', () => {
-  // - find all metadata files
   // - find all kata files
   //    - exclude metadata files AND
   //      all JS files on the root of `katas` dir
