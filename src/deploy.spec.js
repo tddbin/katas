@@ -15,7 +15,8 @@ const FilterKatasDir = (dependencies) => {
     files.filter(isMetadataFile);
   return {
     forMetadataFiles: () => readFiles()
-      .then((files) => findMetadataFiles(files))
+      .then((files) => findMetadataFiles(files)),
+    forKataFiles: () => Promise.resolve([])
   };
 };
 
@@ -65,8 +66,18 @@ describe('Filter katas-dir', () => {
   //    - exclude metadata files AND
   //      all JS files on the root of `katas` dir
   describe('for kata files', () => {
-    it('find none when there are no files at all', () => {
-
+    const findFiles = (allFiles) => {
+      const readFiles = () => Promise.resolve(allFiles);
+      return FilterKatasDir({ readFiles }).forKataFiles();
+    };
+    it('works async (returns a promise)', async () => {
+      const noFiles = [];
+      return promiseThat(findFiles(noFiles), fulfilled());
+    });
+    it('find none when there are no files at all', async () => {
+      const noFiles = [];
+      const found = await findFiles();
+      assertThat(found, equalTo(noFiles));
     });
   });
 });
