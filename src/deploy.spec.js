@@ -3,6 +3,7 @@ import {
   startsWith, equalTo,
 } from 'hamjest';
 import { buildFunctionSpy, wasCalledWith } from 'hamjest-spy';
+import path from 'path';
 
 const FilterKatasDir = (dependencies) => {
   const readFiles = dependencies.readFiles;
@@ -11,12 +12,20 @@ const FilterKatasDir = (dependencies) => {
     file !== './__raw-metadata__.js' &&
     file !== '__raw-metadata__.js'
   ;
+  const isKataFile = (file) => {
+    const parsed = path.parse(file);
+    const isRootDir = parsed.dir === '' || parsed.dir === '.';
+    return file.endsWith('.js') && !isRootDir;
+  };
   const findMetadataFiles = (files) =>
     files.filter(isMetadataFile);
+  const findKataFiles = (files) =>
+    files.filter(isKataFile);
   return {
     forMetadataFiles: () => readFiles()
       .then((files) => findMetadataFiles(files)),
-    forKataFiles: () => Promise.resolve([])
+    forKataFiles: () => readFiles()
+      .then((files) => findKataFiles(files)),
   };
 };
 
@@ -83,6 +92,11 @@ describe('Filter katas-dir', () => {
       const jsFilesOnRoot = ['./with-path-prefix.js', 'without-prefix.js'];
       const found = await findFiles(jsFilesOnRoot);
       assertThat(found, equalTo([]));
+    });
+    it('find one JS file, not on root', async () => {
+      const oneFile = ['./some-dir/file.js'];
+      const found = await findFiles(oneFile);
+      assertThat(found, equalTo(['./some-dir/file.js']));
     });
   });
 });
