@@ -76,8 +76,13 @@ describe('Filter katas-dir', () => {
     });
     it('find none when there are no files at all', async () => {
       const noFiles = [];
-      const found = await findFiles();
+      const found = await findFiles(noFiles);
       assertThat(found, equalTo(noFiles));
+    });
+    it('ignore JS files on root', async () => {
+      const jsFilesOnRoot = ['./with-path-prefix.js', 'without-prefix.js'];
+      const found = await findFiles(jsFilesOnRoot);
+      assertThat(found, equalTo([]));
     });
   });
 });
