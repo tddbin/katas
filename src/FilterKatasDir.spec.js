@@ -8,8 +8,8 @@ import { FilterKatasDir } from './FilterKatasDir';
 describe('Filter katas-dir', () => {
   describe('for metadata files', () => {
     const findFiles = (allFiles) => {
-      const readFiles = () => Promise.resolve(allFiles);
-      return FilterKatasDir({ readFiles }).forMetadataFiles();
+      const findFilenames = () => Promise.resolve(allFiles);
+      return FilterKatasDir({ findFilenames }).forMetadataFiles();
     };
     it('find none when there are no files at all', async () => {
       const noFiles = [];
@@ -49,8 +49,8 @@ describe('Filter katas-dir', () => {
 
   describe('for kata files', () => {
     const findFiles = (allFiles) => {
-      const readFiles = () => Promise.resolve(allFiles);
-      return FilterKatasDir({ readFiles }).forKataFiles();
+      const findFilenames = () => Promise.resolve(allFiles);
+      return FilterKatasDir({ findFilenames }).forKataFiles();
     };
     it('works async (returns a promise)', async () => {
       const noFiles = [];

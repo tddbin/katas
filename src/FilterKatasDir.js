@@ -1,7 +1,7 @@
 import path from 'path';
 
 export const FilterKatasDir = (dependencies) => {
-  const readFiles = dependencies.readFiles;
+  const readFiles = dependencies.findFilenames;
   const isMetadataFile = (file) =>
     file.endsWith('__raw-metadata__.js') &&
     file !== './__raw-metadata__.js' &&
