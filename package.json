@@ -6,7 +6,10 @@
   "scripts": {
     "build": "./scripts/build.sh",
     "build-for-offline": "npm run build && ./scripts/build-for-offline.sh",
-    "test": "mocha --compilers js:babel/register src/**/spec.js"
+    "test": "npm run test:src && npm run test:katas",
+    "test:src": "mocha --compilers js:babel/register src/**/*.spec.js",
+    "test:katas": "mocha --compilers js:babel/register katas/libraries/{**,**/**}/*.js",
+    "kata:libraries:hamjest": "mocha --compilers js:babel/register katas/libraries/hamjest/**/*.js"
   },
   "repository": {
     "type": "git",
@@ -20,8 +23,12 @@
   "homepage": "https://github.com/tddbin/katas",
   "devDependencies": {
     "babel": "^5.4.7",
+    "hamjest": "^3.0.0",
+    "hamjest-spy": "^2.1.0",
     "mocha": "^2.2.5",
-    "sinon": "latest",
-    "watch": "latest"
+    "sinon": "latest"
+  },
+  "dependencies": {
+    "recursive-readdir": "^2.2.1"
   }
 }
