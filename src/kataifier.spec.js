@@ -3,7 +3,7 @@ import {
   assertThat
 } from 'hamjest';
 import {
-  buildFunctionSpy, wasNotCalled, callCountWas,
+  buildFunctionSpy, wasNotCalled, callCountWas, wasCalledWith,
 } from 'hamjest-spy';
 
 type Filename = string;
@@ -34,15 +34,20 @@ describe('Kataify files', () => {
     await kataify([], deps);
     assertThat(deps.readFile, wasNotCalled());
   });
-  it('WHEN one kataifyable file given, read once and write once', async () => {
-    const deps = buildDeps();
-    const oneFile = {
-      sourceFileName: '/src/file.js',
-      destinationFilename: '/dest/file.js',
-    };
-    await kataify([oneFile], deps);
-    assertThat(deps.readFile, callCountWas(1));
-    assertThat(deps.writeFile, callCountWas(1));
+  describe('WHEN one kataifyable file given', () => {
+    it('AND its empty, write the same file content', async () => {
+      const originalContent = '';
+      const deps = {
+        readFile: buildFunctionSpy({ returnValue: Promise.resolve(originalContent) }),
+        writeFile: buildFunctionSpy({ returnValue: Promise.resolve() }),
+      };
+      const oneFile = {
+        sourceFileName: '/src/file.js',
+        destinationFilename: '/dest/file.js',
+      };
+      await kataify([oneFile], deps);
+      assertThat(deps.writeFile, wasCalledWith(originalContent));
+    });
   });
 });
 
