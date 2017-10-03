@@ -13,8 +13,20 @@ type KataifyableFile = {
 };
 type KataifyableFileList = Array<KataifyableFile>;
 
+const removeKataComments = (line) => line.replace('////', '');
 const kataifyFile = (content) => {
-  return content && 'Only this line will be left';
+  const lines = content.split('\n');
+  if (lines.length === 0) {
+    return '';
+  }
+  if (lines[0].trim().startsWith('////')) {
+    const newLines = [
+      removeKataComments(lines[0]),
+      ...lines.slice(2),
+    ];
+    return kataifyFile(newLines.join('\n'));
+  }
+  return content;
 };
 
 const kataify = (kataifyableList, deps) => {
@@ -55,7 +67,7 @@ describe('Kataify files', () => {
     });
     it('AND it is a kata, write the kataified file content', async () => {
       const originalContent = [
-        '//// Only this line will be left',
+        '////Only this line will be left',
         'let oldCode;'
       ].join('\n');
       const deps = {
