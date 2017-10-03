@@ -7,6 +7,7 @@
     "build": "./scripts/build.sh",
     "build-for-offline": "npm run build && ./scripts/build-for-offline.sh",
     "test": "npm run test:src && npm run test:katas",
+    "flow": "flow",
     "test:src": "mocha --compilers js:babel/register src/**/*.spec.js",
     "test:katas": "mocha --compilers js:babel/register katas/libraries/{**,**/**}/*.js",
     "kata:libraries:hamjest": "mocha --compilers js:babel/register katas/libraries/hamjest/**/*.js"
@@ -25,10 +26,11 @@
     "babel": "^5.4.7",
     "babel-preset-flow": "^6.23.0",
     "flow-bin": "^0.56.0",
+    "flow-typed": "^2.1.5",
     "hamjest": "^3.0.0",
     "hamjest-spy": "^2.1.0",
     "mocha": "^2.2.5",
-    "sinon": "latest"
+    "sinon": "^4.0.0"
   },
   "dependencies": {
     "recursive-readdir": "^2.2.1"
