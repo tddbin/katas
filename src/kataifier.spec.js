@@ -15,22 +15,30 @@ type KataifyableFile = {
 type KataifyableFileList = Array<KataifyableFile>;
 
 const removeKataComments = (line) => line.replace(/\/\/\/\/\s*/, '');
-const kataifyLines = (lines) => {
-  return [
-    removeKataComments(lines[0]),
-    ...lines.slice(2),
-  ];
+const isKataLine = (line) => line.trim().startsWith('////');
+let findFirstKataLine = function(lines) {
+  let kataLineIndex = -1;
+  lines.some((line, idx) => {
+    if (isKataLine(line)) {
+      kataLineIndex = idx;
+      return true;
+    }
+    return false;
+  });
+  return kataLineIndex;
+};
+const kataifyAtLineIndex = (lines, firstKataLineIndex) => {
+  return kataifyFile([
+    ...lines.slice(0, firstKataLineIndex),
+    removeKataComments(lines[firstKataLineIndex]),
+    ...lines.slice(firstKataLineIndex + 2),
+  ].join('\n'));
 };
 const kataifyFile = (content) => {
   const lines = content.split('\n');
-  if (lines.length > 2 && lines[2].trim().startsWith('////')) {
-    return kataifyFile([
-      ...lines.slice(0, 2),
-      ...kataifyLines(lines.slice(2)),
-    ].join('\n'));
-  }
-  if (lines[0].trim().startsWith('////')) {
-    return kataifyFile(kataifyLines(lines).join('\n'));
+  const firstKataLineIndex = findFirstKataLine(lines);
+  if (firstKataLineIndex > -1) {
+    return kataifyAtLineIndex(lines, firstKataLineIndex);
   }
   return content;
 };
@@ -112,8 +120,8 @@ describe('Kataify file content', () => {
       assertThat(kataifyFile(kataCode), equalTo('const some = {};'));
     });
   });
-  describe('WHEN multiple kata lines', () => {
-    it('replace all following lines with kata code', () => {
+  describe('WHEN multiple kata lines, replace all following lines with kata code', () => {
+    it('two sequential kata blocks', () => {
       const kataCode = [
         '////kata code',
         'to be removed',
@@ -121,6 +129,25 @@ describe('Kataify file content', () => {
         'to be removed 2'
       ].join('\n');
       assertThat(kataifyFile(kataCode), equalTo('kata code\nkata code 2'));
+    });
+    it('with other lines inbetween', () => {
+      const kataCode = [
+        '',
+        '////kata code',
+        'to be removed',
+        '// just a comment',
+        '////kata code 2',
+        'to be removed 2',
+        ''
+      ].join('\n');
+      const expected = [
+        '',
+        'kata code',
+        '// just a comment',
+        'kata code 2',
+        ''
+      ].join('\n');
+      assertThat(kataifyFile(kataCode), equalTo(expected));
     });
   });
 });
