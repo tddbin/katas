@@ -106,6 +106,3 @@ describe('Kataify file content', () => {
     });
   });
 });
-
-// needs to filter files
-// build the KataifyableList from the src+dest dir
