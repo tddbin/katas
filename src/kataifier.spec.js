@@ -15,17 +15,22 @@ type KataifyableFile = {
 type KataifyableFileList = Array<KataifyableFile>;
 
 const removeKataComments = (line) => line.replace(/\/\/\/\/\s*/, '');
+const kataifyLines = (lines) => {
+  return [
+    removeKataComments(lines[0]),
+    ...lines.slice(2),
+  ];
+};
 const kataifyFile = (content) => {
   const lines = content.split('\n');
-  if (lines.length === 0) {
-    return '';
+  if (lines.length > 2 && lines[2].trim().startsWith('////')) {
+    return kataifyFile([
+      ...lines.slice(0, 2),
+      ...kataifyLines(lines.slice(2)),
+    ].join('\n'));
   }
   if (lines[0].trim().startsWith('////')) {
-    const newLines = [
-      removeKataComments(lines[0]),
-      ...lines.slice(2),
-    ];
-    return kataifyFile(newLines.join('\n'));
+    return kataifyFile(kataifyLines(lines).join('\n'));
   }
   return content;
 };
@@ -105,6 +110,17 @@ describe('Kataify file content', () => {
     it('remove leading spaces after kata-identifier', () => {
       const kataCode = '////  const some = {};\ncont toBeRemoved = [];';
       assertThat(kataifyFile(kataCode), equalTo('const some = {};'));
+    });
+  });
+  describe('WHEN multiple kata lines', () => {
+    it('replace all following lines with kata code', () => {
+      const kataCode = [
+        '////kata code',
+        'to be removed',
+        '////kata code 2',
+        'to be removed 2'
+      ].join('\n');
+      assertThat(kataifyFile(kataCode), equalTo('kata code\nkata code 2'));
     });
   });
 });
