@@ -6,51 +6,7 @@ import {
 import {
   buildFunctionSpy, wasNotCalled, callCountWas, wasCalledWith,
 } from 'hamjest-spy';
-
-type Filename = string;
-type KataifyableFile = {
-  sourceFilename: Filename;
-  destinationFilename: Filename;
-};
-type KataifyableFileList = Array<KataifyableFile>;
-
-const removeKataComments = (line) => line.replace(/\/\/\/\/\s*/, '');
-const isKataLine = (line) => line.trim().startsWith('////');
-const findFirstKataLine = (lines) => {
-  let kataLineIndex = -1;
-  lines.some((line, idx) => {
-    if (isKataLine(line)) {
-      kataLineIndex = idx;
-      return true;
-    }
-    return false;
-  });
-  return kataLineIndex;
-};
-const kataifyAtLineIndex = (lines, firstKataLineIndex) => {
-  return kataifyFile([
-    ...lines.slice(0, firstKataLineIndex),
-    removeKataComments(lines[firstKataLineIndex]),
-    ...lines.slice(firstKataLineIndex + 2),
-  ].join('\n'));
-};
-const kataifyFile = (content) => {
-  const lines = content.split('\n');
-  const firstKataLineIndex = findFirstKataLine(lines);
-  if (firstKataLineIndex > -1) {
-    return kataifyAtLineIndex(lines, firstKataLineIndex);
-  }
-  return content;
-};
-
-const kataify = (kataifyableList, deps) => {
-  if (kataifyableList.length) {
-    return deps.readFile()
-      .then(kataifyFile)
-      .then(content => deps.writeFile(kataifyableList[0].destinationFilename, content))
-    ;
-  }
-};
+import { kataifyFile, kataify } from './kataifier';
 
 describe('Kataify files', () => {
   const buildDeps = () => {
