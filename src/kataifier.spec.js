@@ -13,9 +13,14 @@ type KataifyableFile = {
 };
 type KataifyableFileList = Array<KataifyableFile>;
 
+const kataifyFile = (content) => {
+  return content && 'Only this line will be left';
+};
+
 const kataify = (kataifyableList, deps) => {
   if (kataifyableList.length) {
     return deps.readFile()
+      .then(kataifyFile)
       .then(deps.writeFile)
     ;
   }
@@ -47,6 +52,22 @@ describe('Kataify files', () => {
       };
       await kataify([oneFile], deps);
       assertThat(deps.writeFile, wasCalledWith(originalContent));
+    });
+    it('AND it is a kata, write the kataified file content', async () => {
+      const originalContent = [
+        '//// Only this line will be left',
+        'let oldCode;'
+      ].join('\n');
+      const deps = {
+        readFile: buildFunctionSpy({ returnValue: Promise.resolve(originalContent) }),
+        writeFile: buildFunctionSpy({ returnValue: Promise.resolve() }),
+      };
+      const oneFile = {
+        sourceFileName: '/src/file.js',
+        destinationFilename: '/dest/file.js',
+      };
+      await kataify([oneFile], deps);
+      assertThat(deps.writeFile, wasCalledWith('Only this line will be left'));
     });
   });
 });
