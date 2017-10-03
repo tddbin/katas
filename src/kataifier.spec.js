@@ -16,7 +16,7 @@ type KataifyableFileList = Array<KataifyableFile>;
 
 const removeKataComments = (line) => line.replace(/\/\/\/\/\s*/, '');
 const isKataLine = (line) => line.trim().startsWith('////');
-let findFirstKataLine = function(lines) {
+const findFirstKataLine = (lines) => {
   let kataLineIndex = -1;
   lines.some((line, idx) => {
     if (isKataLine(line)) {
