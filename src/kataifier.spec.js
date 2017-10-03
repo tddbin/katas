@@ -1,7 +1,7 @@
 // @flow
 import {describe, it} from 'mocha';
 import {
-  assertThat
+  assertThat, equalTo,
 } from 'hamjest';
 import {
   buildFunctionSpy, wasNotCalled, callCountWas, wasCalledWith,
@@ -14,7 +14,7 @@ type KataifyableFile = {
 };
 type KataifyableFileList = Array<KataifyableFile>;
 
-const removeKataComments = (line) => line.replace('////', '');
+const removeKataComments = (line) => line.replace(/\/\/\/\/\s*/, '');
 const kataifyFile = (content) => {
   const lines = content.split('\n');
   if (lines.length === 0) {
@@ -82,6 +82,28 @@ describe('Kataify files', () => {
       await kataify([oneFile], deps);
       assertThat(deps.writeFile, wasCalledWith(oneFile.destinationFilename, 'Only this line will be left'));
     });
+  });
+});
+
+describe('Kataify file content', () => {
+  it('WHEN empty return empty', () => {
+    assertThat(kataifyFile(''), equalTo(''));
+  });
+  it('WHEN one code line, leave it', () => {
+    const nonKataCode = 'const some = {};';
+    assertThat(kataifyFile(nonKataCode), equalTo(nonKataCode));
+  });
+  it('WHEN one kata line, remove the following with the kata line', () => {
+    const kataCode = '////const some = {};\ncont toBeRemoved = [];';
+    assertThat(kataifyFile(kataCode), equalTo('const some = {};'));
+  });
+  it('WHEN one kata line, leave leading spaces', () => {
+    const kataCode = '  ////const some = {};\ncont toBeRemoved = [];';
+    assertThat(kataifyFile(kataCode), equalTo('  const some = {};'));
+  });
+  it('WHEN one kata line, remove leading spaces in kata code', () => {
+    const kataCode = '////  const some = {};\ncont toBeRemoved = [];';
+    assertThat(kataifyFile(kataCode), equalTo('const some = {};'));
   });
 });
 
