@@ -93,17 +93,19 @@ describe('Kataify file content', () => {
     const nonKataCode = 'const some = {};';
     assertThat(kataifyFile(nonKataCode), equalTo(nonKataCode));
   });
-  it('WHEN one kata line, remove the following with the kata line', () => {
-    const kataCode = '////const some = {};\ncont toBeRemoved = [];';
-    assertThat(kataifyFile(kataCode), equalTo('const some = {};'));
-  });
-  it('WHEN one kata line, leave leading spaces', () => {
-    const kataCode = '  ////const some = {};\ncont toBeRemoved = [];';
-    assertThat(kataifyFile(kataCode), equalTo('  const some = {};'));
-  });
-  it('WHEN one kata line, remove leading spaces in kata code', () => {
-    const kataCode = '////  const some = {};\ncont toBeRemoved = [];';
-    assertThat(kataifyFile(kataCode), equalTo('const some = {};'));
+  describe('WHEN one kata line', () => {
+    it('remove the following and leave the kata line', () => {
+      const kataCode = '////const some = {};\ncont toBeRemoved = [];';
+      assertThat(kataifyFile(kataCode), equalTo('const some = {};'));
+    });
+    it('leave leading spaces', () => {
+      const kataCode = '  ////const some = {};\ncont toBeRemoved = [];';
+      assertThat(kataifyFile(kataCode), equalTo('  const some = {};'));
+    });
+    it('remove leading spaces after kata-identifier', () => {
+      const kataCode = '////  const some = {};\ncont toBeRemoved = [];';
+      assertThat(kataifyFile(kataCode), equalTo('const some = {};'));
+    });
   });
 });
 
