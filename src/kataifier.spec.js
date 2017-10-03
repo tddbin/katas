@@ -1,20 +1,37 @@
-import { assertThat } from 'hamjest';
-import { buildFunctionSpy, wasCalledWith } from 'hamjest-spy';
+// @flow
+import {
+  assertThat
+} from 'hamjest';
+import {
+  buildFunctionSpy, wasNotCalled
+} from 'hamjest-spy';
 
-const kataify = (dependencies) => {
-  dependencies.writeFile('');
+type Filename = string;
+type KataifyableFile = {
+  sourceFilename: Filename;
+  destinationFilename: Filename;
+};
+type KataifyableFileList = Array<KataifyableFile>;
+
+const kataify = (param, deps) => {
+
 };
 
-describe('Kataify a file', () => {
-  it('an empty file stays as is', () => {
-    const emptyFile = '';
-    const writeFile = buildFunctionSpy();
-    const dependencies = {
-      readFile: () => Promise.resolve(emptyFile),
-      writeFile,
+describe('Kataify files', () => {
+  it('WHEN no files given, dont read any file', async () => {
+    const deps = {
+      readFile: buildFunctionSpy(),
+      writeFile: buildFunctionSpy(),
     };
-    kataify(dependencies);
-
-    assertThat(writeFile, wasCalledWith(emptyFile));
+    await kataify([], deps);
+    assertThat(deps.readFile, wasNotCalled());
+  });
+  it('WHEN one kataifyable files given, read once and write once', async () => {
+    const deps = {
+      readFile: buildFunctionSpy(),
+      writeFile: buildFunctionSpy(),
+    };
+    await kataify([], deps);
+    assertThat(deps.readFile, wasCalledWith());
   });
 });
