@@ -33,7 +33,7 @@ const kataify = (kataifyableList, deps) => {
   if (kataifyableList.length) {
     return deps.readFile()
       .then(kataifyFile)
-      .then(deps.writeFile)
+      .then(content => deps.writeFile(kataifyableList[0].destinationFilename, content))
     ;
   }
 };
@@ -63,7 +63,7 @@ describe('Kataify files', () => {
         destinationFilename: '/dest/file.js',
       };
       await kataify([oneFile], deps);
-      assertThat(deps.writeFile, wasCalledWith(originalContent));
+      assertThat(deps.writeFile, wasCalledWith(oneFile.destinationFilename, originalContent));
     });
     it('AND it is a kata, write the kataified file content', async () => {
       const originalContent = [
@@ -79,7 +79,7 @@ describe('Kataify files', () => {
         destinationFilename: '/dest/file.js',
       };
       await kataify([oneFile], deps);
-      assertThat(deps.writeFile, wasCalledWith('Only this line will be left'));
+      assertThat(deps.writeFile, wasCalledWith(oneFile.destinationFilename, 'Only this line will be left'));
     });
   });
 });
