@@ -6,11 +6,4 @@ export function writeToFileAsJson(fileName, obj) {
   fs.writeFileSync(fileName, jsonified, 'utf8');
 }
 
-export const allKataFilesInDir = (dir) => {
-  const onlyKataFiles = (fileName) =>
-    fileName.endsWith('.js') && !fileName.endsWith('__raw-metadata__.js');
-
-  return readDirs(dir)
-    .then((files) => files.filter(onlyKataFiles))
-  ;
-};
+export const allFilesInDir = (dir) => readDirs(dir);
