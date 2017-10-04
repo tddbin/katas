@@ -51,6 +51,7 @@ describe('Kataify files', () => {
       assertThat(deps.writeFile, wasCalledWith(oneFile.destinationFilename, 'Only this line will be left'));
     });
   });
+  // TODO handle multiple files properly
 });
 
 describe('Kataify file content', () => {
