@@ -28,10 +28,19 @@ export const kataifyFile = (content: string) => {
 };
 
 export const kataify = (kataifyableList, deps) => {
-  if (kataifyableList.length) {
+  if (kataifyableList.length === 1) {
     return deps.readFile()
       .then(kataifyFile)
       .then(content => deps.writeFile(kataifyableList[0].destinationFilename, content))
+    ;
+  }
+  if (kataifyableList.length > 1) {
+    return deps.readFile()
+      .then(kataifyFile)
+      .then(content => deps.writeFile(kataifyableList[0].destinationFilename, content))
+      .then(deps.readFile)
+      .then(kataifyFile)
+      .then(content => deps.writeFile(kataifyableList[1].destinationFilename, content))
     ;
   }
   return Promise.resolve();

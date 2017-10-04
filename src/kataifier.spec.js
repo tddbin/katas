@@ -8,29 +8,32 @@ import {
 import { kataifyFile, kataify } from './kataifier';
 
 describe('Kataify files', () => {
-  const buildDeps = () => {
+  const defaultDeps = () => {
     return {
-      readFile: buildFunctionSpy({ returnValue: Promise.resolve() }),
+      readFile: buildFunctionSpy({ returnValue: Promise.resolve('') }),
       writeFile: buildFunctionSpy({ returnValue: Promise.resolve() }),
     };
   };
 
   it('WHEN no files given, dont read any file', async () => {
-    const deps = buildDeps();
+    const deps = defaultDeps();
     await kataify([], deps);
     assertThat(deps.readFile, wasNotCalled());
   });
   describe('WHEN one kataifyable file given', () => {
-    it('AND its empty, write the same file content', async () => {
-      const originalContent = '';
-      const deps = {
-        readFile: buildFunctionSpy({ returnValue: Promise.resolve(originalContent) }),
+    const oneFile = {
+      sourceFileName: '/src/file.js',
+      destinationFilename: '/dest/file.js',
+    };
+    const oneFileDeps = (fileContent) => {
+      return {
+        readFile: buildFunctionSpy({ returnValue: Promise.resolve(fileContent) }),
         writeFile: buildFunctionSpy({ returnValue: Promise.resolve() }),
       };
-      const oneFile = {
-        sourceFileName: '/src/file.js',
-        destinationFilename: '/dest/file.js',
-      };
+    };
+    it('AND its empty, write the same file content', async () => {
+      const originalContent = '';
+      const deps = oneFileDeps(originalContent);
       await kataify([oneFile], deps);
       assertThat(deps.writeFile, wasCalledWith(oneFile.destinationFilename, originalContent));
     });
@@ -39,19 +42,32 @@ describe('Kataify files', () => {
         '////Only this line will be left',
         'let oldCode;'
       ].join('\n');
-      const deps = {
-        readFile: buildFunctionSpy({ returnValue: Promise.resolve(originalContent) }),
-        writeFile: buildFunctionSpy({ returnValue: Promise.resolve() }),
-      };
-      const oneFile = {
-        sourceFileName: '/src/file.js',
-        destinationFilename: '/dest/file.js',
-      };
+      const deps = oneFileDeps(originalContent);
       await kataify([oneFile], deps);
       assertThat(deps.writeFile, wasCalledWith(oneFile.destinationFilename, 'Only this line will be left'));
     });
   });
-  // TODO handle multiple files properly
+  describe('WHEN multiple kataifyable files given', () => {
+    const twoFiles = [
+      { sourceFileName: '/src/file1.js', destinationFilename: '/dest/file1.js' },
+      { sourceFileName: '/src/file2.js', destinationFilename: '/dest/file2.js' },
+    ];
+    const fileDeps = (fileContent) => {
+      return {
+        readFile: buildFunctionSpy({ returnValue: Promise.resolve(fileContent) }),
+        writeFile: buildFunctionSpy({ returnValue: Promise.resolve() }),
+      };
+    };
+    it('AND they are empty, write the same file content', async () => {
+      const originalContent = '';
+      const deps = fileDeps(originalContent);
+      await kataify(twoFiles, deps);
+
+      const [firstFile, secondFile] = twoFiles;
+      assertThat(deps.writeFile, wasCalledWith(firstFile.destinationFilename, originalContent));
+      assertThat(deps.writeFile, wasCalledWith(secondFile.destinationFilename, originalContent));
+    });
+  });
 });
 
 describe('Kataify file content', () => {
