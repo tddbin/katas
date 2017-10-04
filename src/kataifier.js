@@ -35,10 +35,10 @@ export const kataify = (kataifyableList, deps) => {
     ;
   }
   if (kataifyableList.length > 1) {
-    return deps.readFile()
+    return deps.readFile(kataifyableList[0].sourceFileName)
       .then(kataifyFile)
       .then(content => deps.writeFile(kataifyableList[0].destinationFilename, content))
-      .then(deps.readFile)
+      .then(() => deps.readFile(kataifyableList[1].sourceFileName))
       .then(kataifyFile)
       .then(content => deps.writeFile(kataifyableList[1].destinationFilename, content))
     ;

@@ -58,14 +58,25 @@ describe('Kataify files', () => {
         writeFile: buildFunctionSpy({ returnValue: Promise.resolve() }),
       };
     };
-    it('AND they are empty, write the same file content', async () => {
-      const originalContent = '';
-      const deps = fileDeps(originalContent);
-      await kataify(twoFiles, deps);
+    describe('AND they are empty', () => {
+      it('write the same file content', async () => {
+        const originalContent = '';
+        const deps = fileDeps(originalContent);
+        await kataify(twoFiles, deps);
 
-      const [firstFile, secondFile] = twoFiles;
-      assertThat(deps.writeFile, wasCalledWith(firstFile.destinationFilename, originalContent));
-      assertThat(deps.writeFile, wasCalledWith(secondFile.destinationFilename, originalContent));
+        const [firstFile, secondFile] = twoFiles;
+        assertThat(deps.writeFile, wasCalledWith(firstFile.destinationFilename, originalContent));
+        assertThat(deps.writeFile, wasCalledWith(secondFile.destinationFilename, originalContent));
+      });
+      it('read both files', async () => {
+        const originalContent = '';
+        const deps = fileDeps(originalContent);
+        await kataify(twoFiles, deps);
+
+        const [firstFile, secondFile] = twoFiles;
+        assertThat(deps.readFile, wasCalledWith(firstFile.sourceFileName));
+        assertThat(deps.readFile, wasCalledWith(secondFile.sourceFileName));
+      });
     });
   });
 });
