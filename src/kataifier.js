@@ -18,7 +18,7 @@ const kataifyAtLineIndex = (lines, firstKataLineIndex) => {
     ...lines.slice(firstKataLineIndex + 2),
   ].join('\n'));
 };
-export const kataifyFile = (content: string) => {
+export const kataifyFile = (content) => {
   const lines = content.split('\n');
   const firstKataLineIndex = findFirstKataLine(lines);
   if (firstKataLineIndex > -1) {
