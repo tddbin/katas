@@ -28,7 +28,7 @@
     "flow-bin": "^0.56.0",
     "flow-typed": "^2.1.5",
     "hamjest": "^3.0.0",
-    "hamjest-spy": "^2.1.0",
+    "hamjest-spy": "3.0.0",
     "mocha": "^2.2.5",
     "sinon": "^4.0.0"
   },
