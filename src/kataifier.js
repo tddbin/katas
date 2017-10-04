@@ -28,12 +28,11 @@ export const kataifyFile = (content: string) => {
 };
 
 export const kataify = (kataifyableList, deps) => {
-  const kataifyableToTask = (kataifyable) => {
-    return deps.readFile(kataifyable.sourceFileName)
+  const kataifyableToTask = (kataifyable) =>
+    deps.readFile(kataifyable.sourceFileName)
       .then(kataifyFile)
       .then(content => deps.writeFile(kataifyable.destinationFilename, content))
     ;
-  };
-  const tasks = kataifyableList.map(kataifyableToTask);
-  return Promise.all(tasks);
+
+  return Promise.all(kataifyableList.map(kataifyableToTask));
 };
