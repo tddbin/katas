@@ -28,20 +28,12 @@ export const kataifyFile = (content: string) => {
 };
 
 export const kataify = (kataifyableList, deps) => {
-  if (kataifyableList.length === 1) {
-    return deps.readFile()
+  const kataifyableToTask = (kataifyable) => {
+    return deps.readFile(kataifyable.sourceFileName)
       .then(kataifyFile)
-      .then(content => deps.writeFile(kataifyableList[0].destinationFilename, content))
+      .then(content => deps.writeFile(kataifyable.destinationFilename, content))
     ;
-  }
-  if (kataifyableList.length > 1) {
-    return deps.readFile(kataifyableList[0].sourceFileName)
-      .then(kataifyFile)
-      .then(content => deps.writeFile(kataifyableList[0].destinationFilename, content))
-      .then(() => deps.readFile(kataifyableList[1].sourceFileName))
-      .then(kataifyFile)
-      .then(content => deps.writeFile(kataifyableList[1].destinationFilename, content))
-    ;
-  }
-  return Promise.resolve();
+  };
+  const tasks = kataifyableList.map(kataifyableToTask);
+  return Promise.all(tasks);
 };
