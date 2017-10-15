@@ -7,7 +7,7 @@ const removeLinesAfterKataLine = (_, lineIndex, lines) => {
   return !isKataLine(previousLine);
 };
 
-export const kataifyFile = (fileContent: string) => {
+export const kataifyFile = (fileContent: string): string => {
   const lines = fileContent.split('\n');
   return lines
     .filter(removeLinesAfterKataLine)
