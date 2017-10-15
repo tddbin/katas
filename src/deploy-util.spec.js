@@ -2,13 +2,7 @@ import {describe, it} from 'mocha';
 import {
   assertThat, equalTo,
 } from 'hamjest';
-
-const toSrcDestPairs = (files, {sourcePath, destinationPath}) =>
-  files.map(file => ({
-    sourceFileName: file,
-    destinationFilename: file.replace(sourcePath, destinationPath)
-  }))
-;
+import {toSrcDestPairs} from './deploy-util';
 
 describe('Build src-dest pairs from file names', () => {
   const sourcePath = '/src/path';
