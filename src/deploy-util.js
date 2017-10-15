@@ -31,10 +31,7 @@ export const createDestinationDirs = (
   pairs: SrcDestPairListType,
   {mkdirp}: CreateDestinationDirsDepsType
 ): Promise<*> => {
-  let createDirFns = [];
-  if (pairs.length > 0) {
-    createDirFns = pairs
-      .map(pair => mkdirp(path.dirname(pair.destinationFilename)));
-  }
+  const createDirFns = pairs
+    .map(pair => mkdirp(path.dirname(pair.destinationFilename)));
   return Promise.all(createDirFns);
 };
