@@ -10,7 +10,7 @@ import {
 describe('Build src-dest pairs from file names', () => {
   const srcPath = '/src/path';
   const destPath = '/dest/path';
-  const toSrcDestPairs = (files) =>
+  const buildPairs = (files) =>
     files.map(file => ({
       sourceFileName: file,
       destinationFilename: file.replace(srcPath, destPath)
@@ -19,7 +19,7 @@ describe('Build src-dest pairs from file names', () => {
 
   it('WHEN no file names given return empty pairs', () => {
     const noFiles = [];
-    assertThat(toSrcDestPairs(noFiles), equalTo([]));
+    assertThat(buildPairs(noFiles), equalTo([]));
   });
   it('WHEN one file given, replace src path with dest path', () => {
     const oneSrcFile = [`${srcPath}/file.js`];
@@ -27,6 +27,6 @@ describe('Build src-dest pairs from file names', () => {
       sourceFileName: `${srcPath}/file.js`,
       destinationFilename: `${destPath}/file.js`
     }];
-    assertThat(toSrcDestPairs(oneSrcFile), equalTo(onePair));
+    assertThat(buildPairs(oneSrcFile), equalTo(onePair));
   });
 });
