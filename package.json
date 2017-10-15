@@ -8,9 +8,9 @@
     "build-for-offline": "npm run build && ./scripts/build-for-offline.sh",
     "test": "npm run test:src && npm run test:katas",
     "flow": "flow",
-    "test:src": "mocha --compilers js:babel/register src/**/*.spec.js",
-    "test:katas": "mocha --compilers js:babel/register katas/libraries/{**,**/**}/*.js",
-    "kata:libraries:hamjest": "mocha --compilers js:babel/register katas/libraries/hamjest/**/*.js"
+    "test:src": "mocha --compilers js:babel-register src/**/*.spec.js",
+    "test:katas": "mocha --compilers js:babel-register katas/libraries/{**,**/**}/*.js",
+    "kata:libraries:hamjest": "mocha --compilers js:babel-register katas/libraries/hamjest/**/*.js"
   },
   "repository": {
     "type": "git",
@@ -23,16 +23,16 @@
   },
   "homepage": "https://github.com/tddbin/katas",
   "devDependencies": {
-    "babel": "^5.4.7",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
     "babel-preset-flow": "^6.23.0",
+    "babel-register": "^6.26.0",
     "flow-bin": "^0.56.0",
     "flow-typed": "^2.1.5",
     "hamjest": "^3.1.0",
     "hamjest-spy": "4.0.0",
     "mocha": "^2.2.5",
-    "sinon": "^4.0.0"
-  },
-  "dependencies": {
+    "sinon": "^4.0.0",
     "mkdirp": "^0.5.1",
     "recursive-readdir": "^2.2.1"
   }
