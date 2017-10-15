@@ -1,13 +1,13 @@
 import path from 'path';
 
-export const FilterKatasDir = (dependencies) => {
-  const readFiles = dependencies.findFilenames;
+export const FilterKatasDir = (
+  {findFilenames, rootDir}
+) => {
   const isMetadataFile = (file) =>
     file.endsWith('__raw-metadata__.js') &&
     file !== './__raw-metadata__.js' &&
     file !== '__raw-metadata__.js'
   ;
-  const rootDir = dependencies.rootDir;
   const isKataFile = (file) => {
     const parsed = path.parse(file);
     const isRootDir = parsed.dir === rootDir;
@@ -18,9 +18,9 @@ export const FilterKatasDir = (dependencies) => {
   const findKataFiles = (files) =>
     files.filter(isKataFile);
   return {
-    forMetadataFiles: () => readFiles()
+    forMetadataFiles: () => findFilenames()
       .then((files) => findMetadataFiles(files)),
-    forKataFiles: () => readFiles()
+    forKataFiles: () => findFilenames()
       .then((files) => findKataFiles(files)),
   };
 };
