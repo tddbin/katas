@@ -1,3 +1,5 @@
+// @flow
+import {describe, it} from 'mocha';
 import {
   assertThat, promiseThat, fulfilled,
   startsWith, equalTo,
@@ -9,7 +11,7 @@ describe('Filter katas-dir', () => {
   describe('for metadata files', () => {
     const findFiles = (allFiles) => {
       const findFilenames = () => Promise.resolve(allFiles);
-      return FilterKatasDir({ findFilenames }).forMetadataFiles();
+      return FilterKatasDir({ findFilenames, rootDir: '' }).forMetadataFiles();
     };
     it('find none when there are no files at all', async () => {
       const noFiles = [];

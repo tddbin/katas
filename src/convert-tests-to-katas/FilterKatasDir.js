@@ -1,8 +1,18 @@
+// @flow
 import path from 'path';
 
+type FilterKatasDirType = {
+  findFilenames: () => Promise<FilenameListType>;
+  rootDir: DirnameType;
+};
+type FilterKatasDirReturnType = {
+  forMetadataFiles: () => Promise<FilenameListType>;
+  forKataFiles: () => Promise<FilenameListType>;
+};
+
 export const FilterKatasDir = (
-  {findFilenames, rootDir}
-) => {
+  {findFilenames, rootDir}: FilterKatasDirType
+): FilterKatasDirReturnType => {
   const isMetadataFile = (file) =>
     file.endsWith('__raw-metadata__.js') &&
     file !== './__raw-metadata__.js' &&
