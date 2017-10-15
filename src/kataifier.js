@@ -17,7 +17,7 @@ export const kataifyFile = (fileContent) => {
 
 export const kataify = (kataifyableList, deps) => {
   const kataifyableToTask = (kataifyable) =>
-    deps.readFile(kataifyable.sourceFileName)
+    deps.readFile(kataifyable.sourceFilename)
       .then(kataifyFile)
       .then(content => deps.writeFile(kataifyable.destinationFilename, content))
     ;

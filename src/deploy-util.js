@@ -3,7 +3,7 @@ type DirnameType = string;
 type FilenameType = string;
 type FilenameListType = Array<FilenameType>;
 type SrcDestPairType = {
-  sourceFileName: FilenameType,
+  sourceFilename: FilenameType,
   destinationFilename: FilenameType,
 };
 type SrcDestPairListType = Array<SrcDestPairType>;
@@ -17,7 +17,7 @@ export const toSrcDestPairs = (
   {sourcePath, destinationPath}: ToSrcDestPairsDepsType
 ): SrcDestPairListType =>
   files.map(file => ({
-    sourceFileName: file,
+    sourceFilename: file,
     destinationFilename: file.replace(sourcePath, destinationPath)
   }))
 ;

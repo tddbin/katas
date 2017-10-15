@@ -20,7 +20,7 @@ describe('Build src-dest pairs from file names', () => {
   it('WHEN one file given, replace src path with dest path', () => {
     const oneSrcFile = [`${sourcePath}/file.js`];
     const onePair = [{
-      sourceFileName: `${sourcePath}/file.js`,
+      sourceFilename: `${sourcePath}/file.js`,
       destinationFilename: `${destinationPath}/file.js`
     }];
     assertThat(buildPairs(oneSrcFile), equalTo(onePair));
@@ -31,8 +31,8 @@ describe('Build src-dest pairs from file names', () => {
       `${sourcePath}/any/depth/file.js`,
     ];
     const manyPairs = [
-      {sourceFileName: `${sourcePath}/file.js`, destinationFilename: `${destinationPath}/file.js`},
-      {sourceFileName: `${sourcePath}/any/depth/file.js`, destinationFilename: `${destinationPath}/any/depth/file.js`},
+      {sourceFilename: `${sourcePath}/file.js`, destinationFilename: `${destinationPath}/file.js`},
+      {sourceFilename: `${sourcePath}/any/depth/file.js`, destinationFilename: `${destinationPath}/any/depth/file.js`},
     ];
     assertThat(buildPairs(manyFile), equalTo(manyPairs));
   });

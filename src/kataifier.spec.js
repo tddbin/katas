@@ -22,7 +22,7 @@ describe('Kataify files', () => {
   });
   describe('WHEN one kataifyable file given', () => {
     const oneFile = {
-      sourceFileName: '/src/file.js',
+      sourceFilename: '/src/file.js',
       destinationFilename: '/dest/file.js',
     };
     const oneFileDeps = (fileContent) => {
@@ -49,8 +49,8 @@ describe('Kataify files', () => {
   });
   describe('WHEN multiple kataifyable files given', () => {
     const twoFiles = [
-      { sourceFileName: '/src/file1.js', destinationFilename: '/dest/file1.js' },
-      { sourceFileName: '/src/file2.js', destinationFilename: '/dest/file2.js' },
+      { sourceFilename: '/src/file1.js', destinationFilename: '/dest/file1.js' },
+      { sourceFilename: '/src/file2.js', destinationFilename: '/dest/file2.js' },
     ];
     const fileDeps = (fileContent) => {
       return {
@@ -74,8 +74,8 @@ describe('Kataify files', () => {
         await kataify(twoFiles, deps);
 
         const [firstFile, secondFile] = twoFiles;
-        assertThat(deps.readFile, wasCalledWith(firstFile.sourceFileName));
-        assertThat(deps.readFile, wasCalledWith(secondFile.sourceFileName));
+        assertThat(deps.readFile, wasCalledWith(firstFile.sourceFilename));
+        assertThat(deps.readFile, wasCalledWith(secondFile.sourceFilename));
       });
     });
   });
