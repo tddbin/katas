@@ -1,4 +1,15 @@
 // @flow
+type KataifyableType = {
+  sourceFilename: string;
+  destinationFilename: string;
+};
+type KataifyableListType = Array<KataifyableType>;
+
+type KataifyDeps = {
+  readFile: (FilenameType) => Promise<*>;
+  writeFile: (FilenameType, string) => Promise<*>;
+};
+
 const isKataLine = (line) => line.trim().startsWith('////');
 const enableKataLine = (line) => line.replace(/\/\/\/\/\s*/, '');
 const removeLinesAfterKataLine = (_, lineIndex, lines) => {
