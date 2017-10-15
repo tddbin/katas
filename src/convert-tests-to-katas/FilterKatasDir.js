@@ -23,14 +23,10 @@ export const FilterKatasDir = (
     const isRootDir = parsed.dir === rootDir;
     return file.endsWith('.js') && !isRootDir && !isMetadataFile(file);
   };
-  const findMetadataFiles = (files) =>
-    files.filter(isMetadataFile);
-  const findKataFiles = (files) =>
-    files.filter(isKataFile);
+  const findMetadataFiles = (files) => files.filter(isMetadataFile);
+  const findKataFiles = (files) => files.filter(isKataFile);
   return {
-    forMetadataFiles: () => findFilenames()
-      .then((files) => findMetadataFiles(files)),
-    forKataFiles: () => findFilenames()
-      .then((files) => findKataFiles(files)),
+    forMetadataFiles: () => findFilenames().then(findMetadataFiles),
+    forKataFiles: () => findFilenames().then(findKataFiles),
   };
 };
