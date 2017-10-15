@@ -7,23 +7,21 @@ const removeLinesAfterKataLine = (_, lineIndex, lines) => {
   return !isKataLine(previousLine);
 };
 
-export const kataifyFile = (fileContent: string): string => {
-  const lines = fileContent.split('\n');
-  return lines
+export const kataifyFile = (fileContent: string): string =>
+  fileContent.split('\n')
     .filter(removeLinesAfterKataLine)
     .map(enableKataLine)
     .join('\n')
   ;
-};
 
 export const kataify = (
   kataifyableList: KataifyableListType,
-  deps: KataifyDeps
+  {readFile, writeFile}: KataifyDeps
 ): Promise<*> => {
   const kataifyableToTask = (kataifyable) =>
-    deps.readFile(kataifyable.sourceFilename)
+    readFile(kataifyable.sourceFilename)
       .then(kataifyFile)
-      .then(content => deps.writeFile(kataifyable.destinationFilename, content))
+      .then(content => writeFile(kataifyable.destinationFilename, content))
     ;
 
   return Promise.all(kataifyableList.map(kataifyableToTask));
