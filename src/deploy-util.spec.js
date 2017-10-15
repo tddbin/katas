@@ -68,6 +68,6 @@ describe('Create (missing) destination directories', () => {
 
     assertThat(mkdirp, wasCalledWith(destDir1));
     assertThat(mkdirp, wasCalledWith(destDir2));
-    // assertThat(mkdirp, callCountWas(2));
+    assertThat(mkdirp, callCountWas(2));
   });
 });

@@ -27,11 +27,14 @@ export const toSrcDestPairs = (
 type CreateDestinationDirsDepsType = {
   mkdirp: (DirnameType) => Promise<*>,
 };
+const arrayUnique = (arr) => [...new Set(arr)];
 export const createDestinationDirs = (
   pairs: SrcDestPairListType,
   {mkdirp}: CreateDestinationDirsDepsType
 ): Promise<*> => {
-  const createDirFns = pairs
-    .map(pair => mkdirp(path.dirname(pair.destinationFilename)));
+  const dirsToCreate = arrayUnique(pairs
+    .map(pair => path.dirname(pair.destinationFilename))
+  );
+  const createDirFns = dirsToCreate.map(mkdirp);
   return Promise.all(createDirFns);
 };
