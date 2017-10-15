@@ -5,7 +5,7 @@ import {
 } from 'hamjest';
 import {toSrcDestPairs, createDestinationDirs} from './deploy-util';
 import {
-  buildFunctionSpy, wasNotCalled,
+  buildFunctionSpy, wasNotCalled, wasCalledWith,
 } from 'hamjest-spy';
 
 describe('Build src-dest pairs from file names', () => {
@@ -42,16 +42,20 @@ describe('Build src-dest pairs from file names', () => {
 });
 
 describe('Create (missing) destination directories', () => {
-  it('WHEN no pairs given create none', async () => {
+  it('WHEN no pairs, given create none', async () => {
     const mkdirp = buildFunctionSpy({returnValue: Promise.resolve()});
     const pairs = [];
     await createDestinationDirs(pairs, {mkdirp});
     assertThat(mkdirp, wasNotCalled());
   });
-  it('WHEN one pair given create the one destination dir', () => {
-
+  it('WHEN one pair given, create the one destination dir', async () => {
+    const mkdirp = buildFunctionSpy({returnValue: Promise.resolve()});
+    const destDir = '/dest/dir';
+    const pairs = [{sourceFilename: 'irrelevant', destinationFilename: `${destDir}/file.js`}];
+    await createDestinationDirs(pairs, {mkdirp});
+    assertThat(mkdirp, wasCalledWith(destDir));
   });
-  it('WHEN a destination dir is given multiple times create it only once', () => {
+  it('WHEN a destination dir is given, multiple times create it only once', () => {
 
   });
 });

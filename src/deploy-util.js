@@ -1,4 +1,6 @@
 // @flow
+import path from 'path';
+
 type DirnameType = string;
 type FilenameType = string;
 type FilenameListType = Array<FilenameType>;
@@ -27,7 +29,13 @@ type CreateDestinationDirsDepsType = {
 };
 export const createDestinationDirs = (
   pairs: SrcDestPairListType,
-  {}: CreateDestinationDirsDepsType
+  {mkdirp}: CreateDestinationDirsDepsType
 ): Promise<*> => {
-  return Promise.resolve();
+  let createDirFns = [];
+  if (pairs.length > 0) {
+    createDirFns = [
+      mkdirp(path.dirname(pairs[0].destinationFilename))
+    ];
+  }
+  return Promise.all(createDirFns);
 };
