@@ -36,3 +36,15 @@ describe('Build src-dest pairs from file names', () => {
     assertThat(buildPairs(manyFile), equalTo(manyPairs));
   });
 });
+
+describe('Create (missing) destination directories', () => {
+  it('WHEN no pairs given create none', () => {
+    assertThat('TODO', true);
+  });
+  it('WHEN one pair given create the one destination dir', () => {
+
+  });
+  it('WHEN a destination dir is given multiple times create it only once', () => {
+
+  });
+});
