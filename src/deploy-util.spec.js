@@ -3,7 +3,10 @@ import {describe, it} from 'mocha';
 import {
   assertThat, equalTo,
 } from 'hamjest';
-import {toSrcDestPairs} from './deploy-util';
+import {toSrcDestPairs, createDestinationDirs} from './deploy-util';
+import {
+  buildFunctionSpy, wasNotCalled,
+} from 'hamjest-spy';
 
 describe('Build src-dest pairs from file names', () => {
   const sourcePath = '/src/path';
@@ -39,8 +42,11 @@ describe('Build src-dest pairs from file names', () => {
 });
 
 describe('Create (missing) destination directories', () => {
-  it('WHEN no pairs given create none', () => {
-    assertThat('TODO', true);
+  it('WHEN no pairs given create none', async () => {
+    const mkdirp = buildFunctionSpy({returnValue: Promise.resolve()});
+    const pairs = [];
+    await createDestinationDirs(pairs, {mkdirp});
+    assertThat(mkdirp, wasNotCalled());
   });
   it('WHEN one pair given create the one destination dir', () => {
 

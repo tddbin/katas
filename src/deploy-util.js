@@ -21,3 +21,13 @@ export const toSrcDestPairs = (
     destinationFilename: file.replace(sourcePath, destinationPath)
   }))
 ;
+
+type CreateDestinationDirsDepsType = {
+  mkdirp: (DirnameType) => Promise<*>,
+};
+export const createDestinationDirs = (
+  pairs: SrcDestPairListType,
+  {}: CreateDestinationDirsDepsType
+): Promise<*> => {
+  return Promise.resolve();
+};
