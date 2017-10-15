@@ -1,0 +1,10 @@
+type KataifyableType = {
+  sourceFilename: string;
+  destinationFilename: string;
+};
+type KataifyableListType = Array<KataifyableType>;
+
+type KataifyDeps = {
+  readFile: (FilenameType) => Promise<*>;
+  writeFile: (FilenameType, string) => Promise<*>;
+};

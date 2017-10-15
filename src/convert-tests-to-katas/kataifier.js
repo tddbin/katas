@@ -1,3 +1,4 @@
+// @flow
 const isKataLine = (line) => line.trim().startsWith('////');
 const enableKataLine = (line) => line.replace(/\/\/\/\/\s*/, '');
 const removeLinesAfterKataLine = (_, lineIndex, lines) => {
@@ -6,7 +7,7 @@ const removeLinesAfterKataLine = (_, lineIndex, lines) => {
   return !isKataLine(previousLine);
 };
 
-export const kataifyFile = (fileContent) => {
+export const kataifyFile = (fileContent: string) => {
   const lines = fileContent.split('\n');
   return lines
     .filter(removeLinesAfterKataLine)
@@ -15,7 +16,10 @@ export const kataifyFile = (fileContent) => {
   ;
 };
 
-export const kataify = (kataifyableList, deps) => {
+export const kataify = (
+  kataifyableList: KataifyableListType,
+  deps: KataifyDeps
+) => {
   const kataifyableToTask = (kataifyable) =>
     deps.readFile(kataifyable.sourceFilename)
       .then(kataifyFile)
