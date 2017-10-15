@@ -5,7 +5,7 @@ import {
 } from 'hamjest';
 import {toSrcDestPairs, createDestinationDirs} from './deploy-util';
 import {
-  buildFunctionSpy, wasNotCalled, wasCalledWith,
+  buildFunctionSpy, wasNotCalled, wasCalledWith, callCountWas,
 } from 'hamjest-spy';
 
 describe('Build src-dest pairs from file names', () => {
@@ -55,7 +55,19 @@ describe('Create (missing) destination directories', () => {
     await createDestinationDirs(pairs, {mkdirp});
     assertThat(mkdirp, wasCalledWith(destDir));
   });
-  it('WHEN a destination dir is given, multiple times create it only once', () => {
+  it('WHEN a destination dir is given, multiple times create it only once', async () => {
+    const mkdirp = buildFunctionSpy({returnValue: Promise.resolve()});
+    const destDir1 = '/dest/dir';
+    const destDir2 = `${destDir1}/subdir`;
+    const pairs = [
+      {sourceFilename: 'irrelevant', destinationFilename: `${destDir1}/file.js`},
+      {sourceFilename: 'irrelevant', destinationFilename: `${destDir1}/file1.js`},
+      {sourceFilename: 'irrelevant', destinationFilename: `${destDir2}/some.js`},
+    ];
+    await createDestinationDirs(pairs, {mkdirp});
 
+    assertThat(mkdirp, wasCalledWith(destDir1));
+    assertThat(mkdirp, wasCalledWith(destDir2));
+    // assertThat(mkdirp, callCountWas(2));
   });
 });

@@ -33,9 +33,8 @@ export const createDestinationDirs = (
 ): Promise<*> => {
   let createDirFns = [];
   if (pairs.length > 0) {
-    createDirFns = [
-      mkdirp(path.dirname(pairs[0].destinationFilename))
-    ];
+    createDirFns = pairs
+      .map(pair => mkdirp(path.dirname(pair.destinationFilename)));
   }
   return Promise.all(createDirFns);
 };
