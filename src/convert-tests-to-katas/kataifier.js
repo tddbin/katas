@@ -19,7 +19,7 @@ export const kataifyFile = (fileContent: string) => {
 export const kataify = (
   kataifyableList: KataifyableListType,
   deps: KataifyDeps
-) => {
+): Promise<*> => {
   const kataifyableToTask = (kataifyable) =>
     deps.readFile(kataifyable.sourceFilename)
       .then(kataifyFile)

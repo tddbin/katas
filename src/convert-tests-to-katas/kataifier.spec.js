@@ -1,3 +1,4 @@
+// @flow
 import {describe, it} from 'mocha';
 import {
   assertThat, equalTo,
