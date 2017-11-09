@@ -31,7 +31,7 @@ describe('`catch()` returns a Promise and deals with rejected cases only', () =>
         .catch(done);
     });
 
-    it('returns a new promise', () => {
+    it('returns a new resolved promise', () => {
       const whatToReturn = () => Promise.reject();
       const promise = Promise.reject();
       return promise.catch(() =>
