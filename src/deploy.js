@@ -9,6 +9,7 @@ import MetaData from './metadata.js';
 import FlatMetaData from './flat-metadata';
 import GroupedMetaData from './grouped-metadata';
 
+const katasDir = path.join(__dirname, '../katas');
 const destinationDir = path.join(__dirname, '../dist/katas/es6/language');
 
 const buildMetadata = () => {
@@ -26,4 +27,9 @@ const buildMetadata = () => {
   fs.unlinkSync(path.join(destinationDir, '__raw-metadata__.js'));
 };
 
+// TODO copy __raw-metadata__.js to dist ... or not?
+
 buildMetadata();
+
+import {convertTestsToKatas} from './convert-tests-to-katas';
+convertTestsToKatas({sourceDir: katasDir, destinationDir});
