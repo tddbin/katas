@@ -19,7 +19,7 @@ export const convertTestsToKatas = ({sourceDir, destinationDir}) => {
     sourcePath: sourceDir,
     destinationPath: destinationDir,
   };
-  FilterKatasDir(deps)
+  return FilterKatasDir(deps)
     .forKataFiles()
     .then(files => toSrcDestPairs(files, toSrcDestPairsDeps))
     .then(pairs => createDestinationDirs(pairs, {mkdirp}).then(() => pairs))

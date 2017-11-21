@@ -24,9 +24,7 @@ const buildMetadata = () => {
     .writeToFile(groupedJsonFile);
 };
 
-// TODO copy __raw-metadata__.js to dist ... or not?
-
-buildMetadata();
-
 import {convertTestsToKatas} from './convert-tests-to-katas';
-convertTestsToKatas({sourceDir: KATAS_DIR, destinationDir});
+convertTestsToKatas({sourceDir: KATAS_DIR, destinationDir: path.join(DIST_DIR, 'katas')})
+  .then(buildMetadata)
+;
