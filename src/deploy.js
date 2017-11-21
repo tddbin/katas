@@ -9,7 +9,7 @@ import FlatMetaData from './flat-metadata';
 import GroupedMetaData from './grouped-metadata';
 
 const katasDir = path.join(__dirname, '../katas');
-const destinationDir = path.join(__dirname, '../../dist/katas/es6/language');
+const destinationDir = path.join(__dirname, '../dist/katas/es6/language');
 
 const buildMetadata = () => {
   const allJsonFile = path.join(destinationDir, '__all__.json');
