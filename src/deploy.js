@@ -1,6 +1,5 @@
 #!/bin/node
 import path from 'path';
-import fs from 'fs';
 
 import {all as rawMetadata} from '../katas/es6/language/__raw-metadata__';
 
