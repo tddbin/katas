@@ -1,0 +1,10 @@
+[ignore]
+
+[include]
+
+[libs]
+src/types.js
+
+[lints]
+
+[options]
