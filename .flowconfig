@@ -3,6 +3,7 @@
 [include]
 
 [libs]
+src/types.js
 
 [lints]
 
