@@ -23,8 +23,6 @@ const buildMetadata = () => {
   new MetaData(writeToFileAsJson)
     .convertWith(rawMetadata, GroupedMetaData)
     .writeToFile(groupedJsonFile);
-
-  fs.unlinkSync(path.join(destinationDir, '__raw-metadata__.js'));
 };
 
 // TODO copy __raw-metadata__.js to dist ... or not?
