@@ -1,6 +1,7 @@
 #!/bin/node
 import path from 'path';
 
+import {DIST_DIR, KATAS_DIR} from './config';
 import {all as rawMetadata} from '../katas/es6/language/__raw-metadata__';
 
 import {writeToFileAsJson} from './_external-deps/filesystem';
@@ -8,8 +9,7 @@ import MetaData from './metadata.js';
 import FlatMetaData from './flat-metadata';
 import GroupedMetaData from './grouped-metadata';
 
-const katasDir = path.join(__dirname, '../katas');
-const destinationDir = path.join(__dirname, '../dist/katas/es6/language');
+const destinationDir = path.join(DIST_DIR, 'katas/es6/language');
 
 const buildMetadata = () => {
   const allJsonFile = path.join(destinationDir, '__all__.json');
@@ -29,4 +29,4 @@ const buildMetadata = () => {
 buildMetadata();
 
 import {convertTestsToKatas} from './convert-tests-to-katas';
-convertTestsToKatas({sourceDir: katasDir, destinationDir});
+convertTestsToKatas({sourceDir: KATAS_DIR, destinationDir});
