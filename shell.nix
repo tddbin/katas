@@ -1,4 +1,4 @@
-with import (fetchTarball https://github.com/nixos/nixpkgs/tarball/be0071c2d7053e994b30c6be373b87e9e8178b8e) { };
+with import (fetchTarball https://github.com/nixos/nixpkgs/tarball/5c7cc53cb720cff0911bbb1c7846216d13d846a7) { };
 
 stdenv.mkDerivation {
     name = "dev-shell";
