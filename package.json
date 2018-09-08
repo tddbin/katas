@@ -9,7 +9,8 @@
     "test": "npm run test:src && npm run test:katas",
     "flow": "flow",
     "test:src": "mocha --compilers js:babel-register src/**/*.spec.js",
-    "test:katas": "mocha --compilers js:babel-register katas/libraries/{**,**/**}/*.js",
+    "test:katas": "mocha --compilers js:babel-register katas/libraries/{**,**/**}/*.js --require=katas/mocha-require.js",
+    "test:es6": "mocha --compilers js:babel-register katas/es6/{**,**/**}/*.js --require=katas/mocha-require.js",
     "kata:libraries:hamjest": "mocha --compilers js:babel-register katas/libraries/hamjest/**/*.js"
   },
   "repository": {

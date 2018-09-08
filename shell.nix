@@ -1,7 +1,7 @@
-with import (fetchTarball https://github.com/nixos/nixpkgs/tarball/5c7cc53cb720cff0911bbb1c7846216d13d846a7) { };
+with import (fetchTarball https://github.com/nixos/nixpkgs/tarball/a02002debacc30a151494c0c7b069e0ef2800a60) { };
 
 stdenv.mkDerivation {
     name = "dev-shell";
     src = null;
-    buildInputs = [ nodejs-8_x ];
+    buildInputs = [ nodejs-10_x ];
 }
