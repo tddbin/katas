@@ -13,9 +13,11 @@ describe('`Array.from` converts an array-like object or list into an Array', () 
   });
   
   it('a DOM node`s classList object can be converted', function() {
-    document.body.classList.add('some');
-    document.body.classList.add('other');
-    const classList = document.body.classList;
+    const domNode = document.createElement('span');
+    domNode.classList.add('some');
+    domNode.classList.add('other');
+    //// const classList = domNode.classList;
+    const classList = Array.from(domNode.classList);
 
     assert.equal(''+classList, ''+['some', 'other']);
   });
