@@ -32,12 +32,16 @@ describe('`Array.from` converts an array-like object or list into an Array', () 
   
   describe('custom conversion using a map function as second param', () => {
     it('we can modify the value before putting it in the array', function() {
-      const arr = Array.from(arrayLike, (value) => value);
+      //// const arr = Array.from(arrayLike, (value) => value);
+      const arr = Array.from(arrayLike, (value) => value.toUpperCase());
+
       assert.deepEqual(arr, ['ONE', 'TWO']);
     });
     
     it('and we also get the object`s key as second parameter', function() {
-      const arr = Array.from(arrayLike, (value) => `${key}=${value}`);
+      //// const arr = Array.from(arrayLike, (value) => `${key}=${value}`);
+      const arr = Array.from(arrayLike, (value, key) => `${key}=${value}`);
+      
       assert.deepEqual(arr, ['0=one', '1=two']);
     });
   });
