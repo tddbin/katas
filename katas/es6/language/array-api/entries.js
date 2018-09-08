@@ -31,5 +31,4 @@ describe('`[].entries()` returns an iterator object with all entries', function(
     });
     
   });
-  
 });
