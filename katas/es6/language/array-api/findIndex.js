@@ -42,7 +42,7 @@ describe('`Array.prototype.findIndex` makes finding items in arrays easier', () 
     const alice = {name: 'Alice'};
     //// const foundAt = [bob, alice].findIndex(({name:{length:l}}) => length > 3);
     const foundAt = [bob, alice].findIndex(({name:{length:l}}) => l > 3);
-    
+
     assert.equal(foundAt, 1);
   });
 
