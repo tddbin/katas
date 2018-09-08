@@ -4,19 +4,24 @@
 describe('`Reflect.apply` calls a target function', function() {
 
   it('it is a static method', function() {
-    const expectedType = '???';
+    //// const expectedType = '???';
+    const expectedType = 'function';
+
     assert.equal(typeof Reflect.apply, expectedType)
   });
 
   describe('the 1st parameter', () => {
     it('is a callable, e.g. a function', () => {
-      let fn;
+      //// let fn;
+      let fn = () => 42;
+
       assert.equal(Reflect.apply(fn, void 0, []), 42);
     });
     it('passing it a non-callable throws a TypeError', function() {
-      let applyOnUncallable = () => {
-        Reflect.apply(Array);
-      };
+      const applyOnUncallable = () =>
+        //// Reflect.apply(() => {}, void 0, []);
+        Reflect.apply(null, void 0, []);
+
       assert.throws(applyOnUncallable, TypeError);
     });
   });
