@@ -23,10 +23,11 @@ describe('`Array.from` converts an array-like object or list into an Array', () 
   });
   
   it('convert a NodeList to an Array and `filter()` works on it', function() {
-    const nodeList = document.querySelectorAll('body');
-    const bodies = nodeList.filter((node) => node === document.body);
-    
-    assert.deepEqual(bodies, [document.body]);
+    const nodeList = document.createElement('span');
+    //// const divs = nodeList.filter((node) => node.tagName === 'div');
+    const divs = Array.from(nodeList).filter((node) => node.tagName === 'div');
+
+    assert.deepEqual(divs.length, 0);
   });
   
   describe('custom conversion using a map function as second param', () => {
