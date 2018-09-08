@@ -2,7 +2,6 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 
 describe('`Reflect.defineProperty()` is like `Object.defineProperty()` but returns a Boolean.', function() {
-
   describe('the function itself', function() {
     it('is static on the `Reflect` object', function() {
       //// const name = 'what`s the functions name again? :)';
@@ -65,7 +64,6 @@ describe('`Reflect.defineProperty()` is like `Object.defineProperty()` but retur
 
   describe('the `value` is part of the 3rd parameter, given as a property in an object `{value: ...}`', function() {
     // The entire complexity of the 3rd parameter might be covered in a later kata. 
-    
     it('contains the initial value of the property, as an object in the property `value`', function() {
       let obj = {};
       //// Reflect.defineProperty(obj, 'prop');
@@ -112,5 +110,4 @@ describe('`Reflect.defineProperty()` is like `Object.defineProperty()` but retur
       });
     });
   });
-  
 });

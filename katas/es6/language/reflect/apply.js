@@ -2,7 +2,6 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 
 describe('`Reflect.apply` calls a target function', function() {
-
   it('it is a static method', function() {
     //// const expectedType = '???';
     const expectedType = 'function';
@@ -22,6 +21,7 @@ describe('`Reflect.apply` calls a target function', function() {
       assert.throws(applyOnUncallable, TypeError);
     });
   });
+
   describe('the 2nd parameter', () => {
     it('is the scope (or the `this`)', function() {
       class FourtyTwo {

@@ -31,6 +31,7 @@ There are no unnecessary spaces and new lines, also not before the assert.
 In some rare cases where a new line really helps readability it's ok, but it should
 be the exception.
 All lines should be as short as possible.
+Overall, most important be consistent!
 
 ## Consequences
 

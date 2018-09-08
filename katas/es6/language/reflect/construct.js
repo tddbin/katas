@@ -2,7 +2,6 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 
 describe('`Reflect.construct` is the `new` operator as a function', function() {
-
   describe('the function itself', function() {
     it('is static on the `Reflect` object', function() {
       //// const name = 'konstructor';
@@ -55,14 +54,12 @@ describe('`Reflect.construct` is the `new` operator as a function', function() {
   });
 
   describe('in use', function() {
-    
     it('giving it a class it returns an instance of this class', function() {
       class Constructable {}
       //// let instance = Reflect.construct; // use Reflect.construct here!!!
       let instance = Reflect.construct(Constructable, []); // use Reflect.construct here!!!
       assert.equal(instance instanceof Constructable, true);
     });
-    
     describe('the list of arguments are passed to the constructor as given', function() {
       class Constructable {
         constructor(...args) { this.args = args; }
@@ -88,5 +85,4 @@ describe('`Reflect.construct` is the `new` operator as a function', function() {
       assert.equal(Reflect.construct.length, expected);
     });
   });
-  
 });
