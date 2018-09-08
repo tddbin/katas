@@ -10,7 +10,7 @@ describe('`Array.prototype.values` returns an iterator for all values in the arr
     assert.deepEqual(iterator.next(), {value: void 0, done: true});
   });
   
-  it('use iterator to drop first key', function() {
+  it('use `iterator.next()` to drop first value', function() {
     const arr = ['keys', 'values', 'entries'];
     const iterator = arr.values();
     iterator.___();
@@ -33,7 +33,7 @@ describe('`Array.prototype.values` returns an iterator for all values in the arr
   });
   
   it('also includes holes in sparse arrays', function() {
-    const arr = ['a'];
+    const arr = ['a',];
 
     assert.deepEqual([...arr.values()], ['a', void 0, 'c']);
   });

@@ -14,7 +14,7 @@ describe('`[].entries()` returns an iterator object with all entries', function(
     const arr = ['one'];
     arr[2] = 'three';
     const secondValue = arr.entries();
-    
+
     assert.deepEqual(secondValue, [1, void 0]);
   });
 
@@ -28,5 +28,4 @@ describe('`[].entries()` returns an iterator object with all entries', function(
     });
     
   });
-  
 });

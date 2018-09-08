@@ -12,7 +12,7 @@ describe('`Array.prototype.keys` returns an iterator for all keys in the array',
   });
   
   it('gets all keys', function() {
-    const arr = [1, 2];
+    const arr = ['a', 'b'];
     const keys = Array.from(arr.keys());
     
     assert.deepEqual(keys, [0, 1, 2]);
@@ -28,7 +28,7 @@ describe('`Array.prototype.keys` returns an iterator for all keys in the array',
   it('a sparse array without real values has keys though', function() {
     const arr = [,,];
     const keys = [...arr.___()];
-    
+
     assert.deepEqual(keys, [0, 1]);
   });
 

@@ -12,28 +12,31 @@ describe('`Array.from` converts an array-like object or list into an Array', () 
   });
   
   it('a DOM node`s classList object can be converted', function() {
-    document.body.classList.add('some');
-    document.body.classList.add('other');
-    const classList = document.body.classList;
+    const domNode = document.createElement('span');
+    domNode.classList.add('some');
+    domNode.classList.add('other');
+    const classList = domNode.classList;
 
     assert.equal(''+classList, ''+['some', 'other']);
   });
   
   it('convert a NodeList to an Array and `filter()` works on it', function() {
-    const nodeList = document.querySelectorAll('body');
-    const bodies = nodeList.filter((node) => node === document.body);
-    
-    assert.deepEqual(bodies, [document.body]);
+    const nodeList = document.createElement('span');
+    const divs = nodeList.filter((node) => node.tagName === 'div');
+
+    assert.deepEqual(divs.length, 0);
   });
   
   describe('custom conversion using a map function as second param', () => {
     it('we can modify the value before putting it in the array', function() {
       const arr = Array.from(arrayLike, (value) => value);
+
       assert.deepEqual(arr, ['ONE', 'TWO']);
     });
     
     it('and we also get the object`s key as second parameter', function() {
       const arr = Array.from(arrayLike, (value) => `${key}=${value}`);
+      
       assert.deepEqual(arr, ['0=one', '1=two']);
     });
   });

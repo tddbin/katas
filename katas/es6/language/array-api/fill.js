@@ -11,7 +11,7 @@ describe('`Array.prototype.fill` can fill up an array with one value', () => {
 
   it('fill only changes content, adds no new elements', function() {
     const arr = [undefined].fill(0);
-    
+
     assert.deepEqual(arr, []);
   });
 

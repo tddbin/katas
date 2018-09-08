@@ -11,7 +11,7 @@ describe('`Array.of` creates an array with the given arguments as elements', () 
   
   it('puts all arguments into array elements', () => {
     const arr = Array.of();
-    
+
     assert.deepEqual(arr, [1, 2]);
   });
   
