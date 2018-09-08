@@ -96,13 +96,17 @@ describe('`Reflect.defineProperty()` is like `Object.defineProperty()` but retur
       });
     });
     describe('returns false', function() {
-      it('when no property name is given (since no property has been added)', function() {
-        let instance = new class {};
-        const wasPropertyDefined = Reflect.defineProperty;
+      it('when a non-configurable property wants to be changed to configurable=true', function() {
+        let obj = {};
+        Reflect.defineProperty(obj, 'x', {configurable: false});
+        //// const wasPropertyDefined = Reflect.defineProperty;
+        const wasPropertyDefined = Reflect.defineProperty(obj, 'x', {configurable: true});
         assert.equal(wasPropertyDefined, false);
       });
-      it('when no 3rd parameter, the descriptor is given', function() {
+      it('when the object we want to add a property to is frozen', function() {
         let instance = new class {};
+        Object.freeze(instance);
+        //// const wasPropertyDefined = Reflect.defineProperty({}, 'prop', {value: 1});
         const wasPropertyDefined = Reflect.defineProperty(instance, 'prop', {value: 1});
         assert.equal(wasPropertyDefined, false);
       });
