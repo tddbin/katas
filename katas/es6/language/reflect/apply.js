@@ -2,7 +2,6 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 
 describe('`Reflect.apply` calls a target function', function() {
-
   it('it is a static method', function() {
     const expectedType = '???';
     assert.equal(typeof Reflect.apply, expectedType)
@@ -14,12 +13,12 @@ describe('`Reflect.apply` calls a target function', function() {
       assert.equal(Reflect.apply(fn, void 0, []), 42);
     });
     it('passing it a non-callable throws a TypeError', function() {
-      let applyOnUncallable = () => {
-        Reflect.apply(Array);
-      };
+      const applyOnUncallable = () =>
+        Reflect.apply(() => {}, void 0, []);
       assert.throws(applyOnUncallable, TypeError);
     });
   });
+
   describe('the 2nd parameter', () => {
     it('is the scope (or the `this`)', function() {
       class FourtyTwo {
@@ -27,7 +26,7 @@ describe('`Reflect.apply` calls a target function', function() {
         fn() {return this.value}
       }
       let instance = new FourtyTwo();
-      const fourtyTwo = Reflect.apply(instance.fn);
+      const fourtyTwo = Reflect.apply(instance.fn, ___, []);
       assert.deepEqual(fourtyTwo, 42);
     });
   });
@@ -62,5 +61,4 @@ describe('`Reflect.apply` calls a target function', function() {
       assert.equal(Reflect.apply(bob.name, scope, []), 'Bob');
     });
   });
-
 });

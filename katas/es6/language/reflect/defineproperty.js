@@ -2,7 +2,6 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 
 describe('`Reflect.defineProperty()` is like `Object.defineProperty()` but returns a Boolean.', function() {
-
   describe('the function itself', function() {
     it('is static on the `Reflect` object', function() {
       const name = 'what`s the functions name again? :)';
@@ -56,7 +55,6 @@ describe('`Reflect.defineProperty()` is like `Object.defineProperty()` but retur
 
   describe('the `value` is part of the 3rd parameter, given as a property in an object `{value: ...}`', function() {
     // The entire complexity of the 3rd parameter might be covered in a later kata. 
-    
     it('contains the initial value of the property, as an object in the property `value`', function() {
       let obj = {};
       Reflect.defineProperty(obj, 'prop');
@@ -83,17 +81,18 @@ describe('`Reflect.defineProperty()` is like `Object.defineProperty()` but retur
       });
     });
     describe('returns false', function() {
-      it('when no property name is given (since no property has been added)', function() {
-        let instance = new class {};
+      it('when a non-configurable property wants to be changed to configurable=true', function() {
+        let obj = {};
+        Reflect.defineProperty(obj, 'x', {configurable: false});
         const wasPropertyDefined = Reflect.defineProperty;
         assert.equal(wasPropertyDefined, false);
       });
-      it('when no 3rd parameter, the descriptor is given', function() {
+      it('when the object we want to add a property to is frozen', function() {
         let instance = new class {};
-        const wasPropertyDefined = Reflect.defineProperty(instance, 'prop', {value: 1});
+        Object.freeze(instance);
+        const wasPropertyDefined = Reflect.defineProperty({}, 'prop', {value: 1});
         assert.equal(wasPropertyDefined, false);
       });
     });
   });
-  
 });

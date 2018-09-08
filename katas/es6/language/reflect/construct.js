@@ -2,7 +2,6 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 
 describe('`Reflect.construct` is the `new` operator as a function', function() {
-
   describe('the function itself', function() {
     it('is static on the `Reflect` object', function() {
       const name = 'konstructor';
@@ -16,14 +15,14 @@ describe('`Reflect.construct` is the `new` operator as a function', function() {
   
   describe('the 1st parameter is the constructor to be invoked', function() {
     it('fails when given a number as constructor', function() {
-      let aNumber = () => {};
+      let aNumber = class {};
       assert.throws(() => { Reflect.construct(aNumber, []) }, TypeError);
     });
-    it('works giving a function', function() {
+    it('works given a function that can be instanciated', function() {
       let aFunction;
       assert.doesNotThrow(() => { Reflect.construct(aFunction, []) });
     });
-    it('works giving a class', function() {
+    it('works given a class', function() {
       const aClass = {};
       assert.doesNotThrow(() => { Reflect.construct(aClass, []) });
     });
@@ -47,27 +46,22 @@ describe('`Reflect.construct` is the `new` operator as a function', function() {
   });
 
   describe('in use', function() {
-    
     it('giving it a class it returns an instance of this class', function() {
       class Constructable {}
-      let instance; // use Reflect.construct here!!!
-      
+      let instance = Reflect.construct; // use Reflect.construct here!!!
       assert.equal(instance instanceof Constructable, true);
     });
-    
     describe('the list of arguments are passed to the constructor as given', function() {
       class Constructable {
         constructor(...args) { this.args = args; }
       }
       it('if none given, nothing is passed', function() {
         let instance = Reflect.construct(Constructable, [1]);
-        
         assert.deepEqual(instance.args, []);
       });
       it('passing an array, all args of any type are passed', function() {
         const argumentsList = ['arg1', ['arg2.1', 'arg2.2'], {arg: 3}];
         let instance = Reflect.construct;
-        
         assert.deepEqual(instance.args, argumentsList);
       });
     });
@@ -79,5 +73,4 @@ describe('`Reflect.construct` is the `new` operator as a function', function() {
       assert.equal(Reflect.construct.length, expected);
     });
   });
-  
 });
