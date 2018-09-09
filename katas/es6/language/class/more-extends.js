@@ -32,7 +32,6 @@ describe('Classes can inherit from another', () => {
       class B extends (A = class {}) {}
       assert.equal(new B() instanceof A, true);
     });
-    
     it('or calling a function that returns the parent class', () => {
       const returnParent = (beNull) => beNull ? null : class {};
       //// class B extends returnParent {}
