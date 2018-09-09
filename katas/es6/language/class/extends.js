@@ -24,7 +24,6 @@ describe('Classes can inherit from another using `extends`', () => {
 
     });
   });
-  
   describe('instance of', () => {
     it('when B inherits from A, `new B()` is also an instance of A', () => {
       //// let A;
