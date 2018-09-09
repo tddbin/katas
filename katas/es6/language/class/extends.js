@@ -8,7 +8,6 @@ describe('Classes can inherit from another using `extends`', () => {
       class A {}
       assert.equal(new A() instanceof Object, true);
     });
-  
     it('when B extends A, B is also instance of `Object`', () => {
       class A {}
       //// class B {}
@@ -16,7 +15,6 @@ describe('Classes can inherit from another using `extends`', () => {
       assert.equal(new B() instanceof A, true);
       assert.equal(new B() instanceof Object, true);
     });
-    
     it('a class can extend `null`, and is not an instance of Object', () => {
       //// class NullClass extends Object {}
 
@@ -34,7 +32,6 @@ describe('Classes can inherit from another using `extends`', () => {
       class B extends A {}
       assert.equal(new B() instanceof A, true);
     });
-    
     it('extend over multiple levels', () => {
       class A {}
       ////
