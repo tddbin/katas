@@ -32,8 +32,8 @@ describe('Iterator usages', () => {
         }
       }
     }
-    
-    usersIterable = {};
+    //// usersIterable = {};
+    usersIterable = {[Symbol.iterator]: () => ({next: () => {}})}; 
   });
   
   describe('create an iterator/iterable', function() {
