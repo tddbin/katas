@@ -1,5 +1,6 @@
 // 45: Map.prototype.get()
 // To do: make all tests pass, leave the assert lines unchanged!
+// Follow the hints of the failure messages!
 
 describe('`Map.prototype.get` returns the element from the map for a key', function(){
 

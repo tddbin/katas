@@ -1,5 +1,6 @@
 // 48: Set - add
 // To do: make all tests pass, leave the assert lines unchanged!
+// Follow the hints of the failure messages!
 
 describe('`add()` appends a new element to the end of a Set object.', function(){
 

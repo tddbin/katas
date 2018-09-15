@@ -1,5 +1,6 @@
 // 72: String - `startsWith()` 
 // To do: make all tests pass, leave the assert lines unchanged!
+// Follow the hints of the failure messages!
 
 describe('`str.startsWith(searchString)` determines whether `str` begins with `searchString`.', function() {
 

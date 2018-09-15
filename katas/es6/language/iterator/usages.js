@@ -1,5 +1,6 @@
 // 40: iterator - one example usage. Build an iterable and use it with some built-in ES6 constructs.
 // To do: make all tests pass, leave the assert lines unchanged!
+// Follow the hints of the failure messages!
 
 // Consumable users: 
 // - `consumableUser` contains a consumable user, 

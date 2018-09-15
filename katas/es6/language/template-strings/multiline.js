@@ -1,5 +1,6 @@
 // 2: template strings - multiline
 // To do: make all tests pass, leave the asserts unchanged!
+// Follow the hints of the failure messages!
 
 describe('template string, can contain multiline content', function() {
 
