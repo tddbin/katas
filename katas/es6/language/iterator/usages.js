@@ -41,12 +41,10 @@ describe('Iterator usages', () => {
       const isIterable = Symbol.iterator in usersIterable;
       assert.equal(isIterable, true);
     });
-    
     it('the iterator of `usersIterable` should return an object', function() {
       const iterator = usersIterable[Symbol.iterator]();
       assert.equal(typeof iterator, 'object');
     });
-    
     it('the iterator of `usersIterable` should have a next function', function() {
       const iterator = usersIterable[Symbol.iterator]();
       assert.equal(typeof iterator.next, 'function');
@@ -54,7 +52,6 @@ describe('Iterator usages', () => {
   });
   
   describe('fill the iterable with content using `ConsumableUsers`', function() {
-    
     describe('using the iterator', function() {
       let iterator;
       beforeEach(function(){
@@ -77,7 +74,6 @@ describe('Iterator usages', () => {
       })
     });
     
-    
     describe('using built-in constructs', function() {
       it('use `Array.from()` to convert an iterable to an array', function() {
         const users = usersIterable;
@@ -99,5 +95,5 @@ describe('Iterator usages', () => {
       })
     });
   });
-
 });
+
