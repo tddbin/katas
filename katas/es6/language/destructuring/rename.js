@@ -1,5 +1,6 @@
 // 15: destructuring - assign
 // To do: make all tests pass, leave the assert lines unchanged!
+// Follow the hints of the failure messages!
 
 describe('Assign object property values to new variables while destructuring', () => {
   describe('for simple objects', function() {

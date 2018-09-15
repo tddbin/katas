@@ -1,5 +1,6 @@
 // 56: Generator - Send function to a generator
 // To do: make all tests pass, leave the assert lines unchanged!
+// Follow the hints of the failure messages!
 
 describe('Pass a function to a generator', () => {
   it('the generator can receive a function as a value', function() {

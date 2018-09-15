@@ -1,5 +1,6 @@
 // 51: Generator - Yield Expressions
 // To do: make all tests pass, leave the assert lines unchanged!
+// Follow the hints of the failure messages!
 
 describe('Generator - `yield` is used to pause and resume a generator function', () => {
   function* generatorFunction() {
