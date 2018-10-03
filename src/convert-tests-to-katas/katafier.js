@@ -18,20 +18,20 @@ const removeLinesAfterKataLine = (_, lineIndex, lines) => {
   return !isKataLine(previousLine);
 };
 
-export const kataifyFile = (fileContent: string): string =>
+export const katafyFile = (fileContent: string): string =>
   fileContent.split('\n')
     .filter(removeLinesAfterKataLine)
     .map(enableKataLine)
     .join('\n')
   ;
 
-export const kataify = (
+export const katafy = (
   kataifyableList: KataifyableListType,
   {readFile, writeFile}: KataifyDeps
 ): Promise<*> => {
   const kataifyableToTask = (kataifyable) =>
     readFile(kataifyable.sourceFilename)
-      .then(kataifyFile)
+      .then(katafyFile)
       .then(content => writeFile(kataifyable.destinationFilename, content))
     ;
 

@@ -3,7 +3,7 @@ import {
   readFileAsString, writeFileFromString,
 } from '../_external-deps/filesystem';
 import {FilterKatasDir} from './FilterKatasDir';
-import {kataify} from './kataifier';
+import {katafy} from './katafier';
 import {toSrcDestPairs, createDestinationDirs} from './deploy-util';
 
 export const convertTestsToKatas = ({sourceDir, destinationDir}) => {
@@ -23,6 +23,6 @@ export const convertTestsToKatas = ({sourceDir, destinationDir}) => {
     .forKataFiles()
     .then(files => toSrcDestPairs(files, toSrcDestPairsDeps))
     .then(pairs => createDestinationDirs(pairs, {mkdirp}).then(() => pairs))
-    .then(pairs => kataify(pairs, kataifyDeps))
+    .then(pairs => katafy(pairs, kataifyDeps))
   ;
 };

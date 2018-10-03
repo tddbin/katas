@@ -6,7 +6,7 @@ import {
 import {
   buildFunctionSpy, wasNotCalled, callCountWas, wasCalledWith,
 } from 'hamjest-spy';
-import { kataifyFile, kataify } from './kataifier';
+import { katafyFile, katafy } from './katafier';
 
 describe('Kataify files', () => {
   const defaultDeps = () => {
@@ -18,7 +18,7 @@ describe('Kataify files', () => {
 
   it('WHEN no files given, dont read any file', async () => {
     const deps = defaultDeps();
-    await kataify([], deps);
+    await katafy([], deps);
     assertThat(deps.readFile, wasNotCalled());
   });
   describe('WHEN one kataifyable file given', () => {
@@ -35,7 +35,7 @@ describe('Kataify files', () => {
     it('AND its empty, write the same file content', async () => {
       const originalContent = '';
       const deps = oneFileDeps(originalContent);
-      await kataify([oneFile], deps);
+      await katafy([oneFile], deps);
       assertThat(deps.writeFile, wasCalledWith(oneFile.destinationFilename, originalContent));
     });
     it('AND it is a kata, write the kataified file content', async () => {
@@ -44,7 +44,7 @@ describe('Kataify files', () => {
         'let oldCode;'
       ].join('\n');
       const deps = oneFileDeps(originalContent);
-      await kataify([oneFile], deps);
+      await katafy([oneFile], deps);
       assertThat(deps.writeFile, wasCalledWith(oneFile.destinationFilename, 'Only this line will be left'));
     });
   });
@@ -63,7 +63,7 @@ describe('Kataify files', () => {
       it('write the same file content', async () => {
         const originalContent = '';
         const deps = fileDeps(originalContent);
-        await kataify(twoFiles, deps);
+        await katafy(twoFiles, deps);
 
         const [firstFile, secondFile] = twoFiles;
         assertThat(deps.writeFile, wasCalledWith(firstFile.destinationFilename, originalContent));
@@ -72,7 +72,7 @@ describe('Kataify files', () => {
       it('read both files', async () => {
         const originalContent = '';
         const deps = fileDeps(originalContent);
-        await kataify(twoFiles, deps);
+        await katafy(twoFiles, deps);
 
         const [firstFile, secondFile] = twoFiles;
         assertThat(deps.readFile, wasCalledWith(firstFile.sourceFilename));
@@ -84,24 +84,24 @@ describe('Kataify files', () => {
 
 describe('Kataify file content', () => {
   it('WHEN empty return empty', () => {
-    assertThat(kataifyFile(''), equalTo(''));
+    assertThat(katafyFile(''), equalTo(''));
   });
   it('WHEN one code line, leave it', () => {
     const nonKataCode = 'const some = {};';
-    assertThat(kataifyFile(nonKataCode), equalTo(nonKataCode));
+    assertThat(katafyFile(nonKataCode), equalTo(nonKataCode));
   });
   describe('WHEN one kata line', () => {
     it('remove the following and leave the kata line', () => {
       const kataCode = '////const some = {};\ncont toBeRemoved = [];';
-      assertThat(kataifyFile(kataCode), equalTo('const some = {};'));
+      assertThat(katafyFile(kataCode), equalTo('const some = {};'));
     });
     it('leave leading spaces', () => {
       const kataCode = '  ////const some = {};\ncont toBeRemoved = [];';
-      assertThat(kataifyFile(kataCode), equalTo('  const some = {};'));
+      assertThat(katafyFile(kataCode), equalTo('  const some = {};'));
     });
     it('remove leading spaces after kata-identifier', () => {
       const kataCode = '////  const some = {};\ncont toBeRemoved = [];';
-      assertThat(kataifyFile(kataCode), equalTo('const some = {};'));
+      assertThat(katafyFile(kataCode), equalTo('const some = {};'));
     });
   });
   describe('WHEN multiple kata lines, replace all following lines with kata code', () => {
@@ -112,7 +112,7 @@ describe('Kataify file content', () => {
         '////kata code 2',
         'to be removed 2'
       ].join('\n');
-      assertThat(kataifyFile(kataCode), equalTo('kata code\nkata code 2'));
+      assertThat(katafyFile(kataCode), equalTo('kata code\nkata code 2'));
     });
     it('with other lines inbetween', () => {
       const kataCode = [
@@ -131,7 +131,7 @@ describe('Kataify file content', () => {
         'kata code 2',
         ''
       ].join('\n');
-      assertThat(kataifyFile(kataCode), equalTo(expected));
+      assertThat(katafyFile(kataCode), equalTo(expected));
     });
   });
 });
