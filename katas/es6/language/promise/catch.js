@@ -1,5 +1,6 @@
 // 79: Promise - catch
 // To do: make all tests pass, leave the assert lines unchanged!
+// Follow the hints of the failure messages!
 // Here we use promises to trigger, don't modify the block with the 
 // returning promise!
 

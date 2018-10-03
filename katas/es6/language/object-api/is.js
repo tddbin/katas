@@ -1,5 +1,6 @@
 // 54: Object - is
 // To do: make all tests pass, leave the assert lines unchanged!
+// Follow the hints of the failure messages!
 
 describe('`Object.is()` determines whether two values are the same', function(){
 

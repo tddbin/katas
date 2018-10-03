@@ -1,5 +1,6 @@
 // 70: Set - clear
 // To do: make all tests pass, leave the assert lines unchanged!
+// Follow the hints of the failure messages!
 
 describe('`clear()` removes all elements from a Set object.', function(){
 

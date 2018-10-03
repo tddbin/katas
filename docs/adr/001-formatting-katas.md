@@ -16,7 +16,7 @@ should be defined and settled once and for all.
 A kata looks like the following:
 
 ```
-describe('`Reflect` basics', function() {
+describe('`Reflect` basics', function() {     // The test description is a proper English sentence, so it starts upper case.
   describe('Reflect is special, it is different to e.g. `Object`', function() {
     it('it`s of type object', function() {
       //// const expectedType = 'not a function!';
@@ -25,6 +25,7 @@ describe('`Reflect` basics', function() {
     });
   });
 });
+            // the file ends with an empty line
 ```
 
 There are no unnecessary spaces and new lines, also not before the assert.

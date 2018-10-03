@@ -1,5 +1,6 @@
 // 29: array - `Array.from` static method
 // To do: make all tests pass, leave the assert lines unchanged!
+// Follow the hints of the failure messages!
 
 describe('`Array.from` converts an array-like object or list into an Array', () => {
 

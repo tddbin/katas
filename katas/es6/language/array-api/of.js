@@ -1,5 +1,6 @@
 // 30: array - `Array.of` static method
 // To do: make all tests pass, leave the assert lines unchanged!
+// Follow the hints of the failure messages!
 
 describe('`Array.of` creates an array with the given arguments as elements', () => {
   
