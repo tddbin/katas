@@ -3,5 +3,5 @@
 
 # v2
 
-- [ ] Kataify all ES6 katas
+- [ ] Katafy all ES6 katas
 
