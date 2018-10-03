@@ -1,11 +1,11 @@
 // @flow
-type KataifyableType = {
+type KatafyableType = {
   sourceFilename: string;
   destinationFilename: string;
 };
-type KataifyableListType = Array<KataifyableType>;
+type KatafyableListType = Array<KatafyableType>;
 
-type KataifyDeps = {
+type KatafyDeps = {
   readFile: (FilenameType) => Promise<*>;
   writeFile: (FilenameType, string) => Promise<*>;
 };
@@ -26,14 +26,14 @@ export const katafyFile = (fileContent: string): string =>
   ;
 
 export const katafy = (
-  kataifyableList: KataifyableListType,
-  {readFile, writeFile}: KataifyDeps
+  katafyableList: KatafyableListType,
+  {readFile, writeFile}: KatafyDeps
 ): Promise<*> => {
-  const kataifyableToTask = (kataifyable) =>
-    readFile(kataifyable.sourceFilename)
+  const katafyableToTask = (katafyable) =>
+    readFile(katafyable.sourceFilename)
       .then(katafyFile)
-      .then(content => writeFile(kataifyable.destinationFilename, content))
+      .then(content => writeFile(katafyable.destinationFilename, content))
     ;
 
-  return Promise.all(kataifyableList.map(kataifyableToTask));
+  return Promise.all(katafyableList.map(katafyableToTask));
 };

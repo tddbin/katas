@@ -1,4 +1,4 @@
-# 3. Kataification
+# 3. Katafication
 
 ## Status
 
@@ -13,7 +13,7 @@ the kata is run on supports a certain feature.
 
 ## Decision
 
-All tests have to pass and the special comment `////` marks how to kataify
+All tests have to pass and the special comment `////` marks how to katafy
 this test.
 For example:
 ```
@@ -21,7 +21,7 @@ For example:
       const expectedType = 'object';
       assert.equal(typeof Reflect, expectedType);
 ```
-The above test passes. Kataify means uncomment the first line and remove the following line, so
+The above test passes. Katafy means uncomment the first line and remove the following line, so
 that the code looks like this afterwards:
 ```
       const expectedType = 'not a function!';
@@ -35,5 +35,5 @@ The tests can be used as tests and katas. Additionally it can be assured
 automatically if a kata would be solvable.
 How? Just run the test, that should fail on that platform (e.g. because the
 JS engine does not support all features or just an older version of ECMAScript).
-If the test passes, the feature is supported. Now kataify the
+If the test passes, the feature is supported. Now katafy the
 test and the user can start solving the kata and learn.

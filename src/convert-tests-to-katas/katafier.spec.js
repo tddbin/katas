@@ -8,7 +8,7 @@ import {
 } from 'hamjest-spy';
 import { katafyFile, katafy } from './katafier';
 
-describe('Kataify files', () => {
+describe('Katafy files', () => {
   const defaultDeps = () => {
     return {
       readFile: buildFunctionSpy({ returnValue: Promise.resolve('') }),
@@ -21,7 +21,7 @@ describe('Kataify files', () => {
     await katafy([], deps);
     assertThat(deps.readFile, wasNotCalled());
   });
-  describe('WHEN one kataifyable file given', () => {
+  describe('WHEN one katafyable file given', () => {
     const oneFile = {
       sourceFilename: '/src/file.js',
       destinationFilename: '/dest/file.js',
@@ -38,7 +38,7 @@ describe('Kataify files', () => {
       await katafy([oneFile], deps);
       assertThat(deps.writeFile, wasCalledWith(oneFile.destinationFilename, originalContent));
     });
-    it('AND it is a kata, write the kataified file content', async () => {
+    it('AND it is a kata, write the katafied file content', async () => {
       const originalContent = [
         '////Only this line will be left',
         'let oldCode;'
@@ -48,7 +48,7 @@ describe('Kataify files', () => {
       assertThat(deps.writeFile, wasCalledWith(oneFile.destinationFilename, 'Only this line will be left'));
     });
   });
-  describe('WHEN multiple kataifyable files given', () => {
+  describe('WHEN multiple katafyable files given', () => {
     const twoFiles = [
       { sourceFilename: '/src/file1.js', destinationFilename: '/dest/file1.js' },
       { sourceFilename: '/src/file2.js', destinationFilename: '/dest/file2.js' },
@@ -82,7 +82,7 @@ describe('Kataify files', () => {
   });
 });
 
-describe('Kataify file content', () => {
+describe('Katafy file content', () => {
   it('WHEN empty return empty', () => {
     assertThat(katafyFile(''), equalTo(''));
   });
