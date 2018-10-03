@@ -9,9 +9,16 @@
     "test": "npm run test:src && npm run test:katas",
     "flow": "flow",
     "test:src": "mocha --compilers js:babel-register src/**/*.spec.js",
-    "test:katas": "mocha --compilers js:babel-register katas/libraries/{**,**/**}/*.js --require=katas/mocha-require.js",
-    "test:es6": "mocha -r esm katas/es6/{**,**/**}/*.js --require=katas/mocha-require.js",
-    "kata:libraries:hamjest": "mocha --compilers js:babel-register katas/libraries/hamjest/**/*.js"
+    "_test": "func() { mocha -r esm katas/\"$1\"/{**,**/**}/*.js --require=katas/mocha-require.js; }; func",
+    "test:katas": "npm run test:katas:libraries && npm run test:katas:language",
+    "test:katas:libraries": "npm run _test libraries",
+    "test:katas:libraries:hamjest": "npm run _test libraries/hamjest",
+    "test:katas:language": "npm run _test es*",
+    "test:katas:language:es1": "npm run _test es1",
+    "test:katas:language:es5": "npm run _test es5",
+    "test:katas:language:es6": "npm run _test es6",
+    "test:katas:language:es7": "npm run _test es7",
+    "test:katas:language:es8": "npm run _test es8"
   },
   "repository": {
     "type": "git",
