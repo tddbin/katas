@@ -10,5 +10,5 @@ after_success:
 env:
  global:
   - TDDBIN_ROOT_DOMAIN: tddbin.com
-  - GH_EMAIL: contact+travis-for-tddbin@uxebu.com
+  - GH_EMAIL: w+travis-for-tddbin@kriesing.de
   - GH_REF: github.com/tddbin/katas.git
