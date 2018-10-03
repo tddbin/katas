@@ -16,7 +16,7 @@ describe('Convert tests to katas', () => {
   it('THEN creates all missing destination directories', () => {
 
   });
-  it('THEN kataifies all tests', () => {
+  it('THEN katafies all tests', () => {
 
   });
 });
