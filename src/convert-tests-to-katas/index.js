@@ -11,7 +11,7 @@ export const convertTestsToKatas = ({sourceDir, destinationDir}) => {
     findFilenames: () => allFilesInDir(sourceDir),
     rootDir: sourceDir,
   };
-  const kataifyDeps = {
+  const katafyDeps = {
     readFile: readFileAsString,
     writeFile: writeFileFromString,
   };
@@ -23,6 +23,6 @@ export const convertTestsToKatas = ({sourceDir, destinationDir}) => {
     .forKataFiles()
     .then(files => toSrcDestPairs(files, toSrcDestPairsDeps))
     .then(pairs => createDestinationDirs(pairs, {mkdirp}).then(() => pairs))
-    .then(pairs => katafy(pairs, kataifyDeps))
+    .then(pairs => katafy(pairs, katafyDeps))
   ;
 };
