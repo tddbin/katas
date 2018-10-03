@@ -1,10 +1,12 @@
 // 19: rest - with-destructuring
 // To do: make all tests pass, leave the assert lines unchanged!
+// Follow the hints of the failure messages!
 
-describe('rest with destructuring', () => {
+describe('Rest parameters with destructuring', () => {
     
-  it('rest parameter must be last', () => {
-    const [...all, last] = [1, 2, 3, 4];
+  it('must be last', () => {
+    //// const [...all, last] = [1, 2, 3, 4];
+    const [...all] = [1, 2, 3, 4];
     assert.deepEqual(all, [1, 2, 3, 4]);
   });
   

@@ -1,5 +1,6 @@
 // 63: String - `includes()` 
 // To do: make all tests pass, leave the assert lines unchanged!
+// Follow the hints of the failure messages!
 
 describe('`string.includes()` finds string within another string', function() {
 

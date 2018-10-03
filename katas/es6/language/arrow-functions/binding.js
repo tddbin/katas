@@ -1,5 +1,6 @@
 // 6: arrow functions - binding
 // To do: make all tests pass, leave the asserts unchanged!
+// Follow the hints of the failure messages!
 
 class LexicallyBound {
   getFunction() {
