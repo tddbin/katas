@@ -1,5 +1,6 @@
 // 5: arrow functions - basics
 // To do: make all tests pass, leave the asserts unchanged!
+// Follow the hints of the failure messages!
 
 describe('Arrow functions', function() {
   it('are shorter to write, instead of `function(){}` write `() => {}`', function() {

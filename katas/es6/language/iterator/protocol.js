@@ -34,7 +34,6 @@ describe('A simple iterable without items inside, implementing the right protoco
       assert.equal(iterable[Symbol.iterator], iteratorFunction);
     });
   });
-  
   describe('using the iterable', function() {
     it('it contains no values', function() {
       let values;
@@ -43,18 +42,15 @@ describe('A simple iterable without items inside, implementing the right protoco
       }
       assert.equal(values, '');
     });
-    
     it('has no `.length` property', function() {
       const hasLengthProperty = iterable;
       assert.equal(hasLengthProperty, false);
     });
-    
     describe('can be converted to an array', function() {
       it('using `Array.from()`', function() {
         const arr = iterable;
         assert.equal(Array.isArray(arr), true);
       });
-      
       it('where `.length` is still 0', function() {
         const arr = iterable;
         const length = arr.length;
@@ -62,5 +58,5 @@ describe('A simple iterable without items inside, implementing the right protoco
       });
     });
   });
-  
 });
+

@@ -1,5 +1,6 @@
 // 66: object-literal - getter
 // To do: make all tests pass, leave the assert lines unchanged!
+// Follow the hints of the failure messages!
 
 describe('An object literal can also contain getters', () => {
 

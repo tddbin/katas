@@ -1,5 +1,6 @@
 // 28: class - super in constructor
 // To do: make all tests pass, leave the assert lines unchanged!
+// Follow the hints of the failure messages!
 
 describe('Inside a class`s constructor `super()` can be used', () => {
   it('`extend` a class and use `super()` to call the parent constructor', () => {

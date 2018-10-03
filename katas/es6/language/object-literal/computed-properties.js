@@ -1,5 +1,6 @@
 // 16: object-literal - computed properties
 // To do: make all tests pass, leave the assert lines unchanged!
+// Follow the hints of the failure messages!
 
 describe('Object literal properties may be computed values', () => {
 

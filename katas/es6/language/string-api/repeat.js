@@ -1,5 +1,6 @@
 // 71: String - `repeat()` 
 // To do: make all tests pass, leave the assert lines unchanged!
+// Follow the hints of the failure messages!
 
 describe('`str.repeat(x)` appends `x` copies of `str` to each other and returns it', function() {
 

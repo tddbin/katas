@@ -1,5 +1,6 @@
 // 46: Map.prototype.set()
 // To do: make all tests pass, leave the assert lines unchanged!
+// Follow the hints of the failure messages!
 
 describe('`Map.prototype.set` adds a new element with key and value to a Map', function(){
 

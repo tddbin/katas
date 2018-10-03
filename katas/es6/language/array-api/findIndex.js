@@ -1,5 +1,6 @@
 // 33: array - `Array.prototype.findIndex` 
 // To do: make all tests pass, leave the assert lines unchanged!
+// Follow the hints of the failure messages!
 
 describe('`Array.prototype.findIndex` makes finding items in arrays easier', () => {
 

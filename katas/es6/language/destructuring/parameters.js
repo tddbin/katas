@@ -1,8 +1,8 @@
 // 14: destructuring - parameters
 // To do: make all tests pass, leave the assert lines unchanged!
+// Follow the hints of the failure messages!
 
-describe('destructuring function parameters', () => {
-
+describe('Destructuring function parameters', () => {
   describe('destruct parameters', () => {
     it('multiple params from object', () => {
       const fn = ({id}, {name}) => {
@@ -12,7 +12,6 @@ describe('destructuring function parameters', () => {
       const user = {name: 'Wolfram', id: 42};
       fn(user);
     });
-    
     it('multiple params from array/object', () => {
       const fn = ([{name}]) => {
         assert.equal(name, 'Alice');
@@ -21,7 +20,6 @@ describe('destructuring function parameters', () => {
       fn(users);
     });
   });
-
   describe('default values', () => {
     it('for simple values', () => {
       const fn = (id, name='Bobby') => {
@@ -30,7 +28,6 @@ describe('destructuring function parameters', () => {
       };
       fn(23);
     });
-    
     it('for a missing array value', () => {
       const defaultUser = {id: 23, name: 'Joe'};
       const fn = ([user]) => {
@@ -38,7 +35,6 @@ describe('destructuring function parameters', () => {
       };
       fn([]);
     });
-    
     it('mix of parameter types', () => {
       const fn = (id, [arr], {obj}) => {
         assert.equal(id, 1);
@@ -48,5 +44,4 @@ describe('destructuring function parameters', () => {
       fn(void 0, [], {});
     });
   });
-
 });

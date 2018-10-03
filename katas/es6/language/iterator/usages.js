@@ -1,5 +1,6 @@
 // 40: iterator - one example usage. Build an iterable and use it with some built-in ES6 constructs.
 // To do: make all tests pass, leave the assert lines unchanged!
+// Follow the hints of the failure messages!
 
 // Consumable users: 
 // - `consumableUser` contains a consumable user, 
@@ -31,7 +32,6 @@ describe('Iterator usages', () => {
         }
       }
     }
-    
     usersIterable = {};
   });
   
@@ -40,12 +40,10 @@ describe('Iterator usages', () => {
       const isIterable = Symbol.iterator in usersIterable;
       assert.equal(isIterable, true);
     });
-    
     it('the iterator of `usersIterable` should return an object', function() {
       const iterator = usersIterable[Symbol.iterator]();
       assert.equal(typeof iterator, 'object');
     });
-    
     it('the iterator of `usersIterable` should have a next function', function() {
       const iterator = usersIterable[Symbol.iterator]();
       assert.equal(typeof iterator.next, 'function');
@@ -53,7 +51,6 @@ describe('Iterator usages', () => {
   });
   
   describe('fill the iterable with content using `ConsumableUsers`', function() {
-    
     describe('using the iterator', function() {
       let iterator;
       beforeEach(function(){
@@ -76,7 +73,6 @@ describe('Iterator usages', () => {
       })
     });
     
-    
     describe('using built-in constructs', function() {
       it('use `Array.from()` to convert an iterable to an array', function() {
         const users = usersIterable;
@@ -98,5 +94,5 @@ describe('Iterator usages', () => {
       })
     });
   });
-
 });
+

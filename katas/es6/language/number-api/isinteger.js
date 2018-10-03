@@ -1,5 +1,6 @@
 // 55: Number - isInteger
 // To do: make all tests pass, leave the assert lines unchanged!
+// Follow the hints of the failure messages!
 
 describe('`Number.isInteger()` determines if a value is an integer', function(){
 
