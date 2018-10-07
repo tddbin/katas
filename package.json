@@ -6,7 +6,8 @@
   "scripts": {
     "build": "./scripts/build.sh",
     "build-for-offline": "npm run build && ./scripts/build-for-offline.sh",
-    "test": "npm run test:src && npm run test:katas",
+    "test": "npm run test:src && npm run test:katas:UNTIL-ALL-KATAS-ARE-KATAFIED",
+    "test:katas:UNTIL-ALL-KATAS-ARE-KATAFIED": "npm run _test es1",
     "flow": "flow",
     "test:src": "mocha --compilers js:babel-register src/**/*.spec.js",
     "_test": "func() { mocha -r esm katas/\"$1\"/{**,**/**}/*.js --require=katas/mocha-require.js; }; func",
