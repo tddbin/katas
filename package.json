@@ -4,13 +4,12 @@
   "description": "Service providing katas that can be loaded into tddbin.com.",
   "main": "index.js",
   "scripts": {
+    "flow": "flow",
     "build": "./scripts/build.sh",
     "build-for-offline": "npm run build && ./scripts/build-for-offline.sh",
-    "test": "npm run test:src && npm run test:katas:UNTIL-ALL-KATAS-ARE-KATAFIED",
-    "test:katas:UNTIL-ALL-KATAS-ARE-KATAFIED": "npm run _test es1",
-    "flow": "flow",
-    "test:src": "mocha --compilers js:babel-register src/**/*.spec.js",
     "_test": "func() { mocha -r esm katas/\"$1\"/{**,**/**}/*.js --require=katas/mocha-require.js; }; func",
+    "test": "npm run test:src && npm run test:katas",
+    "test:src": "mocha --compilers js:babel-register src/**/*.spec.js",
     "test:katas": "npm run test:katas:libraries && npm run test:katas:language",
     "test:katas:libraries": "npm run _test libraries",
     "test:katas:libraries:hamjest": "npm run _test libraries/hamjest",
@@ -19,7 +18,8 @@
     "test:katas:language:es5": "npm run _test es5",
     "test:katas:language:es6": "npm run _test es6",
     "test:katas:language:es7": "npm run _test es7",
-    "test:katas:language:es8": "npm run _test es8"
+    "test:katas:language:es8": "npm run _test es8",
+    "test:katas:UNTIL-ALL-KATAS-ARE-KATAFIED": "npm run _test es1"
   },
   "repository": {
     "type": "git",
