@@ -49,6 +49,6 @@ describe('Inside a class`s constructor `super()` can be used', () => {
         this.isTop = '' + super.constructor;
       }
     }
-    assert.equal(new B().isTop, 'class A {constructor() {"parent"}}');
+    assert.equal(new B().isTop.replace(/\n\s+/g, ' '), 'class A {constructor() {"parent"}}');
   });
 });
