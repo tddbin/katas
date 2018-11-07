@@ -36,7 +36,7 @@ describe('`Array.prototype.fill` can fill up an array with one value', () => {
   });
 
 
-  it('is a mutable method, and will change this object itself', function() {
+  it('is a mutating method, and will change this object itself', function() {
     const arr = new Array(3);
     //// arr.fill('foo')
     arr.fill(8);
