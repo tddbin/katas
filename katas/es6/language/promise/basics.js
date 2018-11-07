@@ -27,6 +27,7 @@ describe('a Promise represents an operation that hasn`t completed yet, but is ex
   
     it('resolve a promise by calling the `resolve` function given as first parameter', function(done) {
       let promise = new Promise((resolve) => {
+        
       });
       
       promise
@@ -46,6 +47,7 @@ describe('a Promise represents an operation that hasn`t completed yet, but is ex
   
     it('rejecting a promise is done by calling the callback given as 2nd parameter', function(done) {
       let promise = new Promise(() => {
+        reject();
       });
       
       promise
@@ -58,7 +60,7 @@ describe('a Promise represents an operation that hasn`t completed yet, but is ex
   describe('an asynchronous promise', function() {
   
     it('can resolve later, also by calling the first callback', function(done) {
-      let promise = new Promise(() => {
+        let promise = new Promise(() => {
         setTimeout(() => resolve(), 100);
       });
       

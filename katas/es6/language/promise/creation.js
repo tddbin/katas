@@ -56,9 +56,11 @@ describe('a promise can be created in multiple ways', function() {
     });
     
     it('must call `super()` in the constructor if it wants to inherit/specialize the behavior', function() {
-      class ResolvingPromise extends Promise {}
+      class ResolvingPromise extends Promise {
+        
+      }
       
-      return new ResolvingPromise();
+      return new ResolvingPromise(resolve => resolve());
     });
     
   });
@@ -67,9 +69,7 @@ describe('a promise can be created in multiple ways', function() {
     
     it('returns all results', function(done) {
       const promise = Promise.all([
-        new Promise(resolve => resolve(1)),
-        new Promise(resolve => resolve(2)),
-        new Promise(resolve => resolve(3))
+        new Promise(resolve => resolve(1)),new Promise(resolve => resolve(2)),new Promise(resolve => resolve(3))
       ]);
       
       promise
@@ -126,7 +126,7 @@ describe('a promise can be created in multiple ways', function() {
 
     it('resolves with the given value', function(done) {
       const promise = Promise.resolve();
-      
+
       promise
         .then(value => { assert.equal(value, 'quick resolve'); done(); })
         .catch(e => done(e));
