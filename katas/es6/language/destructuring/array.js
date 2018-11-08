@@ -7,6 +7,10 @@ describe('Destructuring arrays makes shorter code', () => {
     let firstValue = [1];
     assert.strictEqual(firstValue, 1);
   });
+  it('get the last item from array', () => {
+    let lastValue = [1, 2, 3];
+    assert.strictEqual(lastValue, 3);
+  });
   it('swap two variables, in one operation', () => {
     let [x, y] = ['ax', 'why'];
     [x, y] = [x, y];
