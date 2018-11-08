@@ -7,4 +7,4 @@
 # v2
 
 - [ ] Katafy all ES6 katas
-
+- [ ] Fix `PromiseRejectionHandledWarning` thrown when `npm test` runs
