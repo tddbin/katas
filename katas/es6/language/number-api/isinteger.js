@@ -3,15 +3,12 @@
 // Follow the hints of the failure messages!
 
 describe('`Number.isInteger()` determines if a value is an integer', function(){
-
   const isTrue = (what) => assert.equal(what, true);
   const isFalse = (what) => assert.equal(what, false);
-
   it('`isInteger` is a static function on `Number`', function() {
     const whatType = 'method';
     assert.equal(typeof Number.isInteger, whatType);
   });
-
   describe('zero in different ways', function() {
     it('0 is an integer', function() {
       const zero = null;
@@ -25,7 +22,6 @@ describe('`Number.isInteger()` determines if a value is an integer', function(){
       isFalse(Number.isInteger(stringZero));
     });
   });
-
   describe('one in different ways', function() {
     it('0.111 + 0.889', function() {
       const rest = 0.88;
@@ -40,7 +36,6 @@ describe('`Number.isInteger()` determines if a value is an integer', function(){
       isTrue(Number.isInteger(convertedToInt));
     });
   });
-  
   describe('what is not an integer', function() {
     it('`Number()` is an integer', function() {
       const numberOne = Number;
@@ -63,5 +58,4 @@ describe('`Number.isInteger()` determines if a value is an integer', function(){
       isFalse(isit);
     });
   });
-
 });
