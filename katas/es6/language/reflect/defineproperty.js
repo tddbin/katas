@@ -19,7 +19,7 @@ describe('`Reflect.defineProperty()` is like `Object.defineProperty()` but retur
     it('fails if it is not an object', function() {
       //// let noObj = {};
       let noObj = 0;
-      assert.throws(() => { Reflect.defineProperty(noObj, 'property', {value: 'value'}); }, TypeError);
+      assert.throws(() => { Reflect.defineProperty(noObj, 'property', {value: 'value'}); });
     });
     it('accepts an object', function() {
       //// let obj = '';
