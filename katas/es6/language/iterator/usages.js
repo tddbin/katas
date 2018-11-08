@@ -2,7 +2,8 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
-// Consumable users: 
+// The example is a consumable users ("consumable" is in the name just to make it
+// more explicit that the generator will consume them):
 // - `consumableUser` contains a consumable user, 
 // - `anyLeft` tells if there is any user left that can be consumed.  
 class ConsumableUsers {

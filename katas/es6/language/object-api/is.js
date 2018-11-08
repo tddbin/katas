@@ -3,19 +3,18 @@
 // Follow the hints of the failure messages!
 
 describe('`Object.is()` determines whether two values are the same', function(){
-
   describe('scalar values', function() {
     it('1 is the same as 1', function() {
       const areSame = Object.is(1, '???');
-      assert.equal(areSame, true);
+      assert(areSame);
     });
     it('int 1 is different to string "1"', function() {
       const areSame = Object.___(1, '1');
-      assert.equal(areSame, false);
+      assert(areSame === false);
     });
     it('strings just have to match', function() {
       const areSame = Object.is('one', 'two');
-      assert.equal(areSame, true);
+      assert(areSame);
     });
     it('+0 is not the same as -0', function() {
       const areSame = -1;
@@ -26,7 +25,6 @@ describe('`Object.is()` determines whether two values are the same', function(){
       assert.equal(Object.is(NaN, number), true);
     });
   });
-  
   describe('coercion, as in `==` and `===`, does NOT apply', function() {
     it('+0 != -0', function() {
       const coerced = +0 === -0;
@@ -48,11 +46,10 @@ describe('`Object.is()` determines whether two values are the same', function(){
       assert.equal(isSame, true);
     });
   });
-  
   describe('complex values', function() {
     it('`{}` is just not the same as `{}`', function() {
       const areSame = '???';
-      assert.equal(Object.is({}, {}), areSame);
+      assert(Object.is({}, {}) === areSame);
     });
     it('Map', function() {
       let map1 = new Map([[1, 'one']]);
@@ -61,5 +58,4 @@ describe('`Object.is()` determines whether two values are the same', function(){
       assert.equal(areSame, false);
     });
   });
-  
 });
