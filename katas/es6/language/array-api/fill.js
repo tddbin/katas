@@ -35,4 +35,19 @@ describe('`Array.prototype.fill` can fill up an array with one value', () => {
     assert.deepEqual(arr, [1, 42, 3]);
   });
 
+  it('is a mutating method, and will change this object itself', function() {
+    const arr = new Array(3);
+    //// arr.fill('foo')
+    arr.fill(8);
+
+    assert.deepEqual(arr, [8,8,8]);
+  });
+  
+  it('when gets passed an object, all elements of the mutated array would be the same reference to that object', function(){
+    //// const obj = {hi: 'foobar'};
+    const obj = {hi: 'es6 katas'};
+    const arr = Array(3).fill(obj);
+    
+    assert.equal(arr[2].hi, 'es6 katas');
+  });
 });
