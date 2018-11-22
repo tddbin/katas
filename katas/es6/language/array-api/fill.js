@@ -35,7 +35,6 @@ describe('`Array.prototype.fill` can fill up an array with one value', () => {
     assert.deepEqual(arr, [1, 42, 3]);
   });
 
-
   it('is a mutating method, and will change this object itself', function() {
     const arr = new Array(3);
     //// arr.fill('foo')
@@ -51,6 +50,4 @@ describe('`Array.prototype.fill` can fill up an array with one value', () => {
     
     assert.equal(arr[2].hi, 'es6 katas');
   });
-
-
 });
