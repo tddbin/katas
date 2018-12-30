@@ -56,22 +56,20 @@ describe('`str.endsWith(searchString)` determines whether `str` ends with `searc
     });
   });
   describe('this functionality can be used on non-strings too', function() {
-    const endsWith = (string, searchFor, endPosition = undefined) =>
-      String.prototype.endsWith.call(string, searchFor, endPosition);
     it('e.g. a boolean', function() {
-      //// let aBool = false;
-      let aBool = true;
-      assert.equal(endsWith(!aBool, 'lse'), true);
+      //// let aBool = true;
+      let aBool = false;
+      assert.equal(String.prototype.endsWith.call(aBool, 'lse'), true);
     });
     it('e.g. a number', function() {
       //// let aNumber = 0;
       let aNumber = 84;
-      assert.equal(endsWith(aNumber + 1900, 84), true);
+      assert.equal(String.prototype.endsWith.call(aNumber + 1900, 84), true);
     });
     it('also using the position works', function() {
       //// const position = '??';
       const position = 3;
-      assert.equal(endsWith(1994, '99', position), true);
+      assert.equal(String.prototype.endsWith.call(1994, '99', position), true);
     });
   });
 });
