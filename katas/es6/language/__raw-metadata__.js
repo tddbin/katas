@@ -1190,7 +1190,7 @@ export const all = {
             LET,
             CONST,
             ARROW_FUNCTION_BASICS,
-            DEFAULT_PARAMETERS_BASICS
+            DEFAULT_PARAMETERS_BASICS,
           ],
           publishDateUTC: toUtcDate(2015, date.JULY, 14, 9, 29),
           links: [
@@ -1204,7 +1204,7 @@ export const all = {
               comment: 'The Mozilla Developer Network docs, contains good examples.',
               tags: [tag.MDN, tag.DOCS]
             }
-          ]
+          ],
         },
         [STRING_REPEAT]: {
           name: '`string.repeat(count)`',
@@ -1220,6 +1220,11 @@ export const all = {
             {
               url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-string.prototype.repeat',
               comment: 'The official specification, actually quite good to read for this function.',
+              tags: [tag.SPECIFICATION]
+            },
+            {
+              url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-tonumber',
+              comment: 'The part in the spec, which explains the conversion of a string to a number.',
               tags: [tag.SPECIFICATION]
             },
             {

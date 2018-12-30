@@ -8,8 +8,8 @@
 - [ ] Test if every test has the katafy part in it
 
 # Version 2
-- [x] Katafy the spread katas
-- [x] Improve spread katas and add more meta data
-- [ ] Katafy the iterator katas
-- [ ] Katafy the ... katas
+- [x] Katafy (and improve) the spread katas
+- [x] Katafy (and improve) the string-api katas
+- [ ] Katafy (and improve) the iterator katas
+- [ ] Katafy (and improve) the tagged template strings katas
 - [ ] Fix `PromiseRejectionHandledWarning` thrown when `npm test` runs
