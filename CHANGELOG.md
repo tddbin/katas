@@ -8,7 +8,8 @@
 
 # v2
 
-- [ ] Katafy the spread katas
+- [x] Katafy the spread katas
+- [x] Improve spread katas and add more meta data
 - [ ] Katafy the iterator katas
 - [ ] Katafy the ... katas
 - [ ] Fix `PromiseRejectionHandledWarning` thrown when `npm test` runs

@@ -47,6 +47,13 @@ describe('Spread syntax with arrays', () => {
     });
   });  
   describe('used as constructor parameter', () => {
-    // TODO
+    it('just like in a function call (is not possible using `apply`)', () => {
+      class X {
+        constructor(a, b, c) { return [a, b, c]; }
+      }
+      //// const args = [1];
+      const args = [1, 2, 3];
+      assert.deepEqual(new X(...args), [1, 2, 3]);
+    });
   });
 });
