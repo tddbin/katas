@@ -2,9 +2,9 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
-describe('`str.endsWith(searchString)` determines whether `str` ends with `searchString`.', function() {
+describe('`str.endsWith(searchString)` determines whether `str` ends with `searchString`', function() {
   const s = 'el fin';
-  describe('1st parameter, the string to search for', function() {
+  describe('the 1st parameter the string to search for', function() {
     it('can be a character', function() {
       //// const doesEndWith = s.doesItReallyEndWith('n');
       const doesEndWith = s.endsWith('n');
@@ -26,7 +26,7 @@ describe('`str.endsWith(searchString)` determines whether `str` ends with `searc
       assert.throws(() => {''.endsWith(aRegExp)}, TypeError);
     });
   });
-  describe('2nd parameter, the position where the search ends (as if the string was only that long)', function() {
+  describe('the 2nd parameter, the position where the search ends (as if the string was only that long)', function() {
     it('find "el" at a substring of the length 2', function() {
       //// const endPos = 0;
       const endPos = 2;
@@ -55,7 +55,7 @@ describe('`str.endsWith(searchString)` determines whether `str` ends with `searc
       });
     });
   });
-  describe('transfer the functionality to other objects', function() {
+  describe('this functionality can be used on non-strings too', function() {
     const endsWith = (string, searchFor, endPosition = undefined) =>
       String.prototype.endsWith.call(string, searchFor, endPosition);
     it('e.g. a boolean', function() {
