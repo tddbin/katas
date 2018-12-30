@@ -440,8 +440,19 @@ export const all = {
           description: 'Spread operator in use with arrays.',
           path: 'spread/with-arrays',
           level: SKILL_LEVEL.INTERMEDIATE,
-          requiresKnowledgeFrom: [],
-          publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 10, 8, 18))
+          requiresKnowledgeFrom: [
+            CONST,
+            DESTRUCTURING_ARRAY,
+            REST_OPERATOR_WITH_DESTRUCTURING,
+          ],
+          publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 10, 8, 18)),
+          links: [
+            {
+              url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax',
+              comment: 'Syntax docs on MDN.',
+              tags: [tag.MDN, tag.DOCS]
+            },
+          ]
         },
         [SPREAD_WITH_STRINGS]: {
           name: 'with strings',
