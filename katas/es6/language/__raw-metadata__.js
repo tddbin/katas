@@ -437,19 +437,41 @@ export const all = {
       items: {
         [SPREAD_WITH_ARRAYS]: {
           name: 'with arrays',
-          description: 'Spread operator in use with arrays.',
+          description: 'Spread syntax in use with arrays.',
           path: 'spread/with-arrays',
           level: SKILL_LEVEL.INTERMEDIATE,
-          requiresKnowledgeFrom: [],
-          publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 10, 8, 18))
+          publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 10, 8, 18)),
+          requiresKnowledgeFrom: [
+            CONST,
+            DESTRUCTURING_ARRAY,
+            REST_OPERATOR_WITH_DESTRUCTURING,
+          ],
+          links: [
+            {
+              url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax',
+              comment: 'Syntax docs on MDN.',
+              tags: [tag.MDN, tag.DOCS]
+            },
+          ],
         },
         [SPREAD_WITH_STRINGS]: {
           name: 'with strings',
-          description: 'Apply spread operator on strings.',
+          description: 'Spread syntax in use with strings.',
           path: 'spread/with-strings',
           level: SKILL_LEVEL.INTERMEDIATE,
-          requiresKnowledgeFrom: [],
-          publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 13, 7, 55))
+          publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 13, 7, 55)),
+          requiresKnowledgeFrom: [
+            CONST,
+            DESTRUCTURING_ARRAY,
+            REST_OPERATOR_WITH_DESTRUCTURING,
+          ],
+          links: [
+            {
+              url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax',
+              comment: 'Syntax docs on MDN.',
+              tags: [tag.MDN, tag.DOCS]
+            },
+          ],
         }
       }
     },
