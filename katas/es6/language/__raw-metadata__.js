@@ -146,7 +146,7 @@ export const all = {
           publishDateUTC: new Date(Date.UTC(2015, date.MARCH, 17, 7, 55)),
           links: [
             {
-              url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings#Tagged_template_strings',
+              url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Tagged_templates',
               comment: 'Description of tagged template strings.',
               tags: [tag.MDN, tag.DOCS]
             }
