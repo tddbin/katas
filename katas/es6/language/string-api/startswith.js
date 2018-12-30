@@ -3,9 +3,7 @@
 // Follow the hints of the failure messages!
 
 describe('`str.startsWith(searchString)` determines whether `str` begins with `searchString`.', function() {
-
   const s = 'the string s';
-
   describe('1st parameter, the string to search for', function() {
     it('works with just a character', function() {
       const actual = s.starts_with('t');
@@ -24,7 +22,6 @@ describe('`str.startsWith(searchString)` determines whether `str` begins with `s
       assert.throws(() => {''.startsWith(aRegExp)}, TypeError);
     });
   });
-
   describe('2nd parameter, the position where to start searching from', function() {
     it('find "str" at position 4', function() {
       const position = 3;
@@ -43,11 +40,8 @@ describe('`str.startsWith(searchString)` determines whether `str` begins with `s
       assert.equal(s.startsWith(' ', s.length + 1), expected);
     });
   });
-  
   describe('transfer the functionality to other objects', function() {
-    
     const startsWith = (...args) => String.prototype.startsWith.call(...args);
-    
     it('e.g. a boolean', function() {
       let aBool;
       assert.equal(startsWith(!aBool, 'false'), true);
@@ -61,5 +55,4 @@ describe('`str.startsWith(searchString)` determines whether `str` begins with `s
       assert.equal(startsWith(1994, '99', position), true);
     });
   });
-  
 });
