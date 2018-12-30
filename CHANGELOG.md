@@ -8,5 +8,7 @@
 
 # v2
 
-- [ ] Katafy all ES6 katas
+- [ ] Katafy the spread katas
+- [ ] Katafy the iterator katas
+- [ ] Katafy the ... katas
 - [ ] Fix `PromiseRejectionHandledWarning` thrown when `npm test` runs
