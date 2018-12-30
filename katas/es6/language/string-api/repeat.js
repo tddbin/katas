@@ -3,7 +3,6 @@
 // Follow the hints of the failure messages!
 
 describe('`str.repeat(x)` appends `x` copies of `str` to each other and returns it', function() {
-
   describe('pass the count to `str.repeat(count)`', function() {
     it('for `1` the string stays the same', function() {
       const what = '???'.repeat();
@@ -23,7 +22,6 @@ describe('`str.repeat(x)` appends `x` copies of `str` to each other and returns 
       assert.equal(repeated, 'threethreethree');
     });
   });
-
   describe('throws an error for', function() {
     it('a count of <0', function() {
       const belowZero = 1;
@@ -34,7 +32,6 @@ describe('`str.repeat(x)` appends `x` copies of `str` to each other and returns 
       assert.throws(() => { ''.repeat(infinity); }, RangeError);
     });
   });
-  
   describe('accepts everything that can be coerced to a string', function() {
     it('e.g. a boolean', function() {
       let aBool = true;
@@ -45,13 +42,10 @@ describe('`str.repeat(x)` appends `x` copies of `str` to each other and returns 
       assert.equal(String.prototype.repeat.call(aNumber, 2), '11');
     });
   });
-
   describe('for my own (string) class', function() {
     it('calls `toString()` to make it a string', function() {
       class MyString { toString() { return 'my string'; } }
-      
       const expectedString = '';
-      
       assert.equal(String(new MyString()).repeat(1), expectedString);
     });
     it('`toString()` is only called once', function() {
@@ -61,11 +55,8 @@ describe('`str.repeat(x)` appends `x` copies of `str` to each other and returns 
           return counter++;
         }
       }
-      
       let repeated = new X().repeat(2);
-      
       assert.equal(repeated, '11');
     });
   });
-  
 });
