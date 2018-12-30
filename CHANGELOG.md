@@ -10,7 +10,6 @@
 # Version 2
 - [x] Katafy (and improve) the spread katas
 - [x] Katafy (and improve) the string-api katas
-- [ ] Katafy the iterator katas
-- [ ] Katafy the tagged template strings katas
-- [ ] Katafy the ... katas
+- [ ] Katafy (and improve) the iterator katas
+- [ ] Katafy (and improve) the tagged template strings katas
 - [ ] Fix `PromiseRejectionHandledWarning` thrown when `npm test` runs
