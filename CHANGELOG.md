@@ -8,9 +8,8 @@
 - [ ] Test if every test has the katafy part in it
 
 # Version 2
-- [x] Katafy the spread katas
-- [x] Improve spread katas and add more meta data
-- [ ] Katafy the string-api katas
+- [x] Katafy (and improve) the spread katas
+- [x] Katafy (and improve) the string-api katas
 - [ ] Katafy the iterator katas
 - [ ] Katafy the tagged template strings katas
 - [ ] Katafy the ... katas
