@@ -12,5 +12,6 @@
 - [x] Improve spread katas and add more meta data
 - [ ] Katafy the string-api katas
 - [ ] Katafy the iterator katas
+- [ ] Katafy the tagged template strings katas
 - [ ] Katafy the ... katas
 - [ ] Fix `PromiseRejectionHandledWarning` thrown when `npm test` runs
