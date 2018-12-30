@@ -19,7 +19,10 @@
     "test:katas:language:es5": "npm run _test es5",
     "test:katas:language:es6": "npm run _test es6",
     "test:katas:language:es7": "npm run _test es7",
-    "test:katas:language:es8": "npm run _test es8"
+    "test:katas:language:es8": "npm run _test es8",
+    "releasable": "node -r esm ./scripts/check-todo-list.js",
+    "preversion": "npm run releasable && npm test && npm run build",
+    "release": "npm version major"
   },
   "repository": {
     "type": "git",
