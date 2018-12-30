@@ -1,3 +1,4 @@
+# Todos, Ideas, etc.
 - [ ] Deploy `<kataname>.spec.js` files too (the passing tests).
 - [ ] Add release script which also handles the changelog.
 - [ ] Verify that all katafied tests fail (the katafication does really create failing tests).
@@ -6,8 +7,7 @@
 - [ ] Test if katafication results in invalid JS code (as happened for multiline kata)
 - [ ] Test if every test has the katafy part in it
 
-# v2
-
+# Version 2
 - [x] Katafy the spread katas
 - [x] Improve spread katas and add more meta data
 - [ ] Katafy the iterator katas
