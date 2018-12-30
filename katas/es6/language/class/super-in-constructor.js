@@ -41,14 +41,14 @@ describe('Inside a class`s constructor `super()` can be used', () => {
     assert.equal(new B().inc(), 1);
   });
   it('use `super.constructor` to find out if there is a parent constructor', () => {
-    class A {constructor() {"parent"}}
-    class B extends A {
+    class ParentClassA {constructor() {"parent"}}
+    class B extends ParentClassA {
       constructor() {
         super();
         //// this.isTop = '' + super.konstructer;
         this.isTop = '' + super.constructor;
       }
     }
-    assert.equal(new B().isTop, 'class A {constructor() {"parent"}}');
+    assert(new B().isTop.includes('ParentClassA'), new B().isTop);
   });
 });
