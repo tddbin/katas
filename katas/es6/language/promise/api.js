@@ -3,12 +3,10 @@
 // Follow the hints of the failure messages!
 
 describe('`Promise` API overview', function() {
-
   it('`new Promise()` requires a function as param', () => {
     const param = null;
     assert.doesNotThrow(() => { new Promise(param); });
   });
-
   describe('resolving a promise', () => {
     // reminder: the test passes when a fulfilled promise is returned
     it('via constructor parameter `new Promise((resolve) => { resolve(); })`', () => {
@@ -19,7 +17,6 @@ describe('`Promise` API overview', function() {
       return Promise.reject('all fine');
     });
   });
-
   describe('a rejected promise', () => {
     it('using the constructor parameter', (done) => {
       const promise = new Promise((reject) => { reject(); });
@@ -34,10 +31,8 @@ describe('`Promise` API overview', function() {
         .catch(() => done());
     });
   });
-
   const resolvingPromise = Promise.resolve();
   const rejectingPromise = Promise.reject();
-
   describe('`Promise.all()`', () => {
     it('`Promise.all([p1, p2])` resolves when all promises resolve', () =>
       Promise.all([resolvingPromise, rejectingPromise, resolvingPromise])
@@ -48,7 +43,6 @@ describe('`Promise` API overview', function() {
         .catch(() => done())
     });
   });
-
   describe('`Promise.race()`', () => {
     it('`Promise.race([p1, p2])` resolves when one of the promises resolves', () =>
       Promise.race([rejectingPromise])
@@ -62,5 +56,4 @@ describe('`Promise` API overview', function() {
       Promise.race([rejectingPromise, resolvingPromise])
     );
   });
-
 });
