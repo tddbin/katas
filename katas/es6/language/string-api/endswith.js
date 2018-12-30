@@ -3,9 +3,7 @@
 // Follow the hints of the failure messages!
 
 describe('`str.endsWith(searchString)` determines whether `str` ends with `searchString`.', function() {
-
   const s = 'el fin';
-
   describe('1st parameter, the string to search for', function() {
     it('works with just a character', function() {
       const doesEndWith = s.doesItReallyEndWith('n');
@@ -24,7 +22,6 @@ describe('`str.endsWith(searchString)` determines whether `str` ends with `searc
       assert.throws(() => {''.endsWith(aRegExp)}, TypeError);
     });
   });
-
   describe('2nd parameter, searches within this string as if this string were only this long', function() {
     it('find "el" at a substring of the length 2', function() {
       const endPos = 0;
@@ -49,11 +46,8 @@ describe('`str.endsWith(searchString)` determines whether `str` ends with `searc
       });
     });
   });
-  
   describe('transfer the functionality to other objects', function() {
-    
     const endsWith = (...args) => String.prototype.endsWith.call(...args);
-    
     it('e.g. a boolean', function() {
       let aBool = false;
       assert.equal(endsWith(!aBool, 'lse'), true);
@@ -67,5 +61,4 @@ describe('`str.endsWith(searchString)` determines whether `str` ends with `searc
       assert.equal(endsWith(1994, '99', position), true);
     });
   });
-  
 });
