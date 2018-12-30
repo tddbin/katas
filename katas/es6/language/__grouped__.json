@@ -63,7 +63,7 @@
           "publishDateUTC": "2015-03-17T07:55:00.000Z",
           "links": [
             {
-              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings#Tagged_template_strings",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Tagged_templates",
               "comment": "Description of tagged template strings.",
               "tags": [
                 "mdn",
