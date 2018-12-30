@@ -10,6 +10,11 @@ describe('Spread syntax with arrays', () => {
       const arr = [0, ...middle, 4];
       assert.deepEqual(arr, [0, 1, 2, 3, 4]);
     });
+    it('an empty array expanded is no item', function() {
+      //// const arr = [0, [], 1];
+      const arr = [0, ...[], 1];
+      assert.deepEqual(arr, [0, 1]);
+    });
   });
   describe('is (in a way) the opposite to the rest syntax', function() {
     it('both use `...` to either expand all items and collect them', function() {
