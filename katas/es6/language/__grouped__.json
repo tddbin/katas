@@ -422,21 +422,49 @@
       "items": [
         {
           "name": "with arrays",
-          "description": "Spread operator in use with arrays.",
+          "description": "Spread syntax in use with arrays.",
           "path": "spread/with-arrays",
           "level": "INTERMEDIATE",
-          "requiresKnowledgeFrom": [],
           "publishDateUTC": "2015-04-10T08:18:00.000Z",
+          "requiresKnowledgeFrom": [
+            8,
+            10,
+            19
+          ],
+          "links": [
+            {
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax",
+              "comment": "Syntax docs on MDN.",
+              "tags": [
+                "mdn",
+                "docs"
+              ]
+            }
+          ],
           "groupName": "Spread operator",
           "id": "20"
         },
         {
           "name": "with strings",
-          "description": "Apply spread operator on strings.",
+          "description": "Spread syntax in use with strings.",
           "path": "spread/with-strings",
           "level": "INTERMEDIATE",
-          "requiresKnowledgeFrom": [],
           "publishDateUTC": "2015-04-13T07:55:00.000Z",
+          "requiresKnowledgeFrom": [
+            8,
+            10,
+            19
+          ],
+          "links": [
+            {
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax",
+              "comment": "Syntax docs on MDN.",
+              "tags": [
+                "mdn",
+                "docs"
+              ]
+            }
+          ],
           "groupName": "Spread operator",
           "id": "21"
         }
