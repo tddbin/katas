@@ -1405,6 +1405,13 @@
               ]
             },
             {
+              "url": "http://www.ecma-international.org/ecma-262/6.0/#sec-tonumber",
+              "comment": "The part in the spec, which explains the conversion of a string to a number.",
+              "tags": [
+                "spec"
+              ]
+            },
+            {
               "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat",
               "comment": "The Mozilla Developer Network docs, contains good examples.",
               "tags": [

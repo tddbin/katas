@@ -2,20 +2,18 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
-describe('`str.endsWith(searchString)` determines whether `str` ends with `searchString`.', function() {
-
+describe('`str.endsWith(searchString)` determines whether `str` ends with `searchString`', function() {
   const s = 'el fin';
-
-  describe('1st parameter, the string to search for', function() {
-    it('works with just a character', function() {
+  describe('the 1st parameter the string to search for', function() {
+    it('can be a character', function() {
       const doesEndWith = s.doesItReallyEndWith('n');
       assert.equal(doesEndWith, true);
     });
-    it('works with a string', function() {
+    it('can be a string', function() {
       const expected = false;
       assert.equal(s.endsWith('fin'), expected);
     });
-    it('works with unicode characters', function() {
+    it('can contain unicode characters', function() {
       const nuclear = 'NO ☢ Oh NO!';
       assert.equal(nuclear.endsWith('☢'), true);
     });
@@ -24,8 +22,7 @@ describe('`str.endsWith(searchString)` determines whether `str` ends with `searc
       assert.throws(() => {''.endsWith(aRegExp)}, TypeError);
     });
   });
-
-  describe('2nd parameter, searches within this string as if this string were only this long', function() {
+  describe('the 2nd parameter, the position where the search ends (as if the string was only that long)', function() {
     it('find "el" at a substring of the length 2', function() {
       const endPos = 0;
       assert.equal(s.endsWith('el', endPos), true);
@@ -34,7 +31,7 @@ describe('`str.endsWith(searchString)` determines whether `str` ends with `searc
       const _undefined_ = 'i would like to be undefined';
       assert.equal(s.endsWith('fin', _undefined_), true);
     });
-    it('the parameter gets coerced to an int', function() {
+    it('the parameter gets coerced to an integer (e.g. "5" becomes 5)', function() {
       const position = 'five';
       assert.equal(s.endsWith('fi', position), true);
     });
@@ -49,23 +46,18 @@ describe('`str.endsWith(searchString)` determines whether `str` ends with `searc
       });
     });
   });
-  
-  describe('transfer the functionality to other objects', function() {
-    
-    const endsWith = (...args) => String.prototype.endsWith.call(...args);
-    
+  describe('this functionality can be used on non-strings too', function() {
     it('e.g. a boolean', function() {
-      let aBool = false;
-      assert.equal(endsWith(!aBool, 'lse'), true);
+      let aBool = true;
+      assert.equal(String.prototype.endsWith.call(aBool, 'lse'), true);
     });
     it('e.g. a number', function() {
       let aNumber = 0;
-      assert.equal(endsWith(aNumber + 1900, 84), true);
+      assert.equal(String.prototype.endsWith.call(aNumber + 1900, 84), true);
     });
     it('also using the position works', function() {
       const position = '??';
-      assert.equal(endsWith(1994, '99', position), true);
+      assert.equal(String.prototype.endsWith.call(1994, '99', position), true);
     });
   });
-  
 });
