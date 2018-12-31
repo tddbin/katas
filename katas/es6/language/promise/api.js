@@ -37,10 +37,10 @@ describe('`Promise` API overview', function() {
     });
   });
   describe('`Promise.all()`', () => {
-    it('`Promise.all([p1, p2])` resolves when all promises resolve', () =>
-      //// Promise.all([Promise.resolve(), Promise.reject(), Promise.resolve()])
-      Promise.all([Promise.resolve(), Promise.resolve()])
-    );
+    it('`Promise.all([p1, p2])` resolves when all promises resolve', () => {
+      //// return Promise.all([Promise.resolve(), Promise.reject(), Promise.resolve()])
+      return Promise.all([Promise.resolve(), Promise.resolve()])
+    });
     it('`Promise.all([p1, p2])` rejects when a promise is rejected', (done) => {
       //// Promise.all([Promise.resolve()])
       Promise.all([Promise.resolve(), Promise.reject()])
@@ -49,19 +49,19 @@ describe('`Promise` API overview', function() {
     });
   });
   describe('`Promise.race()`', () => {
-    it('`Promise.race([p1, p2])` resolves when one of the promises resolves', () =>
-      //// Promise.race([Promise.reject()])
-      Promise.race([Promise.resolve(), Promise.reject()])
-    );
+    it('`Promise.race([p1, p2])` resolves when one of the promises resolves', () => {
+      //// return Promise.race([Promise.reject()])
+      return Promise.race([Promise.resolve(), Promise.reject()])
+    });
     it('`Promise.race([p1, p2])` rejects when one of the promises rejects', (done) => {
       //// Promise.race([Promise.resolve()])
       Promise.race([Promise.reject(), Promise.resolve()])
         .then(() => done(new Error('The promise is expected to be rejected.')))
         .catch(() => done())
     });
-    it('`Promise.race([p1, p2])` order matters (and timing)', () =>
-      //// Promise.race([Promise.reject(), Promise.resolve()])
-      Promise.race([Promise.resolve(), Promise.reject()])
-    );
+    it('`Promise.race([p1, p2])` order matters (and timing)', () => {
+      //// return Promise.race([Promise.reject(), Promise.resolve()])
+      return Promise.race([Promise.resolve(), Promise.reject()])
+    });
   });
 });
