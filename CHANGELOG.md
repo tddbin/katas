@@ -12,6 +12,6 @@
 - [ ] Katafy (and improve) the iterator katas
 - [x] Katafy (and improve) the tagged template strings katas
 - [x] Katafy the unicode in strings katas
-- [ ] Fix `PromiseRejectionHandledWarning` thrown when `npm test` runs
+- [x] Fix `PromiseRejectionHandledWarning` thrown when `npm test` runs
 - [x] Add release script which also handles the changelog.
 - [x] Clean up coding style according to ADR#1.
