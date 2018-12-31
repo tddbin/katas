@@ -36,34 +36,34 @@ describe('`Promise` API overview', function() {
         .catch(() => done());
     });
   });
-  const resolvingPromise = Promise.resolve();
-  const rejectingPromise = Promise.reject();
+  const resolvedPromise = Promise.resolve();
+  const rejectedPromise = Promise.reject();
   describe('`Promise.all()`', () => {
     it('`Promise.all([p1, p2])` resolves when all promises resolve', () =>
-      //// Promise.all([resolvingPromise, rejectingPromise, resolvingPromise])
-      Promise.all([resolvingPromise, resolvingPromise])
+      //// Promise.all([resolvedPromise, rejectedPromise, resolvedPromise])
+      Promise.all([resolvedPromise, resolvedPromise])
     );
     it('`Promise.all([p1, p2])` rejects when a promise is rejected', (done) => {
-      //// Promise.all([resolvingPromise])
-      Promise.all([resolvingPromise, rejectingPromise ])
+      //// Promise.all([resolvedPromise])
+      Promise.all([resolvedPromise, rejectedPromise ])
         .then(() => done(new Error('The promise is expected to be rejected.')))
         .catch(() => done())
     });
   });
   describe('`Promise.race()`', () => {
     it('`Promise.race([p1, p2])` resolves when one of the promises resolves', () =>
-      //// Promise.race([rejectingPromise])
-      Promise.race([resolvingPromise, rejectingPromise])
+      //// Promise.race([rejectedPromise])
+      Promise.race([resolvedPromise, rejectedPromise])
     );
     it('`Promise.race([p1, p2])` rejects when one of the promises rejects', (done) => {
-      //// Promise.race([resolvingPromise])
-      Promise.race([rejectingPromise, resolvingPromise])
+      //// Promise.race([resolvedPromise])
+      Promise.race([rejectedPromise, resolvedPromise])
         .then(() => done(new Error('The promise is expected to be rejected.')))
         .catch(() => done())
     });
     it('`Promise.race([p1, p2])` order matters (and timing)', () =>
-      //// Promise.race([rejectingPromise, resolvingPromise])
-      Promise.race([resolvingPromise, rejectingPromise])
+      //// Promise.race([rejectedPromise, resolvedPromise])
+      Promise.race([resolvedPromise, rejectedPromise])
     );
   });
 });
