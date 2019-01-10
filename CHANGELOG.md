@@ -15,3 +15,4 @@
 - [x] Fix `PromiseRejectionHandledWarning` thrown when `npm test` runs
 - [x] Add release script which also handles the changelog.
 - [x] Clean up coding style according to ADR#1.
+- [x] Fix: Improve one of the promise/api katas

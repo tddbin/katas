@@ -49,8 +49,8 @@ describe('`Promise` API overview', function() {
     });
   });
   describe('`Promise.race()`', () => {
-    it('`Promise.race([p1, p2])` resolves when one of the promises resolves', () => {
-      //// return Promise.race([Promise.reject()])
+    it('`Promise.race([p1, p2])` resolves/reject when one of the promises resolves/rejects', () => {
+      //// return Promise.race([Promise.reject(), Promise.reject()])
       return Promise.race([Promise.resolve(), Promise.reject()])
     });
     it('`Promise.race([p1, p2])` rejects when one of the promises rejects', (done) => {
