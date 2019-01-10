@@ -16,3 +16,4 @@
 - [x] Add release script which also handles the changelog.
 - [x] Clean up coding style according to ADR#1.
 - [x] Fix: Improve one of the promise/api katas
+- [ ] Use the package for the CHANGELOG checking (it is https://github.com/wolframkriesing/to-do-list-checker)
