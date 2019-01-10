@@ -39,7 +39,7 @@ describe('A promise can be created in multiple ways', function() {
     });
   });
   describe('extending a `Promise`', function() {
-    it('using `class X extends Promise{}` is possible', function() {
+    it('using `class X extends Promise{}` is possible', function(done) {
       //// class MyPromise {}
       class MyPromise extends Promise { }
       const promise = new MyPromise(resolve => resolve());
