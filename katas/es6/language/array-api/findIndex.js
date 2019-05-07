@@ -24,10 +24,10 @@ describe('`Array.prototype.findIndex` makes finding items in arrays easier', () 
     //// function theSecondThree(index, arr) {
     function theSecondThree(item, index, arr) {
       const preceedingItems = arr.slice(0, index);
-      return containsThree(preceedingItems);
+      return item === three && containsThree(preceedingItems);
     }
-    const foundAt = [1, 1, 2, 3, 3, 3].findIndex(theSecondThree);
-    assert.equal(foundAt, 4);
+    const foundAt = [1, 1, 2, 3, 4, 3].findIndex(theSecondThree);
+    assert.equal(foundAt, 5);
   });
   it('combined with destructuring complex compares become short', function() {
     const bob = {name: 'Bob'};
