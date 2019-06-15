@@ -42,7 +42,7 @@ describe('`Number.isNaN()` determines if a value is `NaN`', function(){
         assert.equal(Number.isNaN(infinity), false);
       });
       it('or the biggest Number (9007199254740991 (2^53−1))', () => {
-        const max = NUMBER.MAX_SAFE_INTEGER;
+        const max = N_u_m_b_e_r.MAX_SAFE_INTEGER;
         assert.equal(Number.isNaN(max), false);
       });
       it('or a decimal number', () => {
@@ -57,7 +57,7 @@ describe('`Number.isNaN()` determines if a value is `NaN`', function(){
       assert.equal(Number.isNaN(notANumber), true);
     });
     it('zero divided by zero', () => {
-      const zeroDividedByZero = 1 / 2;
+      const zeroDividedByZero = 0 / 1;
       assert.equal(Number.isNaN(zeroDividedByZero), true);
     });
   });
