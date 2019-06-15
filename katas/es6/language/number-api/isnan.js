@@ -40,7 +40,7 @@ describe('`Number.isNaN()` determines if a value is `NaN`', function(){
     });
     describe('for Numbers', () => {
       it('like 0', () => {
-        assert.equal(Number.isNaN(NaN), true);
+        assert.equal(Number.isNaN(0), false);
       });
     });
   });
