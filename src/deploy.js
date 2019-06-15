@@ -5,6 +5,7 @@ import {DIST_DIR, KATAS_DIR} from './config';
 import {all as rawMetadataEs1} from '../katas/es1/language/__raw-metadata__';
 import {all as rawMetadataEs6} from '../katas/es6/language/__raw-metadata__';
 import {all as rawMetadataEs8} from '../katas/es8/language/__raw-metadata__';
+import {all as rawMetadataHamjest} from '../katas/libraries/hamjest/__raw-metadata__';
 
 import {writeToFileAsJson} from './_external-deps/filesystem';
 import MetaData from './metadata.js';
@@ -14,6 +15,7 @@ import GroupedMetaData from './grouped-metadata';
 const destinationDirEs1 = path.join(DIST_DIR, 'katas/es1/language');
 const destinationDirEs6 = path.join(DIST_DIR, 'katas/es6/language');
 const destinationDirEs8 = path.join(DIST_DIR, 'katas/es8/language');
+const destinationDirHamjest = path.join(DIST_DIR, 'katas/libraries/hamjest');
 
 const buildMetadata = () => {
   new MetaData(writeToFileAsJson)
@@ -39,6 +41,14 @@ const buildMetadata = () => {
   new MetaData(writeToFileAsJson)
     .convertWith(rawMetadataEs8, GroupedMetaData)
     .writeToFile(path.join(destinationDirEs8, '__grouped__.json'));
+
+  new MetaData(writeToFileAsJson)
+    .convertWith(rawMetadataHamjest, FlatMetaData)
+    .writeToFile(path.join(destinationDirHamjest, '__all__.json'));
+
+  new MetaData(writeToFileAsJson)
+    .convertWith(rawMetadataHamjest, GroupedMetaData)
+    .writeToFile(path.join(destinationDirHamjest, '__grouped__.json'));
 };
 
 import {convertTestsToKatas} from './convert-tests-to-katas';
