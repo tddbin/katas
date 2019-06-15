@@ -1,0 +1,43 @@
+{
+  "groups": {
+    "hamjest": {
+      "items": [
+        {
+          "name": "`assertThat()`",
+          "description": "The core function needed for most assertions.",
+          "path": "assertThat",
+          "level": "BEGINNER",
+          "requiresKnowledgeFrom": [],
+          "publishDateUTC": "2017-08-21T13:00:00.000Z",
+          "links": [],
+          "groupName": "hamjest",
+          "id": "1"
+        },
+        {
+          "name": "`equalTo()`",
+          "description": "The most common matcher `equalTo()`.",
+          "path": "matchers/equalTo",
+          "level": "BEGINNER",
+          "requiresKnowledgeFrom": [],
+          "publishDateUTC": "2017-08-21T15:54:00.000Z",
+          "links": [],
+          "groupName": "hamjest",
+          "id": "2"
+        },
+        {
+          "name": "`strictlyEqualTo()`",
+          "description": "The strict version of `equalTo()`, just like the `===`.",
+          "path": "matchers/strictlyEqualTo",
+          "level": "BEGINNER",
+          "requiresKnowledgeFrom": [],
+          "publishDateUTC": "2017-08-21T16:30:00.000Z",
+          "links": [],
+          "groupName": "hamjest",
+          "id": "3"
+        }
+      ],
+      "slug": "hamjest",
+      "name": "hamjest"
+    }
+  }
+}

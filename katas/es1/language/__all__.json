@@ -1,0 +1,78 @@
+{
+  "items": [
+    {
+      "name": "`[].sort()` basics",
+      "description": "The `sort()` function sorts an array as if each element was a string.",
+      "path": "array/sort-basics",
+      "level": "BEGINNER",
+      "requiresKnowledgeFrom": [],
+      "links": [
+        {
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort",
+          "comment": "Very detailed description of how sort() works.",
+          "tags": [
+            "mdn",
+            "docs"
+          ]
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/List_of_Unicode_characters#Basic_Latin",
+          "comment": "All the basic latin characters (close to ASCII).",
+          "tags": [
+            "wikipedia",
+            "docs"
+          ]
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Emoji#Blocks",
+          "comment": "Some emoji icons and their unicode data.",
+          "tags": [
+            "wikipedia",
+            "docs"
+          ]
+        },
+        {
+          "url": "https://twitter.com/wolframkriesing/status/657161540525826048",
+          "comment": "Announcement of this kata on twitter.",
+          "tags": [
+            "announcement"
+          ]
+        }
+      ],
+      "groupName": "Array",
+      "groupNameSlug": "Array",
+      "publishDateRfc822": "Thu, 22 Oct 2015 09:11:00 GMT",
+      "id": 1
+    },
+    {
+      "name": "`[].sort()` can take a compare function",
+      "description": "Passing a callback to the `sort()` function, allows for any custom sorting.",
+      "path": "array/sort-with-function",
+      "level": "INTERMEDIATE",
+      "requiresKnowledgeFrom": [
+        1
+      ],
+      "links": [
+        {
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort",
+          "comment": "Very detailed description of how `sort()` works.",
+          "tags": [
+            "mdn",
+            "docs"
+          ]
+        },
+        {
+          "url": "https://twitter.com/wolframkriesing/status/657488332298043392",
+          "comment": "Announcement of this kata on twitter.",
+          "tags": [
+            "announcement"
+          ]
+        }
+      ],
+      "groupName": "Array",
+      "groupNameSlug": "Array",
+      "publishDateRfc822": "Fri, 23 Oct 2015 09:26:00 GMT",
+      "id": 2
+    }
+  ]
+}
