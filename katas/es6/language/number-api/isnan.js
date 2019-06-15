@@ -26,12 +26,12 @@ describe('`Number.isNaN()` determines if a value is `NaN`', function(){
         assert.equal(Number.isNaN(anObject), false);
       });
       describe('different to the global `isNaN` function (specified way before ES6)', () => {
-        it('e.g. an object gets converted to a Number before the check, and returns true therefore', () => {
+        it('an object gets converted to a Number before the check, and returns true therefore', () => {
           //// const fn = Number.isNaN;
           const fn = isNaN;
           assert.equal(fn({}), true);
         });
-        it('also a string gets converted to a Number first, and returns true therefore (even though its not `NaN`)', () => {
+        it('a string gets converted to a Number first, and returns true therefore (even though its not `NaN`)', () => {
           //// const fn = Number.isNaN;
           const fn = isNaN;
           assert.equal(fn('just a string'), true);
