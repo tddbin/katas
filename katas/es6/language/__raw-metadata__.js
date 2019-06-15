@@ -147,7 +147,7 @@ export const all = {
           publishDateUTC: new Date(Date.UTC(2015, date.MARCH, 17, 7, 55)),
           links: [
             {
-              url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings#Tagged_template_strings',
+              url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Tagged_templates',
               comment: 'Description of tagged template strings.',
               tags: [tag.MDN, tag.DOCS]
             }
@@ -438,19 +438,41 @@ export const all = {
       items: {
         [SPREAD_WITH_ARRAYS]: {
           name: 'with arrays',
-          description: 'Spread operator in use with arrays.',
+          description: 'Spread syntax in use with arrays.',
           path: 'spread/with-arrays',
           level: SKILL_LEVEL.INTERMEDIATE,
-          requiresKnowledgeFrom: [],
-          publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 10, 8, 18))
+          publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 10, 8, 18)),
+          requiresKnowledgeFrom: [
+            CONST,
+            DESTRUCTURING_ARRAY,
+            REST_OPERATOR_WITH_DESTRUCTURING,
+          ],
+          links: [
+            {
+              url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax',
+              comment: 'Syntax docs on MDN.',
+              tags: [tag.MDN, tag.DOCS]
+            },
+          ],
         },
         [SPREAD_WITH_STRINGS]: {
           name: 'with strings',
-          description: 'Apply spread operator on strings.',
+          description: 'Spread syntax in use with strings.',
           path: 'spread/with-strings',
           level: SKILL_LEVEL.INTERMEDIATE,
-          requiresKnowledgeFrom: [],
-          publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 13, 7, 55))
+          publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 13, 7, 55)),
+          requiresKnowledgeFrom: [
+            CONST,
+            DESTRUCTURING_ARRAY,
+            REST_OPERATOR_WITH_DESTRUCTURING,
+          ],
+          links: [
+            {
+              url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax',
+              comment: 'Syntax docs on MDN.',
+              tags: [tag.MDN, tag.DOCS]
+            },
+          ],
         }
       }
     },
@@ -1204,7 +1226,7 @@ export const all = {
             LET,
             CONST,
             ARROW_FUNCTION_BASICS,
-            DEFAULT_PARAMETERS_BASICS
+            DEFAULT_PARAMETERS_BASICS,
           ],
           publishDateUTC: toUtcDate(2015, date.JULY, 14, 9, 29),
           links: [
@@ -1218,7 +1240,7 @@ export const all = {
               comment: 'The Mozilla Developer Network docs, contains good examples.',
               tags: [tag.MDN, tag.DOCS]
             }
-          ]
+          ],
         },
         [STRING_REPEAT]: {
           name: '`string.repeat(count)`',
@@ -1234,6 +1256,11 @@ export const all = {
             {
               url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-string.prototype.repeat',
               comment: 'The official specification, actually quite good to read for this function.',
+              tags: [tag.SPECIFICATION]
+            },
+            {
+              url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-tonumber',
+              comment: 'The part in the spec, which explains the conversion of a string to a number.',
               tags: [tag.SPECIFICATION]
             },
             {
