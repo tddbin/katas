@@ -40,7 +40,24 @@ describe('`Number.isNaN()` determines if a value is `NaN`', function(){
     });
     describe('for Numbers', () => {
       it('like 0', () => {
-        assert.equal(Number.isNaN(0), false);
+        //// const zero = NaN;
+        const zero = 0;
+        assert.equal(Number.isNaN(zero), false);
+      });
+      it('or Infinity (+∞)', () => {
+        //// const infinity = Nummmmber.POSITIVE_INFINITY;
+        const infinity = Number.POSITIVE_INFINITY;
+        assert.equal(Number.isNaN(infinity), false);
+      });
+      it('or the biggest Number (9007199254740991 (2^53−1))', () => {
+        //// const max = NUMBER.MAX_SAFE_INTEGER;
+        const max = Number.MAX_SAFE_INTEGER;
+        assert.equal(Number.isNaN(max), false);
+      });
+      it('or a decimal number', () => {
+        //// const pie = 3.14;
+        const pi = 3.14;
+        assert.equal(Number.isNaN(pi), false);
       });
     });
   });
