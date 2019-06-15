@@ -68,7 +68,7 @@ describe('`Number.isNaN()` determines if a value is `NaN`', function(){
       assert.equal(Number.isNaN(notANumber), true);
     });
     it('zero divided by zero', () => {
-      //// const zeroDividedByZero = 1 / 2;
+      //// const zeroDividedByZero = 0 / 1;
       const zeroDividedByZero = 0 / 0;
       assert.equal(Number.isNaN(zeroDividedByZero), true);
     });
