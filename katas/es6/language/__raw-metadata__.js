@@ -89,6 +89,7 @@ const PROMISE_CREATION = 76;
 const PROMISE_CHAINING_THEN = 77;
 const PROMISE_API = 78;
 const PROMISE_CATCH = 79;
+const NUMBER_ISNAN = 80;
 
 const PROMISE_CHAINING_AND_ERRORS = '??';
 
@@ -1013,8 +1014,43 @@ export const all = {
           path: 'number-api/isinteger',
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [],
-          publishDateUTC: new Date(Date.UTC(2015, date.JUNE, 25, 7, 55))
-        }
+          publishDateUTC: new Date(Date.UTC(2015, date.JUNE, 25, 7, 55)),
+        },
+        [NUMBER_ISNAN]: {
+          name: '`Number.isNaN()`',
+          description: '`Number.isNaN()` determines if a value is `NaN`.',
+          path: 'number-api/isnan',
+          level: SKILL_LEVEL.BEGINNER,
+          requiresKnowledgeFrom: [],
+          publishDateUTC: new Date(Date.UTC(2019, date.JUNE, 15, 15, 42)),
+          links: [
+            {
+              url: 'https://www.ecma-international.org/ecma-262/6.0/#sec-number.isnan',
+              comment: 'Description of `Number.isNaN` in the specification.',
+              tags: [tag.SPECIFICATION, tag.DOCS]
+            },
+            {
+              url: 'https://www.ecma-international.org/ecma-262/6.0/#sec-number.max_safe_integer',
+              comment: 'Description of `Number.MAX_SAFE_INTEGER` in the spec.',
+              tags: [tag.SPECIFICATION, tag.DOCS]
+            },
+            {
+              url: 'https://www.ecma-international.org/ecma-262/6.0/#sec-number.positive_infinity',
+              comment: 'Description of `Number.POSITIVE_INFINITY` in the spec.',
+              tags: [tag.SPECIFICATION, tag.DOCS]
+            },
+            {
+              url: 'https://www.ecma-international.org/ecma-262/6.0/#sec-isnan-number',
+              comment: 'The (old) global `isNaN` function, that behaves a bit different.',
+              tags: [tag.SPECIFICATION, tag.DOCS]
+            },
+            {
+              url: 'https://www.ecma-international.org/ecma-262/6.0/#sec-math.pi',
+              comment: 'The place where `Math.PI` is specified.',
+              tags: [tag.SPECIFICATION, tag.DOCS]
+            },
+          ],
+        },
       }
     },
 
