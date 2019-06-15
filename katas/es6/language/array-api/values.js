@@ -3,45 +3,34 @@
 // Follow the hints of the failure messages!
 
 describe('`Array.prototype.values` returns an iterator for all values in the array', () => {
-
   it('`values()` returns an iterator', function() {
     //// const arr = ['k', 'e', 'y'];
     const arr = [];
     const iterator = arr.values();
-    
     assert.deepEqual(iterator.next(), {value: void 0, done: true});
   });
-  
   it('use `iterator.next()` to drop first value', function() {
     const arr = ['keys', 'values', 'entries'];
     const iterator = arr.values();
     //// iterator.___();
     iterator.next();
-
     assert.deepEqual([...iterator], ['values', 'entries']);
   });
-  
   it('empty array contains no values', function() {
     //// const arr = [...[...[...[...'1']]]];
     const arr = [...[...[...[]]]];
     const values = [...arr.values()];
-    
     assert.equal(values.length, 0);
   });
-  
   it('a sparse array without real values has values though', function() {
     //// const arr = [, 0];
     const arr = [,,];
     const keys = [...arr.values()];
-    
     assert.deepEqual(keys, [void 0, void 0]);
   });
-  
   it('also includes holes in sparse arrays', function() {
     //// const arr = ['a',];
     const arr = ['a',,'c'];
-
     assert.deepEqual([...arr.values()], ['a', void 0, 'c']);
   });
-  
 });
