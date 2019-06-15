@@ -55,8 +55,8 @@ describe('`Number.isNaN()` determines if a value is `NaN`', function(){
         assert.equal(Number.isNaN(max), false);
       });
       it('or a decimal number', () => {
-        //// const pie = 3.14;
-        const pi = 3.14;
+        //// const pie = 3.1415926535897932;
+        const pi = 3.1415926535897932;
         assert.equal(Number.isNaN(pi), false);
       });
     });
