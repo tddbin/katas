@@ -1138,6 +1138,58 @@
           "publishDateUTC": "2015-06-25T07:55:00.000Z",
           "groupName": "Number",
           "id": "55"
+        },
+        {
+          "name": "`Number.isNaN()`",
+          "description": "`Number.isNaN()` determines if a value is `NaN`.",
+          "path": "number-api/isnan",
+          "level": "BEGINNER",
+          "requiresKnowledgeFrom": [],
+          "publishDateUTC": "2019-06-15T15:42:00.000Z",
+          "links": [
+            {
+              "url": "https://www.ecma-international.org/ecma-262/6.0/#sec-number.isnan",
+              "comment": "Description of `Number.isNaN` in the specification.",
+              "tags": [
+                "spec",
+                "docs"
+              ]
+            },
+            {
+              "url": "https://www.ecma-international.org/ecma-262/6.0/#sec-number.max_safe_integer",
+              "comment": "Description of `Number.MAX_SAFE_INTEGER` in the spec.",
+              "tags": [
+                "spec",
+                "docs"
+              ]
+            },
+            {
+              "url": "https://www.ecma-international.org/ecma-262/6.0/#sec-number.positive_infinity",
+              "comment": "Description of `Number.POSITIVE_INFINITY` in the spec.",
+              "tags": [
+                "spec",
+                "docs"
+              ]
+            },
+            {
+              "url": "https://www.ecma-international.org/ecma-262/6.0/#sec-isnan-number",
+              "comment": "The (old) global `isNaN` function, that behaves a bit different.",
+              "tags": [
+                "spec",
+                "docs"
+              ]
+            },
+            {
+              "url": "https://www.ecma-international.org/ecma-262/6.0/#sec-math.pi",
+              "comment": "The place where `Math.PI` is specified.",
+              "tags": [
+                "spec",
+                "docs"
+              ]
+            }
+          ],
+          "groupName": "Number",
+          "id": "80"
         }
       ],
       "slug": "Number",
