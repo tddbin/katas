@@ -11,21 +11,27 @@ describe('`Number.isNaN()` determines if a value is `NaN`', function(){
   describe('returns false', () => {
     describe('for any not-Number type', () => {
       it('like null', () => {
-        assert.equal(Number.isNaN(null), false);
+        //// const justNull = NaN;
+        const justNull = null;
+        assert.equal(Number.isNaN(justNull), false);
       });
       it('like a string', () => {
-        assert.equal(Number.isNaN('a string'), false);
+        //// const aString = NaN;
+        const aString = 'NaN';
+        assert.equal(Number.isNaN(aString), false);
       });
       it('like an object', () => {
-        assert.equal(Number.isNaN({}), false);
+        //// const anObject = NaN;
+        const anObject = {};
+        assert.equal(Number.isNaN(anObject), false);
       });
       describe('different to the global `isNaN` function (specified way before ES6)', () => {
-        it('e.g. an object gets converted to type Number before the check, and returns true therefore', () => {
+        it('e.g. an object gets converted to a Number before the check, and returns true therefore', () => {
           //// const fn = Number.isNaN;
           const fn = isNaN;
           assert.equal(fn({}), true);
         });
-        it('also a string gets converted to type Number first, and returns true therefore (even though its not `NaN`)', () => {
+        it('also a string gets converted to a Number first, and returns true therefore (even though its not `NaN`)', () => {
           //// const fn = Number.isNaN;
           const fn = isNaN;
           assert.equal(fn('just a string'), true);
