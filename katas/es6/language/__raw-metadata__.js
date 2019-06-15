@@ -1004,7 +1004,27 @@ export const all = {
           links: [
             {
               url: 'https://www.ecma-international.org/ecma-262/6.0/#sec-number.isnan',
-              comment: 'Description of Number.isNaN in the specification.',
+              comment: 'Description of `Number.isNaN` in the specification.',
+              tags: [tag.SPECIFICATION, tag.DOCS]
+            },
+            {
+              url: 'https://www.ecma-international.org/ecma-262/6.0/#sec-number.max_safe_integer',
+              comment: 'Description of `Number.MAX_SAFE_INTEGER` in the spec.',
+              tags: [tag.SPECIFICATION, tag.DOCS]
+            },
+            {
+              url: 'https://www.ecma-international.org/ecma-262/6.0/#sec-number.positive_infinity',
+              comment: 'Description of `Number.POSITIVE_INFINITY` in the spec.',
+              tags: [tag.SPECIFICATION, tag.DOCS]
+            },
+            {
+              url: 'https://www.ecma-international.org/ecma-262/6.0/#sec-isnan-number',
+              comment: 'The (old) global `isNaN` function, that behaves a bit different.',
+              tags: [tag.SPECIFICATION, tag.DOCS]
+            },
+            {
+              url: 'https://www.ecma-international.org/ecma-262/6.0/#sec-math.pi',
+              comment: 'The place where `Math.PI` is specified.',
               tags: [tag.SPECIFICATION, tag.DOCS]
             },
           ],
