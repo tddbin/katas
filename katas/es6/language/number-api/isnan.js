@@ -50,7 +50,7 @@ describe('`Number.isNaN()` determines if a value is `NaN`', function(){
         assert.equal(Number.isNaN(infinity), false);
       });
       it('or the biggest Number (9007199254740991 (2^53−1))', () => {
-        //// const max = NUMBER.MAX_SAFE_INTEGER;
+        //// const max = N_u_m_b_e_r.MAX_SAFE_INTEGER;
         const max = Number.MAX_SAFE_INTEGER;
         assert.equal(Number.isNaN(max), false);
       });
