@@ -1,6 +1,6 @@
 {
   "groups": {
-    "hamjest": {
+    "core": {
       "items": [
         {
           "name": "`assertThat()`",
@@ -10,9 +10,15 @@
           "requiresKnowledgeFrom": [],
           "publishDateUTC": "2017-08-21T13:00:00.000Z",
           "links": [],
-          "groupName": "hamjest",
+          "groupName": "core",
           "id": "1"
-        },
+        }
+      ],
+      "slug": "core",
+      "name": "core"
+    },
+    "matchers": {
+      "items": [
         {
           "name": "`equalTo()`",
           "description": "The most common matcher `equalTo()`.",
@@ -21,7 +27,7 @@
           "requiresKnowledgeFrom": [],
           "publishDateUTC": "2017-08-21T15:54:00.000Z",
           "links": [],
-          "groupName": "hamjest",
+          "groupName": "matchers",
           "id": "2"
         },
         {
@@ -32,7 +38,7 @@
           "requiresKnowledgeFrom": [],
           "publishDateUTC": "2017-08-21T16:30:00.000Z",
           "links": [],
-          "groupName": "hamjest",
+          "groupName": "matchers",
           "id": "3"
         },
         {
@@ -43,7 +49,7 @@
           "requiresKnowledgeFrom": [],
           "publishDateUTC": "2017-08-22T16:30:00.000Z",
           "links": [],
-          "groupName": "hamjest",
+          "groupName": "matchers",
           "id": "4"
         },
         {
@@ -54,23 +60,12 @@
           "requiresKnowledgeFrom": [],
           "publishDateUTC": "2017-08-22T16:30:00.000Z",
           "links": [],
-          "groupName": "hamjest",
+          "groupName": "matchers",
           "id": "5"
-        },
-        {
-          "name": "`equalTo()`",
-          "description": "The matcher `equalTo()`, matches equality.",
-          "path": "matchers/equalTo",
-          "level": "BEGINNER",
-          "requiresKnowledgeFrom": [],
-          "publishDateUTC": "2017-08-22T16:30:00.000Z",
-          "links": [],
-          "groupName": "hamjest",
-          "id": "6"
         }
       ],
-      "slug": "hamjest",
-      "name": "hamjest"
+      "slug": "matchers",
+      "name": "matchers"
     }
   }
 }

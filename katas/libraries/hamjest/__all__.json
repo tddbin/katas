@@ -7,8 +7,8 @@
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [],
       "links": [],
-      "groupName": "hamjest",
-      "groupNameSlug": "hamjest",
+      "groupName": "core",
+      "groupNameSlug": "core",
       "publishDateRfc822": "Mon, 21 Aug 2017 13:00:00 GMT",
       "id": 1
     },
@@ -19,8 +19,8 @@
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [],
       "links": [],
-      "groupName": "hamjest",
-      "groupNameSlug": "hamjest",
+      "groupName": "matchers",
+      "groupNameSlug": "matchers",
       "publishDateRfc822": "Mon, 21 Aug 2017 15:54:00 GMT",
       "id": 2
     },
@@ -31,8 +31,8 @@
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [],
       "links": [],
-      "groupName": "hamjest",
-      "groupNameSlug": "hamjest",
+      "groupName": "matchers",
+      "groupNameSlug": "matchers",
       "publishDateRfc822": "Mon, 21 Aug 2017 16:30:00 GMT",
       "id": 3
     },
@@ -43,8 +43,8 @@
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [],
       "links": [],
-      "groupName": "hamjest",
-      "groupNameSlug": "hamjest",
+      "groupName": "matchers",
+      "groupNameSlug": "matchers",
       "publishDateRfc822": "Tue, 22 Aug 2017 16:30:00 GMT",
       "id": 4
     },
@@ -55,22 +55,10 @@
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [],
       "links": [],
-      "groupName": "hamjest",
-      "groupNameSlug": "hamjest",
+      "groupName": "matchers",
+      "groupNameSlug": "matchers",
       "publishDateRfc822": "Tue, 22 Aug 2017 16:30:00 GMT",
       "id": 5
-    },
-    {
-      "name": "`equalTo()`",
-      "description": "The matcher `equalTo()`, matches equality.",
-      "path": "matchers/equalTo",
-      "level": "BEGINNER",
-      "requiresKnowledgeFrom": [],
-      "links": [],
-      "groupName": "hamjest",
-      "groupNameSlug": "hamjest",
-      "publishDateRfc822": "Tue, 22 Aug 2017 16:30:00 GMT",
-      "id": 6
     }
   ]
 }
