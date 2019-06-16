@@ -34,6 +34,39 @@
           "links": [],
           "groupName": "hamjest",
           "id": "3"
+        },
+        {
+          "name": "`anything()`",
+          "description": "The matcher `anything()`, matches any value and never fails.",
+          "path": "matchers/anything",
+          "level": "BEGINNER",
+          "requiresKnowledgeFrom": [],
+          "publishDateUTC": "2017-08-22T16:30:00.000Z",
+          "links": [],
+          "groupName": "hamjest",
+          "id": "4"
+        },
+        {
+          "name": "`defined()`",
+          "description": "The matcher `defined()`, matches everything but `undefined`.",
+          "path": "matchers/defined",
+          "level": "BEGINNER",
+          "requiresKnowledgeFrom": [],
+          "publishDateUTC": "2017-08-22T16:30:00.000Z",
+          "links": [],
+          "groupName": "hamjest",
+          "id": "5"
+        },
+        {
+          "name": "`equalTo()`",
+          "description": "The matcher `equalTo()`, matches equality.",
+          "path": "matchers/equalTo",
+          "level": "BEGINNER",
+          "requiresKnowledgeFrom": [],
+          "publishDateUTC": "2017-08-22T16:30:00.000Z",
+          "links": [],
+          "groupName": "hamjest",
+          "id": "6"
         }
       ],
       "slug": "hamjest",

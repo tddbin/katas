@@ -35,6 +35,42 @@
       "groupNameSlug": "hamjest",
       "publishDateRfc822": "Mon, 21 Aug 2017 16:30:00 GMT",
       "id": 3
+    },
+    {
+      "name": "`anything()`",
+      "description": "The matcher `anything()`, matches any value and never fails.",
+      "path": "matchers/anything",
+      "level": "BEGINNER",
+      "requiresKnowledgeFrom": [],
+      "links": [],
+      "groupName": "hamjest",
+      "groupNameSlug": "hamjest",
+      "publishDateRfc822": "Tue, 22 Aug 2017 16:30:00 GMT",
+      "id": 4
+    },
+    {
+      "name": "`defined()`",
+      "description": "The matcher `defined()`, matches everything but `undefined`.",
+      "path": "matchers/defined",
+      "level": "BEGINNER",
+      "requiresKnowledgeFrom": [],
+      "links": [],
+      "groupName": "hamjest",
+      "groupNameSlug": "hamjest",
+      "publishDateRfc822": "Tue, 22 Aug 2017 16:30:00 GMT",
+      "id": 5
+    },
+    {
+      "name": "`equalTo()`",
+      "description": "The matcher `equalTo()`, matches equality.",
+      "path": "matchers/equalTo",
+      "level": "BEGINNER",
+      "requiresKnowledgeFrom": [],
+      "links": [],
+      "groupName": "hamjest",
+      "groupNameSlug": "hamjest",
+      "publishDateRfc822": "Tue, 22 Aug 2017 16:30:00 GMT",
+      "id": 6
     }
   ]
 }
