@@ -18,3 +18,4 @@
 - [x] Fix: Improve one of the promise/api katas
 - [x] Use the package for the CHANGELOG checking (it is https://github.com/wolframkriesing/to-do-list-checker)
 - [x] Deploy the katas for ES1, ES8 and hamjest
+- [ ] Rename TDDBIN_ROOT_DOMAIN to TDDBIN_ROOT_URL and store the URL in there, not just the domain, since we moved to HTTPS
