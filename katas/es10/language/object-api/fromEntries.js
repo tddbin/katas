@@ -50,6 +50,25 @@ describe('`Object.fromEntries()` converts key-value pairs into an object', () =>
       assert.doesNotThrow(() => { Object.fromEntries([[], []]); });
       assert.deepEqual(Object.fromEntries([[1,2], [3,4]]), {1:2, 3:4});
     });
+    it('toString-ables can be keys', () => {
+      const s = new class { toString() { return 'key'; }  };
+      assert.deepEqual(Object.fromEntries([[s, 42]]), {key: 42});
+    });
+    it('keys 0 and 1 must be given', () => {
+      assert.deepEqual(Object.fromEntries([{1: null}]), {[undefined]: null});
+      assert.deepEqual(Object.fromEntries([{0: 0, 1: 1}]), {0: 1});
+      assert.deepEqual(Object.fromEntries([{10: 0, 20: 1}]), {[undefined]: undefined});
+      assert.deepEqual(Object.fromEntries([[0, 1]]), {0: 1});
+      assert.deepEqual(Object.fromEntries([Object('')]), {[undefined]: undefined});
+      assert.deepEqual(Object.fromEntries([Object('12')]), {1: '2'});
+      assert.throws(() => Object.fromEntries(['12']));
+
+      // when each item is an iterable, they are not iterated over!!!!
+      const map = new Map([['key', 'value']]);
+      assert.deepEqual(Object.fromEntries([map]), {[undefined]: undefined});
+      map[0] = 1;
+      assert.deepEqual(Object.fromEntries([map]), {1: undefined});
+    });
   });
 
   describe('use cases', () => {
@@ -61,12 +80,8 @@ describe('`Object.fromEntries()` converts key-value pairs into an object', () =>
       const peoplesAge = Object.fromEntries(people.map(({name, age}) => [name, age]));
       assert.deepEqual({Alex: 21, Anna:21}, peoplesAge);
     });
-    it('toString-ables can be keys', () => {
-      const s = new class { toString() { return 'key'; }  };
-      assert.deepEqual(Object.fromEntries([[s, 42]]), {key: 42});
-    });
   });
-  describe('relates to `Object.entries()`', () => {
+  describe('not symetric to `Object.entries()`', () => {
     it('is almost the reverse of Object.entries()', () => {
 
     });
