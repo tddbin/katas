@@ -68,6 +68,17 @@ describe('`Object.fromEntries()` converts key-value pairs into an object', () =>
       assert.deepEqual(Object.fromEntries([map]), {[undefined]: undefined});
       map[0] = 1;
       assert.deepEqual(Object.fromEntries([map]), {1: undefined});
+      assert.deepEqual(Object.fromEntries([['key', 'value']]), {key: 'value'});
+
+      // custom iterator
+      let cnt = 0;
+      const iterable = {
+        [Symbol.iterator]() {
+          return {next: () => ([{value: ['a', 42], done: false}, {done: true}][cnt++])};
+        }
+      };
+      assert.deepEqual(Object.fromEntries(iterable), {a: 42});
+      assert.deepEqual(Object.fromEntries([['a', 42]]), {a: 42});
     });
   });
 
