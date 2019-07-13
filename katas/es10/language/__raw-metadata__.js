@@ -28,6 +28,16 @@ export const all = {
               comment: 'The specification describing `Object.fromEntries()`.',
               tags: [tag.SPECIFICATION]
             },
+            {
+              url: 'https://github.com/tc39/proposal-object-from-entries',
+              comment: 'The (now archived) proposal, before it went into the spec, interesting read if you wanna go deep.',
+              tags: [tag.DISCUSSION, tag.DOCS]
+            },
+            {
+              url: 'https://github.com/tc39/proposal-object-from-entries/blob/master/DETAILS.md',
+              comment: 'Very interesting details about some decisions on this method.',
+              tags: [tag.DISCUSSION, tag.DOCS]
+            },
           ],
         },
       },
