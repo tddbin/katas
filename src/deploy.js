@@ -5,6 +5,7 @@ import {DIST_DIR, KATAS_DIR} from './config';
 import {all as rawMetadataEs1} from '../katas/es1/language/__raw-metadata__';
 import {all as rawMetadataEs6} from '../katas/es6/language/__raw-metadata__';
 import {all as rawMetadataEs8} from '../katas/es8/language/__raw-metadata__';
+import {all as rawMetadataEs10} from '../katas/es10/language/__raw-metadata__';
 import {all as rawMetadataHamjest} from '../katas/libraries/hamjest/__raw-metadata__';
 
 import {writeToFileAsJson} from './_external-deps/filesystem';
@@ -40,6 +41,14 @@ const buildMetadata = () => {
 
   new MetaData(writeToFileAsJson)
     .convertWith(rawMetadataEs8, GroupedMetaData)
+    .writeToFile(path.join(destinationDirEs8, '__grouped__.json'));
+
+  new MetaData(writeToFileAsJson)
+    .convertWith(rawMetadataEs10, FlatMetaData)
+    .writeToFile(path.join(destinationDirEs8, '__all__.json'));
+
+  new MetaData(writeToFileAsJson)
+    .convertWith(rawMetadataEs10, GroupedMetaData)
     .writeToFile(path.join(destinationDirEs8, '__grouped__.json'));
 
   new MetaData(writeToFileAsJson)
