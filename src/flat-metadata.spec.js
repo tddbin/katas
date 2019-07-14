@@ -8,7 +8,7 @@ describe('build the meta data from the all.js file structure', function() {
   const groupName = 'Template strings';
   const firstGroup = all.groups[groupName];
   const firstGroupItems = firstGroup.items;
-  const converted = () => FlatMetaData.to(all);
+  const converted = (metadata = all) => FlatMetaData.to(metadata);
 
   it('makes `items` key an array', () => 
     assert.ok(Array.isArray(converted().items)));
