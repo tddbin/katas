@@ -3,45 +3,29 @@
     {
       "name": "basics",
       "description": "",
-      "path": "object-api/fromEntries",
-      "level": "BEGINNER",
+      "path": "async-functions/basics",
+      "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [],
       "links": [
         {
-          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries",
-          "comment": "Description of Object.fromEntries() on MDN.",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function",
+          "comment": "A short description of async function.",
           "tags": [
             "mdn",
             "docs"
           ]
         },
         {
-          "url": "https://www.ecma-international.org/ecma-262/10.0/#sec-object.fromentries",
-          "comment": "The specification describing `Object.fromEntries()`.",
+          "url": "https://tc39.github.io/ecma262/#sec-async-function-definitions",
+          "comment": "The actual chapter about `async`, you need to dive in from here.",
           "tags": [
             "spec"
           ]
-        },
-        {
-          "url": "https://github.com/tc39/proposal-object-from-entries",
-          "comment": "The (now archived) proposal, before it went into the spec, interesting read if you wanna go deep.",
-          "tags": [
-            "discussion",
-            "docs"
-          ]
-        },
-        {
-          "url": "https://github.com/tc39/proposal-object-from-entries/blob/master/DETAILS.md",
-          "comment": "Very interesting details about some decisions on this method.",
-          "tags": [
-            "discussion",
-            "docs"
-          ]
         }
       ],
-      "groupName": "Object API",
-      "groupNameSlug": "Object_API",
-      "publishDateRfc822": "Tue, 25 Jun 2019 19:55:00 GMT",
+      "groupName": "Async Function",
+      "groupNameSlug": "Async_Function",
+      "publishDateRfc822": "Fri, 09 Jun 2017 21:30:00 GMT",
       "id": 1
     }
   ]
