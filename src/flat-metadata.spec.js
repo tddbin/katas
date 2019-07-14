@@ -30,7 +30,10 @@ describe('build the meta data from the all.js file structure', function() {
 
   describe('the publish date', function() {
     it('can also be missing, which means it is not yet published, doh :)', () => {
-
+      const metadataWithoutPublishDate = {...all};
+      const arrayOfKata = metadataWithoutPublishDate.groups['Array API'].items[30];
+      delete arrayOfKata.publishDateUTC;
+      assert.doesNotThrow(() => converted(metadataWithoutPublishDate));
     });
     it('the `publishDate`, if set, is as UTC string, with GMT+0', function() {
       var expected = new Date(Date.UTC(2015, 2, 13, 7, 55));
