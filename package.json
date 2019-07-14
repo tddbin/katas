@@ -35,7 +35,9 @@
   },
   "homepage": "https://github.com/tddbin/katas",
   "devDependencies": {
+    "@babel/cli": "^7.5.0",
     "@babel/core": "^7.5.4",
+    "@babel/node": "^7.5.0",
     "@babel/plugin-proposal-object-rest-spread": "^7.5.4",
     "@babel/preset-env": "^7.5.4",
     "@babel/preset-flow": "^7.0.0",
