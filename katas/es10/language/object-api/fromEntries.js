@@ -63,11 +63,11 @@ describe('`Object.fromEntries()` converts key-value pairs into an object', () =>
       assert.deepEqual(Object.fromEntries([Object('12')]), {1: '2'});
       assert.throws(() => Object.fromEntries(['12']));
 
-      // when each item is an iterable, they are not iterated over!!!!
+      // key+value are accessible via prop 0+1, they are not iterated over!!!!
       const map = new Map([['key', 'value']]);
       assert.deepEqual(Object.fromEntries([map]), {[undefined]: undefined});
-      map[0] = 1;
-      assert.deepEqual(Object.fromEntries([map]), {1: undefined});
+      map[0] = 23;
+      assert.deepEqual(Object.fromEntries([map]), {23: undefined});
       assert.deepEqual(Object.fromEntries([['key', 'value']]), {key: 'value'});
 
       // custom iterator
