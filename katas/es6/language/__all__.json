@@ -444,8 +444,8 @@
       "path": "array-api/from",
       "level": "TBD",
       "requiresKnowledgeFrom": [],
-      "groupName": "Array",
-      "groupNameSlug": "Array",
+      "groupName": "Array API",
+      "groupNameSlug": "Array_API",
       "publishDateRfc822": "Thu, 23 Apr 2015 08:32:00 GMT",
       "id": 29
     },
@@ -455,8 +455,8 @@
       "path": "array-api/of",
       "level": "TBD",
       "requiresKnowledgeFrom": [],
-      "groupName": "Array",
-      "groupNameSlug": "Array",
+      "groupName": "Array API",
+      "groupNameSlug": "Array_API",
       "publishDateRfc822": "Mon, 27 Apr 2015 08:09:00 GMT",
       "id": 30
     },
@@ -483,8 +483,8 @@
           ]
         }
       ],
-      "groupName": "Array",
-      "groupNameSlug": "Array",
+      "groupName": "Array API",
+      "groupNameSlug": "Array_API",
       "publishDateRfc822": "Tue, 28 Apr 2015 07:55:00 GMT",
       "id": 31
     },
@@ -494,8 +494,8 @@
       "path": "array-api/find",
       "level": "TBD",
       "requiresKnowledgeFrom": [],
-      "groupName": "Array",
-      "groupNameSlug": "Array",
+      "groupName": "Array API",
+      "groupNameSlug": "Array_API",
       "publishDateRfc822": "Wed, 29 Apr 2015 07:55:00 GMT",
       "id": 32
     },
@@ -505,8 +505,8 @@
       "path": "array-api/findIndex",
       "level": "TBD",
       "requiresKnowledgeFrom": [],
-      "groupName": "Array",
-      "groupNameSlug": "Array",
+      "groupName": "Array API",
+      "groupNameSlug": "Array_API",
       "publishDateRfc822": "Mon, 04 May 2015 08:01:00 GMT",
       "id": 33
     },
@@ -609,8 +609,8 @@
         29,
         39
       ],
-      "groupName": "Array",
-      "groupNameSlug": "Array",
+      "groupName": "Array API",
+      "groupNameSlug": "Array_API",
       "publishDateRfc822": "Mon, 18 May 2015 08:06:00 GMT",
       "id": 41
     },
@@ -625,8 +625,8 @@
         29,
         39
       ],
-      "groupName": "Array",
-      "groupNameSlug": "Array",
+      "groupName": "Array API",
+      "groupNameSlug": "Array_API",
       "publishDateRfc822": "Tue, 19 May 2015 07:55:00 GMT",
       "id": 42
     },
@@ -640,8 +640,8 @@
         10,
         39
       ],
-      "groupName": "Array",
-      "groupNameSlug": "Array",
+      "groupName": "Array API",
+      "groupNameSlug": "Array_API",
       "publishDateRfc822": "Wed, 20 May 2015 07:55:00 GMT",
       "id": 43
     },
@@ -820,8 +820,8 @@
         7,
         44
       ],
-      "groupName": "Object",
-      "groupNameSlug": "Object",
+      "groupName": "Object API",
+      "groupNameSlug": "Object_API",
       "publishDateRfc822": "Wed, 24 Jun 2015 07:55:00 GMT",
       "id": 54
     },
@@ -831,8 +831,8 @@
       "path": "number-api/isinteger",
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [],
-      "groupName": "Number",
-      "groupNameSlug": "Number",
+      "groupName": "Number API",
+      "groupNameSlug": "Number_API",
       "publishDateRfc822": "Thu, 25 Jun 2015 07:55:00 GMT",
       "id": 55
     },
@@ -1011,8 +1011,8 @@
           ]
         }
       ],
-      "groupName": "String",
-      "groupNameSlug": "String",
+      "groupName": "String API",
+      "groupNameSlug": "String_API",
       "publishDateRfc822": "Tue, 14 Jul 2015 09:29:00 GMT",
       "id": 63
     },
@@ -1337,8 +1337,8 @@
           ]
         }
       ],
-      "groupName": "String",
-      "groupNameSlug": "String",
+      "groupName": "String API",
+      "groupNameSlug": "String_API",
       "publishDateRfc822": "Fri, 07 Aug 2015 07:55:00 GMT",
       "id": 71
     },
@@ -1371,8 +1371,8 @@
           ]
         }
       ],
-      "groupName": "String",
-      "groupNameSlug": "String",
+      "groupName": "String API",
+      "groupNameSlug": "String_API",
       "publishDateRfc822": "Wed, 26 Aug 2015 09:42:00 GMT",
       "id": 72
     },
@@ -1442,8 +1442,8 @@
           ]
         }
       ],
-      "groupName": "String",
-      "groupNameSlug": "String",
+      "groupName": "String API",
+      "groupNameSlug": "String_API",
       "publishDateRfc822": "Fri, 02 Oct 2015 07:55:00 GMT",
       "id": 74
     },
@@ -1693,8 +1693,8 @@
           ]
         }
       ],
-      "groupName": "Number",
-      "groupNameSlug": "Number",
+      "groupName": "Number API",
+      "groupNameSlug": "Number_API",
       "publishDateRfc822": "Sat, 15 Jun 2019 15:42:00 GMT",
       "id": 80
     }
