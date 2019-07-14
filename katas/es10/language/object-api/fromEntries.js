@@ -10,11 +10,13 @@ describe('`Object.fromEntries()` converts key-value pairs into an object', () =>
   });
   describe('the key-value pairs might be given as', () => {
     it('a simple array, with (at least) two values', () => {
+      //// const keyValuePair = ['zero', 'one', 'two'];
       const keyValuePair = ['one', 'two'];
       assert.deepEqual(Object.fromEntries([keyValuePair]), {one: 'two'});
     });
     it('a simple array, with multiple key-value pairs', () => {
       const keyValuePair1 = ['one', 'two'];
+      //// const keyValuePair2 = ['3', 'Four'];
       const keyValuePair2 = ['three', 'four'];
       assert.deepEqual(Object.fromEntries([keyValuePair1, keyValuePair2]), {one: 'two', three: 'four'});
     });
@@ -25,10 +27,12 @@ describe('`Object.fromEntries()` converts key-value pairs into an object', () =>
       assert.deepEqual(Object.fromEntries([keyValuePair1, keyValuePair2]), {one: 'four'});
     });
     it('an object, with properties `0` and `1`', () => {
+      //// const keyValuePair = {key: 'key', 1: 'value'};
       const keyValuePair = {0: 'key', 1: 'value'};
       assert.deepEqual(Object.fromEntries([keyValuePair]), {key: 'value'});
     });
     it('an object, without a property `0` results in an object using `undefined` as key', () => {
+      //// const keyValuePair = {0: 'key', 1: 'value'};
       const keyValuePair = {key: 'key', 1: 'value'};
       assert.deepEqual(Object.fromEntries([keyValuePair]), {[undefined]: 'value'});
     });
@@ -61,7 +65,9 @@ describe('`Object.fromEntries()` converts key-value pairs into an object', () =>
   describe('the 1st parameter', () => {
     describe('must be iterable', () => {
       it('like an array', () => {
-        assert.doesNotThrow(() => Object.fromEntries([]));
+        //// const anArray = ' ';
+        const anArray = [];
+        assert.doesNotThrow(() => Object.fromEntries(anArray));
       });
       it('a self-made iterable', () => {
         let cnt = -1;
@@ -70,18 +76,22 @@ describe('`Object.fromEntries()` converts key-value pairs into an object', () =>
             return {
               next: () => {
                 cnt++;
-                if (cnt === 0) return {value: ['a', 42], done: false};
+                //// if (cnt === 1) return {value: ['key', 42], done: false};
+                if (cnt === 0) return {value: ['key', 42], done: false};
+                //// if (cnt === 0) return {done: true};
                 if (cnt === 1) return {done: true};
               }
             }
           }
         };
-        assert.deepEqual(Object.fromEntries(iterable), {a: 42});
+        assert.deepEqual(Object.fromEntries(iterable), {key: 42});
       });
     });
     describe('each entry must have a property `0` and `1` for key+value', () => {
       it('like an object with these explicit properties', () => {
-        assert.deepEqual(Object.fromEntries([{0: 'key', 1: 'value'}]), {key: 'value'});
+        //// const obj = {'00': 'key', 11: 'value'};
+        const obj = {0: 'key', 1: 'value'};
+        assert.deepEqual(Object.fromEntries([obj]), {key: 'value'});
       });
       it('if any (or both) are missing, `undefined` is used', () => {
         //// const obj = {0: 'key', 10: 'no key', 20: 'no value'};
@@ -113,16 +123,24 @@ describe('`Object.fromEntries()` converts key-value pairs into an object', () =>
         assert.throws(fn, TypeError);
       });
       it('if `undefined` (which is not an iterable)', () => {
-        assert.throws(() => { Object.fromEntries(undefined); }, TypeError);
+        //// const fn = () => { Object.fromEntries(''); };
+        const fn = () => { Object.fromEntries(undefined); };
+        assert.throws(fn, TypeError);
       });
       it('if `null` (which is not an iterable)', () => {
-        assert.throws(() => { Object.fromEntries(undefined); }, TypeError);
+        //// const nullValue = '';
+        const nullValue = null;
+        assert.throws(() => { Object.fromEntries(nullValue); }, TypeError);
       });
       it('if boolean (which is not an iterable)', () => {
-        assert.throws(() => { Object.fromEntries(true); }, TypeError);
+        //// const aBool = [];
+        const aBool = true;
+        assert.throws(() => { Object.fromEntries(aBool); }, TypeError);
       });
       it('if a Symbol (which is not an iterable)', () => {
-        assert.throws(() => { Object.fromEntries(Symbol.for('some')); }, TypeError);
+        //// const fn = () => { Object.fromEntries(SyMbOl('some')); };
+        const fn = () => { Object.fromEntries(Symbol('some')); };
+        assert.throws(fn, TypeError);
       });
     });
   });
@@ -139,15 +157,19 @@ describe('`Object.fromEntries()` converts key-value pairs into an object', () =>
       assert.deepEqual(Object.fromEntries(emptyString), {});
     });
     it('a single-space string, throws', () => {
-      assert.throws(() => Object.fromEntries(' '), TypeError);
+      //// const singleSpace = '';
+      const singleSpace = ' ';
+      assert.throws(() => Object.fromEntries(singleSpace), TypeError);
     });
     describe('not symetric to `Object.entries()`', () => {
       it('allows Symbols as keys, while `Object.entries()` does not report them', () => {
         const sym = Symbol();
         const fromEntries = Object.fromEntries([[sym, 42]]);
+        //// const entries = [sym, 42];
+        const entries = [];
+
         assert.deepEqual(fromEntries, {[sym]: 42});
-        // while
-        assert.deepEqual(Object.entries(fromEntries), []);
+        assert.deepEqual(Object.entries(fromEntries), entries);
       });
     });
   });
