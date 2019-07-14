@@ -12,11 +12,12 @@ describe('`[].sort()` can take a compare function', function() {
       assert.equal(compareFunctionUsed, true);
     });
     it('is called with two values to be compared', function() {
-      let parameters;
-      //// const compare = () => {};
+      let parameters = [];
+      //// const compare = (...args) => {parameters = arguments;};
       const compare = (...args) => {parameters = args;};
       [2, 1].sort(compare);
-      assert.deepEqual(parameters, [2, 1]);
+      assert.ok(parameters.includes(1));
+      assert.ok(parameters.includes(2));
     });
     it('is called multiple times (depending how the sort algorithm is implemented)', function() {
       let callCount = 0;
@@ -42,31 +43,6 @@ describe('`[].sort()` can take a compare function', function() {
           //// const compare = () => { return '23'; };
           const compare = () => { return null; };
           assert.deepEqual(['1', 'a', 2].sort(compare), ['1', 'a', 2]);
-        });
-      });
-      describe('the first value is "smaller"', function() {
-        it('when -1 is returned', function() {
-          //// const compare = () => { return 1; };
-          const compare = () => { return -1; };
-          assert.deepEqual(['a', 'A'].sort(compare), ['a', 'A']);
-        });
-        it('for any negative number', function() {
-          //// const compare = () => { return 23; };
-          const compare = () => { return -23; };
-          assert.deepEqual([2, 1].sort(compare), [2, 1]);
-        });
-      });
-      describe('the first value is "larger"', function() {
-        it('when 1 is returned', function() {
-          //// const compare = () => { return -1; };
-          const compare = () => { return 1; };
-          assert.deepEqual([0.2, 1].sort(compare), [1, 0.2]);
-        });
-        it('when a positive number is returned', function() {
-          //// const expectedValues = [];
-          const expectedValues = [1, 0.2];
-          const compare = () => { return 42; };
-          assert.deepEqual([0.2, 1].sort(compare), expectedValues);
         });
       });
     });
