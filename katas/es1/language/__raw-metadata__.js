@@ -1,6 +1,5 @@
 import {SKILL_LEVEL} from '../../skill-levels';
 import * as tag from '../../tags';
-import {toUtcDate}  from '../../date';
 import * as date from '../../date';
 
 const ARRAY_SORT_BASICS = 1;
