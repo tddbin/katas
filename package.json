@@ -9,7 +9,7 @@
     "test": "npm run test:src && npm run test:katas:UNTIL-ALL-KATAS-ARE-KATAFIED",
     "test:katas:UNTIL-ALL-KATAS-ARE-KATAFIED": "npm run _test \"{es1,es10,es6/language/{array-api,arrow-functions,block-scoping,class,default-parameters,destructuring,generator,map,object-api,object-literal,promise,reflect,rest,set}}\"",
     "flow": "flow",
-    "test:src": "mocha --compilers js:babel-register src/{,*,**}/*.spec.js -R progress",
+    "test:src": "mocha --compilers js:@babel/register src/{,*,**}/*.spec.js -R progress",
     "_test": "func() { mocha -r esm katas/\"$1\"/{**,**/**}/*.js --require=katas/mocha-require.js -R progress; }; func",
     "test:katas": "npm run test:katas:libraries && npm run test:katas:language",
     "test:katas:libraries": "npm run _test libraries",
@@ -35,10 +35,11 @@
   },
   "homepage": "https://github.com/tddbin/katas",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.0",
-    "babel-preset-flow": "^6.23.0",
-    "babel-register": "^6.26.0",
+    "@babel/core": "^7.5.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.4",
+    "@babel/preset-env": "^7.5.4",
+    "@babel/preset-flow": "^7.0.0",
+    "@babel/register": "^7.4.4",
     "esm": "^3.0.82",
     "flow-bin": "^0.56.0",
     "flow-typed": "^2.1.5",
@@ -48,5 +49,6 @@
     "mocha": "^2.2.5",
     "recursive-readdir": "^2.2.1",
     "sinon": "^4.0.0"
-  }
+  },
+  "dependencies": {}
 }
