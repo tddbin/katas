@@ -16,6 +16,7 @@ import GroupedMetaData from './grouped-metadata';
 const destinationDirEs1 = path.join(DIST_DIR, 'katas/es1/language');
 const destinationDirEs6 = path.join(DIST_DIR, 'katas/es6/language');
 const destinationDirEs8 = path.join(DIST_DIR, 'katas/es8/language');
+const destinationDirEs10 = path.join(DIST_DIR, 'katas/es10/language');
 const destinationDirHamjest = path.join(DIST_DIR, 'katas/libraries/hamjest');
 
 const buildMetadata = () => {
@@ -45,11 +46,11 @@ const buildMetadata = () => {
 
   new MetaData(writeToFileAsJson)
     .convertWith(rawMetadataEs10, FlatMetaData)
-    .writeToFile(path.join(destinationDirEs8, '__all__.json'));
+    .writeToFile(path.join(destinationDirEs10, '__all__.json'));
 
   new MetaData(writeToFileAsJson)
     .convertWith(rawMetadataEs10, GroupedMetaData)
-    .writeToFile(path.join(destinationDirEs8, '__grouped__.json'));
+    .writeToFile(path.join(destinationDirEs10, '__grouped__.json'));
 
   new MetaData(writeToFileAsJson)
     .convertWith(rawMetadataHamjest, FlatMetaData)
