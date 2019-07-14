@@ -90,6 +90,7 @@ const PROMISE_CHAINING_THEN = 77;
 const PROMISE_API = 78;
 const PROMISE_CATCH = 79;
 const NUMBER_ISNAN = 80;
+const NUMBER_PARSEINT = 81;
 
 const PROMISE_CHAINING_AND_ERRORS = '??';
 
@@ -1048,6 +1049,26 @@ export const all = {
               url: 'https://www.ecma-international.org/ecma-262/6.0/#sec-math.pi',
               comment: 'The place where `Math.PI` is specified.',
               tags: [tag.SPECIFICATION, tag.DOCS]
+            },
+          ],
+        },
+        [NUMBER_PARSEINT]: {
+          name: '`Number.parseInt()`',
+          description: '`Number.parseInt()` parses a string and returns an integer.',
+          path: 'number-api/parseInt',
+          level: SKILL_LEVEL.BEGINNER,
+          requiresKnowledgeFrom: [],
+          // publishDateUTC: new Date(Date.UTC(2019, date.JUNE, 15, 15, 42)),
+          links: [
+            {
+              url: 'https://www.ecma-international.org/ecma-262/6.0/#sec-number.parseint',
+              comment: 'Description of `Number.parseInt()` in the specification.',
+              tags: [tag.SPECIFICATION, tag.DOCS]
+            },
+            {
+              url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/parseInt',
+              comment: 'The MDN docs for this function.',
+              tags: [tag.MDN, tag.DOCS]
             },
           ],
         },
