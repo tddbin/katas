@@ -11,8 +11,8 @@ export const all = {
     'Object API': {
       items: {
         [OBJECT_FROMENTRIES]: {
-          name: 'basics',
-          description: '',
+          name: '`Object.fromEntries()`',
+          description: '`Object.fromEntries()` converts key-value pairs into an object',
           path: 'object-api/fromEntries',
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [],
