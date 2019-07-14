@@ -536,7 +536,7 @@ export const all = {
         }
       }
     },
-    'Array': {
+    'Array API': {
       items: {
         [ARRAY_FROM]: {
           name: '`Array.from()`',
@@ -990,7 +990,7 @@ export const all = {
       }
     },
 
-    'Object': {
+    'Object API': {
       items: {
         [OBJECT_IS]: {
           name: '`Object.is()`',
@@ -1006,7 +1006,7 @@ export const all = {
       }
     },
 
-    'Number': {
+    'Number API': {
       items: {
         [NUMBER_ISINTEGER]: {
           name: '`Number.isInteger()`',
@@ -1215,7 +1215,7 @@ export const all = {
       }
     },
 
-    'String': {
+    'String API': {
       items: {
         [STRING_INCLUDES]: {
           name: '`string.includes()`',
