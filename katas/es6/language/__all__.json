@@ -1697,6 +1697,34 @@
       "groupNameSlug": "Number_API",
       "publishDateRfc822": "Sat, 15 Jun 2019 15:42:00 GMT",
       "id": 80
+    },
+    {
+      "name": "`Number.parseInt()`",
+      "description": "`Number.parseInt()` parses a string and returns an integer.",
+      "path": "number-api/parseInt",
+      "level": "BEGINNER",
+      "requiresKnowledgeFrom": [],
+      "links": [
+        {
+          "url": "https://www.ecma-international.org/ecma-262/6.0/#sec-number.parseint",
+          "comment": "Description of `Number.parseInt()` in the specification.",
+          "tags": [
+            "spec",
+            "docs"
+          ]
+        },
+        {
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/parseInt",
+          "comment": "The MDN docs for this function.",
+          "tags": [
+            "mdn",
+            "docs"
+          ]
+        }
+      ],
+      "groupName": "Number API",
+      "groupNameSlug": "Number_API",
+      "id": 81
     }
   ]
 }
