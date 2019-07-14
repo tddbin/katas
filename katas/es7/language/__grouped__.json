@@ -1,0 +1,62 @@
+{
+  "groups": {
+    "Array API": {
+      "items": [
+        {
+          "name": "`[].includes()`",
+          "description": "",
+          "path": "array-api/includes",
+          "level": "BEGINNER",
+          "requiresKnowledgeFrom": [],
+          "links": [
+            {
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes",
+              "comment": "Description of [].includes() on MDN.",
+              "tags": [
+                "mdn",
+                "docs"
+              ]
+            },
+            {
+              "url": "https://www.ecma-international.org/ecma-262/7.0/#sec-array.prototype.includes",
+              "comment": "The specification describing `Array.prototype.includes()`.",
+              "tags": [
+                "spec"
+              ]
+            }
+          ],
+          "groupName": "Array API",
+          "id": "1"
+        }
+      ],
+      "slug": "Array_API",
+      "name": "Array API"
+    },
+    "Object API": {
+      "items": [
+        {
+          "name": "`Object.entries()`",
+          "description": "",
+          "path": "object-api/entries",
+          "level": "BEGINNER",
+          "requiresKnowledgeFrom": [],
+          "links": [],
+          "groupName": "Object API",
+          "id": "2"
+        },
+        {
+          "name": "`Object.values()`",
+          "description": "",
+          "path": "object-api/values",
+          "level": "BEGINNER",
+          "requiresKnowledgeFrom": [],
+          "links": [],
+          "groupName": "Object API",
+          "id": "3"
+        }
+      ],
+      "slug": "Object_API",
+      "name": "Object API"
+    }
+  }
+}
