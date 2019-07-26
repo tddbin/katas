@@ -12,16 +12,16 @@ describe('Use the `raw` property of tagged template strings like so `s.raw`', fu
   });
   it('`raw` can access the backslash of a line-break', function() {
     function firstCharEntered(strings) {
-      //// var lineBreak = strings.raw;
-      var lineBreak = strings.raw[0][0];
+      //// const lineBreak = strings.raw;
+      const lineBreak = strings.raw[0][0];
       return lineBreak;
     }
     assert.equal(firstCharEntered`\n`, '\\');
   });
   describe('`String.raw` as a static function', function(){
     it('concats the raw strings', function() {
-      //// var expected = '\n';
-      var expected = '\\n';
+      //// const expected = '\n';
+      const expected = '\\n';
       assert.equal(String.raw`\n`, expected);
     });
     it('two raw-templates-string-backslashes equal two escaped backslashes', function() {
@@ -31,8 +31,8 @@ describe('Use the `raw` property of tagged template strings like so `s.raw`', fu
     });
     it('works on unicodes too', function() {
       //// var smilie = '\u{1F600}';
-      var smilie = '\\u{1F600}';
-      var actual = String.raw`\u{1F600}`;
+      const smilie = '\\u{1F600}';
+      const actual = String.raw`\u{1F600}`;
       assert.equal(actual, smilie);
     });
   });

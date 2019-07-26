@@ -7,8 +7,8 @@ describe('Tagged template strings, are an advanced form of template strings', fu
     function tagFunction(s) {
       return s.toString();
     }
-    //// var evaluated = tagFunc `template string`;
-    var evaluated = tagFunction `template string`;
+    //// const evaluated = tagFunc `template string`;
+    const evaluated = tagFunction `template string`;
     assert.equal(evaluated, 'template string');
   });
   describe('the tag function can access each part of the template', function() {
@@ -17,20 +17,20 @@ describe('Tagged template strings, are an advanced form of template strings', fu
         return strings;
       }
       it('the strings are an array', function() {
-        //// var result = 'template string';
-        var result = ['template string'];
+        //// const result = 'template string';
+        const result = ['template string'];
         assert.deepEqual(tagFunction`template string`, result);
       });
       it('expressions are NOT passed to it', function() {
-        //// var tagged = tagFunction`one${23}`;
-        var tagged = tagFunction`one${23}two`;
+        //// const tagged = tagFunction`one${23}`;
+        const tagged = tagFunction`one${23}two`;
         assert.deepEqual(tagged, ['one', 'two']);
       });
     });
     describe('the 2nd and following parameters contain the values of the processed substitution', function() {
-      var one = 1;
-      var two = 2;
-      var three = 3;
+      const one = 1;
+      const two = 2;
+      const three = 3;
       it('the 2nd parameter contains the first expression`s value', function() {
         //// function firstValueOnly(strings, first_value) {
         function firstValueOnly(strings, firstValue) {
