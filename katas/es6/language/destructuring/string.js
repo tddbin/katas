@@ -5,7 +5,7 @@
 describe('Destructuring also works on strings', () => {
   it('destructure every character, just as if the string was an array', () => {
     //// let a, b, c = 'abc';
-    let [a, b, c] = 'abc';
+    const [a, b, c] = 'abc';
     assert.deepEqual([a, b, c], ['a', 'b', 'c']);
   });
   it('missing characters are undefined', () => {

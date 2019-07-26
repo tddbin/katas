@@ -22,7 +22,7 @@ describe('a Promise represents an operation that hasn`t completed yet, but is ex
   });
   describe('simplest promises', function() {
     it('resolve a promise by calling the `resolve` function given as first parameter', function(done) {
-      let promise = new Promise((resolve) => {
+      const promise = new Promise((resolve) => {
         ////
         resolve();
       });
@@ -31,7 +31,7 @@ describe('a Promise represents an operation that hasn`t completed yet, but is ex
         .catch(() => done(new Error('The promise is expected to resolve.')));
     });
     it('the `resolve` function can return a value, that is consumed by the `promise.then()` callback', function(done) {
-      let promise = new Promise((resolve) => {
+      const promise = new Promise((resolve) => {
         //// resolve();
         resolve(42);
       });
@@ -40,8 +40,8 @@ describe('a Promise represents an operation that hasn`t completed yet, but is ex
         .catch(() => done(new Error('The promise is expected to resolve with 42!')));
     });
     it('rejecting a promise is done by calling the callback given as 2nd parameter', function(done) {
-      //// let promise = new Promise(() => {
-      let promise = new Promise((resolve, reject) => {
+      //// const promise = new Promise(() => {
+      const promise = new Promise((resolve, reject) => {
         reject();
       });
       promise
@@ -51,8 +51,8 @@ describe('a Promise represents an operation that hasn`t completed yet, but is ex
   });
   describe('an asynchronous promise', function() {
     it('can resolve later, also by calling the first callback', function(done) {
-        //// let promise = new Promise(() => {
-        let promise = new Promise((resolve) => {
+        //// const promise = new Promise(() => {
+        const promise = new Promise((resolve) => {
         setTimeout(() => resolve(), 100);
       });
       promise
@@ -60,8 +60,8 @@ describe('a Promise represents an operation that hasn`t completed yet, but is ex
         .catch(() => done(new Error('The promise is expected to resolve.')));
     });
     it('reject it at some later point in time, calling the 2nd callback', function(done) {
-      //// let promise = new Promise((reject) => {
-      let promise = new Promise((resolve, reject) => {
+      //// const promise = new Promise((reject) => {
+      const promise = new Promise((resolve, reject) => {
         setTimeout(() => reject(), 100);
       });
       promise
@@ -71,8 +71,8 @@ describe('a Promise represents an operation that hasn`t completed yet, but is ex
   });
   describe('test library (mocha here) support for promises', function() {
     it('just returning the promise makes the test library check that the promise resolves', function() {
-      //// let promise = new Promise((reject, resolve) => {
-      let promise = new Promise((resolve, reject) => {
+      //// const promise = new Promise((reject, resolve) => {
+      const promise = new Promise((resolve, reject) => {
         resolve();
       });
       // return the promise to mocha, it has the checking for promise resolving built in, when it receives a promise

@@ -18,9 +18,9 @@ describe('Symbol', function() {
     assert.notEqual(sym1, sym2);
   });
   it('every `Symbol()` is unique, also with the same parameter', function(){
-    var sym1 = Symbol('foo');
-    //// var sym1 = Symbol('foo');
-    var sym2 = Symbol('foo');
+    const sym1 = Symbol('foo');
+    //// const sym1 = Symbol('foo');
+    const sym2 = Symbol('foo');
     assert.notEqual(sym1, sym2);
   });
   it('`typeof Symbol()` returns "symbol"', function(){

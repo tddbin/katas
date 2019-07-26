@@ -13,8 +13,8 @@ describe('`Map.prototype.get` returns the element from the map for a key', funct
   it('multiple calls still return the same value', function() {
     let map = new Map();
     map.set('value', 'value');
-    //// var value = map.get(map.get(map.get()));
-    var value = map.get(map.get(map.get('value')));
+    //// const value = map.get(map.get(map.get()));
+    const value = map.get(map.get(map.get('value')));
     assert.equal(value, 'value');
   });
   it('requires exactly the value as passed to `set()`', function() {

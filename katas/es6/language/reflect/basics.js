@@ -22,18 +22,18 @@ describe('`Reflect` basics', function() {
   
   describe('some `Reflect` usages', function() {
     it('`Reflect.construct()` is like `new ClassName`', function() {
-      //// let Class;
-      let Class = class {};
+      //// const Class;
+      const Class = class {};
       assert.equal(Reflect.construct(Class, []) instanceof Class, true);
     });
     it('`Reflect.get()` returns a property`s value', function() {
-      //// let obj = {x: 42};
-      let obj = {x: 23};
+      //// const obj = {x: 42};
+      const obj = {x: 23};
       assert.equal(Reflect.get(obj, 'x'), 23);
     });
     it('`Reflect.has()` is like `in` just as a function', function() {
-      //// let obj = {};
-      let obj = {x: 0};
+      //// const obj = {};
+      const obj = {x: 0};
       assert.equal(Reflect.has(obj, 'x'), true);
     });
   });

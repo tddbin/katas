@@ -31,7 +31,7 @@ describe('`Reflect.getPrototypeOf` returns the prototype', function() {
     assert.equal(proto, Klass.prototype);
   });
   it('an array has a prototype too', function() {
-    let arr = [];
+    const arr = [];
     //// const expectedProto = Array;
     const expectedProto = Array.prototype;
     assert.equal(Reflect.getPrototypeOf(arr), expectedProto);

@@ -9,8 +9,8 @@ describe('Generators can be created in multiple ways', function() {
     assertIsGenerator(g());
   });
   it('as a function expression, by adding a `*` after `function`', function() {
-    //// let g = function() {};
-    let g = function*() {};
+    //// const g = function() {};
+    const g = function*() {};
     assertIsGenerator(g());
   });
   it('inside an object by prefixing the function name with `*`', function() {
@@ -39,6 +39,6 @@ describe('Generators can be created in multiple ways', function() {
 
   function assertIsGenerator(gen) {
     const toStringed = '' + gen;
-    assert.equal(toStringed, '[object Generator]');
+    assert.equal(toStringed, '[object Generator]');  // runtime feature needs ES6
   }
 });
