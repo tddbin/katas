@@ -11,4 +11,7 @@ class FakeDomNode {
   constructor() {
     this.classList = new Set();
   }
+  get length() {
+    return this.classList.size;
+  }
 }
