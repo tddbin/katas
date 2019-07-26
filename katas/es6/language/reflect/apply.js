@@ -5,7 +5,7 @@ describe('`Reflect.apply` calls a target function', function() {
   it('it is a static method', function() {
     //// const expectedType = '???';
     const expectedType = 'function';
-    assert.equal(typeof Reflect.apply, expectedType)
+    assert.equal(typeof Reflect.apply, expectedType);
   });
 
   describe('the 1st parameter', () => {
@@ -28,7 +28,7 @@ describe('`Reflect.apply` calls a target function', function() {
         constructor() { this.value = 42}
         fn() {return this.value}
       }
-      let instance = new FourtyTwo();
+      const instance = new FourtyTwo();
       //// const fourtyTwo = Reflect.apply(instance.fn, ___, []);
       const fourtyTwo = Reflect.apply(instance.fn, instance, []);
       assert.deepEqual(fourtyTwo, 42);
@@ -42,8 +42,8 @@ describe('`Reflect.apply` calls a target function', function() {
       assert.doesNotThrow(() => Reflect.apply(() => void 0, null, thirdParam));
     });
     it('is an array of parameters passed to the call', function() {
-      //// let emptyArrayWithFiveElements = Reflect.apply(Array);
-      let emptyArrayWithFiveElements = Reflect.apply(Array, null, [5]);
+      //// const emptyArrayWithFiveElements = Reflect.apply(Array);
+      const emptyArrayWithFiveElements = Reflect.apply(Array, null, [5]);
       assert.deepEqual(emptyArrayWithFiveElements.fill(42), [42, 42, 42, 42, 42]);
     });
   });
