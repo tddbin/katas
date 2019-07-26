@@ -41,12 +41,12 @@ describe('`catch()` returns a Promise and deals with rejected cases only', () =>
       const p = Promise.reject();
       //// const p1 = p.catch(() => void 0);
       const p1 = p.catch(() => 'promise?');
-      return p1.then(result => assert.equal('promise?', result));
+      return p1.then((result) => assert.equal('promise?', result));
     });
     it('the first parameter is the rejection reason', () => {
       //// const p = Promise.reject('rejection');
       const p = Promise.reject('oops');
-      return p.catch(reason => {
+      return p.catch((reason) => {
         assert.equal(reason, 'oops');
       });
     });
@@ -56,22 +56,22 @@ describe('`catch()` returns a Promise and deals with rejected cases only', () =>
       const p = Promise.reject('1');
       const p1 = p
           //// .catch(reason => void 0)
-          .catch(reason => `${reason} AND 2`)
-          .catch(reason => `${reason} AND 3`)
+          .catch((reason) => `${reason} AND 2`)
+          .catch((reason) => `${reason} AND 3`)
         ;
-      return p1.then(result =>
+      return p1.then((result) =>
         assert.equal(result, '1 AND 2')
       );
     });
     it('if a `catch` throws, the next `catch` catches it', () => {
       const p = Promise.reject('1');
       const p1 = p
-          .catch(reason => { throw Error(`${reason} AND 2`) })
-          .catch(err => { throw Error(`${err.message} AND 3`) })
-          //// .catch(err => `${err} but NOT THIS`)
-          .catch(err => err.message)
+          .catch((reason) => { throw Error(`${reason} AND 2`) })
+          .catch((err) => { throw Error(`${err.message} AND 3`) })
+          //// .catch((err) => `${err} but NOT THIS`)
+          .catch((err) => err.message)
         ;
-      return p1.then(result =>
+      return p1.then((result) =>
         assert.equal(result, '1 AND 2 AND 3')
       );
     });

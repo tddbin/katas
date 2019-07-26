@@ -45,7 +45,7 @@ describe('A promise can be created in multiple ways', function() {
       const promise = new MyPromise(resolve => resolve());
       promise
         .then(() => done())
-        .catch(e => done(new Error('Expected to resolve, but failed with: ' + e)));
+        .catch((e) => done(new Error('Expected to resolve, but failed with: ' + e)));
     });
     it('must call `super()` in the constructor if it wants to inherit/specialize the behavior', function() {
       class ResolvingPromise extends Promise {
@@ -62,8 +62,8 @@ describe('A promise can be created in multiple ways', function() {
         new Promise(resolve => resolve(1)),new Promise(resolve => resolve(2))
       ]);
       promise
-        .then(value => { assert.deepEqual(value, [1, 2]); done(); })
-        .catch(e => done(new Error(e)));
+        .then((value) => { assert.deepEqual(value, [1, 2]); done(); })
+        .catch((e) => done(new Error(e)));
     });
     it('is rejected if one rejects', function(done) {
       const promise = Promise.all([
@@ -83,8 +83,8 @@ describe('A promise can be created in multiple ways', function() {
       //// const promise = Promise.race([lateRejectedPromise]);
       const promise = Promise.race([earlyResolvingPromise, lateRejectedPromise]);
       promise
-        .then(value => { assert.deepEqual(value, '1st :)'); done(); })
-        .catch(e => done(new Error('Expected to resolve, but failed with: ' + e)));
+        .then((value) => { assert.deepEqual(value, '1st :)'); done(); })
+        .catch((e) => done(new Error('Expected to resolve, but failed with: ' + e)));
     });
     it('if one of the given promises rejects first, the returned promise is rejected', function(done) {
       //// const earlyRejectedPromise = new Promise((resolve, reject) => reject('I am a REJECTOR'));
@@ -93,7 +93,7 @@ describe('A promise can be created in multiple ways', function() {
       const promise = Promise.race([earlyRejectedPromise, lateResolvingPromise]);
       promise
         .then(() => done(new NotRejectedError()))
-        .catch(value => { assert.equal(value, 'I am a rejector'); done(); })
+        .catch((value) => { assert.equal(value, 'I am a rejector'); done(); })
         .catch(done);
     });
   });
@@ -102,15 +102,15 @@ describe('A promise can be created in multiple ways', function() {
       //// const promise = Promise.resolve;
       const promise = Promise.resolve();
       promise
-        .then(value => { assert.deepEqual(value, void 0); done(); })
-        .catch(e => done(new Error('Expected to resolve, but failed with: ' + e)));
+        .then((value) => { assert.deepEqual(value, void 0); done(); })
+        .catch((e) => done(new Error('Expected to resolve, but failed with: ' + e)));
     });
     it('resolves with the given value', function(done) {
       //// const promise = Promise.resolve();
       const promise = Promise.resolve('quick resolve');
       promise
-        .then(value => { assert.equal(value, 'quick resolve'); done(); })
-        .catch(e => done(e));
+        .then((value) => { assert.equal(value, 'quick resolve'); done(); })
+        .catch((e) => done(e));
     });
   });
   describe('`Promise.reject()` returns a rejecting promise', function() {
@@ -119,7 +119,7 @@ describe('A promise can be created in multiple ways', function() {
       const promise = Promise.reject();
       promise
         .then(() => done(new NotRejectedError()))
-        .catch(value => { assert.deepEqual(value, void 0); done(); })
+        .catch((value) => { assert.deepEqual(value, void 0); done(); })
         .catch(done);
     });
     it('the parameter passed to `reject()` can be used in the `.catch()`', function(done) {
@@ -127,7 +127,7 @@ describe('A promise can be created in multiple ways', function() {
       const promise = Promise.reject('quick reject');
       promise
         .then(() => done(new NotRejectedError()))
-        .catch(value => { assert.deepEqual(value, 'quick reject'); done(); })
+        .catch((value) => { assert.deepEqual(value, 'quick reject'); done(); })
         .catch(done);
     });
   });
