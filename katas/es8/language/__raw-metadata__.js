@@ -1,7 +1,6 @@
-import {SKILL_LEVEL} from '../../skill-levels';
-import * as tag from '../../tags';
-import {toUtcDate}  from '../../date';
 import * as date from '../../date';
+import { SKILL_LEVEL } from '../../skill-levels';
+import * as tag from '../../tags';
 
 const ASYNC_FUNCTIONS_BASICS = 1;
 
@@ -17,7 +16,7 @@ export const all = {
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [
           ],
-          publishDateUTC: toUtcDate(2017, date.JUNE, 9, 21, 30),
+          publishDateUTC: date.toUtcDate(2017, date.JUNE, 9, 21, 30),
           links: [
             {
               url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function',

@@ -1,7 +1,6 @@
-import {SKILL_LEVEL} from '../../skill-levels';
-import * as tag from '../../tags';
-import {toUtcDate}  from '../../date';
 import * as date from '../../date';
+import { SKILL_LEVEL } from '../../skill-levels';
+import * as tag from '../../tags';
 
 const TEMPLATE_STRING_BASICS = 1;
 const TEMPLATE_STRING_MULTILINE = 2;
@@ -1249,7 +1248,7 @@ export const all = {
             ARROW_FUNCTION_BASICS,
             DEFAULT_PARAMETERS_BASICS,
           ],
-          publishDateUTC: toUtcDate(2015, date.JULY, 14, 9, 29),
+          publishDateUTC: date.toUtcDate(2015, date.JULY, 14, 9, 29),
           links: [
             {
               url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-string.prototype.includes',
@@ -1272,7 +1271,7 @@ export const all = {
             LET, CONST,
             CLASS_CREATION
           ],
-          publishDateUTC: toUtcDate(2015, date.AUGUST, 7, 7, 55),
+          publishDateUTC: date.toUtcDate(2015, date.AUGUST, 7, 7, 55),
           links: [
             {
               url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-string.prototype.repeat',
@@ -1307,7 +1306,7 @@ export const all = {
             SPREAD_WITH_ARRAYS,
             ARROW_FUNCTION_BASICS
           ],
-          publishDateUTC: toUtcDate(2015, date.AUGUST, 26, 9, 42),
+          publishDateUTC: date.toUtcDate(2015, date.AUGUST, 26, 9, 42),
           links: [
             {
               url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-string.prototype.startswith',
@@ -1332,7 +1331,7 @@ export const all = {
             REST_OPERATOR_AS_PARAMETER,
             SPREAD_WITH_ARRAYS
           ],
-          publishDateUTC: toUtcDate(2015, date.OCTOBER, 2, 7, 55),
+          publishDateUTC: date.toUtcDate(2015, date.OCTOBER, 2, 7, 55),
           links: [
             {
               url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-string.prototype.endswith',
@@ -1369,7 +1368,7 @@ export const all = {
           path: 'promise/basics',
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [],
-          publishDateUTC: toUtcDate(2015, date.OCTOBER, 9, 9, 30),
+          publishDateUTC: date.toUtcDate(2015, date.OCTOBER, 9, 9, 30),
           links: [
             {
               url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-promise-objects',
@@ -1388,7 +1387,7 @@ export const all = {
             PROMISE_BASICS,
             CLASS_EXTENDS
           ],
-          publishDateUTC: toUtcDate(2015, date.OCTOBER, 28, 14, 30),
+          publishDateUTC: date.toUtcDate(2015, date.OCTOBER, 28, 14, 30),
           links: [
             {
               url: 'http://www.ecma-international.org/ecma-262/6.0/#sec-promise-constructor',
@@ -1447,7 +1446,7 @@ export const all = {
             TEMPLATE_STRING_BASICS,
             PROMISE_BASICS, PROMISE_CREATION
           ],
-          publishDateUTC: toUtcDate(2015, date.NOVEMBER, 10, 13, 30),
+          publishDateUTC: date.toUtcDate(2015, date.NOVEMBER, 10, 13, 30),
           links: [
             {
               url: 'https://promisesaplus.com/#point-45',
@@ -1473,7 +1472,7 @@ export const all = {
         //   level: SKILL_LEVEL.ADVANCED,
         //   requiresKnowledgeFrom: [
         //   ],
-        //   publishDateUTC: toUtcDate(2015, date.NOVEMBER, ??, ??, ??),
+        //   publishDateUTC: date.toUtcDate(2015, date.NOVEMBER, ??, ??, ??),
         //   links: [
         //   ]
         // },
@@ -1485,7 +1484,7 @@ export const all = {
           requiresKnowledgeFrom: [
             PROMISE_BASICS, PROMISE_CREATION,
           ],
-          publishDateUTC: toUtcDate(2015, date.MARCH, 15, 9, 30),
+          publishDateUTC: date.toUtcDate(2015, date.MARCH, 15, 9, 30),
           links: [
           ]
         },
@@ -1497,7 +1496,7 @@ export const all = {
           requiresKnowledgeFrom: [
             PROMISE_BASICS, PROMISE_CREATION,
           ],
-          publishDateUTC: toUtcDate(2015, date.MARCH, 15, 9, 30),
+          publishDateUTC: date.toUtcDate(2015, date.MARCH, 15, 9, 30),
           links: [
             {
               url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch',
