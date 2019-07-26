@@ -7,17 +7,17 @@ describe('`Object.is()` determines whether two values are the same', function(){
     it('1 is the same as 1', function() {
       //// const areSame = Object.is(1, '???');
       const areSame = Object.is(1, 1);
-      assert(areSame);
+      assert.equal(areSame, true);
     });
     it('int 1 is different to string "1"', function() {
       //// const areSame = Object.___(1, '1');
       const areSame = Object.is(1, '1');
-      assert(areSame === false);
+      assert.equal(areSame, false);
     });
     it('strings just have to match', function() {
       //// const areSame = Object.is('one', 'two');
       const areSame = Object.is('one', 'one');
-      assert(areSame);
+      assert.equal(areSame, true);
     });
     it('+0 is not the same as -0', function() {
       //// const areSame = -1;
@@ -59,11 +59,11 @@ describe('`Object.is()` determines whether two values are the same', function(){
     it('`{}` is just not the same as `{}`', function() {
       //// const areSame = '???';
       const areSame = false;
-      assert(Object.is({}, {}) === areSame);
+      assert.equal(Object.is({}, {}), areSame);
     });
     it('Map', function() {
-      let map1 = new Map([[1, 'one']]);
-      let map2 = new Map([[1, 'one']]);
+      const map1 = new Map([[1, 'one']]);
+      const map2 = new Map([[1, 'one']]);
       //// const areSame = Object.is(map1, map1);
       const areSame = Object.is(map1, map2);
       assert.equal(areSame, false);
