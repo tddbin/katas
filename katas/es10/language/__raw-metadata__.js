@@ -3,8 +3,8 @@ import * as tag from '../../tags';
 import {toUtcDate}  from '../../date';
 import * as date from '../../date';
 
-const OBJECT_FROMENTRIES_IN_DEPTH = 1;
-const OBJECT_FROMENTRIES = 2;
+const OBJECT_FROMENTRIES = 1;
+const OBJECT_FROMENTRIES_IN_DEPTH = 2;
 
 export const all = {
   name: 'ES10 Katas',
