@@ -3,7 +3,8 @@ import * as tag from '../../tags';
 import {toUtcDate}  from '../../date';
 import * as date from '../../date';
 
-const OBJECT_FROMENTRIES = 1;
+const OBJECT_FROMENTRIES_IN_DEPTH = 1;
+const OBJECT_FROMENTRIES = 2;
 
 export const all = {
   name: 'ES10 Katas',
@@ -14,8 +15,31 @@ export const all = {
           name: '`Object.fromEntries()`',
           description: '`Object.fromEntries()` converts key-value pairs into an object',
           path: 'object-api/fromEntries',
-          level: SKILL_LEVEL.BEGINNER,
-          requiresKnowledgeFrom: [],
+          level: SKILL_LEVEL.ADVANCED,
+          requiresKnowledgeFrom: [
+          ],
+          publishDateUTC: toUtcDate(2019, date.JULY, 28, 19, 55),
+          links: [
+            {
+              url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries',
+              comment: 'Description of Object.fromEntries() on MDN.',
+              tags: [tag.MDN, tag.DOCS]
+            },
+          ],
+        },
+        [OBJECT_FROMENTRIES_IN_DEPTH]: {
+          name: '`Object.fromEntries()` in depth',
+          description: '`Object.fromEntries()` converts key-value pairs into an object',
+          path: 'object-api/fromEntries-in-depth',
+          level: SKILL_LEVEL.ADVANCED,
+          requiresKnowledgeFrom: [
+            // const
+            // Map
+            // Set
+            // Iterable
+            // arrow function
+            // Symbol
+          ],
           publishDateUTC: toUtcDate(2019, date.JUNE, 25, 19, 55),
           links: [
             {
