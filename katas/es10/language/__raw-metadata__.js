@@ -18,7 +18,7 @@ export const all = {
           level: SKILL_LEVEL.ADVANCED,
           requiresKnowledgeFrom: [
           ],
-          publishDateUTC: toUtcDate(2019, date.JULY, 28, 19, 55),
+          publishDateUTC: toUtcDate(2019, date.JULY, 28, 22, 55),
           links: [
             {
               url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries',
