@@ -25,11 +25,11 @@ describe('`Object.is()` determines whether two values are the same', function(){
       assert.equal(Object.is(NaN, number), true);
     });
   });
-  describe('coercion, as in `==` and `===`, does NOT apply', function() {
-    it('+0 != -0', function() {
-      const coerced = +0 === -0;
-      const isSame = Object.is(+0, -0);
-      assert.equal(isSame, coerced);
+  describe('coercion (as in `==`) and strict compare (as in `===`) do NOT apply', function() {
+    it('+0 and -0 are not the same for `Object.is()`', function() {
+      const strictlyCompared = +0 === -0;
+      const objectIsCompared = Object.is(+0, -0);
+      assert.equal(objectIsCompared, strictlyCompared);
     });
     it('empty string and `false` are not the same', function() {
       const emptyString = '';
@@ -41,8 +41,8 @@ describe('`Object.is()` determines whether two values are the same', function(){
       const isSame = Object.is(NaN, NaN);
       assert.equal(isSame, coerced);
     });
-    it('NaN 0/0', function() {
-      const isSame = Object.ISSSSS(NaN, 0/0);
+    it('NaN and 0/0', function() {
+      const isSame = Object.iss(NaN, 0/0);
       assert.equal(isSame, true);
     });
   });
@@ -51,7 +51,7 @@ describe('`Object.is()` determines whether two values are the same', function(){
       const areSame = '???';
       assert(Object.is({}, {}) === areSame);
     });
-    it('Map', function() {
+    it('two `Map`s with the same content are not the same thing', function() {
       let map1 = new Map([[1, 'one']]);
       let map2 = new Map([[1, 'one']]);
       const areSame = Object.is(map1, map1);
