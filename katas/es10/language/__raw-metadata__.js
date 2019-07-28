@@ -15,7 +15,7 @@ export const all = {
           name: '`Object.fromEntries()`',
           description: '`Object.fromEntries()` converts key-value pairs into an object',
           path: 'object-api/fromEntries',
-          level: SKILL_LEVEL.ADVANCED,
+          level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [
           ],
           publishDateUTC: toUtcDate(2019, date.JULY, 28, 22, 55),
@@ -31,7 +31,7 @@ export const all = {
           name: '`Object.fromEntries()` in depth',
           description: '`Object.fromEntries()` converts key-value pairs into an object',
           path: 'object-api/fromEntries-in-depth',
-          level: SKILL_LEVEL.ADVANCED,
+          level: SKILL_LEVEL.EXPERT,
           requiresKnowledgeFrom: [
             OBJECT_FROMENTRIES,
             // const
