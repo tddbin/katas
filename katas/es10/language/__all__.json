@@ -4,7 +4,7 @@
       "name": "`Object.fromEntries()`",
       "description": "`Object.fromEntries()` converts key-value pairs into an object",
       "path": "object-api/fromEntries",
-      "level": "ADVANCED",
+      "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [],
       "links": [
         {
@@ -25,7 +25,7 @@
       "name": "`Object.fromEntries()` in depth",
       "description": "`Object.fromEntries()` converts key-value pairs into an object",
       "path": "object-api/fromEntries-in-depth",
-      "level": "ADVANCED",
+      "level": "EXPERT",
       "requiresKnowledgeFrom": [
         1
       ],

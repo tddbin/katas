@@ -6,7 +6,7 @@
           "name": "`Object.fromEntries()`",
           "description": "`Object.fromEntries()` converts key-value pairs into an object",
           "path": "object-api/fromEntries",
-          "level": "ADVANCED",
+          "level": "INTERMEDIATE",
           "requiresKnowledgeFrom": [],
           "publishDateUTC": "2019-07-28T22:55:00.000Z",
           "links": [
@@ -26,7 +26,7 @@
           "name": "`Object.fromEntries()` in depth",
           "description": "`Object.fromEntries()` converts key-value pairs into an object",
           "path": "object-api/fromEntries-in-depth",
-          "level": "ADVANCED",
+          "level": "EXPERT",
           "requiresKnowledgeFrom": [
             1
           ],
