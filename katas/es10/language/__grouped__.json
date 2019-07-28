@@ -6,8 +6,30 @@
           "name": "`Object.fromEntries()`",
           "description": "`Object.fromEntries()` converts key-value pairs into an object",
           "path": "object-api/fromEntries",
-          "level": "BEGINNER",
+          "level": "ADVANCED",
           "requiresKnowledgeFrom": [],
+          "publishDateUTC": "2019-07-28T22:55:00.000Z",
+          "links": [
+            {
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries",
+              "comment": "Description of Object.fromEntries() on MDN.",
+              "tags": [
+                "mdn",
+                "docs"
+              ]
+            }
+          ],
+          "groupName": "Object API",
+          "id": "1"
+        },
+        {
+          "name": "`Object.fromEntries()` in depth",
+          "description": "`Object.fromEntries()` converts key-value pairs into an object",
+          "path": "object-api/fromEntries-in-depth",
+          "level": "ADVANCED",
+          "requiresKnowledgeFrom": [
+            1
+          ],
           "publishDateUTC": "2019-06-25T19:55:00.000Z",
           "links": [
             {
@@ -43,7 +65,7 @@
             }
           ],
           "groupName": "Object API",
-          "id": "1"
+          "id": "2"
         }
       ],
       "slug": "Object_API",
