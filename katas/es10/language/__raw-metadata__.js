@@ -33,6 +33,7 @@ export const all = {
           path: 'object-api/fromEntries-in-depth',
           level: SKILL_LEVEL.ADVANCED,
           requiresKnowledgeFrom: [
+            OBJECT_FROMENTRIES,
             // const
             // Map
             // Set
