@@ -1,4 +1,4 @@
-// ES10 - 2: Object.fromEntries
+// ES10 - 1: Object.fromEntries
 // To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
