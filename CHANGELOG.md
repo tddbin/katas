@@ -21,4 +21,4 @@
 - [x] Rename TDDBIN_ROOT_DOMAIN to TDDBIN_ROOT_URL and store the URL in there, not just the domain, since we moved to HTTPS
 - [ ] Finish the kata-naming ADR5
 - [ ] Finish the kata dependencies ADR6
-- [ ] Split out the in-depth `Object.fromEntries()` kata, see ADR4
+- [x] Split out the in-depth `Object.fromEntries()` kata, see ADR4
