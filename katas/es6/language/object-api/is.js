@@ -6,15 +6,15 @@ describe('`Object.is()` determines whether two values are the same', function(){
   describe('scalar values', function() {
     it('1 is the same as 1', function() {
       const areSame = Object.is(1, '???');
-      assert(areSame);
+      assert.equal(areSame, true);
     });
     it('int 1 is different to string "1"', function() {
       const areSame = Object.___(1, '1');
-      assert(areSame === false);
+      assert.equal(areSame, false);
     });
     it('strings just have to match', function() {
       const areSame = Object.is('one', 'two');
-      assert(areSame);
+      assert.equal(areSame, true);
     });
     it('+0 is not the same as -0', function() {
       const areSame = -1;
@@ -49,7 +49,7 @@ describe('`Object.is()` determines whether two values are the same', function(){
   describe('complex values', function() {
     it('`{}` is just not the same as `{}`', function() {
       const areSame = '???';
-      assert(Object.is({}, {}) === areSame);
+      assert.equal(Object.is({}, {}), areSame);
     });
     it('two `Map`s with the same content are not the same thing', function() {
       let map1 = new Map([[1, 'one']]);

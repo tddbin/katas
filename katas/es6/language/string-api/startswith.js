@@ -28,8 +28,8 @@ describe('`str.startsWith(searchString)` determines whether `str` begins with `s
       assert.equal(s.startsWith('str', position), true);
     });
     it('for `undefined` is the same as 0', function() {
-      const _undefined_ = '1';
-      assert.equal(s.startsWith('the', _undefined_), true);
+      const myUndefined = '1';
+      assert.equal(s.startsWith('the', myUndefined), true);
     });
     it('the parameter gets converted to an int', function() {
       const position = 'four';

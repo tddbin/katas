@@ -28,8 +28,8 @@ describe('`str.endsWith(searchString)` determines whether `str` ends with `searc
       assert.equal(s.endsWith('el', endPos), true);
     });
     it('`undefined` uses the entire string', function() {
-      const _undefined_ = 'i would like to be undefined';
-      assert.equal(s.endsWith('fin', _undefined_), true);
+      const myUndefined = 'i would like to be undefined';
+      assert.equal(s.endsWith('fin', myUndefined), true);
     });
     it('the parameter gets coerced to an integer (e.g. "5" becomes 5)', function() {
       const position = 'five';
