@@ -4,10 +4,12 @@
 
 describe('Type conversion - to number', () => {
   it('`undefined` converts to `NaN`', () => {
+    //// const toNumber = undefined;
     const toNumber = +undefined;
     assert(isNaN(toNumber));
   });
   it('`null` converts to `+0`', () => {
+    //// const toNumber = null;
     const toNumber = +null;
     assert.deepEqual(toNumber, +0);
   });
