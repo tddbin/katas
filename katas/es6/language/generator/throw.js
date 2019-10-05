@@ -1,0 +1,2 @@
+// throw is used to throw an exception from the generator. This halts execution of the generator entirely, and execution resumes in the caller as is normally the case when an exception is thrown.
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield
