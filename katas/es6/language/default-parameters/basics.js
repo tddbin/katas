@@ -4,15 +4,15 @@
 
 describe('Default parameters make function parameters more flexible', () => {
   it('define it using an assignment to the parameter `function(param=1){}`', function() {
-    //// let number = (int) => int;
-    let number = (int = 0) => int;
-    assert.equal(number(), 0);
+    //// let aNumber = (int) => int;
+    let aNumber = (int = 0) => int;
+    assert.equal(aNumber(), 0);
   });
   it('it is used when `undefined` is passed', function() {
-    let number = (int = 23) => int;
+    let aNumber = (int = 23) => int;
     //// const param = 42;
     const param = undefined;
-    assert.equal(number(param), 23);
+    assert.equal(aNumber(param), 23);
   });
   it('it is not used when a value is given', function() {
     //// function xhr() {
