@@ -2,6 +2,7 @@ import {SKILL_LEVEL} from '../../skill-levels';
 import * as tag from '../../tags';
 import {toUtcDate}  from '../../date';
 import * as date from '../../date';
+import {es6} from '../../es6/language/__raw-metadata__.js';
 
 const buildReferenceForId = id => ({bundle: 'es10/language', id});
 export const es10 = {
@@ -37,12 +38,12 @@ export const all = {
           level: SKILL_LEVEL.EXPERT,
           requiresKnowledgeFrom: [
             es10.OBJECT_FROMENTRIES,
-            // const
-            // Map
-            // Set
-            // Iterable
-            // arrow function
-            // Symbol
+            es6.CONST,
+            es6.MAP_BASICS,
+            es6.SET_BASICS,
+            // es6.ITERABLE,
+            es6.ARROW_FUNCTION_BASICS,
+            es6.SYMBOL_BASICS,
           ],
           publishDateUTC: toUtcDate(2019, date.JUNE, 25, 19, 55),
           links: [
