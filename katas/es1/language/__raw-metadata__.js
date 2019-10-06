@@ -2,15 +2,19 @@ import {SKILL_LEVEL} from '../../skill-levels';
 import * as tag from '../../tags';
 import * as date from '../../date';
 
-const ARRAY_SORT_BASICS = 1;
-const ARRAY_SORT_WITH_FUNCTION = 2;
+const buildReferenceForId = id => ({bundle: 'es1/language', id});
+export const es1 = {
+  'ARRAY_SORT_BASICS': buildReferenceForId(1),
+  'ARRAY_SORT_WITH_FUNCTION': buildReferenceForId(2),
+  'GLOBAL_PARSEINT': buildReferenceForId(3),
+};
 
 export const all = {
   name: 'JavaScript Katas',
   groups: {
     'Array': {
       items: {
-        [ARRAY_SORT_BASICS]: {
+        [es1.ARRAY_SORT_BASICS.id]: {
           name: '`[].sort()` basics',
           description: 'The `sort()` function sorts an array as if each element was a string.',
           path: 'array/sort-basics',
@@ -40,13 +44,13 @@ export const all = {
             }
           ]
         },
-        [ARRAY_SORT_WITH_FUNCTION]: {
+        [es1.ARRAY_SORT_WITH_FUNCTION.id]: {
           name: '`[].sort()` can take a compare function',
           description: 'Passing a callback to the `sort()` function, allows for any custom sorting.',
           path: 'array/sort-with-function',
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [
-            ARRAY_SORT_BASICS
+            es1.ARRAY_SORT_BASICS
           ],
           publishDateUTC: new Date(Date.UTC(2015, date.OCTOBER, 23, 9, 26)),
           links: [
@@ -63,6 +67,40 @@ export const all = {
           ]
         }
       }
-    }
+    },
+    'Global Object API': {
+      items: {
+        [es1.GLOBAL_PARSEINT.id]: {
+          name: '`parseInt()`',
+          description: '',
+          path: 'global-api/parseInt',
+          level: SKILL_LEVEL.BEGINNER,
+          requiresKnowledgeFrom: [],
+          // publishDateUTC: new Date(Date.UTC(2015, date.OCTOBER, 22, 9, 11)),
+          links: [
+            {
+              url: 'https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-262,%201st%20edition,%20June%201997.pdf',
+              comment: 'The very first version of the spec defining `parseInt`, the ES1 spec.',
+              tags: [tag.SPECIFICATION, tag.DOCS]
+            },
+            {
+              url: 'https://www.ecma-international.org/ecma-262/10.0/index.html#sec-parseint-string-radix',
+              comment: 'A later, newer version of the spec text for `parseInt`, from ES10.',
+              tags: [tag.SPECIFICATION, tag.DOCS]
+            },
+            {
+              url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt',
+              comment: 'The description of `parseInt()` on MDN, probably best to read.',
+              tags: [tag.MDN, tag.DOCS]
+            },
+            // {
+            //   url: 'https://twitter.com/wolframkriesing/status/657161540525826048',
+            //   comment: 'Announcement of this kata on twitter.',
+            //   tags: [tag.ANNOUNCEMENT]
+            // },
+          ],
+        },
+      },
+    },
   }
 };

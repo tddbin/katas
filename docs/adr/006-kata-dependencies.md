@@ -15,6 +15,22 @@ entire repo.
 
 ## Decision
 
+See ES1 kata, where this was done. All katas export the available katas like so:
+```js
+export const es1 = {
+  'ARRAY_SORT_BASICS': ['es1/language', 1],
+  'ARRAY_SORT_WITH_FUNCTION': ['es1/language', 2],
+  'GLOBAL_PARSEINT': ['es1/language', 3],
+  //...
+};
+```
+Inside the ES6 katas any kata can be refered to by importing and refering to this exact kata.
+```js
+// inside es6/language/__raw-metadata__.js
+import {es1} from '../../es1/language/__raw-metadata__.js';
+
+const requiresKnowledgeFrom = [es1.GLOBAL_PARSEINT];
+```
 
 ## Consequences
 
