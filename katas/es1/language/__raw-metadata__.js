@@ -94,11 +94,11 @@ export const all = {
               comment: 'The description of `parseInt()` on MDN, probably best to read.',
               tags: [tag.MDN, tag.DOCS]
             },
-            // {
-            //   url: 'https://twitter.com/wolframkriesing/status/657161540525826048',
-            //   comment: 'Announcement of this kata on twitter.',
-            //   tags: [tag.ANNOUNCEMENT]
-            // },
+            {
+              url: 'https://twitter.com/wolframkriesing/status/1180943849486716928',
+              comment: 'Announcement of this kata on twitter.',
+              tags: [tag.ANNOUNCEMENT]
+            },
           ],
         },
         [es1.GLOBAL_PARSEINT_IN_DEPTH.id]: {
