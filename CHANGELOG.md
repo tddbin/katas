@@ -7,6 +7,7 @@
 - [ ] Test if every test has the katafy part in it
 
 # version 2
+- [ ] Fix names for various katas, many miss the "API" prefix, like "es6 " map, promise, set, ...
 - [ ] write kata for ES1 `parseInt()` in depth
 - [x] move ES1 array katas into directory `array-api` as ADR5 defines
 - [x] write kata for ES1 `parseInt()`
