@@ -13,6 +13,11 @@ describe('`Number.parseInt()` parses a string and returns an integer.', () => {
     const parseIntFunction = Number.parseInt;
     assert.equal(parseIntFunction, global().parseInt);
   });
+  it('`parseInt` was specified in ECMAScript v1 (please find that ES1 kata for learning more)', () => {
+    //// const version = 6;
+    const version = 1;
+    assert.equal('ECMAScript v' + version, 'ECMAScript v1');
+  });
 });
 
 const global = () => globalThis || window || global;
