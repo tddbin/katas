@@ -28,24 +28,24 @@ describe('`parseInt()` parses a string and returns an integer.', () => {
       assert.equal(parseInt('0X10'), 16);
     });
   });
-  describe('WHEN given a NOT-numeric string, it will be converted to a string first', () => {
-    it('a string starting with numbers', () => {
+  describe('WHEN given a NOT-numeric string (it will be tried to be converted to a string)', () => {
+    it('a string starting with numbers THEN converts containing the leading numbers only', () => {
       assert.equal(parseInt(' 12AB34'), 12)
     });
-    it('a string starting with numbers, as hex', () => {
+    it('a string starting with `-F` (a hexadecimal number) AND radix=16 THEN returns -15', () => {
       assert.equal(parseInt('-F', 16), -15)
     });
-    it('a word made of letters', () => {
+    it('a string, a word made of letters only THEN returns `NaN` (not a number)', () => {
       assert(isNaN(parseInt('word')));
     });
-    it('an empty object literal RETURNS `NaN`', () => {
+    it('an empty object literal THEN returns `NaN`', () => {
       assert(isNaN(parseInt({})));
     });
-    it('an empty array', () => {
+    it('an empty array THEN returns `NaN`', () => {
       assert(isNaN(parseInt([])));
     });
-    it('a array [123]', () => {
-      assert.equal(parseInt([123]), 123);
+    it('an array with `[123,456]` THEN converts it to a string and then to an integer', () => {
+      assert.equal(parseInt([123,456]), 123);
     });
   });
 });
