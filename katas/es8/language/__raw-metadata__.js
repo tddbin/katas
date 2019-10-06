@@ -3,14 +3,17 @@ import * as tag from '../../tags';
 import {toUtcDate}  from '../../date';
 import * as date from '../../date';
 
-const ASYNC_FUNCTIONS_BASICS = 1;
+const buildReferenceForId = id => ({bundle: 'es8/language', id});
+export const es8 = {
+  ASYNC_FUNCTIONS_BASICS: buildReferenceForId(1),
+};
 
 export const all = {
   name: 'ES8 Katas',
   groups: {
     'Async Function': {
       items: {
-        [ASYNC_FUNCTIONS_BASICS]: {
+        [es8.ASYNC_FUNCTIONS_BASICS.id]: {
           name: 'basics',
           description: '',
           path: 'async-functions/basics',
@@ -29,9 +32,9 @@ export const all = {
               comment: 'The actual chapter about `async`, you need to dive in from here.',
               tags: [tag.SPECIFICATION]
             },
-          ]
+          ],
         },
-      }
-    }
-  }
+      },
+    },
+  },
 };

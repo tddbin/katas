@@ -3,15 +3,18 @@ import * as tag from '../../tags';
 import {toUtcDate}  from '../../date';
 import * as date from '../../date';
 
-const OBJECT_FROMENTRIES = 1;
-const OBJECT_FROMENTRIES_IN_DEPTH = 2;
+const buildReferenceForId = id => ({bundle: 'es10/language', id});
+export const es10 = {
+  OBJECT_FROMENTRIES: buildReferenceForId(1),
+  OBJECT_FROMENTRIES_IN_DEPTH: buildReferenceForId(2),
+};
 
 export const all = {
   name: 'ES10 Katas',
   groups: {
     'Object API': {
       items: {
-        [OBJECT_FROMENTRIES]: {
+        [es10.OBJECT_FROMENTRIES.id]: {
           name: '`Object.fromEntries()`',
           description: '`Object.fromEntries()` converts key-value pairs into an object',
           path: 'object-api/fromEntries',
@@ -27,13 +30,13 @@ export const all = {
             },
           ],
         },
-        [OBJECT_FROMENTRIES_IN_DEPTH]: {
+        [es10.OBJECT_FROMENTRIES_IN_DEPTH.id]: {
           name: '`Object.fromEntries()` in depth',
           description: '`Object.fromEntries()` converts key-value pairs into an object',
           path: 'object-api/fromEntries-in-depth',
           level: SKILL_LEVEL.EXPERT,
           requiresKnowledgeFrom: [
-            OBJECT_FROMENTRIES,
+            es10.OBJECT_FROMENTRIES,
             // const
             // Map
             // Set
