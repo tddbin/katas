@@ -1703,7 +1703,14 @@
       "description": "`Number.parseInt()` parses a string and returns an integer.",
       "path": "number-api/parseInt",
       "level": "BEGINNER",
-      "requiresKnowledgeFrom": [],
+      "requiresKnowledgeFrom": [
+        8,
+        5,
+        {
+          "bundle": "es1/language",
+          "id": 3
+        }
+      ],
       "links": [
         {
           "url": "https://www.ecma-international.org/ecma-262/6.0/#sec-number.parseint",
@@ -1720,10 +1727,26 @@
             "mdn",
             "docs"
           ]
+        },
+        {
+          "url": "https://www.ecma-international.org/ecma-262/6.0/index.html#sec-parseint-string-radix",
+          "comment": "Spec chapter of the global `parseInt()` function.",
+          "tags": [
+            "spec",
+            "docs"
+          ]
+        },
+        {
+          "url": "https://twitter.com/wolframkriesing/status/1180533105221873672",
+          "comment": "A twitter thread, where I explained the decision process of the creation of this kata and how it relates to the ES1 kata of this function.",
+          "tags": [
+            "discussion"
+          ]
         }
       ],
       "groupName": "Number API",
       "groupNameSlug": "Number_API",
+      "publishDateRfc822": "Sun, 06 Oct 2019 17:29:00 GMT",
       "id": 81
     }
   ]

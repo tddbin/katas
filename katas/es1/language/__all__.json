@@ -50,7 +50,10 @@
       "path": "array/sort-with-function",
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [
-        1
+        {
+          "bundle": "es1/language",
+          "id": 1
+        }
       ],
       "links": [
         {
@@ -73,6 +76,54 @@
       "groupNameSlug": "Array",
       "publishDateRfc822": "Fri, 23 Oct 2015 09:26:00 GMT",
       "id": 2
+    },
+    {
+      "name": "`parseInt()`",
+      "description": "",
+      "path": "global-api/parseInt",
+      "level": "BEGINNER",
+      "requiresKnowledgeFrom": [],
+      "links": [
+        {
+          "url": "https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-262,%201st%20edition,%20June%201997.pdf",
+          "comment": "The very first version of the spec defining `parseInt`, the ES1 spec.",
+          "tags": [
+            "spec",
+            "docs"
+          ]
+        },
+        {
+          "url": "https://www.ecma-international.org/ecma-262/10.0/index.html#sec-parseint-string-radix",
+          "comment": "A later, newer version of the spec text for `parseInt`, from ES10.",
+          "tags": [
+            "spec",
+            "docs"
+          ]
+        },
+        {
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt",
+          "comment": "The description of `parseInt()` on MDN, probably best to read.",
+          "tags": [
+            "mdn",
+            "docs"
+          ]
+        }
+      ],
+      "groupName": "Global Object API",
+      "groupNameSlug": "Global_Object API",
+      "publishDateRfc822": "Sun, 06 Oct 2019 19:53:00 GMT",
+      "id": 3
+    },
+    {
+      "name": "`parseInt()` in depth",
+      "description": "",
+      "path": "global-api/parseInt-in-depth",
+      "level": "BEGINNER",
+      "requiresKnowledgeFrom": [],
+      "links": [],
+      "groupName": "Global Object API",
+      "groupNameSlug": "Global_Object API",
+      "id": 4
     }
   ]
 }
