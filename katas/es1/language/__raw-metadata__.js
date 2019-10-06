@@ -4,6 +4,13 @@ import * as date from '../../date';
 
 const ARRAY_SORT_BASICS = 1;
 const ARRAY_SORT_WITH_FUNCTION = 2;
+const GLOBAL_PARSEINT = 3;
+
+export const es1 = {
+  'ARRAY_SORT_BASICS': ['es1/language', ARRAY_SORT_BASICS],
+  'ARRAY_SORT_WITH_FUNCTION': ['es1/language', ARRAY_SORT_WITH_FUNCTION],
+  'GLOBAL_PARSEINT': ['es1/language', GLOBAL_PARSEINT],
+};
 
 export const all = {
   name: 'JavaScript Katas',
