@@ -7,8 +7,9 @@
 - [ ] Test if every test has the katafy part in it
 
 # version 2
-- [ ] move ES1 array katas into directory `array-api` as ADR5 defines
-- [ ] write kata for ES1 `parseInt()`
+- [ ] write kata for ES1 `parseInt()` in depth
+- [x] move ES1 array katas into directory `array-api` as ADR5 defines
+- [x] write kata for ES1 `parseInt()`
 - [x] write kata for ES6 `Number.parseInt()`
 - [x] Katafy (and improve) the spread katas
 - [x] Katafy (and improve) the string-api katas
