@@ -2,6 +2,7 @@ import {SKILL_LEVEL} from '../../skill-levels';
 import * as tag from '../../tags';
 import {toUtcDate}  from '../../date';
 import * as date from '../../date';
+import {es1} from '../../es1/language/__raw-metadata__.js';
 
 const TEMPLATE_STRING_BASICS = 1;
 const TEMPLATE_STRING_MULTILINE = 2;
@@ -1057,8 +1058,8 @@ export const all = {
           description: '`Number.parseInt()` parses a string and returns an integer.',
           path: 'number-api/parseInt',
           level: SKILL_LEVEL.BEGINNER,
-          requiresKnowledgeFrom: [],
-          // publishDateUTC: new Date(Date.UTC(2019, date.JUNE, 15, 15, 42)),
+          requiresKnowledgeFrom: [CONST, ARROW_FUNCTION_BASICS, es1.GLOBAL_PARSEINT],
+          publishDateUTC: new Date(Date.UTC(2019, date.OCTOBER, 6, 17, 29)),
           links: [
             {
               url: 'https://www.ecma-international.org/ecma-262/6.0/#sec-number.parseint',
@@ -1069,6 +1070,16 @@ export const all = {
               url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/parseInt',
               comment: 'The MDN docs for this function.',
               tags: [tag.MDN, tag.DOCS]
+            },
+            {
+              url: 'https://www.ecma-international.org/ecma-262/6.0/index.html#sec-parseint-string-radix',
+              comment: 'Spec chapter of the global `parseInt()` function.',
+              tags: [tag.SPECIFICATION, tag.DOCS]
+            },
+            {
+              url: 'https://twitter.com/wolframkriesing/status/1180533105221873672',
+              comment: 'A twitter thread, where I explained the decision process of the creation of this kata and how it relates to the ES1 kata of this function.',
+              tags: [tag.DISCUSSION]
             },
           ],
         },
