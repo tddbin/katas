@@ -7,6 +7,7 @@ export const es1 = {
   'ARRAY_SORT_BASICS': buildReferenceForId(1),
   'ARRAY_SORT_WITH_FUNCTION': buildReferenceForId(2),
   'GLOBAL_PARSEINT': buildReferenceForId(3),
+  'GLOBAL_PARSEINT_IN_DEPTH': buildReferenceForId(4),
 };
 
 export const all = {
@@ -76,7 +77,7 @@ export const all = {
           path: 'global-api/parseInt',
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [],
-          // publishDateUTC: new Date(Date.UTC(2015, date.OCTOBER, 22, 9, 11)),
+          publishDateUTC: new Date(Date.UTC(2019, date.OCTOBER, 6, 19, 53)),
           links: [
             {
               url: 'https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-262,%201st%20edition,%20June%201997.pdf',
@@ -99,6 +100,15 @@ export const all = {
             //   tags: [tag.ANNOUNCEMENT]
             // },
           ],
+        },
+        [es1.GLOBAL_PARSEINT_IN_DEPTH.id]: {
+          name: '`parseInt()` in depth',
+          description: '',
+          path: 'global-api/parseInt-in-depth',
+          level: SKILL_LEVEL.BEGINNER,
+          requiresKnowledgeFrom: [],
+          // publishDateUTC: new Date(Date.UTC(2019, date.OCTOBER, 6, 19, 53)),
+          links: []
         },
       },
     },
