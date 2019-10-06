@@ -1075,7 +1075,12 @@ export const all = {
               url: 'https://www.ecma-international.org/ecma-262/6.0/index.html#sec-parseint-string-radix',
               comment: 'Spec chapter of the global `parseInt()` function.',
               tags: [tag.SPECIFICATION, tag.DOCS]
-            }
+            },
+            {
+              url: 'https://twitter.com/wolframkriesing/status/1180533105221873672',
+              comment: 'A twitter thread, where I explained the decision process of the creation of this kata and how it relates to the ES1 kata of this function.',
+              tags: [tag.DISCUSSION]
+            },
           ],
         },
       }
