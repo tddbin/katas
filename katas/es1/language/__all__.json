@@ -107,6 +107,13 @@
             "mdn",
             "docs"
           ]
+        },
+        {
+          "url": "https://twitter.com/wolframkriesing/status/1180943849486716928",
+          "comment": "Announcement of this kata on twitter.",
+          "tags": [
+            "announcement"
+          ]
         }
       ],
       "groupName": "Global Object API",
