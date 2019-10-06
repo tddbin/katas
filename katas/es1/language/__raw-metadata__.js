@@ -2,14 +2,11 @@ import {SKILL_LEVEL} from '../../skill-levels';
 import * as tag from '../../tags';
 import * as date from '../../date';
 
-const ARRAY_SORT_BASICS = 1;
-const ARRAY_SORT_WITH_FUNCTION = 2;
-const GLOBAL_PARSEINT = 3;
-
+const buildReferenceForId = id => ({bundle: 'es1/language', id});
 export const es1 = {
-  'ARRAY_SORT_BASICS': ['es1/language', ARRAY_SORT_BASICS],
-  'ARRAY_SORT_WITH_FUNCTION': ['es1/language', ARRAY_SORT_WITH_FUNCTION],
-  'GLOBAL_PARSEINT': ['es1/language', GLOBAL_PARSEINT],
+  'ARRAY_SORT_BASICS': buildReferenceForId(1),
+  'ARRAY_SORT_WITH_FUNCTION': buildReferenceForId(2),
+  'GLOBAL_PARSEINT': buildReferenceForId(3),
 };
 
 export const all = {
@@ -17,7 +14,7 @@ export const all = {
   groups: {
     'Array': {
       items: {
-        [ARRAY_SORT_BASICS]: {
+        [es1.ARRAY_SORT_BASICS.id]: {
           name: '`[].sort()` basics',
           description: 'The `sort()` function sorts an array as if each element was a string.',
           path: 'array/sort-basics',
@@ -47,13 +44,13 @@ export const all = {
             }
           ]
         },
-        [ARRAY_SORT_WITH_FUNCTION]: {
+        [es1.ARRAY_SORT_WITH_FUNCTION.id]: {
           name: '`[].sort()` can take a compare function',
           description: 'Passing a callback to the `sort()` function, allows for any custom sorting.',
           path: 'array/sort-with-function',
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [
-            ARRAY_SORT_BASICS
+            es1.ARRAY_SORT_BASICS
           ],
           publishDateUTC: new Date(Date.UTC(2015, date.OCTOBER, 23, 9, 26)),
           links: [
