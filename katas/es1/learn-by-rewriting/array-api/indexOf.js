@@ -1,31 +1,30 @@
+/*
+  ==============================================
+  WELCOME TO BUILD YOUR OWN FUNCTIONS TDD STYLE
+  ==============================================
+  - In this section you will replicate a Javascript Array methods.
+  - We have multiple tests that should be solved, make sure to go
+    one by one and read the error messages to get clues.
+  - To solve the tests you should read the errors and try to solve them
+    by writing the function that has already been declared.
+    You are very welcomed to read the tests to gain insight but
+    DO NOT change them, only the function.
+  - Bellow we provide a short description of the function as well as the expected
+    syntax. Documentation is unbeatable, so you are encouraged to click the link
+    and gain further insight.
+  - Try mixing it up for added difficulty. Go low level and avoid using other
+    array methods. Can it be done without for loops?
+  - ONWARDS!
 
-/*  
-    ==============================================
-    WELCOME TO BUILD YOUR OWN FUNCTIONS TDD STYLE
-    ==============================================
-    - In this section you will replicate a Javascript Array methods.
-    - We have multiple tests that should be solved, make sure to go
-      one by one and read the error messages to get clues.
-    - To solve the tests you should read the errors and try to solve them
-      by writing the function that has already been declared.
-      You are very welcomed to read the tests to gain insight but 
-      DO NOT change them, only the function.
-    - Bellow we provide a short description of the function as well as the expected
-      syntax. Documentation is unbeatable, so you are encouraged to click the link
-      and gain further insight.
-    - Try mixing it up for added difficulty. Go low level and avoid using other
-      array methods. Can it be done without for loops?
-    - ONWARDS!
+  Description:
+  The indexOf() method returns the first index at which a given element
+  can be found in the array, or -1 if it is not present.
 
-    Description:
-    The indexOf() method returns the first index at which a given element
-    can be found in the array, or -1 if it is not present.
-    
-    Syntax:
-    indexOf(array, searchElement[, fromIndex])
+  Syntax:
+  indexOf(array, searchElement[, fromIndex])
 
-    Link to docs https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexof
- */
+  Link to docs https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexof
+*/
 
 function indexOf(/*function parameters*/) {
   
@@ -61,7 +60,7 @@ describe("specs to recreate indexOf array method", () => {
       const actual = indexOf(["a", "b", "c"], "b", -5);
       assert.equal(expected, actual);
     });
-  })
+  });
   describe("indexOf parameters", ()=>{
     it("throws an error if the first argument is a number", () => {
       assert.throws(() => indexOf(47, 2), TypeError);
