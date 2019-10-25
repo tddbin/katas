@@ -1,0 +1,39 @@
+{
+  "items": [
+    {
+      "name": "indexOf()",
+      "description": "The indexOf() method returns the first index at which a given element can be found in the array",
+      "path": "array-api/indexOf",
+      "level": "BEGINNER",
+      "requiresKnowledgeFrom": [],
+      "links": [
+        {
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexof",
+          "comment": "Very detailed description of how indexOf() works.",
+          "tags": [
+            "mdn",
+            "docs"
+          ]
+        },
+        {
+          "url": "https://www.ecma-international.org/ecma-262/5.1/#sec-15.4.4.14",
+          "comment": "The definition of \"Array.prototype.indexOf\" in ECMAScript 5.1 (ECMA-262) specification.",
+          "tags": [
+            "spec"
+          ]
+        },
+        {
+          "url": "https://twitter.com/wolframkriesing/status/657161540525826048",
+          "comment": "Announcement of this kata on twitter.",
+          "tags": [
+            "announcement"
+          ]
+        }
+      ],
+      "groupName": "Array",
+      "groupNameSlug": "Array",
+      "publishDateRfc822": "Fri, 25 Oct 2019 17:00:00 GMT",
+      "id": 1
+    }
+  ]
+}
