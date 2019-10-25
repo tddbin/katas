@@ -34,7 +34,10 @@
       "path": "template-strings/multiline",
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [
-        1
+        {
+          "bundle": "es6/language",
+          "id": 1
+        }
       ],
       "links": [
         {
@@ -57,8 +60,14 @@
       "path": "template-strings/tagged",
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [
-        1,
-        18
+        {
+          "bundle": "es6/language",
+          "id": 1
+        },
+        {
+          "bundle": "es6/language",
+          "id": 18
+        }
       ],
       "links": [
         {
@@ -81,8 +90,14 @@
       "path": "template-strings/raw",
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [
-        1,
-        3
+        {
+          "bundle": "es6/language",
+          "id": 1
+        },
+        {
+          "bundle": "es6/language",
+          "id": 3
+        }
       ],
       "links": [
         {
@@ -123,8 +138,14 @@
       "path": "arrow-functions/binding",
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [
-        5,
-        22
+        {
+          "bundle": "es6/language",
+          "id": 5
+        },
+        {
+          "bundle": "es6/language",
+          "id": 22
+        }
       ],
       "groupName": "Arrow functions",
       "groupNameSlug": "Arrow_functions",
@@ -148,7 +169,10 @@
       "path": "block-scoping/const",
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [
-        7
+        {
+          "bundle": "es6/language",
+          "id": 7
+        }
       ],
       "groupName": "Block scope",
       "groupNameSlug": "Block_scope",
@@ -161,8 +185,14 @@
       "path": "object-literal/basics",
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [
-        8,
-        5
+        {
+          "bundle": "es6/language",
+          "id": 8
+        },
+        {
+          "bundle": "es6/language",
+          "id": 5
+        }
       ],
       "groupName": "Object literal",
       "groupNameSlug": "Object_literal",
@@ -175,9 +205,18 @@
       "path": "destructuring/array",
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [
-        7,
-        8,
-        1
+        {
+          "bundle": "es6/language",
+          "id": 7
+        },
+        {
+          "bundle": "es6/language",
+          "id": 8
+        },
+        {
+          "bundle": "es6/language",
+          "id": 1
+        }
       ],
       "groupName": "Destructuring",
       "groupNameSlug": "Destructuring",
@@ -190,8 +229,14 @@
       "path": "destructuring/string",
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [
-        8,
-        17
+        {
+          "bundle": "es6/language",
+          "id": 8
+        },
+        {
+          "bundle": "es6/language",
+          "id": 17
+        }
       ],
       "groupName": "Destructuring",
       "groupNameSlug": "Destructuring",
@@ -204,8 +249,14 @@
       "path": "destructuring/object",
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [
-        8,
-        9
+        {
+          "bundle": "es6/language",
+          "id": 8
+        },
+        {
+          "bundle": "es6/language",
+          "id": 9
+        }
       ],
       "groupName": "Destructuring",
       "groupNameSlug": "Destructuring",
@@ -218,9 +269,18 @@
       "path": "destructuring/defaults",
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [
-        8,
-        10,
-        12
+        {
+          "bundle": "es6/language",
+          "id": 8
+        },
+        {
+          "bundle": "es6/language",
+          "id": 10
+        },
+        {
+          "bundle": "es6/language",
+          "id": 12
+        }
       ],
       "groupName": "Destructuring",
       "groupNameSlug": "Destructuring",
@@ -233,9 +293,18 @@
       "path": "destructuring/parameters",
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [
-        10,
-        12,
-        5
+        {
+          "bundle": "es6/language",
+          "id": 10
+        },
+        {
+          "bundle": "es6/language",
+          "id": 12
+        },
+        {
+          "bundle": "es6/language",
+          "id": 5
+        }
       ],
       "groupName": "Destructuring",
       "groupNameSlug": "Destructuring",
@@ -248,11 +317,26 @@
       "path": "destructuring/rename",
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [
-        10,
-        12,
-        13,
-        8,
-        5
+        {
+          "bundle": "es6/language",
+          "id": 10
+        },
+        {
+          "bundle": "es6/language",
+          "id": 12
+        },
+        {
+          "bundle": "es6/language",
+          "id": 13
+        },
+        {
+          "bundle": "es6/language",
+          "id": 8
+        },
+        {
+          "bundle": "es6/language",
+          "id": 5
+        }
       ],
       "groupName": "Destructuring",
       "groupNameSlug": "Destructuring",
@@ -265,10 +349,18 @@
       "path": "object-literal/computed-properties",
       "level": "ADVANCED",
       "requiresKnowledgeFrom": [
-        8,
-        5,
-        9,
-        8
+        {
+          "bundle": "es6/language",
+          "id": 8
+        },
+        {
+          "bundle": "es6/language",
+          "id": 5
+        },
+        {
+          "bundle": "es6/language",
+          "id": 9
+        }
       ],
       "groupName": "Object literal",
       "groupNameSlug": "Object_literal",
@@ -281,8 +373,14 @@
       "path": "unicode/in-strings",
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [
-        8,
-        1
+        {
+          "bundle": "es6/language",
+          "id": 8
+        },
+        {
+          "bundle": "es6/language",
+          "id": 1
+        }
       ],
       "groupName": "Unicode",
       "groupNameSlug": "Unicode",
@@ -317,9 +415,18 @@
       "path": "spread/with-arrays",
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [
-        8,
-        10,
-        19
+        {
+          "bundle": "es6/language",
+          "id": 8
+        },
+        {
+          "bundle": "es6/language",
+          "id": 10
+        },
+        {
+          "bundle": "es6/language",
+          "id": 19
+        }
       ],
       "links": [
         {
@@ -342,9 +449,18 @@
       "path": "spread/with-strings",
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [
-        8,
-        10,
-        19
+        {
+          "bundle": "es6/language",
+          "id": 8
+        },
+        {
+          "bundle": "es6/language",
+          "id": 10
+        },
+        {
+          "bundle": "es6/language",
+          "id": 19
+        }
       ],
       "links": [
         {
@@ -538,7 +654,10 @@
       "path": "symbol/keyFor",
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [
-        35
+        {
+          "bundle": "es6/language",
+          "id": 35
+        }
       ],
       "groupName": "Symbol",
       "groupNameSlug": "Symbol",
@@ -562,8 +681,14 @@
       "path": "iterator/string",
       "level": "TBD",
       "requiresKnowledgeFrom": [
-        34,
-        37
+        {
+          "bundle": "es6/language",
+          "id": 34
+        },
+        {
+          "bundle": "es6/language",
+          "id": 37
+        }
       ],
       "groupName": "Iterator",
       "groupNameSlug": "Iterator",
@@ -587,12 +712,30 @@
       "path": "iterator/usages",
       "level": "EXPERT",
       "requiresKnowledgeFrom": [
-        7,
-        10,
-        12,
-        34,
-        39,
-        20
+        {
+          "bundle": "es6/language",
+          "id": 7
+        },
+        {
+          "bundle": "es6/language",
+          "id": 10
+        },
+        {
+          "bundle": "es6/language",
+          "id": 12
+        },
+        {
+          "bundle": "es6/language",
+          "id": 34
+        },
+        {
+          "bundle": "es6/language",
+          "id": 39
+        },
+        {
+          "bundle": "es6/language",
+          "id": 20
+        }
       ],
       "groupName": "Iterator",
       "groupNameSlug": "Iterator",
@@ -605,9 +748,18 @@
       "path": "array-api/entries",
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [
-        8,
-        29,
-        39
+        {
+          "bundle": "es6/language",
+          "id": 8
+        },
+        {
+          "bundle": "es6/language",
+          "id": 29
+        },
+        {
+          "bundle": "es6/language",
+          "id": 39
+        }
       ],
       "groupName": "Array API",
       "groupNameSlug": "Array_API",
@@ -620,10 +772,22 @@
       "path": "array-api/keys",
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [
-        8,
-        10,
-        29,
-        39
+        {
+          "bundle": "es6/language",
+          "id": 8
+        },
+        {
+          "bundle": "es6/language",
+          "id": 10
+        },
+        {
+          "bundle": "es6/language",
+          "id": 29
+        },
+        {
+          "bundle": "es6/language",
+          "id": 39
+        }
       ],
       "groupName": "Array API",
       "groupNameSlug": "Array_API",
@@ -636,9 +800,18 @@
       "path": "array-api/values",
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [
-        8,
-        10,
-        39
+        {
+          "bundle": "es6/language",
+          "id": 8
+        },
+        {
+          "bundle": "es6/language",
+          "id": 10
+        },
+        {
+          "bundle": "es6/language",
+          "id": 39
+        }
       ],
       "groupName": "Array API",
       "groupNameSlug": "Array_API",
@@ -662,7 +835,10 @@
       "path": "map/get",
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [
-        37
+        {
+          "bundle": "es6/language",
+          "id": 37
+        }
       ],
       "groupName": "Map",
       "groupNameSlug": "Map",
@@ -697,7 +873,10 @@
       "path": "set/add",
       "level": "TBD",
       "requiresKnowledgeFrom": [
-        47
+        {
+          "bundle": "es6/language",
+          "id": 47
+        }
       ],
       "groupName": "Set",
       "groupNameSlug": "Set",
@@ -710,10 +889,22 @@
       "path": "generator/creation",
       "level": "TBD",
       "requiresKnowledgeFrom": [
-        7,
-        8,
-        16,
-        22
+        {
+          "bundle": "es6/language",
+          "id": 7
+        },
+        {
+          "bundle": "es6/language",
+          "id": 8
+        },
+        {
+          "bundle": "es6/language",
+          "id": 16
+        },
+        {
+          "bundle": "es6/language",
+          "id": 22
+        }
       ],
       "links": [
         {
@@ -736,7 +927,10 @@
       "path": "generator/iterator",
       "level": "TBD",
       "requiresKnowledgeFrom": [
-        49
+        {
+          "bundle": "es6/language",
+          "id": 49
+        }
       ],
       "groupName": "Generator",
       "groupNameSlug": "Generator",
@@ -749,9 +943,18 @@
       "path": "generator/yield",
       "level": "TBD",
       "requiresKnowledgeFrom": [
-        7,
-        49,
-        50
+        {
+          "bundle": "es6/language",
+          "id": 7
+        },
+        {
+          "bundle": "es6/language",
+          "id": 49
+        },
+        {
+          "bundle": "es6/language",
+          "id": 50
+        }
       ],
       "links": [
         {
@@ -774,10 +977,22 @@
       "path": "generator/send-value",
       "level": "ADVANCED",
       "requiresKnowledgeFrom": [
-        7,
-        49,
-        50,
-        51
+        {
+          "bundle": "es6/language",
+          "id": 7
+        },
+        {
+          "bundle": "es6/language",
+          "id": 49
+        },
+        {
+          "bundle": "es6/language",
+          "id": 50
+        },
+        {
+          "bundle": "es6/language",
+          "id": 51
+        }
       ],
       "links": [
         {
@@ -799,11 +1014,26 @@
       "path": "map/initialize",
       "level": "ADVANCED",
       "requiresKnowledgeFrom": [
-        7,
-        8,
-        29,
-        44,
-        46
+        {
+          "bundle": "es6/language",
+          "id": 7
+        },
+        {
+          "bundle": "es6/language",
+          "id": 8
+        },
+        {
+          "bundle": "es6/language",
+          "id": 29
+        },
+        {
+          "bundle": "es6/language",
+          "id": 44
+        },
+        {
+          "bundle": "es6/language",
+          "id": 46
+        }
       ],
       "groupName": "Map",
       "groupNameSlug": "Map",
@@ -816,9 +1046,18 @@
       "path": "object-api/is",
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [
-        8,
-        7,
-        44
+        {
+          "bundle": "es6/language",
+          "id": 8
+        },
+        {
+          "bundle": "es6/language",
+          "id": 7
+        },
+        {
+          "bundle": "es6/language",
+          "id": 44
+        }
       ],
       "groupName": "Object API",
       "groupNameSlug": "Object_API",
@@ -842,11 +1081,26 @@
       "path": "generator/send-function",
       "level": "EXPERT",
       "requiresKnowledgeFrom": [
-        7,
-        49,
-        50,
-        51,
-        52
+        {
+          "bundle": "es6/language",
+          "id": 7
+        },
+        {
+          "bundle": "es6/language",
+          "id": 49
+        },
+        {
+          "bundle": "es6/language",
+          "id": 50
+        },
+        {
+          "bundle": "es6/language",
+          "id": 51
+        },
+        {
+          "bundle": "es6/language",
+          "id": 52
+        }
       ],
       "groupName": "Generator",
       "groupNameSlug": "Generator",
@@ -859,9 +1113,18 @@
       "path": "default-parameters/basics",
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [
-        7,
-        5,
-        1
+        {
+          "bundle": "es6/language",
+          "id": 7
+        },
+        {
+          "bundle": "es6/language",
+          "id": 5
+        },
+        {
+          "bundle": "es6/language",
+          "id": 1
+        }
       ],
       "groupName": "Default parameters",
       "groupNameSlug": "Default_parameters",
@@ -874,10 +1137,22 @@
       "path": "reflect/basics",
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [
-        7,
-        22,
-        25,
-        28
+        {
+          "bundle": "es6/language",
+          "id": 7
+        },
+        {
+          "bundle": "es6/language",
+          "id": 22
+        },
+        {
+          "bundle": "es6/language",
+          "id": 25
+        },
+        {
+          "bundle": "es6/language",
+          "id": 28
+        }
       ],
       "groupName": "Reflect",
       "groupNameSlug": "Reflect",
@@ -890,11 +1165,26 @@
       "path": "reflect/apply",
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [
-        7,
-        8,
-        22,
-        5,
-        31
+        {
+          "bundle": "es6/language",
+          "id": 7
+        },
+        {
+          "bundle": "es6/language",
+          "id": 8
+        },
+        {
+          "bundle": "es6/language",
+          "id": 22
+        },
+        {
+          "bundle": "es6/language",
+          "id": 5
+        },
+        {
+          "bundle": "es6/language",
+          "id": 31
+        }
       ],
       "links": [
         {
@@ -938,10 +1228,22 @@
       "path": "reflect/getprototypeof",
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [
-        7,
-        8,
-        22,
-        5
+        {
+          "bundle": "es6/language",
+          "id": 7
+        },
+        {
+          "bundle": "es6/language",
+          "id": 8
+        },
+        {
+          "bundle": "es6/language",
+          "id": 22
+        },
+        {
+          "bundle": "es6/language",
+          "id": 5
+        }
       ],
       "groupName": "Reflect",
       "groupNameSlug": "Reflect",
@@ -965,9 +1267,18 @@
       "path": "map/has",
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [
-        7,
-        44,
-        46
+        {
+          "bundle": "es6/language",
+          "id": 7
+        },
+        {
+          "bundle": "es6/language",
+          "id": 44
+        },
+        {
+          "bundle": "es6/language",
+          "id": 46
+        }
       ],
       "links": [
         {
@@ -989,10 +1300,22 @@
       "path": "string-api/includes",
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [
-        7,
-        8,
-        5,
-        57
+        {
+          "bundle": "es6/language",
+          "id": 7
+        },
+        {
+          "bundle": "es6/language",
+          "id": 8
+        },
+        {
+          "bundle": "es6/language",
+          "id": 5
+        },
+        {
+          "bundle": "es6/language",
+          "id": 57
+        }
       ],
       "links": [
         {
@@ -1022,10 +1345,22 @@
       "path": "set/delete",
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [
-        7,
-        8,
-        47,
-        48
+        {
+          "bundle": "es6/language",
+          "id": 7
+        },
+        {
+          "bundle": "es6/language",
+          "id": 8
+        },
+        {
+          "bundle": "es6/language",
+          "id": 47
+        },
+        {
+          "bundle": "es6/language",
+          "id": 48
+        }
       ],
       "links": [
         {
@@ -1047,14 +1382,38 @@
       "path": "set/api",
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [
-        7,
-        8,
-        29,
-        47,
-        48,
-        64,
-        5,
-        20
+        {
+          "bundle": "es6/language",
+          "id": 7
+        },
+        {
+          "bundle": "es6/language",
+          "id": 8
+        },
+        {
+          "bundle": "es6/language",
+          "id": 29
+        },
+        {
+          "bundle": "es6/language",
+          "id": 47
+        },
+        {
+          "bundle": "es6/language",
+          "id": 48
+        },
+        {
+          "bundle": "es6/language",
+          "id": 64
+        },
+        {
+          "bundle": "es6/language",
+          "id": 5
+        },
+        {
+          "bundle": "es6/language",
+          "id": 20
+        }
       ],
       "links": [
         {
@@ -1084,9 +1443,18 @@
       "path": "object-literal/getter",
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [
-        8,
-        9,
-        16
+        {
+          "bundle": "es6/language",
+          "id": 8
+        },
+        {
+          "bundle": "es6/language",
+          "id": 9
+        },
+        {
+          "bundle": "es6/language",
+          "id": 16
+        }
       ],
       "links": [
         {
@@ -1123,10 +1491,22 @@
       "path": "object-literal/setter",
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [
-        7,
-        8,
-        9,
-        16
+        {
+          "bundle": "es6/language",
+          "id": 7
+        },
+        {
+          "bundle": "es6/language",
+          "id": 8
+        },
+        {
+          "bundle": "es6/language",
+          "id": 9
+        },
+        {
+          "bundle": "es6/language",
+          "id": 16
+        }
       ],
       "links": [
         {
@@ -1220,11 +1600,26 @@
       "path": "reflect/defineproperty",
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [
-        8,
-        7,
-        22,
-        34,
-        35
+        {
+          "bundle": "es6/language",
+          "id": 8
+        },
+        {
+          "bundle": "es6/language",
+          "id": 7
+        },
+        {
+          "bundle": "es6/language",
+          "id": 22
+        },
+        {
+          "bundle": "es6/language",
+          "id": 34
+        },
+        {
+          "bundle": "es6/language",
+          "id": 35
+        }
       ],
       "links": [
         {
@@ -1261,11 +1656,26 @@
       "path": "set/clear",
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [
-        8,
-        7,
-        47,
-        48,
-        12
+        {
+          "bundle": "es6/language",
+          "id": 8
+        },
+        {
+          "bundle": "es6/language",
+          "id": 7
+        },
+        {
+          "bundle": "es6/language",
+          "id": 47
+        },
+        {
+          "bundle": "es6/language",
+          "id": 48
+        },
+        {
+          "bundle": "es6/language",
+          "id": 12
+        }
       ],
       "links": [
         {
@@ -1302,9 +1712,18 @@
       "path": "string-api/repeat",
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [
-        7,
-        8,
-        22
+        {
+          "bundle": "es6/language",
+          "id": 7
+        },
+        {
+          "bundle": "es6/language",
+          "id": 8
+        },
+        {
+          "bundle": "es6/language",
+          "id": 22
+        }
       ],
       "links": [
         {
@@ -1348,11 +1767,26 @@
       "path": "string-api/startswith",
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [
-        7,
-        8,
-        18,
-        20,
-        5
+        {
+          "bundle": "es6/language",
+          "id": 7
+        },
+        {
+          "bundle": "es6/language",
+          "id": 8
+        },
+        {
+          "bundle": "es6/language",
+          "id": 18
+        },
+        {
+          "bundle": "es6/language",
+          "id": 20
+        },
+        {
+          "bundle": "es6/language",
+          "id": 5
+        }
       ],
       "links": [
         {
@@ -1382,14 +1816,38 @@
       "path": "generator/return",
       "level": "ADVANCED",
       "requiresKnowledgeFrom": [
-        8,
-        51,
-        52,
-        50,
-        49,
-        12,
-        29,
-        39
+        {
+          "bundle": "es6/language",
+          "id": 8
+        },
+        {
+          "bundle": "es6/language",
+          "id": 51
+        },
+        {
+          "bundle": "es6/language",
+          "id": 52
+        },
+        {
+          "bundle": "es6/language",
+          "id": 50
+        },
+        {
+          "bundle": "es6/language",
+          "id": 49
+        },
+        {
+          "bundle": "es6/language",
+          "id": 12
+        },
+        {
+          "bundle": "es6/language",
+          "id": 29
+        },
+        {
+          "bundle": "es6/language",
+          "id": 39
+        }
       ],
       "links": [
         {
@@ -1420,10 +1878,22 @@
       "path": "string-api/endswith",
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [
-        8,
-        5,
-        18,
-        20
+        {
+          "bundle": "es6/language",
+          "id": 8
+        },
+        {
+          "bundle": "es6/language",
+          "id": 5
+        },
+        {
+          "bundle": "es6/language",
+          "id": 18
+        },
+        {
+          "bundle": "es6/language",
+          "id": 20
+        }
       ],
       "links": [
         {
@@ -1473,10 +1943,22 @@
       "path": "promise/creation",
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [
-        8,
-        5,
-        75,
-        25
+        {
+          "bundle": "es6/language",
+          "id": 8
+        },
+        {
+          "bundle": "es6/language",
+          "id": 5
+        },
+        {
+          "bundle": "es6/language",
+          "id": 75
+        },
+        {
+          "bundle": "es6/language",
+          "id": 25
+        }
       ],
       "links": [
         {
@@ -1558,11 +2040,26 @@
       "path": "promise/chaining-then",
       "level": "ADVANCED",
       "requiresKnowledgeFrom": [
-        8,
-        5,
-        1,
-        75,
-        76
+        {
+          "bundle": "es6/language",
+          "id": 8
+        },
+        {
+          "bundle": "es6/language",
+          "id": 5
+        },
+        {
+          "bundle": "es6/language",
+          "id": 1
+        },
+        {
+          "bundle": "es6/language",
+          "id": 75
+        },
+        {
+          "bundle": "es6/language",
+          "id": 76
+        }
       ],
       "links": [
         {
@@ -1598,8 +2095,14 @@
       "path": "promise/api",
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [
-        75,
-        76
+        {
+          "bundle": "es6/language",
+          "id": 75
+        },
+        {
+          "bundle": "es6/language",
+          "id": 76
+        }
       ],
       "links": [],
       "groupName": "Promise",
@@ -1613,8 +2116,14 @@
       "path": "promise/catch",
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [
-        75,
-        76
+        {
+          "bundle": "es6/language",
+          "id": 75
+        },
+        {
+          "bundle": "es6/language",
+          "id": 76
+        }
       ],
       "links": [
         {
@@ -1704,8 +2213,14 @@
       "path": "number-api/parseInt",
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [
-        8,
-        5,
+        {
+          "bundle": "es6/language",
+          "id": 8
+        },
+        {
+          "bundle": "es6/language",
+          "id": 5
+        },
         {
           "bundle": "es1/language",
           "id": 3

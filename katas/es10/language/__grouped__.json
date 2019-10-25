@@ -28,7 +28,30 @@
           "path": "object-api/fromEntries-in-depth",
           "level": "EXPERT",
           "requiresKnowledgeFrom": [
-            1
+            {
+              "bundle": "es10/language",
+              "id": 1
+            },
+            {
+              "bundle": "es6/language",
+              "id": 8
+            },
+            {
+              "bundle": "es6/language",
+              "id": 44
+            },
+            {
+              "bundle": "es6/language",
+              "id": 47
+            },
+            {
+              "bundle": "es6/language",
+              "id": 5
+            },
+            {
+              "bundle": "es6/language",
+              "id": 34
+            }
           ],
           "publishDateUTC": "2019-06-25T19:55:00.000Z",
           "links": [

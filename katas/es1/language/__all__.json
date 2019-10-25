@@ -3,7 +3,7 @@
     {
       "name": "`[].sort()` basics",
       "description": "The `sort()` function sorts an array as if each element was a string.",
-      "path": "array/sort-basics",
+      "path": "array-api/sort-basics",
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [],
       "links": [
@@ -39,15 +39,15 @@
           ]
         }
       ],
-      "groupName": "Array",
-      "groupNameSlug": "Array",
+      "groupName": "Array API",
+      "groupNameSlug": "Array_API",
       "publishDateRfc822": "Thu, 22 Oct 2015 09:11:00 GMT",
       "id": 1
     },
     {
       "name": "`[].sort()` can take a compare function",
       "description": "Passing a callback to the `sort()` function, allows for any custom sorting.",
-      "path": "array/sort-with-function",
+      "path": "array-api/sort-with-function",
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [
         {
@@ -72,8 +72,8 @@
           ]
         }
       ],
-      "groupName": "Array",
-      "groupNameSlug": "Array",
+      "groupName": "Array API",
+      "groupNameSlug": "Array_API",
       "publishDateRfc822": "Fri, 23 Oct 2015 09:26:00 GMT",
       "id": 2
     },

@@ -1,11 +1,11 @@
 {
   "groups": {
-    "Array": {
+    "Array API": {
       "items": [
         {
           "name": "`[].sort()` basics",
           "description": "The `sort()` function sorts an array as if each element was a string.",
-          "path": "array/sort-basics",
+          "path": "array-api/sort-basics",
           "level": "BEGINNER",
           "requiresKnowledgeFrom": [],
           "publishDateUTC": "2015-10-22T09:11:00.000Z",
@@ -42,13 +42,13 @@
               ]
             }
           ],
-          "groupName": "Array",
+          "groupName": "Array API",
           "id": "1"
         },
         {
           "name": "`[].sort()` can take a compare function",
           "description": "Passing a callback to the `sort()` function, allows for any custom sorting.",
-          "path": "array/sort-with-function",
+          "path": "array-api/sort-with-function",
           "level": "INTERMEDIATE",
           "requiresKnowledgeFrom": [
             {
@@ -74,12 +74,12 @@
               ]
             }
           ],
-          "groupName": "Array",
+          "groupName": "Array API",
           "id": "2"
         }
       ],
-      "slug": "Array",
-      "name": "Array"
+      "slug": "Array_API",
+      "name": "Array API"
     },
     "Global Object API": {
       "items": [
