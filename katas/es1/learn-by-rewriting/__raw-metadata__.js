@@ -13,8 +13,8 @@ export const all = {
     'Array': {
       items: {
         [es1.ARRAY_INDEXOF.id]: {
-          name: 'indexOf()',
-          description: 'The indexOf() method returns the first index at which a given element can be found in the array',
+          name: '`indexOf()`',
+          description: 'The `indexOf()` method returns the first index at which a given element can be found in the array',
           path: 'array-api/indexOf',
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [],
