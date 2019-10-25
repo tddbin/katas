@@ -9,6 +9,7 @@
 # version 2
 - [ ] Fix names for various katas, many miss the "API" prefix, like "es6 " map, promise, set, ...
 - [ ] write kata for ES1 `parseInt()` in depth
+- [x] Build and deploy ES1-learn-by-rewriting katas - YEAH
 - [x] move ES1 array katas into directory `array-api` as ADR5 defines
 - [x] write kata for ES1 `parseInt()`
 - [x] write kata for ES6 `Number.parseInt()`
