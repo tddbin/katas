@@ -2,16 +2,20 @@ import {SKILL_LEVEL} from '../../skill-levels';
 import * as tag from '../../tags';
 import {toUtcDate}  from '../../date';
 import * as date from '../../date';
+import {es6} from '../../es6/language/__raw-metadata__.js';
 
-const OBJECT_FROMENTRIES = 1;
-const OBJECT_FROMENTRIES_IN_DEPTH = 2;
+const buildReferenceForId = id => ({bundle: 'es10/language', id});
+export const es10 = {
+  OBJECT_FROMENTRIES: buildReferenceForId(1),
+  OBJECT_FROMENTRIES_IN_DEPTH: buildReferenceForId(2),
+};
 
 export const all = {
   name: 'ES10 Katas',
   groups: {
     'Object API': {
       items: {
-        [OBJECT_FROMENTRIES]: {
+        [es10.OBJECT_FROMENTRIES.id]: {
           name: '`Object.fromEntries()`',
           description: '`Object.fromEntries()` converts key-value pairs into an object',
           path: 'object-api/fromEntries',
@@ -27,19 +31,19 @@ export const all = {
             },
           ],
         },
-        [OBJECT_FROMENTRIES_IN_DEPTH]: {
+        [es10.OBJECT_FROMENTRIES_IN_DEPTH.id]: {
           name: '`Object.fromEntries()` in depth',
           description: '`Object.fromEntries()` converts key-value pairs into an object',
           path: 'object-api/fromEntries-in-depth',
           level: SKILL_LEVEL.EXPERT,
           requiresKnowledgeFrom: [
-            OBJECT_FROMENTRIES,
-            // const
-            // Map
-            // Set
-            // Iterable
-            // arrow function
-            // Symbol
+            es10.OBJECT_FROMENTRIES,
+            es6.CONST,
+            es6.MAP_BASICS,
+            es6.SET_BASICS,
+            // es6.ITERABLE,
+            es6.ARROW_FUNCTION_BASICS,
+            es6.SYMBOL_BASICS,
           ],
           publishDateUTC: toUtcDate(2019, date.JUNE, 25, 19, 55),
           links: [

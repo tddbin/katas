@@ -4,108 +4,112 @@ import {toUtcDate}  from '../../date';
 import * as date from '../../date';
 import {es1} from '../../es1/language/__raw-metadata__.js';
 
-const TEMPLATE_STRING_BASICS = 1;
-const TEMPLATE_STRING_MULTILINE = 2;
-const TEMPLATE_STRING_TAGGED = 3;
-const TEMPLATE_STRING_RAW = 4;
-const ARROW_FUNCTION_BASICS = 5;
-const ARROW_FUNCTION_BINDING = 6;
-const LET = 7;
-const CONST = 8;
-const OBJECT_LITERAL_BASICS = 9;
-const DESTRUCTURING_ARRAY = 10;
+const buildReferenceForId = id => ({bundle: 'es6/language', id});
+export const es6 = {
+  TEMPLATE_STRING_BASICS: buildReferenceForId(1),
+  TEMPLATE_STRING_MULTILINE: buildReferenceForId(2),
+  TEMPLATE_STRING_TAGGED: buildReferenceForId(3),
+  TEMPLATE_STRING_RAW: buildReferenceForId(4),
+  ARROW_FUNCTION_BASICS: buildReferenceForId(5),
+  ARROW_FUNCTION_BINDING: buildReferenceForId(6),
+  LET: buildReferenceForId(7),
+  CONST: buildReferenceForId(8),
+  OBJECT_LITERAL_BASICS: buildReferenceForId(9),
+  DESTRUCTURING_ARRAY: buildReferenceForId(10),
 
-const DESTRUCTURING_STRING = 11;
-const DESTRUCTURING_OBJECT = 12;
-const DESTRUCTURING_DEFAULTS = 13;
-const DESTRUCTURING_PARAMETERS = 14;
-const DESTRUCTURING_ASSIGN = 15;
-const OBJECT_LITERAL_COMPUTED_PROPERTIES = 16;
-const UNICODE_IN_STRINGS = 17;
-const REST_OPERATOR_AS_PARAMETER = 18;
-const REST_OPERATOR_WITH_DESTRUCTURING = 19;
+  DESTRUCTURING_STRING: buildReferenceForId(11),
+  DESTRUCTURING_OBJECT: buildReferenceForId(12),
+  DESTRUCTURING_DEFAULTS: buildReferenceForId(13),
+  DESTRUCTURING_PARAMETERS: buildReferenceForId(14),
+  DESTRUCTURING_ASSIGN: buildReferenceForId(15),
+  OBJECT_LITERAL_COMPUTED_PROPERTIES: buildReferenceForId(16),
+  UNICODE_IN_STRINGS: buildReferenceForId(17),
+  REST_OPERATOR_AS_PARAMETER: buildReferenceForId(18),
+  REST_OPERATOR_WITH_DESTRUCTURING: buildReferenceForId(19),
 
-const SPREAD_WITH_ARRAYS = 20;
-const SPREAD_WITH_STRINGS = 21;
-const CLASS_CREATION = 22;
-const CLASS_ACCESSORS = 23;
-const CLASS_STATIC = 24;
-const CLASS_EXTENDS = 25;
-const CLASS_MORE_EXTENDS = 26;
-const CLASS_SUPER_IN_METHOD = 27;
-const CLASS_SUPER_IN_CONSTRUCTOR = 28;
-const ARRAY_FROM = 29;
+  SPREAD_WITH_ARRAYS: buildReferenceForId(20),
+  SPREAD_WITH_STRINGS: buildReferenceForId(21),
+  CLASS_CREATION: buildReferenceForId(22),
+  CLASS_ACCESSORS: buildReferenceForId(23),
+  CLASS_STATIC: buildReferenceForId(24),
+  CLASS_EXTENDS: buildReferenceForId(25),
+  CLASS_MORE_EXTENDS: buildReferenceForId(26),
+  CLASS_SUPER_IN_METHOD: buildReferenceForId(27),
+  CLASS_SUPER_IN_CONSTRUCTOR: buildReferenceForId(28),
+  ARRAY_FROM: buildReferenceForId(29),
 
-const ARRAY_OF = 30;
-const ARRAY_FILL = 31;
-const ARRAY_FIND = 32;
-const ARRAY_FIND_INDEX = 33;
-const SYMBOL_BASICS = 34;
-const SYMBOL_FOR = 35;
-const SYMBOL_KEY_FOR = 36;
-const ITERATOR_ARRAY = 37;
-const ITERATOR_STRING = 38;
-const ITERATOR_PROTOCOL = 39;
+  ARRAY_OF: buildReferenceForId(30),
+  ARRAY_FILL: buildReferenceForId(31),
+  ARRAY_FIND: buildReferenceForId(32),
+  ARRAY_FIND_INDEX: buildReferenceForId(33),
+  SYMBOL_BASICS: buildReferenceForId(34),
+  SYMBOL_FOR: buildReferenceForId(35),
+  SYMBOL_KEY_FOR: buildReferenceForId(36),
+  ITERATOR_ARRAY: buildReferenceForId(37),
+  ITERATOR_STRING: buildReferenceForId(38),
+  ITERATOR_PROTOCOL: buildReferenceForId(39),
 
-const ITERATOR_USAGES = 40;
-const ARRAY_ENTRIES = 41;
-const ARRAY_KEYS = 42;
-const ARRAY_VALUES = 43;
-const MAP_BASICS = 44;
-const MAP_GET = 45;
-const MAP_SET = 46;
-const SET_BASICS = 47;
-const SET_ADD = 48;
-const GENERATOR_CREATION = 49;
+  ITERATOR_USAGES: buildReferenceForId(40),
+  ARRAY_ENTRIES: buildReferenceForId(41),
+  ARRAY_KEYS: buildReferenceForId(42),
+  ARRAY_VALUES: buildReferenceForId(43),
+  MAP_BASICS: buildReferenceForId(44),
+  MAP_GET: buildReferenceForId(45),
+  MAP_SET: buildReferenceForId(46),
+  SET_BASICS: buildReferenceForId(47),
+  SET_ADD: buildReferenceForId(48),
+  GENERATOR_CREATION: buildReferenceForId(49),
 
-const GENERATOR_ITERATOR = 50;
-const GENERATOR_YIELD = 51;
-const GENERATOR_SEND_VALUE = 52;
-const MAP_INITIALIZE = 53;
-const OBJECT_IS = 54;
-const NUMBER_ISINTEGER = 55;
-const GENERATOR_SEND_FUNCTION = 56;
-const DEFAULT_PARAMETERS_BASICS = 57;
-const REFLECT_BASICS = 58;
-const REFLECT_APPLY = 59;
+  GENERATOR_ITERATOR: buildReferenceForId(50),
+  GENERATOR_YIELD: buildReferenceForId(51),
+  GENERATOR_SEND_VALUE: buildReferenceForId(52),
+  MAP_INITIALIZE: buildReferenceForId(53),
+  OBJECT_IS: buildReferenceForId(54),
+  NUMBER_ISINTEGER: buildReferenceForId(55),
+  GENERATOR_SEND_FUNCTION: buildReferenceForId(56),
+  DEFAULT_PARAMETERS_BASICS: buildReferenceForId(57),
+  REFLECT_BASICS: buildReferenceForId(58),
+  REFLECT_APPLY: buildReferenceForId(59),
 
-const REFLECT_GET_PROTOTYPE_OF = 60;
-const MODULES_IMPORT = 61;
-const MAP_HAS = 62;
-const STRING_INCLUDES = 63;
-const SET_DELETE = 64;
-const SET_API = 65;
-const OBJECT_LITERAL_GETTER = 66;
-const OBJECT_LITERAL_SETTER = 67;
-const REFLECT_CONSTRUCT = 68;
-const REFLECT_DEFINEPROPERTY = 69;
+  REFLECT_GET_PROTOTYPE_OF: buildReferenceForId(60),
+  MODULES_IMPORT: buildReferenceForId(61),
+  MAP_HAS: buildReferenceForId(62),
+  STRING_INCLUDES: buildReferenceForId(63),
+  SET_DELETE: buildReferenceForId(64),
+  SET_API: buildReferenceForId(65),
+  OBJECT_LITERAL_GETTER: buildReferenceForId(66),
+  OBJECT_LITERAL_SETTER: buildReferenceForId(67),
+  REFLECT_CONSTRUCT: buildReferenceForId(68),
+  REFLECT_DEFINEPROPERTY: buildReferenceForId(69),
 
-const SET_CLEAR = 70;
-const STRING_REPEAT = 71;
-const STRING_STARTSWITH = 72;
-const GENERATOR_RETURN = 73;
-const STRING_ENDSWITH = 74;
-const PROMISE_BASICS = 75;
-const PROMISE_CREATION = 76;
-const PROMISE_CHAINING_THEN = 77;
-const PROMISE_API = 78;
-const PROMISE_CATCH = 79;
-const NUMBER_ISNAN = 80;
-const NUMBER_PARSEINT = 81;
+  SET_CLEAR: buildReferenceForId(70),
+  STRING_REPEAT: buildReferenceForId(71),
+  STRING_STARTSWITH: buildReferenceForId(72),
+  GENERATOR_RETURN: buildReferenceForId(73),
+  STRING_ENDSWITH: buildReferenceForId(74),
+  PROMISE_BASICS: buildReferenceForId(75),
+  PROMISE_CREATION: buildReferenceForId(76),
+  PROMISE_CHAINING_THEN: buildReferenceForId(77),
+  PROMISE_API: buildReferenceForId(78),
+  PROMISE_CATCH: buildReferenceForId(79),
 
-const PROMISE_CHAINING_AND_ERRORS = '??';
+  NUMBER_ISNAN: buildReferenceForId(80),
+  NUMBER_PARSEINT: buildReferenceForId(81),
+  // PROMISE_CHAINING_AND_ERRORS: buildReferenceForId('??'),
+};
 
 export const all = {
   name: 'ES6 Katas',
   groups: {
     'Template strings': {
       items: {
-        [TEMPLATE_STRING_BASICS]: {
+        [es6.TEMPLATE_STRING_BASICS.id]: {
           name: 'basics',
           description: 'A template string, is wrapped in backticks.',
           path: 'template-strings/basics',
           level: SKILL_LEVEL.BEGINNER,
-          requiresKnowledgeFrom: [],
+          requiresKnowledgeFrom: [
+          ],
           publishDateUTC: new Date(Date.UTC(2015, date.MARCH, 13, 7, 55)),
           links: [
             {
@@ -120,13 +124,13 @@ export const all = {
             }
           ]
         },
-        [TEMPLATE_STRING_MULTILINE]: {
+        [es6.TEMPLATE_STRING_MULTILINE.id]: {
           name: 'multiline',
           description: 'Template strings, can be multiline.',
           path: 'template-strings/multiline',
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [
-            TEMPLATE_STRING_BASICS
+            es6.TEMPLATE_STRING_BASICS,
           ],
           publishDateUTC: new Date(Date.UTC(2015, date.MARCH, 16, 7, 55)),
           links: [
@@ -137,14 +141,14 @@ export const all = {
             }
           ]
         },
-        [TEMPLATE_STRING_TAGGED]: {
+        [es6.TEMPLATE_STRING_TAGGED.id]: {
           name: 'tagged template strings',
           description: 'Advanced form of template strings.',
           path: 'template-strings/tagged',
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [
-            TEMPLATE_STRING_BASICS,
-            REST_OPERATOR_AS_PARAMETER
+            es6.TEMPLATE_STRING_BASICS,
+            es6.REST_OPERATOR_AS_PARAMETER,
           ],
           publishDateUTC: new Date(Date.UTC(2015, date.MARCH, 17, 7, 55)),
           links: [
@@ -155,14 +159,14 @@ export const all = {
             }
           ]
         },
-        [TEMPLATE_STRING_RAW]: {
+        [es6.TEMPLATE_STRING_RAW.id]: {
           name: '`raw` property',
           description: 'The `raw` property accesses the string as it was entered.',
           path: 'template-strings/raw',
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [
-            TEMPLATE_STRING_BASICS,
-            TEMPLATE_STRING_TAGGED
+            es6.TEMPLATE_STRING_BASICS,
+            es6.TEMPLATE_STRING_TAGGED,
           ],
           publishDateUTC: new Date(Date.UTC(2015, date.MARCH, 18, 7, 55)),
           links: [
@@ -182,7 +186,7 @@ export const all = {
     },
     'Arrow functions': {
       items: {
-        [ARROW_FUNCTION_BASICS]: {
+        [es6.ARROW_FUNCTION_BASICS.id]: {
           name: 'basics',
           description: 'Arrow functions are a more convinient and shorter way to write a function.',
           path: 'arrow-functions/basics',
@@ -190,14 +194,14 @@ export const all = {
           requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.MARCH, 19, 7, 55))
         },
-        [ARROW_FUNCTION_BINDING]: {
+        [es6.ARROW_FUNCTION_BINDING.id]: {
           name: 'function binding',
           description: 'Arrow functions have lexical `this`, no dynamic `this`.',
           path: 'arrow-functions/binding',
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [
-            ARROW_FUNCTION_BASICS,
-            CLASS_CREATION
+            es6.ARROW_FUNCTION_BASICS,
+            es6.CLASS_CREATION,
           ],
           publishDateUTC: new Date(Date.UTC(2015, date.MARCH, 20, 7, 55))
         }
@@ -212,7 +216,7 @@ export const all = {
         }
       ],
       items: {
-        [LET]: {
+        [es6.LET.id]: {
           name: '`let` declaration',
           description: '`let` restricts the scope of the variable to the current block.',
           path: 'block-scoping/let',
@@ -220,13 +224,13 @@ export const all = {
           requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.MARCH, 23, 7, 55))
         },
-        [CONST]: {
+        [es6.CONST.id]: {
           name: '`const` declaration',
           description: '`const` is like `let` plus read-only.',
           path: 'block-scoping/const',
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [
-            LET
+            es6.LET,
           ],
           publishDateUTC: new Date(Date.UTC(2015, date.MARCH, 24, 7, 55))
         }
@@ -234,40 +238,39 @@ export const all = {
     },
     'Object literal': {
       items: {
-        [OBJECT_LITERAL_BASICS]: {
+        [es6.OBJECT_LITERAL_BASICS.id]: {
           name: 'basics',
           description: 'ES6 has new shorthands for objects.',
           path: 'object-literal/basics',
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [
-            CONST,
-            ARROW_FUNCTION_BASICS
+            es6.CONST,
+            es6.ARROW_FUNCTION_BASICS
           ],
           publishDateUTC: new Date(Date.UTC(2015, date.MARCH, 25, 7, 55))
         },
-        [OBJECT_LITERAL_COMPUTED_PROPERTIES]: {
+        [es6.OBJECT_LITERAL_COMPUTED_PROPERTIES.id]: {
           name: 'computed properties',
           description: 'Object literal properties may be computed values.',
           path: 'object-literal/computed-properties',
           level: SKILL_LEVEL.ADVANCED,
           requiresKnowledgeFrom: [
-            CONST,
-            ARROW_FUNCTION_BASICS,
-            OBJECT_LITERAL_BASICS,
-            CONST
+            es6.CONST,
+            es6.ARROW_FUNCTION_BASICS,
+            es6.OBJECT_LITERAL_BASICS,
             //OBJECT_LITERAL_GETTER
           ],
           publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 3, 7, 55))
         },
-        [OBJECT_LITERAL_GETTER]: {
+        [es6.OBJECT_LITERAL_GETTER.id]: {
           name: 'getter',
           description: 'A getter binds an object property to a function that will be called when that property is looked up.',
           path: 'object-literal/getter',
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [
-            CONST,
-            OBJECT_LITERAL_BASICS,
-            OBJECT_LITERAL_COMPUTED_PROPERTIES
+            es6.CONST,
+            es6.OBJECT_LITERAL_BASICS,
+            es6.OBJECT_LITERAL_COMPUTED_PROPERTIES
           ],
           publishDateUTC: new Date(Date.UTC(2015, date.JULY, 27, 8, 5)),
           links: [
@@ -288,15 +291,16 @@ export const all = {
             }
           ]
         },
-        [OBJECT_LITERAL_SETTER]: {
+        [es6.OBJECT_LITERAL_SETTER.id]: {
           name: 'setter',
           description: 'A setter binds an object property to a function to be called when there is an attempt to set that property.',
           path: 'object-literal/setter',
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [
-            LET, CONST,
-            OBJECT_LITERAL_BASICS,
-            OBJECT_LITERAL_COMPUTED_PROPERTIES
+            es6.LET,
+            es6.CONST,
+            es6.OBJECT_LITERAL_BASICS,
+            es6.OBJECT_LITERAL_COMPUTED_PROPERTIES,
           ],
           publishDateUTC: new Date(Date.UTC(2015, date.JULY, 28, 7, 57)),
           links: [
@@ -326,76 +330,76 @@ export const all = {
     },
     'Destructuring': {
       items: {
-        [DESTRUCTURING_ARRAY]: {
+        [es6.DESTRUCTURING_ARRAY.id]: {
           name: 'array',
           description: 'Destructuring arrays allows for more concise.',
           path: 'destructuring/array',
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [
-            LET,
-            CONST,
-            TEMPLATE_STRING_BASICS
+            es6.LET,
+            es6.CONST,
+            es6.TEMPLATE_STRING_BASICS,
             //FOR_OF
           ],
           publishDateUTC: new Date(Date.UTC(2015, date.MARCH, 26, 7, 55))
         },
-        [DESTRUCTURING_STRING]: {
+        [es6.DESTRUCTURING_STRING.id]: {
           name: 'string',
           description: 'Destructuring can also be done on strings.',
           path: 'destructuring/string',
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [
-            CONST,
-            UNICODE_IN_STRINGS
+            es6.CONST,
+            es6.UNICODE_IN_STRINGS
           ],
           publishDateUTC: new Date(Date.UTC(2015, date.MARCH, 27, 7, 55))
         },
-        [DESTRUCTURING_OBJECT]: {
+        [es6.DESTRUCTURING_OBJECT.id]: {
           name: 'object',
           description: 'Destructuring objects is a core concepts for modules and more.',
           path: 'destructuring/object',
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [
-            CONST,
-            OBJECT_LITERAL_BASICS
+            es6.CONST,
+            es6.OBJECT_LITERAL_BASICS
           ],
           publishDateUTC: new Date(Date.UTC(2015, date.MARCH, 30, 7, 55))
         },
-        [DESTRUCTURING_DEFAULTS]: {
+        [es6.DESTRUCTURING_DEFAULTS.id]: {
           name: 'defaults',
           description: 'When destructuring you can also use default values.',
           path: 'destructuring/defaults',
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [
-            CONST,
-            DESTRUCTURING_ARRAY,
-            DESTRUCTURING_OBJECT
+            es6.CONST,
+            es6.DESTRUCTURING_ARRAY,
+            es6.DESTRUCTURING_OBJECT,
           ],
           publishDateUTC: new Date(Date.UTC(2015, date.MARCH, 31, 7, 55))
         },
-        [DESTRUCTURING_PARAMETERS]: {
+        [es6.DESTRUCTURING_PARAMETERS.id]: {
           name: 'parameters',
           description: 'Destructuring function parameters.',
           path: 'destructuring/parameters',
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [
-            DESTRUCTURING_ARRAY,
-            DESTRUCTURING_OBJECT,
-            ARROW_FUNCTION_BASICS
+            es6.DESTRUCTURING_ARRAY,
+            es6.DESTRUCTURING_OBJECT,
+            es6.ARROW_FUNCTION_BASICS,
           ],
           publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 1, 7, 55))
         },
-        [DESTRUCTURING_ASSIGN]: {
+        [es6.DESTRUCTURING_ASSIGN.id]: {
           name: 'assign',
           description: 'Assign variables while destructuring.',
           path: 'destructuring/rename',
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [
-            DESTRUCTURING_ARRAY,
-            DESTRUCTURING_OBJECT,
-            DESTRUCTURING_DEFAULTS,
-            CONST,
-            ARROW_FUNCTION_BASICS
+            es6.DESTRUCTURING_ARRAY,
+            es6.DESTRUCTURING_OBJECT,
+            es6.DESTRUCTURING_DEFAULTS,
+            es6.CONST,
+            es6.ARROW_FUNCTION_BASICS,
           ],
           publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 2, 7, 55))
         }
@@ -403,14 +407,14 @@ export const all = {
     },
     'Unicode': {
       items: {
-        [UNICODE_IN_STRINGS]: {
+        [es6.UNICODE_IN_STRINGS.id]: {
           name: 'in strings',
           description: 'How to use unicode in strings.',
           path: 'unicode/in-strings',
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [
-            CONST,
-            TEMPLATE_STRING_BASICS
+            es6.CONST,
+            es6.TEMPLATE_STRING_BASICS,
           ],
           publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 6, 7, 55))
         }
@@ -418,7 +422,7 @@ export const all = {
     },
     'Rest operator': {
       items: {
-        [REST_OPERATOR_AS_PARAMETER]: {
+        [es6.REST_OPERATOR_AS_PARAMETER.id]: {
           name: 'as parameter',
           description: 'Use the rest operator as parameter.',
           path: 'rest/as-parameter',
@@ -426,7 +430,7 @@ export const all = {
           requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 7, 8, 15))
         },
-        [REST_OPERATOR_WITH_DESTRUCTURING]: {
+        [es6.REST_OPERATOR_WITH_DESTRUCTURING.id]: {
           name: 'with destructuring',
           description: 'Use the rest operator with destructuring.',
           path: 'rest/with-destructuring',
@@ -438,16 +442,16 @@ export const all = {
     },
     'Spread operator': {
       items: {
-        [SPREAD_WITH_ARRAYS]: {
+        [es6.SPREAD_WITH_ARRAYS.id]: {
           name: 'with arrays',
           description: 'Spread syntax in use with arrays.',
           path: 'spread/with-arrays',
           level: SKILL_LEVEL.INTERMEDIATE,
           publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 10, 8, 18)),
           requiresKnowledgeFrom: [
-            CONST,
-            DESTRUCTURING_ARRAY,
-            REST_OPERATOR_WITH_DESTRUCTURING,
+            es6.CONST,
+            es6.DESTRUCTURING_ARRAY,
+            es6.REST_OPERATOR_WITH_DESTRUCTURING,
           ],
           links: [
             {
@@ -457,16 +461,16 @@ export const all = {
             },
           ],
         },
-        [SPREAD_WITH_STRINGS]: {
+        [es6.SPREAD_WITH_STRINGS.id]: {
           name: 'with strings',
           description: 'Spread syntax in use with strings.',
           path: 'spread/with-strings',
           level: SKILL_LEVEL.INTERMEDIATE,
           publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 13, 7, 55)),
           requiresKnowledgeFrom: [
-            CONST,
-            DESTRUCTURING_ARRAY,
-            REST_OPERATOR_WITH_DESTRUCTURING,
+            es6.CONST,
+            es6.DESTRUCTURING_ARRAY,
+            es6.REST_OPERATOR_WITH_DESTRUCTURING,
           ],
           links: [
             {
@@ -480,7 +484,7 @@ export const all = {
     },
     'Class': {
       items: {
-        [CLASS_CREATION]: {
+        [es6.CLASS_CREATION.id]: {
           name: 'creation',
           description: 'Create a class.',
           path: 'class/creation',
@@ -488,7 +492,7 @@ export const all = {
           requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 14, 7, 55))
         },
-        [CLASS_ACCESSORS]: {
+        [es6.CLASS_ACCESSORS.id]: {
           name: 'accessors',
           description: 'Getter+setters as class properties.',
           path: 'class/accessors',
@@ -496,7 +500,7 @@ export const all = {
           requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 15, 7, 56))
         },
-        [CLASS_STATIC]: {
+        [es6.CLASS_STATIC.id]: {
           name: 'static',
           description: 'Use of the static keyword inside a class.',
           path: 'class/static',
@@ -504,7 +508,7 @@ export const all = {
           requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 16, 7, 55))
         },
-        [CLASS_EXTENDS]: {
+        [es6.CLASS_EXTENDS.id]: {
           name: 'extends',
           description: 'How to do inheritance, using `extends`.',
           path: 'class/extends',
@@ -512,7 +516,7 @@ export const all = {
           requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 17, 8, 25))
         },
-        [CLASS_MORE_EXTENDS]: {
+        [es6.CLASS_MORE_EXTENDS.id]: {
           name: 'more extends',
           description: 'More in depth `extends` stuff',
           path: 'class/more-extends',
@@ -520,7 +524,7 @@ export const all = {
           requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 20, 7, 55))
         },
-        [CLASS_SUPER_IN_METHOD]: {
+        [es6.CLASS_SUPER_IN_METHOD.id]: {
           name: 'super in method',
           description: 'Use of `super` inside a method.',
           path: 'class/super-in-method',
@@ -528,7 +532,7 @@ export const all = {
           requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 21, 7, 55))
         },
-        [CLASS_SUPER_IN_CONSTRUCTOR]: {
+        [es6.CLASS_SUPER_IN_CONSTRUCTOR.id]: {
           name: 'super in constructor',
           description: 'Use of `super` inside the constructor.',
           path: 'class/super-in-constructor',
@@ -540,7 +544,7 @@ export const all = {
     },
     'Array API': {
       items: {
-        [ARRAY_FROM]: {
+        [es6.ARRAY_FROM.id]: {
           name: '`Array.from()`',
           description: 'Convert a not-array into an array.',
           path: 'array-api/from',
@@ -548,7 +552,7 @@ export const all = {
           requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 23, 8, 32))
         },
-        [ARRAY_OF]: {
+        [es6.ARRAY_OF.id]: {
           name: '`Array.of()`',
           description: '`Array.of` creates an array with the given arguments as elements.',
           path: 'array-api/of',
@@ -556,7 +560,7 @@ export const all = {
           requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 27, 8, 9))
         },
-        [ARRAY_FILL]: {
+        [es6.ARRAY_FILL.id]: {
           name: '`[].fill()`',
           description: '`[].fill` can fill up an array with one value.',
           path: 'array-api/fill',
@@ -576,7 +580,7 @@ export const all = {
             }
           ]
         },
-        [ARRAY_FIND]: {
+        [es6.ARRAY_FIND.id]: {
           name: '`[].find()`',
           description: '`[].find` makes finding items in arrays easier.',
           path: 'array-api/find',
@@ -584,7 +588,7 @@ export const all = {
           requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 29, 7, 55))
         },
-        [ARRAY_FIND_INDEX]: {
+        [es6.ARRAY_FIND_INDEX.id]: {
           name: '`[].findIndex()`',
           description: '`[].findIndex` makes finding items in arrays easier.',
           path: 'array-api/findIndex',
@@ -592,31 +596,41 @@ export const all = {
           requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.MAY, 4, 8, 1))
         },
-        [ARRAY_ENTRIES]: {
+        [es6.ARRAY_ENTRIES.id]: {
           name: '`[].entries()`',
           description: '`[].entries()` returns an iterator object with all entries.',
           path: 'array-api/entries',
           level: SKILL_LEVEL.INTERMEDIATE,
-          requiresKnowledgeFrom: [CONST, ARRAY_FROM, ITERATOR_PROTOCOL
+          requiresKnowledgeFrom: [
+            es6.CONST,
+            es6.ARRAY_FROM,
+            es6.ITERATOR_PROTOCOL,
           ],
           publishDateUTC: new Date(Date.UTC(2015, date.MAY, 18, 8, 6))
 
         },
-        [ARRAY_KEYS]: {
+        [es6.ARRAY_KEYS.id]: {
           name: '`[].keys()`',
           description: '`[].keys()` returns an iterator for all keys in the array.',
           path: 'array-api/keys',
           level: SKILL_LEVEL.INTERMEDIATE,
-          requiresKnowledgeFrom: [CONST, DESTRUCTURING_ARRAY, ARRAY_FROM, ITERATOR_PROTOCOL
+          requiresKnowledgeFrom: [
+            es6.CONST,
+            es6.DESTRUCTURING_ARRAY,
+            es6.ARRAY_FROM,
+            es6.ITERATOR_PROTOCOL,
           ],
           publishDateUTC: new Date(Date.UTC(2015, date.MAY, 19, 7, 55))
         },
-        [ARRAY_VALUES]: {
+        [es6.ARRAY_VALUES.id]: {
           name: '`[].values()`',
           description: '`[].values()` returns an iterator for all values in the array',
           path: 'array-api/values',
           level: SKILL_LEVEL.INTERMEDIATE,
-          requiresKnowledgeFrom: [CONST, DESTRUCTURING_ARRAY, ITERATOR_PROTOCOL
+          requiresKnowledgeFrom: [
+            es6.CONST,
+            es6.DESTRUCTURING_ARRAY,
+            es6.ITERATOR_PROTOCOL,
           ],
           publishDateUTC: new Date(Date.UTC(2015, date.MAY, 20, 7, 55))
         }
@@ -624,7 +638,7 @@ export const all = {
     },
     'Symbol': {
       items: {
-        [SYMBOL_BASICS]: {
+        [es6.SYMBOL_BASICS.id]: {
           name: 'basics',
           description: 'Symbol basics.',
           path: 'symbol/basics',
@@ -632,7 +646,7 @@ export const all = {
           requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.MAY, 5, 11, 21))
         },
-        [SYMBOL_FOR]: {
+        [es6.SYMBOL_FOR.id]: {
           name: '`Symbol.for()`',
           description: '`Symbol.for()` for registering Symbols globally.',
           path: 'symbol/for',
@@ -640,13 +654,13 @@ export const all = {
           requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.MAY, 6, 7, 55))
         },
-        [SYMBOL_KEY_FOR]: {
+        [es6.SYMBOL_KEY_FOR.id]: {
           name: '`Symbol.keyFor()`',
           description: '`Symbol.keyFor()` gets the symbol key for a given symbol.',
           path: 'symbol/keyFor',
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [
-            SYMBOL_FOR
+            es6.SYMBOL_FOR,
           ],
           publishDateUTC: new Date(Date.UTC(2015, date.MAY, 7, 8, 9))
         }
@@ -654,7 +668,7 @@ export const all = {
     },
     'Iterator': {
       items: {
-        [ITERATOR_ARRAY]: {
+        [es6.ITERATOR_ARRAY.id]: {
           name: 'array',
           description: '',
           path: 'iterator/array',
@@ -662,18 +676,18 @@ export const all = {
           requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.MAY, 8, 7, 55))
         },
-        [ITERATOR_STRING]: {
+        [es6.ITERATOR_STRING.id]: {
           name: 'string',
           description: '',
           path: 'iterator/string',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: [
-            SYMBOL_BASICS,
-            ITERATOR_ARRAY
+            es6.SYMBOL_BASICS,
+            es6.ITERATOR_ARRAY,
           ],
           publishDateUTC: new Date(Date.UTC(2015, date.MAY, 11, 7, 55))
         },
-        [ITERATOR_PROTOCOL]: {
+        [es6.ITERATOR_PROTOCOL.id]: {
           name: 'protocol',
           description: '',
           path: 'iterator/protocol',
@@ -681,17 +695,18 @@ export const all = {
           requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.MAY, 12, 7, 55))
         },
-        [ITERATOR_USAGES]: {
+        [es6.ITERATOR_USAGES.id]: {
           name: 'usage',
           description: '',
           path: 'iterator/usages',
           level: SKILL_LEVEL.EXPERT,
           requiresKnowledgeFrom: [
-            LET,
-            DESTRUCTURING_ARRAY, DESTRUCTURING_OBJECT,
-            SYMBOL_BASICS,
-            ITERATOR_PROTOCOL,
-            SPREAD_WITH_ARRAYS
+            es6.LET,
+            es6.DESTRUCTURING_ARRAY,
+            es6.DESTRUCTURING_OBJECT,
+            es6.SYMBOL_BASICS,
+            es6.ITERATOR_PROTOCOL,
+            es6.SPREAD_WITH_ARRAYS,
           ],
           publishDateUTC: new Date(Date.UTC(2015, date.MAY, 13, 8, 17))
         }
@@ -699,7 +714,7 @@ export const all = {
     },
     'Map': {
       items: {
-        [MAP_BASICS]: {
+        [es6.MAP_BASICS.id]: {
           name: 'Basics',
           description: '',
           path: 'map/basics',
@@ -707,16 +722,17 @@ export const all = {
           requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.MAY, 21, 7, 55))
         },
-        [MAP_GET]: {
+        [es6.MAP_GET.id]: {
           name: '`map.get()`',
           description: '',
           path: 'map/get',
           level: SKILL_LEVEL.INTERMEDIATE,
-          requiresKnowledgeFrom: [ITERATOR_ARRAY
+          requiresKnowledgeFrom: [
+            es6.ITERATOR_ARRAY,
           ],
           publishDateUTC: new Date(Date.UTC(2015, date.MAY, 22, 7, 55))
         },
-        [MAP_SET]: {
+        [es6.MAP_SET.id]: {
           name: '`map.set()`',
           description: '',
           path: 'map/set',
@@ -724,27 +740,29 @@ export const all = {
           requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.MAY, 26, 8, 3))
         },
-        [MAP_INITIALIZE]: {
+        [es6.MAP_INITIALIZE.id]: {
           name: 'initialize',
           description: 'Initializing a map with values.',
           path: 'map/initialize',
           level: SKILL_LEVEL.ADVANCED,
           requiresKnowledgeFrom: [
-            LET, CONST,
-            ARRAY_FROM,
-            MAP_BASICS, MAP_SET
+            es6.LET,
+            es6.CONST,
+            es6.ARRAY_FROM,
+            es6.MAP_BASICS,
+            es6.MAP_SET,
           ],
           publishDateUTC: new Date(Date.UTC(2015, date.JUNE, 22, 11, 56))
         },
-        [MAP_HAS]: {
+        [es6.MAP_HAS.id]: {
           name: '`map.has()`',
           description: 'Indicates whether an element with a key exists.',
           path: 'map/has',
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [
-            LET,
-            MAP_BASICS,
-            MAP_SET
+            es6.LET,
+            es6.MAP_BASICS,
+            es6.MAP_SET,
             //MAP_DELETE
           ],
           publishDateUTC: new Date(Date.UTC(2015, date.JULY, 10, 8, 9)),
@@ -760,7 +778,7 @@ export const all = {
     },
     'Set': {
       items: {
-        [SET_BASICS]: {
+        [es6.SET_BASICS.id]: {
           name: 'basics',
           description: '',
           path: 'set/basics',
@@ -768,25 +786,26 @@ export const all = {
           requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.MAY, 27, 10, 12))
         },
-        [SET_ADD]: {
+        [es6.SET_ADD.id]: {
           name: '`set.add()`',
           description: 'Appends a new element to the end of a Set object.',
           path: 'set/add',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: [
-            SET_BASICS
+            es6.SET_BASICS,
           ],
           publishDateUTC: new Date(Date.UTC(2015, date.MAY, 29, 6, 55))
         },
-        [SET_DELETE]: {
+        [es6.SET_DELETE.id]: {
           name: '`set.delete()`',
           description: 'Removes an element from a set.',
           path: 'set/delete',
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [
-            LET, CONST,
-            SET_BASICS,
-            SET_ADD
+            es6.LET,
+            es6.CONST,
+            es6.SET_BASICS,
+            es6.SET_ADD,
           ],
           publishDateUTC: new Date(Date.UTC(2015, date.JULY, 15, 16, 12)),
           links: [
@@ -797,18 +816,21 @@ export const all = {
             }
           ]
         },
-        [SET_API]: {
+        [es6.SET_API.id]: {
           name: 'the API',
           description: '`Set` API overview.',
           path: 'set/api',
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [
-            LET, CONST,
-            ARRAY_FROM,
-            SET_BASICS, SET_ADD, SET_DELETE,
+            es6.LET,
+            es6.CONST,
+            es6.ARRAY_FROM,
+            es6.SET_BASICS,
+            es6.SET_ADD,
+            es6.SET_DELETE,
             // SET_SIZE, SET_CLEAR, SET_ENTRIES, SET_HAS, SET_KEYS, SET_VALUES, SET_ITERATOR
-            ARROW_FUNCTION_BASICS,
-            SPREAD_WITH_ARRAYS
+            es6.ARROW_FUNCTION_BASICS,
+            es6.SPREAD_WITH_ARRAYS,
           ],
           publishDateUTC: new Date(Date.UTC(2015, date.JULY, 16, 8, 24)),
           links: [
@@ -824,15 +846,17 @@ export const all = {
             }
           ]
         },
-        [SET_CLEAR]: {
+        [es6.SET_CLEAR.id]: {
           name: '`set.clear()`',
           description: 'Removes all elements from a Set object.',
           path: 'set/clear',
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [
-            CONST, LET,
-            SET_BASICS, SET_ADD,
-            DESTRUCTURING_OBJECT
+            es6.CONST,
+            es6.LET,
+            es6.SET_BASICS,
+            es6.SET_ADD,
+            es6.DESTRUCTURING_OBJECT,
           ],
           publishDateUTC: new Date(Date.UTC(2015, date.AUGUST, 3, 8, 25)),
           links: [
@@ -879,16 +903,16 @@ export const all = {
         }
       ],
       items: {
-        [GENERATOR_CREATION]: {
+        [es6.GENERATOR_CREATION.id]: {
           name: 'creation',
           description: 'There are many ways to create a generator',
           path: 'generator/creation',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: [
-            LET,
-            CONST,
-            OBJECT_LITERAL_COMPUTED_PROPERTIES,
-            CLASS_CREATION
+            es6.LET,
+            es6.CONST,
+            es6.OBJECT_LITERAL_COMPUTED_PROPERTIES,
+            es6.CLASS_CREATION,
           ],
           publishDateUTC: new Date(Date.UTC(2015, date.JUNE, 1, 8, 39)),
           links: [
@@ -899,25 +923,25 @@ export const all = {
             }
           ]
         },
-        [GENERATOR_ITERATOR]: {
+        [es6.GENERATOR_ITERATOR.id]: {
           name: 'iterator',
           description: 'Generators return iterable objects',
           path: 'generator/iterator',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: [
-            GENERATOR_CREATION
+            es6.GENERATOR_CREATION,
           ],
           publishDateUTC: new Date(Date.UTC(2015, date.JUNE, 3, 7, 55))
         },
-        [GENERATOR_YIELD]: {
+        [es6.GENERATOR_YIELD.id]: {
           name: 'yield expressions',
           description: 'The yield keyword is used to pause and resume a generator function',
           path: 'generator/yield',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: [
-            LET,
-            GENERATOR_CREATION,
-            GENERATOR_ITERATOR
+            es6.LET,
+            es6.GENERATOR_CREATION,
+            es6.GENERATOR_ITERATOR,
           ],
           publishDateUTC: new Date(Date.UTC(2015, date.JUNE, 5, 8, 25)),
           links: [
@@ -928,16 +952,16 @@ export const all = {
             }
           ]
         },
-        [GENERATOR_SEND_VALUE]: {
+        [es6.GENERATOR_SEND_VALUE.id]: {
           name: 'send value to a generator',
           description: 'By calling next() with a parameter, you can pass a value to a generator.',
           path: 'generator/send-value',
           level: SKILL_LEVEL.ADVANCED,
           requiresKnowledgeFrom: [
-            LET,
-            GENERATOR_CREATION,
-            GENERATOR_ITERATOR,
-            GENERATOR_YIELD
+            es6.LET,
+            es6.GENERATOR_CREATION,
+            es6.GENERATOR_ITERATOR,
+            es6.GENERATOR_YIELD,
           ],
           publishDateUTC: new Date(Date.UTC(2015, date.JUNE, 18, 12, 7)),
           links: [
@@ -948,32 +972,34 @@ export const all = {
             }
           ]
         },
-        [GENERATOR_SEND_FUNCTION]: {
+        [es6.GENERATOR_SEND_FUNCTION.id]: {
           name: 'send function to a generator',
           description: 'By calling next() with a function, you can pass it to the generator.',
           path: 'generator/send-function',
           level: SKILL_LEVEL.EXPERT,
           requiresKnowledgeFrom: [
-            LET,
-            GENERATOR_CREATION,
-            GENERATOR_ITERATOR,
-            GENERATOR_YIELD,
-            GENERATOR_SEND_VALUE
+            es6.LET,
+            es6.GENERATOR_CREATION,
+            es6.GENERATOR_ITERATOR,
+            es6.GENERATOR_YIELD,
+            es6.GENERATOR_SEND_VALUE,
           ],
           publishDateUTC: new Date(Date.UTC(2015, date.JUNE, 29, 11, 49))
         },
-        [GENERATOR_RETURN]: {
+        [es6.GENERATOR_RETURN.id]: {
           name: '`return` inside a generator function',
           description: 'Return statement in a generator function is special.',
           path: 'generator/return',
           level: SKILL_LEVEL.ADVANCED,
           requiresKnowledgeFrom: [
-            CONST,
-            GENERATOR_YIELD, GENERATOR_SEND_VALUE,
-            GENERATOR_ITERATOR, GENERATOR_CREATION,
-            DESTRUCTURING_OBJECT,
-            ARRAY_FROM,
-            ITERATOR_PROTOCOL
+            es6.CONST,
+            es6.GENERATOR_YIELD,
+            es6.GENERATOR_SEND_VALUE,
+            es6.GENERATOR_ITERATOR,
+            es6.GENERATOR_CREATION,
+            es6.DESTRUCTURING_OBJECT,
+            es6.ARRAY_FROM,
+            es6.ITERATOR_PROTOCOL,
           ],
           publishDateUTC: new Date(Date.UTC(2015, date.SEPTEMBER, 25, 14, 45)),
           links: [
@@ -994,14 +1020,15 @@ export const all = {
 
     'Object API': {
       items: {
-        [OBJECT_IS]: {
+        [es6.OBJECT_IS.id]: {
           name: '`Object.is()`',
           description: '`Object.is()` compares if two values are the same.',
           path: 'object-api/is',
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [
-            CONST, LET,
-            MAP_BASICS
+            es6.CONST,
+            es6.LET,
+            es6.MAP_BASICS,
           ],
           publishDateUTC: new Date(Date.UTC(2015, date.JUNE, 24, 7, 55))
         }
@@ -1010,7 +1037,7 @@ export const all = {
 
     'Number API': {
       items: {
-        [NUMBER_ISINTEGER]: {
+        [es6.NUMBER_ISINTEGER.id]: {
           name: '`Number.isInteger()`',
           description: '`Number.isInteger()` determines if a value is an integer.',
           path: 'number-api/isinteger',
@@ -1018,7 +1045,7 @@ export const all = {
           requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.JUNE, 25, 7, 55)),
         },
-        [NUMBER_ISNAN]: {
+        [es6.NUMBER_ISNAN.id]: {
           name: '`Number.isNaN()`',
           description: '`Number.isNaN()` determines if a value is `NaN`.',
           path: 'number-api/isnan',
@@ -1053,12 +1080,16 @@ export const all = {
             },
           ],
         },
-        [NUMBER_PARSEINT]: {
+        [es6.NUMBER_PARSEINT.id]: {
           name: '`Number.parseInt()`',
           description: '`Number.parseInt()` parses a string and returns an integer.',
           path: 'number-api/parseInt',
           level: SKILL_LEVEL.BEGINNER,
-          requiresKnowledgeFrom: [CONST, ARROW_FUNCTION_BASICS, es1.GLOBAL_PARSEINT],
+          requiresKnowledgeFrom: [
+            es6.CONST,
+            es6.ARROW_FUNCTION_BASICS, 
+            es1.GLOBAL_PARSEINT
+          ],
           publishDateUTC: new Date(Date.UTC(2019, date.OCTOBER, 6, 17, 29)),
           links: [
             {
@@ -1088,15 +1119,15 @@ export const all = {
 
     'Default parameters': {
       items: {
-        [DEFAULT_PARAMETERS_BASICS]: {
+        [es6.DEFAULT_PARAMETERS_BASICS.id]: {
           name: 'Basics',
           description: 'Default parameters make function parameters more flexible.',
           path: 'default-parameters/basics',
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [
-            LET,
-            ARROW_FUNCTION_BASICS,
-            TEMPLATE_STRING_BASICS
+            es6.LET,
+            es6.ARROW_FUNCTION_BASICS,
+            es6.TEMPLATE_STRING_BASICS,
           ],
           publishDateUTC: new Date(Date.UTC(2015, date.JUNE, 30, 7, 55))
         }
@@ -1105,29 +1136,30 @@ export const all = {
 
     'Reflect': {
       items: {
-        [REFLECT_BASICS]: {
+        [es6.REFLECT_BASICS.id]: {
           name: 'Basics',
           description: '',
           path: 'reflect/basics',
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [
-            LET,
-            CLASS_CREATION,
-            CLASS_EXTENDS,
-            CLASS_SUPER_IN_CONSTRUCTOR
+            es6.LET,
+            es6.CLASS_CREATION,
+            es6.CLASS_EXTENDS,
+            es6.CLASS_SUPER_IN_CONSTRUCTOR,
           ],
           publishDateUTC: new Date(Date.UTC(2015, date.JULY, 2, 8, 23))
         },
-        [REFLECT_APPLY]: {
+        [es6.REFLECT_APPLY.id]: {
           name: '`Reflect.apply()`',
           description: 'Calls a target function with given scope and arguments.',
           path: 'reflect/apply',
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [
-            LET, CONST,
-            CLASS_CREATION,
-            ARROW_FUNCTION_BASICS,
-            ARRAY_FILL
+            es6.LET,
+            es6.CONST,
+            es6.CLASS_CREATION,
+            es6.ARROW_FUNCTION_BASICS,
+            es6.ARRAY_FILL,
           ],
           publishDateUTC: new Date(Date.UTC(2015, date.JULY, 3, 7, 55)),
           links: [
@@ -1153,20 +1185,20 @@ export const all = {
             },
           ],
         },
-        [REFLECT_GET_PROTOTYPE_OF]: {
+        [es6.REFLECT_GET_PROTOTYPE_OF.id]: {
           name: '`Reflect.getPrototypeOf()`',
           description: 'It returns the prototype of the given object.',
           path: 'reflect/getprototypeof',
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [
-            LET,
-            CONST,
-            CLASS_CREATION,
-            ARROW_FUNCTION_BASICS
+            es6.LET,
+            es6.CONST,
+            es6.CLASS_CREATION,
+            es6.ARROW_FUNCTION_BASICS,
           ],
           publishDateUTC: new Date(Date.UTC(2015, date.JULY, 8, 8, 14))
         },
-        [REFLECT_CONSTRUCT]: {
+        [es6.REFLECT_CONSTRUCT.id]: {
           name: '`Reflect.construct()`',
           description: 'The `new` operator as a function.',
           path: 'reflect/construct',
@@ -1202,15 +1234,17 @@ export const all = {
             },
           ],
         },
-        [REFLECT_DEFINEPROPERTY]: {
+        [es6.REFLECT_DEFINEPROPERTY.id]: {
           name: '`Reflect.defineProperty()`',
           description: 'Defines a property on a given object.',
           path: 'reflect/defineproperty',
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [
-            CONST, LET,
-            CLASS_CREATION,
-            SYMBOL_BASICS, SYMBOL_FOR
+            es6.CONST,
+            es6.LET,
+            es6.CLASS_CREATION,
+            es6.SYMBOL_BASICS,
+            es6.SYMBOL_FOR,
           ],
           publishDateUTC: new Date(Date.UTC(2015, date.JULY, 31, 8, 12)),
           links: [
@@ -1236,7 +1270,7 @@ export const all = {
 
     'Modules': {
       items: {
-        [MODULES_IMPORT]: {
+        [es6.MODULES_IMPORT.id]: {
           name: '`import` statement',
           description: 'Use `import` to import functions that have been exported somewhere else.',
           path: 'modules/import',
@@ -1249,16 +1283,16 @@ export const all = {
 
     'String API': {
       items: {
-        [STRING_INCLUDES]: {
+        [es6.STRING_INCLUDES.id]: {
           name: '`string.includes()`',
           description: 'Finds string within another string.',
           path: 'string-api/includes',
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [
-            LET,
-            CONST,
-            ARROW_FUNCTION_BASICS,
-            DEFAULT_PARAMETERS_BASICS,
+            es6.LET,
+            es6.CONST,
+            es6.ARROW_FUNCTION_BASICS,
+            es6.DEFAULT_PARAMETERS_BASICS,
           ],
           publishDateUTC: toUtcDate(2015, date.JULY, 14, 9, 29),
           links: [
@@ -1274,14 +1308,15 @@ export const all = {
             }
           ],
         },
-        [STRING_REPEAT]: {
+        [es6.STRING_REPEAT.id]: {
           name: '`string.repeat(count)`',
           description: 'Appends `count` copies of `string` to each other and returns it.',
           path: 'string-api/repeat',
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [
-            LET, CONST,
-            CLASS_CREATION
+            es6.LET,
+            es6.CONST,
+            es6.CLASS_CREATION,
           ],
           publishDateUTC: toUtcDate(2015, date.AUGUST, 7, 7, 55),
           links: [
@@ -1307,16 +1342,17 @@ export const all = {
             }
           ]
         },
-        [STRING_STARTSWITH]: {
+        [es6.STRING_STARTSWITH.id]: {
           name: '`string.startsWith()`',
           description: 'Determines whether a string begins with the characters of another string.',
           path: 'string-api/startswith',
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [
-            LET, CONST,
-            REST_OPERATOR_AS_PARAMETER,
-            SPREAD_WITH_ARRAYS,
-            ARROW_FUNCTION_BASICS
+            es6.LET,
+            es6.CONST,
+            es6.REST_OPERATOR_AS_PARAMETER,
+            es6.SPREAD_WITH_ARRAYS,
+            es6.ARROW_FUNCTION_BASICS,
           ],
           publishDateUTC: toUtcDate(2015, date.AUGUST, 26, 9, 42),
           links: [
@@ -1332,16 +1368,16 @@ export const all = {
             }
           ]
         },
-        [STRING_ENDSWITH]: {
+        [es6.STRING_ENDSWITH.id]: {
           name: '`string.endsWith()`',
           description: 'Determines whether a string begins with the characters of another string.',
           path: 'string-api/endswith',
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [
-            CONST,
-            ARROW_FUNCTION_BASICS,
-            REST_OPERATOR_AS_PARAMETER,
-            SPREAD_WITH_ARRAYS
+            es6.CONST,
+            es6.ARROW_FUNCTION_BASICS,
+            es6.REST_OPERATOR_AS_PARAMETER,
+            es6.SPREAD_WITH_ARRAYS,
           ],
           publishDateUTC: toUtcDate(2015, date.OCTOBER, 2, 7, 55),
           links: [
@@ -1374,7 +1410,7 @@ export const all = {
         },
       ],
       items: {
-        [PROMISE_BASICS]: {
+        [es6.PROMISE_BASICS.id]: {
           name: 'basics',
           description: 'A promise represents an operation that hasn`t completed yet, but is expected in the future.',
           path: 'promise/basics',
@@ -1389,15 +1425,16 @@ export const all = {
             }
           ]
         },
-        [PROMISE_CREATION]: {
+        [es6.PROMISE_CREATION.id]: {
           name: 'creation',
           description: 'A promise can be created in multiple ways, learn them all here.',
           path: 'promise/creation',
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [
-            CONST, ARROW_FUNCTION_BASICS,
-            PROMISE_BASICS,
-            CLASS_EXTENDS
+            es6.CONST,
+            es6.ARROW_FUNCTION_BASICS,
+            es6.PROMISE_BASICS,
+            es6.CLASS_EXTENDS,
           ],
           publishDateUTC: toUtcDate(2015, date.OCTOBER, 28, 14, 30),
           links: [
@@ -1448,15 +1485,17 @@ export const all = {
             }
           ]
         },
-        [PROMISE_CHAINING_THEN]: {
+        [es6.PROMISE_CHAINING_THEN.id]: {
           name: 'chaining `then()`',
           description: 'Chaining promises can enhance readability of asynchronous code.',
           path: 'promise/chaining-then',
           level: SKILL_LEVEL.ADVANCED,
           requiresKnowledgeFrom: [
-            CONST, ARROW_FUNCTION_BASICS,
-            TEMPLATE_STRING_BASICS,
-            PROMISE_BASICS, PROMISE_CREATION
+            es6.CONST,
+            es6.ARROW_FUNCTION_BASICS,
+            es6.TEMPLATE_STRING_BASICS,
+            es6.PROMISE_BASICS,
+            es6.PROMISE_CREATION,
           ],
           publishDateUTC: toUtcDate(2015, date.NOVEMBER, 10, 13, 30),
           links: [
@@ -1488,25 +1527,27 @@ export const all = {
         //   links: [
         //   ]
         // },
-        [PROMISE_API]: {
+        [es6.PROMISE_API.id]: {
           name: 'the API',
           description: '`Promise` API overview.',
           path: 'promise/api',
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [
-            PROMISE_BASICS, PROMISE_CREATION,
+            es6.PROMISE_BASICS,
+            es6.PROMISE_CREATION,
           ],
           publishDateUTC: toUtcDate(2015, date.MARCH, 15, 9, 30),
           links: [
           ]
         },
-        [PROMISE_CATCH]: {
+        [es6.PROMISE_CATCH.id]: {
           name: '`promise.catch()`',
           description: 'Returns a Promise and deals with rejected cases only.',
           path: 'promise/catch',
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [
-            PROMISE_BASICS, PROMISE_CREATION,
+            es6.PROMISE_BASICS,
+            es6.PROMISE_CREATION,
           ],
           publishDateUTC: toUtcDate(2015, date.MARCH, 15, 9, 30),
           links: [
@@ -1525,9 +1566,9 @@ export const all = {
               comment: 'The description of the actual flow of `catch`.',
               tags: [tag.SPECIFICATION]
             },
-          ]
+          ],
         },
-      }
-    }
-  }
+      },
+    },
+  },
 };

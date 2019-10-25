@@ -3,16 +3,20 @@ import * as tag from '../../tags';
 import {toUtcDate}  from '../../date';
 import * as date from '../../date';
 
-const ARRAY_INCLUDES = 1;
-const OBJECT_ENTRIES = 2;
-const OBJECT_VALUES = 3;
+const buildReferenceForId = id => ({bundle: 'es7/language', id});
+export const es7 = {
+  'ARRAY_INCLUDES': buildReferenceForId(1),
+  'OBJECT_ENTRIES': buildReferenceForId(2),
+  'OBJECT_VALUES': buildReferenceForId(3),
+};
+
 
 export const all = {
   name: 'ES7 Katas',
   groups: {
     'Array API': {
       items: {
-        [ARRAY_INCLUDES]: {
+        [es7.ARRAY_INCLUDES.id]: {
           name: '`[].includes()`',
           description: '',
           path: 'array-api/includes',
@@ -36,7 +40,7 @@ export const all = {
     },
     'Object API': {
       items: {
-        [OBJECT_ENTRIES]: {
+        [es7.OBJECT_ENTRIES.id]: {
           name: '`Object.entries()`',
           description: '',
           path: 'object-api/entries',
@@ -45,7 +49,7 @@ export const all = {
           // publishDateUTC: toUtcDate(2019, date.JUNE, 25, 19, 55),
           links: [],
         },
-        [OBJECT_VALUES]: {
+        [es7.OBJECT_VALUES.id]: {
           name: '`Object.values()`',
           description: '',
           path: 'object-api/values',

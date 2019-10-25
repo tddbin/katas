@@ -13,12 +13,12 @@ export const es1 = {
 export const all = {
   name: 'JavaScript Katas',
   groups: {
-    'Array': {
+    'Array API': {
       items: {
         [es1.ARRAY_SORT_BASICS.id]: {
           name: '`[].sort()` basics',
           description: 'The `sort()` function sorts an array as if each element was a string.',
-          path: 'array/sort-basics',
+          path: 'array-api/sort-basics',
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.OCTOBER, 22, 9, 11)),
@@ -48,7 +48,7 @@ export const all = {
         [es1.ARRAY_SORT_WITH_FUNCTION.id]: {
           name: '`[].sort()` can take a compare function',
           description: 'Passing a callback to the `sort()` function, allows for any custom sorting.',
-          path: 'array/sort-with-function',
+          path: 'array-api/sort-with-function',
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [
             es1.ARRAY_SORT_BASICS
@@ -112,5 +112,5 @@ export const all = {
         },
       },
     },
-  }
+  },
 };
