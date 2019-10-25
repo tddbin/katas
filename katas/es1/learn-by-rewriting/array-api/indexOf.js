@@ -65,7 +65,7 @@ describe("Implementing the `indexOf()` array method", () => {
     it("throws an error if the first argument is a number", () => {
       assert.throws(() => indexOf(47, 2), TypeError);
     });
-    it("parses fromIndex if it's a string containing a number", () => {
+    it("parses indexFrom if it's a string containing a number", () => {
       const expected = 1;
       const actual = indexOf(["a", "b", "c"], "b", "1");
       assert.equal(expected, actual);
