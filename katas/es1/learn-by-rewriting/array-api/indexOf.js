@@ -35,8 +35,8 @@ function indexOf(array, searchElement, fromIndex) {
   */
 }
 
-describe("specs to recreate indexOf array method", () => {
-  describe("indexOf functionality", ()=>{
+describe("Implementing the `indexOf()` array method", () => {
+  describe("it's functionality", ()=>{
     it("returns the index of the searched element in the array", () => {
       const expected = 2;
       const actual = indexOf(["a", "b", "c"], "c");
@@ -63,7 +63,7 @@ describe("specs to recreate indexOf array method", () => {
       assert.equal(expected, actual);
     });
   });
-  describe("indexOf parameters", ()=>{
+  describe("it's parameters", ()=>{
     it("throws an error if the first argument is a number", () => {
       assert.throws(() => indexOf(47, 2), TypeError);
     });
