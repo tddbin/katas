@@ -27,7 +27,10 @@
     Link to docs https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexof
  */
 
-function indexOf(/*function parameters*/) {
+////function indexOf(/*function parameters*/) {
+function indexOf(array, searchElement, fromIndex) {
+  ////
+  return array.indexOf(searchElement, fromIndex);  
   /*
     Your code goes here
   */
