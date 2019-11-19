@@ -8,7 +8,10 @@ export default class FlatMetaData {
 
 function buildMetaData(all) {
   const items = buildItems(extractAllItems(all));
-  return {items: items};
+  return {
+    name: all.name,
+    items: items
+  };
 }
 
 function extractAllItems(all) {

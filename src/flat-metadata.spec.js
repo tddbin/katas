@@ -10,16 +10,13 @@ describe('Build the "all meta data" (from the `__raw-metadata__.js` file)', func
   const firstGroupItems = firstGroup.items;
   const converted = (metadata = all) => FlatMetaData.to(metadata);
 
-  it('makes `items` key an array', () => 
-    assert.ok(Array.isArray(converted().items)));
-  
-  it('items are sorted by original object`s key (which is the ID)', function() {
-    const items = converted().items;
-    // use `path` to compare, since not all data stay the same
-    assert.strictEqual(items[0].path, firstGroupItems[1].path);
-    assert.strictEqual(items[1].path, firstGroupItems[2].path);
-    assert.strictEqual(items[2].path, firstGroupItems[3].path);
-  });
+  it('at the root it has the `name` as in the original data', () =>
+    assert.strictEqual(converted().name, all.name)
+  );
+
+  it('makes `items` key an array', () =>
+    assert.ok(Array.isArray(converted().items))
+  );
 
   describe('all katas in the `items` key', () => {
     it('items are sorted by original object`s key (which is the ID)', function() {
