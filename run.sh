@@ -14,10 +14,10 @@ CONTAINER_NAME=katas-container
 #stat ${mod_time_fmt} Dockerfile
 #docker inspect -f '{{ .Created }}' katas-image
 
-#if [[ $(docker inspect --format . ${IMAGE_NAME} 2>&1) != "." ]]; then
+if [[ $(docker inspect --format . ${IMAGE_NAME} 2>&1) != "." ]]; then
   echo "--- BUILDING image '${IMAGE_NAME}'---"
   docker build -t ${IMAGE_NAME} -f Dockerfile .
-#fi
+fi
 
 
 echo "--- RUNNING container '${CONTAINER_NAME}'---"
