@@ -1,3 +1,3 @@
 export function forGroupName(name) {
-  return name.replace(' ', '_');
+  return name.replace(' ', '-');
 }

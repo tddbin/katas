@@ -3,8 +3,8 @@ import {forGroupName} from './slug';
 
 describe('slug name is a string useable in a URL (only letters, numbers, _ and -)', function() {
   describe('for a group name', function() {
-    it('replace space by _', function() {
-      assert.equal(forGroupName('a b'), 'a_b');
+    it('replace space by -', function() {
+      assert.strictEqual(forGroupName('a b'), 'a-b');
     });
   });
 });
