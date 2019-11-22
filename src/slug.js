@@ -1,4 +1,4 @@
-export function forGroupName(name) {
+export function stringToSlug(name) {
   return name
     .toLowerCase()
     .replace(/\s+/g , '-')

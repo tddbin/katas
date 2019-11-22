@@ -1,4 +1,4 @@
-import {forGroupName as slugForGroupName} from './slug';
+import {stringToSlug as slugForGroupName} from './slug';
 
 export default class FlatMetaData {
   static to(data) {
