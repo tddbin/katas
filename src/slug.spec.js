@@ -12,5 +12,11 @@ describe('slug name is a string useable in a URL (only letters, numbers, _ and -
     it('make all chars lower case', function() {
       assert.strictEqual(forGroupName('ABC'), 'abc');
     });
+    it('remove (some) special chars', function() {
+      assert.strictEqual(forGroupName('e@mail'), 'e-mail');
+      assert.strictEqual(forGroupName('e@ma@il'), 'e-ma-il');
+      assert.strictEqual(forGroupName('what#the$häck'), 'what-the-h-ck');
+      assert.strictEqual(forGroupName('äüöøí'), '-');
+    });
   });
 });
