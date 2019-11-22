@@ -1,3 +1,6 @@
 export function forGroupName(name) {
-  return name.replace(' ', '-');
+  return name
+    .toLowerCase()
+    .replace(/\s+/g , '-')
+  ;
 }
