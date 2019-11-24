@@ -6,13 +6,10 @@ import {stringToSlug as slugForGroupName} from './slug';
 describe('build grouped (by category) meta data', function() {
 
   const knownGroupName = 'Template strings';
-  let converted;
-  beforeEach(function() {
-    converted = GroupedMetaData.to(all);
-  });
+  const converted = () => GroupedMetaData.to(all);
 
   it('`groups` contains all groups as keys', function() {
-    const actual = Object.keys(converted.groups);
+    const actual = Object.keys(converted().groups);
     const expected = Object.keys(all.groups);
     assert.deepEqual(actual, expected);
   });
@@ -20,7 +17,7 @@ describe('build grouped (by category) meta data', function() {
   describe('a group', function() {
     let aGroup;
     beforeEach(function() {
-      aGroup = converted.groups[knownGroupName];
+      aGroup = converted().groups[knownGroupName];
     });
     it('has `items` which is an array', function() {
       assert.ok(Array.isArray(aGroup.items));
@@ -46,14 +43,14 @@ describe('build grouped (by category) meta data', function() {
       
     });
     it('has correct `id` property', function() {
-      const items = converted.groups[knownGroupName].items;
+      const items = converted().groups[knownGroupName].items;
       const expectedId = Object.keys(all.groups[knownGroupName].items)[0];
   
       const isIdPropertyInItems = items.some(({id}) => expectedId === id);
       assert.equal(isIdPropertyInItems, true);
     });
     it('has correct `groupName` property', function() {
-      const aGroup = converted.groups[knownGroupName];
+      const aGroup = converted().groups[knownGroupName];
   
       assert.equal(aGroup.items[0].groupName, knownGroupName);
     });
