@@ -1,12 +1,16 @@
-import {stringToSlug as slugForGroupName} from './slug';
+import {stringToSlug} from './slug';
 
 export default class GroupedMetaData {
   static to(data) {
-    let ret = {groups: {}};
+    const ret = {
+      name: data.name,
+      nameSlug: stringToSlug(data.name),
+      groups: {}
+    };
     const groups = data.groups;
     for (let groupName in  groups) {
       const items = itemsFromGroup(groups[groupName].items, groupName);
-      var slug = slugForGroupName(groupName);
+      const slug = stringToSlug(groupName);
       ret.groups[groupName] = {items, slug, name: groupName};
     }
     return ret;

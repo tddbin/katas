@@ -8,10 +8,18 @@ describe('build grouped (by category) meta data', function() {
   const knownGroupName = 'Template strings';
   const converted = () => GroupedMetaData.to(all);
 
-  it('`groups` contains all groups as keys', function() {
-    const actual = Object.keys(converted().groups);
-    const expected = Object.keys(all.groups);
-    assert.deepEqual(actual, expected);
+  describe('at the root there is', () => {
+    it('the `name` as in the original data', () =>
+      assert.strictEqual(converted().name, all.name)
+    );
+    it('the `nameSlug`, a slug of the name', () =>
+      assert.strictEqual(converted().nameSlug, 'es6-katas')
+    );
+    it('`groups` contains all groups as keys', function() {
+      const actual = Object.keys(converted().groups);
+      const expected = Object.keys(all.groups);
+      assert.deepStrictEqual(actual, expected);
+    });
   });
 
   describe('a group', function() {
