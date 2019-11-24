@@ -21,7 +21,7 @@ fi
 
 
 echo "--- RUNNING container '${CONTAINER_NAME}'---"
-docker run --rm -it \
+docker run --rm \
 	--name ${CONTAINER_NAME} \
 	--volume $(pwd):/home/node/app \
 	${IMAGE_NAME} \
