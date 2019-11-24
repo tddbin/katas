@@ -17,8 +17,8 @@ export default class GroupedMetaData {
   }
 }
 
-function itemsFromGroup(items, groupName) {
-  let newItems = [];
+const itemsFromGroup = (items, groupName) => {
+  const newItems = [];
   for (let id in items) {
     const item = cloneObject(items[id]);
     item.groupName = groupName;
@@ -26,7 +26,6 @@ function itemsFromGroup(items, groupName) {
     newItems.push(item);
   }
   return newItems;
-}
-function cloneObject(obj) {
-  return JSON.parse(JSON.stringify(obj));
-}
+};
+
+const cloneObject = obj => JSON.parse(JSON.stringify(obj));
