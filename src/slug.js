@@ -1,3 +1,7 @@
-export function forGroupName(name) {
-  return name.replace(' ', '_');
+export function stringToSlug(name) {
+  return name
+    .toLowerCase()
+    .replace(/\s+/g , '-')
+    .replace(/\W+/g , '-')
+  ;
 }

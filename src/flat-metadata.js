@@ -1,4 +1,4 @@
-import {forGroupName as slugForGroupName} from './slug';
+import {stringToSlug} from './slug';
 
 export default class FlatMetaData {
   static to(data) {
@@ -8,7 +8,11 @@ export default class FlatMetaData {
 
 function buildMetaData(all) {
   const items = buildItems(extractAllItems(all));
-  return {items: items};
+  return {
+    name: all.name,
+    nameSlug: stringToSlug(all.name),
+    items: items
+  };
 }
 
 function extractAllItems(all) {
@@ -26,7 +30,7 @@ function extractItemsFromGroup(groups, groupName, addItemsTo) {
   for (let key in items) {
     const item = cloneObject(items[key]);
     item.groupName = groupName;
-    item.groupNameSlug = slugForGroupName(groupName);
+    item.groupNameSlug = stringToSlug(groupName);
     if (items[key].publishDateUTC) {
       // provide date as spec`d here http://www.w3.org/Protocols/rfc822/#z28
       item.publishDateRfc822 = items[key].publishDateUTC.toUTCString();
