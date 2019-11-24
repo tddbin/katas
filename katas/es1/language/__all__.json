@@ -1,4 +1,6 @@
 {
+  "name": "JavaScript Katas",
+  "nameSlug": "javascript-katas",
   "items": [
     {
       "name": "`[].sort()` basics",
@@ -40,7 +42,7 @@
         }
       ],
       "groupName": "Array API",
-      "groupNameSlug": "Array_API",
+      "groupNameSlug": "array-api",
       "publishDateRfc822": "Thu, 22 Oct 2015 09:11:00 GMT",
       "id": 1
     },
@@ -73,7 +75,7 @@
         }
       ],
       "groupName": "Array API",
-      "groupNameSlug": "Array_API",
+      "groupNameSlug": "array-api",
       "publishDateRfc822": "Fri, 23 Oct 2015 09:26:00 GMT",
       "id": 2
     },
@@ -117,7 +119,7 @@
         }
       ],
       "groupName": "Global Object API",
-      "groupNameSlug": "Global_Object API",
+      "groupNameSlug": "global-object-api",
       "publishDateRfc822": "Sun, 06 Oct 2019 19:53:00 GMT",
       "id": 3
     },
@@ -129,7 +131,7 @@
       "requiresKnowledgeFrom": [],
       "links": [],
       "groupName": "Global Object API",
-      "groupNameSlug": "Global_Object API",
+      "groupNameSlug": "global-object-api",
       "id": 4
     }
   ]

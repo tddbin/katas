@@ -78,7 +78,7 @@
           "id": "2"
         }
       ],
-      "slug": "Array_API",
+      "slug": "array-api",
       "name": "Array API"
     },
     "Global Object API": {
@@ -137,7 +137,7 @@
           "id": "4"
         }
       ],
-      "slug": "Global_Object API",
+      "slug": "global-object-api",
       "name": "Global Object API"
     }
   }

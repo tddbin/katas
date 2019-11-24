@@ -1,4 +1,6 @@
 {
+  "name": "ES10 Katas",
+  "nameSlug": "es10-katas",
   "items": [
     {
       "name": "`Object.fromEntries()`",
@@ -17,7 +19,7 @@
         }
       ],
       "groupName": "Object API",
-      "groupNameSlug": "Object_API",
+      "groupNameSlug": "object-api",
       "publishDateRfc822": "Sun, 28 Jul 2019 22:55:00 GMT",
       "id": 1
     },
@@ -86,7 +88,7 @@
         }
       ],
       "groupName": "Object API",
-      "groupNameSlug": "Object_API",
+      "groupNameSlug": "object-api",
       "publishDateRfc822": "Tue, 25 Jun 2019 19:55:00 GMT",
       "id": 2
     }

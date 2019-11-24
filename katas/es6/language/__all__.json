@@ -1,4 +1,6 @@
 {
+  "name": "ES6 Katas",
+  "nameSlug": "es6-katas",
   "items": [
     {
       "name": "basics",
@@ -24,7 +26,7 @@
         }
       ],
       "groupName": "Template strings",
-      "groupNameSlug": "Template_strings",
+      "groupNameSlug": "template-strings",
       "publishDateRfc822": "Fri, 13 Mar 2015 07:55:00 GMT",
       "id": 1
     },
@@ -50,7 +52,7 @@
         }
       ],
       "groupName": "Template strings",
-      "groupNameSlug": "Template_strings",
+      "groupNameSlug": "template-strings",
       "publishDateRfc822": "Mon, 16 Mar 2015 07:55:00 GMT",
       "id": 2
     },
@@ -80,7 +82,7 @@
         }
       ],
       "groupName": "Template strings",
-      "groupNameSlug": "Template_strings",
+      "groupNameSlug": "template-strings",
       "publishDateRfc822": "Tue, 17 Mar 2015 07:55:00 GMT",
       "id": 3
     },
@@ -117,7 +119,7 @@
         }
       ],
       "groupName": "Template strings",
-      "groupNameSlug": "Template_strings",
+      "groupNameSlug": "template-strings",
       "publishDateRfc822": "Wed, 18 Mar 2015 07:55:00 GMT",
       "id": 4
     },
@@ -128,7 +130,7 @@
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [],
       "groupName": "Arrow functions",
-      "groupNameSlug": "Arrow_functions",
+      "groupNameSlug": "arrow-functions",
       "publishDateRfc822": "Thu, 19 Mar 2015 07:55:00 GMT",
       "id": 5
     },
@@ -148,7 +150,7 @@
         }
       ],
       "groupName": "Arrow functions",
-      "groupNameSlug": "Arrow_functions",
+      "groupNameSlug": "arrow-functions",
       "publishDateRfc822": "Fri, 20 Mar 2015 07:55:00 GMT",
       "id": 6
     },
@@ -159,7 +161,7 @@
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [],
       "groupName": "Block scope",
-      "groupNameSlug": "Block_scope",
+      "groupNameSlug": "block-scope",
       "publishDateRfc822": "Mon, 23 Mar 2015 07:55:00 GMT",
       "id": 7
     },
@@ -175,7 +177,7 @@
         }
       ],
       "groupName": "Block scope",
-      "groupNameSlug": "Block_scope",
+      "groupNameSlug": "block-scope",
       "publishDateRfc822": "Tue, 24 Mar 2015 07:55:00 GMT",
       "id": 8
     },
@@ -195,7 +197,7 @@
         }
       ],
       "groupName": "Object literal",
-      "groupNameSlug": "Object_literal",
+      "groupNameSlug": "object-literal",
       "publishDateRfc822": "Wed, 25 Mar 2015 07:55:00 GMT",
       "id": 9
     },
@@ -219,7 +221,7 @@
         }
       ],
       "groupName": "Destructuring",
-      "groupNameSlug": "Destructuring",
+      "groupNameSlug": "destructuring",
       "publishDateRfc822": "Thu, 26 Mar 2015 07:55:00 GMT",
       "id": 10
     },
@@ -239,7 +241,7 @@
         }
       ],
       "groupName": "Destructuring",
-      "groupNameSlug": "Destructuring",
+      "groupNameSlug": "destructuring",
       "publishDateRfc822": "Fri, 27 Mar 2015 07:55:00 GMT",
       "id": 11
     },
@@ -259,7 +261,7 @@
         }
       ],
       "groupName": "Destructuring",
-      "groupNameSlug": "Destructuring",
+      "groupNameSlug": "destructuring",
       "publishDateRfc822": "Mon, 30 Mar 2015 07:55:00 GMT",
       "id": 12
     },
@@ -283,7 +285,7 @@
         }
       ],
       "groupName": "Destructuring",
-      "groupNameSlug": "Destructuring",
+      "groupNameSlug": "destructuring",
       "publishDateRfc822": "Tue, 31 Mar 2015 07:55:00 GMT",
       "id": 13
     },
@@ -307,7 +309,7 @@
         }
       ],
       "groupName": "Destructuring",
-      "groupNameSlug": "Destructuring",
+      "groupNameSlug": "destructuring",
       "publishDateRfc822": "Wed, 01 Apr 2015 07:55:00 GMT",
       "id": 14
     },
@@ -339,7 +341,7 @@
         }
       ],
       "groupName": "Destructuring",
-      "groupNameSlug": "Destructuring",
+      "groupNameSlug": "destructuring",
       "publishDateRfc822": "Thu, 02 Apr 2015 07:55:00 GMT",
       "id": 15
     },
@@ -363,7 +365,7 @@
         }
       ],
       "groupName": "Object literal",
-      "groupNameSlug": "Object_literal",
+      "groupNameSlug": "object-literal",
       "publishDateRfc822": "Fri, 03 Apr 2015 07:55:00 GMT",
       "id": 16
     },
@@ -383,7 +385,7 @@
         }
       ],
       "groupName": "Unicode",
-      "groupNameSlug": "Unicode",
+      "groupNameSlug": "unicode",
       "publishDateRfc822": "Mon, 06 Apr 2015 07:55:00 GMT",
       "id": 17
     },
@@ -394,7 +396,7 @@
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [],
       "groupName": "Rest operator",
-      "groupNameSlug": "Rest_operator",
+      "groupNameSlug": "rest-operator",
       "publishDateRfc822": "Tue, 07 Apr 2015 08:15:00 GMT",
       "id": 18
     },
@@ -405,7 +407,7 @@
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [],
       "groupName": "Rest operator",
-      "groupNameSlug": "Rest_operator",
+      "groupNameSlug": "rest-operator",
       "publishDateRfc822": "Wed, 08 Apr 2015 07:55:00 GMT",
       "id": 19
     },
@@ -439,7 +441,7 @@
         }
       ],
       "groupName": "Spread operator",
-      "groupNameSlug": "Spread_operator",
+      "groupNameSlug": "spread-operator",
       "publishDateRfc822": "Fri, 10 Apr 2015 08:18:00 GMT",
       "id": 20
     },
@@ -473,7 +475,7 @@
         }
       ],
       "groupName": "Spread operator",
-      "groupNameSlug": "Spread_operator",
+      "groupNameSlug": "spread-operator",
       "publishDateRfc822": "Mon, 13 Apr 2015 07:55:00 GMT",
       "id": 21
     },
@@ -484,7 +486,7 @@
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [],
       "groupName": "Class",
-      "groupNameSlug": "Class",
+      "groupNameSlug": "class",
       "publishDateRfc822": "Tue, 14 Apr 2015 07:55:00 GMT",
       "id": 22
     },
@@ -495,7 +497,7 @@
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [],
       "groupName": "Class",
-      "groupNameSlug": "Class",
+      "groupNameSlug": "class",
       "publishDateRfc822": "Wed, 15 Apr 2015 07:56:00 GMT",
       "id": 23
     },
@@ -506,7 +508,7 @@
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [],
       "groupName": "Class",
-      "groupNameSlug": "Class",
+      "groupNameSlug": "class",
       "publishDateRfc822": "Thu, 16 Apr 2015 07:55:00 GMT",
       "id": 24
     },
@@ -517,7 +519,7 @@
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [],
       "groupName": "Class",
-      "groupNameSlug": "Class",
+      "groupNameSlug": "class",
       "publishDateRfc822": "Fri, 17 Apr 2015 08:25:00 GMT",
       "id": 25
     },
@@ -528,7 +530,7 @@
       "level": "ADVANCED",
       "requiresKnowledgeFrom": [],
       "groupName": "Class",
-      "groupNameSlug": "Class",
+      "groupNameSlug": "class",
       "publishDateRfc822": "Mon, 20 Apr 2015 07:55:00 GMT",
       "id": 26
     },
@@ -539,7 +541,7 @@
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [],
       "groupName": "Class",
-      "groupNameSlug": "Class",
+      "groupNameSlug": "class",
       "publishDateRfc822": "Tue, 21 Apr 2015 07:55:00 GMT",
       "id": 27
     },
@@ -550,7 +552,7 @@
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [],
       "groupName": "Class",
-      "groupNameSlug": "Class",
+      "groupNameSlug": "class",
       "publishDateRfc822": "Wed, 22 Apr 2015 07:55:00 GMT",
       "id": 28
     },
@@ -561,7 +563,7 @@
       "level": "TBD",
       "requiresKnowledgeFrom": [],
       "groupName": "Array API",
-      "groupNameSlug": "Array_API",
+      "groupNameSlug": "array-api",
       "publishDateRfc822": "Thu, 23 Apr 2015 08:32:00 GMT",
       "id": 29
     },
@@ -572,7 +574,7 @@
       "level": "TBD",
       "requiresKnowledgeFrom": [],
       "groupName": "Array API",
-      "groupNameSlug": "Array_API",
+      "groupNameSlug": "array-api",
       "publishDateRfc822": "Mon, 27 Apr 2015 08:09:00 GMT",
       "id": 30
     },
@@ -600,7 +602,7 @@
         }
       ],
       "groupName": "Array API",
-      "groupNameSlug": "Array_API",
+      "groupNameSlug": "array-api",
       "publishDateRfc822": "Tue, 28 Apr 2015 07:55:00 GMT",
       "id": 31
     },
@@ -611,7 +613,7 @@
       "level": "TBD",
       "requiresKnowledgeFrom": [],
       "groupName": "Array API",
-      "groupNameSlug": "Array_API",
+      "groupNameSlug": "array-api",
       "publishDateRfc822": "Wed, 29 Apr 2015 07:55:00 GMT",
       "id": 32
     },
@@ -622,7 +624,7 @@
       "level": "TBD",
       "requiresKnowledgeFrom": [],
       "groupName": "Array API",
-      "groupNameSlug": "Array_API",
+      "groupNameSlug": "array-api",
       "publishDateRfc822": "Mon, 04 May 2015 08:01:00 GMT",
       "id": 33
     },
@@ -633,7 +635,7 @@
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [],
       "groupName": "Symbol",
-      "groupNameSlug": "Symbol",
+      "groupNameSlug": "symbol",
       "publishDateRfc822": "Tue, 05 May 2015 11:21:00 GMT",
       "id": 34
     },
@@ -644,7 +646,7 @@
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [],
       "groupName": "Symbol",
-      "groupNameSlug": "Symbol",
+      "groupNameSlug": "symbol",
       "publishDateRfc822": "Wed, 06 May 2015 07:55:00 GMT",
       "id": 35
     },
@@ -660,7 +662,7 @@
         }
       ],
       "groupName": "Symbol",
-      "groupNameSlug": "Symbol",
+      "groupNameSlug": "symbol",
       "publishDateRfc822": "Thu, 07 May 2015 08:09:00 GMT",
       "id": 36
     },
@@ -671,7 +673,7 @@
       "level": "TBD",
       "requiresKnowledgeFrom": [],
       "groupName": "Iterator",
-      "groupNameSlug": "Iterator",
+      "groupNameSlug": "iterator",
       "publishDateRfc822": "Fri, 08 May 2015 07:55:00 GMT",
       "id": 37
     },
@@ -691,7 +693,7 @@
         }
       ],
       "groupName": "Iterator",
-      "groupNameSlug": "Iterator",
+      "groupNameSlug": "iterator",
       "publishDateRfc822": "Mon, 11 May 2015 07:55:00 GMT",
       "id": 38
     },
@@ -702,7 +704,7 @@
       "level": "EXPERT",
       "requiresKnowledgeFrom": [],
       "groupName": "Iterator",
-      "groupNameSlug": "Iterator",
+      "groupNameSlug": "iterator",
       "publishDateRfc822": "Tue, 12 May 2015 07:55:00 GMT",
       "id": 39
     },
@@ -738,7 +740,7 @@
         }
       ],
       "groupName": "Iterator",
-      "groupNameSlug": "Iterator",
+      "groupNameSlug": "iterator",
       "publishDateRfc822": "Wed, 13 May 2015 08:17:00 GMT",
       "id": 40
     },
@@ -762,7 +764,7 @@
         }
       ],
       "groupName": "Array API",
-      "groupNameSlug": "Array_API",
+      "groupNameSlug": "array-api",
       "publishDateRfc822": "Mon, 18 May 2015 08:06:00 GMT",
       "id": 41
     },
@@ -790,7 +792,7 @@
         }
       ],
       "groupName": "Array API",
-      "groupNameSlug": "Array_API",
+      "groupNameSlug": "array-api",
       "publishDateRfc822": "Tue, 19 May 2015 07:55:00 GMT",
       "id": 42
     },
@@ -814,7 +816,7 @@
         }
       ],
       "groupName": "Array API",
-      "groupNameSlug": "Array_API",
+      "groupNameSlug": "array-api",
       "publishDateRfc822": "Wed, 20 May 2015 07:55:00 GMT",
       "id": 43
     },
@@ -825,7 +827,7 @@
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [],
       "groupName": "Map",
-      "groupNameSlug": "Map",
+      "groupNameSlug": "map",
       "publishDateRfc822": "Thu, 21 May 2015 07:55:00 GMT",
       "id": 44
     },
@@ -841,7 +843,7 @@
         }
       ],
       "groupName": "Map",
-      "groupNameSlug": "Map",
+      "groupNameSlug": "map",
       "publishDateRfc822": "Fri, 22 May 2015 07:55:00 GMT",
       "id": 45
     },
@@ -852,7 +854,7 @@
       "level": "EXPERT",
       "requiresKnowledgeFrom": [],
       "groupName": "Map",
-      "groupNameSlug": "Map",
+      "groupNameSlug": "map",
       "publishDateRfc822": "Tue, 26 May 2015 08:03:00 GMT",
       "id": 46
     },
@@ -863,7 +865,7 @@
       "level": "TBD",
       "requiresKnowledgeFrom": [],
       "groupName": "Set",
-      "groupNameSlug": "Set",
+      "groupNameSlug": "set",
       "publishDateRfc822": "Wed, 27 May 2015 10:12:00 GMT",
       "id": 47
     },
@@ -879,7 +881,7 @@
         }
       ],
       "groupName": "Set",
-      "groupNameSlug": "Set",
+      "groupNameSlug": "set",
       "publishDateRfc822": "Fri, 29 May 2015 06:55:00 GMT",
       "id": 48
     },
@@ -917,7 +919,7 @@
         }
       ],
       "groupName": "Generator",
-      "groupNameSlug": "Generator",
+      "groupNameSlug": "generator",
       "publishDateRfc822": "Mon, 01 Jun 2015 08:39:00 GMT",
       "id": 49
     },
@@ -933,7 +935,7 @@
         }
       ],
       "groupName": "Generator",
-      "groupNameSlug": "Generator",
+      "groupNameSlug": "generator",
       "publishDateRfc822": "Wed, 03 Jun 2015 07:55:00 GMT",
       "id": 50
     },
@@ -967,7 +969,7 @@
         }
       ],
       "groupName": "Generator",
-      "groupNameSlug": "Generator",
+      "groupNameSlug": "generator",
       "publishDateRfc822": "Fri, 05 Jun 2015 08:25:00 GMT",
       "id": 51
     },
@@ -1004,7 +1006,7 @@
         }
       ],
       "groupName": "Generator",
-      "groupNameSlug": "Generator",
+      "groupNameSlug": "generator",
       "publishDateRfc822": "Thu, 18 Jun 2015 12:07:00 GMT",
       "id": 52
     },
@@ -1036,7 +1038,7 @@
         }
       ],
       "groupName": "Map",
-      "groupNameSlug": "Map",
+      "groupNameSlug": "map",
       "publishDateRfc822": "Mon, 22 Jun 2015 11:56:00 GMT",
       "id": 53
     },
@@ -1060,7 +1062,7 @@
         }
       ],
       "groupName": "Object API",
-      "groupNameSlug": "Object_API",
+      "groupNameSlug": "object-api",
       "publishDateRfc822": "Wed, 24 Jun 2015 07:55:00 GMT",
       "id": 54
     },
@@ -1071,7 +1073,7 @@
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [],
       "groupName": "Number API",
-      "groupNameSlug": "Number_API",
+      "groupNameSlug": "number-api",
       "publishDateRfc822": "Thu, 25 Jun 2015 07:55:00 GMT",
       "id": 55
     },
@@ -1103,7 +1105,7 @@
         }
       ],
       "groupName": "Generator",
-      "groupNameSlug": "Generator",
+      "groupNameSlug": "generator",
       "publishDateRfc822": "Mon, 29 Jun 2015 11:49:00 GMT",
       "id": 56
     },
@@ -1127,7 +1129,7 @@
         }
       ],
       "groupName": "Default parameters",
-      "groupNameSlug": "Default_parameters",
+      "groupNameSlug": "default-parameters",
       "publishDateRfc822": "Tue, 30 Jun 2015 07:55:00 GMT",
       "id": 57
     },
@@ -1155,7 +1157,7 @@
         }
       ],
       "groupName": "Reflect",
-      "groupNameSlug": "Reflect",
+      "groupNameSlug": "reflect",
       "publishDateRfc822": "Thu, 02 Jul 2015 08:23:00 GMT",
       "id": 58
     },
@@ -1218,7 +1220,7 @@
         }
       ],
       "groupName": "Reflect",
-      "groupNameSlug": "Reflect",
+      "groupNameSlug": "reflect",
       "publishDateRfc822": "Fri, 03 Jul 2015 07:55:00 GMT",
       "id": 59
     },
@@ -1246,7 +1248,7 @@
         }
       ],
       "groupName": "Reflect",
-      "groupNameSlug": "Reflect",
+      "groupNameSlug": "reflect",
       "publishDateRfc822": "Wed, 08 Jul 2015 08:14:00 GMT",
       "id": 60
     },
@@ -1257,7 +1259,7 @@
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [],
       "groupName": "Modules",
-      "groupNameSlug": "Modules",
+      "groupNameSlug": "modules",
       "publishDateRfc822": "Thu, 09 Jul 2015 08:46:00 GMT",
       "id": 61
     },
@@ -1290,7 +1292,7 @@
         }
       ],
       "groupName": "Map",
-      "groupNameSlug": "Map",
+      "groupNameSlug": "map",
       "publishDateRfc822": "Fri, 10 Jul 2015 08:09:00 GMT",
       "id": 62
     },
@@ -1335,7 +1337,7 @@
         }
       ],
       "groupName": "String API",
-      "groupNameSlug": "String_API",
+      "groupNameSlug": "string-api",
       "publishDateRfc822": "Tue, 14 Jul 2015 09:29:00 GMT",
       "id": 63
     },
@@ -1372,7 +1374,7 @@
         }
       ],
       "groupName": "Set",
-      "groupNameSlug": "Set",
+      "groupNameSlug": "set",
       "publishDateRfc822": "Wed, 15 Jul 2015 16:12:00 GMT",
       "id": 64
     },
@@ -1433,7 +1435,7 @@
         }
       ],
       "groupName": "Set",
-      "groupNameSlug": "Set",
+      "groupNameSlug": "set",
       "publishDateRfc822": "Thu, 16 Jul 2015 08:24:00 GMT",
       "id": 65
     },
@@ -1481,7 +1483,7 @@
         }
       ],
       "groupName": "Object literal",
-      "groupNameSlug": "Object_literal",
+      "groupNameSlug": "object-literal",
       "publishDateRfc822": "Mon, 27 Jul 2015 08:05:00 GMT",
       "id": 66
     },
@@ -1540,7 +1542,7 @@
         }
       ],
       "groupName": "Object literal",
-      "groupNameSlug": "Object_literal",
+      "groupNameSlug": "object-literal",
       "publishDateRfc822": "Tue, 28 Jul 2015 07:57:00 GMT",
       "id": 67
     },
@@ -1590,7 +1592,7 @@
         }
       ],
       "groupName": "Reflect",
-      "groupNameSlug": "Reflect",
+      "groupNameSlug": "reflect",
       "publishDateRfc822": "Thu, 30 Jul 2015 07:55:00 GMT",
       "id": 68
     },
@@ -1646,7 +1648,7 @@
         }
       ],
       "groupName": "Reflect",
-      "groupNameSlug": "Reflect",
+      "groupNameSlug": "reflect",
       "publishDateRfc822": "Fri, 31 Jul 2015 08:12:00 GMT",
       "id": 69
     },
@@ -1702,7 +1704,7 @@
         }
       ],
       "groupName": "Set",
-      "groupNameSlug": "Set",
+      "groupNameSlug": "set",
       "publishDateRfc822": "Mon, 03 Aug 2015 08:25:00 GMT",
       "id": 70
     },
@@ -1757,7 +1759,7 @@
         }
       ],
       "groupName": "String API",
-      "groupNameSlug": "String_API",
+      "groupNameSlug": "string-api",
       "publishDateRfc822": "Fri, 07 Aug 2015 07:55:00 GMT",
       "id": 71
     },
@@ -1806,7 +1808,7 @@
         }
       ],
       "groupName": "String API",
-      "groupNameSlug": "String_API",
+      "groupNameSlug": "string-api",
       "publishDateRfc822": "Wed, 26 Aug 2015 09:42:00 GMT",
       "id": 72
     },
@@ -1868,7 +1870,7 @@
         }
       ],
       "groupName": "Generator",
-      "groupNameSlug": "Generator",
+      "groupNameSlug": "generator",
       "publishDateRfc822": "Fri, 25 Sep 2015 14:45:00 GMT",
       "id": 73
     },
@@ -1913,7 +1915,7 @@
         }
       ],
       "groupName": "String API",
-      "groupNameSlug": "String_API",
+      "groupNameSlug": "string-api",
       "publishDateRfc822": "Fri, 02 Oct 2015 07:55:00 GMT",
       "id": 74
     },
@@ -1933,7 +1935,7 @@
         }
       ],
       "groupName": "Promise",
-      "groupNameSlug": "Promise",
+      "groupNameSlug": "promise",
       "publishDateRfc822": "Fri, 09 Oct 2015 09:30:00 GMT",
       "id": 75
     },
@@ -2030,7 +2032,7 @@
         }
       ],
       "groupName": "Promise",
-      "groupNameSlug": "Promise",
+      "groupNameSlug": "promise",
       "publishDateRfc822": "Wed, 28 Oct 2015 14:30:00 GMT",
       "id": 76
     },
@@ -2085,7 +2087,7 @@
         }
       ],
       "groupName": "Promise",
-      "groupNameSlug": "Promise",
+      "groupNameSlug": "promise",
       "publishDateRfc822": "Tue, 10 Nov 2015 13:30:00 GMT",
       "id": 77
     },
@@ -2106,7 +2108,7 @@
       ],
       "links": [],
       "groupName": "Promise",
-      "groupNameSlug": "Promise",
+      "groupNameSlug": "promise",
       "publishDateRfc822": "Sun, 15 Mar 2015 09:30:00 GMT",
       "id": 78
     },
@@ -2150,7 +2152,7 @@
         }
       ],
       "groupName": "Promise",
-      "groupNameSlug": "Promise",
+      "groupNameSlug": "promise",
       "publishDateRfc822": "Sun, 15 Mar 2015 09:30:00 GMT",
       "id": 79
     },
@@ -2203,7 +2205,7 @@
         }
       ],
       "groupName": "Number API",
-      "groupNameSlug": "Number_API",
+      "groupNameSlug": "number-api",
       "publishDateRfc822": "Sat, 15 Jun 2019 15:42:00 GMT",
       "id": 80
     },
@@ -2260,7 +2262,7 @@
         }
       ],
       "groupName": "Number API",
-      "groupNameSlug": "Number_API",
+      "groupNameSlug": "number-api",
       "publishDateRfc822": "Sun, 06 Oct 2019 17:29:00 GMT",
       "id": 81
     }

@@ -29,7 +29,7 @@
           "id": "1"
         }
       ],
-      "slug": "Array_API",
+      "slug": "array-api",
       "name": "Array API"
     },
     "Object API": {
@@ -55,7 +55,7 @@
           "id": "3"
         }
       ],
-      "slug": "Object_API",
+      "slug": "object-api",
       "name": "Object API"
     }
   }

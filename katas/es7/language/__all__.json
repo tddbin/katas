@@ -1,4 +1,6 @@
 {
+  "name": "ES7 Katas",
+  "nameSlug": "es7-katas",
   "items": [
     {
       "name": "`[].includes()`",
@@ -24,7 +26,7 @@
         }
       ],
       "groupName": "Array API",
-      "groupNameSlug": "Array_API",
+      "groupNameSlug": "array-api",
       "id": 1
     },
     {
@@ -35,7 +37,7 @@
       "requiresKnowledgeFrom": [],
       "links": [],
       "groupName": "Object API",
-      "groupNameSlug": "Object_API",
+      "groupNameSlug": "object-api",
       "id": 2
     },
     {
@@ -46,7 +48,7 @@
       "requiresKnowledgeFrom": [],
       "links": [],
       "groupName": "Object API",
-      "groupNameSlug": "Object_API",
+      "groupNameSlug": "object-api",
       "id": 3
     }
   ]

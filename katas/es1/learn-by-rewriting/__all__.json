@@ -1,4 +1,6 @@
 {
+  "name": "ES1 Learn by rewriting",
+  "nameSlug": "es1-learn-by-rewriting",
   "items": [
     {
       "name": "`indexOf()`",
@@ -31,7 +33,7 @@
         }
       ],
       "groupName": "Array",
-      "groupNameSlug": "Array",
+      "groupNameSlug": "array",
       "publishDateRfc822": "Fri, 25 Oct 2019 17:00:00 GMT",
       "id": 1
     }

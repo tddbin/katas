@@ -120,7 +120,7 @@
           "id": "4"
         }
       ],
-      "slug": "Template_strings",
+      "slug": "template-strings",
       "name": "Template strings"
     },
     "Arrow functions": {
@@ -155,7 +155,7 @@
           "id": "6"
         }
       ],
-      "slug": "Arrow_functions",
+      "slug": "arrow-functions",
       "name": "Arrow functions"
     },
     "Block scope": {
@@ -186,7 +186,7 @@
           "id": "8"
         }
       ],
-      "slug": "Block_scope",
+      "slug": "block-scope",
       "name": "Block scope"
     },
     "Object literal": {
@@ -339,7 +339,7 @@
           "id": "67"
         }
       ],
-      "slug": "Object_literal",
+      "slug": "object-literal",
       "name": "Object literal"
     },
     "Destructuring": {
@@ -483,7 +483,7 @@
           "id": "15"
         }
       ],
-      "slug": "Destructuring",
+      "slug": "destructuring",
       "name": "Destructuring"
     },
     "Unicode": {
@@ -508,7 +508,7 @@
           "id": "17"
         }
       ],
-      "slug": "Unicode",
+      "slug": "unicode",
       "name": "Unicode"
     },
     "Rest operator": {
@@ -534,7 +534,7 @@
           "id": "19"
         }
       ],
-      "slug": "Rest_operator",
+      "slug": "rest-operator",
       "name": "Rest operator"
     },
     "Spread operator": {
@@ -606,7 +606,7 @@
           "id": "21"
         }
       ],
-      "slug": "Spread_operator",
+      "slug": "spread-operator",
       "name": "Spread operator"
     },
     "Class": {
@@ -682,7 +682,7 @@
           "id": "28"
         }
       ],
-      "slug": "Class",
+      "slug": "class",
       "name": "Class"
     },
     "Array API": {
@@ -828,7 +828,7 @@
           "id": "43"
         }
       ],
-      "slug": "Array_API",
+      "slug": "array-api",
       "name": "Array API"
     },
     "Symbol": {
@@ -869,7 +869,7 @@
           "id": "36"
         }
       ],
-      "slug": "Symbol",
+      "slug": "symbol",
       "name": "Symbol"
     },
     "Iterator": {
@@ -949,7 +949,7 @@
           "id": "40"
         }
       ],
-      "slug": "Iterator",
+      "slug": "iterator",
       "name": "Iterator"
     },
     "Map": {
@@ -1053,7 +1053,7 @@
           "id": "62"
         }
       ],
-      "slug": "Map",
+      "slug": "map",
       "name": "Map"
     },
     "Set": {
@@ -1235,7 +1235,7 @@
           "id": "70"
         }
       ],
-      "slug": "Set",
+      "slug": "set",
       "name": "Set"
     },
     "Generator": {
@@ -1454,7 +1454,7 @@
           "id": "73"
         }
       ],
-      "slug": "Generator",
+      "slug": "generator",
       "name": "Generator"
     },
     "Object API": {
@@ -1483,7 +1483,7 @@
           "id": "54"
         }
       ],
-      "slug": "Object_API",
+      "slug": "object-api",
       "name": "Object API"
     },
     "Number API": {
@@ -1607,7 +1607,7 @@
           "id": "81"
         }
       ],
-      "slug": "Number_API",
+      "slug": "number-api",
       "name": "Number API"
     },
     "Default parameters": {
@@ -1636,7 +1636,7 @@
           "id": "57"
         }
       ],
-      "slug": "Default_parameters",
+      "slug": "default-parameters",
       "name": "Default parameters"
     },
     "Reflect": {
@@ -1862,7 +1862,7 @@
           "id": "69"
         }
       ],
-      "slug": "Reflect",
+      "slug": "reflect",
       "name": "Reflect"
     },
     "Modules": {
@@ -1878,7 +1878,7 @@
           "id": "61"
         }
       ],
-      "slug": "Modules",
+      "slug": "modules",
       "name": "Modules"
     },
     "String API": {
@@ -2074,7 +2074,7 @@
           "id": "74"
         }
       ],
-      "slug": "String_API",
+      "slug": "string-api",
       "name": "String API"
     },
     "Promise": {
@@ -2312,7 +2312,7 @@
           "id": "79"
         }
       ],
-      "slug": "Promise",
+      "slug": "promise",
       "name": "Promise"
     }
   }
