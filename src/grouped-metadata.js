@@ -2,12 +2,12 @@ import {stringToSlug} from './slug';
 
 export default class GroupedMetaData {
   static to(data) {
-    const ret = prefillMetaData(data.name);
+    const metaData = prefillMetaData(data.name);
     const groups = data.groups;
     for (let groupName in groups) {
-      ret.groups[groupName] = oneGroupsData(groups[groupName].items, groupName);
+      metaData.groups[groupName] = oneGroupsData(groups[groupName].items, groupName);
     }
-    return ret;
+    return metaData;
   }
 }
 
