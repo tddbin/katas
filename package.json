@@ -42,7 +42,7 @@
     "@babel/preset-env": "^7.5.4",
     "@babel/preset-flow": "^7.0.0",
     "@babel/register": "^7.4.4",
-    "esm": "^3.0.82",
+    "esm": "^3.1.0",
     "flow-bin": "^0.56.0",
     "flow-typed": "^2.1.5",
     "hamjest": "^3.1.0",
