@@ -1,4 +1,6 @@
 {
+  "name": "ES7 Katas",
+  "nameSlug": "es7-katas",
   "groups": {
     "Array API": {
       "items": [

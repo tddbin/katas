@@ -1,4 +1,6 @@
 {
+  "name": "ES6 Katas",
+  "nameSlug": "es6-katas",
   "groups": {
     "Template strings": {
       "items": [

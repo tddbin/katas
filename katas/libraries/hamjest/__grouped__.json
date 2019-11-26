@@ -1,4 +1,6 @@
 {
+  "name": "Hamjest assertion library",
+  "nameSlug": "hamjest-assertion-library",
   "groups": {
     "core": {
       "items": [

@@ -1,4 +1,6 @@
 {
+  "name": "JavaScript Katas",
+  "nameSlug": "javascript-katas",
   "groups": {
     "Array API": {
       "items": [

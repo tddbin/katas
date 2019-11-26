@@ -1,4 +1,6 @@
 {
+  "name": "ES8 Katas",
+  "nameSlug": "es8-katas",
   "groups": {
     "Async Function": {
       "items": [

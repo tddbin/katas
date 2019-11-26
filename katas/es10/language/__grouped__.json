@@ -1,4 +1,6 @@
 {
+  "name": "ES10 Katas",
+  "nameSlug": "es10-katas",
   "groups": {
     "Object API": {
       "items": [
