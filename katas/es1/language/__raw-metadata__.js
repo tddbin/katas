@@ -11,7 +11,7 @@ export const es1 = {
 };
 
 export const all = {
-  name: 'JavaScript Katas',
+  name: 'ES1 Katas',
   groups: {
     'Array API': {
       items: {
