@@ -2,6 +2,7 @@ import {SKILL_LEVEL} from '../../skill-levels';
 import * as tag from '../../tags';
 import {toUtcDate}  from '../../date';
 import * as date from '../../date';
+import {es6} from '../../es6/language/__raw-metadata__.js';
 
 const buildReferenceForId = id => ({bundle: 'es7/language', id});
 export const es7 = {
@@ -21,7 +22,11 @@ export const all = {
           description: '',
           path: 'array-api/includes',
           level: SKILL_LEVEL.BEGINNER,
-          requiresKnowledgeFrom: [],
+          requiresKnowledgeFrom: [
+            es6.CONST,
+            es6.SYMBOL_BASICS,
+            es6.SYMBOL_FOR,
+          ],
           // publishDateUTC: toUtcDate(2019, date.JUNE, 25, 19, 55),
           links: [
             {
