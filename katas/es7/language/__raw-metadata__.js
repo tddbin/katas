@@ -19,7 +19,7 @@ export const all = {
       items: {
         [es7.ARRAY_INCLUDES.id]: {
           name: '`[].includes()`',
-          description: '',
+          description: '`Array.prototype.includes()` determines whether an array includes a certain value',
           path: 'array-api/includes',
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [
@@ -27,7 +27,7 @@ export const all = {
             es6.SYMBOL_BASICS,
             es6.SYMBOL_FOR,
           ],
-          // publishDateUTC: toUtcDate(2019, date.JUNE, 25, 19, 55),
+          publishDateUTC: toUtcDate(2020, date.MAY, 21, 0, 20),
           links: [
             {
               url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes',
