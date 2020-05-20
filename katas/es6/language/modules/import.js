@@ -1,4 +1,5 @@
-// 61: modules - import 
+//** tddbin.options.transpileToEs5=true
+// 61: modules - import
 // To do: make all tests pass, leave the assert lines unchanged!
 
 import assert from 'assert'; // is only here for completeness, `assert` is always imported by default

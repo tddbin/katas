@@ -6,10 +6,24 @@
       "items": [
         {
           "name": "`[].includes()`",
-          "description": "",
+          "description": "`Array.prototype.includes()` determines whether an array includes a certain value",
           "path": "array-api/includes",
           "level": "BEGINNER",
-          "requiresKnowledgeFrom": [],
+          "requiresKnowledgeFrom": [
+            {
+              "bundle": "es6/language",
+              "id": 8
+            },
+            {
+              "bundle": "es6/language",
+              "id": 34
+            },
+            {
+              "bundle": "es6/language",
+              "id": 35
+            }
+          ],
+          "publishDateUTC": "2020-05-21T00:20:00.000Z",
           "links": [
             {
               "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes",
@@ -24,6 +38,13 @@
               "comment": "The specification describing `Array.prototype.includes()`.",
               "tags": [
                 "spec"
+              ]
+            },
+            {
+              "url": "https://www.freecodecamp.org/news/why-could-es7-be-called-es2-4c5f094ccef7/",
+              "comment": "An in-depth article about `includes` quoting the spec.",
+              "tags": [
+                "article"
               ]
             }
           ],
