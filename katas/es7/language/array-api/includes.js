@@ -4,7 +4,7 @@
 
 describe('`Array.prototype.includes()` determines whether an array includes a certain value', () => {
   it('`includes()` method is defined on the prototype', () => {
-    //// const fn = Array.includes;
+    //// const fn = Array.prototype.includeZ;
     const fn = [].includes;
     assert.equal(typeof fn, 'function');
   });
@@ -22,20 +22,22 @@ describe('`Array.prototype.includes()` determines whether an array includes a ce
       const numbers = [-0];
       assert.equal(numbers.includes(+0), true);
     });
-    it('WHEN searching for a number THEN they are compared by value (not type)', () => {
+    it('WHEN searching for a small number THEN they are compared by value (not type)', () => {
       //// const one = 1.00001;
       const one = 1.0000;
       assert.equal([one].includes(1), true);
-
+    });
+    it('WHEN searching for a big number THEN they are compared by value (not type)', () => {
       //// const fourtyTwoALot = 42e9;
       const fourtyTwoALot = 42e10;
       assert.equal([fourtyTwoALot].includes(420000000000.000), true);
     });
-    it('WHEN searching for a boolean THEN works as expected', () => {
+    it('WHEN searching for true in an array of numbers THEN finds nothing', () => {
       //// const noBooleans = [1, 0, 2, true];
       const noBooleans = [1, 0, 2];
       assert.equal(noBooleans.includes(true), false);
-
+    });
+    it('WHEN searching for a boolean in an array with a boolean THEN works as expected', () => {
       //// const containsOneBoolean = [1, 0, 2];
       const containsOneBoolean = [1, 0, 2, true];
       assert.equal(containsOneBoolean.includes(true), true);
