@@ -34,6 +34,11 @@ export const all = {
               comment: 'The specification describing `Array.prototype.includes()`.',
               tags: [tag.SPECIFICATION]
             },
+            {
+              url: 'https://www.freecodecamp.org/news/why-could-es7-be-called-es2-4c5f094ccef7/',
+              comment: 'An in-depth article about `includes` quoting the spec.',
+              tags: [tag.ARTICLE]
+            },
           ],
         },
       },
