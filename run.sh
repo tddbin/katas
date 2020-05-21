@@ -30,5 +30,6 @@ else
     --name ${CONTAINER_NAME} \
     --volume $(pwd)/src:/app/src \
     --volume $(pwd)/katas:/app/katas \
+    --volume $(pwd)/dist:/app/dist \
     ${IMAGE_NAME} $@
 fi

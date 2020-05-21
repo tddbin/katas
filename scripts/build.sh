@@ -11,7 +11,7 @@ ORIGIN_ROOT="."
 DIST_ROOT="$ORIGIN_ROOT/dist"
 
 # clean up
-rm -Rf $DIST_ROOT;
+rm -Rf ${DIST_ROOT}/*;
 
 # create build directory (structure)
 mkdir -p $DIST_ROOT;
