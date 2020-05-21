@@ -19,11 +19,11 @@ describe('`Array.prototype.includes()` determines whether an array includes a ce
       const numbers = [-1];
       assert.equal(numbers.includes(+0), true);
     });
-    it('WHEN searching for a small number THEN they are compared by value (not type)', () => {
+    it('WHEN searching for a small number THEN they are compared by the number`s value', () => {
       const one = 1.00001;
       assert.equal([one].includes(1), true);
     });
-    it('WHEN searching for a big number THEN they are compared by value (not type)', () => {
+    it('WHEN searching for a big number THEN they are compared by the number`s value', () => {
       const fourtyTwoALot = 42e9;
       assert.equal([fourtyTwoALot].includes(420000000000.000), true);
     });
@@ -81,7 +81,7 @@ describe('`Array.prototype.includes()` determines whether an array includes a ce
         assert.equal([1, 2, 42, 23].includes(1, fromIndex), false);
         assert.equal([1, 2, 42, 23].includes(42, fromIndex), true);
       });
-      it('THEN use it as index from the end', () => {
+      it('AND it would search before the start (fromIndex < 0) of the array THEN search the entire array', () => {
         const fromIndex = 100;
         assert.equal([1, 2, 42, 23].includes(42, fromIndex), true);
       });
