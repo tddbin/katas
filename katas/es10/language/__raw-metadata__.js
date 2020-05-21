@@ -11,7 +11,8 @@ export const es10 = {
 };
 
 export const all = {
-  name: 'ES10 Katas',
+  name: 'ECMAScript 10 (ES2019) Katas ',
+  nameSlug: 'es10-katas',
   groups: {
     'Object API': {
       items: {

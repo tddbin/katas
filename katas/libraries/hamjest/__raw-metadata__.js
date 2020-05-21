@@ -9,7 +9,8 @@ const MATCHER_ANYTHING = 4;
 const MATCHER_DEFINED = 5;
 
 export const all = {
-  name: 'Hamjest assertion library',
+  name: 'Assertion Library Hamjest',
+  nameSlug: 'hamjest-assertion-library',
   groups: {
     core: {
       items: {

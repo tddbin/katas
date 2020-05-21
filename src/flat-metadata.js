@@ -10,7 +10,7 @@ function buildMetaData(all) {
   const items = buildItems(extractAllItems(all));
   return {
     name: all.name,
-    nameSlug: stringToSlug(all.name),
+    nameSlug: all.nameSlug,
     items: items
   };
 }

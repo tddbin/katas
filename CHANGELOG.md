@@ -7,6 +7,8 @@
 - [ ] Test if every test has the katafy part in it
 
 # version 2
+- [x] remove slug generation for bundles, use the hard coded slug from the bundle metadata
+      the bundle names might need to change, as I just want to do it
 - [ ] Fix names for various katas, many miss the "API" prefix, like "es6 " map, promise, set, ...
 - [ ] write kata for ES1 `parseInt()` in depth
 - [x] Build and deploy ES1-learn-by-rewriting katas - YEAH

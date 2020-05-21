@@ -8,7 +8,8 @@ export const es1 = {
 };
 
 export const all = {
-  name: 'ES1 Learn by rewriting',
+  name: 'ECMAScript 1 - Learn by rewriting',
+  nameSlug: 'es1-learn-by-rewriting',
   groups: {
     'Array': {
       items: {
