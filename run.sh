@@ -17,7 +17,7 @@ function is_container_running() {
 
 if [[ $(docker inspect --format . ${IMAGE_NAME} 2>&1) != "." ]]; then
   echo "--- BUILDING image '${IMAGE_NAME}'---"
-  docker build -t ${IMAGE_NAME} - < Dockerfile
+  docker build -t ${IMAGE_NAME} -f Dockerfile .
 fi
 
 
@@ -28,6 +28,7 @@ else
   echo "--- RUNNING container '${CONTAINER_NAME}'---"
   docker run --rm -it \
     --name ${CONTAINER_NAME} \
-    --volume $(pwd):/app \
+    --volume $(pwd)/src:/app/src \
+    --volume $(pwd)/katas:/app/katas \
     ${IMAGE_NAME} $@
 fi
