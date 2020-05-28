@@ -45,6 +45,21 @@ export const all = {
               comment: 'An in-depth article about `includes` quoting the spec.',
               tags: [tag.ARTICLE]
             },
+            {
+              url: 'https://twitter.com/jskatas/status/1263239360855642112',
+              comment: 'Announcement of this kata on twitter.',
+              tags: [tag.ANNOUNCEMENT]
+            },
+            {
+              url: 'https://www.reddit.com/r/learnjavascript/comments/gny8fr/discover_arrayprototypeincludes_in_depth_through/',
+              comment: 'Announcement of this kata on reddit.',
+              tags: [tag.ANNOUNCEMENT]
+            },
+            {
+              url: 'https://news.ycombinator.com/item?id=23262678',
+              comment: 'Announcement of this kata on hackernews.',
+              tags: [tag.ANNOUNCEMENT]
+            },
           ],
         },
       },
