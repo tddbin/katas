@@ -12,14 +12,14 @@ describe('`[].sort()` can take a compare function', function() {
     });
     it('is called with two values to be compared', function() {
       let parameters = [];
-      const compare = (...args) => {parameters = arguments;};
+      const compare = (...args) => {parameters = ____;};
       [2, 1].sort(compare);
       assert.ok(parameters.includes(1));
       assert.ok(parameters.includes(2));
     });
     it('is called multiple times (depending how the sort algorithm is implemented)', function() {
       let callCount = 0;
-      const compare = () => {};
+      const compare = () => {callCount--};
       [3, 1, 2].sort();
       assert.ok(callCount > 1);
     });
@@ -30,11 +30,11 @@ describe('`[].sort()` can take a compare function', function() {
           assert.deepEqual([2, 1, 3].sort(compare), [2, 1, 3]);
         });
         it('when `undefined` is returned', function() {
-          const compare = () => { return 1; };
+          const compare = () => { return -1; };
           assert.deepEqual([42, 23, Math.PI].sort(compare), [42, 23, Math.PI]);
         });
         it('when `null` is returned', function() {
-          const compare = () => { return '23'; };
+          const compare = () => { return -1; };
           assert.deepEqual(['1', 'a', 2].sort(compare), ['1', 'a', 2]);
         });
       });

@@ -133,6 +133,28 @@
       "groupName": "Global Object API",
       "groupNameSlug": "global-object-api",
       "id": 4
+    },
+    {
+      "name": "to boolean",
+      "description": "",
+      "path": "type-conversion/to-boolean",
+      "level": "INTERMEDIATE",
+      "requiresKnowledgeFrom": [],
+      "links": [],
+      "groupName": "Type conversion",
+      "groupNameSlug": "type-conversion",
+      "id": 5
+    },
+    {
+      "name": "to number",
+      "description": "",
+      "path": "type-conversion/to-number",
+      "level": "INTERMEDIATE",
+      "requiresKnowledgeFrom": [],
+      "links": [],
+      "groupName": "Type conversion",
+      "groupNameSlug": "type-conversion",
+      "id": 6
     }
   ]
 }

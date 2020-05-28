@@ -3,6 +3,10 @@
 // Follow the hints of the failure messages!
 
 describe('`const` is like `let` plus read-only', () => {
+  const notChangeable = 25;
+  it('const scope leaks too', () => {
+    assert.equal(notChangeable, 23);
+  });
   describe('scalar values are read-only', () => {
     it('e.g. a number', () => {
       const constNum = 0;
@@ -14,10 +18,6 @@ describe('`const` is like `let` plus read-only', () => {
       constString = 'Cant change you?';
       assert.equal(constString, 'I am a const');
     });
-  });
-  const notChangeable = 23;
-  it('const scope leaks too', () => {
-    assert.equal(notChangeable, 23);
   });
   describe('complex types are NOT fully read-only', () => {
     it('array`s items can be changed', () => {
