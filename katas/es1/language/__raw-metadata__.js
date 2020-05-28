@@ -4,10 +4,12 @@ import * as date from '../../date';
 
 const buildReferenceForId = id => ({bundle: 'es1/language', id});
 export const es1 = {
-  'ARRAY_SORT_BASICS': buildReferenceForId(1),
-  'ARRAY_SORT_WITH_FUNCTION': buildReferenceForId(2),
-  'GLOBAL_PARSEINT': buildReferenceForId(3),
-  'GLOBAL_PARSEINT_IN_DEPTH': buildReferenceForId(4),
+  ARRAY_SORT_BASICS: buildReferenceForId(1),
+  ARRAY_SORT_WITH_FUNCTION: buildReferenceForId(2),
+  GLOBAL_PARSEINT: buildReferenceForId(3),
+  GLOBAL_PARSEINT_IN_DEPTH: buildReferenceForId(4),
+  TYPE_CONVERSION_TO_BOOLEAN: buildReferenceForId(5),
+  TYPE_CONVERSION_TO_NUMBER: buildReferenceForId(6),
 };
 
 export const all = {
@@ -110,6 +112,30 @@ export const all = {
           requiresKnowledgeFrom: [],
           // publishDateUTC: new Date(Date.UTC(2019, date.OCTOBER, 6, 19, 53)),
           links: []
+        },
+      },
+    },
+    'Type conversion': {
+      items: {
+        [es1.TYPE_CONVERSION_TO_BOOLEAN.id]: {
+          name: 'to boolean',
+          description: '',
+          path: 'type-conversion/to-boolean',
+          level: SKILL_LEVEL.INTERMEDIATE,
+          requiresKnowledgeFrom: [],
+          // publishDateUTC: new Date(Date.UTC(2019, date.OCTOBER, 6, 19, 53)),
+          links: [
+          ],
+        },
+        [es1.TYPE_CONVERSION_TO_NUMBER.id]: {
+          name: 'to number',
+          description: '',
+          path: 'type-conversion/to-number',
+          level: SKILL_LEVEL.INTERMEDIATE,
+          requiresKnowledgeFrom: [],
+          // publishDateUTC: new Date(Date.UTC(2019, date.OCTOBER, 6, 19, 53)),
+          links: [
+          ],
         },
       },
     },
