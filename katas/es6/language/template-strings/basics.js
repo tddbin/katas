@@ -30,11 +30,11 @@ describe('A template string, is wrapped in ` (backticks) instead of \' or "', fu
       assert.equal(evaluated, x+y);
     });
     it('inside "${...}" can also be a function call', function() {
-      function getDomain(){ 
-        return document.domain; 
+      function getEnv(){
+        return 'ECMAScript';
       }
-      var evaluated = `${ getDomain }`;
-      assert.equal(evaluated, 'tddbin.com');
+      var evaluated = `${ getEnv }`;
+      assert.equal(evaluated, 'ECMAScript');
     });
   });
 });
