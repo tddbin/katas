@@ -14,7 +14,7 @@ describe('`let` restricts the scope of the variable to the current block', () =>
       if (true) {
         var letX = true;
       }
-      assert.throws(() => console.log(letX));
+      assert.throws(() => letX, ReferenceError);
     });
   });
 
@@ -22,13 +22,13 @@ describe('`let` restricts the scope of the variable to the current block', () =>
     it('`let` use in `for` loops', () => {
       let obj = {x: 1};
       for (var key in obj) {}
-      assert.throws(() => console.log(key));
+      assert.throws(() => key, ReferenceError);
     });
     it('create artifical scope, using curly braces', () => {
       {
         var letX = true;
       }
-      assert.throws(() => console.log(letX));
+      assert.throws(() => letX, ReferenceError);
     });
   });
 });
