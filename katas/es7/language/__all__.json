@@ -70,28 +70,6 @@
       "groupNameSlug": "array-api",
       "publishDateRfc822": "Thu, 21 May 2020 00:20:00 GMT",
       "id": 1
-    },
-    {
-      "name": "`Object.entries()`",
-      "description": "",
-      "path": "object-api/entries",
-      "level": "BEGINNER",
-      "requiresKnowledgeFrom": [],
-      "links": [],
-      "groupName": "Object API",
-      "groupNameSlug": "object-api",
-      "id": 2
-    },
-    {
-      "name": "`Object.values()`",
-      "description": "",
-      "path": "object-api/values",
-      "level": "BEGINNER",
-      "requiresKnowledgeFrom": [],
-      "links": [],
-      "groupName": "Object API",
-      "groupNameSlug": "object-api",
-      "id": 3
     }
   ]
 }

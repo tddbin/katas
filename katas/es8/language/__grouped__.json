@@ -34,6 +34,32 @@
       ],
       "slug": "async-function",
       "name": "Async Function"
+    },
+    "Object API": {
+      "items": [
+        {
+          "name": "`Object.entries()`",
+          "description": "",
+          "path": "object-api/entries",
+          "level": "BEGINNER",
+          "requiresKnowledgeFrom": [],
+          "links": [],
+          "groupName": "Object API",
+          "id": "2"
+        },
+        {
+          "name": "`Object.values()`",
+          "description": "",
+          "path": "object-api/values",
+          "level": "BEGINNER",
+          "requiresKnowledgeFrom": [],
+          "links": [],
+          "groupName": "Object API",
+          "id": "3"
+        }
+      ],
+      "slug": "object-api",
+      "name": "Object API"
     }
   }
 }

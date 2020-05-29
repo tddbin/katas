@@ -29,6 +29,28 @@
       "groupNameSlug": "async-function",
       "publishDateRfc822": "Fri, 09 Jun 2017 21:30:00 GMT",
       "id": 1
+    },
+    {
+      "name": "`Object.entries()`",
+      "description": "",
+      "path": "object-api/entries",
+      "level": "BEGINNER",
+      "requiresKnowledgeFrom": [],
+      "links": [],
+      "groupName": "Object API",
+      "groupNameSlug": "object-api",
+      "id": 2
+    },
+    {
+      "name": "`Object.values()`",
+      "description": "",
+      "path": "object-api/values",
+      "level": "BEGINNER",
+      "requiresKnowledgeFrom": [],
+      "links": [],
+      "groupName": "Object API",
+      "groupNameSlug": "object-api",
+      "id": 3
     }
   ]
 }
