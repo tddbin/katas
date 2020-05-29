@@ -28,8 +28,6 @@ else
   echo "--- RUNNING container '${CONTAINER_NAME}'---"
   docker run --rm -it \
     --name ${CONTAINER_NAME} \
-    --volume $(pwd)/src:/app/src \
-    --volume $(pwd)/katas:/app/katas \
-    --volume $(pwd)/dist:/app/dist \
+    --volume $(pwd):/app \
     ${IMAGE_NAME} $@
 fi
