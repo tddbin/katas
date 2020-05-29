@@ -2,10 +2,13 @@ import {SKILL_LEVEL} from '../../skill-levels';
 import * as tag from '../../tags';
 import {toUtcDate}  from '../../date';
 import * as date from '../../date';
+import {es7} from '../../es7/language/__raw-metadata__.js';
 
 const buildReferenceForId = id => ({bundle: 'es8/language', id});
 export const es8 = {
   ASYNC_FUNCTIONS_BASICS: buildReferenceForId(1),
+  OBJECT_ENTRIES: buildReferenceForId(2),
+  OBJECT_VALUES: buildReferenceForId(3),
 };
 
 export const all = {
@@ -34,6 +37,28 @@ export const all = {
               tags: [tag.SPECIFICATION]
             },
           ],
+        },
+      },
+    },
+    'Object API': {
+      items: {
+        [es8.OBJECT_ENTRIES.id]: {
+          name: '`Object.entries()`',
+          description: '',
+          path: 'object-api/entries',
+          level: SKILL_LEVEL.BEGINNER,
+          requiresKnowledgeFrom: [],
+          // publishDateUTC: toUtcDate(2019, date.JUNE, 25, 19, 55),
+          links: [],
+        },
+        [es8.OBJECT_VALUES.id]: {
+          name: '`Object.values()`',
+          description: '',
+          path: 'object-api/values',
+          level: SKILL_LEVEL.BEGINNER,
+          requiresKnowledgeFrom: [],
+          // publishDateUTC: toUtcDate(2019, date.JUNE, 25, 19, 55),
+          links: [],
         },
       },
     },

@@ -7,8 +7,6 @@ import {es6} from '../../es6/language/__raw-metadata__.js';
 const buildReferenceForId = id => ({bundle: 'es7/language', id});
 export const es7 = {
   'ARRAY_INCLUDES': buildReferenceForId(1),
-  'OBJECT_ENTRIES': buildReferenceForId(2),
-  'OBJECT_VALUES': buildReferenceForId(3),
 };
 
 
@@ -61,28 +59,6 @@ export const all = {
               tags: [tag.ANNOUNCEMENT]
             },
           ],
-        },
-      },
-    },
-    'Object API': {
-      items: {
-        [es7.OBJECT_ENTRIES.id]: {
-          name: '`Object.entries()`',
-          description: '',
-          path: 'object-api/entries',
-          level: SKILL_LEVEL.BEGINNER,
-          requiresKnowledgeFrom: [],
-          // publishDateUTC: toUtcDate(2019, date.JUNE, 25, 19, 55),
-          links: [],
-        },
-        [es7.OBJECT_VALUES.id]: {
-          name: '`Object.values()`',
-          description: '',
-          path: 'object-api/values',
-          level: SKILL_LEVEL.BEGINNER,
-          requiresKnowledgeFrom: [],
-          // publishDateUTC: toUtcDate(2019, date.JUNE, 25, 19, 55),
-          links: [],
         },
       },
     },
