@@ -39,7 +39,6 @@
     "flow-bin": "^0.125.1",
     "hamjest": "^3.1.0",
     "hamjest-spy": "4.0.0",
-    "mkdirp-promise": "^5.0.1",
     "mocha": "^7.2.0",
     "recursive-readdir": "^2.2.2",
     "sinon": "^9.0.2"

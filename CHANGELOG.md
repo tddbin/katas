@@ -11,7 +11,7 @@
       heavy, way less deps and much faster
   - [x] since babel does the transpile away of flow types I need to move fow typing to use comments first
         (I dont want to remove flow typing, to keep practicing the difference to typescript in here)
-  - [ ] found that "mkdirp-promise" package is also obsolete, remove it      
+  - [x] found that "mkdirp-promise" package is also obsolete, remove it      
 - [x] remove slug generation for bundles, use the hard coded slug from the bundle metadata
       the bundle names might need to change, as I just want to do it
 - [ ] Fix names for various katas, many miss the "API" prefix, like "es6 " map, promise, set, ...
