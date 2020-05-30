@@ -2,9 +2,8 @@
 import {describe, it} from 'mocha';
 import {
   assertThat, promiseThat, fulfilled,
-  startsWith, equalTo,
+  equalTo,
 } from 'hamjest';
-import { buildFunctionSpy, wasCalledWith } from 'hamjest-spy';
 import { FilterKatasDir } from './FilterKatasDir';
 
 describe('Filter katas-dir', () => {
