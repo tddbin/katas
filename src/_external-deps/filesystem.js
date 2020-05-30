@@ -1,7 +1,5 @@
 import fs from 'fs';
-import util from 'util';
 import readDirs from 'recursive-readdir';
-import pureMkdirp from 'mkdirp-promise';
 
 export function writeToFileAsJson(fileName, obj) {
   let jsonified = JSON.stringify(obj, null, 2);
@@ -9,9 +7,9 @@ export function writeToFileAsJson(fileName, obj) {
 }
 
 export const readFileAsString = (...args) =>
-  util.promisify(fs.readFile)(...args)
+  fs.promises.readFile(...args)
     .then(content => content.toString())
 ;
-export const writeFileFromString = util.promisify(fs.writeFile);
-export const mkdirp = (dir) => pureMkdirp(dir, 0o775);
+export const writeFileFromString = fs.promises.writeFile;
+export const mkdirp = (dir) => fs.promises.mkdir(dir, {recursive: true, mode: 0o775});
 export const allFilesInDir = (dir) => readDirs(dir);

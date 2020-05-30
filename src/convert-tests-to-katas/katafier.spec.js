@@ -4,7 +4,7 @@ import {
   assertThat, equalTo,
 } from 'hamjest';
 import {
-  buildFunctionSpy, wasNotCalled, callCountWas, wasCalledWith,
+  buildFunctionSpy, wasNotCalled, wasCalledWith,
 } from 'hamjest-spy';
 import { katafyFile, katafy } from './katafier';
 

@@ -1,10 +1,5 @@
 // @flow
 import {describe, it} from 'mocha';
-import {
-  assertThat, promiseThat, fulfilled,
-  startsWith, equalTo,
-} from 'hamjest';
-import { buildFunctionSpy, wasCalledWith } from 'hamjest-spy';
 
 describe('Convert tests to katas', () => {
   it('FIRST filter the `sourceDir` for kata files', () => {
