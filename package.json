@@ -8,7 +8,7 @@
     "build-for-offline": "npm run build && ./scripts/build-for-offline.sh",
     "test": "npm run test:src && npm run test:katas:UNTIL-ALL-KATAS-ARE-KATAFIED",
     "test:katas:UNTIL-ALL-KATAS-ARE-KATAFIED": "npm run _test \"{es1,es10,es6/language/{array-api,arrow-functions,block-scoping,class,default-parameters,destructuring,generator,map,object-api,object-literal,promise,reflect,rest,set}}\"",
-    "flow": "flow",
+    "typecheck": "flow",
     "test:src": "mocha --require @babel/register src/{,*,**}/*.spec.js -R progress",
     "_test": "func() { mocha -r esm katas/\"$1\"/{**,**/**}/*.js --require=katas/mocha-require.js -R progress; }; func",
     "test:katas": "npm run test:katas:libraries && npm run test:katas:language",
