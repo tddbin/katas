@@ -43,14 +43,14 @@ describe('Tagged template strings, are an advanced form of template strings', fu
         function secondValueOnly(strings, firstValue, secondValue) {
           return secondValue;
         }
-        assert.equal(firstValueOnly`uno ${one}, dos ${two}`, 2);
+        assert.equal(secondValueOnly`uno ${one}, dos ${two}`, 2);
       });
       it('using ES6 rest syntax, all values can be accessed via one variable', function() {
-        function allValues(stringsArray, ...allValues) { // using the new ES6 rest syntax
+        function allValues(stringsArray, ...allTheValues) { // using the new ES6 rest syntax
           //// return;
-          return allValues;
+          return allTheValues;
         }
-        assert.deepEqual(valuesOnly`uno=${one}, dos=${two}, tres=${three}`, [1, 2, 3]);
+        assert.deepEqual(allValues`uno=${one}, dos=${two}, tres=${three}`, [1, 2, 3]);
       });
     });
   });
