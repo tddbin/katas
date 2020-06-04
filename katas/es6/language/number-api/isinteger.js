@@ -6,7 +6,7 @@ describe('`Number.isInteger()` determines if a value is an integer', function(){
   it('`isInteger` is a static function on `Number`', function() {
     //// const whatType = 'method';
     const whatType = 'function';
-    assert.equal(typeof Number.isInteger, whatType);
+    assert.equal(whatType, typeof Number.isInteger);
   });
   describe('zero in different ways', function() {
     it('0 is an integer', function() {
