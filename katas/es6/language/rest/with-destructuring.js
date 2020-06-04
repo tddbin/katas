@@ -24,6 +24,6 @@ describe('Rest parameters with destructuring', () => {
     const theDate = [2015, 1, 1];
     //// const date = new Date(theDate);
     const date = new Date(...theDate);
-    assert.deepEqual(new Date(2015, 1, 1), date);
+    assert.deepEqual(date, new Date(2015, 1, 1));
   });
 });
