@@ -5,34 +5,41 @@ describe('`async` defines an asynchronous function', function() {
 
   describe('can be created by putting `async` before', () => {
     it('a function expression', function() {
-      const f = function() {};
+      //// const f = function() {};
+      const f = async function() {};
       assert.equal(f instanceof AsyncFunction, true);
     });
     it('a function declaration', function() {
-      function f() {}
+      //// function f() {}
+      async function f() {}
       assert.equal(f instanceof AsyncFunction, true);
     });
     it('an arrow function', function() {
-      const f = () => {};
+      //// const f = () => {};
+      const f = async () => {};
       assert.equal(f instanceof AsyncFunction, true);
     });
     it('an object method', function() {
-      const obj = {f: () => void 0};
+      //// const obj = {f: () => void 0};
+      const obj = {f: async () => void 0};
       assert.equal(obj.f instanceof AsyncFunction, true);
     });
   });
 
   describe('the return value', () => {
     it('is always a Promise', function() {
-      const f = 'nö';
+      //// const f = 'nö';
+      const f = async () => {};
       assert.equal(f() instanceof Promise, true);
     });
     it('wraps the return value in a Promise', function() {
-      const f = () => 42;
+      //// const f = () => 42;
+      const f = async () => 42;
       return f().then(v => assert.equal(v, 42));
     });
     it('is a rejected Promise when the async function throws', function() {
-      const f = async () => 0;
+      //// const f = async () => 0;
+      const f = async () => Promise.reject(23);
       return f()
         .then(() => assert(false, 'Promise must reject (not pass)!'))
         .catch(v => assert.equal(v, 23))
