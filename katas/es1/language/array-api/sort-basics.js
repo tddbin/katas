@@ -6,7 +6,7 @@ describe('`[].sort()` sorts an array using each value as a string', function() {
   it('is a function on the array prototype', function() {
     //// const theType = '???';
     const theType = 'function';
-    assert.equal(typeof [].sort, theType);
+    assert.equal(theType, typeof [].sort);
   });
   describe('sorts characters', function() {
     it('in alphabetical order', function() {
@@ -17,7 +17,7 @@ describe('`[].sort()` sorts an array using each value as a string', function() {
     it('upper case characters come first', function() {
       //// const sorted = ['a', 'B', 'C'];
       const sorted = ['B', 'C', 'a'];
-      assert.deepEqual(['B', '\u{61}', 'C'].sort(), sorted);
+      assert.deepEqual(sorted, ['B', '\u{61}', 'C'].sort());
     });
     it('depending on their position in the unicode table', function() {
       //// const sorted = ['+', '*', '(', ')'];
@@ -37,7 +37,7 @@ describe('`[].sort()` sorts an array using each value as a string', function() {
     it('considering the string from start to end', function() {
       //// const sortedResult = ['????'];
       const sortedResult = ['Ba', 'aa'];
-      assert.deepEqual(['aa', 'Ba'].sort(), sortedResult);
+      assert.deepEqual(sortedResult, ['aa', 'Ba'].sort());
     });
     it('shorter strings go to front', function() {
       //// const balls = ['Ball', 'Ball s', ' bald'].sort();
@@ -54,7 +54,7 @@ describe('`[].sort()` sorts an array using each value as a string', function() {
     it('see multi digit numbers as strings!', function() {
       //// const sortedNumbers = [___];
       const sortedNumbers = [1, 11, 2];
-      assert.deepEqual([1, 2, 11].sort(), sortedNumbers);
+      assert.deepEqual(sortedNumbers, [1, 2, 11].sort());
     });
   });
 });
