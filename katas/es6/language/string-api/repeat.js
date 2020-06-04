@@ -33,12 +33,12 @@ describe('`str.repeat(x)` concatenates `x` copies of `str` and returns it', func
       it('a hex looking number as a string "0xA", it gets converted to an int', function() {
         //// const repeated = 'x'.repeat('0A');
         const repeated = 'x'.repeat('0xA');
-        assert.equal('xxxxxxxxxx', repeated);
+        assert.equal(repeated, 'xxxxxxxxxx');
       });
       it('and does not look like a number, it behaves like 0', function() {
         //// const repeated = 'x'.repeat('23');
         const repeated = 'x'.repeat('nix da');
-        assert.equal('', repeated);
+        assert.equal(repeated, '');
       });
     });
   });
@@ -69,9 +69,9 @@ describe('`str.repeat(x)` concatenates `x` copies of `str` and returns it', func
   describe('for my own (string) class', function() {
     it('calls `toString()` to make it a string', function() {
       class MyString { toString() { return 'my string'; } }
-      //// const expectedString = '';
-      const expectedString = 'my string';
-      assert.equal(String(new MyString()).repeat(1), expectedString);
+      //// const actualString = '';
+      const actualString = 'my string';
+      assert.equal(actualString, String(new MyString()).repeat(1));
     });
     it('`toString()` is only called once', function() {
       let counter = 1;
