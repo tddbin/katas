@@ -4,6 +4,8 @@
 
 describe('`parseInt()` parses a string and returns an integer.', () => {
   it('ignores any surrounding white spaces for a given string', () => {
-    assert.equal(parseInt('     123   '), 123);
+    //// const stringNumber = '     abc     ';
+    const stringNumber = '     123     ';
+    assert.equal(parseInt(stringNumber), 123);
   });
 });
