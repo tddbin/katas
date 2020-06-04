@@ -14,7 +14,7 @@ describe('Generators returns an iterable object', function() {
   it('a generator returns an object', function() {
     //// const typeOfTheGenerator = '';
     const typeOfTheGenerator = 'object';
-    assert.equal(typeof generator, typeOfTheGenerator);
+    assert.equal(typeOfTheGenerator, typeof generator);
   });
   it('a generator object has a key `Symbol.iterator`', function() {
     //// const key = '???';

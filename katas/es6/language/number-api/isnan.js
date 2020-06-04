@@ -6,7 +6,7 @@ describe('`Number.isNaN()` determines if a value is `NaN`', function(){
   it('it is a static function on `Number`', function() {
     //// const whatType = 'method';
     const whatType = 'function';
-    assert.equal(typeof Number.isNaN, whatType);
+    assert.equal(whatType, typeof Number.isNaN);
   });
   describe('returns false', () => {
     describe('for any not-Number type', () => {

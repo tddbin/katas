@@ -8,9 +8,9 @@ describe('`clear()` removes all elements from a Set object.', function(){
   it('`set.size` becomes 0', function() {
     set.add('one').add(2);
     set.clear();
-    //// var expectedSize;
-    var expectedSize = 0;
-    assert.equal(set.size, expectedSize);
+    //// var actualSize;
+    var actualSize = 0;
+    assert.equal(actualSize, set.size);
   });
   it('the iterator `set.entries()` will not contain any items', function() {
     set.add('one').add(2);
@@ -26,8 +26,8 @@ describe('`clear()` removes all elements from a Set object.', function(){
     assert.deepEqual(set.has(2), false);
   });
   it('returns `undefined`', function() {
-    //// var expectedReturn = true;
-    var expectedReturn = undefined;
-    assert.equal(set.clear(), expectedReturn);
+    //// var actualReturn = true;
+    var actualReturn = undefined;
+    assert.equal(actualReturn, set.clear());
   });
 });

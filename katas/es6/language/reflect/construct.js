@@ -9,9 +9,9 @@ describe('`Reflect.construct` is the `new` operator as a function', function() {
       assert.equal(name in Reflect, true);
     });
     it('is of type `function`', function() {
-      //// const expectedType = '???';
-      const expectedType = 'function';
-      assert.equal(typeof Reflect.construct, expectedType)
+      //// const actualType = '???';
+      const actualType = 'function';
+      assert.equal(actualType, typeof Reflect.construct)
     });
   });
   
@@ -80,9 +80,9 @@ describe('`Reflect.construct` is the `new` operator as a function', function() {
 
   describe('the length property', function() {
     it('of `Reflect.construct` is 2', function() {
-      //// let expected;
-      let expected = 2;
-      assert.equal(Reflect.construct.length, expected);
+      //// let actual;
+      let actual = 2;
+      assert.equal(actual, Reflect.construct.length);
     });
   });
 });

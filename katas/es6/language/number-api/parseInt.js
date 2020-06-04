@@ -6,7 +6,7 @@ describe('`Number.parseInt()` parses a string and returns an integer.', () => {
   it('it is a static function on `Number`', () => {
     //// const whatType = 'global';
     const whatType = 'function';
-    assert.equal(typeof Number.parseInt, whatType);
+    assert.equal(whatType, typeof Number.parseInt);
   });
   it('is the same as the global function `parseInt`', () => {
     //// const parseIntFunction = Number.parse_int;

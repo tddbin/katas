@@ -9,9 +9,9 @@ describe('`Reflect.defineProperty()` is like `Object.defineProperty()` but retur
       assert.equal(name in Reflect, true);
     });
     it('is of type `function`', function() {
-      //// const expectedType = '';
-      const expectedType = 'function';
-      assert.equal(typeof Reflect.defineProperty, expectedType)
+      //// const actualType = '';
+      const actualType = 'function';
+      assert.equal(actualType, typeof Reflect.defineProperty)
     });
   });
   

@@ -3,9 +3,9 @@
 
 describe('`Reflect.apply` calls a target function', function() {
   it('it is a static method', function() {
-    //// const expectedType = '???';
-    const expectedType = 'function';
-    assert.equal(typeof Reflect.apply, expectedType)
+    //// const actualType = '???';
+    const actualType = 'function';
+    assert.equal(actualType, typeof Reflect.apply)
   });
 
   describe('the 1st parameter', () => {

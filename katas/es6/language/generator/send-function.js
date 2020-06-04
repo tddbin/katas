@@ -20,7 +20,7 @@ describe('Pass a function to a generator', () => {
     var iterator = generatorFunction();
     //// var iteratedOver = [iterator.next().value, iterator.next().value];
     var iteratedOver = [iterator.next().value, iterator.next(() => 2).value];
-    assert.deepEqual([1, 2], iteratedOver);
+    assert.deepEqual(iteratedOver, [1, 2]);
   });
   it('nesting yielded function calls', function() {
     function* generatorFunction() {
@@ -30,7 +30,7 @@ describe('Pass a function to a generator', () => {
     var iterator = generatorFunction();
     //// var iteratedOver = [];
     var iteratedOver = [iterator.next().value, iterator.next(()=>2).value, iterator.next(3).value];
-    assert.deepEqual([1, 2, 3], iteratedOver);
+    assert.deepEqual(iteratedOver, [1, 2, 3]);
   });
 });
 

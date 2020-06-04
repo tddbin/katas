@@ -6,15 +6,15 @@ describe('`Set` lets you store unique values of any type', function(){
   it('`Set` is a new global constructor function', function() {
     //// const typeOfSet = '???';
     const typeOfSet = 'function';
-    assert.equal(typeof Set, typeOfSet);
+    assert.equal(typeOfSet, typeof Set);
   });
   it('every value in a set is unique', function() {
     let set = new Set();
     set.add(1);
     set.add(1);
-    //// const expectedSize = 2;
-    const expectedSize = 1;
-    assert.equal(set.size, expectedSize);
+    //// const actualSize = 2;
+    const actualSize = 1;
+    assert.equal(actualSize, set.size);
   });
   it('the string "1" is different to the number 1', function() {
     let set = new Set();
