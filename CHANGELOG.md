@@ -22,7 +22,7 @@
 - [x] write kata for ES6 `Number.parseInt()`
 - [x] Katafy (and improve) the spread katas
 - [x] Katafy (and improve) the string-api katas
-- [ ] Katafy (and improve) the iterator katas
+- [x] Katafy (and improve) the iterator katas
 - [x] Katafy (and improve) the tagged template strings katas
 - [x] Katafy the unicode in strings katas
 - [x] Fix `PromiseRejectionHandledWarning` thrown when `npm test` runs
