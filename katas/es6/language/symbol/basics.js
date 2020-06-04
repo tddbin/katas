@@ -7,9 +7,9 @@
 
 describe('Symbol', function() {
   it('`Symbol` lives in the global scope', function(){
-    //// const expected = someNamespace.Symbol;
-    const expected = Symbol;
-    assert.equal(Symbol, expected);
+    //// const actual = someNamespace.Symbol;
+    const actual = Symbol;
+    assert.equal(actual, Symbol);
   });
   it('every `Symbol()` is unique', function(){
     const sym1 = Symbol();
