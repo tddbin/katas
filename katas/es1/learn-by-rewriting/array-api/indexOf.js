@@ -40,27 +40,27 @@ describe("Implementing the `indexOf()` array method", () => {
     it("returns the index of the searched element in the array", () => {
       const expected = 2;
       const actual = indexOf(["a", "b", "c"], "c");
-      assert.equal(expected, actual);
+      assert.equal(actual, expected);
     });
     it("returns -1 if the searched element is not found in the array", () => {
       const expected = -1;
       const actual = indexOf(["a", "b", "c"], "e");
-      assert.equal(expected, actual);
+      assert.equal(actual, expected);
     });
     it("begins looking for the searched element starting from the indexFrom value", () => {
       const expected = -1;
       const actual = indexOf(["a", "b", "c"], "a", 2);
-      assert.equal(expected, actual);
+      assert.equal(actual, expected);
     });
     it("searches the whole array if indexFrom is 0", () => {
       const expected = 2;
       const actual = indexOf(["a", "b", "c"], "c", 0);
-      assert.equal(expected, actual);
+      assert.equal(actual, expected);
     });
     it("searches the whole array if indexFrom has a negative value", () => {
       const expected = 1;
       const actual = indexOf(["a", "b", "c"], "b", -5);
-      assert.equal(expected, actual);
+      assert.equal(actual, expected);
     });
   });
   describe("it's parameters", ()=>{
@@ -70,17 +70,17 @@ describe("Implementing the `indexOf()` array method", () => {
     it("parses indexFrom if it's a string containing a number", () => {
       const expected = 1;
       const actual = indexOf(["a", "b", "c"], "b", "1");
-      assert.equal(expected, actual);
+      assert.equal(actual, expected);
     });
     it("searches the whole array if indexFrom can't be parsed into a number", () => {
       const expected = 2;
       const actual = indexOf(["a", "b", "c"], "c", "hello");
-      assert.equal(expected, actual);
+      assert.equal(actual, expected);
     });
     it("returns -1 if the indexFrom is greater than or equal to the array's length", () => {
       const expected = -1;
       const actual = indexOf(["a", "b", "c"], "a", 3);
-      assert.equal(expected, actual);
+      assert.equal(actual, expected);
     });
   });
 });
