@@ -22,7 +22,7 @@ describe('`Object.is()` determines whether two values are the same', function(){
     it('+0 is not the same as -0', function() {
       //// const areSame = -1;
       const areSame = false;
-      assert.equal(Object.is(+0, -0), areSame);
+      assert.equal(areSame, Object.is(+0, -0));
     });
     it('NaN is the same as NaN', function() {
       //// const number = 0;
@@ -59,7 +59,7 @@ describe('`Object.is()` determines whether two values are the same', function(){
     it('`{}` is just not the same as `{}`', function() {
       //// const areSame = '???';
       const areSame = false;
-      assert.equal(Object.is({}, {}), areSame);
+      assert.equal(areSame, Object.is({}, {}));
     });
     it('two `Map`s with the same content are not the same thing', function() {
       let map1 = new Map([[1, 'one']]);
