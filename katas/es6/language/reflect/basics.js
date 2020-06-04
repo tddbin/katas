@@ -4,16 +4,16 @@
 describe('`Reflect` basics', function() {
   describe('Reflect is special, it is different to e.g. `Object`', function() {
     it('it`s of type object', function() {
-      const expectedType = 'not a function!';
-      assert.equal(typeof Reflect, expectedType);
+      const actualType = 'not a function!';
+      assert.equal(actualType, typeof Reflect);
     });
     it('it can not be instantiated (`new Reflect()`)', function() {
       const tryToConstruct = () => { Reflect; };
       assert.throws(tryToConstruct, TypeError);
     });
     it('has no `call` method (as opposed to e.g. Object)', function() {
-      const expected = 'function';
-      assert.equal(typeof Reflect.call, expected);
+      const actual = 'function';
+      assert.equal(actual, typeof Reflect.call);
     });
   });
   

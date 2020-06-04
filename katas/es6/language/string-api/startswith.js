@@ -10,8 +10,8 @@ describe('`str.startsWith(searchString)` determines whether `str` begins with `s
       assert.equal(actual, true);
     });
     it('can be a string', function() {
-      const expected = '???';
-      assert.equal(s.startsWith('the'), expected);
+      const actual = '???';
+      assert.equal(actual, s.startsWith('the'));
     });
     it('can contain unicode characters', function() {
       const nuclear = 'NO ☢ NO';
@@ -36,8 +36,8 @@ describe('`str.startsWith(searchString)` determines whether `str` begins with `s
       assert.equal(s.startsWith('str', position), true);
     });
     it('a value larger than the string`s length, returns false', function() {
-      const expected = true;
-      assert.equal(s.startsWith(' ', s.length + 1), expected);
+      const actual = true;
+      assert.equal(actual, s.startsWith(' ', s.length + 1));
     });
   });
   describe('this functionality can be used on non-strings too', function() {

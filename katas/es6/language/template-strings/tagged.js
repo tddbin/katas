@@ -17,7 +17,7 @@ describe('Tagged template strings, are an advanced form of template strings', fu
       }
       it('the strings are an array', function() {
         var result = 'template string';
-        assert.deepEqual(tagFunction`template string`, result);
+        assert.deepEqual(result, tagFunction`template string`);
       });
       it('expressions are NOT passed to it', function() {
         var tagged = tagFunction`one${23}`;

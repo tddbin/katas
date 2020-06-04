@@ -30,8 +30,8 @@ describe('Spread syntax with arrays', () => {
     it('prefix with `...` to spread as function params', function() {
       const magicNumbers = [1, 2];
       const fn = (magicA, magicB) => {
-        assert.deepEqual(magicNumbers[0], magicA);
-        assert.deepEqual(magicNumbers[1], magicB);
+        assert.deepEqual(magicA, magicNumbers[0]);
+        assert.deepEqual(magicB, magicNumbers[1]);
       };
       fn(magicNumbers);
     });

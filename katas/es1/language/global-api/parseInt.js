@@ -5,7 +5,7 @@
 describe('`parseInt()` parses a string and returns an integer.', () => {
   it('it is a global function', () => {
     var whatType = 'global function';
-    assert.equal(typeof parseInt, whatType);
+    assert.equal(whatType, typeof parseInt);
   });
   describe('WHEN given a numeric string', () => {
     it('THEN converts it to an integer', () => {
@@ -17,8 +17,8 @@ describe('`parseInt()` parses a string and returns an integer.', () => {
       assert.equal(parseInt('10', radix), 16);
     });
     it('AND a radix=9 THEN converts to an integer applying the radix', () => {
-      var expected = 10;
-      assert.equal(parseInt('10', 9), expected);
+      var actual = 10;
+      assert.equal(actual, parseInt('10', 9));
     });
     it('AND a radix=0 THEN converts to an integer assuming radix=10', () => {
       var radix = 8;

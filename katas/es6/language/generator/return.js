@@ -8,7 +8,7 @@ describe('`return` in a generator function is special', function() {
       function* generatorFunction() { return 1; }
       const returned = generatorFunction().next();
       const propertyNames = [];
-      assert.deepEqual(Object.keys(returned), propertyNames);
+      assert.deepEqual(propertyNames, Object.keys(returned));
     });
     it('the property `value` is the returned value', function() {
       function* generatorFunction() { return; }
@@ -48,7 +48,7 @@ describe('`return` in a generator function is special', function() {
     it('the mix behaves different to two `yield`s', function() {
       const iterator = generatorFunctionWithYieldAndReturn();
       const values = [1, 2];
-      assert.deepEqual(Array.from(iterator), values);
+      assert.deepEqual(values, Array.from(iterator));
     });
     it('two `yield`s returning values', function() {
       function* generatorFunctionWithTwoYields() {

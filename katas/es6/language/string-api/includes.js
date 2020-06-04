@@ -9,8 +9,8 @@ describe('`string.includes()` determines if a string can be found inside another
       assert.equal('xyz'.includes(searchString), true);
     });
     it('reports false if character was not found', function() {
-      const expected = '???';
-      assert.equal('xyz'.includes('abc'), expected);
+      const actual = '???';
+      assert.equal(actual, 'xyz'.includes('abc'));
     });
   });
   describe('find a string', function() {

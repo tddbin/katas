@@ -35,7 +35,7 @@ describe('`catch()` returns a Promise and deals with rejected cases only', () =>
     it('converts it`s return value into a promise', () => {
       const p = Promise.reject();
       const p1 = p.catch(() => void 0);
-      return p1.then(result => assert.equal('promise?', result));
+      return p1.then(result => assert.equal(result, 'promise?'));
     });
     it('the first parameter is the rejection reason', () => {
       const p = Promise.reject('rejection');

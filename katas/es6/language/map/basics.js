@@ -5,7 +5,7 @@
 describe('`Map` is a key/value map', function(){
   it('`Map` is a new global constructor function', function() {
     const typeOfMap = '???';
-    assert.equal(typeof Map, typeOfMap);
+    assert.equal(typeOfMap, typeof Map);
   });
   it('provides `new Map().set()` to add key+value pair, `get()` to read it by key', function() {
     let map = new Map();

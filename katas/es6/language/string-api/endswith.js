@@ -10,8 +10,8 @@ describe('`str.endsWith(searchString)` determines whether `str` ends with `searc
       assert.equal(doesEndWith, true);
     });
     it('can be a string', function() {
-      const expected = false;
-      assert.equal(s.endsWith('fin'), expected);
+      const actual = false;
+      assert.equal(actual, s.endsWith('fin'));
     });
     it('can contain unicode characters', function() {
       const nuclear = 'NO ☢ Oh NO!';
