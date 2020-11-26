@@ -8,6 +8,7 @@ const buildReferenceForId = id => ({bundle: 'es10/language', id});
 export const es10 = {
   OBJECT_FROMENTRIES: buildReferenceForId(1),
   OBJECT_FROMENTRIES_IN_DEPTH: buildReferenceForId(2),
+  STRING_TRIMSTART: buildReferenceForId(3),
 };
 
 export const all = {
@@ -67,6 +68,30 @@ export const all = {
               url: 'https://github.com/tc39/proposal-object-from-entries/blob/master/DETAILS.md',
               comment: 'Very interesting details about some decisions on this method.',
               tags: [tag.DISCUSSION, tag.DOCS]
+            },
+          ],
+        },
+      },
+    },
+    'String API': {
+      items: {
+        [es10.STRING_TRIMSTART.id]: {
+          name: '`string.trimStart()`',
+          description: '`string.trimStart()` - removes whitespace from the beginning of a string',
+          path: 'string-api/trimStart',
+          level: SKILL_LEVEL.BEGINNER,
+          requiresKnowledgeFrom: [],
+          // publishDateUTC: toUtcDate(2019, date.JULY, 28, 22, 55),
+          links: [
+            {
+              url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart',
+              comment: 'Description of Object.fromEntries() on MDN.',
+              tags: [tag.MDN, tag.DOCS]
+            },
+            {
+              url: 'https://www.ecma-international.org/ecma-262/10.0/#sec-string.prototype.trimstart',
+              comment: 'The specification describing `String.prototype.trimStart()`.',
+              tags: [tag.SPECIFICATION]
             },
           ],
         },
