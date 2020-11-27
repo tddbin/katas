@@ -93,6 +93,11 @@ export const all = {
               comment: 'The specification describing `String.prototype.trimStart()`.',
               tags: [tag.SPECIFICATION]
             },
+            {
+              url: 'https://github.com/tc39/test262/tree/main/test/built-ins/String/prototype/trimStart',
+              comment: 'The oficial tests for JavaScript (engines) for `trimStart`.',
+              tags: [tag.TESTS, tag.SOURCE_CODE]
+            },
           ],
         },
       },
