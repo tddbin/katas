@@ -104,6 +104,7 @@
           "path": "string-api/trimStart",
           "level": "BEGINNER",
           "requiresKnowledgeFrom": [],
+          "publishDateUTC": "2020-11-28T00:56:00.000Z",
           "links": [
             {
               "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart",
