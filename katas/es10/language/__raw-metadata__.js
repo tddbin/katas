@@ -81,7 +81,7 @@ export const all = {
           path: 'string-api/trimStart',
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [],
-          // publishDateUTC: toUtcDate(2019, date.JULY, 28, 22, 55),
+          publishDateUTC: toUtcDate(2020, date.NOVEMBER, 28, 0, 56),
           links: [
             {
               url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart',
