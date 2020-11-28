@@ -95,6 +95,46 @@
       ],
       "slug": "object-api",
       "name": "Object API"
+    },
+    "String API": {
+      "items": [
+        {
+          "name": "`string.trimStart()`",
+          "description": "`string.trimStart()` - removes whitespace from the beginning of a string",
+          "path": "string-api/trimStart",
+          "level": "BEGINNER",
+          "requiresKnowledgeFrom": [],
+          "links": [
+            {
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart",
+              "comment": "Description of Object.fromEntries() on MDN.",
+              "tags": [
+                "mdn",
+                "docs"
+              ]
+            },
+            {
+              "url": "https://www.ecma-international.org/ecma-262/10.0/#sec-string.prototype.trimstart",
+              "comment": "The specification describing `String.prototype.trimStart()`.",
+              "tags": [
+                "spec"
+              ]
+            },
+            {
+              "url": "https://github.com/tc39/test262/tree/main/test/built-ins/String/prototype/trimStart",
+              "comment": "The oficial tests for JavaScript (engines) for `trimStart`.",
+              "tags": [
+                "tests",
+                "sourceCode"
+              ]
+            }
+          ],
+          "groupName": "String API",
+          "id": "3"
+        }
+      ],
+      "slug": "string-api",
+      "name": "String API"
     }
   }
 }
