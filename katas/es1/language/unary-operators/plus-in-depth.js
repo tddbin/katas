@@ -10,10 +10,10 @@ describe('Unary "+" operator', () => {
   describe('GIVEN simple operands', () => {
     describe('WHEN the operand is a string', () => {
       it('AND its not numeric THEN it converts to `NaN`', () => {
-        assert.equal(+'not a number', NaN);
+        assert.strictEqual(+'not a number', NaN);
       });
       it('AND even when it starts with a number THEN it converts to `NaN`', () => {
-        assert.equal(+'123 ~!@#$%', NaN);
+        assert.strictEqual(+'123 ~!@#$%', NaN);
       });
 
       it('AND it is the word "Infinity" THEN it returns `Infinity`', () => {
