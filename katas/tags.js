@@ -8,5 +8,6 @@ export const QUOTE = 'quote';
 export const SOURCE_CODE = 'sourceCode';
 export const SPECIFICATION = 'spec';
 export const TESTS = 'tests';
+export const TWEET = 'tweet';
 export const VIDEO = 'video';
 export const WIKIPEDIA = 'wikipedia';

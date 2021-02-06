@@ -10,6 +10,9 @@ export const es1 = {
   GLOBAL_PARSEINT_IN_DEPTH: buildReferenceForId(4),
   TYPE_CONVERSION_TO_BOOLEAN: buildReferenceForId(5),
   TYPE_CONVERSION_TO_NUMBER: buildReferenceForId(6),
+  MATH_API: buildReferenceForId(7),
+  UNARY_OPERATOR_PLUS: buildReferenceForId(8),
+  UNARY_OPERATOR_PLUS_IN_DEPTH: buildReferenceForId(9),
 };
 
 export const all = {
@@ -133,6 +136,52 @@ export const all = {
           path: 'type-conversion/to-number',
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [],
+          // publishDateUTC: new Date(Date.UTC(2019, date.OCTOBER, 6, 19, 53)),
+          links: [
+          ],
+        },
+      },
+    },
+    'Unary Operators': {
+      items: {
+        [es1.UNARY_OPERATOR_PLUS.id]: {
+          name: 'Unary "+" operator',
+          description: 'converts its operand to the Number type',
+          path: 'unary-operators/plus',
+          level: SKILL_LEVEL.INTERMEDIATE,
+          requiresKnowledgeFrom: [],
+          // publishDateUTC: new Date(Date.UTC(2019, date.OCTOBER, 6, 19, 53)),
+          links: [
+            {
+              url: 'https://www.ecma-international.org/wp-content/uploads/ECMA-262_1st_edition_june_1997.pdf',
+              comment: 'The original ECMAScript 1 specification, "Unary + Operator" is on page 40, chapter 11.4.6 (in a 110 pages PDF).',
+              tags: [tag.SPECIFICATION],
+            },
+            {
+              url: 'https://www.ecma-international.org/wp-content/uploads/ECMA-262_1st_edition_june_1997.pdf',
+              comment: 'The original ES1 spec describes the `Number` type in chapter 8.5 (a 110 pages PDF).',
+              tags: [tag.SPECIFICATION],
+            },
+            {
+              url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus',
+              comment: 'The MDN page.',
+              tags: [tag.MDN],
+            },
+            {
+              url: 'https://twitter.com/jskatas/status/1358119660600889351',
+              comment: 'Tweeting that not-assertions make sense, sometimes.',
+              tags: [tag.TWEET],
+            },
+          ],
+        },
+        [es1.UNARY_OPERATOR_PLUS_IN_DEPTH.id]: {
+          name: 'Unary "+" operator, in depth',
+          description: 'converts its operand to the Number type',
+          path: 'unary-operators/plus-in-depth',
+          level: SKILL_LEVEL.ADVANCED,
+          requiresKnowledgeFrom: [
+            es1.UNARY_OPERATOR_PLUS,
+          ],
           // publishDateUTC: new Date(Date.UTC(2019, date.OCTOBER, 6, 19, 53)),
           links: [
           ],
