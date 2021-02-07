@@ -11,9 +11,9 @@ export const es1 = {
   TYPE_CONVERSION_TO_BOOLEAN: buildReferenceForId(5),
   TYPE_CONVERSION_TO_NUMBER: buildReferenceForId(6),
   MATH_API: buildReferenceForId(7),
-  UNARY_OPERATOR_PLUS: buildReferenceForId(8),
-  UNARY_OPERATOR_PLUS_IN_DEPTH: buildReferenceForId(9),
-  ALL_UNARY_OPERATORS: buildReferenceForId(10),
+  ALL_UNARY_OPERATORS: buildReferenceForId(8),
+  UNARY_OPERATOR_PLUS: buildReferenceForId(9),
+  UNARY_OPERATOR_PLUS_IN_DEPTH: buildReferenceForId(10),
 };
 
 export const all = {
@@ -197,7 +197,7 @@ export const all = {
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [
           ],
-          // publishDateUTC: new Date(Date.UTC(2021, date.FEBRUARY, 7, 1, 31)),
+          publishDateUTC: new Date(Date.UTC(2021, date.FEBRUARY, 7, 23, 50)),
           links: [
           ],
         },
