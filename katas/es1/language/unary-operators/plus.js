@@ -2,7 +2,12 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
-describe('Unary "+" operator', () => {
+describe('The unary "+" operator', () => {
+  it('is the "+" that preceeds an operand', () => {
+    //// const x = -'23';
+    const x = +'23';
+    assert.strictEqual(x, +'23');
+  });
   it('converts its operand to the Number type', () => {
     //// const converted = +'fourty two';
     const converted = +'42';
