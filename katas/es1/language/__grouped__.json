@@ -175,7 +175,12 @@
           "description": "converts its operand to the Number type",
           "path": "unary-operators/plus",
           "level": "INTERMEDIATE",
-          "requiresKnowledgeFrom": [],
+          "requiresKnowledgeFrom": [
+            {
+              "bundle": "es1/language",
+              "id": 10
+            }
+          ],
           "publishDateUTC": "2021-02-07T01:01:00.000Z",
           "links": [
             {
@@ -218,6 +223,10 @@
           "requiresKnowledgeFrom": [
             {
               "bundle": "es1/language",
+              "id": 10
+            },
+            {
+              "bundle": "es1/language",
               "id": 8
             }
           ],
@@ -225,6 +234,16 @@
           "links": [],
           "groupName": "Unary Operators",
           "id": "9"
+        },
+        {
+          "name": "All unary operators",
+          "description": "unary - an operation with only one operand",
+          "path": "unary-operators/all",
+          "level": "BEGINNER",
+          "requiresKnowledgeFrom": [],
+          "links": [],
+          "groupName": "Unary Operators",
+          "id": "10"
         }
       ],
       "slug": "unary-operators",
