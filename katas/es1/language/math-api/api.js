@@ -13,20 +13,20 @@ describe('`Math` API overview', () => {
     it('LN2', () => {
       assert.equal(Math.LN2, 0.6931471805599453);
     });
-    it('LN2', () => {
-      assert.equal(Math.LOG2E, 0.6931471805599453);
+    it('LOG2E', () => {
+      assert.equal(Math.LOG2E, 1.4426950408889634);
     });
     it('LN2', () => {
-      assert.equal(Math.LOG10E, 0.6931471805599453);
+      assert.equal(Math.LOG10E, 0.4342944819032518);
     });
     it('PI', () => {
-      assert.equal(Math.PI, 3.14);
+      assert.equal(Math.PI, 3.141592653589793);
     });
-    it('SQ', () => {
-      assert.equal(Math.SQRT1_2, 0.6931471805599453);
+    it('SQRT', () => {
+      assert.equal(Math.SQRT1_2, 0.7071067811865476);
     });
-    it('LN2', () => {
-      assert.equal(Math.SQRT2, 0.6931471805599453);
+    it('SQRT2', () => {
+      assert.equal(Math.SQRT2, 1.4142135623730951);
     });
   });
   describe('functions', () => {
