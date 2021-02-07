@@ -13,6 +13,7 @@ export const es1 = {
   MATH_API: buildReferenceForId(7),
   UNARY_OPERATOR_PLUS: buildReferenceForId(8),
   UNARY_OPERATOR_PLUS_IN_DEPTH: buildReferenceForId(9),
+  ALL_UNARY_OPERATORS: buildReferenceForId(10),
 };
 
 export const all = {
@@ -149,7 +150,9 @@ export const all = {
           description: 'converts its operand to the Number type',
           path: 'unary-operators/plus',
           level: SKILL_LEVEL.INTERMEDIATE,
-          requiresKnowledgeFrom: [],
+          requiresKnowledgeFrom: [
+            es1.ALL_UNARY_OPERATORS,
+          ],
           publishDateUTC: new Date(Date.UTC(2021, date.FEBRUARY, 7, 1, 1)),
           links: [
             {
@@ -180,9 +183,21 @@ export const all = {
           path: 'unary-operators/plus-in-depth',
           level: SKILL_LEVEL.ADVANCED,
           requiresKnowledgeFrom: [
+            es1.ALL_UNARY_OPERATORS,
             es1.UNARY_OPERATOR_PLUS,
           ],
           publishDateUTC: new Date(Date.UTC(2021, date.FEBRUARY, 7, 1, 31)),
+          links: [
+          ],
+        },
+        [es1.ALL_UNARY_OPERATORS.id]: {
+          name: 'All unary operators',
+          description: 'unary - an operation with only one operand',
+          path: 'unary-operators/all',
+          level: SKILL_LEVEL.BEGINNER,
+          requiresKnowledgeFrom: [
+          ],
+          // publishDateUTC: new Date(Date.UTC(2021, date.FEBRUARY, 7, 1, 31)),
           links: [
           ],
         },
