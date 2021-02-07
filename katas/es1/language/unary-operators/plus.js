@@ -4,22 +4,34 @@
 
 describe('Unary "+" operator', () => {
   it('converts its operand to the Number type', () => {
-    assert.strictEqual(+'42', Number(42));
+    //// const converted = +'fourty two';
+    const converted = +'42';
+    assert.strictEqual(converted, Number(42));
   });
 
   it('WHEN converting a numeric string THEN it returns its value as a number', () => {
-    assert.strictEqual(+'0.12', 0.12);
+    //// const number = '0.12';
+    const number = 0.12;
+    assert.strictEqual(+'0.12', number);
   });
   it('even WHEN converting the string "-Infinity" THEN it returns the Number `Infinity`', () => {
-    assert.strictEqual(+'-Infinity', -Infinity);
+    //// const converted = 'Infinity';
+    const converted = '-Infinity';
+    assert.strictEqual(+ converted, -Infinity);
   });
   it('WHEN converting `null` THEN it returns `+0`', () => {
-    assert.strictEqual(+null, +0);
+    //// const converted = +Null;
+    const converted = +null;
+    assert.strictEqual(converted, +0);
   });
   it('WHEN converting `true` THEN it returns 1', () => {
-    assert.strictEqual(+true, 1);
+    //// const converted = true;
+    const converted = +true;
+    assert.strictEqual(converted, 1);
   });
   it('WHEN converting an object with a method `valueOf` THEN its value is returned', () => {
-    assert.strictEqual(+{valueOf: () => 42}, 42);
+    //// const obj = {valueof: () => 42};
+    const obj = {valueOf: () => 42};
+    assert.strictEqual(+ obj, 42);
   });
 });
