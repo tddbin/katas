@@ -167,6 +167,66 @@
       ],
       "slug": "type-conversion",
       "name": "Type conversion"
+    },
+    "Unary Operators": {
+      "items": [
+        {
+          "name": "Unary \"+\" operator",
+          "description": "converts its operand to the Number type",
+          "path": "unary-operators/plus",
+          "level": "INTERMEDIATE",
+          "requiresKnowledgeFrom": [],
+          "links": [
+            {
+              "url": "https://www.ecma-international.org/wp-content/uploads/ECMA-262_1st_edition_june_1997.pdf",
+              "comment": "The original ECMAScript 1 specification, \"Unary + Operator\" is on page 40, chapter 11.4.6 (in a 110 pages PDF).",
+              "tags": [
+                "spec"
+              ]
+            },
+            {
+              "url": "https://www.ecma-international.org/wp-content/uploads/ECMA-262_1st_edition_june_1997.pdf",
+              "comment": "The original ES1 spec describes the `Number` type in chapter 8.5 (a 110 pages PDF).",
+              "tags": [
+                "spec"
+              ]
+            },
+            {
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus",
+              "comment": "The MDN page.",
+              "tags": [
+                "mdn"
+              ]
+            },
+            {
+              "url": "https://twitter.com/jskatas/status/1358119660600889351",
+              "comment": "Tweeting that not-assertions make sense, sometimes.",
+              "tags": [
+                "tweet"
+              ]
+            }
+          ],
+          "groupName": "Unary Operators",
+          "id": "8"
+        },
+        {
+          "name": "Unary \"+\" operator, in depth",
+          "description": "converts its operand to the Number type",
+          "path": "unary-operators/plus-in-depth",
+          "level": "ADVANCED",
+          "requiresKnowledgeFrom": [
+            {
+              "bundle": "es1/language",
+              "id": 8
+            }
+          ],
+          "links": [],
+          "groupName": "Unary Operators",
+          "id": "9"
+        }
+      ],
+      "slug": "unary-operators",
+      "name": "Unary Operators"
     }
   }
 }
