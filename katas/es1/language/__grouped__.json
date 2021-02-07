@@ -171,6 +171,17 @@
     "Unary Operators": {
       "items": [
         {
+          "name": "All unary operators",
+          "description": "unary - an operation with only one operand",
+          "path": "unary-operators/all",
+          "level": "BEGINNER",
+          "requiresKnowledgeFrom": [],
+          "publishDateUTC": "2021-02-07T23:50:00.000Z",
+          "links": [],
+          "groupName": "Unary Operators",
+          "id": "8"
+        },
+        {
           "name": "Unary \"+\" operator",
           "description": "converts its operand to the Number type",
           "path": "unary-operators/plus",
@@ -178,7 +189,7 @@
           "requiresKnowledgeFrom": [
             {
               "bundle": "es1/language",
-              "id": 10
+              "id": 8
             }
           ],
           "publishDateUTC": "2021-02-07T01:01:00.000Z",
@@ -213,7 +224,7 @@
             }
           ],
           "groupName": "Unary Operators",
-          "id": "8"
+          "id": "9"
         },
         {
           "name": "Unary \"+\" operator, in depth",
@@ -223,24 +234,14 @@
           "requiresKnowledgeFrom": [
             {
               "bundle": "es1/language",
-              "id": 10
+              "id": 8
             },
             {
               "bundle": "es1/language",
-              "id": 8
+              "id": 9
             }
           ],
           "publishDateUTC": "2021-02-07T01:31:00.000Z",
-          "links": [],
-          "groupName": "Unary Operators",
-          "id": "9"
-        },
-        {
-          "name": "All unary operators",
-          "description": "unary - an operation with only one operand",
-          "path": "unary-operators/all",
-          "level": "BEGINNER",
-          "requiresKnowledgeFrom": [],
           "links": [],
           "groupName": "Unary Operators",
           "id": "10"
