@@ -3,10 +3,10 @@
 // Follow the hints of the failure messages!
 
 describe('All unary operators', () => {
-  it('a unary operator is preceeding (or following) its operand', () => {
+  it('a unary operator is preceding (or following) its operand', () => {
     //// var convertWithPlusBefore = -'1';
     var convertWithPlusBefore = +'1';
-    assert.strictEqual(convertWithPlusBefore, +'1');
+    assert.strictEqual(convertWithPlusBefore, 1);
   });
 
   describe('WHEN the operator is before the operand', () => {
