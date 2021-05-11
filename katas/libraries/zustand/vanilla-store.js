@@ -2,7 +2,7 @@ import {assertThat, throws, func, hasProperties} from 'hamjest';
 import vanillaZustand from 'zustand/vanilla';
 const create = typeof vanillaZustand === 'function' ? vanillaZustand : vanillaZustand.default;
 
-describe('Zustand - the vanilla store', () => {
+describe('Zustand - the vanilla store (vanilla = pure JS)', () => {
   describe('the `create()` function and the API', () => {
     it('fails when it does NOT get an intial-state function as param', () => {
       assertThat(() => { create(); }, throws());
@@ -40,6 +40,20 @@ describe('Zustand - the vanilla store', () => {
       assertThat(store.getState(), {
         color: 'green', backgroundColor: 'white',
       });
+    });
+    it('partial updates do NOT deep merge!', () => {
+      const store = create(() => ({border: {width: 1, color: 'blue'}}));
+      store.setState({border: {color: 'red'}});
+      assertThat(store.getState(), {
+        // Notice, the `width` key was removed!
+        border: {color: 'red'}});
+    });
+    it('to deep merge get the old state first and merge it in', () => {
+      const store = create(() => ({border: {width: 1, color: 'blue'}}));
+      const oldBorder = store.getState().border;
+      store.setState({border: {...oldBorder, color: 'red'}});
+      assertThat(store.getState(), {
+        border: {width: 1, color: 'red'}});
     });
   });
 
