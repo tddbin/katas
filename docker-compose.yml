@@ -1,0 +1,11 @@
+version: '3'
+services:
+  node:
+    build: .
+    container_name: node
+    working_dir: /app
+    volumes:
+      # Mount the source code into the container, so one can keep developing, even though it runs inside a container.
+      - '.:/app'
+    tty: true
+    command: [ "bash" ]
