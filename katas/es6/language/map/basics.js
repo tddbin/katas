@@ -3,13 +3,13 @@
 // Follow the hints of the failure messages!
 
 describe('`Map` is a key/value map', function(){
-  it('`Map` is a new global constructor function', function() {
+  it('`Map` is a global constructor function', function() {
     //// const typeOfMap = '???';
     const typeOfMap = 'function';
     assert.equal(typeOfMap, typeof Map);
   });
   it('provides `new Map().set()` to add key+value pair, `get()` to read it by key', function() {
-    let map = new Map();
+    const map = new Map();
     //// map.set('key', null);
     map.set('key', 'value');
     //// const value = map.get();
@@ -17,14 +17,34 @@ describe('`Map` is a key/value map', function(){
     assert.equal(value, 'value');
   });
   it('`has()` tells if map has the given key', function() {
-    let map = new Map();
+    const map = new Map();
     map.set('key', 'value');
     //// const hasIt = map.hazz;
     const hasIt = map.has('key');
     assert.equal(hasIt, true);
   });
+  it('`delete()` deletes the element given by the key AND `map.size` reports the number of items', () => {
+    const map = new Map([['key', 'value']]);
+    map.delete('key');
+    assert.equal(map.size, 0);
+  });
+  it('`keys()` and `values()` return iterables of the keys and values', () => {
+    const map = new Map([['key', 'value']]);
+    assert.deepEqual(Array.from(map.keys()), ['key']);
+    assert.deepEqual(Array.from(map.values()), ['value']);
+  });
+  it('a map can be iterated over using for-of', () => {
+    const map = new Map([
+      //// ['uno', 'one'],
+      ['one', 'uno'],
+    ]);
+    for (let [key, value] of map) {
+      assert.equal(key, 'one');
+      assert.equal(value, 'uno');
+    }
+  });
   it('a map is iterable', function() {
-    let map = new Map();
+    const map = new Map();
     map.set('1', 'one');
     map.set('2', 'two');
     //// const mapAsArray = map; // hint: kata #29 http://tddbin.com/#?kata=es6/language/array-api/from
@@ -34,7 +54,7 @@ describe('`Map` is a key/value map', function(){
   it('complex types can be keys', function() {
     const obj = {x: 1};
     const otherObj = {x: 1};
-    let map = new Map();
+    const map = new Map();
     map.set(obj, '');
     //// map.set(otherObj, '');
 
