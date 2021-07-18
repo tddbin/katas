@@ -4,3 +4,4 @@ node_modules
 # Eclipse
 .project
 .settings/
+.idea
