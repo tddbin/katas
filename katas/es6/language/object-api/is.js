@@ -51,6 +51,11 @@ describe('`Object.is()` determines whether two values are the same', function(){
       const areSame = '???';
       assert.equal(areSame, Object.is({}, {}));
     });
+    it('for the same object `is()` reports true', () => {
+      const obj = {x: 1};
+      const result = Object.is(obj, {x: 1});
+      assert.equal(true, result);
+    });
     it('two `Map`s with the same content are not the same thing', function() {
       let map1 = new Map([[1, 'one']]);
       let map2 = new Map([[1, 'one']]);
