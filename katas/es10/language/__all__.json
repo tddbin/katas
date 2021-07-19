@@ -101,7 +101,7 @@
       "links": [
         {
           "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart",
-          "comment": "Description of Object.fromEntries() on MDN.",
+          "comment": "Description of `String.prototype.trimStart()` on MDN.",
           "tags": [
             "mdn",
             "docs"
@@ -116,7 +116,7 @@
         },
         {
           "url": "https://github.com/tc39/test262/tree/main/test/built-ins/String/prototype/trimStart",
-          "comment": "The oficial tests for JavaScript (engines) for `trimStart`.",
+          "comment": "The official tests for JavaScript (engines) for `trimStart`.",
           "tags": [
             "tests",
             "sourceCode"
@@ -127,6 +127,331 @@
       "groupNameSlug": "string-api",
       "publishDateRfc822": "Sat, 28 Nov 2020 00:56:00 GMT",
       "id": 3
+    },
+    {
+      "name": "`string.trimEnd()`",
+      "description": "`string.trimEnd()` - removes whitespace from the end of a string",
+      "path": "string-api/trimEnd",
+      "level": "BEGINNER",
+      "requiresKnowledgeFrom": [],
+      "links": [
+        {
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd",
+          "comment": "Description of String.prototype.trimEnd() on MDN.",
+          "tags": [
+            "mdn",
+            "docs"
+          ]
+        },
+        {
+          "url": "https://262.ecma-international.org/10.0/#sec-string.prototype.trimend",
+          "comment": "The specification describing `String.prototype.trimEnd()`.",
+          "tags": [
+            "spec"
+          ]
+        },
+        {
+          "url": "https://github.com/tc39/test262/tree/main/test/built-ins/String/prototype/trimEnd",
+          "comment": "The official tests for JavaScript (engines) for `trimStart`.",
+          "tags": [
+            "tests",
+            "sourceCode"
+          ]
+        },
+        {
+          "url": "https://v8.dev/features/string-trimming",
+          "comment": "Blog post on the v8 blog.",
+          "tags": [
+            "article"
+          ]
+        }
+      ],
+      "groupName": "String API",
+      "groupNameSlug": "string-api",
+      "id": 4
+    },
+    {
+      "name": "`array.flat()`",
+      "description": "`array.flat()` creates an array with all sub-array elements concatenated recursively",
+      "path": "array-api/flat",
+      "level": "INTERMEDIATE",
+      "requiresKnowledgeFrom": [],
+      "links": [
+        {
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat",
+          "comment": "Description of array.flat() on MDN.",
+          "tags": [
+            "mdn",
+            "docs"
+          ]
+        },
+        {
+          "url": "https://v8.dev/features/array-flat-flatmap",
+          "comment": "Blog post on flat and flatMap, on the v8 blog.",
+          "tags": [
+            "article"
+          ]
+        },
+        {
+          "url": "https://developers.google.com/web/updates/2018/03/smooshgate",
+          "comment": "\"#SmooshGate FAQ\"",
+          "tags": [
+            "article"
+          ]
+        }
+      ],
+      "groupName": "Array API",
+      "groupNameSlug": "array-api",
+      "id": 5
+    },
+    {
+      "name": "`array.flatMap()`",
+      "description": "`array.flatMap()` maps over each element and flattens it afterwards",
+      "path": "array-api/flatMap",
+      "level": "INTERMEDIATE",
+      "requiresKnowledgeFrom": [
+        {
+          "bundle": "es10/language",
+          "id": 5
+        }
+      ],
+      "links": [
+        {
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap",
+          "comment": "Description of array.flatMap() on MDN.",
+          "tags": [
+            "mdn",
+            "docs"
+          ]
+        },
+        {
+          "url": "https://v8.dev/features/array-flat-flatmap",
+          "comment": "Blog post on flat and flatMap, on the v8 blog.",
+          "tags": [
+            "article"
+          ]
+        },
+        {
+          "url": "https://developers.google.com/web/updates/2018/03/smooshgate",
+          "comment": "\"#SmooshGate FAQ\"",
+          "tags": [
+            "article"
+          ]
+        },
+        {
+          "url": "https://exploringjs.com/impatient-js/ch_arrays.html#flatmap-mapping-to-zero-or-more-values",
+          "comment": "\".flatMap(): mapping to zero or more values \" by Axel Rauschmayer",
+          "tags": [
+            "article"
+          ]
+        }
+      ],
+      "groupName": "Array API",
+      "groupNameSlug": "array-api",
+      "id": 6
+    },
+    {
+      "name": "stable `array.sort()`",
+      "description": "`array.sort()` - is now a stable sort",
+      "path": "array-api/sort",
+      "level": "INTERMEDIATE",
+      "requiresKnowledgeFrom": [
+        {
+          "bundle": "es1/language",
+          "id": 1
+        },
+        {
+          "bundle": "es1/language",
+          "id": 2
+        }
+      ],
+      "links": [
+        {
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#sort_stability",
+          "comment": "MDN chapter on \"Sort stability\".",
+          "tags": [
+            "mdn",
+            "docs"
+          ]
+        },
+        {
+          "url": "https://v8.dev/features/stable-sort",
+          "comment": "Blog post the stable sort, on the v8 blog.",
+          "tags": [
+            "article"
+          ]
+        }
+      ],
+      "groupName": "Array API",
+      "groupNameSlug": "array-api",
+      "id": 7
+    },
+    {
+      "name": "`function.toString()`",
+      "description": "`function.toString()` - now returns the complete source code of the function",
+      "path": "function-api/toString",
+      "level": "BEGINNER",
+      "requiresKnowledgeFrom": [],
+      "links": [
+        {
+          "url": "https://tc39.es/Function-prototype-toString-revision/#proposal-sec-function.prototype.tostring",
+          "comment": "The proposal, that went into the specification.",
+          "tags": [
+            "spec"
+          ]
+        },
+        {
+          "url": "https://v8.dev/features/function-tostring",
+          "comment": "Blog post on the new `function.toString()`, on the v8 blog.",
+          "tags": [
+            "article"
+          ]
+        }
+      ],
+      "groupName": "Function API",
+      "groupNameSlug": "function-api",
+      "id": 8
+    },
+    {
+      "name": "well-formed `JSON.stringify()`",
+      "description": "`JSON.stringify()` - now returns well-formed output",
+      "path": "json-api/stringify",
+      "level": "BEGINNER",
+      "requiresKnowledgeFrom": [],
+      "links": [
+        {
+          "url": "https://github.com/tc39/proposal-well-formed-stringify",
+          "comment": "The proposal, that went into the specification.",
+          "tags": [
+            "spec"
+          ]
+        },
+        {
+          "url": "https://v8.dev/features/well-formed-json-stringify",
+          "comment": "Blog post on the well-formed `JSON.stringify()`, on the v8 blog.",
+          "tags": [
+            "article"
+          ]
+        }
+      ],
+      "groupName": "JSON API",
+      "groupNameSlug": "json-api",
+      "id": 9
+    },
+    {
+      "name": "JSON superset basics",
+      "description": "JSON is now a syntactic subset of ECMAScript",
+      "path": "json-superset/basics",
+      "level": "ADVANCED",
+      "requiresKnowledgeFrom": [],
+      "links": [
+        {
+          "url": "https://github.com/tc39/proposal-json-superset",
+          "comment": "The proposal, that went into the specification.",
+          "tags": [
+            "spec"
+          ]
+        },
+        {
+          "url": "https://github.com/tc39/test262/pull/1544/files",
+          "comment": "The merge request with the official tests for JavaScript (engines) for JSON superset.",
+          "tags": [
+            "tests",
+            "sourceCode"
+          ]
+        },
+        {
+          "url": "https://v8.dev/features/subsume-json",
+          "comment": "Blog post on the the JSON superset, on the v8 blog.",
+          "tags": [
+            "article"
+          ]
+        }
+      ],
+      "groupName": "JSON superset",
+      "groupNameSlug": "json-superset",
+      "id": 10
+    },
+    {
+      "name": "`symbol.description`",
+      "description": "A read-only description of a Symbol object.",
+      "path": "symbol-api/description",
+      "level": "INTERMEDIATE",
+      "requiresKnowledgeFrom": [
+        {
+          "bundle": "es6/language",
+          "id": 34
+        },
+        {
+          "bundle": "es6/language",
+          "id": 35
+        },
+        {
+          "bundle": "es6/language",
+          "id": 36
+        }
+      ],
+      "links": [
+        {
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/description",
+          "comment": "Description of `symbol.description` on MDN.",
+          "tags": [
+            "mdn",
+            "docs"
+          ]
+        },
+        {
+          "url": "https://v8.dev/features/symbol-description",
+          "comment": "Blog post on the the `symbol.description`, on the v8 blog.",
+          "tags": [
+            "article"
+          ]
+        },
+        {
+          "url": "https://tc39.es/ecma262/#sec-symbol.prototype.description",
+          "comment": "The proposal, that went into the specification.",
+          "tags": [
+            "spec"
+          ]
+        }
+      ],
+      "groupName": "Symbol API",
+      "groupNameSlug": "symbol-api",
+      "id": 11
+    },
+    {
+      "name": "unbinded `catch`",
+      "description": "`catch` can now be used without a binding",
+      "path": "try-catch/catch",
+      "level": "BEGINNER",
+      "requiresKnowledgeFrom": [],
+      "links": [
+        {
+          "url": "https://tc39.es/proposal-optional-catch-binding/",
+          "comment": "The proposal, that went into the specification.",
+          "tags": [
+            "spec"
+          ]
+        },
+        {
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#the_exception_identifier",
+          "comment": "Description of \"The exception identifier\" on MDN.",
+          "tags": [
+            "mdn",
+            "docs"
+          ]
+        },
+        {
+          "url": "https://v8.dev/features/optional-catch-binding",
+          "comment": "Blog post on the the optional catch binding, on the v8 blog.",
+          "tags": [
+            "article"
+          ]
+        }
+      ],
+      "groupName": "try-catch",
+      "groupNameSlug": "try-catch",
+      "id": 12
     }
   ]
 }
