@@ -1,8 +1,7 @@
-import {SKILL_LEVEL} from '../../skill-levels';
-import * as tag from '../../tags';
-import {toUtcDate}  from '../../date';
-import * as date from '../../date';
-import {es7} from '../../es7/language/__raw-metadata__.js';
+import {SKILL_LEVEL} from '../../skill-levels.js';
+import * as tag from '../../tags.js';
+import {toUtcDate}  from '../../date.js';
+import * as date from '../../date.js';
 
 const buildReferenceForId = id => ({bundle: 'es8/language', id});
 export const es8 = {
