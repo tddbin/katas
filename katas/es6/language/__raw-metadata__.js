@@ -717,15 +717,31 @@ export const all = {
       items: {
         [es6.MAP_BASICS.id]: {
           name: 'Basics',
-          description: '',
+          description: 'A Map holds key-value pairs, the key can even be a complex value.',
           path: 'map/basics',
           level: SKILL_LEVEL.BEGINNER,
-          requiresKnowledgeFrom: [],
+          requiresKnowledgeFrom: [
+            es6.CONST,
+            // es6.FOR_OF
+            // typeof
+          ],
+          links: [
+            {
+              url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map',
+              comment: 'MDN page about Map.',
+              tags: [tag.MDN]
+            },
+            {
+              url: 'https://262.ecma-international.org/6.0/#sec-map-objects',
+              comment: 'The chapter in the specification, with all details about Map.',
+              tags: [tag.SPECIFICATION]
+            },
+          ],
           publishDateUTC: new Date(Date.UTC(2015, date.MAY, 21, 7, 55))
         },
         [es6.MAP_GET.id]: {
           name: '`map.get()`',
-          description: '',
+          description: '`Map.prototype.get` returns the element from the map for a key.',
           path: 'map/get',
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [
@@ -735,7 +751,7 @@ export const all = {
         },
         [es6.MAP_SET.id]: {
           name: '`map.set()`',
-          description: '',
+          description: '`Map.prototype.set` adds a new element with key and value to a Map.',
           path: 'map/set',
           level: SKILL_LEVEL.EXPERT,
           requiresKnowledgeFrom: [],
