@@ -11,7 +11,7 @@ export const es7 = {
 
 
 export const all = {
-  name: 'ECMAScript 7 (ES2016) Katas ',
+  name: 'ECMAScript 7 / ES2016',
   nameSlug: 'es7-katas',
   groups: {
     'Array API': {

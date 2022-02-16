@@ -99,7 +99,7 @@ export const es6 = {
 };
 
 export const all = {
-  name: 'ECMAScript 6 (ES2015) Katas ',
+  name: 'ECMAScript 6 / ES2015',
   nameSlug: 'es6-katas',
   groups: {
     'Template strings': {

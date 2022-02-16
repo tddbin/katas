@@ -11,7 +11,7 @@ export const es8 = {
 };
 
 export const all = {
-  name: 'ECMAScript 8 (ES2017) Katas ',
+  name: 'ECMAScript 8 / ES2017',
   nameSlug: 'es8-katas',
   groups: {
     'Async Function': {

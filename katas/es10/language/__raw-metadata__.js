@@ -22,7 +22,7 @@ export const es10 = {
 };
 
 export const all = {
-  name: 'ECMAScript 10 (ES2019) Katas ',
+  name: 'ECMAScript 10 / ES2019',
   nameSlug: 'es10-katas',
   groups: {
     'Array API': {

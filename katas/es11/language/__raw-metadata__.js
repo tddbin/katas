@@ -10,7 +10,7 @@ export const es11 = {
 };
 
 export const all = {
-  name: 'ECMAScript 11 (ES2020) Katas ',
+  name: 'ECMAScript 11 / ES2020',
   nameSlug: 'es11-katas',
   groups: {
     'String API': {

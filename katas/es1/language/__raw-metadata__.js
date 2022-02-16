@@ -17,7 +17,7 @@ export const es1 = {
 };
 
 export const all = {
-  name: 'ECMAScript 1 Katas ',
+  name: 'ECMAScript 1',
   nameSlug: 'es1-katas',
   groups: {
     'Array API': {
