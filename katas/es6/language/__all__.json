@@ -822,10 +822,31 @@
     },
     {
       "name": "Basics",
-      "description": "",
+      "description": "A Map holds key-value pairs, the key can even be a complex value.",
       "path": "map/basics",
       "level": "BEGINNER",
-      "requiresKnowledgeFrom": [],
+      "requiresKnowledgeFrom": [
+        {
+          "bundle": "es6/language",
+          "id": 8
+        }
+      ],
+      "links": [
+        {
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+          "comment": "MDN page about Map.",
+          "tags": [
+            "mdn"
+          ]
+        },
+        {
+          "url": "https://262.ecma-international.org/6.0/#sec-map-objects",
+          "comment": "The chapter in the specification, with all details about Map.",
+          "tags": [
+            "spec"
+          ]
+        }
+      ],
       "groupName": "Map",
       "groupNameSlug": "map",
       "publishDateRfc822": "Thu, 21 May 2015 07:55:00 GMT",
@@ -833,7 +854,7 @@
     },
     {
       "name": "`map.get()`",
-      "description": "",
+      "description": "`Map.prototype.get` returns the element from the map for a key.",
       "path": "map/get",
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [
@@ -849,7 +870,7 @@
     },
     {
       "name": "`map.set()`",
-      "description": "",
+      "description": "`Map.prototype.set` adds a new element with key and value to a Map.",
       "path": "map/set",
       "level": "EXPERT",
       "requiresKnowledgeFrom": [],
