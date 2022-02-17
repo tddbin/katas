@@ -87,7 +87,7 @@
       "items": [
         {
           "name": "`parseInt()`",
-          "description": "",
+          "description": "`parseInt()` converts a given value to a string and then tries to make an integer out of it.",
           "path": "global-api/parseInt",
           "level": "BEGINNER",
           "requiresKnowledgeFrom": [],
@@ -130,7 +130,7 @@
         },
         {
           "name": "`parseInt()` in depth",
-          "description": "",
+          "description": "`parseInt()` converts a given value to a string and then tries to make an integer out of it.",
           "path": "global-api/parseInt-in-depth",
           "level": "BEGINNER",
           "requiresKnowledgeFrom": [],
