@@ -80,7 +80,7 @@ export const all = {
       items: {
         [es1.GLOBAL_PARSEINT.id]: {
           name: '`parseInt()`',
-          description: '',
+          description: '`parseInt()` converts a given value to a string and then tries to make an integer out of it.',
           path: 'global-api/parseInt',
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [],
@@ -110,7 +110,7 @@ export const all = {
         },
         [es1.GLOBAL_PARSEINT_IN_DEPTH.id]: {
           name: '`parseInt()` in depth',
-          description: '',
+          description: '`parseInt()` converts a given value to a string and then tries to make an integer out of it.',
           path: 'global-api/parseInt-in-depth',
           level: SKILL_LEVEL.BEGINNER,
           requiresKnowledgeFrom: [],
