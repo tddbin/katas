@@ -146,20 +146,30 @@
       "items": [
         {
           "name": "to boolean",
-          "description": "",
+          "description": "How do different types convert to a boolean?",
           "path": "type-conversion/to-boolean",
           "level": "INTERMEDIATE",
-          "requiresKnowledgeFrom": [],
+          "requiresKnowledgeFrom": [
+            {
+              "bundle": "es1/language",
+              "id": 8
+            }
+          ],
           "links": [],
           "groupName": "Type conversion",
           "id": "5"
         },
         {
           "name": "to number",
-          "description": "",
+          "description": "How do different types convert to a number?",
           "path": "type-conversion/to-number",
           "level": "INTERMEDIATE",
-          "requiresKnowledgeFrom": [],
+          "requiresKnowledgeFrom": [
+            {
+              "bundle": "es1/language",
+              "id": 8
+            }
+          ],
           "links": [],
           "groupName": "Type conversion",
           "id": "6"
