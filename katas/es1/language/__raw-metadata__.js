@@ -123,20 +123,24 @@ export const all = {
       items: {
         [es1.TYPE_CONVERSION_TO_BOOLEAN.id]: {
           name: 'to boolean',
-          description: '',
+          description: 'How do different types convert to a boolean?',
           path: 'type-conversion/to-boolean',
           level: SKILL_LEVEL.INTERMEDIATE,
-          requiresKnowledgeFrom: [],
+          requiresKnowledgeFrom: [
+            es1.ALL_UNARY_OPERATORS,
+          ],
           // publishDateUTC: new Date(Date.UTC(2019, date.OCTOBER, 6, 19, 53)),
           links: [
           ],
         },
         [es1.TYPE_CONVERSION_TO_NUMBER.id]: {
           name: 'to number',
-          description: '',
+          description: 'How do different types convert to a number?',
           path: 'type-conversion/to-number',
           level: SKILL_LEVEL.INTERMEDIATE,
-          requiresKnowledgeFrom: [],
+          requiresKnowledgeFrom: [
+            es1.ALL_UNARY_OPERATORS,
+          ],
           // publishDateUTC: new Date(Date.UTC(2019, date.OCTOBER, 6, 19, 53)),
           links: [
           ],
