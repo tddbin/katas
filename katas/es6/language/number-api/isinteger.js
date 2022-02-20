@@ -2,71 +2,76 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
-describe('`Number.isInteger()` determines if a value is an integer', function(){
-  it('`isInteger` is a static function on `Number`', function() {
+describe('The function `Number.isInteger()`', function(){
+  it('is a static function on `Number`', function() {
     //// const whatType = 'method';
     const whatType = 'function';
     assert.equal(whatType, typeof Number.isInteger);
   });
-  describe('zero in different ways', function() {
-    it('0 is an integer', function() {
+  describe('handles zero in different ways', function() {
+    it('the literal `0` is an integer', function() {
       //// const zero = null;
       const zero = 0;
-      assert(Number.isInteger(zero));
+      assert.equal(Number.isInteger(zero), true);
     });
-    it('0.000', function() {
+    it('the float value `0.000` is also an integer', function() {
       //// const veryZero = 0.000001;
       const veryZero = 0.00000;
-      assert(Number.isInteger(veryZero));
+      assert.equal(Number.isInteger(veryZero), true);
     });
-    it('the string "0" is NOT an integer', function() {
+    it('the string `0` is NOT an integer', function() {
       //// const stringZero = 0;
       const stringZero = '0';
-      assert(Number.isInteger(stringZero) === false);
+      assert.equal(Number.isInteger(stringZero), false);
     });
   });
-  describe('one in different ways', function() {
-    it('0.111 + 0.889', function() {
-      //// const rest = 0.88;
-      const rest = 0.889;
-      assert(Number.isInteger(0.111 + rest));
+  describe('also sees the number 1 in different ways', function() {
+    it('the sum of `0.01` and  `0.99` is an integer', function() {
+      //// const rest = 0.98;
+      const rest = 0.99;
+      assert.equal(Number.isInteger(0.01 + rest), true);
     });
-    it('0.5 + 0.2 + 0.2 + 0.1 = 1 ... isn`t it?', function() {
-      //// const oneOrNot = 0.5 + 0.2 + 0.3;
-      const oneOrNot = 0.5 + 0.2 + 0.4;
-      assert(Number.isInteger(oneOrNot) === false);
+    it('the sum of 0.5 + 0.6 is NOT an integer', function() {
+      //// const oneOrNot = 0.5 + 0.5;
+      const oneOrNot = 0.5 + 0.6;
+      assert.equal(Number.isInteger(oneOrNot), false);
     });
-    it('parseInt`ed "1" is an integer', function() {
+    it('the result of `parseInt("1")` is an integer', function() {
       //// const convertedToInt = Number.parse('1.01');
       const convertedToInt = Number.parseInt('1.01');
-      assert(Number.isInteger(convertedToInt));
+      assert.equal(Number.isInteger(convertedToInt), true);
+    });
+    it('the string "1" is NOT an integer', function() {
+      //// const stringOne = 1;
+      const stringOne = '1';
+      assert.equal(Number.isInteger(stringOne), false);
     });
   });
-  describe('what is not an integer', function() {
-    it('`Number()` is an integer', function() {
+  describe('identifies many things NOT as integer', function() {
+    it('`Number()` (which returns a 0) is an integer', function() {
       //// const numberOne = Number;
       const numberOne = Number();
-      assert(Number.isInteger(numberOne));
+      assert.equal(Number.isInteger(numberOne), true);
     });
-    it('`{}` is NOT an integer', function() {
-      //// const isit = Number.isWhat({});
-      const isit = Number.isInteger({});
-      assert(isit === false);
+    it('the object literal `{}` is NOT an integer', function() {
+      //// const isInt = Number.isWhat({});
+      const isInt = Number.isInteger({});
+      assert.equal(isInt, false);
     });
-    it('`0.1` is not an integer', function() {
-      //// const isit = Number(0.1);
-      const isit = Number.isInteger(0.1);
-      assert(isit === false);
+    it('the float value `0.1` is not an integer', function() {
+      //// const isInt = Number(0.1);
+      const isInt = Number.isInteger(0.1);
+      assert.equal(isInt, false);
     });
     it('`Number.Infinity` is not an integer', function() {
-      //// const isit = Number.isInteger(Number.MAX_VALUE);
-      const isit = Number.isInteger(Number.Infinity);
-      assert(isit === false);
+      //// const isInt = Number.isInteger(Number.MAX_VALUE);
+      const isInt = Number.isInteger(Number.Infinity);
+      assert.equal(isInt, false);
     });
-    it('`NaN` is not an integer', function() {
-      //// const isit = Number.isFloat(NaN);
-      const isit = Number.isInteger(NaN);
-      assert(isit === false);
+    it('`NaN` is also not an integer', function() {
+      //// const isInt = Number.isFloat(NaN);
+      const isInt = Number.isInteger(NaN);
+      assert.equal(isInt, false);
     });
   });
 });
