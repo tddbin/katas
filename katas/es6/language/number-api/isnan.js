@@ -2,8 +2,8 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
-describe('`Number.isNaN()` determines if a value is `NaN`', function(){
-  it('it is a static function on `Number`', function() {
+describe('The function `Number.isNaN()`', function(){
+  it('is a static function on `Number`', function() {
     //// const whatType = 'method';
     const whatType = 'function';
     assert.equal(whatType, typeof Number.isNaN);
@@ -25,7 +25,7 @@ describe('`Number.isNaN()` determines if a value is `NaN`', function(){
         const anObject = {};
         assert.equal(Number.isNaN(anObject), false);
       });
-      describe('different to the global `isNaN` function (specified way before ES6)', () => {
+      describe('different to the global `isNaN` function (specified in ES1)', () => {
         it('an object gets converted to a Number before the check, and returns true therefore', () => {
           //// const fn = Number.isNaN;
           const fn = isNaN;
@@ -38,7 +38,7 @@ describe('`Number.isNaN()` determines if a value is `NaN`', function(){
         });
       });
     });
-    describe('for Numbers', () => {
+    describe('for real Numbers', () => {
       it('like 0', () => {
         //// const zero = NaN;
         const zero = 0;
@@ -67,9 +67,14 @@ describe('`Number.isNaN()` determines if a value is `NaN`', function(){
       const notANumber = NaN;
       assert.equal(Number.isNaN(notANumber), true);
     });
-    it('zero divided by zero', () => {
+    it('the result of zero divided by zero', () => {
       //// const zeroDividedByZero = 0 / 1;
       const zeroDividedByZero = 0 / 0;
+      assert.equal(Number.isNaN(zeroDividedByZero), true);
+    });
+    it('something which seems not to be a number', () => {
+      //// const zeroDividedByZero = Number('0');
+      const zeroDividedByZero = Number('not a number');
       assert.equal(Number.isNaN(zeroDividedByZero), true);
     });
   });
