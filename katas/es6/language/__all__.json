@@ -569,7 +569,7 @@
     },
     {
       "name": "`Array.of()`",
-      "description": "`Array.of` creates an array with the given arguments as elements.",
+      "description": "`Array.of()` creates an array with the given arguments as elements.",
       "path": "array-api/of",
       "level": "TBD",
       "requiresKnowledgeFrom": [],
@@ -579,11 +579,16 @@
       "id": 30
     },
     {
-      "name": "`[].fill()`",
-      "description": "`[].fill` can fill up an array with one value.",
+      "name": "`array.fill()`",
+      "description": "`Array.prototype.fill()` can fill up an array with one value.",
       "path": "array-api/fill",
       "level": "TBD",
-      "requiresKnowledgeFrom": [],
+      "requiresKnowledgeFrom": [
+        {
+          "bundle": "es6/language",
+          "id": 8
+        }
+      ],
       "links": [
         {
           "url": "https://github.com/tddbin/es6katas.org/issues/9",
@@ -607,8 +612,8 @@
       "id": 31
     },
     {
-      "name": "`[].find()`",
-      "description": "`[].find` makes finding items in arrays easier.",
+      "name": "`array.find()`",
+      "description": "`Array.prototype.find()` finds one item in an array.",
       "path": "array-api/find",
       "level": "TBD",
       "requiresKnowledgeFrom": [],
@@ -618,11 +623,16 @@
       "id": 32
     },
     {
-      "name": "`[].findIndex()`",
-      "description": "`[].findIndex` makes finding items in arrays easier.",
+      "name": "`array.findIndex()`",
+      "description": "`Array.prototype.findIndex()` find the index of an item in an array.",
       "path": "array-api/findIndex",
       "level": "TBD",
-      "requiresKnowledgeFrom": [],
+      "requiresKnowledgeFrom": [
+        {
+          "bundle": "es6/language",
+          "id": 8
+        }
+      ],
       "groupName": "Array API",
       "groupNameSlug": "array-api",
       "publishDateRfc822": "Mon, 04 May 2015 08:01:00 GMT",
@@ -745,8 +755,8 @@
       "id": 40
     },
     {
-      "name": "`[].entries()`",
-      "description": "`[].entries()` returns an iterator object with all entries.",
+      "name": "`array.entries()`",
+      "description": "`Array.prototype.entries()` returns an iterator object with all entries.",
       "path": "array-api/entries",
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [
@@ -769,8 +779,8 @@
       "id": 41
     },
     {
-      "name": "`[].keys()`",
-      "description": "`[].keys()` returns an iterator for all keys in the array.",
+      "name": "`array.keys()`",
+      "description": "`Array.prototype.keys()` returns an iterator for all keys in the array.",
       "path": "array-api/keys",
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [
@@ -797,8 +807,8 @@
       "id": 42
     },
     {
-      "name": "`[].values()`",
-      "description": "`[].values()` returns an iterator for all values in the array",
+      "name": "`array.values()`",
+      "description": "`Array.prototype.values()` returns an iterator for all values in the array",
       "path": "array-api/values",
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [
