@@ -3,7 +3,7 @@
   "nameSlug": "es1-katas",
   "items": [
     {
-      "name": "`[].sort()` basics",
+      "name": "`array.sort()` basics",
       "description": "The `sort()` function sorts an array as if each element was a string.",
       "path": "array-api/sort-basics",
       "level": "BEGINNER",
@@ -47,7 +47,7 @@
       "id": 1
     },
     {
-      "name": "`[].sort()` can take a compare function",
+      "name": "`array.sort()` can take a compare function",
       "description": "Passing a callback to the `sort()` function, allows for any custom sorting.",
       "path": "array-api/sort-with-function",
       "level": "INTERMEDIATE",
