@@ -17,7 +17,7 @@ export const all = {
     'Array API': {
       items: {
         [es7.ARRAY_INCLUDES.id]: {
-          name: '`[].includes()`',
+          name: '`array.includes()`',
           description: '`Array.prototype.includes()` determines whether an array includes a certain value',
           path: 'array-api/includes',
           level: SKILL_LEVEL.BEGINNER,

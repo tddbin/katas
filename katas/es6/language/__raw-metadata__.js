@@ -555,18 +555,20 @@ export const all = {
         },
         [es6.ARRAY_OF.id]: {
           name: '`Array.of()`',
-          description: '`Array.of` creates an array with the given arguments as elements.',
+          description: '`Array.of()` creates an array with the given arguments as elements.',
           path: 'array-api/of',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 27, 8, 9))
         },
         [es6.ARRAY_FILL.id]: {
-          name: '`[].fill()`',
-          description: '`[].fill` can fill up an array with one value.',
+          name: '`array.fill()`',
+          description: '`Array.prototype.fill()` can fill up an array with one value.',
           path: 'array-api/fill',
           level: SKILL_LEVEL.TBD,
-          requiresKnowledgeFrom: [],
+          requiresKnowledgeFrom: [
+            es6.CONST,
+          ],
           publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 28, 7, 55)),
           links: [
             {
@@ -582,24 +584,26 @@ export const all = {
           ]
         },
         [es6.ARRAY_FIND.id]: {
-          name: '`[].find()`',
-          description: '`[].find` makes finding items in arrays easier.',
+          name: '`array.find()`',
+          description: '`Array.prototype.find()` finds one item in an array.',
           path: 'array-api/find',
           level: SKILL_LEVEL.TBD,
           requiresKnowledgeFrom: [],
           publishDateUTC: new Date(Date.UTC(2015, date.APRIL, 29, 7, 55))
         },
         [es6.ARRAY_FIND_INDEX.id]: {
-          name: '`[].findIndex()`',
-          description: '`[].findIndex` makes finding items in arrays easier.',
+          name: '`array.findIndex()`',
+          description: '`Array.prototype.findIndex()` find the index of an item in an array.',
           path: 'array-api/findIndex',
           level: SKILL_LEVEL.TBD,
-          requiresKnowledgeFrom: [],
+          requiresKnowledgeFrom: [
+            es6.CONST,
+          ],
           publishDateUTC: new Date(Date.UTC(2015, date.MAY, 4, 8, 1))
         },
         [es6.ARRAY_ENTRIES.id]: {
-          name: '`[].entries()`',
-          description: '`[].entries()` returns an iterator object with all entries.',
+          name: '`array.entries()`',
+          description: '`Array.prototype.entries()` returns an iterator object with all entries.',
           path: 'array-api/entries',
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [
@@ -611,8 +615,8 @@ export const all = {
 
         },
         [es6.ARRAY_KEYS.id]: {
-          name: '`[].keys()`',
-          description: '`[].keys()` returns an iterator for all keys in the array.',
+          name: '`array.keys()`',
+          description: '`Array.prototype.keys()` returns an iterator for all keys in the array.',
           path: 'array-api/keys',
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [
@@ -624,8 +628,8 @@ export const all = {
           publishDateUTC: new Date(Date.UTC(2015, date.MAY, 19, 7, 55))
         },
         [es6.ARRAY_VALUES.id]: {
-          name: '`[].values()`',
-          description: '`[].values()` returns an iterator for all values in the array',
+          name: '`array.values()`',
+          description: '`Array.prototype.values()` returns an iterator for all values in the array',
           path: 'array-api/values',
           level: SKILL_LEVEL.INTERMEDIATE,
           requiresKnowledgeFrom: [
