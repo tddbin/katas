@@ -1,0 +1,87 @@
+{
+  "name": "ECMAScript 11 / ES2020",
+  "nameSlug": "es11-katas",
+  "groups": {
+    "String API": {
+      "items": [
+        {
+          "name": "string.matchAll()",
+          "description": "Returns all results matching a regular expression.",
+          "path": "string-api/matchAll",
+          "level": "BEGINNER",
+          "requiresKnowledgeFrom": [],
+          "links": [
+            {
+              "url": "https://github.com/tc39/proposal-string-matchall",
+              "comment": "The proposal repo.",
+              "tags": [
+                "spec",
+                "discussion"
+              ]
+            },
+            {
+              "url": "https://tc39.es/ecma262/#sec-string.prototype.matchall",
+              "comment": "The spec text.",
+              "tags": [
+                "spec"
+              ]
+            },
+            {
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll",
+              "comment": "The Mozilla Developer Network docs, contains good examples.",
+              "tags": [
+                "mdn",
+                "docs"
+              ]
+            }
+          ],
+          "groupName": "String API",
+          "id": "1"
+        }
+      ],
+      "slug": "string-api",
+      "name": "String API"
+    },
+    "BigInt": {
+      "items": [
+        {
+          "name": "Basics",
+          "description": "A `BigInt` can represent numbers larger than `number`",
+          "path": "bigint/basics",
+          "level": "BEGINNER",
+          "requiresKnowledgeFrom": [],
+          "publishDateUTC": "2022-03-10T23:59:00.000Z",
+          "links": [
+            {
+              "url": "https://github.com/tc39/proposal-bigint",
+              "comment": "The proposal repo.",
+              "tags": [
+                "spec",
+                "discussion"
+              ]
+            },
+            {
+              "url": "https://tc39.es/ecma262/#sec-bigint-constructor",
+              "comment": "The spec text.",
+              "tags": [
+                "spec"
+              ]
+            },
+            {
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt",
+              "comment": "The Mozilla Developer Network docs, contains good examples.",
+              "tags": [
+                "mdn",
+                "docs"
+              ]
+            }
+          ],
+          "groupName": "BigInt",
+          "id": "2"
+        }
+      ],
+      "slug": "bigint",
+      "name": "BigInt"
+    }
+  }
+}
