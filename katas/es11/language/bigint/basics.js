@@ -43,7 +43,7 @@ describe('A `BigInt` is a large number', () => {
       assert.strictEqual(typeof 1n, theType);
     });
     it('comparing via `==` can coerce a bigint to a number', () => {
-      const result = 1n == 1;
+      const result = 1n == 2;
       assert(result);
     });
     it('but type safe comparisons fail', () => {
