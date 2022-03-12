@@ -2,72 +2,50 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
-describe('"".matchAll() returns all results matching a regular expression', () => {
-    it('finds all matches in a string without capture groups', () => {
-        const str = 'test';
-        const regexp = /test/g;
-        const array = [...str.matchAll(regexp)];
-        assert.deepEqual([...array[0]], ['test']);
-    });
-    it('returns an iterator (having a function `next()`)', () => {
-        const str = 'test';
-        const regexp = /test/g;
-        const iter = str.matchAll(regexp);
-        assert.equal(typeof iter.next, 'function');
-    });
+describe('The function `string.matchAll()`', () => {
 
-    describe('returns an iterator', () => {
-        it('', () => {
-            // iterator in depth here or not????
-        });
+  it('searches a string in another string', () => {
+    const searchResult = 'Find one word!'._____('word');
+    const found = Array.from(searchResult);
+    assert.equal(found[0], 'word');
+  });
+
+  describe('can also search using a regexp', () => {
+    it('also searches using a regexp', () => {
+      const regexp = '/v..i/g';
+      const found = Array.from('veni vidi vici'.matchAll(regexp));
+      assert.deepEqual(found.flat(), ['veni', 'vidi', 'vici']);
     });
-    
-    describe('returns an Array with custom properties', () => {
-        const matchAll = () => {
-            const str = 'test';
-            const regexp = /test/g;
-            const iter = str.matchAll(regexp);
-            const {value} = iter.next();
-            return value;
-        };
-        it('it is an array', () => {
-            assert(Array.isArray(matchAll()));
-        });
-        it('but it is not a pure array', () => {
-            assert.notDeepEqual(matchAll(), ['test']);
-        });
-        it('it must be converted to be a pure array (without custom properties)', () => {
-            assert.deepEqual(Array.from(matchAll()), ['test']);
-        });
-        it('one property is `groups`', () => {
-            assert(matchAll().hasOwnProperty('groups'));
-        });
-        it('another property is `index`, which is the position of the first capture group', () => {
-            assert.equal(matchAll().index, 0);
-        });
-        it('another property is `input`, which is the actual string to search in', () => {
-            // const {value} = 'test'.matchAll(/test/).next();
-            // assert.equal(value.input, 'test');
-        });
+    it('the regexp MUST use the global flag /g', () => {
+      const regexp = /b/;
+      const results = Array.from('baba'.matchAll(regexp));
+      assert.deepEqual(results.flat(), ['b', 'b']);
     });
-    
-    it('check all array`s object properties', () => {
-        const str = 'test';
-        const regexp = /test/g;
-        const array = [...str.matchAll(regexp)];
-        const expectedArr = ['test'];
-        expectedArr.groups = undefined;
-        expectedArr.index = 0;
-        expectedArr.input = 'test';
-        assert.deepEqual(array[0], expectedArr);
+    it('finds any number of occurrences', () => {
+      const stringToSearchIn = 'Find a word, another word and even this world!';
+      const found = Array.from(stringToSearchIn.matchAll(/word/g));
+      assert.equal(found.length, 3);
     });
-    xit('', () => {
-        let regexp = /t(e)(st(\d?))/g;
-        let str = 'test1test2';
-        
-        let array = [...str.matchAll(regexp)];
-        
-        assert.deepEqual(array[0], ["test1", "e", "st1", "1"]);
-        assert.deepEqual(array[1], ["test2", "e", "st2", "2"]);
-    })
+    it('finds all matches, of all capture groups', () => {
+      const fourtyTwo = 'fourty t0o';
+      const results = Array.from(fourtyTwo.matchAll(/f.*(t(.*))/g));
+      assert.deepEqual(results.flat(), ['fourty two', 'two', 'wo']);
+    });
+  });
+
+  describe('returns an iterator', () => {
+    it('the iterator has a key `Symbol.iterator`', () => {
+      const iterator = ''.includes('');
+      assert.deepEqual(Symbol.iterator in iterator, true);
+    });
+    it('the result can be looped over using for-of', () => {
+      const iterator = 'or more door'.matchAll(/or/g);
+      const results = [];
+      for (const r in iterator) {
+        results.push(r);
+      }
+      assert.deepEqual(results.length, 3);
+    });
+  });
+
 });

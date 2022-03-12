@@ -9,7 +9,24 @@
           "description": "Returns all results matching a regular expression.",
           "path": "string-api/matchAll",
           "level": "BEGINNER",
-          "requiresKnowledgeFrom": [],
+          "requiresKnowledgeFrom": [
+            {
+              "bundle": "es6/language",
+              "id": 8
+            },
+            {
+              "bundle": "es6/language",
+              "id": 29
+            },
+            {
+              "bundle": "es6/language",
+              "id": 37
+            },
+            {
+              "bundle": "es6/language",
+              "id": 20
+            }
+          ],
           "links": [
             {
               "url": "https://github.com/tc39/proposal-string-matchall",
@@ -32,6 +49,14 @@
               "tags": [
                 "mdn",
                 "docs"
+              ]
+            },
+            {
+              "url": "https://stackoverflow.com/questions/61173919/why-does-the-new-matchall-in-javascript-return-an-iterator-vs-an-array",
+              "comment": "\"Why does the new \"matchAll\" in Javascript return an iterator (vs. an array)?\"",
+              "tags": [
+                "article",
+                "discussion"
               ]
             }
           ],
@@ -73,6 +98,14 @@
               "tags": [
                 "mdn",
                 "docs"
+              ]
+            },
+            {
+              "url": "https://twitter.com/jskatas/status/1502068572788604929",
+              "comment": "Announcement of this kata on twitter.",
+              "tags": [
+                "announcement",
+                "tweet"
               ]
             }
           ],
