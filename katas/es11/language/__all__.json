@@ -3,7 +3,7 @@
   "nameSlug": "es11-katas",
   "items": [
     {
-      "name": "string.matchAll()",
+      "name": "`string.matchAll()`",
       "description": "Returns all results matching a regular expression.",
       "path": "string-api/matchAll",
       "level": "BEGINNER",
