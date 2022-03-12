@@ -4,7 +4,7 @@
 
 describe('The function `string.matchAll()`', () => {
 
-  it('searches a string in another string', () => {
+  it('searches for a string in another string', () => {
     const searchResult = 'Find one word!'._____('word');
     const found = Array.from(searchResult);
     assert.equal(found[0], 'word');

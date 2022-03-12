@@ -28,7 +28,7 @@
       "links": [
         {
           "url": "https://github.com/tc39/proposal-string-matchall",
-          "comment": "The proposal repo.",
+          "comment": "The repository where the proposal was worked on, some interesting details in there about naming and the process of how this became a standard.",
           "tags": [
             "spec",
             "discussion"
@@ -36,7 +36,7 @@
         },
         {
           "url": "https://tc39.es/ecma262/#sec-string.prototype.matchall",
-          "comment": "The spec text.",
+          "comment": "The \"ECMAScript Language Specification\", the JavaScript specification text describing this function.",
           "tags": [
             "spec"
           ]
@@ -60,6 +60,7 @@
       ],
       "groupName": "String API",
       "groupNameSlug": "string-api",
+      "publishDateRfc822": "Sat, 12 Mar 2022 21:53:00 GMT",
       "id": 1
     },
     {
@@ -79,7 +80,7 @@
         },
         {
           "url": "https://tc39.es/ecma262/#sec-bigint-constructor",
-          "comment": "The spec text.",
+          "comment": "The \"ECMAScript Language Specification\", the JavaScript specification text describing this function.",
           "tags": [
             "spec"
           ]
