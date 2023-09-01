@@ -6,9 +6,9 @@
       "items": [
         {
           "name": "`string.matchAll()`",
-          "description": "Returns all results matching a regular expression.",
+          "description": "Returns all results matching a string or regular expression.",
           "path": "string-api/matchAll",
-          "level": "BEGINNER",
+          "level": "ADVANCED",
           "requiresKnowledgeFrom": [
             {
               "bundle": "es6/language",
@@ -59,10 +59,33 @@
                 "article",
                 "discussion"
               ]
+            },
+            {
+              "url": "https://twitter.com/jskatas/status/1502755108911730694",
+              "comment": "Announcement of this kata on twitter.",
+              "tags": [
+                "announcement",
+                "social media post"
+              ]
             }
           ],
           "groupName": "String API",
           "id": "1"
+        },
+        {
+          "name": "`string.matchAll()` in depth",
+          "description": "Returns all results matching a string or regular expression.",
+          "path": "string-api/matchAll-in-depth",
+          "level": "ADVANCED",
+          "requiresKnowledgeFrom": [
+            {
+              "bundle": "es11/language",
+              "id": 1
+            }
+          ],
+          "links": [],
+          "groupName": "String API",
+          "id": "3"
         }
       ],
       "slug": "string-api",
@@ -106,7 +129,7 @@
               "comment": "Announcement of this kata on twitter.",
               "tags": [
                 "announcement",
-                "tweet"
+                "social media post"
               ]
             }
           ],

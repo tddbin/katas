@@ -4,9 +4,9 @@
   "items": [
     {
       "name": "`string.matchAll()`",
-      "description": "Returns all results matching a regular expression.",
+      "description": "Returns all results matching a string or regular expression.",
       "path": "string-api/matchAll",
-      "level": "BEGINNER",
+      "level": "ADVANCED",
       "requiresKnowledgeFrom": [
         {
           "bundle": "es6/language",
@@ -56,6 +56,14 @@
             "article",
             "discussion"
           ]
+        },
+        {
+          "url": "https://twitter.com/jskatas/status/1502755108911730694",
+          "comment": "Announcement of this kata on twitter.",
+          "tags": [
+            "announcement",
+            "social media post"
+          ]
         }
       ],
       "groupName": "String API",
@@ -98,7 +106,7 @@
           "comment": "Announcement of this kata on twitter.",
           "tags": [
             "announcement",
-            "tweet"
+            "social media post"
           ]
         }
       ],
@@ -106,6 +114,22 @@
       "groupNameSlug": "bigint",
       "publishDateRfc822": "Thu, 10 Mar 2022 23:59:00 GMT",
       "id": 2
+    },
+    {
+      "name": "`string.matchAll()` in depth",
+      "description": "Returns all results matching a string or regular expression.",
+      "path": "string-api/matchAll-in-depth",
+      "level": "ADVANCED",
+      "requiresKnowledgeFrom": [
+        {
+          "bundle": "es11/language",
+          "id": 1
+        }
+      ],
+      "links": [],
+      "groupName": "String API",
+      "groupNameSlug": "string-api",
+      "id": 3
     }
   ]
 }

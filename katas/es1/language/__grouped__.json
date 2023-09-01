@@ -229,7 +229,7 @@
               "url": "https://twitter.com/jskatas/status/1358119660600889351",
               "comment": "Tweeting that not-assertions make sense, sometimes.",
               "tags": [
-                "tweet"
+                "social media post"
               ]
             }
           ],
@@ -259,6 +259,44 @@
       ],
       "slug": "unary-operators",
       "name": "Unary Operators"
+    },
+    "Bitwise Shift Operators": {
+      "items": [
+        {
+          "name": "Bitwise Left Shift Operator",
+          "description": "shift the left operands value in binary representation to the left",
+          "path": "bitwise-shift-operators/left-shift",
+          "level": "INTERMEDIATE",
+          "requiresKnowledgeFrom": [],
+          "links": [
+            {
+              "url": "https://www.ecma-international.org/wp-content/uploads/ECMA-262_1st_edition_june_1997.pdf",
+              "comment": "The original ECMAScript 1 specification, \"The left shift operator ( << )\" is on page 45, chapter 11.7.1 (in a 110 pages PDF).",
+              "tags": [
+                "spec"
+              ]
+            },
+            {
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Left_shift",
+              "comment": "The MDN page.",
+              "tags": [
+                "mdn"
+              ]
+            },
+            {
+              "url": "https://mastodontech.de/@wolframkriesing/110968248279414969",
+              "comment": "Mastodon toot about starting to dive into the rabbit hole about writing this kata.",
+              "tags": [
+                "social media post"
+              ]
+            }
+          ],
+          "groupName": "Bitwise Shift Operators",
+          "id": "11"
+        }
+      ],
+      "slug": "bitwise-shift-operators",
+      "name": "Bitwise Shift Operators"
     }
   }
 }
