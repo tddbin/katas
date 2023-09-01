@@ -246,8 +246,8 @@
       "id": 10
     },
     {
-      "name": "Bitwise Left Shift Operator",
-      "description": "shift the left operands value in binary representation to the left",
+      "name": "Left Shift \"<<\"",
+      "description": "shifts the left operand's value x bits to the left in binary representation",
       "path": "bitwise-shift-operators/left-shift",
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [],
@@ -276,6 +276,7 @@
       ],
       "groupName": "Bitwise Shift Operators",
       "groupNameSlug": "bitwise-shift-operators",
+      "publishDateRfc822": "Fri, 01 Sep 2023 17:00:00 GMT",
       "id": 11
     }
   ]

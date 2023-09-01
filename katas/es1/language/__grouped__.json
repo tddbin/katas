@@ -263,11 +263,12 @@
     "Bitwise Shift Operators": {
       "items": [
         {
-          "name": "Bitwise Left Shift Operator",
-          "description": "shift the left operands value in binary representation to the left",
+          "name": "Left Shift \"<<\"",
+          "description": "shifts the left operand's value x bits to the left in binary representation",
           "path": "bitwise-shift-operators/left-shift",
           "level": "INTERMEDIATE",
           "requiresKnowledgeFrom": [],
+          "publishDateUTC": "2023-09-01T17:00:00.000Z",
           "links": [
             {
               "url": "https://www.ecma-international.org/wp-content/uploads/ECMA-262_1st_edition_june_1997.pdf",

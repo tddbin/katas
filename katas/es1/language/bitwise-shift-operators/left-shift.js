@@ -20,7 +20,7 @@ describe('The left shift "<<" operator', () => {
     });
     it('WHEN shifting `2` left by 1 bit THEN it is like multiplying it by 2, it becomes 4', () => {
       var two = 2;
-      var shifted = two <> 1;
+      var shifted = two => 1;
       assert.strictEqual(shifted, 4);
     });
     it('WHEN shifting the binary 8 (0b1000) two bits left THEN it becomes 32 (0b10_0000)', () => {
