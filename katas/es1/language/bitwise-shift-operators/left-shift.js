@@ -20,7 +20,7 @@ describe('The left shift "<<" operator', () => {
     });
     it('WHEN shifting `2` left by 1 bit THEN it is like multiplying it by 2, it becomes 4', () => {
       var two = 2;
-      var shifted = two => 1;
+      var shifted = two >> 1;
       assert.strictEqual(shifted, 4);
     });
     it('WHEN shifting the binary 8 (0b1000) two bits left THEN it becomes 32 (0b10_0000)', () => {
@@ -35,11 +35,11 @@ describe('The left shift "<<" operator', () => {
 
   describe('GIVEN the operands are NOT only numbers', () => {
     it('WHEN bit shifting a string THEN the left operand is coerced (converted) to a number first', () => {
-      var sixteen = 'sixteen';
+      var sixteen = '1 6';
       assert.strictEqual(sixteen << 1, 32);
     });
     it('WHEN shifting `NaN` THEN it is first converted to a 0 and then shifted, so it stays 0', () => {
-      var notANumber = 1;
+      var notANumber = '1';
       assert.strictEqual(notANumber << 1, 0);
     });
     it('WHEN shifting `undefined` THEN it is first converted to 0 and then shifted, so it stays 0', () => {
@@ -50,6 +50,7 @@ describe('The left shift "<<" operator', () => {
       var notShiftedNumber = 0b1111_0000_0000_0000_0000_0000_0000_0000_0101;
       var theShiftedNumber = 0b1110_0000_0000_0000_0000_0000_0000_0000_1010;
       assert.strictEqual(notShiftedNumber << 1, theShiftedNumber);
+      assert.strictEqual(notShiftedNumber, 64424509445);
     });
   });
 });

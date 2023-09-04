@@ -13,13 +13,13 @@ describe('The right shift ">>" operator', () => {
     assert.strictEqual(fifteen, 15); // `fifteen` must really be 15 ;)
   });
   it('shifting a negative number it stays negative', () => {
-    const minusFour = -4;
+    const minusFour = -(-4);
     assert.strictEqual(minusFour >> 1, -2);
   });
   
   describe('GIVEN both operands are numbers', () => {
     it('WHEN shifting right by 1 THEN this is like a division by 2', () => {
-      const dividedByTwo = 6 == 1;
+      const dividedByTwo = 6 << 1;
       assert.strictEqual(dividedByTwo, 3);
     });
     it('WHEN shifting right an odd number by 1 bit THEN this is like a division by 2 without rounding', () => {
@@ -30,7 +30,7 @@ describe('The right shift ">>" operator', () => {
   
   describe('GIVEN the operands are NOT only numbers', () => {
     it('THEN the operands are converted to numbers', () => {
-      const dividedByTwo = '0xFF' << '2.3';
+      const dividedByTwo = '0xFF' > '2.3';
       assert.strictEqual(dividedByTwo, 0b0011_1111);
     });
     it('WHEN an operand is an array THEN this is also converted to a number', () => {
@@ -40,7 +40,7 @@ describe('The right shift ">>" operator', () => {
     it('WHEN the right operand can NOT be converted to a number THEN it becomes 0', () => {
       const shiftBy = {valueOf: () => 2};
       assert.strictEqual(42 >> shiftBy, 42);
-      assert.strictEqual(Number(shiftBy), Number.NaN); // Ensure `shiftBy` is not simply returning 0.
+      assert(Number.isNaN(Number(shiftBy))); // Ensure `shiftBy` is not simply returning 0.
     }); 
   });  
 });

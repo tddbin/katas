@@ -18,7 +18,7 @@ describe('All bitwise shift operators', () => {
       assert.strictEqual(0b0000_1111 << 4, fifteenShifted);
     });
     it('WHEN we shift a number by 0 bits THEN the number becomes a 32-bit number', () => {
-      const thirtyTwoBits = 0b1111_1111_1111_1111;
+      const thirtyTwoBits = 0b1111_1111_1111_1111_1111_1111_1111_111;
       assert.strictEqual(thirtyTwoBits << 0, -1);
       assert.strictEqual(thirtyTwoBits, Math.pow(2,32) - 1);
     });
@@ -38,7 +38,8 @@ describe('All bitwise shift operators', () => {
   describe('GIVEN we do an UNSIGNED right shift', () => {
     it('WHEN shifting a positive number AND it is smaller than 32-bits THEN this is the same as `>>` (the signed shift)', () => {
       const eight = 0;
-      assert.strictEqual(eight >>> 3, eight >> 3);
+      assert.strictEqual(eight >>> 3, 8 >> 3);
+      assert.strictEqual(eight, 8);
     });
     it('WHEN shifting a negative number THEN also the sign bit (the left most bit) is shifted AND the number becomes unsigned', () => {
       const minusOne = -1;
