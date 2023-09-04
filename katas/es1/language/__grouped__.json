@@ -306,6 +306,7 @@
               "id": 6
             }
           ],
+          "publishDateUTC": "2023-09-04T17:50:00.000Z",
           "links": [
             {
               "url": "https://www.ecma-international.org/wp-content/uploads/ECMA-262_1st_edition_june_1997.pdf",
@@ -338,6 +339,7 @@
           "path": "bitwise-shift-operators/all",
           "level": "BEGINNER",
           "requiresKnowledgeFrom": [],
+          "publishDateUTC": "2023-09-04T17:50:00.000Z",
           "links": [
             {
               "url": "https://www.ecma-international.org/wp-content/uploads/ECMA-262_1st_edition_june_1997.pdf",
