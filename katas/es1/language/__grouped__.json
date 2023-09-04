@@ -272,7 +272,7 @@
           "links": [
             {
               "url": "https://www.ecma-international.org/wp-content/uploads/ECMA-262_1st_edition_june_1997.pdf",
-              "comment": "The original ECMAScript 1 specification, \"The left shift operator ( << )\" is on page 45, chapter 11.7.1 (in a 110 pages PDF).",
+              "comment": "The original ECMAScript 1 specification, \"The left shift operator ( << )\" is on page 44, chapter 11.7.1 (in a 110 pages PDF).",
               "tags": [
                 "spec"
               ]
@@ -294,6 +294,68 @@
           ],
           "groupName": "Bitwise Shift Operators",
           "id": "11"
+        },
+        {
+          "name": "Right Shift \">>\"",
+          "description": "shifts the left operand's value x bits to the right in binary representation",
+          "path": "bitwise-shift-operators/right-shift",
+          "level": "INTERMEDIATE",
+          "requiresKnowledgeFrom": [
+            {
+              "bundle": "es1/language",
+              "id": 6
+            }
+          ],
+          "links": [
+            {
+              "url": "https://www.ecma-international.org/wp-content/uploads/ECMA-262_1st_edition_june_1997.pdf",
+              "comment": "The original ECMAScript 1 specification, \"The right shift operator ( << )\" is on page 44, chapter 11.7.2 (in a 110 pages PDF).",
+              "tags": [
+                "spec"
+              ]
+            },
+            {
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Right_shift",
+              "comment": "The MDN page.",
+              "tags": [
+                "mdn"
+              ]
+            },
+            {
+              "url": "https://mastodontech.de/@wolframkriesing/110968248279414969",
+              "comment": "Mastodon toot about starting to dive into the rabbit hole about writing this kata.",
+              "tags": [
+                "social media post"
+              ]
+            }
+          ],
+          "groupName": "Bitwise Shift Operators",
+          "id": "12"
+        },
+        {
+          "name": "All bitwise shift operators",
+          "description": "bitwise shift - shifts the given number of bits modifying them on the binary level",
+          "path": "bitwise-shift-operators/all",
+          "level": "BEGINNER",
+          "requiresKnowledgeFrom": [],
+          "links": [
+            {
+              "url": "https://www.ecma-international.org/wp-content/uploads/ECMA-262_1st_edition_june_1997.pdf",
+              "comment": "The original ECMAScript 1 specification, \"The unsigned right shift operator ( >>> )\" is on page 45, chapter 11.7.3 (in a 110 pages PDF).",
+              "tags": [
+                "spec"
+              ]
+            },
+            {
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift",
+              "comment": "The MDN page.",
+              "tags": [
+                "mdn"
+              ]
+            }
+          ],
+          "groupName": "Bitwise Shift Operators",
+          "id": "13"
         }
       ],
       "slug": "bitwise-shift-operators",

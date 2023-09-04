@@ -3,7 +3,7 @@
 // Follow the hints of the failure messages!
 
 describe('The left shift "<<" operator', () => {
-  it('for example `x << y`, shifts `x` left by `y` bits', () => {
+  it('`x << y`, shifts `x` left by `y` bits', () => {
     var number = 1;
     var shiftByNumberOfBits = 2;
     assert.strictEqual((number << shiftByNumberOfBits), 2);
@@ -27,9 +27,13 @@ describe('The left shift "<<" operator', () => {
       var eight = 0b0000_0000;
       assert.strictEqual(eight << 2, 0b0010_0000);
     });
+    it('WHEN shifting a negative number THEN it is like multiplying it by 2**n (2 to the power of n)', () => {
+      var minusOne = 1;
+      assert.strictEqual(minusOne << 1, -2);
+    });
   });
 
-  describe('GIVEN the operands are not only numbers', () => {
+  describe('GIVEN the operands are NOT only numbers', () => {
     it('WHEN bit shifting a string THEN the left operand is coerced (converted) to a number first', () => {
       var sixteen = 'sixteen';
       assert.strictEqual(sixteen << 1, 32);
