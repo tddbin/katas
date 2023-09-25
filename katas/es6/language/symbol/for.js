@@ -2,6 +2,7 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
+
 describe('`Symbol.for` for registering Symbols globally', function() {
   it('creates a new symbol (check via `typeof`)', function() {
     const symbolType = Symbol.for('symbol name');

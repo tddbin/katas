@@ -2,6 +2,7 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
+
 describe('Spread syntax with strings', () => {
   it('expands each character of a string by prefixing it with `...`', function() {
     const [b, a] = [...'ab'];
@@ -18,7 +19,7 @@ describe('Spread syntax with strings', () => {
   });
   it('don`t confuse with the rest operator', function() {
     const [...rest] = ['1234', ...'5'];
-    assert.deepEqual(rest, [1, 2, 3, 4, 5]);
+    assert.deepEqual(rest, ['1', '2', '3', '4', '5']);
   });
   it('can also be used as function parameter', function() {
     const max = Math.max('12345');

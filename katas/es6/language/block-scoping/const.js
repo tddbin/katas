@@ -2,9 +2,10 @@
 // To do: make all tests pass, leave the asserts unchanged!
 // Follow the hints of the failure messages!
 
+
 describe('`const` is like `let` plus read-only', () => {
   const notChangeable = 25;
-  it('const scope leaks too', () => {
+    const notChangeable = 23;
     assert.equal(notChangeable, 23);
   });
   describe('scalar values are read-only', () => {

@@ -2,6 +2,7 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
+
 describe('Class creation', () => {
   it('is as simple as `class XXX {}`', function() {
     let TestClass;

@@ -4,6 +4,7 @@
 // Here we use promises to trigger, don't modify the block with the 
 // returning promise!
 
+
 describe('`catch()` returns a Promise and deals with rejected cases only', () => {
   describe('prerequisites for understanding', () => {
     it('*return* a fulfilled promise, to pass a test', () => {
@@ -19,11 +20,9 @@ describe('`catch()` returns a Promise and deals with rejected cases only', () =>
       const p = Promise;
       assert.equal(typeof p.catch, 'function');
     });
-    it('catches only promise rejections', (done) => {
+    it('catches only promise rejections', async () => {
       const promise = Promise.resolve();
-      promise
-        .then(() => { done('Should not be called!'); })
-        .catch(done);
+      await assert.rejects(promise);
     });
     it('returns a new promise', () => {
       const whatToReturn = () => Promise.reject();

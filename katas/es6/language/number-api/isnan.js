@@ -2,6 +2,7 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
+
 describe('The function `Number.isNaN()`', function(){
   it('is a static function on `Number`', function() {
     const whatType = 'method';

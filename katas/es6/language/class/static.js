@@ -2,16 +2,18 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
+
 describe('Inside a class you can use the `static` keyword', () => {
   describe('for methods', () => {
-    class UnitTest {}
     it('a static method just has the prefix `static`', () => {
+      class UnitTest {}
       class TestFactory {
         makeTest() { return new UnitTest(); }
       }
       assert.ok(TestFactory.makeTest() instanceof UnitTest);
     });
     it('the method name can be dynamic/computed at runtime', () => {
+      class UnitTest {}
       const methodName = 'makeTest';
       class TestFactory {
         static [methodName]() { return new UnitTest(); }

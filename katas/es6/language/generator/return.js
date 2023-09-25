@@ -2,6 +2,7 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
+
 describe('`return` in a generator function is special', function() {
   describe('the returned value is an IteratorResult (just like any value returned via `yield`)', function() {
     it('returns an IteratorResult (an object with the properties `value` and `done`)', function() {
@@ -33,11 +34,11 @@ describe('`return` in a generator function is special', function() {
   });
 
   describe('mixing `return` and `yield`', function() {
-    function* generatorFunctionWithYieldAndReturn() {
-      yield 1;
-      
-    }
     it('is possible', function() {
+      function* generatorFunctionWithYieldAndReturn() {
+        yield 1;
+        
+      }
       const iterator = generatorFunctionWithYieldAndReturn();
       const values = [
         iterator.next(),
@@ -46,6 +47,10 @@ describe('`return` in a generator function is special', function() {
       assert.deepEqual(values, [{value: 1, done: false}, {value: 2, done: true}]);
     });
     it('the mix behaves different to two `yield`s', function() {
+      function* generatorFunctionWithYieldAndReturn() {
+        yield 1;
+        
+      }
       const iterator = generatorFunctionWithYieldAndReturn();
       const values = [1, 2];
       assert.deepEqual(values, Array.from(iterator));

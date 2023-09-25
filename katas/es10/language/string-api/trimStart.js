@@ -2,6 +2,7 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
+
 describe('`string.trimStart()` removes whitespace from the beginning of a string', () => {
   it('`trimStart()` method is defined on every string (on the prototype)', () => {
     const str = 1;

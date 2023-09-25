@@ -2,6 +2,7 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
+
 describe('Class accessors (getter and setter)', () => {
   it('a getter is defined like a method prefixed with `get`', () => {
     class MyAccount {

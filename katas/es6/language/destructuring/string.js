@@ -2,6 +2,7 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
+
 describe('Destructuring also works on strings', () => {
   it('destructure every character, just as if the string was an array', () => {
     let a, b, c = 'abc';

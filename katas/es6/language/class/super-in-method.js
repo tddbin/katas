@@ -2,6 +2,7 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
+
 describe('Inside a class use `super` to access parent methods', () => {
   it('use of `super` without `extends` fails (already when transpiling)', () => {
     class A {hasSuper() { return super; }}

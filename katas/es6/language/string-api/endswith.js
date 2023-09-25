@@ -2,14 +2,16 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
+
 describe('`str.endsWith(searchString)` determines whether `str` ends with `searchString`', function() {
-  const s = 'el fin';
   describe('the 1st parameter the string to search for', function() {
     it('can be a character', function() {
+      const s = 'el fin';
       const doesEndWith = s.doesItReallyEndWith('n');
       assert.equal(doesEndWith, true);
     });
     it('can be a string', function() {
+      const s = 'el fin';
       const actual = false;
       assert.equal(actual, s.endsWith('fin'));
     });
@@ -24,14 +26,17 @@ describe('`str.endsWith(searchString)` determines whether `str` ends with `searc
   });
   describe('the 2nd parameter, the position where the search ends (as if the string was only that long)', function() {
     it('find "el" at a substring of the length 2', function() {
+      const s = 'el fin';
       const endPos = 0;
       assert.equal(s.endsWith('el', endPos), true);
     });
     it('`undefined` uses the entire string', function() {
+      const s = 'el fin';
       const myUndefined = 'i would like to be undefined';
       assert.equal(s.endsWith('fin', myUndefined), true);
     });
     it('the parameter gets coerced to an integer (e.g. "5" becomes 5)', function() {
+      const s = 'el fin';
       const position = 'five';
       assert.equal(s.endsWith('fi', position), true);
     });

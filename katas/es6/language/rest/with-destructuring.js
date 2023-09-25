@@ -2,6 +2,7 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
+
 describe('Rest parameters with destructuring', () => {
   it('must be last', () => {
     const [...all, last] = [1, 2, 3, 4];

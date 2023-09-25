@@ -956,7 +956,6 @@
               "id": 20
             }
           ],
-          "publishDateUTC": "2015-05-13T08:17:00.000Z",
           "groupName": "Iterator",
           "id": "40"
         }
@@ -1906,7 +1905,6 @@
           "path": "modules/import",
           "level": "BEGINNER",
           "requiresKnowledgeFrom": [],
-          "publishDateUTC": "2015-07-09T08:46:00.000Z",
           "groupName": "Modules",
           "id": "61"
         }

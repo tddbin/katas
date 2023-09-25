@@ -1,22 +1,26 @@
 // 1: async - basics
 // To do: make all tests pass, leave the assert lines unchanged!
 
-describe('`async` defines an asynchronous function', function() {
 
+describe('`async` defines an asynchronous function', function() {
   describe('can be created by putting `async` before', () => {
     it('a function expression', function() {
+      const AsyncFunction = async function () {}.constructor;
       const f = function() {};
       assert.equal(f instanceof AsyncFunction, true);
     });
     it('a function declaration', function() {
+      const AsyncFunction = async function () {}.constructor;
       function f() {}
       assert.equal(f instanceof AsyncFunction, true);
     });
     it('an arrow function', function() {
+      const AsyncFunction = async function () {}.constructor;
       const f = () => {};
       assert.equal(f instanceof AsyncFunction, true);
     });
     it('an object method', function() {
+      const AsyncFunction = async function () {}.constructor;
       const obj = {f: () => void 0};
       assert.equal(obj.f instanceof AsyncFunction, true);
     });
@@ -41,8 +45,3 @@ describe('`async` defines an asynchronous function', function() {
   });
 
 });
-
-// Note that AsyncFunction is not a global object.
-// It could be obtained by evaluating the following code.
-// see also https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction
-const AsyncFunction = Object.getPrototypeOf(async () => {}).constructor;

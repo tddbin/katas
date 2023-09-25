@@ -2,6 +2,7 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
+
 describe('a Promise represents an operation that hasn`t completed yet, but is expected in the future', function() {
   it('`Promise` is a global function', function() {
     const expectedType = '???';
@@ -18,47 +19,38 @@ describe('a Promise represents an operation that hasn`t completed yet, but is ex
     });  
   });
   describe('simplest promises', function() {
-    it('resolve a promise by calling the `resolve` function given as first parameter', function(done) {
+    it('resolve a promise by calling the `resolve` function given as first parameter', async function() {
       let promise = new Promise((resolve) => {
         
       });
-      promise
-        .then(() => done())
-        .catch(() => done(new Error('The promise is expected to resolve.')));
+      await assert.doesNotReject(promise);
     });
-    it('the `resolve` function can return a value, that is consumed by the `promise.then()` callback', function(done) {
+    it('the `resolve` function can return a value, that is consumed by the `promise.then()` callback', async function() {
       let promise = new Promise((resolve) => {
         resolve();
       });
-      promise
-        .then(value => {assert.equal(value, 42); done(); })
-        .catch(() => done(new Error('The promise is expected to resolve with 42!')));
+      await assert.doesNotReject(promise);
+      assert.equal(await promise, 42);
     });
-    it('rejecting a promise is done by calling the callback given as 2nd parameter', function(done) {
+    it('rejecting a promise is done by calling the callback given as 2nd parameter', async function() {
       let promise = new Promise((reject) => {
         reject();
       });
-      promise
-        .then(() => done(new Error('The promise is expected to be rejected.')))
-        .catch(() => done());
+      await assert.rejects(promise);
     });
   });
   describe('an asynchronous promise', function() {
-    it('can resolve later, also by calling the first callback', function(done) {
-        let promise = new Promise(() => {
+    it('can resolve later, also by calling the first callback', async function() {
+      let promise = new Promise(() => {
         setTimeout(() => resolve(), 100);
       });
-      promise
-        .then(() => done())
-        .catch(() => done(new Error('The promise is expected to resolve.')));
+      await assert.doesNotReject(promise);
     });
-    it('reject it at some later point in time, calling the 2nd callback', function(done) {
+    it('reject it at some later point in time, calling the 2nd callback', async function() {
       let promise = new Promise((reject) => {
         setTimeout(() => reject(), 100);
       });
-      promise
-        .then(() => done(new Error('The promise is expected to be rejected.')))
-        .catch(() => done());
+      await assert.rejects(promise);
     });
   });
   describe('test library (mocha here) support for promises', function() {

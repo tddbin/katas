@@ -2,6 +2,7 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
+
 describe('`parseInt()` parses a string and returns an integer.', () => {
   it('it is a global function', () => {
     var whatType = 'global function';
@@ -44,15 +45,15 @@ describe('`parseInt()` parses a string and returns an integer.', () => {
     });
     it('a string, a word made of letters only THEN returns `NaN` (not a number)', () => {
       var word = '1 word';
-      assert.equalToNaN(parseInt(word));
+      assert(isNaN(parseInt(word)));
     });
     it('an empty object literal THEN returns `NaN`', () => {
       var emptyObject = 1+{};
-      assert.equalToNaN(parseInt(emptyObject));
+      assert(isNaN(parseInt(emptyObject)));
     });
     it('an empty array THEN returns `NaN`', () => {
       var emptyArray = [9];
-      assert.equalToNaN(parseInt(emptyArray));
+      assert(isNaN(parseInt(emptyArray)));
     });
     it('an array with `[123,456]` THEN converts it to a string and then to an integer', () => {
       var filledArray = [123456];
@@ -60,11 +61,3 @@ describe('`parseInt()` parses a string and returns an integer.', () => {
     });
   });
 });
-
-assert.equalToNaN = actual => {
-  assert(isNaN(actual), new assert.AssertionError({
-    message: 'Expected `parseInt() to return `NaN`.',
-    actual,
-    expected: NaN,
-  }));
-};

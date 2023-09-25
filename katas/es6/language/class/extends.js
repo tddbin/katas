@@ -2,6 +2,7 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
+
 describe('Classes can inherit from another using `extends`', () => {
   describe('the default super class is `Object`', () => {
     it('a `class A` is an instance of `Object`', () => {
@@ -15,7 +16,12 @@ describe('Classes can inherit from another using `extends`', () => {
       assert.equal(new B() instanceof Object, true);
     });
     it('a class can extend `null`, and is not an instance of Object', () => {
-      class NullClass extends Object {}
+      class NullClass extends null {
+        // This is how a class, that extends `null` can be written.
+        constructor() {
+          return Object.create(new.target.prototype);
+        }
+      }
       let nullInstance = new NullClass();
       assert.equal(nullInstance instanceof Object, false);
     });

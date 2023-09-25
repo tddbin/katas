@@ -2,6 +2,7 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
+
 describe('`Symbol.keyFor()` gets the symbol key for a given symbol', function() {
   it('pass the symbol to `keyFor()` and you get its key', function() {
     const key = Symbol.____(Symbol.for('foo'));

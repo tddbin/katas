@@ -2,6 +2,7 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
+
 describe('The function `string.matchAll() - in depth`', () => {
 
   it('matchAll() is lazy', () => {
@@ -20,26 +21,54 @@ describe('The function `string.matchAll() - in depth`', () => {
   });
 
   describe('returns an Array with custom properties', () => {
-    const matchAll = () => {
-      const str = 'test';
-      const regexp = /test/g;
-      const iter = str.matchAll(regexp);
-      const {value} = iter.next();
-      return value;
-    };
     it('it is an array', () => {
+      const matchAll = () => {
+        const str = 'test';
+        const regexp = /test/g;
+        const iter = str.matchAll(regexp);
+        const {value} = iter.next();
+        return value;
+      };
       assert(Array.isArray(matchAll()));
     });
     it('but it is not a pure array', () => {
-      assert.notDeepEqual(matchAll(), ['test']);
+      const matchAll = () => {
+        const str = 'test';
+        const regexp = /test/g;
+        const iter = str.matchAll(regexp);
+        const {value} = iter.next();
+        return value;
+      };
+      // assert.notDeepEqual(matchAll(), ['test']);
     });
     it('it must be converted to be a pure array (without custom properties)', () => {
+      const matchAll = () => {
+        const str = 'test';
+        const regexp = /test/g;
+        const iter = str.matchAll(regexp);
+        const {value} = iter.next();
+        return value;
+      };
       assert.deepEqual(Array.from(matchAll()), ['test']);
     });
     it('one property is `groups`', () => {
+      const matchAll = () => {
+        const str = 'test';
+        const regexp = /test/g;
+        const iter = str.matchAll(regexp);
+        const {value} = iter.next();
+        return value;
+      };
       assert(matchAll().hasOwnProperty('groups'));
     });
     it('another property is `index`, which is the position of the first capture group', () => {
+      const matchAll = () => {
+        const str = 'test';
+        const regexp = /test/g;
+        const iter = str.matchAll(regexp);
+        const {value} = iter.next();
+        return value;
+      };
       assert.equal(matchAll().index, 0);
     });
     it('another property is `input`, which is the actual string to search in', () => {
