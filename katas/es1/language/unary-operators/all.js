@@ -26,7 +26,7 @@ describe('All unary operators', () => {
       var trueString = !'true';
       assert.strictEqual(!trueString, false);
     });
-    it('AND it is `delete` before an object`s property THEN the property is removed', () => {
+    it('AND it is `delete` before an object\'s property THEN the property is removed', () => {
       var obj = {x: 1};
       delete obj.axe;
       assert.strictEqual(obj.x, undefined);
@@ -35,7 +35,7 @@ describe('All unary operators', () => {
       var toUndefined = delete {any: 'thing'};
       assert.strictEqual(toUndefined, undefined);
     });
-    it('AND it is `typeof` THEN it returns the operand`s type', () => {
+    it('AND it is `typeof` THEN it returns the operand\'s type', () => {
       var whatsTheType = typeof '42';
       assert.strictEqual(whatsTheType, 'number');
     });

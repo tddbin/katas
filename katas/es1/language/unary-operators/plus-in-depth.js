@@ -105,7 +105,7 @@ describe('Unary "+" operator', () => {
         var Class = class{toString = () => '123'};
         assert.strictEqual(+new Class, 23);
       });
-      it('AND its a class with `valueOf()` and `toString()` THEN `valueOf`s value is used', () => {
+      it('AND its a class with `valueOf()` and `toString()` THEN `valueOf`\'s value is used', () => {
         var toString = () => '23';
         var valueOf = toString;
         assert.strictEqual(+new class{toString = toString; valueOf = valueOf}, 42);

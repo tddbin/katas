@@ -88,9 +88,9 @@
     },
     {
       "name": "`raw` property",
-      "description": "The `raw` property accesses the string as it was entered.",
+      "description": "The `raw` property can access the string without processing escape sequences.",
       "path": "template-strings/raw",
-      "level": "INTERMEDIATE",
+      "level": "EXPERT",
       "requiresKnowledgeFrom": [
         {
           "bundle": "es6/language",
@@ -99,6 +99,10 @@
         {
           "bundle": "es6/language",
           "id": 3
+        },
+        {
+          "bundle": "es6/language",
+          "id": 82
         }
       ],
       "links": [
@@ -113,6 +117,13 @@
         {
           "url": "http://www.ecma-international.org/ecma-262/6.0/#sec-static-semantics-templatestrings",
           "comment": "Describing the raw behavior.",
+          "tags": [
+            "spec"
+          ]
+        },
+        {
+          "url": "https://tc39.es/ecma262/#sec-gettemplateobject",
+          "comment": "The JS engine internal abstract operation `GetTemplateObject` describes how the template object, that is passed to the tag-function is created, see esp. the adding of the `raw` property onto the array here (item: 14. Perform ! DefinePropertyOrThrow(template, \"raw\"...).",
           "tags": [
             "spec"
           ]
@@ -2294,6 +2305,58 @@
       "groupNameSlug": "number-api",
       "publishDateRfc822": "Sun, 06 Oct 2019 17:29:00 GMT",
       "id": 81
+    },
+    {
+      "name": "`String.raw`",
+      "description": "`String.raw` is a tag function for a template literal, which returns the raw string, e.g. \\n (not \n) for a line break.",
+      "path": "string-api/raw",
+      "level": "ADVANCED",
+      "requiresKnowledgeFrom": [
+        {
+          "bundle": "es6/language",
+          "id": 8
+        },
+        {
+          "bundle": "es6/language",
+          "id": 5
+        },
+        {
+          "bundle": "es6/language",
+          "id": 18
+        },
+        {
+          "bundle": "es6/language",
+          "id": 20
+        }
+      ],
+      "links": [
+        {
+          "url": "https://262.ecma-international.org/6.0/#sec-string.raw",
+          "comment": "The original official specification when introduced, it does not explain what this function does, but very much in detail how it works which results in explaining the \"what\" too.",
+          "tags": [
+            "spec"
+          ]
+        },
+        {
+          "url": "https://tc39.es/ecma262/#sec-string.raw",
+          "comment": "The more readable and usable specification, in the version of the continuously maintained specification document.",
+          "tags": [
+            "spec"
+          ]
+        },
+        {
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/raw",
+          "comment": "The Mozilla Developer Network docs, an easy to understand explanation.",
+          "tags": [
+            "mdn",
+            "docs"
+          ]
+        }
+      ],
+      "groupName": "String API",
+      "groupNameSlug": "string-api",
+      "publishDateRfc822": "Sun, 08 Oct 2023 19:15:00 GMT",
+      "id": 82
     }
   ]
 }

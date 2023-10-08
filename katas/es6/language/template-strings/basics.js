@@ -3,21 +3,19 @@
 // Follow the hints of the failure messages!
 
 
-describe('A template string, is wrapped in ` (backticks) instead of \' or "', function() {
-  describe('by default, behaves like a normal string', function() {
-    it('just surrounded by backticks', function() {
-      var str = ``;
-      assert.equal(str, 'like a string');
-    });
+describe('Use backticks `` ` `` for template strings (not quotes `` \' `` or `` " ``)', function() {
+  it('WHEN you write a string in backticks THEN it behaves just like a normal string', function() {
+    var str = ``;
+    assert.equal(str, 'like a string');
   });
 
-  describe('can evaluate variables, which are wrapped in "${" and "}"', function() {
-    it('e.g. a simple variable "${x}" just gets evaluated', function() {
+  describe('GIVEN variables wrapped in `${` and `}`', function() {
+    it('WHEN using `${x}` inside a template string THEN the value of `x` is written out instead', function() {
       var x = 42;
       var evaluated = `x=#x`;
       assert.equal(evaluated, 'x=' + x);
     });
-    it('multiple variables get evaluated too', function() {
+    it('WHEN using multiple variables THEN they get evaluated too', function() {
       var x = 42;
       var y = 23;
       var evaluated = '${ x } + $ { y }';
@@ -25,14 +23,14 @@ describe('A template string, is wrapped in ` (backticks) instead of \' or "', fu
     });
   });
 
-  describe('can evaluate any expression, wrapped inside "${...}"', function() {
-    it('all inside "${...}" gets evaluated', function() {
+  describe('GIVEN expressions wrapped inside `${...}`', function() {
+    it('WHEN wrapping an expression in `${...}` THEN they get evaluated', function() {
       var x = 42;
       var y = 23;
       var evaluated = `${ x } + ${ y }`;
       assert.equal(evaluated, x+y);
     });
-    it('inside "${...}" can also be a function call', function() {
+    it('WHEN a function call is inside `${...}` THEN the result is rendered', function() {
       function getEnv(){
         return 'ECMAScript';
       }

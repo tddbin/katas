@@ -4,7 +4,7 @@
 
 
 describe('Tagged template strings, are an advanced form of template strings', function() {
-  it('syntax: prefix a template string with a function to call (without "()" around it)', function() {
+  it('Syntax: prefix a template string with a function to call (without "()" around it)', function() {
     function tagFunction(s) {
       return s.toString();
     }
