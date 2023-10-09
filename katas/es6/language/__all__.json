@@ -2308,7 +2308,7 @@
     },
     {
       "name": "`String.raw`",
-      "description": "`String.raw` is a tag function for a template literal, which returns the raw string, e.g. \\n (not \n) for a line break.",
+      "description": "`String.raw` is a tag function for a template literal, which returns the raw string, e.g. \\\\n (not \\n) for a line break.",
       "path": "string-api/raw",
       "level": "ADVANCED",
       "requiresKnowledgeFrom": [
