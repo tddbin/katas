@@ -5,7 +5,6 @@
  * - the last two are kinda 2 way binding, pass values in and throw "out" on demand
  */
 
-
 describe('Async iterator', () => {
 
   describe('a sequence with (a)sync functions', () => {

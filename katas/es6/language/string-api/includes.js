@@ -2,7 +2,6 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
-
 describe('`string.includes()` finds one string inside another', function() {
   describe('GIVEN searching a single character', function() {
     it('WHEN "x" is found THEN then `s.includes("x")` returns true', function() {

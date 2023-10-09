@@ -2,7 +2,6 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
-
 describe('a Promise represents an operation that hasn`t completed yet, but is expected in the future', function() {
   it('`Promise` is a global function', function() {
     const expectedType = '???';

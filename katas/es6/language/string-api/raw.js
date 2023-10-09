@@ -1,5 +1,3 @@
-import assert from "assert";
-
 describe('`String.raw` provides the string without escaped characters being processed', function() {
   describe('GIVEN using `String.raw` as a tag-function', () => {
     it('WHEN passing line-break (\\n) THEN the `String.raw`ing it the backslash stays "visible" (and processable)', function() {

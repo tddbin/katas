@@ -4,7 +4,6 @@
 // Here we use promises to trigger, don't modify the block with the 
 // returning promise!
 
-
 describe('`catch()` returns a Promise and deals with rejected cases only', () => {
   describe('prerequisites for understanding', () => {
     it('*return* a fulfilled promise, to pass a test', () => {

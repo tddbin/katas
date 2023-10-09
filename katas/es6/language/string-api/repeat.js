@@ -2,7 +2,6 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
-
 describe('`str.repeat(x)` concatenates `x` copies of `str` and returns it', function() {
   describe('the 1st parameter the count', function() {
     it('if missing, returns an empty string', function() {

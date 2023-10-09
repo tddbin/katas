@@ -2,7 +2,6 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
-
 describe('The object literal allows for new shorthands', () => {
   describe('with variables', () => {
     it('the short version for `{x: x}` is {x}', () => {

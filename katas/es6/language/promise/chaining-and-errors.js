@@ -2,7 +2,6 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
-
 describe('error handling in chained promises', () => {
   
   it('normal functions used in a promise become promises, when they throw `catch()` can be used, no need for `new Promise()` every time', function() {

@@ -2,7 +2,6 @@
 // 61: modules - import
 // To do: make all tests pass, leave the assert lines unchanged!
 
-
 // `import` is only allowed on the module level 
 // (when the kata was written babel transpiler still translated `import` into `require` statements)
 // but since lately this does not work anymore.

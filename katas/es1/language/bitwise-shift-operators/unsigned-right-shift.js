@@ -1,4 +1,3 @@
-
 describe('', () => {
   it('can be used to find out if the number is positive or negative', () => {
     const isPositive = (123 >>> 31) == 0;

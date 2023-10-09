@@ -2,7 +2,6 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
-
 describe('The left shift "<<" operator', () => {
   it('`x << y`, shifts `x` left by `y` bits', () => {
     var number = 1;

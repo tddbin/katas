@@ -2,7 +2,6 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
-
 describe('All bitwise shift operators', () => {
   it('a bitwise shift operator works on two operands shifting their bits', () => {
     const shiftByTwoBits = 3;

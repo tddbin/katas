@@ -2,7 +2,6 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
-
 describe('`[].sort()` sorts an array using each value as a string', function() {
   //: {"jskatas":{"terms": ["array", "function", "prototype", "character", "string"]}}
   it('is a function on the array prototype', function() {

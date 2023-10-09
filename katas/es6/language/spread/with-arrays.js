@@ -2,7 +2,6 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
-
 describe('Spread syntax with arrays', () => {
   describe('basically', () => {
     it('expands the items of an array by prefixing it with `...`', function() {

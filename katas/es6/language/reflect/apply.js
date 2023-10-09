@@ -1,7 +1,6 @@
 // 59: Reflect - apply 
 // To do: make all tests pass, leave the assert lines unchanged!
 
-
 describe('`Reflect.apply` calls a target function', function() {
   it('it is a static method', function() {
     const actualType = '???';

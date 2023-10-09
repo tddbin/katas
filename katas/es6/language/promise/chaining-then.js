@@ -2,7 +2,6 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
-
 describe('chaining multiple promises can enhance readability', () => {
   describe('prerequisites for understanding', function() {
     it('reminder: the test passes when a fulfilled promise is returned', function() {

@@ -2,7 +2,6 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
-
 describe('`[].sort()` can take a compare function', function() {
   describe('the compare function', function() {
     it('can be given as the only parameter to `sort()` (and gets used by it)', function() {

@@ -2,7 +2,6 @@
 // To do: make all tests pass, leave the asserts unchanged!
 // Follow the hints of the failure messages!
 
-
 describe('Template string, can contain multiline content', function() {
   it('WHEN a new line is inside the backticks `` ` `` THEN the string can span across many lines', function() {
     var normalString = `

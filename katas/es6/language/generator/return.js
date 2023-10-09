@@ -2,7 +2,6 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
-
 describe('`return` in a generator function is special', function() {
   describe('the returned value is an IteratorResult (just like any value returned via `yield`)', function() {
     it('returns an IteratorResult (an object with the properties `value` and `done`)', function() {

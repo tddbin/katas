@@ -2,7 +2,6 @@
 // To do: make all tests pass, leave the asserts unchanged!
 // Follow the hints of the failure messages!
 
-
 describe('`let` restricts the scope of the variable to the current block', () => {
   describe('`let` vs. `var`', () => {
     it('`var` works as usual, it`s scope is the function', () => {

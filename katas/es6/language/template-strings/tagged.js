@@ -2,7 +2,6 @@
 // To do: make all tests pass, leave the asserts unchanged!
 // Follow the hints of the failure messages!
 
-
 describe('Tagged template strings, are an advanced form of template strings', function() {
   it('Syntax: prefix a template string with a function to call (without "()" around it)', function() {
     function tagFunction(s) {

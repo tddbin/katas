@@ -2,7 +2,6 @@
 // To do: make all tests pass, leave the asserts unchanged!
 // Follow the hints of the failure messages!
 
-
 describe('Using `raw` property in a tagged template function', function() {
   describe('What? The property `raw` is on the array that contains all string parts of a template string', () => {
     it('WHEN reading `.raw` of the strings (the 1st parameter) THEN it returns an array of all raw strings of the template', () => {

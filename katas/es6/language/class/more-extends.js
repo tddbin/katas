@@ -2,7 +2,6 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
-
 describe('Classes can inherit from another', () => {
   it('extend an `old style` "class", a function, still works', () => {
     let A;

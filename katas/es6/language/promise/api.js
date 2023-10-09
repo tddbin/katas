@@ -2,7 +2,6 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
-
 describe('`Promise` API overview', function() {
   it('`new Promise()` requires a function as param', () => {
     const param = null;

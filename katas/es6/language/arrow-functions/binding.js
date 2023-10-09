@@ -2,7 +2,6 @@
 // To do: make all tests pass, leave the asserts unchanged!
 // Follow the hints of the failure messages!
 
-
 describe('Arrow functions have lexical `this`, no dynamic `this`', () => {
   it('bound at definition time, use `=>`', function() {
     class LexicallyBound {

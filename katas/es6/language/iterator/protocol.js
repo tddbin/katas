@@ -2,7 +2,6 @@
 // to customize their iteration behavior, such as what values are looped over in a for..of construct.
 // read more at https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols
 
-
 // To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 

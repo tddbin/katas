@@ -2,7 +2,6 @@
 // To do: make all tests pass, leave the asserts unchanged!
 // Follow the hints of the failure messages!
 
-
 describe('Use backticks `` ` `` for template strings (not quotes `` \' `` or `` " ``)', function() {
   it('WHEN you write a string in backticks THEN it behaves just like a normal string', function() {
     var str = ``;

@@ -2,7 +2,6 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
-
 describe('`str.startsWith(searchString)` determines whether `str` begins with `searchString`.', function() {
   describe('the 1st parameter, the string to search for', function() {
     it('can be just a character', function() {

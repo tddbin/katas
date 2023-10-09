@@ -1,5 +1,4 @@
 
-
 describe('mocha + assert', () => {
 
   it('simple values equal?', () => assert.equal('one', 'one'));

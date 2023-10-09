@@ -2,7 +2,6 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
-
 describe('Generator - `yield` is used to pause and resume a generator function', () => {
   it('converting a generator to an array (using `Array.from`) resumes the generator until all values are received', () => {
     function* generatorFunction() {

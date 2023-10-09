@@ -1,7 +1,6 @@
 // 68: Reflect - construct 
 // To do: make all tests pass, leave the assert lines unchanged!
 
-
 describe('`Reflect.construct` is the `new` operator as a function', function() {
   describe('the function itself', function() {
     it('is static on the `Reflect` object', function() {

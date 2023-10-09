@@ -2,7 +2,6 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
-
 // This is not a self-contained kata. Each test has a lot of context from the file around it.
 // Which is not the goal of the "new katas", So I am disabling this for now until I figured out how to do that nicely.
 

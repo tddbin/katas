@@ -1,7 +1,6 @@
 // 18: rest - as-parameter
 // To do: make all tests pass, leave the assert lines unchanged!
 
-
 describe('Rest parameters in functions', () => {
   it('must be the last parameter', () => {
     const fn = (...rest, veryLast) => {

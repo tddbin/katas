@@ -2,7 +2,6 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
-
 describe('Classes can inherit from another using `extends`', () => {
   describe('the default super class is `Object`', () => {
     it('a `class A` is an instance of `Object`', () => {

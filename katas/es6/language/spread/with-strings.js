@@ -2,7 +2,6 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
-
 describe('Spread syntax with strings', () => {
   it('expands each character of a string by prefixing it with `...`', function() {
     const [b, a] = [...'ab'];

@@ -1,7 +1,6 @@
 // 60: Reflect - getPrototypeOf 
 // To do: make all tests pass, leave the assert lines unchanged!
 
-
 describe('`Reflect.getPrototypeOf` returns the prototype', function() {
   it('works like `Object.getPrototypeOf`', function() {
     const viaObject = Object.getPrototypeOf({});

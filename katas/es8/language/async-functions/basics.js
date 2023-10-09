@@ -1,7 +1,6 @@
 // 1: async - basics
 // To do: make all tests pass, leave the assert lines unchanged!
 
-
 describe('`async` defines an asynchronous function', function() {
   describe('can be created by putting `async` before', () => {
     it('a function expression', function() {

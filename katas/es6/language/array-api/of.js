@@ -2,7 +2,6 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
-
 describe('`Array.of` creates an array with the given arguments as elements', () => {
   it('dont mix it up with `Array(10)`, where the argument is the array length', () => {
     const arr = Array(10);
