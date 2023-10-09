@@ -2161,6 +2161,13 @@
                 "mdn",
                 "docs"
               ]
+            },
+            {
+              "url": "https://www.youtube.com/watch?v=lFhMQSfIVms",
+              "comment": "This video explains `String.raw` nicely by working with it on the browser console.",
+              "tags": [
+                "video"
+              ]
             }
           ],
           "groupName": "String API",

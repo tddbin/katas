@@ -1,8 +1,8 @@
 import assert from "assert";
 
-describe('`String.raw` provides the raw string of a template literal', function() {
+describe('`String.raw` provides the string without escaped characters being processed', function() {
   describe('GIVEN using `String.raw` as a tag-function', () => {
-    it('WHEN passing line-break (\\n) THEN the `String.raw` of it escapes the backslash and makes it "visible"', function() {
+    it('WHEN passing line-break (\\n) THEN the `String.raw`ing it the backslash stays "visible" (and processable)', function() {
       var expected = '\n';
       assert.equal(String.raw`\n`, expected);
     });
@@ -14,6 +14,12 @@ describe('`String.raw` provides the raw string of a template literal', function(
       var rawSmilie = '\u{1F600}';
       const actual = String.raw`\u{1F600}`;
       assert.equal(actual, rawSmilie);
+    });
+    it('a use case: WHEN having a raw unicode character THEN I can modify it', () => {
+      const angryFace = '\u{1F620}';
+      const rawSmilie = String(`\u{1F600}`);
+      const smilie = rawSmilie.replace('1F600', '1F620');
+      assert.equal(eval(`"${smilie}"`), angryFace);
     });
   });
   describe('GIVEN using `String.raw` as a function to call', () => {
