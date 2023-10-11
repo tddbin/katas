@@ -19,7 +19,7 @@
         },
         {
           "url": "https://www.ecma-international.org/wp-content/uploads/ECMA-262_3rd_edition_december_1999.pdf",
-          "comment": "The version of the specification where `array.shift()` was introduced (PDF ).",
+          "comment": "The version of the specification where `array.shift()` was introduced (PDF 723kB).",
           "tags": [
             "spec"
           ]
