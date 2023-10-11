@@ -10,7 +10,7 @@ describe('`array.shift()`', () => {
     });
     describe('WHEN shifting an array with one element', () => {
       it('THEN the array is empty afterwards', () => {
-        const theArray = [];
+        const theArray = [1, 2];
         theArray.shift();
         assert.deepStrictEqual(theArray, []);
       });
@@ -32,8 +32,8 @@ describe('`array.shift()`', () => {
       assert.strictEqual(Array.from(arrayLike).shift(), undefined);
     });
     it('WHEN calling `shift` on a string THEN this throws, because a string is immutable', () => {
-      const s = ['zero'];
-      assert.throws(() => Array.prototype.shift.apply(s));
+      const string = ['zero'];
+      assert.throws(() => Array.prototype.shift.apply(string));
     });
   });
 });

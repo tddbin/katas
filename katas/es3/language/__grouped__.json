@@ -10,6 +10,7 @@
           "path": "array-api/shift",
           "level": "BEGINNER",
           "requiresKnowledgeFrom": [],
+          "publishDateUTC": "2023-10-11T09:00:00.000Z",
           "links": [
             {
               "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift",
