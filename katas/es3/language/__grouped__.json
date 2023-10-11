@@ -1,0 +1,38 @@
+{
+  "name": "ECMAScript 3",
+  "nameSlug": "es3-katas",
+  "groups": {
+    "Array API": {
+      "items": [
+        {
+          "name": "`array.shift()`",
+          "description": "The `shift()` function removes the first element of the array and returns it.",
+          "path": "array-api/shift",
+          "level": "BEGINNER",
+          "requiresKnowledgeFrom": [],
+          "links": [
+            {
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift",
+              "comment": "Very well readable, easy to understand description of how shift() works.",
+              "tags": [
+                "mdn",
+                "docs"
+              ]
+            },
+            {
+              "url": "https://www.ecma-international.org/wp-content/uploads/ECMA-262_3rd_edition_december_1999.pdf",
+              "comment": "The version of the specification where `array.shift()` was introduced (PDF ).",
+              "tags": [
+                "spec"
+              ]
+            }
+          ],
+          "groupName": "Array API",
+          "id": "1"
+        }
+      ],
+      "slug": "array-api",
+      "name": "Array API"
+    }
+  }
+}

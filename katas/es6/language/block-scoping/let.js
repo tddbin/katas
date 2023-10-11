@@ -3,14 +3,15 @@
 // Follow the hints of the failure messages!
 
 describe('`let` restricts the scope of the variable to the current block', () => {
-  describe('`let` vs. `var`', () => {
-    it('`var` works as usual, it`s scope is the function', () => {
+  describe('comparing `var` with `let`', () => {
+    it('WHEN using `var` for declaring a variable THEN the scope of the variable is the surrounding function', () => {
+      //: {"jskatas": {"terms": ["block", "scope"]}}
       if (true) {
         let varX = true;
       }
       assert.equal(varX, true);
     });
-    it('`let` restricts scope to inside the block', () => {
+    it('WHEN declaring a variable using `let` THEN the scope is limited to the surrounding block (enclosed in `{` and `}`)', () => {
       if (true) {
         var letX = true;
       }
@@ -18,17 +19,21 @@ describe('`let` restricts the scope of the variable to the current block', () =>
     });
   });
 
-  describe('`let` usage', () => {
-    it('`let` use in `for` loops', () => {
+  describe('using `let`', () => {
+    it('WHEN using `let` in a `for` loop THEN the variable is only "visible" inside this loop', () => {
       let obj = {x: 1};
       for (var key in obj) {}
       assert.throws(() => key, ReferenceError);
     });
-    it('create artifical scope, using curly braces', () => {
+    it('WHEN embedding a `let` variable in a block (using curly braces) THEN the variable is not "visible" outside of it', () => {
       {
         var letX = true;
       }
       assert.throws(() => letX, ReferenceError);
+    });
+    it('WHEN declaring a variable with `let` without a value THEN this variable has the value `undefined`', () => {
+      let variable = 42;
+      assert.strictEqual(variable, undefined);
     });
   });
 });
