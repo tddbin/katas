@@ -17,21 +17,21 @@ describe('Pass a value to a generator', () => {
     assert.deepEqual(iteratedOver, convertedToAnArray);
   });
   it('pass a value to the iterator', function() {
-    //// function* generatorFunction() {
-    function* generatorFunction(param) {
-      yield 1;
-      yield param;
+    function* generatorFunction() {
+      //// yield 1;
+      let value = yield 1;
+      yield value;
     }
-    //// var iterator = generatorFunction();
-    var iterator = generatorFunction(2);
+    var iterator = generatorFunction();
     var iteratedOver = [iterator.next().value, iterator.next(2).value];
     assert.deepEqual(iteratedOver, [1, 2]);
   });
   it('a value passed to the 1st `next()` call is ignored', function() {
     function* generatorFunction() {
-      yield 1;
+      //// yield 1;
+      let value = yield 1;
       ////
-      yield 2;
+      yield value;
     }
     let iterator = generatorFunction();
     const values = [
