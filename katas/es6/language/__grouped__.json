@@ -629,8 +629,23 @@
           "description": "Create a class.",
           "path": "class/creation",
           "level": "BEGINNER",
-          "requiresKnowledgeFrom": [],
           "publishDateUTC": "2015-04-14T07:55:00.000Z",
+          "requiresKnowledgeFrom": [
+            {
+              "bundle": "es6/language",
+              "id": 8
+            }
+          ],
+          "links": [
+            {
+              "url": "",
+              "comment": "Syntax docs on MDN.",
+              "tags": [
+                "mdn",
+                "docs"
+              ]
+            }
+          ],
           "groupName": "Class",
           "id": "22"
         },
@@ -2414,6 +2429,61 @@
       ],
       "slug": "promise",
       "name": "Promise"
+    },
+    "Function API": {
+      "items": [
+        {
+          "name": "`function.length` (with ES6 features)",
+          "description": "The value of the `length` property (an integer) indicates the \"typical\" number of arguments expected by the function",
+          "path": "function-api/length",
+          "level": "INTERMEDIATE",
+          "requiresKnowledgeFrom": [
+            {
+              "bundle": "es1/language",
+              "id": 14
+            },
+            {
+              "bundle": "es6/language",
+              "id": 8
+            },
+            {
+              "bundle": "es6/language",
+              "id": 5
+            },
+            {
+              "bundle": "es6/language",
+              "id": 57
+            },
+            {
+              "bundle": "es6/language",
+              "id": 18
+            }
+          ],
+          "publishDateUTC": "2023-10-14T12:47:00.000Z",
+          "links": [
+            {
+              "url": "https://262.ecma-international.org/6.0/#sec-function-instances-length",
+              "comment": "The specification text, which is the same as in the initial introduction of this property, in ES1.",
+              "tags": [
+                "spec",
+                "docs"
+              ]
+            },
+            {
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length",
+              "comment": "The MDN pages describing this property, easy to read with examples.",
+              "tags": [
+                "mdn",
+                "docs"
+              ]
+            }
+          ],
+          "groupName": "Function API",
+          "id": "83"
+        }
+      ],
+      "slug": "function-api",
+      "name": "Function API"
     }
   }
 }

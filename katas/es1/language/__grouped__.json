@@ -362,6 +362,47 @@
       ],
       "slug": "bitwise-shift-operators",
       "name": "Bitwise Shift Operators"
+    },
+    "Function API": {
+      "items": [
+        {
+          "name": "`function.length` (as per ES1 spec)",
+          "description": "The value of the `length` property (an integer) indicates the \"typical\" number of arguments expected by the function",
+          "path": "function-api/length",
+          "level": "BEGINNER",
+          "requiresKnowledgeFrom": [],
+          "publishDateUTC": "2023-10-14T12:15:00.000Z",
+          "links": [
+            {
+              "url": "https://www.ecma-international.org/wp-content/uploads/ECMA-262_1st_edition_june_1997.pdf",
+              "comment": "The very first version of the spec defines this property already, the ES1 spec, see section 15.3.5.1 (PDF 732kB).",
+              "tags": [
+                "spec",
+                "docs"
+              ]
+            },
+            {
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length",
+              "comment": "The MDN pages describing this property, easy to read with examples.",
+              "tags": [
+                "mdn",
+                "docs"
+              ]
+            },
+            {
+              "url": "https://mastodontech.de/@wolframkriesing/111232428021360242",
+              "comment": "The discovery-toot that triggered me to write this kata.",
+              "tags": [
+                "social media post"
+              ]
+            }
+          ],
+          "groupName": "Function API",
+          "id": "14"
+        }
+      ],
+      "slug": "function-api",
+      "name": "Function API"
     }
   }
 }

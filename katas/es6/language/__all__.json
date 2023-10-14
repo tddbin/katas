@@ -495,7 +495,22 @@
       "description": "Create a class.",
       "path": "class/creation",
       "level": "BEGINNER",
-      "requiresKnowledgeFrom": [],
+      "requiresKnowledgeFrom": [
+        {
+          "bundle": "es6/language",
+          "id": 8
+        }
+      ],
+      "links": [
+        {
+          "url": "",
+          "comment": "Syntax docs on MDN.",
+          "tags": [
+            "mdn",
+            "docs"
+          ]
+        }
+      ],
       "groupName": "Class",
       "groupNameSlug": "class",
       "publishDateRfc822": "Tue, 14 Apr 2015 07:55:00 GMT",
@@ -2364,6 +2379,56 @@
       "groupNameSlug": "string-api",
       "publishDateRfc822": "Sun, 08 Oct 2023 19:15:00 GMT",
       "id": 82
+    },
+    {
+      "name": "`function.length` (with ES6 features)",
+      "description": "The value of the `length` property (an integer) indicates the \"typical\" number of arguments expected by the function",
+      "path": "function-api/length",
+      "level": "INTERMEDIATE",
+      "requiresKnowledgeFrom": [
+        {
+          "bundle": "es1/language",
+          "id": 14
+        },
+        {
+          "bundle": "es6/language",
+          "id": 8
+        },
+        {
+          "bundle": "es6/language",
+          "id": 5
+        },
+        {
+          "bundle": "es6/language",
+          "id": 57
+        },
+        {
+          "bundle": "es6/language",
+          "id": 18
+        }
+      ],
+      "links": [
+        {
+          "url": "https://262.ecma-international.org/6.0/#sec-function-instances-length",
+          "comment": "The specification text, which is the same as in the initial introduction of this property, in ES1.",
+          "tags": [
+            "spec",
+            "docs"
+          ]
+        },
+        {
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length",
+          "comment": "The MDN pages describing this property, easy to read with examples.",
+          "tags": [
+            "mdn",
+            "docs"
+          ]
+        }
+      ],
+      "groupName": "Function API",
+      "groupNameSlug": "function-api",
+      "publishDateRfc822": "Sat, 14 Oct 2023 12:47:00 GMT",
+      "id": 83
     }
   ]
 }
