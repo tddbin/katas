@@ -2,7 +2,7 @@ import {assertThat, throws, hasProperties, func as isFunction} from 'hamjest';
 import vanillaZustand from 'zustand/vanilla';
 const create = typeof vanillaZustand === 'function' ? vanillaZustand : vanillaZustand.default;
 
-describe('the `create()` function (for creating a store) - in depth', () => {
+describe('the `create()` function (for creating a store) in depth', () => {
   describe('GIVEN `create()` is called', () => {
     describe('how it fails', () => {
       it('WHEN given no argument THEN it throws', () => {

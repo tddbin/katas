@@ -237,7 +237,7 @@
           "id": "9"
         },
         {
-          "name": "Unary \"+\" operator, in depth",
+          "name": "Unary \"+\" operator in depth",
           "description": "converts its operand to the Number type",
           "path": "unary-operators/plus-in-depth",
           "level": "ADVANCED",
@@ -399,10 +399,124 @@
           ],
           "groupName": "Function API",
           "id": "14"
+        },
+        {
+          "name": "`function.arguments` (as per ES1 spec)",
+          "description": "The `arguments` property of a function is an object that contains all the arguments passed to the function.",
+          "path": "function-api/arguments",
+          "level": "BEGINNER",
+          "requiresKnowledgeFrom": [],
+          "links": [
+            {
+              "url": "https://www.ecma-international.org/wp-content/uploads/ECMA-262_1st_edition_june_1997.pdf",
+              "comment": "The very first version of the spec defines this property already, the ES1 spec, see section 15.3.5.3 (PDF 732kB).",
+              "tags": [
+                "spec",
+                "docs"
+              ]
+            }
+          ],
+          "groupName": "Function API",
+          "id": "18"
+        },
+        {
+          "name": "`function.prototype`",
+          "description": "The `prototype` property of a function is an object that is used to implement inheritance and shared properties.",
+          "path": "function-api/prototype",
+          "level": "BEGINNER",
+          "requiresKnowledgeFrom": [],
+          "links": [
+            {
+              "url": "https://www.ecma-international.org/wp-content/uploads/ECMA-262_1st_edition_june_1997.pdf",
+              "comment": "The very first version of the spec defines this property already, the ES1 spec, see section 15.3.5.2 (PDF 732kB).",
+              "tags": [
+                "spec",
+                "docs"
+              ]
+            }
+          ],
+          "groupName": "Function API",
+          "id": "19"
         }
       ],
       "slug": "function-api",
       "name": "Function API"
+    },
+    "Function constructor": {
+      "items": [
+        {
+          "name": "`new Function()` and `Function()`",
+          "description": "With the `Function` constructor one can dynamically create a `Function` object.",
+          "path": "Function-constructor/new.js",
+          "level": "INTERMEDIATE",
+          "requiresKnowledgeFrom": [],
+          "links": [
+            {
+              "url": "https://www.ecma-international.org/wp-content/uploads/ECMA-262_1st_edition_june_1997.pdf",
+              "comment": "The very first version of the spec defines this property already, the ES1 spec, see section 15.3.2.1 (PDF 732kB).",
+              "tags": [
+                "spec",
+                "docs"
+              ]
+            },
+            {
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function",
+              "comment": "The MDN pages describing this property, easy to read with examples.",
+              "tags": [
+                "mdn",
+                "docs"
+              ]
+            }
+          ],
+          "groupName": "Function constructor",
+          "id": "15"
+        },
+        {
+          "name": "`Function.length`",
+          "description": "The `length` property of the `Function` constructor is always 1.",
+          "path": "Function-constructor/length.js",
+          "level": "BEGINNER",
+          "requiresKnowledgeFrom": [
+            {
+              "bundle": "es1/language",
+              "id": 14
+            }
+          ],
+          "links": [
+            {
+              "url": "https://www.ecma-international.org/wp-content/uploads/ECMA-262_1st_edition_june_1997.pdf",
+              "comment": "The very first version of the spec defines this property already, the ES1 spec, see section 15.3.3.2 (PDF 732kB).",
+              "tags": [
+                "spec",
+                "docs"
+              ]
+            }
+          ],
+          "groupName": "Function constructor",
+          "id": "16"
+        },
+        {
+          "name": "`Function.prototype`",
+          "description": "The `prototype` property of the `Function` constructor is a `Function` object.",
+          "path": "Function-constructor/prototype.js",
+          "level": "BEGINNER",
+          "requiresKnowledgeFrom": [],
+          "links": [
+            {
+              "url": "https://www.ecma-international.org/wp-content/uploads/ECMA-262_1st_edition_june_1997.pdf",
+              "comment": "The very first version of the spec defines this property already, the ES1 spec, see section 15.3.4 (PDF 732kB).",
+              "tags": [
+                "spec",
+                "docs"
+              ]
+            }
+          ],
+          "groupName": "Function constructor",
+          "id": "17"
+        }
+      ],
+      "slug": "function-constructor",
+      "name": "Function constructor"
     }
   }
 }
