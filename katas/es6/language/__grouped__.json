@@ -2560,7 +2560,7 @@
         {
           "name": "`function.name` - in depth",
           "description": "The `name` property is \"descriptive of the function\" the specification says.",
-          "path": "function-api/name",
+          "path": "function-api/name-in-depth",
           "level": "ADVANCED",
           "requiresKnowledgeFrom": [
             {
