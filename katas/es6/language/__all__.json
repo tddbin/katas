@@ -499,6 +499,10 @@
         {
           "bundle": "es6/language",
           "id": 8
+        },
+        {
+          "bundle": "es6/language",
+          "id": 84
         }
       ],
       "links": [
@@ -2429,6 +2433,121 @@
       "groupNameSlug": "function-api",
       "publishDateRfc822": "Sat, 14 Oct 2023 12:47:00 GMT",
       "id": 83
+    },
+    {
+      "name": "`function.name`",
+      "description": "The `name` property is \"descriptive of the function\" the specification says.",
+      "path": "function-api/name",
+      "level": "INTERMEDIATE",
+      "requiresKnowledgeFrom": [
+        {
+          "bundle": "es6/language",
+          "id": 8
+        },
+        {
+          "bundle": "es6/language",
+          "id": 5
+        }
+      ],
+      "links": [
+        {
+          "url": "https://262.ecma-international.org/6.0/#sec-function-instances-name",
+          "comment": "The specification text, this property was introduced with this version of JavaScript.",
+          "tags": [
+            "spec",
+            "docs"
+          ]
+        },
+        {
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name",
+          "comment": "The MDN pages describing this property, easy to read with examples.",
+          "tags": [
+            "mdn",
+            "docs"
+          ]
+        }
+      ],
+      "groupName": "Function API",
+      "groupNameSlug": "function-api",
+      "publishDateRfc822": "Sun, 15 Oct 2023 14:10:00 GMT",
+      "id": 84
+    },
+    {
+      "name": "`function.name` - in depth",
+      "description": "The `name` property is \"descriptive of the function\" the specification says.",
+      "path": "function-api/name",
+      "level": "ADVANCED",
+      "requiresKnowledgeFrom": [
+        {
+          "bundle": "es6/language",
+          "id": 8
+        },
+        {
+          "bundle": "es6/language",
+          "id": 5
+        },
+        {
+          "bundle": "es6/language",
+          "id": 84
+        }
+      ],
+      "links": [
+        {
+          "url": "https://262.ecma-international.org/6.0/#sec-function-instances-name",
+          "comment": "The specification text, this property was introduced with this version of JavaScript.",
+          "tags": [
+            "spec",
+            "docs"
+          ]
+        },
+        {
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name",
+          "comment": "The MDN pages describing this property, easy to read with examples.",
+          "tags": [
+            "mdn",
+            "docs"
+          ]
+        }
+      ],
+      "groupName": "Function API",
+      "groupNameSlug": "function-api",
+      "id": 85
+    },
+    {
+      "name": "`Symbol.hasInstance` method",
+      "description": "`Symbol.hasInstance` can be used to override the result of `instanceof`.",
+      "path": "symbol/hasInstance",
+      "level": "INTERMEDIATE",
+      "requiresKnowledgeFrom": [
+        {
+          "bundle": "es6/language",
+          "id": 8
+        },
+        {
+          "bundle": "es6/language",
+          "id": 22
+        }
+      ],
+      "links": [
+        {
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance",
+          "comment": "Description of `Symbol.hasInstance` on MDN.",
+          "tags": [
+            "mdn",
+            "docs"
+          ]
+        },
+        {
+          "url": "http://www.ecma-international.org/ecma-262/6.0/#sec-symbol.hasinstance",
+          "comment": "The specification of `Symbol.hasInstance`.",
+          "tags": [
+            "spec"
+          ]
+        }
+      ],
+      "groupName": "Symbol",
+      "groupNameSlug": "symbol",
+      "id": 86
     }
   ]
 }

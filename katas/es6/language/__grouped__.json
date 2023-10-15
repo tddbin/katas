@@ -634,6 +634,10 @@
             {
               "bundle": "es6/language",
               "id": 8
+            },
+            {
+              "bundle": "es6/language",
+              "id": 84
             }
           ],
           "links": [
@@ -905,6 +909,41 @@
           "publishDateUTC": "2015-05-07T08:09:00.000Z",
           "groupName": "Symbol",
           "id": "36"
+        },
+        {
+          "name": "`Symbol.hasInstance` method",
+          "description": "`Symbol.hasInstance` can be used to override the result of `instanceof`.",
+          "path": "symbol/hasInstance",
+          "level": "INTERMEDIATE",
+          "requiresKnowledgeFrom": [
+            {
+              "bundle": "es6/language",
+              "id": 8
+            },
+            {
+              "bundle": "es6/language",
+              "id": 22
+            }
+          ],
+          "links": [
+            {
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance",
+              "comment": "Description of `Symbol.hasInstance` on MDN.",
+              "tags": [
+                "mdn",
+                "docs"
+              ]
+            },
+            {
+              "url": "http://www.ecma-international.org/ecma-262/6.0/#sec-symbol.hasinstance",
+              "comment": "The specification of `Symbol.hasInstance`.",
+              "tags": [
+                "spec"
+              ]
+            }
+          ],
+          "groupName": "Symbol",
+          "id": "86"
         }
       ],
       "slug": "symbol",
@@ -2480,6 +2519,83 @@
           ],
           "groupName": "Function API",
           "id": "83"
+        },
+        {
+          "name": "`function.name`",
+          "description": "The `name` property is \"descriptive of the function\" the specification says.",
+          "path": "function-api/name",
+          "level": "INTERMEDIATE",
+          "requiresKnowledgeFrom": [
+            {
+              "bundle": "es6/language",
+              "id": 8
+            },
+            {
+              "bundle": "es6/language",
+              "id": 5
+            }
+          ],
+          "publishDateUTC": "2023-10-15T14:10:00.000Z",
+          "links": [
+            {
+              "url": "https://262.ecma-international.org/6.0/#sec-function-instances-name",
+              "comment": "The specification text, this property was introduced with this version of JavaScript.",
+              "tags": [
+                "spec",
+                "docs"
+              ]
+            },
+            {
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name",
+              "comment": "The MDN pages describing this property, easy to read with examples.",
+              "tags": [
+                "mdn",
+                "docs"
+              ]
+            }
+          ],
+          "groupName": "Function API",
+          "id": "84"
+        },
+        {
+          "name": "`function.name` - in depth",
+          "description": "The `name` property is \"descriptive of the function\" the specification says.",
+          "path": "function-api/name",
+          "level": "ADVANCED",
+          "requiresKnowledgeFrom": [
+            {
+              "bundle": "es6/language",
+              "id": 8
+            },
+            {
+              "bundle": "es6/language",
+              "id": 5
+            },
+            {
+              "bundle": "es6/language",
+              "id": 84
+            }
+          ],
+          "links": [
+            {
+              "url": "https://262.ecma-international.org/6.0/#sec-function-instances-name",
+              "comment": "The specification text, this property was introduced with this version of JavaScript.",
+              "tags": [
+                "spec",
+                "docs"
+              ]
+            },
+            {
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name",
+              "comment": "The MDN pages describing this property, easy to read with examples.",
+              "tags": [
+                "mdn",
+                "docs"
+              ]
+            }
+          ],
+          "groupName": "Function API",
+          "id": "85"
         }
       ],
       "slug": "function-api",
