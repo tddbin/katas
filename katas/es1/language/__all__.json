@@ -384,7 +384,7 @@
     {
       "name": "`new Function()` and `Function()`",
       "description": "With the `Function` constructor one can dynamically create a `Function` object.",
-      "path": "Function-constructor/new.js",
+      "path": "Function-constructor/new",
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [],
       "links": [
@@ -412,7 +412,7 @@
     {
       "name": "`Function.length`",
       "description": "The `length` property of the `Function` constructor is always 1.",
-      "path": "Function-constructor/length.js",
+      "path": "Function-constructor/length",
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [
         {
@@ -437,7 +437,7 @@
     {
       "name": "`Function.prototype`",
       "description": "The `prototype` property of the `Function` constructor is a `Function` object.",
-      "path": "Function-constructor/prototype.js",
+      "path": "Function-constructor/prototype",
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [],
       "links": [
