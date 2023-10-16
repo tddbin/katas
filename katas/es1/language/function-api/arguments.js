@@ -7,7 +7,6 @@ describe('The `arguments` prop - discouraged since 1997 (and might not work)', (
     const fn = function() {}
     assert.equal(Object.getOwnPropertyDescriptor(fn, 'arguments'), undefined);
   });
-
   it('WHEN reading `arguments` in the function body THEN it is an array-like object containing all parameters the function was called with', () => {
     let args;
     const fn = function() {

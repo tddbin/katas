@@ -2395,6 +2395,10 @@
           "id": 14
         },
         {
+          "bundle": "es5.1/language",
+          "id": 2
+        },
+        {
           "bundle": "es6/language",
           "id": 8
         },
@@ -2429,7 +2433,7 @@
           ]
         }
       ],
-      "groupName": "Function API",
+      "groupName": "function API",
       "groupNameSlug": "function-api",
       "publishDateRfc822": "Sat, 14 Oct 2023 12:47:00 GMT",
       "id": 83
@@ -2467,7 +2471,7 @@
           ]
         }
       ],
-      "groupName": "Function API",
+      "groupName": "function API",
       "groupNameSlug": "function-api",
       "publishDateRfc822": "Sun, 15 Oct 2023 14:10:00 GMT",
       "id": 84
@@ -2489,6 +2493,10 @@
         {
           "bundle": "es6/language",
           "id": 84
+        },
+        {
+          "bundle": "es5.1/language",
+          "id": 1
         }
       ],
       "links": [
@@ -2509,7 +2517,7 @@
           ]
         }
       ],
-      "groupName": "Function API",
+      "groupName": "function API",
       "groupNameSlug": "function-api",
       "id": 85
     },

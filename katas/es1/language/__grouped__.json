@@ -363,7 +363,7 @@
       "slug": "bitwise-shift-operators",
       "name": "Bitwise Shift Operators"
     },
-    "Function API": {
+    "function API": {
       "items": [
         {
           "name": "`function.length` (as per ES1 spec)",
@@ -397,7 +397,7 @@
               ]
             }
           ],
-          "groupName": "Function API",
+          "groupName": "function API",
           "id": "14"
         },
         {
@@ -416,7 +416,7 @@
               ]
             }
           ],
-          "groupName": "Function API",
+          "groupName": "function API",
           "id": "18"
         },
         {
@@ -435,12 +435,12 @@
               ]
             }
           ],
-          "groupName": "Function API",
+          "groupName": "function API",
           "id": "19"
         }
       ],
       "slug": "function-api",
-      "name": "Function API"
+      "name": "function API"
     },
     "Function constructor": {
       "items": [

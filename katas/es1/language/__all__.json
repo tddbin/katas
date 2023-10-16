@@ -376,7 +376,7 @@
           ]
         }
       ],
-      "groupName": "Function API",
+      "groupName": "function API",
       "groupNameSlug": "function-api",
       "publishDateRfc822": "Sat, 14 Oct 2023 12:15:00 GMT",
       "id": 14
@@ -470,7 +470,7 @@
           ]
         }
       ],
-      "groupName": "Function API",
+      "groupName": "function API",
       "groupNameSlug": "function-api",
       "id": 18
     },
@@ -490,7 +490,7 @@
           ]
         }
       ],
-      "groupName": "Function API",
+      "groupName": "function API",
       "groupNameSlug": "function-api",
       "id": 19
     }

@@ -2469,7 +2469,7 @@
       "slug": "promise",
       "name": "Promise"
     },
-    "Function API": {
+    "function API": {
       "items": [
         {
           "name": "`function.length` (with ES6 features)",
@@ -2480,6 +2480,10 @@
             {
               "bundle": "es1/language",
               "id": 14
+            },
+            {
+              "bundle": "es5.1/language",
+              "id": 2
             },
             {
               "bundle": "es6/language",
@@ -2517,7 +2521,7 @@
               ]
             }
           ],
-          "groupName": "Function API",
+          "groupName": "function API",
           "id": "83"
         },
         {
@@ -2554,7 +2558,7 @@
               ]
             }
           ],
-          "groupName": "Function API",
+          "groupName": "function API",
           "id": "84"
         },
         {
@@ -2574,6 +2578,10 @@
             {
               "bundle": "es6/language",
               "id": 84
+            },
+            {
+              "bundle": "es5.1/language",
+              "id": 1
             }
           ],
           "links": [
@@ -2594,12 +2602,12 @@
               ]
             }
           ],
-          "groupName": "Function API",
+          "groupName": "function API",
           "id": "85"
         }
       ],
       "slug": "function-api",
-      "name": "Function API"
+      "name": "function API"
     }
   }
 }

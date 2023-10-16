@@ -81,6 +81,10 @@
             {
               "bundle": "es11/language",
               "id": 1
+            },
+            {
+              "bundle": "es5.1/language",
+              "id": 1
             }
           ],
           "links": [],
