@@ -19,7 +19,7 @@
         },
         {
           "url": "https://www.ecma-international.org/ecma-262/5.1/#sec-15.4.4.14",
-          "comment": "The definition of \"Array.prototype.indexOf\" in ECMAScript 5.1 (ECMA-262) specification.",
+          "comment": "The definition of \"Array.prototype.indexOf\" in ECMAScript 5 (ECMA-262) specification.",
           "tags": [
             "spec"
           ]

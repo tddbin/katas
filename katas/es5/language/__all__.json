@@ -1,0 +1,125 @@
+{
+  "name": "ECMAScript 5",
+  "nameSlug": "es5-katas",
+  "items": [
+    {
+      "name": "`function.bind()`",
+      "description": "The `bind()` method creates a new function with a given scope and optionally parameter(s).",
+      "path": "function-api/bind",
+      "level": "ADVANCED",
+      "requiresKnowledgeFrom": [],
+      "links": [
+        {
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind",
+          "comment": "The MDN docs about `bind()`.",
+          "tags": [
+            "mdn",
+            "docs"
+          ]
+        },
+        {
+          "url": "https://262.ecma-international.org/5.1/#sec-15.3.4.5",
+          "comment": "The ECMAScript Language Specification, 5 Edition, Section 15.3.4.5, when `bind()` was introduced.",
+          "tags": [
+            "spec"
+          ]
+        }
+      ],
+      "groupName": "function API",
+      "groupNameSlug": "function-api",
+      "publishDateRfc822": "Mon, 16 Oct 2023 19:00:00 GMT",
+      "id": 1
+    },
+    {
+      "name": "`function.length` (with ES5 features)",
+      "description": "The `length` property indicates the number of parameters a function expects.",
+      "path": "function-api/length",
+      "level": "BEGINNER",
+      "requiresKnowledgeFrom": [
+        {
+          "bundle": "es5/language",
+          "id": 1
+        }
+      ],
+      "links": [
+        {
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length",
+          "comment": "The MDN docs about `length`.",
+          "tags": [
+            "mdn",
+            "docs"
+          ]
+        },
+        {
+          "url": "https://262.ecma-international.org/5.1/#sec-15.3.5.1",
+          "comment": "The ECMAScript Language Specification, 5 Edition, Section 15.3.5.1.",
+          "tags": [
+            "spec"
+          ]
+        }
+      ],
+      "groupName": "function API",
+      "groupNameSlug": "function-api",
+      "publishDateRfc822": "Wed, 18 Oct 2023 19:00:00 GMT",
+      "id": 2
+    },
+    {
+      "name": "`function.arguments` (as modified since ES5)",
+      "description": "The `arguments` property of a function is an object that contains all the arguments passed to the function.",
+      "path": "function-api/arguments",
+      "level": "BEGINNER",
+      "requiresKnowledgeFrom": [],
+      "links": [],
+      "groupName": "function API",
+      "groupNameSlug": "function-api",
+      "id": 3
+    },
+    {
+      "name": "Turn strict mode on/off",
+      "description": "The `use strict` directive indicates that the code should be executed in \"strict mode\", where you can for example not use undeclared variables.",
+      "path": "strict-mode/on-off",
+      "level": "ADVANCED",
+      "requiresKnowledgeFrom": [
+        {
+          "bundle": "es1/language",
+          "id": 15
+        }
+      ],
+      "links": [
+        {
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode",
+          "comment": "The MDN docs about strict mode.",
+          "tags": [
+            "mdn",
+            "docs"
+          ]
+        },
+        {
+          "url": "https://262.ecma-international.org/5.1/#sec-4.2.2",
+          "comment": "Chapter 4.2.2 in the specification explains that and why ECMAScript offers a \"strict mode\" to restrict language features, and that it can coexist with non-strict code in the same program.",
+          "tags": [
+            "spec"
+          ]
+        },
+        {
+          "url": "https://262.ecma-international.org/5.1/#sec-10.1.1",
+          "comment": "Chapter 10.1.1 in the specification explains how to turn strict mode on and off.",
+          "tags": [
+            "spec"
+          ]
+        },
+        {
+          "url": "https://262.ecma-international.org/5.1/#sec-C",
+          "comment": "Appendix C \"The strict mode restriction and exceptions\" explains the differences between strict mode and non-strict mode in detail.",
+          "tags": [
+            "spec"
+          ]
+        }
+      ],
+      "groupName": "Strict mode",
+      "groupNameSlug": "strict-mode",
+      "publishDateRfc822": "Mon, 16 Oct 2023 19:00:00 GMT",
+      "id": 4
+    }
+  ]
+}

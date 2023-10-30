@@ -19,12 +19,14 @@ describe('a Promise represents an operation that hasn`t completed yet, but is ex
   });
   describe('simplest promises', function() {
     it('resolve a promise by calling the `resolve` function given as first parameter', async function() {
+      //: {"jskatas": {"runnerOptions": {"topLevelAwait": true}}}
       let promise = new Promise((resolve) => {
         
       });
       await assert.doesNotReject(promise);
     });
     it('the `resolve` function can return a value, that is consumed by the `promise.then()` callback', async function() {
+      //: {"jskatas": {"runnerOptions": {"topLevelAwait": true}}}
       let promise = new Promise((resolve) => {
         resolve();
       });
@@ -32,6 +34,7 @@ describe('a Promise represents an operation that hasn`t completed yet, but is ex
       assert.equal(await promise, 42);
     });
     it('rejecting a promise is done by calling the callback given as 2nd parameter', async function() {
+      //: {"jskatas": {"runnerOptions": {"topLevelAwait": true}}}
       let promise = new Promise((reject) => {
         reject();
       });
@@ -40,12 +43,14 @@ describe('a Promise represents an operation that hasn`t completed yet, but is ex
   });
   describe('an asynchronous promise', function() {
     it('can resolve later, also by calling the first callback', async function() {
+      //: {"jskatas": {"runnerOptions": {"topLevelAwait": true}}}
       let promise = new Promise(() => {
         setTimeout(() => resolve(), 100);
       });
       await assert.doesNotReject(promise);
     });
     it('reject it at some later point in time, calling the 2nd callback', async function() {
+      //: {"jskatas": {"runnerOptions": {"topLevelAwait": true}}}
       let promise = new Promise((reject) => {
         setTimeout(() => reject(), 100);
       });

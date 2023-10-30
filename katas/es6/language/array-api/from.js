@@ -2,6 +2,8 @@
 // To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
+import {document} from '../../../test-setup.cjs';
+
 describe('`Array.from` converts an array-like object or list into an Array', () => {
   it('call `Array.from` with an array-like object', function() {
     const arrayLike = {0: 'one', 1: 'two', length: 2};

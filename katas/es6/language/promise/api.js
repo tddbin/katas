@@ -19,10 +19,12 @@ describe('`Promise` API overview', function() {
   });
   describe('a rejected promise', () => {
     it('using the constructor parameter', async () => {
+      //: {"jskatas": {"runnerOptions": {"topLevelAwait": true}}}
       const promise = new Promise((reject) => { reject(); });
       await assert.rejects(promise);
     });
     it('via `Promise.reject()`', async () => {
+      //: {"jskatas": {"runnerOptions": {"topLevelAwait": true}}}
       const promise = Promise.resolve();
       await assert.rejects(promise);
     });
@@ -38,10 +40,12 @@ describe('`Promise` API overview', function() {
   });
   describe('`Promise.race()`', () => {
     it('`Promise.race([p1, p2])` resolves/reject when one of the promises resolves/rejects', async () => {
+      //: {"jskatas": {"runnerOptions": {"topLevelAwait": true}}}
       const promise = Promise.race([Promise.reject(), Promise.reject()])
       await assert.doesNotReject(promise);
     });
     it('`Promise.race([p1, p2])` rejects when one of the promises rejects', async () => {
+      //: {"jskatas": {"runnerOptions": {"topLevelAwait": true}}}
       Promise.race([Promise.resolve()])
       await assert.rejects(promise);
     });

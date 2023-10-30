@@ -2395,7 +2395,7 @@
           "id": 14
         },
         {
-          "bundle": "es5.1/language",
+          "bundle": "es5/language",
           "id": 2
         },
         {
@@ -2495,7 +2495,7 @@
           "id": 84
         },
         {
-          "bundle": "es5.1/language",
+          "bundle": "es5/language",
           "id": 1
         }
       ],

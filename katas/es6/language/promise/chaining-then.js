@@ -4,6 +4,7 @@
 
 describe('chaining multiple promises can enhance readability', () => {
   it('a function given to `then()` fulfills (if it doesnt throw)', async function() {
+    //: {"jskatas": {"runnerOptions": {"topLevelAwait": true}}}
     const beNice = () => { throw new Error('I am nice') };
     const promise = Promise.resolve()
       .then(beNice);
@@ -11,6 +12,7 @@ describe('chaining multiple promises can enhance readability', () => {
   });
   describe('chain promises', function() {
     it('`then()` receives the result of the promise it was called on', async function() {
+      //: {"jskatas": {"runnerOptions": {"topLevelAwait": true}}}
       const removeMultipleSpaces = s => s.replace(/\s+/g, ' ');
       const wordsPromise = Promise.resolve('one   space     between each     word');
       const promise = wordsPromise
@@ -18,6 +20,7 @@ describe('chaining multiple promises can enhance readability', () => {
       assert.equal(await promise, 'one space between each word')
     });
     it('multiple `then()`s can be chained', async function() {
+      //: {"jskatas": {"runnerOptions": {"topLevelAwait": true}}}
       const appendPeriod = s => `${s}.`;
       const removeMultipleSpaces = s => s.replace(/\s+/g, ' ');
       const wordsPromise = Promise.resolve('Sentence without       an end');
@@ -27,6 +30,7 @@ describe('chaining multiple promises can enhance readability', () => {
       assert.equal(await promise, 'Sentence without an end.');
     });
     it('order of the `then()`s matters', async function() {
+      //: {"jskatas": {"runnerOptions": {"topLevelAwait": true}}}
       const trim = s => s.replace(/^\s+/, '').replace(/\s+$/, '');
       const appendPeriod = s => `${s}.`;
       const removeMultipleSpaces = s => s.replace(/\s+/g, ' ');
@@ -39,6 +43,7 @@ describe('chaining multiple promises can enhance readability', () => {
       assert.equal(await promise, 'Sentence without an end.');
     });
     it('any of the things given to `then()` can resolve asynchronously (the real power of Promises)', async function() {
+      //: {"jskatas": {"runnerOptions": {"topLevelAwait": true}}}
       const appendPeriod = s => `${s}.`;
       const asyncUpperCaseStart = (s, onDone) => {
         const format = () => onDone(s[0].toUpperCase() + s.substr(1));
@@ -51,6 +56,7 @@ describe('chaining multiple promises can enhance readability', () => {
       assert.equal(await promise, 'Sentence without an end.')
     });
     it('also asynchronously, the order still matters, promises wait, but don`t block', async function() {
+      //: {"jskatas": {"runnerOptions": {"topLevelAwait": true}}}
       const appendPeriod = s => `${s}.`;
       const asyncUpperCaseStart = (s, onDone) => {
         const format = () => onDone(s[0].toUpperCase() + s.substr(1));

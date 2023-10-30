@@ -20,6 +20,7 @@ describe('`catch()` returns a Promise and deals with rejected cases only', () =>
       assert.equal(typeof p.catch, 'function');
     });
     it('catches only promise rejections', async () => {
+      //: {"jskatas": {"runnerOptions": {"topLevelAwait": true}}}
       const promise = Promise.resolve();
       await assert.rejects(promise);
     });
