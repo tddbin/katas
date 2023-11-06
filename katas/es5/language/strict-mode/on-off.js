@@ -26,7 +26,7 @@ describe('Turn strict mode on/off explicitly (in ES5)', () => {
   }); 
   it('WHEN the code passed to `new Function()` starts with "use strict" THEN the code is run in strict mode', () => {
     //: {"jskatas": {"runnerOptions": {"strictMode": false}}}
-    const codeThatThrowsInStrictMode = 'var undefinedVar = 1'; // This throws in strict mode!
+    const codeThatThrowsInStrictMode = 'var undefinedVar = 1'; // Undefined vars throw in strict mode!
     assert.throws(new Function(`'use strict'; ${codeThatThrowsInStrictMode}`), ReferenceError);
   }); 
 });
