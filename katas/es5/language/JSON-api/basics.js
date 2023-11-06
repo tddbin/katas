@@ -1,0 +1,1 @@
+// JSON.parse()/stringify() was introduced in ES5.
