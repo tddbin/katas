@@ -1,0 +1,47 @@
+{
+  "name": "ECMAScript 14 / ES2023",
+  "nameSlug": "es14-katas",
+  "groups": {
+    "Array API": {
+      "items": [
+        {
+          "name": "`array.toReversed()`",
+          "description": "Returns a new array with the elements reversed.",
+          "path": "array-api/toReversed",
+          "level": "BEGINNER",
+          "requiresKnowledgeFrom": [],
+          "publishDateUTC": "2024-01-16T00:50:00.000Z",
+          "links": [
+            {
+              "url": "https://github.com/tc39/proposal-change-array-by-copy",
+              "comment": "The repository where the proposal was worked on. Make sure to read the polyfill.js source code in there, shows very well how `toReversed()` works.",
+              "tags": [
+                "spec",
+                "discussion"
+              ]
+            },
+            {
+              "url": "https://262.ecma-international.org/14.0/#sec-array.prototype.toreversed",
+              "comment": "The \"ECMAScript Language Specification\", the JavaScript specification text describing this function how an engine must implement it.",
+              "tags": [
+                "spec"
+              ]
+            },
+            {
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toReversed",
+              "comment": "The Mozilla Developer Network docs.",
+              "tags": [
+                "mdn",
+                "docs"
+              ]
+            }
+          ],
+          "groupName": "Array API",
+          "id": "1"
+        }
+      ],
+      "slug": "array-api",
+      "name": "Array API"
+    }
+  }
+}
