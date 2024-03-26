@@ -518,6 +518,39 @@
       ],
       "slug": "function-constructor",
       "name": "Function constructor"
+    },
+    "Object API": {
+      "items": [
+        {
+          "name": "`Object()` (as per ES1 spec)",
+          "description": "",
+          "path": "object-api/constructor",
+          "level": "INTERMEDIATE",
+          "requiresKnowledgeFrom": [],
+          "links": [
+            {
+              "url": "https://www.ecma-international.org/wp-content/uploads/ECMA-262_1st_edition_june_1997.pdf",
+              "comment": "The first version of the spec already has the `ToObject` (see section 9.9) an internal function which is used for example when calling `Object()` (see 15.2.1.1). (PDF 732kB).",
+              "tags": [
+                "spec",
+                "docs"
+              ]
+            },
+            {
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/Object",
+              "comment": "The MDN pages describing this function, easy to read with examples.",
+              "tags": [
+                "mdn",
+                "docs"
+              ]
+            }
+          ],
+          "groupName": "Object API",
+          "id": "20"
+        }
+      ],
+      "slug": "object-api",
+      "name": "Object API"
     }
   }
 }
