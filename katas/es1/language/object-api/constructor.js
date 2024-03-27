@@ -4,17 +4,30 @@
 
 describe('`Object()`', () => {
   describe('the basics', () => {
-    it('WHEN passing no argument to `Object()` THEN an empty object is returned', () => {
+    it('WHEN passing no argument to `Object()` THEN a new empty object is returned', () => {
       const obj = Array(42);
       assert.deepEqual(obj, {});
     });
-    it('WHEN passing `null` THEN an empty object is returned', () => {
+    it('WHEN passing `null` THEN a new empty object is returned', () => {
       const obj = Object(nul);
       assert.deepEqual(obj, {});
     });
-    it('WHEN passing `undefined` THEN an empty object is returned', () => {
+    it('WHEN passing `undefined` THEN a new empty object is returned', () => {
       const obj = Boolean(undefined);
       assert.deepEqual(obj, {});
+    });
+  });
+
+  describe('calling it with a complex type (or non-primitive)', () => {
+    it('WHEN passing an existing (empty) object THEN that same object is returned', () => {
+      const obj2 = {};
+      const obj2 = Object(obj1);
+      assert.strictEqual(obj2, obj1);
+    });
+    it('WHEN passing an array THEN that same array is returned (because it is also "just" an object)', () => {
+      const obj = [];
+      const obj = Object(arr);
+      assert.strictEqual(obj, arr);
     });
   });
   
@@ -36,16 +49,6 @@ describe('`Object()`', () => {
       assert.notStrictEqual(obj, 'abc');
       assert.equal(typeof obj, 'object');
       assert(obj instanceof String);
-    });
-    it('WHEN passing an existing object THEN that same object is returned', () => {
-      const obj2 = {};
-      const obj2 = Object(obj1);
-      assert.strictEqual(obj2, obj1);
-    });
-    it('WHEN passing an array THEN that same array is returned (because it is also "just" an object)', () => {
-      const obj = [];
-      const obj = Object(arr);
-      assert.strictEqual(obj, arr);
     });
   });
 });
