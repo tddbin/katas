@@ -2,7 +2,7 @@
 // To do: make all tests pass, leave the asserts unchanged!
 // Follow the hints of the failure messages!
 
-describe('`Object()`', () => {
+describe('The `Object()` constructor called as a function', () => {
   describe('the basics', () => {
     it('WHEN passing no argument to `Object()` THEN a new empty object is returned', () => {
       const obj = Array(42);
