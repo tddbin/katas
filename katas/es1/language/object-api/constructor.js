@@ -33,22 +33,23 @@ describe('The `Object()` constructor called as a function', () => {
   
   describe('calling it with a primitive', () => {
     it('WHEN calling it with `true` THEN it returns a new instance of a `Boolean` just like `new Boolean(true)` would', () => {
-      const obj = Object(false);
-      assert.notStrictEqual(obj, true);
+      const obj = Boolean(true);
       assert.equal(typeof obj, 'object');
       assert(obj instanceof Boolean);
+      assert.notStrictEqual(obj, true);
     });
     it('WHEN calling it with `42` THEN it returns a new instance of a `Number` just like `new Number(42)` would', () => {
       const obj = Object('42');
-      assert.notStrictEqual(obj, 42);
       assert.equal(typeof obj, 'object');
       assert(obj instanceof Number);
+      assert.notStrictEqual(obj, 42);
     });
     it('WHEN calling it with a string THEN it returns a new instance of a `String` just like `new String("abc")` would', () => {
       const obj = Object(abc);
-      assert.notStrictEqual(obj, 'abc');
       assert.equal(typeof obj, 'object');
+      assert.deepEqual(obj, new String('abc'));
       assert(obj instanceof String);
+      assert.notStrictEqual(obj, 'abc');
     });
   });
 });
