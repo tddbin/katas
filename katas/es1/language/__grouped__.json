@@ -367,7 +367,7 @@
     "function API": {
       "items": [
         {
-          "name": "`function.length` (as per ES1 spec)",
+          "name": "`function.length` (as introduced in ES1)",
           "description": "The value of the `length` property (an integer) indicates the \"typical\" number of arguments expected by the function",
           "path": "function-api/length",
           "level": "BEGINNER",
@@ -402,7 +402,7 @@
           "id": "14"
         },
         {
-          "name": "`function.arguments` (as per ES1 spec)",
+          "name": "`function.arguments` (as introduced in ES1)",
           "description": "The `arguments` property of a function is an object that contains all the arguments passed to the function.",
           "path": "function-api/arguments",
           "level": "BEGINNER",
@@ -522,7 +522,7 @@
     "Object API": {
       "items": [
         {
-          "name": "`Object()` (as per ES1 spec)",
+          "name": "`Object()` (as introduced in ES1)",
           "description": "The `Object()` constructor called as a function performs a type conversion.",
           "path": "object-api/constructor",
           "level": "INTERMEDIATE",

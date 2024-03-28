@@ -18,7 +18,7 @@ describe('`Map` is a key/value pair, way more flexible than object', function(){
       assert.deepEqual([...map], [[1, 'one'], [2, 'two']]);
     });
     it('GIVEN an empty Map WHEN calling `map.get(42)` THEN it returns `undefined`', function() {
-      const map = new Map();
+      const map = new Map([[42, 'forty-two']]);
       const value = map.get(42);
       assert.equal(value, undefined);
     });
@@ -27,7 +27,7 @@ describe('`Map` is a key/value pair, way more flexible than object', function(){
       const value = map.get();
       assert.equal(value, 'forty-two');
     });
-    it('GIVEN an empty Map WHEN calling `map.set(42, `forty-two`)` THEN the value is added to the map', () => {
+    it('GIVEN an empty Map WHEN calling `map.set(42, "forty-two")` THEN the value is added to the map', () => {
       const map = new Map();
       map.set();
       assert.equal(map.get(42), 'forty-two');
