@@ -98,7 +98,7 @@
     "BigInt": {
       "items": [
         {
-          "name": "Basics",
+          "name": "basics",
           "description": "A `BigInt` can represent numbers larger than `number`",
           "path": "bigint/basics",
           "level": "BEGINNER",

@@ -860,8 +860,8 @@
       "id": 43
     },
     {
-      "name": "Basics",
-      "description": "A Map holds key-value pairs, the key can even be a complex value.",
+      "name": "basics",
+      "description": "A `Map` holds key-value pairs, the key can even be a complex value.",
       "path": "map/basics",
       "level": "BEGINNER",
       "requiresKnowledgeFrom": [
@@ -1170,7 +1170,7 @@
       "id": 56
     },
     {
-      "name": "Basics",
+      "name": "basics",
       "description": "Default parameters make function parameters more flexible.",
       "path": "default-parameters/basics",
       "level": "BEGINNER",
@@ -1194,7 +1194,7 @@
       "id": 57
     },
     {
-      "name": "Basics",
+      "name": "basics",
       "description": "",
       "path": "reflect/basics",
       "level": "BEGINNER",
