@@ -2556,6 +2556,22 @@
       "groupName": "Symbol",
       "groupNameSlug": "symbol",
       "id": 86
+    },
+    {
+      "name": "",
+      "description": "",
+      "path": "proxy/basics",
+      "level": "INTERMEDIATE",
+      "requiresKnowledgeFrom": [
+        {
+          "bundle": "es6/language",
+          "id": 58
+        }
+      ],
+      "links": [],
+      "groupName": "Proxy",
+      "groupNameSlug": "proxy",
+      "id": 87
     }
   ]
 }

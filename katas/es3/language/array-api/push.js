@@ -9,7 +9,7 @@ describe('`array.push()`', () => {
       arr.push(42);
       assert.deepEqual(arr, []);
     });
-    it('GIVEN an array with one item WHEN pushing nothing to it THEN the call return `1`, the length of the array', () => {
+    it('GIVEN an array with one item WHEN pushing nothing to it THEN the call returns `1`, the length of the array', () => {
       const arr = [];
       assert.deepEqual(arr.push(), 1);
     }); 

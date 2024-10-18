@@ -2608,6 +2608,27 @@
       ],
       "slug": "function-api",
       "name": "function API"
+    },
+    "Proxy": {
+      "items": [
+        {
+          "name": "",
+          "description": "",
+          "path": "proxy/basics",
+          "level": "INTERMEDIATE",
+          "requiresKnowledgeFrom": [
+            {
+              "bundle": "es6/language",
+              "id": 58
+            }
+          ],
+          "links": [],
+          "groupName": "Proxy",
+          "id": "87"
+        }
+      ],
+      "slug": "proxy",
+      "name": "Proxy"
     }
   }
 }
