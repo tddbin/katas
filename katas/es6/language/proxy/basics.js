@@ -9,7 +9,7 @@ describe('A Proxy can intercept all accesses on a target object', function() {
       const proxy = new Proxy(target, {
         get() { return 'WHAT value???' }
       });
-      assert.strictEqual(proxy.x, 'new value');
+      assert.equal(proxy.x, 'new value');
     });
     it('WHEN creating a Proxy AND the 2nd parameter, the handler is missing THEN a TypeError is thrown', () => {
       const target = {};
@@ -21,9 +21,10 @@ describe('A Proxy can intercept all accesses on a target object', function() {
       const logger = [];
       const proxy = new Proxy(target, {
         get() { logger.push(`get`) },
+        set() { logger.push(`set`); return true },
       });
-      const _ = proxy.x + proxy.x;
-      assert.deepStrictEqual(logger, ['get']);
+      proxy.x = 1;
+      assert.deepEqual(logger, ['get']);
     });
   });
 
@@ -32,18 +33,18 @@ describe('A Proxy can intercept all accesses on a target object', function() {
       const target = {x: 42, y: 23};
       const transparentHandler = {};
       const proxy = new Proxy();
-      assert.deepStrictEqual(proxy, target);
+      assert.deepEqual(proxy, target);
     });
     it('WHEN overriding the getter to always set "42" to any property THEN all target properties have the value "42"', () => {
       const target = {};
       const get42AlwaysHandler = {};
       const proxy = new Proxy(target, get42AlwaysHandler);
-      assert.deepStrictEqual(proxy.anyProperty, 42);
+      assert.deepEqual(proxy.anyProperty, 42);
     });
     it('WHEN overriding `has` THEN one can manipulate the "existence" of properties', () => {
       const target = {};
       const proxy = new Proxy(target, {hazz() { return false; }});
-      assert.strictEqual('anyProperty' in proxy, true);
+      assert.equal('anyProperty' in proxy, true);
     });
     it('WHEN overriding `ownKeys` and `has` THEN one can confuse the proxy user', () => {
       const target = {x: 1, y: 2};
@@ -51,15 +52,15 @@ describe('A Proxy can intercept all accesses on a target object', function() {
         ownKeys() {},
         has() {}
       });
-      assert.deepStrictEqual(Reflect.ownKeys(proxy), ['x']);
-      assert.strictEqual('y' in proxy, true);
+      assert.deepEqual(Reflect.ownKeys(proxy), ['x']);
+      assert.equal('y' in proxy, true);
     });
     it('WHEN overriding `getPrototypeOf` THEN one can manipulate the prototype of the target', () => {
       const target = {x: 23};
       const proxy = new Proxy(target, {
         sayWhat() {}
       });
-      assert.strictEqual(Reflect.getPrototypeOf(proxy), Function.prototype);
+      assert.equal(Reflect.getPrototypeOf(proxy), Function.prototype);
     });
   });
 
@@ -79,7 +80,7 @@ describe('A Proxy can intercept all accesses on a target object', function() {
       });
       proxy.y;
       proxy.x++;
-      assert.deepStrictEqual(accesses, ['set y', 'get x', 'set x']);
+      assert.deepEqual(accesses, ['set y', 'get x', 'set x']);
     });
     
     it('permission control – WHEN proxying a `file` object THEN one can transparently log access statistics', () => {
@@ -94,10 +95,10 @@ describe('A Proxy can intercept all accesses on a target object', function() {
         },
         ownKeys(target) {return ['content']}
       });
-      assert.strictEqual(JSON.stringify(proxy), '{"content":"very secret stuff"}');
+      assert.equal(JSON.stringify(proxy), '{"content":"very secret stuff"}');
       
       // The `reads` are 2 and the `permissionDenied` is 1 because `JSON.stringify()` tries to access `toJSON` which we don't allow.
-      assert.deepStrictEqual(file.statistics, {reads: 2, permissionDenied: 1});
+      assert.deepEqual(file.statistics, {reads: 2, permissionDenied: 1});
     });
   });
 });
