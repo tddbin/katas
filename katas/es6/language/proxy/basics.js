@@ -21,7 +21,10 @@ describe('A Proxy can intercept all accesses on a target object', function() {
       const logger = [];
       const proxy = new Proxy(target, {
         get() { logger.push(`get`) },
-        set() { logger.push(`set`); return true },
+        set() {
+          logger.push(`set`);
+          return true
+        },
       });
       proxy.x = 1;
       assert.deepEqual(logger, ['get']);
@@ -49,11 +52,11 @@ describe('A Proxy can intercept all accesses on a target object', function() {
     it('WHEN overriding `ownKeys` and `has` THEN one can confuse the proxy user', () => {
       const target = {x: 1, y: 2};
       const proxy = new Proxy(target, {
-        ownKeys() {},
-        has() {}
+        ownKeys: () => [],
+        has: () => false
       });
-      assert.deepEqual(Reflect.ownKeys(proxy), ['x']);
-      assert.equal('y' in proxy, true);
+      assert.deepEqual(Reflect.ownKeys(proxy), ['x'], 'Checking `ownKeys`');
+      assert('y' in proxy, 'Expected `y` to be in `proxy`, but it isnt :(');
     });
     it('WHEN overriding `getPrototypeOf` THEN one can manipulate the prototype of the target', () => {
       const target = {x: 23};
@@ -65,7 +68,7 @@ describe('A Proxy can intercept all accesses on a target object', function() {
   });
 
   describe('use cases', () => {
-    it('logging – WHEN intersecting getter and setter THEN one can log all access', () => {
+    it('logging – WHEN intersecting getter and setter THEN one can log all accesses', () => {
       const accesses = [];
       const target = {x: 23};
       const proxy = new Proxy(target, {
@@ -82,7 +85,7 @@ describe('A Proxy can intercept all accesses on a target object', function() {
       proxy.x++;
       assert.deepEqual(accesses, ['set y', 'get x', 'set x']);
     });
-    
+
     it('permission control – WHEN proxying a `file` object THEN one can transparently log access statistics', () => {
       const file = {content: 'very secret stuff', statistics: {reads: 0, permissionDenied: 0}};
       const proxy = new Proxy(file, {
@@ -96,7 +99,7 @@ describe('A Proxy can intercept all accesses on a target object', function() {
         ownKeys(target) {return ['content']}
       });
       assert.equal(JSON.stringify(proxy), '{"content":"very secret stuff"}');
-      
+
       // The `reads` are 2 and the `permissionDenied` is 1 because `JSON.stringify()` tries to access `toJSON` which we don't allow.
       assert.deepEqual(file.statistics, {reads: 2, permissionDenied: 1});
     });
