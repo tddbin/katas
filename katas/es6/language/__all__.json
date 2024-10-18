@@ -2558,8 +2558,8 @@
       "id": 86
     },
     {
-      "name": "",
-      "description": "",
+      "name": "basics",
+      "description": "A Proxy can intercept all accesses on a target object",
       "path": "proxy/basics",
       "level": "INTERMEDIATE",
       "requiresKnowledgeFrom": [
@@ -2571,6 +2571,7 @@
       "links": [],
       "groupName": "Proxy",
       "groupNameSlug": "proxy",
+      "publishDateRfc822": "Fri, 18 Oct 2024 14:00:00 GMT",
       "id": 87
     }
   ]

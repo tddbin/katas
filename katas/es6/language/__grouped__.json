@@ -2612,8 +2612,8 @@
     "Proxy": {
       "items": [
         {
-          "name": "",
-          "description": "",
+          "name": "basics",
+          "description": "A Proxy can intercept all accesses on a target object",
           "path": "proxy/basics",
           "level": "INTERMEDIATE",
           "requiresKnowledgeFrom": [
@@ -2622,6 +2622,7 @@
               "id": 58
             }
           ],
+          "publishDateUTC": "2024-10-18T14:00:00.000Z",
           "links": [],
           "groupName": "Proxy",
           "id": "87"
