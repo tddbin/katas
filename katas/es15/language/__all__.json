@@ -1,0 +1,47 @@
+{
+  "name": "ECMAScript 15 / ES2023",
+  "nameSlug": "es15-katas",
+  "items": [
+    {
+      "name": "`Object.groupBy()`",
+      "description": "",
+      "path": "object-api/groupBy",
+      "level": "BEGINNER",
+      "requiresKnowledgeFrom": [
+        {
+          "bundle": "es14/language",
+          "id": 1
+        }
+      ],
+      "links": [
+        {
+          "url": "https://github.com/tc39/proposal-array-grouping",
+          "comment": "The repository where the proposal was worked on.",
+          "tags": [
+            "spec",
+            "discussion"
+          ]
+        },
+        {
+          "url": "https://tc39.es/ecma262/#sec-object.groupby",
+          "comment": "The \"ECMAScript Language Specification\", the JavaScript specification text describing this function how an engine must implement it.",
+          "tags": [
+            "spec"
+          ]
+        },
+        {
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/groupBy",
+          "comment": "The Mozilla Developer Network docs.",
+          "tags": [
+            "mdn",
+            "docs"
+          ]
+        }
+      ],
+      "groupName": "Object API",
+      "groupNameSlug": "object-api",
+      "publishDateRfc822": "Thu, 24 Oct 2024 13:50:00 GMT",
+      "id": 1
+    }
+  ]
+}
